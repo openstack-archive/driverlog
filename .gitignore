@@ -1,4 +1,5 @@
 *.py[cod]
+.venv
 
 # C extensions
 *.so
@@ -26,6 +27,7 @@ pip-log.txt
 .coverage
 .tox
 nosetests.xml
+.testrepository
 
 # Translations
 *.mo
@@ -34,3 +36,5 @@ nosetests.xml
 .mr.developer.cfg
 .project
 .pydevproject
+.idea
+*.local

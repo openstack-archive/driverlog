@@ -1,0 +1,417 @@
+html, body {
+    font-family: 'PT Sans', arial, sans-serif;
+    font-size: 14px;
+    height: 100%;
+    color: #41454d;
+    margin: 0;
+}
+
+a {
+    color: #D32F1A;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #F00;
+}
+
+p {
+    font-size: 15px;
+    color: #41454D;
+    font-style: normal;
+    margin: 6px 0px 15px 0px;
+}
+
+div.page {
+    width: 960px;
+    margin: 0 auto;
+}
+
+div.page h2 {
+    font-family: 'PT Sans Narrow', 'Arial Narrow', arial, sans-serif;
+    font-size: 23px;
+    font-weight: normal;
+    font-style: normal;
+    margin-bottom: 10px;
+    color: #a41200;
+    text-shadow: 1px 1px 0 #fff;
+}
+
+div.page h3 {
+    font-family: 'PT Sans Narrow', 'Arial Narrow', arial, sans-serif;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+input[type="text"],
+input[type="password"] {
+    background: #f8f9f9;
+    padding: 0 5px 0 5px;
+    min-height: 24px;
+    border: none;
+    border-bottom: 1px solid white;
+    border-right: 1px solid white;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    text-shadow: 1px 1px 0 white;
+    -moz-box-shadow: inset 2px 2px 7px #D3D8DD;
+    -webkit-box-shadow: inset 2px 2px 7px #D3D8DD;
+    box-shadow: inset 2px 2px 7px #D3D8DD;
+}
+
+input[type="submit"] {
+    background: #f8f9f9;
+    padding: 0 5px 0 5px;
+    min-height: 24px;
+    border: none;
+    border-bottom: 1px solid white;
+    border-right: 1px solid white;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+    text-shadow: 1px 1px 0 white;
+    -moz-box-shadow: inset 2px 2px 7px #D3D8DD;
+    -webkit-box-shadow: inset 2px 2px 7px #D3D8DD;
+    box-shadow: inset 2px 2px 7px #D3D8DD;
+}
+
+div.drops {
+    height: 60px;
+    margin-top: 10px;
+}
+
+div.drop label {
+    color: #909cb5;
+}
+
+.drop {
+    height: 30px;
+    float: left;
+    margin-right: 20px;
+}
+
+.drop label {
+    display: block;
+}
+
+div.aheader {
+    margin-top: 23px;
+    text-shadow: 1px 1px 0 #fff;
+}
+
+div.aheader h1 {
+    font-size: 36px;
+    color: #a8b3bd;
+    text-shadow: 1px 1px 0 #fff;
+}
+
+div.aheader h1 a {
+    font-weight: bold;
+    color: #637f99;
+    text-decoration: none;
+    text-shadow: 1px 1px 0 #fff;
+}
+
+div.page div.navigation {
+    text-shadow: 1px 1px 0 #fff;
+    padding: 4px 10px;
+    border-top: 1px dashed #e9eaef;
+    border-bottom: 1px dashed #e9eaef;
+    color: #909cb5;
+    font-size: 10pt;
+}
+
+div.page div.navigation a {
+    color: #444;
+    font-weight: bold;
+}
+
+div.page div.body {
+    padding: 10px;
+}
+
+div.page div.footer {
+    background: #eee;
+    color: #888;
+    padding: 1em 1em;
+    font-size: 9pt;
+}
+
+.spacer {
+    height: 20px;
+    clear: both;
+}
+
+table#left_list td {
+    font-size: 15px;
+}
+
+table#right_list td {
+    font-size: 15px;
+}
+
+div#left_list_wrapper {
+    margin-top: 20px;
+}
+
+div#right_list_wrapper {
+    margin-top: 20px;
+}
+
+.label {
+    font-weight: bold;
+    line-height: 135%;
+}
+
+.activity {
+    margin-bottom: 2em;
+}
+
+.activity h3 {
+    margin-bottom: 0.2em;
+}
+.activity b {
+    color: red;
+}
+.activity .message {
+    margin: 0;
+}
+
+.record {
+    margin-bottom: 1em;
+}
+
+.record .header {
+    font-weight: bold;
+}
+
+.record .message {
+    white-space: pre-wrap;
+}
+
+a[href^="https://blueprints"]:after {
+    content: "↗";
+    opacity: 0.3;
+}
+
+a[href^="https://review"]:after {
+    content: "↗";
+    opacity: 0.3;
+}
+
+a[href^="https://bugs"]:after {
+    content: "↗";
+    opacity: 0.3;
+}
+
+a[href^="https://launchpad"]:after {
+    content: "↗";
+    opacity: 0.3;
+}
+
+a[target]:not([target='']):after {
+    content: "↗";
+    opacity: 0.3;
+}
+
+#analytics_header #logo {
+    font-family: 'PT Sans', 'Arial Narrow', arial, sans-serif;
+    font-weight: bolder;
+    font-style: normal;
+    font-size: 30px;
+    color: black;
+    text-shadow: 1px 1px 0 #fff;
+    margin: 0;
+    padding-right: 10px;
+}
+
+#analytics_header #slogan {
+    font-family: georgia, serif;
+    font-weight: lighter;
+    font-style: italic;
+    font-size: 24px;
+    margin: 0;
+    padding: 0;
+    color: #9caebf;
+    line-height: 1.1em;
+    text-shadow: 1px 1px 0 #fff;
+}
+
+.paging_full_numbers {
+    font-size: 9pt;
+}
+
+.select_module_group {
+    font-weight: bold;
+    color: #4bb2c5;
+}
+
+.select_module_program {
+    font-weight: bold;
+    color: #ab64c5;
+}
+
+.project_group {
+    font-weight: bold;
+}
+
+.project_group_item {
+    padding-left: 0.5em;
+}
+
+.review_mark {
+    font-weight: bold;
+}
+
+.specstatusApproved, .specstatusApproved a {
+    color: #008000;
+}
+.specstatusPendingApproval, .specstatusPendingApproval a, .specstatusPendingView, .specstatusPendingView a {
+    color: #FF0099;
+}
+.specstatusDraft, .specstatusDraft a, .specstatusDiscussion, .specstatusDiscussion a {
+    color: #993300;
+}
+.specstatusNew, .specstatusNew a {
+    color: #FF0000;
+}
+.specstatusSuperseded, .specstatusSuperseded a, .specstatusObsolete, .specstatusObsolete a, .specpriorityUndefined, .specpriorityUndefined a {
+    color: #808080;
+}
+.specpriorityLow, .specpriorityLow a {
+    color: #000000;
+}
+.specpriorityMedium, .specpriorityMedium a {
+    color: #FF6600;
+}
+.specpriorityHigh, .specpriorityHigh a, .specpriorityEssential, .specpriorityEssential a {
+    color: #FF0000;
+}
+.specdeliveryUnknown, .specdeliveryUnknown a, .specdeliveryNotStarted, .specdeliveryNotStarted a {
+    color: #808080;
+}
+.specdeliveryDeferred, .specdeliveryDeferred a, .specdeliveryNeendsInfrastructure, .specdeliveryNeendsInfrastructure a, .specdeliveryBlocked, .specdeliveryBlocked a {
+    color: #FF0000;
+}
+.specdeliveryStarted, .specdeliveryStarted a, .specdeliveryGood, .specdeliveryGood a {
+    color: #0000FF;
+}
+.specdeliverySlow, .specdeliverySlow a {
+    color: #FF0000;
+}
+.specdeliveryBeta, .specdeliveryBeta a {
+    color: #FF6600;
+}
+.specdeliveryNEEDSREVIEW, .specdeliveryNEEDSREVIEW a {
+    color: #800080;
+}
+.specdeliveryAWAITINGDEPLOYMENT, .specdeliveryAWAITINGDEPLOYMENT a {
+    color: #FF0000;
+}
+.specdeliveryImplemented, .specdeliveryImplemented a, .specdeliveryINFORMATIONAL, .specdeliveryINFORMATIONAL a {
+    color: #008000;
+}
+.bug-activity {
+    color: #555555;
+}
+.statusNew, .statusNew a {
+    color: #993300;
+}
+.statusIncomplete, .statusIncomplete a, .statusConfirmed, .statusConfirmed a {
+    color: #FF0000;
+}
+.statusTriaged, .statusTriaged a {
+    color: #FF6600;
+}
+.statusInProgress, .statusInProgress a {
+    color: #000000;
+}
+.statusComplete, .statusComplete a, .statusFixCommitted, .statusFixCommitted a {
+    color: #005500;
+}
+.statusFixReleased, .statusFixReleased a {
+    color: #008000;
+}
+.statusInvalid, .statusInvalid a, .statusWontFix, .statusWontFix a {
+    color: #555555;
+}
+.importanceCritical, .importanceCritical a {
+    color: #FF0000;
+}
+.importanceHigh, .importanceHigh a {
+    color: #FF6600;
+}
+.importanceMedium, .importanceMedium a {
+    color: #008000;
+}
+.importanceLow, .importanceLow a {
+    color: #000000;
+}
+.importanceWishlist, .importanceWishlist a {
+    color: #0000FF;
+}
+.importanceUndecided, .importanceUndecided a {
+    color: #999999;
+}
+
+.kpi_block {
+    padding-bottom: 1em;
+}
+
+.kpi_title_block {
+    margin-left: 40px;
+}
+
+.kpi_title {
+    font-size: 13pt;
+    font-weight: bold;
+}
+
+.kpi_marker {
+    font-size: 16pt;
+    font-weight: bold;
+    text-align: center; vertical-align: middle;
+    color: lightgray;
+    float: left; width: 32px; height: 32px;
+}
+
+.kpi_good {
+    color: #008000;
+}
+
+.kpi_bad {
+    color: #C00000;
+}
+
+.kpi_info {
+    font-size: 11pt;
+    color: #606060;
+}
+
+.select2-results {
+    max-height: 300px;
+}
+
+.ui-tooltip {
+    box-shadow: 0 0 5px #AAAAAA;
+    max-width: 300px;
+    padding: 8px;
+    position: absolute;
+    z-index: 9999;
+}
+body .ui-tooltip {
+    border-width: 2px;
+    background-color: white;
+    opacity: 0.8;
+}
+
+.verification_1 {
+    color: red;
+}
+
+.verification_2 {
+    color: orange;
+}
+
+.verification_3 {
+    color: #008000;
+}

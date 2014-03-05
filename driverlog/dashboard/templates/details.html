@@ -1,0 +1,107 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<script type="text/javascript">
+$(document).ready(function() {
+    $("#data_table").dataTable();
+    $(document).tooltip();
+});
+
+function show_instructions() {
+    $("#verification_instructions").dialog("open");
+}
+
+$(function () {
+    $("#verification_instructions").dialog({
+        autoOpen: false,
+        modal: true,
+        width: 500,
+        buttons: {
+            Ok: function () {
+                $(this).dialog("close");
+            }
+        }
+    });
+});
+</script>
+
+    <h2><a href="{{ url_for('summary') }}">&#x2302;</a> / {{ driver.vendor }} {{ driver.name }}</h2>
+
+    <div style="margin-top: 1em; margin-bottom: 2em;">
+        {% if driver.maintainer %}
+        <div><strong>Driver Maintainer:</strong> {{ driver.maintainer.name }}</div>
+        {% endif %}
+        {% if driver.description %}
+        <div><strong>Description:</strong> {{ driver.description }}</div>
+        {% endif %}
+    </div>
+
+    <table id="data_table">
+        <thead>
+        <tr>
+            <th>OS Version</th>
+            <th>Verification Level</th>
+            <th>Verification Status</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for version in driver.os_versions %}
+            <tr>
+                <td>
+                    {{ version.os_version }}
+                </td>
+                <td style="text-align: center;"><span
+                        class="verification_{{ version.level }}">{{ version.verification_name }}</span>
+                    {% if version.verification == '3rd_party_verification' %}
+                        by {{ version.verifiers | join_plus(', ', field='name') }}
+                    {% elif version.verification == 'self_verification' %}
+                        (<a href="#" onclick="show_instructions();">be the first to verify!</a>)
+                    {% endif %}
+                </td>
+                <td style="text-align: center;">
+                    {% if version.review_url %}
+                        {% set title = "Click to see test results" %}
+                        {% if version.comment %}
+                            {% set title = version.comment %}
+                        {% endif %}
+                        <a href="{{ version.review_url }}" title="{{ title }}" target="_blank">
+                    {% endif %}
+
+                    {% if version.success == True %}
+                        <span style="color: #008000">&#x2714;</span>
+                    {% elif version.success == False %}
+                        <span style="color: red">&#x2716;</span>
+                    {% else %}
+                        <span style="color: darkblue">n/a</span>
+                    {% endif %}
+
+                    {% if version.review_url %}
+                        </a>
+                    {% endif %}
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <div id="verification_instructions" title="Verification Instructions">
+        <div>To verify the driver:</div>
+        <ol>
+            <li>Install driver according to <a href="{{ driver.wiki }}">{{ driver.wiki }}</a></li>
+            <li>Configure your OpenStack to use the selected driver</li>
+            <li>Run full Tempest suite</li>
+            <li>Create patch to <a href="https://github.com/Mirantis/driverlog/blob/master/etc/default_data.json">default_data.json</a>
+                describing verification status:
+                <pre>
+{
+    "os_version": "Icehouse",
+    "verification": "3rd_party_verification",
+    "verifiers": ["&lt;enter your name here&gt;"],
+    "success": true
+}
+                </pre>
+            </li>
+        </ol>
+    </div>
+
+{% endblock %}

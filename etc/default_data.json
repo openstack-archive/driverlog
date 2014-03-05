@@ -1,0 +1,538 @@
+{
+    "projects": [
+        {
+            "id": "openstack/cinder",
+            "name": "Cinder (Block Storage)"
+        },
+        {
+            "id": "openstack/neutron",
+            "name": "Neutron (Networking)"
+        },
+        {
+            "id": "openstack/sahara",
+            "name": "Sahara (Data Processing)"
+        }
+    ],
+    "drivers": [
+        {
+            "project_id": "openstack/cinder",
+            "vendor": "Dell",
+            "name": "EqualLogic",
+            "description": "",
+            "maintainer": {
+                "name": "John Doe",
+                "email": "john_dow@openstack.org"
+            },
+            "wiki": "https://wiki.openstack.org/wiki/Cinder/certified-drivers",
+            "os_versions": [
+                {
+                    "os_version": "Icehouse",
+                    "verification": "3rd_party_verification",
+                    "verifiers": [
+                        {
+                            "name": "J M Jacob (jacob-jacob)"
+                        }
+                    ],
+                    "success": true
+                }
+            ]
+        },
+        {
+            "project_id": "openstack/cinder",
+            "vendor": "EMC",
+            "name": "SMI-S (FC)",
+            "description": "",
+            "maintainer": {
+                "name": "John Doe",
+                "email": "john_dow@openstack.org"
+            },
+            "wiki": "https://wiki.openstack.org/wiki/Cinder/certified-drivers",
+            "os_versions": [
+                {
+                    "os_version": "Icehouse",
+                    "verification": "3rd_party_verification",
+                    "verifiers": [
+                        {
+                            "name": "Xing Yang (xing-yang)"
+                        }
+                    ],
+                    "success": true
+                }
+            ]
+        },
+        {
+            "project_id": "openstack/cinder",
+            "vendor": "EMC",
+            "name": "SMI-S (iSCSI)",
+            "description": "",
+            "maintainer": {
+                "name": "John Doe",
+                "email": "john_dow@openstack.org"
+            },
+            "wiki": "https://wiki.openstack.org/wiki/Cinder/certified-drivers",
+            "os_versions": [
+                {
+                    "os_version": "Icehouse",
+                    "verification": "3rd_party_verification",
+                    "verifiers": [
+                        {
+                            "name": "Xing Yang (xing-yang)"
+                        }
+                    ],
+                    "success": true
+                }
+            ]
+        },
+        {
+            "project_id": "openstack/cinder",
+            "vendor": "EMC",
+            "name": "VNX Direct (iSCSI)",
+            "description": "",
+            "maintainer": {
+                "name": "John Doe",
+                "email": "john_dow@openstack.org"
+            },
+            "wiki": "https://wiki.openstack.org/wiki/Cinder/certified-drivers",
+            "os_versions": [
+                {
+                    "os_version": "Icehouse",
+                    "verification": "3rd_party_verification",
+                    "verifiers": [
+                        {
+                            "name": "Xing Yang (xing-yang)"
+                        }
+                    ],
+                    "success": true
+                }
+            ]
+        },
+        {
+            "project_id": "openstack/cinder",
+            "vendor": "HP",
+            "name": "3PAR StoreServ(FC)",
+            "description": "",
+            "maintainer": {
+                "name": "John Doe",
+                "email": "john_dow@openstack.org"
+            },
+            "wiki": "https://wiki.openstack.org/wiki/Cinder/certified-drivers",
+            "os_versions": [
+                {
+                    "os_version": "Icehouse",
+                    "verification": "3rd_party_verification",
+                    "verifiers": [
+                        {
+                            "name": "Walt Boring"
+                        }
+                    ],
+                    "success": true
+                }
+            ]
+        },
+        {
+            "project_id": "openstack/cinder",
+            "vendor": "HP",
+            "name": "3PAR StoreServ(iSCSI)",
+            "description": "",
+            "maintainer": {
+                "name": "John Doe",
+                "email": "john_dow@openstack.org"
+            },
+            "wiki": "https://wiki.openstack.org/wiki/Cinder/certified-drivers",
+            "os_versions": [
+                {
+                    "os_version": "Icehouse",
+                    "verification": "3rd_party_verification",
+                    "verifiers": [
+                        {
+                            "name": "Walt Boring"
+                        }
+                    ],
+                    "success": true
+                }
+            ]
+        },
+        {
+            "project_id": "openstack/cinder",
+            "vendor": "HP",
+            "name": "LeftHand StoreVirtual",
+            "description": "",
+            "maintainer": {
+                "name": "John Doe",
+                "email": "john_dow@openstack.org"
+            },
+            "wiki": "https://wiki.openstack.org/wiki/Cinder/certified-drivers",
+            "os_versions": [
+                {
+                    "os_version": "Icehouse",
+                    "verification": "3rd_party_verification",
+                    "verifiers": [
+                        {
+                            "name": "Jim Branen"
+                        }
+                    ],
+                    "success": true
+                }
+            ]
+        },
+        {
+            "project_id": "openstack/cinder",
+            "vendor": "HP",
+            "name": "MSA (FC)",
+            "description": "",
+            "maintainer": {
+                "name": "John Doe",
+                "email": "john_dow@openstack.org"
+            },
+            "wiki": "https://wiki.openstack.org/wiki/Cinder/certified-drivers",
+            "os_versions": [
+                {
+                    "os_version": "Icehouse",
+                    "verification": "3rd_party_verification",
+                    "verifiers": [
+                        {
+                            "name": "Gauvain Pocentek (gpocentek)"
+                        }
+                    ],
+                    "success": true
+                }
+            ]
+        },
+        {
+            "project_id": "openstack/cinder",
+            "vendor": "IBM",
+            "name": "IBM GPFS",
+            "description": "",
+            "maintainer": {
+                "name": "John Doe",
+                "email": "john_dow@openstack.org"
+            },
+            "wiki": "https://wiki.openstack.org/wiki/Cinder/certified-drivers",
+            "os_versions": [
+                {
+                    "os_version": "Icehouse",
+                    "verification": "3rd_party_verification",
+                    "verifiers": [
+                        {
+                            "name": "Bill Owen (billowen)"
+                        }
+                    ],
+                    "success": true
+                }
+            ]
+        },
+        {
+            "project_id": "openstack/cinder",
+            "vendor": "IBM",
+            "name": "IBM Storwize/SVC (FC)",
+            "description": "",
+            "maintainer": {
+                "name": "John Doe",
+                "email": "john_dow@openstack.org"
+            },
+            "wiki": "https://wiki.openstack.org/wiki/Cinder/certified-drivers",
+            "os_versions": [
+                {
+                    "os_version": "Icehouse",
+                    "verification": "3rd_party_verification",
+                    "verifiers": [
+                        {
+                            "name": "Avishay Traeger (avishay-il)"
+                        }
+                    ],
+                    "success": true
+                }
+            ]
+        },
+        {
+            "project_id": "openstack/cinder",
+            "vendor": "IBM",
+            "name": "IBM Storwize/SVC (iSCSI)",
+            "description": "",
+            "maintainer": {
+                "name": "John Doe",
+                "email": "john_dow@openstack.org"
+            },
+            "wiki": "https://wiki.openstack.org/wiki/Cinder/certified-drivers",
+            "os_versions": [
+                {
+                    "os_version": "Icehouse",
+                    "verification": "3rd_party_verification",
+                    "verifiers": [
+                        {
+                            "name": "Avishay Traeger (avishay-il)"
+                        }
+                    ],
+                    "success": true
+                }
+            ]
+        },
+        {
+            "project_id": "openstack/cinder",
+            "vendor": "IBM",
+            "name": "NAS (SONAS & Storwize V7000 Unified)",
+            "description": "",
+            "maintainer": {
+                "name": "John Doe",
+                "email": "john_dow@openstack.org"
+            },
+            "wiki": "https://wiki.openstack.org/wiki/Cinder/certified-drivers",
+            "os_versions": [
+                {
+                    "os_version": "Icehouse",
+                    "verification": "self_verification",
+                    "success": true
+                }
+            ]
+        },
+        {
+            "project_id": "openstack/cinder",
+            "vendor": "NetApp",
+            "name": "C-Mode (iSCSI)",
+            "description": "",
+            "maintainer": {
+                "name": "John Doe",
+                "email": "john_dow@openstack.org"
+            },
+            "wiki": "https://wiki.openstack.org/wiki/Cinder/certified-drivers",
+            "os_versions": [
+                {
+                    "os_version": "Icehouse",
+                    "verification": "3rd_party_verification",
+                    "verifiers": [
+                        {
+                            "name": "Andrew Kerr (andrew-kerr)"
+                        }
+                    ],
+                    "success": true
+                }
+            ]
+        },
+        {
+            "project_id": "openstack/cinder",
+            "vendor": "NetApp",
+            "name": "E-Series (iSCSI)",
+            "description": "",
+            "maintainer": {
+                "name": "John Doe",
+                "email": "john_dow@openstack.org"
+            },
+            "wiki": "https://wiki.openstack.org/wiki/Cinder/certified-drivers",
+            "os_versions": [
+                {
+                    "os_version": "Icehouse",
+                    "verification": "self_verification",
+                    "success": true
+                }
+            ]
+        },
+        {
+            "project_id": "openstack/cinder",
+            "vendor": "SolidFire",
+            "name": "Cinder Driver",
+            "description": "",
+            "maintainer": {
+                "name": "John Doe",
+                "email": "john_dow@openstack.org"
+            },
+            "wiki": "https://wiki.openstack.org/wiki/Cinder/certified-drivers",
+            "os_versions": [
+                {
+                    "os_version": "Icehouse",
+                    "verification": "self_verification",
+                    "success": true
+                }
+            ]
+        },
+        {
+            "project_id": "openstack/neutron",
+            "vendor": "Arista",
+            "name": "Neutron ML2 Driver",
+            "description": "Arista ML2 Mechanism Driver implement ML2 Plugin Mechanism Driver API. This driver can manage all types of Arista switches.",
+            "maintainer": {
+                "name": "Sukhdev Kapur",
+                "email": "arista-openstack-test@aristanetworks.com",
+                "irc": "Sukhdev"
+            },
+            "wiki": "https://wiki.openstack.org/wiki/Arista-neutron-ml2-driver",
+            "os_versions": [
+                {
+                    "verification": "external_ci_verification",
+                    "ci_id": "arista-test"
+                }
+            ]
+        },
+        {
+            "project_id": "openstack/neutron",
+            "vendor": "Big Switch",
+            "name": "Neutron Floodlight Plugin",
+            "description": "BigSwitch RestProxy Neutron plugin with the open source Floodlight controller",
+            "maintainer": {
+                "name": "Kevin Benton",
+                "email": "openstack-ci@bigswitch.com",
+                "irc": "kevinbenton"
+            },
+            "wiki": "https://wiki.openstack.org/wiki/Neutron/FloodlightPluginSetup",
+            "os_versions": [
+                {
+                    "verification": "external_ci_verification",
+                    "ci_id": "bsn"
+                }
+            ]
+        },
+        {
+            "project_id": "openstack/neutron",
+            "vendor": "Cisco",
+            "name": "Neutron ML2 Driver For Cisco Nexus Devices",
+            "description": "The Cisco Nexus ML2 Mechanism Driver implements the ML2 Plugin Mechanism Driver API. This driver manages multiple types of Cisco Nexus switches.",
+            "maintainer": {
+                "name": "Kyle Mestery",
+                "email": "cisco-openstack-neutron-ci@cisco.com",
+                "irc": "mestery"
+            },
+            "wiki": "https://wiki.openstack.org/wiki/Neutron/ML2/MechCiscoNexus",
+            "os_versions": [
+                {
+                    "verification": "external_ci_verification",
+                    "ci_id": "cisco_neutron_ci"
+                }
+            ]
+        },
+        {
+            "project_id": "openstack/neutron",
+            "vendor": "Mellanox",
+            "name": "Neutron Plugin",
+            "description": "Mellanox supports the OpenStack Neutron releases with open source networking components. It delivers higher compute and storage performance and additional functionality, such as NIC based switching to provide better security and isolation for virtual cloud environments. ",
+            "maintainer": {
+                "name": "Mellanox External Testing",
+                "email": "mlnx-openstack-ci@dev.mellanox.co.il"
+            },
+            "wiki": "https://wiki.openstack.org/wiki/Mellanox-Neutron",
+            "os_versions": [
+                {
+                    "verification": "external_ci_verification",
+                    "ci_id": "mellanox"
+                }
+            ]
+        },
+        {
+            "project_id": "openstack/neutron",
+            "vendor": "Midokura",
+            "name": "Neutron Plugin",
+            "description": "",
+            "maintainer": {
+                "name": "Lucas Eznarriaga",
+                "email": "lucas@midokura.com",
+                "irc": "luqas"
+            },
+            "os_versions": [
+                {
+                    "verification": "external_ci_verification",
+                    "ci_id": "midokura"
+                }
+            ]
+        },
+        {
+            "project_id": "openstack/neutron",
+            "vendor": "Nuage",
+            "name": "Neutron Plugin",
+            "description": "",
+            "maintainer": {
+                "name": "Ronak Shah",
+                "email": "nuage-ci@nuagenetworks.net",
+                "irc": "rms_13"
+            },
+            "os_versions": [
+                {
+                    "verification": "external_ci_verification",
+                    "ci_id": "nuage-ci"
+                }
+            ]
+        },
+        {
+            "project_id": "openstack/neutron",
+            "vendor": "One Convergence",
+            "name": "Neutron Plugin",
+            "description": "",
+            "maintainer": {
+                "name": "One Convergence CI",
+                "email": "oc-neutron-test@oneconvergence.com"
+            },
+            "os_versions": [
+                {
+                    "verification": "external_ci_verification",
+                    "ci_id": "oneconvergence"
+                }
+            ]
+        },
+        {
+            "project_id": "openstack/neutron",
+            "vendor": "PLUMgrid",
+            "name": "Neutron Plugin",
+            "description": "PLUMgrid Neutron Plugin v2 for PLUMgrid IO Visor",
+            "maintainer": {
+                "name": "Edgar Magana",
+                "email": "plumgrid-ci-os@plumgrid.com",
+                "irc": "emagana"
+            },
+            "wiki": "https://wiki.openstack.org/wiki/PLUMgrid-Neutron",
+            "os_versions": [
+                {
+                    "verification": "external_ci_verification",
+                    "ci_id": "plumgrid-ci"
+                }
+            ]
+        },
+        {
+            "project_id": "openstack/neutron",
+            "vendor": "vArmour",
+            "name": "Neutron Plugin",
+            "description": "L3 agent and FWaaS driver for vArmour Firewall",
+            "maintainer": {
+                "name": "Gary Duan",
+                "email": "openstack-ci-test@varmour.com",
+                "irc": "garyduan"
+            },
+            "wiki": "https://wiki.openstack.org/wiki/Neutron/vArmour-Firewall",
+            "os_versions": [
+                {
+                    "verification": "external_ci_verification",
+                    "ci_id": "varmourci"
+                }
+            ]
+        },
+        {
+            "project_id": "openstack/sahara",
+            "vendor": "OpenStack Community",
+            "name": "Vanilla Driver",
+            "description": "Vanilla driver for OpenStack Sahara",
+            "maintainer": {
+                "name": "Sergey Lukjanov",
+                "email": "slukjanov@mirantis.com"
+            },
+            "wiki": "https://wiki.openstack.org/wiki/Sahara",
+            "os_versions": [
+                {
+                    "os_version": "Havana",
+                    "verification": "self_verification",
+                    "success": true
+                },
+                {
+                    "os_version": "Icehouse",
+                    "verification": "3rd_party_verification",
+                    "verifiers": [
+                        {
+                            "name": "Yaroslav Lobankov",
+                            "email": "ylobankov@mirantis.com"
+                        }
+                    ],
+                    "success": false
+                },
+                {
+                    "verification": "external_ci_verification",
+                    "ci_id": "savanna-ci"
+                }
+            ]
+        }
+    ]
+}
