@@ -9,11 +9,38 @@
             "name": "Neutron (Networking)"
         },
         {
+            "id": "openstack/nova",
+            "name": "Nova (Compute Program)"
+        },
+        {
             "id": "openstack/sahara",
             "name": "Sahara (Data Processing)"
         }
     ],
     "drivers": [
+        {
+            "project_id": "openstack/cinder",
+            "vendor": "Coraid",
+            "name": "Coraid",
+            "description": "",
+            "maintainer": {
+                "name": "John Doe",
+                "email": "john_dow@openstack.org"
+            },
+            "wiki": "https://wiki.openstack.org/wiki/CinderSupportMatrix",
+            "os_versions": [
+                {
+                    "os_version": "Grizzly",
+                    "verification": "self_verification",
+                    "success": true
+                },
+                {
+                    "os_version": "Havana",
+                    "verification": "self_verification",
+                    "success": true
+                }
+            ]
+        },
         {
             "project_id": "openstack/cinder",
             "vendor": "Dell",
@@ -26,11 +53,17 @@
             "wiki": "https://wiki.openstack.org/wiki/Cinder/certified-drivers",
             "os_versions": [
                 {
+                    "os_version": "Havana",
+                    "verification": "self_verification",
+                    "success": true
+                },
+                {
                     "os_version": "Icehouse",
                     "verification": "3rd_party_verification",
                     "verifiers": [
                         {
-                            "name": "J M Jacob (jacob-jacob)"
+                            "name": "J M Jacob",
+                            "launchpad_id": "jacob-jacob"
                         }
                     ],
                     "success": true
@@ -53,7 +86,8 @@
                     "verification": "3rd_party_verification",
                     "verifiers": [
                         {
-                            "name": "Xing Yang (xing-yang)"
+                            "name": "Xing Yang",
+                            "launchpad_id": "xing-yang"
                         }
                     ],
                     "success": true
@@ -76,7 +110,8 @@
                     "verification": "3rd_party_verification",
                     "verifiers": [
                         {
-                            "name": "Xing Yang (xing-yang)"
+                            "name": "Xing Yang",
+                            "launchpad_id": "xing-yang"
                         }
                     ],
                     "success": true
@@ -99,9 +134,33 @@
                     "verification": "3rd_party_verification",
                     "verifiers": [
                         {
-                            "name": "Xing Yang (xing-yang)"
+                            "name": "Xing Yang",
+                            "launchpad_id": "xing-yang"
                         }
                     ],
+                    "success": true
+                }
+            ]
+        },
+        {
+            "project_id": "openstack/cinder",
+            "vendor": "GlusterFS",
+            "name": "GlusterFS",
+            "description": "",
+            "maintainer": {
+                "name": "John Doe",
+                "email": "john_dow@openstack.org"
+            },
+            "wiki": "https://wiki.openstack.org/wiki/CinderSupportMatrix",
+            "os_versions": [
+                {
+                    "os_version": "Grizzly",
+                    "verification": "self_verification",
+                    "success": true
+                },
+                {
+                    "os_version": "Havana",
+                    "verification": "self_verification",
                     "success": true
                 }
             ]
@@ -122,7 +181,8 @@
                     "verification": "3rd_party_verification",
                     "verifiers": [
                         {
-                            "name": "Walt Boring"
+                            "name": "Walt Boring",
+                            "launchpad_id": "walter-boring"
                         }
                     ],
                     "success": true
@@ -145,7 +205,8 @@
                     "verification": "3rd_party_verification",
                     "verifiers": [
                         {
-                            "name": "Walt Boring"
+                            "name": "Walt Boring",
+                            "launchpad_id": "walter-boring"
                         }
                     ],
                     "success": true
@@ -164,11 +225,27 @@
             "wiki": "https://wiki.openstack.org/wiki/Cinder/certified-drivers",
             "os_versions": [
                 {
+                    "os_version": "Diablo",
+                    "verification": "self_verification",
+                    "success": true
+                },
+                {
+                    "os_version": "Grizzly",
+                    "verification": "self_verification",
+                    "success": true
+                },
+                {
+                    "os_version": "Havana",
+                    "verification": "self_verification",
+                    "success": true
+                },
+                {
                     "os_version": "Icehouse",
                     "verification": "3rd_party_verification",
                     "verifiers": [
                         {
-                            "name": "Jim Branen"
+                            "name": "Jim Branen",
+                            "launchpad_id": "james-branen"
                         }
                     ],
                     "success": true
@@ -191,9 +268,87 @@
                     "verification": "3rd_party_verification",
                     "verifiers": [
                         {
-                            "name": "Gauvain Pocentek (gpocentek)"
+                            "name": "Gauvain Pocentek",
+                            "launchpad_id": "gpocentek"
                         }
                     ],
+                    "success": true
+                }
+            ]
+        },
+        {
+            "project_id": "openstack/cinder",
+            "vendor": "Hitachi",
+            "name": "HDS (HUS)",
+            "description": "",
+            "maintainer": {
+                "name": "John Doe",
+                "email": "john_dow@openstack.org"
+            },
+            "wiki": "https://wiki.openstack.org/wiki/CinderSupportMatrix",
+            "os_versions": [
+                {
+                    "os_version": "Havana",
+                    "verification": "self_verification",
+                    "success": true
+                }
+            ]
+        },
+        {
+            "project_id": "openstack/cinder",
+            "vendor": "Huawei",
+            "name": "Huawei HVS",
+            "description": "",
+            "maintainer": {
+                "name": "John Doe",
+                "email": "john_dow@openstack.org"
+            },
+            "wiki": "https://wiki.openstack.org/wiki/CinderSupportMatrix",
+            "os_versions": [
+                {
+                    "os_version": "Havana",
+                    "verification": "self_verification",
+                    "success": true
+                }
+            ]
+        },
+        {
+            "project_id": "openstack/cinder",
+            "vendor": "Huawei",
+            "name": "T/Dorado",
+            "description": "",
+            "maintainer": {
+                "name": "John Doe",
+                "email": "john_dow@openstack.org"
+            },
+            "wiki": "https://wiki.openstack.org/wiki/CinderSupportMatrix",
+            "os_versions": [
+                {
+                    "os_version": "Grizzly",
+                    "verification": "self_verification",
+                    "success": true
+                },
+                {
+                    "os_version": "Havana",
+                    "verification": "self_verification",
+                    "success": true
+                }
+            ]
+        },
+        {
+            "project_id": "openstack/cinder",
+            "vendor": "IBM",
+            "name": "IBM DS8000",
+            "description": "",
+            "maintainer": {
+                "name": "John Doe",
+                "email": "john_dow@openstack.org"
+            },
+            "wiki": "https://wiki.openstack.org/wiki/CinderSupportMatrix",
+            "os_versions": [
+                {
+                    "os_version": "Havana",
+                    "verification": "self_verification",
                     "success": true
                 }
             ]
@@ -210,11 +365,22 @@
             "wiki": "https://wiki.openstack.org/wiki/Cinder/certified-drivers",
             "os_versions": [
                 {
+                    "os_version": "Folsom",
+                    "verification": "self_verification",
+                    "success": true
+                },
+                {
+                    "os_version": "Havana",
+                    "verification": "self_verification",
+                    "success": true
+                },
+                {
                     "os_version": "Icehouse",
                     "verification": "3rd_party_verification",
                     "verifiers": [
                         {
-                            "name": "Bill Owen (billowen)"
+                            "name": "Bill Owen",
+                            "launchpad_id": "billowen"
                         }
                     ],
                     "success": true
@@ -237,7 +403,8 @@
                     "verification": "3rd_party_verification",
                     "verifiers": [
                         {
-                            "name": "Avishay Traeger (avishay-il)"
+                            "name": "Avishay Traeger",
+                            "launchpad_id": "avishay-il"
                         }
                     ],
                     "success": true
@@ -260,7 +427,47 @@
                     "verification": "3rd_party_verification",
                     "verifiers": [
                         {
-                            "name": "Avishay Traeger (avishay-il)"
+                            "name": "Avishay Traeger",
+                            "launchpad_id": "avishay-il"
+                        }
+                    ],
+                    "success": true
+                }
+            ]
+        },
+        {
+            "project_id": "openstack/cinder",
+            "vendor": "IBM",
+            "name": "IBM XIV",
+            "description": "",
+            "maintainer": {
+                "name": "John Doe",
+                "email": "john_dow@openstack.org"
+            },
+            "wiki": "https://wiki.openstack.org/wiki/CinderSupportMatrix",
+            "os_versions": [
+                {
+                    "os_version": "Folsom",
+                    "verification": "self_verification",
+                    "success": true
+                },
+                {
+                    "os_version": "Grizzly",
+                    "verification": "self_verification",
+                    "success": true
+                },
+                {
+                    "os_version": "Havana",
+                    "verification": "self_verification",
+                    "success": true
+                },
+                {
+                    "os_version": "Icehouse",
+                    "verification": "3rd_party_verification",
+                    "verifiers": [
+                        {
+                            "name": "Alon Marx",
+                            "launchpad_id": "alonma"
                         }
                     ],
                     "success": true
@@ -280,7 +487,135 @@
             "os_versions": [
                 {
                     "os_version": "Icehouse",
+                    "verification": "3rd_party_verification",
+                    "verifiers": [
+                        {
+                            "name": "John Doe"
+                        }
+                    ],
+                    "success": true
+                }
+            ]
+        },
+        {
+            "project_id": "openstack/cinder",
+            "vendor": "LVM",
+            "name": "LVM (Reference)",
+            "description": "",
+            "maintainer": {
+                "name": "John Doe",
+                "email": "john_dow@openstack.org"
+            },
+            "wiki": "https://wiki.openstack.org/wiki/CinderSupportMatrix",
+            "os_versions": [
+                {
+                    "os_version": "Folsom",
                     "verification": "self_verification",
+                    "success": true
+                },
+                {
+                    "os_version": "Grizzly",
+                    "verification": "self_verification",
+                    "success": true
+                },
+                {
+                    "os_version": "Havana",
+                    "verification": "self_verification",
+                    "success": true
+                }
+            ]
+        },
+        {
+            "project_id": "openstack/cinder",
+            "vendor": "Microsoft",
+            "name": "Windows Server 2012",
+            "description": "",
+            "maintainer": {
+                "name": "John Doe",
+                "email": "john_dow@openstack.org"
+            },
+            "wiki": "https://wiki.openstack.org/wiki/Cinder/certified-drivers",
+            "os_versions": [
+                {
+                    "os_version": "Grizzly",
+                    "verification": "self_verification",
+                    "success": true
+                },
+                {
+                    "os_version": "Havana",
+                    "verification": "self_verification",
+                    "success": true
+                }
+            ]
+        },
+        {
+            "project_id": "openstack/cinder",
+            "vendor": "NetApp",
+            "name": "7-Mode (NFS)",
+            "description": "",
+            "maintainer": {
+                "name": "John Doe",
+                "email": "john_dow@openstack.org"
+            },
+            "wiki": "https://wiki.openstack.org/wiki/Cinder/certified-drivers",
+            "os_versions": [
+                {
+                    "os_version": "Icehouse",
+                    "verification": "3rd_party_verification",
+                    "verifiers": [
+                        {
+                            "name": "Andrew Kerr",
+                            "launchpad_id": "andrew-kerr"
+                        }
+                    ],
+                    "success": true
+                }
+            ]
+        },
+        {
+            "project_id": "openstack/cinder",
+            "vendor": "NetApp",
+            "name": "7-Mode (iSCSI)",
+            "description": "",
+            "maintainer": {
+                "name": "John Doe",
+                "email": "john_dow@openstack.org"
+            },
+            "wiki": "https://wiki.openstack.org/wiki/Cinder/certified-drivers",
+            "os_versions": [
+                {
+                    "os_version": "Icehouse",
+                    "verification": "3rd_party_verification",
+                    "verifiers": [
+                        {
+                            "name": "Jeff Applewhite",
+                            "launchpad_id": "ajeffrey"
+                        }
+                    ],
+                    "success": true
+                }
+            ]
+        },
+        {
+            "project_id": "openstack/cinder",
+            "vendor": "NetApp",
+            "name": "C-Mode (NFS)",
+            "description": "",
+            "maintainer": {
+                "name": "John Doe",
+                "email": "john_dow@openstack.org"
+            },
+            "wiki": "https://wiki.openstack.org/wiki/Cinder/certified-drivers",
+            "os_versions": [
+                {
+                    "os_version": "Icehouse",
+                    "verification": "3rd_party_verification",
+                    "verifiers": [
+                        {
+                            "name": "Andrew Kerr",
+                            "launchpad_id": "andrew-kerr"
+                        }
+                    ],
                     "success": true
                 }
             ]
@@ -301,7 +636,8 @@
                     "verification": "3rd_party_verification",
                     "verifiers": [
                         {
-                            "name": "Andrew Kerr (andrew-kerr)"
+                            "name": "Andrew Kerr",
+                            "launchpad_id": "andrew-kerr"
                         }
                     ],
                     "success": true
@@ -321,6 +657,136 @@
             "os_versions": [
                 {
                     "os_version": "Icehouse",
+                    "verification": "3rd_party_verification",
+                    "verifiers": [
+                        {
+                            "name": "John Doe"
+                        }
+                    ],
+                    "success": true
+                }
+            ]
+        },
+        {
+            "project_id": "openstack/cinder",
+            "vendor": "Nexenta",
+            "name": "Nexenta",
+            "description": "",
+            "maintainer": {
+                "name": "John Doe",
+                "email": "john_dow@openstack.org"
+            },
+            "wiki": "https://wiki.openstack.org/wiki/CinderSupportMatrix",
+            "os_versions": [
+                {
+                    "os_version": "Essex",
+                    "verification": "self_verification",
+                    "success": true
+                },
+                {
+                    "os_version": "Grizzly",
+                    "verification": "self_verification",
+                    "success": true
+                },
+                {
+                    "os_version": "Havana",
+                    "verification": "self_verification",
+                    "success": true
+                }
+            ]
+        },
+        {
+            "project_id": "openstack/cinder",
+            "vendor": "Oracle",
+            "name": "NFS",
+            "description": "",
+            "maintainer": {
+                "name": "John Doe",
+                "email": "john_dow@openstack.org"
+            },
+            "wiki": "https://wiki.openstack.org/wiki/CinderSupportMatrix",
+            "os_versions": [
+                {
+                    "os_version": "Folsom",
+                    "verification": "self_verification",
+                    "success": true
+                },
+                {
+                    "os_version": "Havana",
+                    "verification": "self_verification",
+                    "success": true
+                }
+            ]
+        },
+        {
+            "project_id": "openstack/cinder",
+            "vendor": "RBD (Ceph)",
+            "name": "RBD (Ceph)",
+            "description": "",
+            "maintainer": {
+                "name": "John Doe",
+                "email": "john_dow@openstack.org"
+            },
+            "wiki": "https://wiki.openstack.org/wiki/CinderSupportMatrix",
+            "os_versions": [
+                {
+                    "os_version": "Cactus",
+                    "verification": "self_verification",
+                    "success": true
+                },
+                {
+                    "os_version": "Diablo",
+                    "verification": "self_verification",
+                    "success": true
+                },
+                {
+                    "os_version": "Folsom",
+                    "verification": "self_verification",
+                    "success": true
+                },
+                {
+                    "os_version": "Havana",
+                    "verification": "self_verification",
+                    "success": true
+                }
+            ]
+        },
+        {
+            "project_id": "openstack/cinder",
+            "vendor": "Scality",
+            "name": "Scality",
+            "description": "",
+            "maintainer": {
+                "name": "John Doe",
+                "email": "john_dow@openstack.org"
+            },
+            "wiki": "https://wiki.openstack.org/wiki/CinderSupportMatrix",
+            "os_versions": [
+                {
+                    "os_version": "Grizzly",
+                    "verification": "self_verification",
+                    "success": true
+                },
+                {
+                    "os_version": "Havana",
+                    "verification": "self_verification",
+                    "success": true
+                }
+            ]
+        },
+        {
+            "project_id": "openstack/cinder",
+            "vendor": "Solaris",
+            "name": "Solaris (ZFS)",
+            "description": "",
+            "maintainer": {
+                "name": "John Doe",
+                "email": "john_dow@openstack.org"
+            },
+            "wiki": "https://wiki.openstack.org/wiki/CinderSupportMatrix",
+            "os_versions": [
+                {
+                    "os_version": "Diablo",
                     "verification": "self_verification",
                     "success": true
                 }
@@ -338,7 +804,92 @@
             "wiki": "https://wiki.openstack.org/wiki/Cinder/certified-drivers",
             "os_versions": [
                 {
+                    "os_version": "Folsom",
+                    "verification": "self_verification",
+                    "success": true
+                },
+                {
+                    "os_version": "Grizzly",
+                    "verification": "self_verification",
+                    "success": true
+                },
+                {
+                    "os_version": "Havana",
+                    "verification": "self_verification",
+                    "success": true
+                },
+                {
                     "os_version": "Icehouse",
+                    "verification": "3rd_party_verification",
+                    "verifiers": [
+                        {
+                            "name": "John Doe"
+                        }
+                    ],
+                    "success": true
+                }
+            ]
+        },
+        {
+            "project_id": "openstack/cinder",
+            "vendor": "VMware",
+            "name": "VMware",
+            "description": "",
+            "maintainer": {
+                "name": "John Doe",
+                "email": "john_dow@openstack.org"
+            },
+            "wiki": "https://wiki.openstack.org/wiki/CinderSupportMatrix",
+            "os_versions": [
+                {
+                    "os_version": "Havana",
+                    "verification": "self_verification",
+                    "success": true
+                }
+            ]
+        },
+        {
+            "project_id": "openstack/cinder",
+            "vendor": "VMware",
+            "name": "Vmdk Driver",
+            "description": "",
+            "maintainer": {
+                "name": "John Doe",
+                "email": "john_dow@openstack.org"
+            },
+            "wiki": "https://wiki.openstack.org/wiki/Cinder/certified-drivers",
+            "os_versions": [
+                {
+                    "os_version": "Icehouse",
+                    "verification": "3rd_party_verification",
+                    "verifiers": [
+                        {
+                            "name": "satyadev svn",
+                            "launchpad_id": "svnsatya"
+                        }
+                    ],
+                    "success": true
+                }
+            ]
+        },
+        {
+            "project_id": "openstack/cinder",
+            "vendor": "Zadara Storage",
+            "name": "Zadara Storage",
+            "description": "",
+            "maintainer": {
+                "name": "John Doe",
+                "email": "john_dow@openstack.org"
+            },
+            "wiki": "https://wiki.openstack.org/wiki/Cinder/certified-drivers",
+            "os_versions": [
+                {
+                    "os_version": "Folsom",
+                    "verification": "self_verification",
+                    "success": true
+                },
+                {
+                    "os_version": "Havana",
                     "verification": "self_verification",
                     "success": true
                 }
@@ -434,6 +985,23 @@
         },
         {
             "project_id": "openstack/neutron",
+            "vendor": "NCS",
+            "name": "Tail-f NCS Driver",
+            "description": "The Tail-f NCS Mechanism Driver implements the ML2 Plugin Mechanism Driver API.",
+            "maintainer": {
+                "name": "John Doe",
+                "email": "tobbe@tail-f.com"
+            },
+            "wiki": "https://wiki.openstack.org/wiki/Neutron/ML2/Tail-f-NCS-neutron-ml2-driver",
+            "os_versions": [
+                {
+                    "verification": "external_ci_verification",
+                    "ci_id": "tailfncs"
+                }
+            ]
+        },
+        {
+            "project_id": "openstack/neutron",
             "vendor": "Nuage",
             "name": "Neutron Plugin",
             "description": "",
@@ -498,6 +1066,57 @@
                 {
                     "verification": "external_ci_verification",
                     "ci_id": "varmourci"
+                }
+            ]
+        },
+        {
+            "project_id": "openstack/nova",
+            "vendor": "Microsoft",
+            "name": "Hyper-V CI",
+            "description": "",
+            "maintainer": {
+                "name": "John Doe",
+                "email": "ci@microsoft.com"
+            },
+            "wiki": "http://wiki.cloudbase.it/hyperv-tempest-exclusions",
+            "os_versions": [
+                {
+                    "verification": "external_ci_verification",
+                    "ci_id": "hyper-v-ci"
+                }
+            ]
+        },
+        {
+            "project_id": "openstack/nova",
+            "vendor": "VMware",
+            "name": "VMware",
+            "description": "In a nutshell, Minesweeper listens to newly created patchsets on review.openstack.org and runs the Tempest test suite on the patch.",
+            "maintainer": {
+                "name": "John Doe",
+                "email": "tjones@vmware.com"
+            },
+            "wiki": "https://wiki.openstack.org/wiki/NovaVMware/Minesweeper",
+            "os_versions": [
+                {
+                    "verification": "external_ci_verification",
+                    "ci_id": "vmwareminesweeper"
+                }
+            ]
+        },
+        {
+            "project_id": "openstack/nova",
+            "vendor": "XenServer",
+            "name": "XenServer 6.2",
+            "description": "Checks all changes on devstack, tempest, and Nova, uses nodepool and devstack-gate to run tests in RAX cloud, reports, without voting, on all changes",
+            "maintainer": {
+                "name": "John Doe",
+                "email": "openstack@citrix.com"
+            },
+            "wiki": "https://wiki.openstack.org/wiki/XenServer/XenServer_CI",
+            "os_versions": [
+                {
+                    "verification": "external_ci_verification",
+                    "ci_id": "citrix_xenserver_ci"
                 }
             ]
         },
