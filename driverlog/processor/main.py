@@ -12,12 +12,15 @@
 # implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
+import hashlib
+import json
 
 import re
 
 import memcache
 from oslo.config import cfg
 from six.moves.urllib import parse
+import time
 
 from driverlog.openstack.common import log as logging
 from driverlog.processor import config
@@ -38,7 +41,7 @@ def update_generator(memcached, default_data, ci_ids_map, force_update=False):
 
         LOG.debug('Processing reviews for project: %s', project_id)
 
-        rcs_key = 'rcs:' + parse.quote_plus(project_id)
+        rcs_key = 'driverlog:rcs:' + parse.quote_plus(project_id)
         last_id = None
         if not force_update:
             last_id = memcached.get(rcs_key)
@@ -100,6 +103,12 @@ def update_generator(memcached, default_data, ci_ids_map, force_update=False):
         memcached.set(rcs_key, last_id)
 
 
+def _get_hash(data):
+    h = hashlib.new('sha1')
+    h.update(json.dumps(data))
+    return h.hexdigest()
+
+
 def main():
     # init conf and logging
     conf = cfg.CONF
@@ -116,7 +125,7 @@ def main():
         exit(1)
 
     memcached_uri = stripped.split(',')
-    memcached = memcache.Client(memcached_uri)
+    memcache_inst = memcache.Client(memcached_uri)
 
     default_data = utils.read_json_from_uri(cfg.CONF.default_data_uri)
     if not default_data:
@@ -132,26 +141,33 @@ def main():
                 ci_id = os_version['ci_id']
                 ci_ids_map[ci_id] = (vendor, driver_name)
 
-    persisted_data = {}
+    update = {}
     if not cfg.CONF.force_update:
-        persisted_data = memcached.get('driverlog:update') or {}
+        update = memcache_inst.get('driverlog:update') or {}
 
-    for record in update_generator(memcached, default_data, ci_ids_map,
+    has_update = False
+
+    for record in update_generator(memcache_inst, default_data, ci_ids_map,
                                    force_update=cfg.CONF.force_update):
         LOG.info('Got new record from Gerrit: %s', record)
+        has_update = True
 
         key = record.keys()[0]
-        if key not in persisted_data:
-            persisted_data.update(record)
+        if key not in update:
+            update.update(record)
         else:
-            persisted_os_versions = persisted_data[key]['os_versions_map']
+            persisted_os_versions = update[key]['os_versions_map']
             for os_version, info in record[key]['os_versions_map'].iteritems():
                 if os_version not in persisted_os_versions:
                     persisted_os_versions[os_version] = info
                 else:
                     persisted_os_versions[os_version].update(info)
 
-    memcached.set('driverlog:update', persisted_data)
+    memcache_inst.set('driverlog:default_data', default_data)
+    memcache_inst.set('driverlog:update', update)
+    memcache_inst.set('driverlog:default_data_hash', _get_hash(default_data))
+    if has_update:
+        memcache_inst.set('driverlog:update_hash', time.time())
 
 
 if __name__ == '__main__':
