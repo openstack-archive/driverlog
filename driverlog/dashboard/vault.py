@@ -19,7 +19,6 @@ import memcache
 
 from driverlog.dashboard import memory_storage
 from driverlog.openstack.common import log as logging
-from driverlog.processor import utils
 
 
 LOG = logging.getLogger(__name__)
@@ -105,23 +104,9 @@ def get_vault():
                 flask.abort(500)
 
             conf = flask.current_app.config['CONF']
-            dd_uri = conf.default_data_uri
-            vault['default_data'] = utils.read_json_from_uri(dd_uri)
-
-            if not vault['default_data']:
-                LOG.critical('Default data config file "%s" is not found',
-                             dd_uri)
-                flask.abort(500)
 
             levels_map = _build_levels_map()
             vault['levels_map'] = levels_map
-
-            projects_map = _build_projects_map(vault['default_data'])
-            vault['projects_map'] = projects_map
-
-            drivers_map = _build_drivers_map(vault['default_data'], levels_map,
-                                             projects_map)
-            vault['drivers_map'] = drivers_map
 
             MEMCACHED_URI_PREFIX = r'^memcached:\/\/'
             stripped = re.sub(MEMCACHED_URI_PREFIX, '',
@@ -141,8 +126,24 @@ def get_vault():
         flask.request.driverlog_updated = True
 
         memcached = vault['memcached']
-        update = memcached.get('driverlog:update')
-        if update:
+        hashes = memcached.get_multi(['default_data_hash', 'update_hash'],
+                                     key_prefix='driverlog:')
+
+        if vault.get('default_data_hash') != hashes.get('default_data_hash'):
+            vault['default_data_hash'] = hashes['default_data_hash']
+            vault['default_data'] = memcached.get('driverlog:default_data')
+
+            projects_map = _build_projects_map(vault['default_data'])
+            vault['projects_map'] = projects_map
+
+            drivers_map = _build_drivers_map(
+                vault['default_data'], vault['levels_map'], projects_map)
+            vault['drivers_map'] = drivers_map
+
+        if vault.get('update_hash') != hashes.get('update_hash'):
+            vault['update_hash'] = hashes['update_hash']
+            update = memcached.get('driverlog:update')
+
             levels_map = vault['levels_map']
 
             for proj_vendor_driver, os_versions_map in update.iteritems():
@@ -158,6 +159,10 @@ def get_vault():
 
                     vault['drivers_map'][proj_vendor_driver][
                         'os_versions_map'].update(ovm)
+
+        if not vault.get('default_data'):
+            raise Exception('Memcached is not initialized. '
+                            'Please run the processor')
 
     return vault
 

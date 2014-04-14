@@ -56,6 +56,7 @@ else:
 # Handlers ---------
 
 @app.route('/')
+@decorators.exception_handler()
 @decorators.templated()
 def summary():
     selected_project_id = parameters.get_single_parameter({}, 'project_id')
