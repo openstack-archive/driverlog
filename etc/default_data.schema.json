@@ -20,6 +20,22 @@
                 "additionalProperties": false
             }
         },
+        "releases": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "type": "string",
+                        "pattern": "^[a-z]+$"
+                    },
+                    "wiki": {
+                        "type": "string"
+                    }
+                },
+                "required": ["id", "wiki"]
+            }
+        },
         "drivers": {
             "type": "array",
             "items": {
@@ -55,7 +71,7 @@
                         }
                     }
                 },
-                "required": ["project_id", "vendor", "name", "os_versions", "maintainer"],
+                "required": ["project_id", "vendor", "name", "os_versions"],
                 "additionalProperties": false
             }
         }
@@ -93,7 +109,7 @@
                     "type": "boolean"
                 }
             },
-            "required": ["verification", "os_version", "success"],
+            "required": ["verification", "os_version"],
             "additionalProperties": false
         },
         "3rd_party_verification": {
