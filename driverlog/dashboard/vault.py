@@ -57,6 +57,13 @@ def _build_projects_map(default_data):
     return projects_map
 
 
+def _build_releases_map(default_data):
+    releases_map = {}
+    for release in default_data['releases']:
+        releases_map[release['id']] = release
+    return releases_map
+
+
 def _build_drivers_map(default_data, levels_map, projects_map):
 
     driver_map = {}
@@ -136,6 +143,9 @@ def get_vault():
             projects_map = _build_projects_map(vault['default_data'])
             vault['projects_map'] = projects_map
 
+            releases_map = _build_releases_map(vault['default_data'])
+            vault['releases_map'] = releases_map
+
             drivers_map = _build_drivers_map(
                 vault['default_data'], vault['levels_map'], projects_map)
             vault['drivers_map'] = drivers_map
@@ -150,7 +160,7 @@ def get_vault():
                 ovm = os_versions_map['os_versions_map']
 
                 if proj_vendor_driver not in vault['drivers_map']:
-                    vault['drivers_map'][proj_vendor_driver] = os_versions_map
+                    LOG.info('Unknown driver %s, ignoring', proj_vendor_driver)
                 else:
                     for os_version, info in ovm.iteritems():
                         level = levels_map[info['verification']]

@@ -53,7 +53,7 @@ def update_generator(memcached, default_data, ci_ids_map, force_update=False):
             review_url = review['url']
             branch = review['branch']
 
-            for approval in review['currentPatchSet']['approvals']:
+            for approval in (review['currentPatchSet'].get('approvals') or []):
                 if approval['type'] != 'VRIF':
                     continue
 
