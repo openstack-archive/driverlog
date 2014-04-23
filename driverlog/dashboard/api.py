@@ -69,6 +69,23 @@ def get_records():
     ]
 
 
+def _extend_driver_info(driver):
+    releases_info = []
+    for release in driver['os_versions_map'].keys():
+        release = release.lower()
+        if release.find('/') > 0:
+            release = release.split('/')[1]
+        if release == 'master':
+            release = vault.get_vault()['default_data']['releases'][-1]['id']
+        if release in vault.get_vault()['releases_map']:
+            releases_info.append(
+                {
+                    'name': release.capitalize(),
+                    'wiki': vault.get_vault()['releases_map'][release]['wiki']
+                })
+    driver['releases_info'] = sorted(releases_info, key=lambda x:x['name'])
+
+
 def get_drivers_internal(**params):
     drivers = vault.get_vault()['drivers_map']
     filtered_drivers = []
@@ -81,6 +98,7 @@ def get_drivers_internal(**params):
                 break
 
         if include:
+            _extend_driver_info(driver)
             filtered_drivers.append(driver)
 
     return filtered_drivers

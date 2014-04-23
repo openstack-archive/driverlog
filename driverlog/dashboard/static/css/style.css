@@ -188,25 +188,25 @@ div#right_list_wrapper {
     white-space: pre-wrap;
 }
 
-a[href^="https://blueprints"]:after {
-    content: "↗";
-    opacity: 0.3;
-}
+/*a[href^="https://blueprints"]:after {*/
+    /*content: "↗";*/
+    /*opacity: 0.3;*/
+/*}*/
 
-a[href^="https://review"]:after {
-    content: "↗";
-    opacity: 0.3;
-}
+/*a[href^="https://review"]:after {*/
+    /*content: "↗";*/
+    /*opacity: 0.3;*/
+/*}*/
 
-a[href^="https://bugs"]:after {
-    content: "↗";
-    opacity: 0.3;
-}
+/*a[href^="https://bugs"]:after {*/
+    /*content: "↗";*/
+    /*opacity: 0.3;*/
+/*}*/
 
-a[href^="https://launchpad"]:after {
-    content: "↗";
-    opacity: 0.3;
-}
+/*a[href^="https://launchpad"]:after {*/
+    /*content: "↗";*/
+    /*opacity: 0.3;*/
+/*}*/
 
 a[target]:not([target='']):after {
     content: "↗";
@@ -414,4 +414,9 @@ body .ui-tooltip {
 
 .verification_3 {
     color: #008000;
+}
+
+.not-specified {
+    font-style: italic;
+    color: #808080;
 }

@@ -55,7 +55,7 @@
                         }
                     }
                 },
-                "required": ["project_id", "vendor", "name", "os_versions", "maintainer"],
+                "required": ["project_id", "vendor", "name", "os_versions"],
                 "additionalProperties": false
             }
         }

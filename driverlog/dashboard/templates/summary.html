@@ -3,7 +3,13 @@
 
 <script type="text/javascript">
 $(document).ready(function() {
-    $("#data_table").dataTable();
+    $("#data_table").dataTable({
+        "aLengthMenu": [
+            [10, 25, 50, -1],
+            [10, 25, 50, "All"]
+        ],
+        "iDisplayLength": -1
+    });
     $(document).tooltip();
 
 
@@ -98,14 +104,14 @@ $(document).ready(function() {
                    {% endif %}/>
         </div>
 
-        <div class="drop">
-            <label for="level_selector"
-                   title="Verification Level">Level</label>
-            <input type="hidden" id="level_selector" style="width:240px"
-                    {% if level_id %}
-                   value="{{ level_id }}"
-                   {% endif %}/>
-        </div>
+{#        <div class="drop">#}
+{#            <label for="level_selector"#}
+{#                   title="Verification Level">Level</label>#}
+{#            <input type="hidden" id="level_selector" style="width:240px"#}
+{#                    {% if level_id %}#}
+{#                   value="{{ level_id }}"#}
+{#                   {% endif %}/>#}
+{#        </div>#}
 
     </div>
 
@@ -116,7 +122,9 @@ $(document).ready(function() {
         <th>Project</th>
         <th>Vendor</th>
         <th>Driver</th>
-        <th>Verification</th>
+        <th>In Trunk?</th>
+        <th>CI tested?</th>
+        <th>Maintainer</th>
     </tr>
     </thead>
     <tbody>
@@ -124,12 +132,55 @@ $(document).ready(function() {
         <tr>
             <td>{{ driver.project_name }}</td>
             <td>{{ driver.vendor }}</td>
-            <td><div>
-                {% if driver.wiki %}<a href="{{ driver.wiki }}">{% endif %}
-                <strong>{{ driver.name }}</strong>
-                {% if driver.wiki %}</a>{% endif %}
-            </div><div>{{ driver.description }}</div></td>
-            <td><span class="verification_{{ driver.level }}" title="Click to see details"><a style="color: inherit" href="{{ url_for('details', project_id=driver.project_id, vendor=driver.vendor, driver_name=driver.name)}}">{{ driver.level_name }}</a></span></td>
+            <td>
+                <div>
+                    {% if driver.wiki %}<a href="{{ driver.wiki }}" target="_blank">{% endif %}
+                    <strong>{{ driver.name }}</strong>
+                    {% if driver.wiki %}</a>{% endif %}
+                </div>
+                {% if driver.description %}
+                    <div>
+                        {{ driver.description }}
+                    </div>
+                {% else %}
+                    <div class="not-specified">No documentation provided by vendor.</div>
+                {% endif %}
+            </td>
+            <td>
+                <div>
+                    {% for release_info in driver.releases_info %}
+                        <a href="{{ release_info.wiki }}" target="_blank">{{ release_info.name }}</a>
+                    {% endfor %}
+                </div>
+            </td>
+            <td>
+                <div>
+                    {% if driver.os_versions_map['master'] %}
+                    {% with master = driver.os_versions_map['master'] %}
+                        {% if master['verification'] == 'external_ci_verification' %}
+                            {% if master.review_url %}
+                                <a href="{{ master.review_url }}" target="_blank" title="Click for details"><span style="color: #008000">&#x2714;</span></a>
+                            {% else %}
+                                <span style="color: #808080">&#x2714;</span>
+                            {% endif %}
+                        {% endif %}
+                    {% endwith %}
+                    {% endif %}
+                </div>
+            </td>
+            <td>
+                <div>
+                {% if driver.maintainer %}
+                    {% if driver.maintainer.email %}
+                        <a href="mailto:{{ driver.maintainer.email }}">{{ driver.maintainer.name }}</a>
+                    {% else %}
+                        {{ driver.maintainer.name }}
+                    {% endif %}
+                {% else %}
+                    <span class="not-specified">Not specified</span>
+                {% endif %}
+                </div>
+            </td>
         </tr>
     {% endfor %}
     </tbody>

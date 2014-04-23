@@ -17,16 +17,53 @@
             "name": "Sahara (Data Processing)"
         }
     ],
+    "releases": [
+        {
+            "id": "austin",
+            "wiki": "https://wiki.openstack.org/wiki/ReleaseNotes/Austin"
+        },
+        {
+            "id": "bexar",
+            "wiki": "https://wiki.openstack.org/wiki/ReleaseNotes/Bexar"
+        },
+        {
+            "id": "cactus",
+            "wiki": "https://wiki.openstack.org/wiki/ReleaseNotes/Cactus"
+        },
+        {
+            "id": "diablo",
+            "wiki": "https://wiki.openstack.org/wiki/ReleaseNotes/Diablo"
+        },
+        {
+            "id": "essex",
+            "wiki": "https://wiki.openstack.org/wiki/ReleaseNotes/Essex"
+        },
+        {
+            "id": "folsom",
+            "wiki": "https://wiki.openstack.org/wiki/ReleaseNotes/Folsom"
+        },
+        {
+            "id": "grizzly",
+            "wiki": "https://wiki.openstack.org/wiki/ReleaseNotes/Grizzly"
+        },
+        {
+            "id": "havana",
+            "wiki": "https://wiki.openstack.org/wiki/ReleaseNotes/Havana"
+        },
+        {
+            "id": "icehouse",
+            "wiki": "https://wiki.openstack.org/wiki/ReleaseNotes/Icehouse"
+        },
+        {
+            "id": "juno",
+            "wiki": "https://wiki.openstack.org/wiki/Releases"
+        }
+    ],
     "drivers": [
         {
             "project_id": "openstack/cinder",
             "vendor": "Coraid",
             "name": "Coraid",
-            "description": "",
-            "maintainer": {
-                "name": "John Doe",
-                "email": "john_doe@openstack.org"
-            },
             "wiki": "https://wiki.openstack.org/wiki/CinderSupportMatrix",
             "os_versions": [
                 {
@@ -45,11 +82,6 @@
             "project_id": "openstack/cinder",
             "vendor": "Dell",
             "name": "EqualLogic",
-            "description": "",
-            "maintainer": {
-                "name": "John Doe",
-                "email": "john_doe@openstack.org"
-            },
             "wiki": "https://wiki.openstack.org/wiki/Cinder/certified-drivers",
             "os_versions": [
                 {
