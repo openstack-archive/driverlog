@@ -1,222 +1,47 @@
 {% extends "layout.html" %}
 {% block content %}
 
-<script type="text/javascript">
-$(document).ready(function() {
-    $("#data_table").dataTable({
-        "aLengthMenu": [
-            [10, 25, 50, -1],
-            [10, 25, 50, "All"]
-        ],
-        "iDisplayLength": -1,
-        "aaSorting": [
-            [ 0, "asc" ],
-            [ 1, "asc"]
-        ]
-    });
-    $(document).tooltip();
+    <script type="text/javascript">
+        var base_url = "";
 
-
-    var projects=[
-{% for item in projects %}
-        {
-            id: "{{ item.project_id }}",
-            text: "{{ item.project_name }}"
-        },
-{% endfor %}
-    ];
-    var projects_map = {};
-    for (var i in projects) {
-        projects_map[projects[i].id] = projects[i].text;
-    }
-
-    $("#project_selector").select2({
-        allowClear: true,
-        placeholder: "Select Project",
-        data: { results: projects, text: 'text' },
-        initSelection: function(element, callback) {
-            callback({id: element.val(), text: projects_map[element.val()]});
-        }
-    }).on("change", function(e) {
-        reload();
-    });
-
-    var vendors=[
-{% for item in vendors %}
-        {
-            id: "{{ item }}",
-            text: "{{ item }}"
-        },
-{% endfor %}
-    ];
-
-    $("#vendor_selector").select2({
-        allowClear: true,
-        placeholder: "Select Vendor",
-        data: { results: vendors, text: 'text' },
-        initSelection: function(element, callback) {
-            callback({id: element.val(), text: element.val()});
-        }
-    }).on("change", function(e) {
-        reload();
-    });
-
-    var levels=[
-{% for item in levels %}
-        {
-            id: "{{ item.level_id }}",
-            text: "{{ item.level_name }}"
-        },
-{% endfor %}
-    ];
-    var levels_map = {};
-    for (var i in levels) {
-        levels_map[levels[i].id] = levels[i].text;
-    }
-
-    $("#level_selector").select2({
-        allowClear: true,
-        placeholder: "Select Level",
-        data: { results: levels, text: 'text' },
-        initSelection: function(element, callback) {
-            callback({id: element.val(), text: levels_map[element.val()]});
-        }
-    }).on("change", function(e) {
-        reload();
-    });
-
-    var releases = [
-{% for item in releases %}
-        {
-            id: "{{ item.id }}",
-            text: "{{ item.id.capitalize() }}"
-        },
-{% endfor %}
-    ];
-    var releases_map = {};
-    for (var i in releases) {
-        releases_map[releases[i].id] = releases[i].text;
-    }
-
-    $("#release_selector").select2({
-        allowClear: true,
-        placeholder: "Select Release",
-        data: { results: releases, text: 'text' },
-        initSelection: function(element, callback) {
-            callback({id: element.val(), text: releases_map[element.val()]});
-        }
-    }).on("change", function(e) {
-        reload();
-    });
-
-});
-</script>
+        $(document).ready(function () {
+            init_selectors(base_url);
+            show_summary(base_url);
+        });
+    </script>
 
     <div class="drops">
 
         <div class="drop">
-            <label for="release_selector"
-                   title="OpenStack Release">Release</label>
-            <input type="hidden" id="release_selector" style="width:240px"
-                    {% if release_id %}
-                   value="{{ release_id }}"
-                   {% endif %}/>
+            <label for="release_selector" title="OpenStack Release">Release</label>
+            <input type="hidden" id="release_selector" style="width:240px"/>
         </div>
 
         <div class="drop">
-            <label for="project_selector"
-                   title="OpenStack Project">Project</label>
-            <input type="hidden" id="project_selector" style="width:240px"
-                    {% if project_id %}
-                   value="{{ project_id }}"
-                   {% endif %}/>
+            <label for="project_selector" title="OpenStack Project">Project</label>
+            <input type="hidden" id="project_selector" style="width:240px"/>
         </div>
 
         <div class="drop">
-            <label for="vendor_selector"
-                   title="Vendor">Vendor</label>
-            <input type="hidden" id="vendor_selector" style="width:240px"
-                    {% if vendor %}
-                   value="{{ vendor }}"
-                   {% endif %}/>
+            <label for="vendor_selector" title="Vendor">Vendor</label>
+            <input type="hidden" id="vendor_selector" style="width:240px"/>
         </div>
 
     </div>
 
     <div style="margin-top: 2em;">
-    <table id="data_table" class="display">
-    <thead>
-    <tr>
-        <th>Project</th>
-        <th>Vendor</th>
-        <th>Driver</th>
-        <th>In Trunk?</th>
-        <th>CI tested?</th>
-        <th>Maintainer</th>
-    </tr>
-    </thead>
-    <tbody>
-    {% for driver in drivers %}
-        <tr>
-            <td>{{ driver.project_name }}</td>
-            <td>{{ driver.vendor }}</td>
-            <td>
-                <div>
-                    {% if driver.wiki %}<a href="{{ driver.wiki }}" target="_blank">{% endif %}
-                    <strong>{{ driver.name }}</strong>
-                    {% if driver.wiki %}</a>{% endif %}
-                </div>
-                {% if driver.description %}
-                    <div>
-                        {{ driver.description }}
-                    </div>
-                {% endif %}
-            </td>
-            <td>
-                <div>
-                    {% for release_info in driver.releases_info %}
-                        <a href="{{ release_info.wiki }}" target="_blank">{{ release_info.name }}</a>
-                    {% endfor %}
-                </div>
-            </td>
-            <td>
-                <div>
-                    {% if driver.os_versions_map['master'] %}
-                    {% with master = driver.os_versions_map['master'] %}
-                        {% if master['verification'] == 'external_ci_verification' %}
-                            {% if master.review_url %}
-                                <a href="{{ master.review_url }}" target="_blank" title="Click for details"><span style="color: #008000">&#x2714;</span></a>
-                            {% else %}
-                                <span style="color: #808080">&#x2714;</span>
-                            {% endif %}
-                        {% else %}
-                            <span style="color: darkred">&#x2716;</span>
-                        {% endif %}
-                    {% endwith %}
-                    {% else %}
-                        <span style="color: darkred">&#x2716;</span>
-                    {% endif %}
-                </div>
-            </td>
-            <td>
-                <div>
-                {% if driver.maintainer %}
-                    {% if driver.maintainer.email %}
-                        <a href="mailto:{{ driver.maintainer.email }}">{{ driver.maintainer.name }}</a>
-                    {% elif driver.maintainer.irc %}
-                        <a href="irc:{{ driver.maintainer.irc }}">{{ driver.maintainer.name }}</a>
-                    {% else %}
-                        {{ driver.maintainer.name }}
-                    {% endif %}
-                {% else %}
-                    <span class="not-specified">Not specified</span>
-                {% endif %}
-                </div>
-            </td>
-        </tr>
-    {% endfor %}
-    </tbody>
-    </table>
+        <table id="data_table" class="display">
+            <thead>
+            <tr>
+                <th>Project</th>
+                <th>Vendor</th>
+                <th>Driver</th>
+                <th>In Trunk?</th>
+                <th>CI tested?</th>
+                <th>Maintainer</th>
+            </tr>
+            </thead>
+        </table>
     </div>
 
 {% endblock %}
