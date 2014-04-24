@@ -2,6 +2,9 @@
 {% block content %}
 
 <script type="text/javascript">
+
+var base_url = "";
+
 $(document).ready(function() {
     $("#data_table").dataTable({
         "aLengthMenu": [
@@ -16,98 +19,102 @@ $(document).ready(function() {
     });
     $(document).tooltip();
 
-
-    var projects=[
-{% for item in projects %}
-        {
-            id: "{{ item.project_id }}",
-            text: "{{ item.project_name }}"
-        },
-{% endfor %}
-    ];
-    var projects_map = {};
-    for (var i in projects) {
-        projects_map[projects[i].id] = projects[i].text;
-    }
-
     $("#project_selector").select2({
         allowClear: true,
         placeholder: "Select Project",
-        data: { results: projects, text: 'text' },
-        initSelection: function(element, callback) {
-            callback({id: element.val(), text: projects_map[element.val()]});
+        ajax: {
+            url: make_uri(base_url + "/api/1.0/list/project_ids"),
+            dataType: 'jsonp',
+            data: function (term, page) {
+                return {
+                    query: term
+                };
+            },
+            results: function (data, page) {
+                return {results: data["project_ids"]};
+            }
+        },
+        initSelection: function (element, callback) {
+            var id = $(element).val();
+            if (id !== "") {
+                $.ajax(make_uri(base_url + "/api/1.0/list/project_ids/" + id), {
+                    dataType: "jsonp"
+                }).done(function (data) {
+                        callback(data["project_id"]);
+                    });
+            }
         }
-    }).on("change", function(e) {
-        reload();
     });
 
-    var vendors=[
-{% for item in vendors %}
-        {
-            id: "{{ item }}",
-            text: "{{ item }}"
-        },
-{% endfor %}
-    ];
+    $('#project_selector')
+        .on("change", function (e) {
+            reload();
+        });
 
     $("#vendor_selector").select2({
         allowClear: true,
         placeholder: "Select Vendor",
-        data: { results: vendors, text: 'text' },
-        initSelection: function(element, callback) {
-            callback({id: element.val(), text: element.val()});
+        ajax: {
+            url: make_uri(base_url + "/api/1.0/list/vendors"),
+            dataType: 'jsonp',
+            data: function (term, page) {
+                return {
+                    query: term
+                };
+            },
+            results: function (data, page) {
+                return {results: data["vendors"]};
+            }
+        },
+        initSelection: function (element, callback) {
+            var id = $(element).val();
+            if (id !== "") {
+                $.ajax(make_uri(base_url + "/api/1.0/list/vendors/" + id), {
+                    dataType: "jsonp"
+                }).done(function (data) {
+                        callback(data["vendor"]);
+                    });
+            }
         }
-    }).on("change", function(e) {
-        reload();
     });
 
-    var levels=[
-{% for item in levels %}
-        {
-            id: "{{ item.level_id }}",
-            text: "{{ item.level_name }}"
-        },
-{% endfor %}
-    ];
-    var levels_map = {};
-    for (var i in levels) {
-        levels_map[levels[i].id] = levels[i].text;
-    }
+    $('#vendor_selector')
+        .on("change", function (e) {
+            reload();
+        });
 
-    $("#level_selector").select2({
-        allowClear: true,
-        placeholder: "Select Level",
-        data: { results: levels, text: 'text' },
-        initSelection: function(element, callback) {
-            callback({id: element.val(), text: levels_map[element.val()]});
-        }
-    }).on("change", function(e) {
-        reload();
-    });
-
-    var releases = [
-{% for item in releases %}
-        {
-            id: "{{ item.id }}",
-            text: "{{ item.id.capitalize() }}"
-        },
-{% endfor %}
-    ];
-    var releases_map = {};
-    for (var i in releases) {
-        releases_map[releases[i].id] = releases[i].text;
-    }
 
     $("#release_selector").select2({
         allowClear: true,
         placeholder: "Select Release",
-        data: { results: releases, text: 'text' },
-        initSelection: function(element, callback) {
-            callback({id: element.val(), text: releases_map[element.val()]});
+        ajax: {
+            url: make_uri(base_url + "/api/1.0/list/releases"),
+            dataType: 'jsonp',
+            data: function (term, page) {
+                return {
+                    query: term
+                };
+            },
+            results: function (data, page) {
+                return {results: data["releases"]};
+            }
+        },
+        initSelection: function (element, callback) {
+            var id = $(element).val();
+            if (id !== "") {
+                $.ajax(make_uri(base_url + "/api/1.0/list/releases/" + id), {
+                    dataType: "jsonp"
+                }).done(function (data) {
+                        callback(data["release"]);
+                    });
+            }
         }
-    }).on("change", function(e) {
-        reload();
     });
+
+    $('#release_selector')
+        .on("change", function (e) {
+            reload();
+        });
 
 });
 </script>

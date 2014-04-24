@@ -16,74 +16,11 @@
 import flask
 
 from driverlog.dashboard import decorators
+from driverlog.dashboard import parameters
 from driverlog.dashboard import vault
 
 
 blueprint = flask.Blueprint('api', __name__, url_prefix='/api/1.0')
-
-
-@blueprint.route('/records')
-@decorators.jsonify()
-@decorators.exception_handler()
-def get_records():
-    return [
-        {
-            'driver': 'SolidFire',
-            'project': 'openstack/cinder',
-            'branch': 'master',
-            'timestamp': 1234567890,
-            'success': True,
-            'endpoint': 'create_volume',
-            'passed_tests': [
-                'test_volume_create'
-            ],
-            'failed_tests': [
-            ]
-        },
-        {
-            'driver': 'SolidFire',
-            'project': 'openstack/cinder',
-            'branch': 'master',
-            'timestamp': 1234567890,
-            'success': True,
-            'endpoint': 'list_volume',
-            'passed_tests': [
-                'test_volume_list', 'test_volume_list_with_paging'
-            ],
-            'failed_tests': [
-            ]
-        },
-        {
-            'driver': 'Ceph',
-            'project': 'openstack/cinder',
-            'branch': 'stable/havana',
-            'timestamp': 1234567890,
-            'success': False,
-            'endpoint': 'create_volume',
-            'passed_tests': [
-            ],
-            'failed_tests': [
-                'test_volume_create'
-            ]
-        }
-    ]
-
-
-def _extend_driver_info(driver):
-    releases_info = []
-    for release in driver['os_versions_map'].keys():
-        release = release.lower()
-        if release.find('/') > 0:
-            release = release.split('/')[1]
-        if release == 'master':
-            release = vault.get_vault()['default_data']['releases'][-1]['id']
-        if release in vault.get_vault()['releases_map']:
-            releases_info.append(
-                {
-                    'name': release.capitalize(),
-                    'wiki': vault.get_vault()['releases_map'][release]['wiki']
-                })
-    driver['releases_info'] = sorted(releases_info, key=lambda x: x['name'])
 
 
 def get_drivers_internal(**params):
@@ -93,6 +30,7 @@ def get_drivers_internal(**params):
     for driver in drivers.values():
         include = True
         for param, value in params.iteritems():
+            value = value.lower()
             if param == 'release_id' and value:
                 found = False
                 for release in driver['releases_info']:
@@ -104,7 +42,7 @@ def get_drivers_internal(**params):
                     include = False
                     break
 
-            elif value and driver.get(param) != value:
+            elif value and (driver.get(param) or '').lower() != value:
                 include = False
                 break
 
@@ -118,4 +56,96 @@ def get_drivers_internal(**params):
 @decorators.jsonify('drivers')
 @decorators.exception_handler()
 def get_drivers():
-    return get_drivers_internal()
+    selected_project_id = parameters.get_single_parameter({}, 'project_id')
+    selected_vendor = parameters.get_single_parameter({}, 'vendor')
+    selected_release = parameters.get_single_parameter({}, 'release')
+
+    return get_drivers_internal(project_id=selected_project_id,
+                                vendor=selected_vendor,
+                                release=selected_release)
+
+
+@blueprint.route('/list/releases')
+@decorators.jsonify('releases')
+@decorators.exception_handler()
+def get_releases():
+    selected_vendor = parameters.get_single_parameter({}, 'vendor')
+    selected_release = parameters.get_single_parameter({}, 'release')
+    query = (parameters.get_single_parameter({}, 'query') or '').lower()
+
+    releases = set()
+    for driver in get_drivers_internal(vendor=selected_vendor,
+                                       release=selected_release):
+        for release in driver['releases_info']:
+            if release['name'].lower().find(query) >= 0:
+                releases.add(release['name'])
+
+    releases = [{'id': release.lower(), 'text': release.capitalize()}
+                for release in releases]
+
+    return sorted(releases, key=lambda x: x['text'], reverse=True)
+
+
+@blueprint.route('/list/releases/<release>')
+@decorators.jsonify('release')
+@decorators.exception_handler()
+def get_release(release):
+    return {'id': release.lower(), 'text': release.capitalize()}
+
+
+@blueprint.route('/list/project_ids')
+@decorators.jsonify('project_ids')
+@decorators.exception_handler()
+def get_project_ids():
+    selected_vendor = parameters.get_single_parameter({}, 'vendor')
+    selected_release_id = parameters.get_single_parameter({}, 'release_id')
+    query = (parameters.get_single_parameter({}, 'query') or '').lower()
+
+    projects_map = vault.get_vault()['projects_map']
+    project_ids = set()
+    for driver in get_drivers_internal(vendor=selected_vendor,
+                                       release_id=selected_release_id):
+        if projects_map[driver['project_id']]['name'].lower().find(query) >= 0:
+            project_ids.add(driver['project_id'])
+
+    projects = [{'id': project_id,
+                 'text': projects_map[project_id]['name']}
+                for project_id in project_ids]
+
+    return sorted(projects, key=lambda x: x['text'])
+
+
+@blueprint.route('/list/project_ids/<path:project_id>')
+@decorators.jsonify('project_id')
+@decorators.exception_handler()
+def get_project_id(project_id):
+    projects_map = vault.get_vault()['projects_map']
+    if project_id in projects_map:
+        return {'id': project_id, 'text': projects_map[project_id]['name']}
+    else:
+        flask.abort(404)
+
+
+@blueprint.route('/list/vendors')
+@decorators.jsonify('vendors')
+@decorators.exception_handler()
+def get_vendors():
+    selected_project_id = parameters.get_single_parameter({}, 'project_id')
+    selected_release_id = parameters.get_single_parameter({}, 'release_id')
+    query = (parameters.get_single_parameter({}, 'query') or '').lower()
+
+    vendors = set()
+    for driver in get_drivers_internal(project_id=selected_project_id,
+                                       release_id=selected_release_id):
+        if driver['vendor'].lower().find(query) >= 0:
+            vendors.add(driver['vendor'])
+
+    vendors = [{'id': vendor, 'text': vendor} for vendor in vendors]
+    return sorted(vendors, key=lambda x: x['text'])
+
+
+@blueprint.route('/list/vendors/<path:vendor>')
+@decorators.jsonify('vendor')
+@decorators.exception_handler()
+def get_vendor(vendor):
+    return {'id': vendor, 'text': vendor}
