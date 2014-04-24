@@ -63,7 +63,7 @@
         {
             "project_id": "openstack/cinder",
             "vendor": "Ceph",
-            "name": "RADOS Block Device (RBD)",
+            "name": "Ceph RADOS Block Device (RBD)",
             "maintainer": {
                 "name": "Josh Durgin, Mike Perez, Edward Hope-Morley"
             },
@@ -114,7 +114,7 @@
         {
             "project_id": "openstack/cinder",
             "vendor": "Coraid",
-            "name": "AoE driver",
+            "name": "Coraid AoE driver",
             "wiki": "http://docs.openstack.org/trunk/config-reference/content/coraid_aoe_driver_configuration.html",
             "os_versions": [
                 {
@@ -134,7 +134,7 @@
         {
             "project_id": "openstack/cinder",
             "vendor": "Dell",
-            "name": "EqualLogic volume driver",
+            "name": "Dell EqualLogic volume driver",
             "wiki": "http://docs.openstack.org/trunk/config-reference/content/dell-equallogic-driver.html",
             "os_versions": [
                 {
@@ -158,29 +158,7 @@
         {
             "project_id": "openstack/cinder",
             "vendor": "EMC",
-            "name": "SMI-S (FC)",
-            "maintainer": {
-                "name": "Xing Yang",
-                "email": "xing.yang@emc.com"
-            },
-            "os_versions": [
-                {
-                    "os_version": "Icehouse",
-                    "verification": "3rd_party_verification",
-                    "verifiers": [
-                        {
-                            "name": "Xing Yang",
-                            "launchpad_id": "xing-yang"
-                        }
-                    ],
-                    "success": true
-                }
-            ]
-        },
-        {
-            "project_id": "openstack/cinder",
-            "vendor": "EMC",
-            "name": "SMI-S (iSCSI)",
+            "name": "EMC SMI-S iSCSI driver",
             "maintainer": {
                 "name": "Xing Yang",
                 "email": "xing.yang@emc.com"
@@ -224,7 +202,7 @@
         {
             "project_id": "openstack/cinder",
             "vendor": "HP",
-            "name": "3PAR Fibre Channel and iSCSI drivers",
+            "name": "HP 3PAR Fibre Channel and iSCSI drivers",
             "maintainer": {
                 "name": "Walter Boring, Kurt Martin, Jim Branen, Ramy Asselin",
                 "email": "walter.boring@hp.com"
@@ -247,7 +225,7 @@
         {
             "project_id": "openstack/cinder",
             "vendor": "HP",
-            "name": "LeftHand SAN",
+            "name": "HP LeftHand SAN",
             "maintainer": {
                 "name": "Kurt Martin, Walt Boring, Jim Branen, Ramy Asselin",
                 "email": "kurt.f.martin@hp.com"
@@ -311,7 +289,7 @@
         {
             "project_id": "openstack/cinder",
             "vendor": "IBM",
-            "name": "IBM GPFS",
+            "name": "IBM GPFS volume driver",
             "maintainer": {
                 "name": "IBM",
                 "email": "openstack_storage_drivers@il.ibm.com"
@@ -344,7 +322,7 @@
         {
             "project_id": "openstack/cinder",
             "vendor": "IBM",
-            "name": "Storwize family and SVC volume driver",
+            "name": "IBM Storwize family and SVC volume driver",
             "maintainer": {
                 "name": "IBM",
                 "email": "openstack_storage_drivers@il.ibm.com"
@@ -367,7 +345,7 @@
         {
             "project_id": "openstack/cinder",
             "vendor": "IBM",
-            "name": "XIV/DS8K volume driver",
+            "name": "IBM XIV/DS8K volume driver",
             "maintainer": {
                 "name": "IBM",
                 "email": "openstack_storage_drivers@il.ibm.com"
@@ -423,7 +401,7 @@
         {
             "project_id": "openstack/cinder",
             "vendor": "NetApp",
-            "name": "unified driver",
+            "name": "NetApp unified driver",
             "maintainer": {
                 "name": "Ben Swartzlander",
                 "irc": "bswartz"
@@ -469,7 +447,7 @@
         {
             "project_id": "openstack/cinder",
             "vendor": "OpenStack Community",
-            "name": "LVM (Reference)",
+            "name": "LVM",
             "maintainer": {
                 "name": "John Griffith",
                 "email": "john.griffith@solidfire.com"
@@ -519,6 +497,14 @@
                     "verification": "external_ci_verification",
                     "ci_id": "jenkins"
                 }
+            ]
+        },
+        {
+            "project_id": "openstack/cinder",
+            "vendor": "Oracle",
+            "name": "Solaris (ZFS)",
+            "wiki": "https://github.com/openstack/cinder/blob/da2dbd35de752d4dd47859c8b9197b00c53dd872/etc/cinder/cinder.conf.sample",
+            "os_versions": [
             ]
         },
         {
@@ -579,7 +565,7 @@
         {
             "project_id": "openstack/cinder",
             "vendor": "VMware",
-            "name": "VMDK Driver",
+            "name": "VMware VMDK Driver",
             "maintainer": {
                 "name": "Subramanian Neelakantan, Kartik Bommepally",
                 "email": "sneelakantan@vmware.com"
@@ -620,7 +606,7 @@
         {
             "project_id": "openstack/neutron",
             "vendor": "A10 Networks",
-            "name": "LBaaS Driver for Thunder Series",
+            "name": "A10 Networks LBaaS Driver for Thunder Series",
             "maintainer": {
                 "name": "Micheal Thompson",
                 "irc": "layer427expert"
@@ -632,7 +618,7 @@
         {
             "project_id": "openstack/neutron",
             "vendor": "Arista",
-            "name": "Neutron ML2 Driver",
+            "name": "Arista Neutron ML2 Driver",
             "description": "Arista ML2 Mechanism Driver implement ML2 Plugin Mechanism Driver API. This driver can manage all types of Arista switches.",
             "maintainer": {
                 "name": "Sukhdev Kapur",
@@ -649,7 +635,7 @@
         {
             "project_id": "openstack/neutron",
             "vendor": "Big Switch",
-            "name": "Floodlight controller plugin",
+            "name": "Big Switch Controller Plugin",
             "description": "BigSwitch RestProxy Neutron plugin with the open source Floodlight controller",
             "maintainer": {
                 "name": "Kevin Benton",
@@ -699,7 +685,7 @@
         {
             "project_id": "openstack/neutron",
             "vendor": "Cisco",
-            "name": "UCS/Nexus plugin",
+            "name": "Cisco UCS/Nexus Plugin",
             "maintainer": {
                 "name": "Henry Gessau",
                 "irc": "HenryG"
@@ -715,7 +701,7 @@
         {
             "project_id": "openstack/neutron",
             "vendor": "Cloudbase",
-            "name": "Hyper-V plugin",
+            "name": "Cloudbase Hyper-V Plugin",
             "wiki": "http://www.cloudbase.it/quantum-hyper-v-plugin/",
             "os_versions": [
             ]
@@ -723,7 +709,7 @@
         {
             "project_id": "openstack/neutron",
             "vendor": "Embrane",
-            "name": "Neutron Plugin",
+            "name": "Embrane Neutron Plugin",
             "maintainer": {
                 "name": "Ivar Lazzaro",
                 "irc": "ivar-lazzaro"
@@ -739,7 +725,7 @@
         {
             "project_id": "openstack/neutron",
             "vendor": "Extreme Networks",
-            "name": "Neutron Plugin",
+            "name": "Extreme Networks Plugin",
             "wiki": "http://extrcdn.extremenetworks.com/wp-content/uploads/2014/02/SDN_OpenStack_Install_Guide_Final1.pdf",
             "os_versions": [
             ]
@@ -747,7 +733,7 @@
         {
             "project_id": "openstack/neutron",
             "vendor": "IBM",
-            "name": "SDN-VE Plugin",
+            "name": "IBM SDN-VE Plugin",
             "wiki": "http://docs.openstack.org/trunk/config-reference/content/networking-plugin-linuxbridge_agent.html",
             "os_versions": [
             ]
@@ -755,7 +741,7 @@
         {
             "project_id": "openstack/neutron",
             "vendor": "Juniper",
-            "name": "Networks plug-in for OpenStack Neutron",
+            "name": "Juniper Networks plug-in for OpenStack Neutron",
             "wiki": "http://www.juniper.net/techpubs/en_US/release-independent/junos/topics/topic-map/openstack-neutron-plugin.html",
             "os_versions": [
             ]
@@ -763,7 +749,7 @@
         {
             "project_id": "openstack/neutron",
             "vendor": "Mellanox",
-            "name": "Neutron Plugin",
+            "name": "Mellanox Neutron Plugin",
             "description": "Mellanox supports the OpenStack Neutron releases with open source networking components. It delivers higher compute and storage performance and additional functionality, such as NIC based switching to provide better security and isolation for virtual cloud environments. ",
             "maintainer": {
                 "name": "Irena Berezovsky",
@@ -797,7 +783,7 @@
         {
             "project_id": "openstack/neutron",
             "vendor": "NEC",
-            "name": "OpenFlow Plugin",
+            "name": "NEC OpenFlow Plugin",
             "maintainer": {
                 "name": "Akihiro Motoki",
                 "irc": "amotoki",
@@ -814,7 +800,7 @@
         {
             "project_id": "openstack/neutron",
             "vendor": "Nicira",
-            "name": "Network Virtualization Platform (NVP) Plugin",
+            "name": "Nicira Network Virtualization Platform (NVP) Plugin",
             "wiki": "http://docs.openstack.org/admin-guide-cloud/content/nsx_plugin.html",
             "maintainer": {
                 "name": "Armando Migliaccio",
@@ -826,7 +812,7 @@
         {
             "project_id": "openstack/neutron",
             "vendor": "Nuage Networks",
-            "name": "Neutron Plugin",
+            "name": "Nuage Networks Neutron Plugin",
             "maintainer": {
                 "name": "Ronak Shah",
                 "email": "nuage-ci@nuagenetworks.net",
@@ -842,7 +828,7 @@
         {
             "project_id": "openstack/neutron",
             "vendor": "One Convergence",
-            "name": "NVSD Controller",
+            "name": "One Convergence NVSD Controller",
             "wiki": "https://github.com/openstack/neutron/tree/master/neutron/plugins/oneconvergence",
             "os_versions": [
                 {
@@ -871,7 +857,7 @@
             "os_versions": [
                 {
                     "verification": "external_ci_verification",
-                    "ci_id": "OpenDaylight Jenkins"
+                    "ci_id": "odl-jenkins"
                 }
             ]
         },
@@ -922,7 +908,7 @@
         {
             "project_id": "openstack/neutron",
             "vendor": "PLUMgrid",
-            "name": "Neutron Plugin",
+            "name": "PLUMgrid Plugin",
             "description": "PLUMgrid Neutron Plugin v2 for PLUMgrid IO Visor",
             "maintainer": {
                 "name": "Fawad Khaliq",
@@ -947,7 +933,7 @@
         {
             "project_id": "openstack/neutron",
             "vendor": "Ryu",
-            "name": "OpenFlow Controller Plugin",
+            "name": "Ryu OpenFlow Controller Plugin",
             "maintainer": {
                 "name": "Nachi Ueno",
                 "irc": "nati_ueno"
@@ -963,7 +949,7 @@
         {
             "project_id": "openstack/neutron",
             "vendor": "Tail-f",
-            "name": "Tail-f NCS Driver",
+            "name": "Neutron ML2 Driver For Tail-f NCS",
             "description": "The Tail-f NCS Mechanism Driver implements the ML2 Plugin Mechanism Driver API.",
             "maintainer": {
                 "name": "Luke Gorrie",
@@ -981,7 +967,7 @@
         {
             "project_id": "openstack/neutron",
             "vendor": "vArmour",
-            "name": "Neutron Plugin",
+            "name": "vArmour-Firewall",
             "description": "L3 agent and FWaaS driver for vArmour Firewall",
             "maintainer": {
                 "name": "Gary Duan",
@@ -1111,7 +1097,7 @@
         {
             "project_id": "openstack/sahara",
             "vendor": "Hortonworks",
-            "name": "Data Platform Plugin",
+            "name": "Hortonworks Data Platform Plugin",
             "wiki": "http://docs.openstack.org/developer/sahara/userdoc/hdp_plugin.html",
             "os_versions": [
             ]

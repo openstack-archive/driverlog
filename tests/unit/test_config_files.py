@@ -24,10 +24,7 @@ def _compare_drivers(x, y):
         return ((x['project_id'] > y['project_id']) -
                 (x['project_id'] < y['project_id']))
 
-    if x['vendor'] != y['vendor']:
-        return (x['vendor'] > y['vendor']) - (x['vendor'] < y['vendor'])
-
-    return (x['name'] > y['name']) - (x['name'] < y['name'])
+    return (x['vendor'] > y['vendor']) - (x['vendor'] < y['vendor'])
 
 
 class TestConfigFiles(testtools.TestCase):
