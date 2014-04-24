@@ -233,7 +233,8 @@ function make_std_options() {
     var options = {};
     options['project_id'] = $('#project_selector').val();
     options['vendor'] = $('#vendor_selector').val();
-    options['level_id'] = $('#level_selector').val();
+//    options['level_id'] = $('#level_selector').val();
+    options['release_id'] = $('#release_selector').val();
 //    options['date'] = $('#date_selector').datepicker("getDate").getTime() / 1000;
 
     return options;

@@ -62,24 +62,29 @@ def summary():
     selected_project_id = parameters.get_single_parameter({}, 'project_id')
     selected_vendor = parameters.get_single_parameter({}, 'vendor')
     selected_level_id = parameters.get_single_parameter({}, 'level_id')
+    selected_release_id = parameters.get_single_parameter({}, 'release_id')
 
     drivers = api.get_drivers_internal(project_id=selected_project_id,
                                        vendor=selected_vendor,
-                                       level_id=selected_level_id)
+                                       level_id=selected_level_id,
+                                       release_id=selected_release_id)
     vendors = set()
     levels_id = set()
     projects_id = set()
 
     for driver in api.get_drivers_internal(project_id=selected_project_id,
-                                           level_id=selected_level_id):
+                                           level_id=selected_level_id,
+                                           release_id=selected_release_id):
         vendors.add(driver['vendor'])
 
     for driver in api.get_drivers_internal(project_id=selected_project_id,
-                                           vendor=selected_vendor):
+                                           vendor=selected_vendor,
+                                           release_id=selected_release_id):
         levels_id.add(driver['level_id'])
 
     for driver in api.get_drivers_internal(vendor=selected_vendor,
-                                           level_id=selected_level_id):
+                                           level_id=selected_level_id,
+                                           release_id=selected_release_id):
         projects_id.add(driver['project_id'])
 
     projects_map = vault.get_vault()['projects_map']
@@ -91,6 +96,8 @@ def summary():
     levels = [{'level_id': level_id,
                'level_name': levels_map[level_id]['level_name']}
               for level_id in levels_id]
+
+    releases = vault.get_vault()['default_data']['releases']
 
     if selected_project_id not in projects_map:
         selected_project_id = None
@@ -106,9 +113,11 @@ def summary():
         'vendors': sorted(vendors),
         'levels': sorted(levels, key=lambda x: x['level_name']),
         'projects': sorted(projects, key=lambda x: x['project_name']),
+        'releases': sorted(releases, key=lambda x: x['id'], reverse=True),
         'project_id': selected_project_id,
         'vendor': selected_vendor,
         'level_id': selected_level_id,
+        'release_id': selected_release_id,
     }
 
 

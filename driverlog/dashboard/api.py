@@ -93,12 +93,22 @@ def get_drivers_internal(**params):
     for driver in drivers.values():
         include = True
         for param, value in params.iteritems():
-            if value and driver.get(param) != value:
+            if param == 'release_id' and value:
+                found = False
+                for release in driver['releases_info']:
+                    if release['release_id'] == value:
+                        found = True
+                        break
+
+                if not found:
+                    include = False
+                    break
+
+            elif value and driver.get(param) != value:
                 include = False
                 break
 
         if include:
-            _extend_driver_info(driver)
             filtered_drivers.append(driver)
 
     return filtered_drivers

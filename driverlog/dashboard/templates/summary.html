@@ -85,10 +85,43 @@ $(document).ready(function() {
         reload();
     });
 
+    var releases = [
+{% for item in releases %}
+        {
+            id: "{{ item.id }}",
+            text: "{{ item.id.capitalize() }}"
+        },
+{% endfor %}
+    ];
+    var releases_map = {};
+    for (var i in releases) {
+        releases_map[releases[i].id] = releases[i].text;
+    }
+
+    $("#release_selector").select2({
+        allowClear: true,
+        placeholder: "Select Release",
+        data: { results: releases, text: 'text' },
+        initSelection: function(element, callback) {
+            callback({id: element.val(), text: releases_map[element.val()]});
+        }
+    }).on("change", function(e) {
+        reload();
+    });
+
 });
 </script>
 
     <div class="drops">
+
+        <div class="drop">
+            <label for="release_selector"
+                   title="OpenStack Release">Release</label>
+            <input type="hidden" id="release_selector" style="width:240px"
+                    {% if release_id %}
+                   value="{{ release_id }}"
+                   {% endif %}/>
+        </div>
 
         <div class="drop">
             <label for="project_selector"
@@ -107,15 +140,6 @@ $(document).ready(function() {
                    value="{{ vendor }}"
                    {% endif %}/>
         </div>
-
-{#        <div class="drop">#}
-{#            <label for="level_selector"#}
-{#                   title="Verification Level">Level</label>#}
-{#            <input type="hidden" id="level_selector" style="width:240px"#}
-{#                    {% if level_id %}#}
-{#                   value="{{ level_id }}"#}
-{#                   {% endif %}/>#}
-{#        </div>#}
 
     </div>
 

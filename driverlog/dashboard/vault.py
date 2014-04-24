@@ -64,6 +64,26 @@ def _build_releases_map(default_data):
     return releases_map
 
 
+def _extend_drivers_info():
+    for driver in get_vault()['drivers_map'].values():
+        releases_info = []
+        for release in driver['os_versions_map'].keys():
+            release = release.lower()
+            if release.find('/') > 0:
+                release = release.split('/')[1]
+            if release == 'master':
+                release = get_vault()['default_data']['releases'][-1]['id']
+            if release in get_vault()['releases_map']:
+                releases_info.append(
+                    {
+                        'release_id': release.lower(),
+                        'name': release.capitalize(),
+                        'wiki': get_vault()['releases_map'][release]['wiki']
+                    })
+        driver['releases_info'] = sorted(releases_info,
+                                         key=lambda x: x['name'])
+
+
 def _build_drivers_map(default_data, levels_map, projects_map):
 
     driver_map = {}
@@ -150,6 +170,8 @@ def get_vault():
                 vault['default_data'], vault['levels_map'], projects_map)
             vault['drivers_map'] = drivers_map
 
+            _extend_drivers_info()
+
         if vault.get('update_hash') != hashes.get('update_hash'):
             vault['update_hash'] = hashes['update_hash']
             update = memcached.get('driverlog:update')
@@ -169,6 +191,8 @@ def get_vault():
 
                     vault['drivers_map'][proj_vendor_driver][
                         'os_versions_map'].update(ovm)
+
+            _extend_drivers_info()
 
         if not vault.get('default_data'):
             raise Exception('Memcached is not initialized. '
