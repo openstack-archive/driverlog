@@ -71,7 +71,7 @@ function init_selectors(base_url) {
         allowClear: true,
         placeholder: "Select Project",
         ajax: {
-            url: make_uri(base_url + "/api/1.0/list/project_ids"),
+            url: make_uri(base_url + "api/1.0/list/project_ids"),
             dataType: 'jsonp',
             data: function (term, page) {
                 return {
@@ -85,7 +85,7 @@ function init_selectors(base_url) {
         initSelection: function (element, callback) {
             var id = $(element).val();
             if (id !== "") {
-                $.ajax(make_uri(base_url + "/api/1.0/list/project_ids/" + id), {
+                $.ajax(make_uri(base_url + "api/1.0/list/project_ids/" + id), {
                     dataType: "jsonp"
                 }).done(function (data) {
                         callback(data["project_id"]);
@@ -105,7 +105,7 @@ function init_selectors(base_url) {
         allowClear: true,
         placeholder: "Select Vendor",
         ajax: {
-            url: make_uri(base_url + "/api/1.0/list/vendors"),
+            url: make_uri(base_url + "api/1.0/list/vendors"),
             dataType: 'jsonp',
             data: function (term, page) {
                 return {
@@ -119,7 +119,7 @@ function init_selectors(base_url) {
         initSelection: function (element, callback) {
             var id = $(element).val();
             if (id !== "") {
-                $.ajax(make_uri(base_url + "/api/1.0/list/vendors/" + id), {
+                $.ajax(make_uri(base_url + "api/1.0/list/vendors/" + id), {
                     dataType: "jsonp"
                 }).done(function (data) {
                         callback(data["vendor"]);
@@ -139,7 +139,7 @@ function init_selectors(base_url) {
         allowClear: true,
         placeholder: "Select Release",
         ajax: {
-            url: make_uri(base_url + "/api/1.0/list/releases"),
+            url: make_uri(base_url + "api/1.0/list/releases"),
             dataType: 'jsonp',
             data: function (term, page) {
                 return {
@@ -153,7 +153,7 @@ function init_selectors(base_url) {
         initSelection: function (element, callback) {
             var id = $(element).val();
             if (id !== "") {
-                $.ajax(make_uri(base_url + "/api/1.0/list/releases/" + id), {
+                $.ajax(make_uri(base_url + "api/1.0/list/releases/" + id), {
                     dataType: "jsonp"
                 }).done(function (data) {
                         callback(data["release"]);
@@ -174,7 +174,7 @@ function show_summary(base_url) {
     var table_id = "data_table";
 
     $.ajax({
-        url: make_uri(base_url + "/api/1.0/drivers"),
+        url: make_uri(base_url + "api/1.0/drivers"),
         dataType: "jsonp",
 
         success: function (data) {
