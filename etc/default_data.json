@@ -68,92 +68,33 @@
                 "name": "Josh Durgin, Mike Perez, Edward Hope-Morley"
             },
             "wiki": "http://docs.openstack.org/trunk/config-reference/content/ceph-rados.html",
-            "os_versions": [
-                {
-                    "os_version": "Cactus",
-                    "verification": "self_verification",
-                    "success": true
-                },
-                {
-                    "os_version": "Diablo",
-                    "verification": "self_verification",
-                    "success": true
-                },
-                {
-                    "os_version": "Folsom",
-                    "verification": "self_verification",
-                    "success": true
-                },
-                {
-                    "os_version": "Havana",
-                    "verification": "self_verification",
-                    "success": true
-                },
-                {
-                    "os_version": "Icehouse",
-                    "verification": "self_verification"
-                }
-            ]
+            "releases": ["Cactus", "Diablo", "Essex", "Folsom", "Grizzly", "Havana", "Icehouse"]
         },
         {
             "project_id": "openstack/cinder",
             "vendor": "Citrix",
             "name": "XenAPI Storage Manager volume driver",
-            "wiki": "http://docs.openstack.org/trunk/config-reference/content/xensm.html",
-            "os_versions": [
-            ]
+            "wiki": "http://docs.openstack.org/trunk/config-reference/content/xensm.html"
         },
         {
             "project_id": "openstack/cinder",
             "vendor": "Citrix",
             "name": "XenAPINFS",
-            "wiki": "http://docs.openstack.org/trunk/config-reference/content/xenapinfs.html",
-            "os_versions": [
-            ]
+            "wiki": "http://docs.openstack.org/trunk/config-reference/content/xenapinfs.html"
         },
         {
             "project_id": "openstack/cinder",
             "vendor": "Coraid",
             "name": "Coraid AoE driver",
             "wiki": "http://docs.openstack.org/trunk/config-reference/content/coraid_aoe_driver_configuration.html",
-            "os_versions": [
-                {
-                    "os_version": "Grizzly",
-                    "verification": "self_verification"
-                },
-                {
-                    "os_version": "Havana",
-                    "verification": "self_verification"
-                },
-                {
-                    "os_version": "Icehouse",
-                    "verification": "self_verification"
-                }
-            ]
+            "releases": ["Grizzly", "Havana", "Icehouse"]
         },
         {
             "project_id": "openstack/cinder",
             "vendor": "Dell",
             "name": "Dell EqualLogic volume driver",
             "wiki": "http://docs.openstack.org/trunk/config-reference/content/dell-equallogic-driver.html",
-            "os_versions": [
-                {
-                    "os_version": "Havana",
-                    "verification": "self_verification",
-                    "success": true
-                },
-                {
-                    "os_version": "Icehouse",
-                    "verification": "3rd_party_verification",
-                    "verifiers": [
-                        {
-                            "name": "J M Jacob",
-                            "launchpad_id": "jacob-jacob"
-                        }
-                    ],
-                    "success": true
-                }
-            ]
+            "releases": ["Havana", "Icehouse"]
         },
         {
             "project_id": "openstack/cinder",
@@ -164,19 +105,7 @@
                 "email": "xing.yang@emc.com"
             },
             "wiki": "http://docs.openstack.org/trunk/config-reference/content/emc-smis-iscsi-driver.html",
-            "os_versions": [
-                {
-                    "os_version": "Icehouse",
-                    "verification": "3rd_party_verification",
-                    "verifiers": [
-                        {
-                            "name": "Xing Yang",
-                            "launchpad_id": "xing-yang"
-                        }
-                    ],
-                    "success": true
-                }
-            ]
+            "releases": ["Icehouse"]
         },
         {
             "project_id": "openstack/cinder",
@@ -186,18 +115,7 @@
                 "name": "Eric Harney"
             },
             "wiki": "http://docs.openstack.org/trunk/config-reference/content/GlusterFS-driver.html",
-            "os_versions": [
-                {
-                    "os_version": "Grizzly",
-                    "verification": "self_verification",
-                    "success": true
-                },
-                {
-                    "os_version": "Havana",
-                    "verification": "self_verification",
-                    "success": true
-                }
-            ]
+            "releases": ["Grizzly", "Havana", "Icehouse"]
         },
         {
             "project_id": "openstack/cinder",
@@ -208,19 +126,7 @@
                 "email": "walter.boring@hp.com"
             },
             "wiki": "http://docs.openstack.org/trunk/config-reference/content/hp-3par-driver.html",
-            "os_versions": [
-                {
-                    "os_version": "Icehouse",
-                    "verification": "3rd_party_verification",
-                    "verifiers": [
-                        {
-                            "name": "Walt Boring",
-                            "launchpad_id": "walter-boring"
-                        }
-                    ],
-                    "success": true
-                }
-            ]
+            "releases": ["Icehouse"]
         },
         {
             "project_id": "openstack/cinder",
@@ -231,60 +137,21 @@
                 "email": "kurt.f.martin@hp.com"
             },
             "wiki": "http://docs.openstack.org/trunk/config-reference/content/HPSan-driver.html",
-            "os_versions": [
-                {
-                    "os_version": "Diablo",
-                    "verification": "self_verification",
-                    "success": true
-                },
-                {
-                    "os_version": "Grizzly",
-                    "verification": "self_verification",
-                    "success": true
-                },
-                {
-                    "os_version": "Havana",
-                    "verification": "self_verification",
-                    "success": true
-                },
-                {
-                    "os_version": "Icehouse",
-                    "verification": "3rd_party_verification",
-                    "verifiers": [
-                        {
-                            "name": "Jim Branen",
-                            "launchpad_id": "james-branen"
-                        }
-                    ],
-                    "success": true
-                }
-            ]
+            "releases": ["Diablo", "Essex", "Folsom", "Grizzly", "Havana", "Icehouse"]
         },
         {
             "project_id": "openstack/cinder",
             "vendor": "Hitachi",
             "name": "HDS iSCSI volume driver",
             "wiki": "http://docs.openstack.org/trunk/config-reference/content/hds-volume-driver.html",
-            "os_versions": [
-                {
-                    "os_version": "Havana",
-                    "verification": "self_verification",
-                    "success": true
-                }
-            ]
+            "releases": ["Havana"]
         },
         {
             "project_id": "openstack/cinder",
             "vendor": "Huawei",
             "name": "Huawei storage driver",
             "wiki": "http://docs.openstack.org/trunk/config-reference/content/huawei-storage-driver.html",
-            "os_versions": [
-                {
-                    "os_version": "Havana",
-                    "verification": "self_verification",
-                    "success": true
-                }
-            ]
+            "releases": ["Havana"]
         },
         {
             "project_id": "openstack/cinder",
@@ -295,29 +162,7 @@
                 "email": "openstack_storage_drivers@il.ibm.com"
             },
             "wiki": "http://docs.openstack.org/trunk/config-reference/content/GPFS-driver.html",
-            "os_versions": [
-                {
-                    "os_version": "Folsom",
-                    "verification": "self_verification",
-                    "success": true
-                },
-                {
-                    "os_version": "Havana",
-                    "verification": "self_verification",
-                    "success": true
-                },
-                {
-                    "os_version": "Icehouse",
-                    "verification": "3rd_party_verification",
-                    "verifiers": [
-                        {
-                            "name": "Bill Owen",
-                            "launchpad_id": "billowen"
-                        }
-                    ],
-                    "success": true
-                }
-            ]
+            "releases": ["Folsom", "Grizzly", "Havana", "Icehouse"]
         },
         {
             "project_id": "openstack/cinder",
@@ -328,19 +173,7 @@
                 "email": "openstack_storage_drivers@il.ibm.com"
             },
             "wiki": "http://docs.openstack.org/trunk/config-reference/content/ibm-storwize-svc-driver.html",
-            "os_versions": [
-                {
-                    "os_version": "Icehouse",
-                    "verification": "3rd_party_verification",
-                    "verifiers": [
-                        {
-                            "name": "Avishay Traeger",
-                            "launchpad_id": "avishay-il"
-                        }
-                    ],
-                    "success": true
-                }
-            ]
+            "releases": ["Icehouse"]
         },
         {
             "project_id": "openstack/cinder",
@@ -351,52 +184,14 @@
                 "email": "openstack_storage_drivers@il.ibm.com"
             },
             "wiki": "http://docs.openstack.org/trunk/config-reference/content/ibm-xiv-driver.html",
-            "os_versions": [
-                {
-                    "os_version": "Folsom",
-                    "verification": "self_verification",
-                    "success": true
-                },
-                {
-                    "os_version": "Grizzly",
-                    "verification": "self_verification",
-                    "success": true
-                },
-                {
-                    "os_version": "Havana",
-                    "verification": "self_verification",
-                    "success": true
-                },
-                {
-                    "os_version": "Icehouse",
-                    "verification": "3rd_party_verification",
-                    "verifiers": [
-                        {
-                            "name": "Alon Marx",
-                            "launchpad_id": "alonma"
-                        }
-                    ],
-                    "success": true
-                }
-            ]
+            "releases": ["Folsom", "Grizzly", "Havana", "Icehouse"]
         },
         {
             "project_id": "openstack/cinder",
             "vendor": "Microsoft",
             "name": "Windows Server 2012",
             "wiki": "http://docs.openstack.org/trunk/config-reference/content/windows-volume-driver.html",
-            "os_versions": [
-                {
-                    "os_version": "Grizzly",
-                    "verification": "self_verification",
-                    "success": true
-                },
-                {
-                    "os_version": "Havana",
-                    "verification": "self_verification",
-                    "success": true
-                }
-            ]
+            "releases": ["Grizzly", "Havana", "Icehouse"]
         },
         {
             "project_id": "openstack/cinder",
@@ -407,42 +202,14 @@
                 "irc": "bswartz"
             },
             "wiki": "http://docs.openstack.org/trunk/config-reference/content/netapp-volume-driver.html",
-            "os_versions": [
-                {
-                    "os_version": "Icehouse",
-                    "verification": "3rd_party_verification",
-                    "verifiers": [
-                        {
-                            "name": "Andrew Kerr",
-                            "launchpad_id": "andrew-kerr"
-                        }
-                    ],
-                    "success": true
-                }
-            ]
+            "releases": ["Icehouse"]
         },
         {
             "project_id": "openstack/cinder",
             "vendor": "Nexenta",
             "name": "Nexenta drivers",
             "wiki": "http://docs.openstack.org/trunk/config-reference/content/nexenta-driver.html",
-            "os_versions": [
-                {
-                    "os_version": "Essex",
-                    "verification": "self_verification",
-                    "success": true
-                },
-                {
-                    "os_version": "Grizzly",
-                    "verification": "self_verification",
-                    "success": true
-                },
-                {
-                    "os_version": "Havana",
-                    "verification": "self_verification",
-                    "success": true
-                }
-            ]
+            "releases": ["Essex", "Folsom", "Grizzly", "Havana", "Icehouse"]
         },
         {
             "project_id": "openstack/cinder",
@@ -453,77 +220,35 @@
                 "email": "john.griffith@solidfire.com"
             },
             "wiki": "http://docs.openstack.org/trunk/config-reference/content/lvm-volume-driver.html",
-            "os_versions": [
-                {
-                    "os_version": "Folsom",
-                    "verification": "self_verification",
-                    "success": true
-                },
-                {
-                    "os_version": "Grizzly",
-                    "verification": "self_verification",
-                    "success": true
-                },
-                {
-                    "os_version": "Havana",
-                    "verification": "self_verification",
-                    "success": true
-                },
-                {
-                    "verification": "external_ci_verification",
-                    "ci_id": "jenkins"
-                }
-            ]
+            "ci_id": "jenkins",
+            "releases": ["Folsom", "Grizzly", "Havana", "Icehouse"]
         },
         {
             "project_id": "openstack/cinder",
             "vendor": "OpenStack Community",
             "name": "NFS",
             "wiki": "http://docs.openstack.org/trunk/config-reference/content/NFS-driver.html",
-            "os_versions": [
-                {
-                    "verification": "external_ci_verification",
-                    "ci_id": "jenkins"
-                }
-            ]
+            "ci_id": "jenkins"
         },
         {
             "project_id": "openstack/cinder",
             "vendor": "OpenStack Community",
             "name": "SheepDog Volume Driver",
             "wiki": "http://docs.openstack.org/trunk/config-reference/content/sheepdog-driver.html",
-            "os_versions": [
-                {
-                    "verification": "external_ci_verification",
-                    "ci_id": "jenkins"
-                }
-            ]
+            "ci_id": "jenkins"
         },
         {
             "project_id": "openstack/cinder",
             "vendor": "Oracle",
             "name": "Solaris (ZFS)",
-            "wiki": "https://github.com/openstack/cinder/blob/da2dbd35de752d4dd47859c8b9197b00c53dd872/etc/cinder/cinder.conf.sample",
-            "os_versions": [
-            ]
+            "wiki": "https://github.com/openstack/cinder/blob/da2dbd35de752d4dd47859c8b9197b00c53dd872/etc/cinder/cinder.conf.sample"
         },
         {
             "project_id": "openstack/cinder",
             "vendor": "Scality",
             "name": "Scality",
             "wiki": "https://github.com/openstack/cinder/blob/da2dbd35de752d4dd47859c8b9197b00c53dd872/etc/cinder/cinder.conf.sample",
-            "os_versions": [
-                {
-                    "os_version": "Grizzly",
-                    "verification": "self_verification",
-                    "success": true
-                },
-                {
-                    "os_version": "Havana",
-                    "verification": "self_verification",
-                    "success": true
-                }
-            ]
+            "releases": ["Grizzly", "Havana", "Icehouse"]
         },
         {
             "project_id": "openstack/cinder",
@@ -534,33 +259,7 @@
                 "email": "john.griffith@solidfire.com"
             },
             "wiki": "http://docs.openstack.org/trunk/config-reference/content/solidfire-volume-driver.html",
-            "os_versions": [
-                {
-                    "os_version": "Folsom",
-                    "verification": "self_verification",
-                    "success": true
-                },
-                {
-                    "os_version": "Grizzly",
-                    "verification": "self_verification",
-                    "success": true
-                },
-                {
-                    "os_version": "Havana",
-                    "verification": "self_verification",
-                    "success": true
-                },
-                {
-                    "os_version": "Icehouse",
-                    "verification": "3rd_party_verification",
-                    "verifiers": [
-                        {
-                            "name": "John Doe"
-                        }
-                    ],
-                    "success": true
-                }
-            ]
+            "releases": ["Folsom", "Grizzly", "Havana", "Icehouse"]
         },
         {
             "project_id": "openstack/cinder",
@@ -571,37 +270,14 @@
                 "email": "sneelakantan@vmware.com"
             },
             "wiki": "http://docs.openstack.org/trunk/config-reference/content/vmware-vmdk-driver.html",
-            "os_versions": [
-                {
-                    "os_version": "Icehouse",
-                    "verification": "3rd_party_verification",
-                    "verifiers": [
-                        {
-                            "name": "satyadev svn",
-                            "launchpad_id": "svnsatya"
-                        }
-                    ],
-                    "success": true
-                }
-            ]
+            "releases": ["Icehouse"]
         },
         {
             "project_id": "openstack/cinder",
             "vendor": "Zadara Storage",
             "name": "Zadara VPSA Cloud Block Storage",
             "wiki": "http://docs.openstack.org/trunk/config-reference/content/zadara-volume-driver.html",
-            "os_versions": [
-                {
-                    "os_version": "Folsom",
-                    "verification": "self_verification",
-                    "success": true
-                },
-                {
-                    "os_version": "Havana",
-                    "verification": "self_verification",
-                    "success": true
-                }
-            ]
+            "releases": ["Folsom", "Grizzly", "Havana", "Icehouse"]
         },
         {
             "project_id": "openstack/neutron",
@@ -611,9 +287,7 @@
                 "name": "Micheal Thompson",
                 "irc": "layer427expert"
             },
-            "wiki": "https://wiki.openstack.org/wiki/Neutron/LBaaS/A10Networks",
-            "os_versions": [
-            ]
+            "wiki": "https://wiki.openstack.org/wiki/Neutron/LBaaS/A10Networks"
         },
         {
             "project_id": "openstack/neutron",
@@ -625,12 +299,7 @@
                 "irc": "Sukhdev"
             },
             "wiki": "https://wiki.openstack.org/wiki/Arista-neutron-ml2-driver",
-            "os_versions": [
-                {
-                    "verification": "external_ci_verification",
-                    "ci_id": "arista-test"
-                }
-            ]
+            "ci_id": "arista-test"
         },
         {
             "project_id": "openstack/neutron",
@@ -642,12 +311,7 @@
                 "irc": "kevinbenton"
             },
             "wiki": "http://www.openflowhub.org/display/floodlightcontroller/Neutron+REST+Proxy+Plugin",
-            "os_versions": [
-                {
-                    "verification": "external_ci_verification",
-                    "ci_id": "bsn"
-                }
-            ]
+            "ci_id": "bsn"
         },
         {
             "project_id": "openstack/neutron",
@@ -658,12 +322,7 @@
                 "irc": "shivh"
             },
             "wiki": "https://wiki.openstack.org/wiki/Brocade-neutron-plugin",
-            "os_versions": [
-                {
-                    "verification": "external_ci_verification",
-                    "ci_id": "bci"
-                }
-            ]
+            "ci_id": "bci"
         },
         {
             "project_id": "openstack/neutron",
@@ -675,12 +334,7 @@
                 "irc": "rcurran"
             },
             "wiki": "https://wiki.openstack.org/wiki/Neutron/ML2/MechCiscoNexus",
-            "os_versions": [
-                {
-                    "verification": "external_ci_verification",
-                    "ci_id": "cisco_neutron_ci"
-                }
-            ]
+            "ci_id": "cisco_neutron_ci"
         },
         {
             "project_id": "openstack/neutron",
@@ -691,20 +345,13 @@
                 "irc": "HenryG"
             },
             "wiki": "https://wiki.openstack.org/wiki/Cisco-neutron",
-            "os_versions": [
-                {
-                    "verification": "external_ci_verification",
-                    "ci_id": "cisco_neutron_ci"
-                }
-            ]
+            "ci_id": "cisco_neutron_ci"
         },
         {
             "project_id": "openstack/neutron",
             "vendor": "Cloudbase",
             "name": "Cloudbase Hyper-V Plugin",
-            "wiki": "http://www.cloudbase.it/quantum-hyper-v-plugin/",
-            "os_versions": [
-            ]
+            "wiki": "http://www.cloudbase.it/quantum-hyper-v-plugin/"
         },
         {
             "project_id": "openstack/neutron",
@@ -715,36 +362,25 @@
                 "irc": "ivar-lazzaro"
             },
             "wiki": "https://wiki.openstack.org/wiki/Neutron/EmbraneNeutronPlugin",
-            "os_versions": [
-                {
-                    "verification": "external_ci_verification",
-                    "ci_id": "eci"
-                }
-            ]
+            "ci_id": "eci"
         },
         {
             "project_id": "openstack/neutron",
             "vendor": "Extreme Networks",
             "name": "Extreme Networks Plugin",
-            "wiki": "http://extrcdn.extremenetworks.com/wp-content/uploads/2014/02/SDN_OpenStack_Install_Guide_Final1.pdf",
-            "os_versions": [
-            ]
+            "wiki": "http://extrcdn.extremenetworks.com/wp-content/uploads/2014/02/SDN_OpenStack_Install_Guide_Final1.pdf"
         },
         {
             "project_id": "openstack/neutron",
             "vendor": "IBM",
             "name": "IBM SDN-VE Plugin",
-            "wiki": "http://docs.openstack.org/trunk/config-reference/content/networking-plugin-linuxbridge_agent.html",
-            "os_versions": [
-            ]
+            "wiki": "http://docs.openstack.org/trunk/config-reference/content/networking-plugin-linuxbridge_agent.html"
         },
         {
             "project_id": "openstack/neutron",
             "vendor": "Juniper",
             "name": "Juniper Networks plug-in for OpenStack Neutron",
-            "wiki": "http://www.juniper.net/techpubs/en_US/release-independent/junos/topics/topic-map/openstack-neutron-plugin.html",
-            "os_versions": [
-            ]
+            "wiki": "http://www.juniper.net/techpubs/en_US/release-independent/junos/topics/topic-map/openstack-neutron-plugin.html"
         },
         {
             "project_id": "openstack/neutron",
@@ -756,12 +392,7 @@
                 "irc": "irenab"
             },
             "wiki": "https://wiki.openstack.org/wiki/Mellanox-Neutron",
-            "os_versions": [
-                {
-                    "verification": "external_ci_verification",
-                    "ci_id": "mellanox"
-                }
-            ]
+            "ci_id": "mellanox"
         },
         {
             "project_id": "openstack/neutron",
@@ -773,12 +404,7 @@
                 "irc": "luqas"
             },
             "wiki": "https://wiki.openstack.org/wiki/Spec-QuantumMidoNetPlugin",
-            "os_versions": [
-                {
-                    "verification": "external_ci_verification",
-                    "ci_id": "midokura"
-                }
-            ]
+            "ci_id": "midokura"
         },
         {
             "project_id": "openstack/neutron",
@@ -790,12 +416,7 @@
                 "email": "nec-openstack-ci@iaas.jp.nec.com"
             },
             "wiki": "https://wiki.openstack.org/wiki/Neutron/NEC_OpenFlow_Plugin",
-            "os_versions": [
-                {
-                    "verification": "external_ci_verification",
-                    "ci_id": "nec-openstack-ci"
-                }
-            ]
+            "ci_id": "nec-openstack-ci"
         },
         {
             "project_id": "openstack/neutron",
@@ -805,9 +426,7 @@
             "maintainer": {
                 "name": "Armando Migliaccio",
                 "irc": "armax"
-            },
-            "os_versions": [
-            ]
+            }
         },
         {
             "project_id": "openstack/neutron",
@@ -818,32 +437,20 @@
                 "email": "nuage-ci@nuagenetworks.net",
                 "irc": "rms_13"
             },
-            "os_versions": [
-                {
-                    "verification": "external_ci_verification",
-                    "ci_id": "nuage-ci"
-                }
-            ]
+            "ci_id": "nuage-ci"
         },
         {
             "project_id": "openstack/neutron",
             "vendor": "One Convergence",
             "name": "One Convergence NVSD Controller",
             "wiki": "https://github.com/openstack/neutron/tree/master/neutron/plugins/oneconvergence",
-            "os_versions": [
-                {
-                    "verification": "external_ci_verification",
-                    "ci_id": "oneconvergence"
-                }
-            ]
+            "ci_id": "oneconvergence"
         },
         {
             "project_id": "openstack/neutron",
             "vendor": "OpenContrail",
             "name": "OpenContrail Plugin",
-            "wiki": "http://opencontrail.org/opencontrail-architecture-documentation/#section2_5",
-            "os_versions": [
-            ]
+            "wiki": "http://opencontrail.org/opencontrail-architecture-documentation/#section2_5"
         },
         {
             "project_id": "openstack/neutron",
@@ -854,12 +461,7 @@
                 "irc": "mestery"
             },
             "wiki": "http://openstack.redhat.com/OpenDaylight_integration",
-            "os_versions": [
-                {
-                    "verification": "external_ci_verification",
-                    "ci_id": "odl-jenkins"
-                }
-            ]
+            "ci_id": "odl-jenkins"
         },
         {
             "project_id": "openstack/neutron",
@@ -870,12 +472,7 @@
                 "irc": "rkukura"
             },
             "wiki": "http://docs.openstack.org/trunk/config-reference/content/networking-plugin-linuxbridge_agent.html",
-            "os_versions": [
-                {
-                    "verification": "external_ci_verification",
-                    "ci_id": "jenkins"
-                }
-            ]
+            "ci_id": "jenkins"
         },
         {
             "project_id": "openstack/neutron",
@@ -886,24 +483,14 @@
                 "irc": "nati_ueno"
             },
             "wiki": "http://docs.openstack.org/trunk/config-reference/content/networking-plugin-meta.html",
-            "os_versions": [
-                {
-                    "verification": "external_ci_verification",
-                    "ci_id": "jenkins"
-                }
-            ]
+            "ci_id": "jenkins"
         },
         {
             "project_id": "openstack/neutron",
             "vendor": "OpenStack Community",
             "name": "Open vSwitch Plugin",
             "wiki": "http://docs.openstack.org/grizzly/openstack-network/admin/content/under_the_hood_openvswitch.html",
-            "os_versions": [
-                {
-                    "verification": "external_ci_verification",
-                    "ci_id": "jenkins"
-                }
-            ]
+            "ci_id": "jenkins"
         },
         {
             "project_id": "openstack/neutron",
@@ -915,20 +502,13 @@
                 "irc": "fawadkhaliq"
             },
             "wiki": "https://wiki.openstack.org/wiki/PLUMgrid-Neutron",
-            "os_versions": [
-                {
-                    "verification": "external_ci_verification",
-                    "ci_id": "plumgrid-ci"
-                }
-            ]
+            "ci_id": "plumgrid-ci"
         },
         {
             "project_id": "openstack/neutron",
             "vendor": "Ruijie",
             "name": "Neutron Plugin",
-            "wiki": "https://github.com/ruijie/rgos_quantum_plugin/wiki/Quick-start-with-rgos-quantum-plugin",
-            "os_versions": [
-            ]
+            "wiki": "https://github.com/ruijie/rgos_quantum_plugin/wiki/Quick-start-with-rgos-quantum-plugin"
         },
         {
             "project_id": "openstack/neutron",
@@ -939,12 +519,7 @@
                 "irc": "nati_ueno"
             },
             "wiki": "https://github.com/osrg/ryu/wiki/configuration_openstack_havana_with_ryu",
-            "os_versions": [
-                {
-                    "verification": "external_ci_verification",
-                    "ci_id": "neutronryu"
-                }
-            ]
+            "ci_id": "neutronryu"
         },
         {
             "project_id": "openstack/neutron",
@@ -957,12 +532,7 @@
                 "email": "tobbe@tail-f.com"
             },
             "wiki": "https://wiki.openstack.org/wiki/Neutron/ML2/Tail-f-NCS-neutron-ml2-driver",
-            "os_versions": [
-                {
-                    "verification": "external_ci_verification",
-                    "ci_id": "tailfncs"
-                }
-            ]
+            "ci_id": "tailfncs"
         },
         {
             "project_id": "openstack/neutron",
@@ -975,144 +545,88 @@
                 "irc": "garyduan"
             },
             "wiki": "https://wiki.openstack.org/wiki/Neutron/vArmour-Firewall",
-            "os_versions": [
-                {
-                    "verification": "external_ci_verification",
-                    "ci_id": "varmourci"
-                }
-            ]
+            "ci_id": "varmourci"
         },
         {
             "project_id": "openstack/nova",
             "vendor": "Citrix",
             "name": "Xen",
             "wiki": "http://docs.openstack.org/trunk/config-reference/content/introduction-to-xen.html",
-            "os_versions": [
-                {
-                    "verification": "external_ci_verification",
-                    "ci_id": "citrix_xenserver_ci"
-                }
-            ]
+            "ci_id": "citrix_xenserver_ci"
         },
         {
             "project_id": "openstack/nova",
             "vendor": "IBM",
             "name": "PowerVM",
-            "wiki": "http://docs.openstack.org/trunk/config-reference/content/powervm.html",
-            "os_versions": [
-            ]
+            "wiki": "http://docs.openstack.org/trunk/config-reference/content/powervm.html"
         },
         {
             "project_id": "openstack/nova",
             "vendor": "Microsoft",
             "name": "Hyper-V virtualization platform",
             "wiki": "http://wiki.cloudbase.it/hyperv-tempest-exclusions",
-            "os_versions": [
-                {
-                    "verification": "external_ci_verification",
-                    "ci_id": "hyper-v-ci"
-                }
-            ]
+            "ci_id": "hyper-v-ci"
         },
         {
             "project_id": "openstack/nova",
             "vendor": "OpenStack Community",
             "name": "Baremetal  driver",
             "wiki": "http://docs.openstack.org/trunk/config-reference/content/baremetal.html",
-            "os_versions": [
-                {
-                    "verification": "external_ci_verification",
-                    "ci_id": "jenkins"
-                }
-            ]
+            "ci_id": "jenkins"
         },
         {
             "project_id": "openstack/nova",
             "vendor": "OpenStack Community",
             "name": "Docker driver",
             "wiki": "http://docs.openstack.org/trunk/config-reference/content/docker.html",
-            "os_versions": [
-                {
-                    "verification": "external_ci_verification",
-                    "ci_id": "jenkins"
-                }
-            ]
+            "ci_id": "jenkins"
         },
         {
             "project_id": "openstack/nova",
             "vendor": "OpenStack Community",
             "name": "Ironic",
-            "wiki": "https://wiki.openstack.org/wiki/Ironic",
-            "os_versions": [
-            ]
+            "wiki": "https://wiki.openstack.org/wiki/Ironic"
         },
         {
             "project_id": "openstack/nova",
             "vendor": "OpenStack Community",
             "name": "KVM",
             "wiki": "http://docs.openstack.org/trunk/config-reference/content/kvm.html",
-            "os_versions": [
-                {
-                    "verification": "external_ci_verification",
-                    "ci_id": "jenkins"
-                }
-            ]
+            "ci_id": "jenkins"
         },
         {
             "project_id": "openstack/nova",
             "vendor": "OpenStack Community",
             "name": "LXC (Linux Containers)",
             "wiki": "http://docs.openstack.org/trunk/config-reference/content/lxc.html",
-            "os_versions": [
-                {
-                    "verification": "external_ci_verification",
-                    "ci_id": "jenkins"
-                }
-            ]
+            "ci_id": "jenkins"
         },
         {
             "project_id": "openstack/nova",
             "vendor": "OpenStack Community",
             "name": "QEMU",
             "wiki": "http://docs.openstack.org/trunk/config-reference/content/qemu.html",
-            "os_versions": [
-                {
-                    "verification": "external_ci_verification",
-                    "ci_id": "jenkins"
-                }
-            ]
+            "ci_id": "jenkins"
         },
         {
             "project_id": "openstack/nova",
             "vendor": "VMware",
             "name": "VMWare vShepre",
             "wiki": "http://docs.openstack.org/trunk/config-reference/content/vmware.html",
-            "os_versions": [
-                {
-                    "verification": "external_ci_verification",
-                    "ci_id": "vmwareminesweeper"
-                }
-            ]
+            "ci_id": "vmwareminesweeper"
         },
         {
             "project_id": "openstack/sahara",
             "vendor": "Hortonworks",
             "name": "Hortonworks Data Platform Plugin",
-            "wiki": "http://docs.openstack.org/developer/sahara/userdoc/hdp_plugin.html",
-            "os_versions": [
-            ]
+            "wiki": "http://docs.openstack.org/developer/sahara/userdoc/hdp_plugin.html"
         },
         {
             "project_id": "openstack/sahara",
             "vendor": "OpenStack Community",
             "name": "Vanilla Plugin",
             "wiki": "http://docs.openstack.org/developer/sahara/userdoc/vanilla_plugin.html",
-            "os_versions": [
-                {
-                    "verification": "external_ci_verification",
-                    "ci_id": "savanna-ci"
-                }
-            ]
+            "ci_id": "savanna-ci"
         }
     ]
 }
