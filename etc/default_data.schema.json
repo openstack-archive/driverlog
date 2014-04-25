@@ -59,19 +59,17 @@
                     "wiki": {
                         "type": "string"
                     },
-                    "os_versions": {
+                    "releases": {
                         "type": "array",
                         "items": {
-                            "type": "object",
-                            "oneOf": [
-                                { "$ref": "#/definitions/self_verification" },
-                                { "$ref": "#/definitions/3rd_party_verification" },
-                                { "$ref": "#/definitions/external_ci_verification" }
-                            ]
+                            "type": "string"
                         }
+                    },
+                    "ci_id": {
+                        "type": "string"
                     }
                 },
-                "required": ["project_id", "vendor", "name", "os_versions"],
+                "required": ["project_id", "vendor", "name"],
                 "additionalProperties": false
             }
         }
@@ -95,54 +93,6 @@
                 }
             },
             "required": ["name"],
-            "additionalProperties": false
-        },
-        "self_verification": {
-            "properties": {
-                "verification": {
-                    "enum": ["self_verification"]
-                },
-                "os_version": {
-                    "type": "string"
-                },
-                "success": {
-                    "type": "boolean"
-                }
-            },
-            "required": ["verification", "os_version"],
-            "additionalProperties": false
-        },
-        "3rd_party_verification": {
-            "properties": {
-                "verification": {
-                    "enum": ["3rd_party_verification"]
-                },
-                "os_version": {
-                    "type": "string"
-                },
-                "success": {
-                    "type": "boolean"
-                },
-                "verifiers": {
-                    "type": "array",
-                    "items": {
-                        "$ref": "#/definitions/user"
-                    }
-                }
-            },
-            "required": ["verification", "os_version", "success", "verifiers"],
-            "additionalProperties": false
-        },
-        "external_ci_verification": {
-            "properties": {
-                "verification": {
-                    "enum": ["external_ci_verification"]
-                },
-                "ci_id": {
-                    "type": "string"
-                }
-            },
-            "required": ["verification", "ci_id"],
             "additionalProperties": false
         }
     }

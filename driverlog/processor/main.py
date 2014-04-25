@@ -12,9 +12,11 @@
 # implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
+
 import hashlib
 import json
 
+import collections
 import re
 
 import memcache
@@ -70,33 +72,29 @@ def update_generator(memcached, default_data, ci_ids_map, force_update=False):
                 message = ''
                 for comment in reversed(review['comments']):
                     prefix = 'Patch Set %s:' % patch_number
-                    if ((comment['reviewer']['username'] == ci) and
+                    if ((comment['reviewer'].get('username') == ci) and
                             (comment['message'].find(prefix) == 0)):
                         message = comment['message'][len(prefix):].strip()
                         break
 
                 success = approval['value'] in ['1', '2']
 
-                vendor = ci_ids_map[ci][0]
-                driver_name = ci_ids_map[ci][1]
+                for vendor_driver in ci_ids_map[ci]:
+                    vendor, driver_name = vendor_driver
 
-                yield {
-                    (project_id.lower(), vendor.lower(),
-                     driver_name.lower()): {
-                         'os_versions_map': {
-                             branch: {
-                                 'project_id': project_id,
-                                 'vendor': vendor,
-                                 'name': driver_name,
-                                 'verification': 'external_ci_verification',
-                                 'success': success,
-                                 'comment': message,
-                                 'timestamp': approval['grantedOn'],
-                                 'review_url': review_url
+                    yield {
+                        (project_id.lower(), vendor.lower(),
+                         driver_name.lower()): {
+                             'os_versions_map': {
+                                 branch: {
+                                     'success': success,
+                                     'comment': message,
+                                     'timestamp': approval['grantedOn'],
+                                     'review_url': review_url
+                                 }
                              }
                          }
-                     }
-                }
+                    }
 
         last_id = rcs_inst.get_last_id()
         LOG.debug('RCS last id is: %s', last_id)
@@ -132,14 +130,21 @@ def main():
         LOG.critical('Unable to load default data')
         return not 0
 
-    ci_ids_map = {}
+    ci_ids_map = collections.defaultdict(set)
     for driver in default_data['drivers']:
         vendor = driver['vendor']
         driver_name = driver['name']
-        for os_version in driver['os_versions']:
-            if os_version['verification'] == 'external_ci_verification':
-                ci_id = os_version['ci_id']
-                ci_ids_map[ci_id] = (vendor, driver_name)
+        if 'ci_id' in driver:
+            ci_id = driver['ci_id']
+            ci_ids_map[ci_id].add((vendor, driver_name))
+
+        driver['os_versions_map'] = {}
+        if 'releases' in driver:
+            for release in driver['releases']:
+                driver['os_versions_map'][release] = {
+                    'success': True,
+                    'comment': 'self-tested verification'
+                }
 
     update = {}
     if not cfg.CONF.force_update:
@@ -156,17 +161,21 @@ def main():
         if key not in update:
             update.update(record)
         else:
-            persisted_os_versions = update[key]['os_versions_map']
-            for os_version, info in record[key]['os_versions_map'].iteritems():
-                if os_version not in persisted_os_versions:
-                    persisted_os_versions[os_version] = info
-                else:
-                    persisted_os_versions[os_version].update(info)
+            os_version = record[key]['os_versions_map'].keys()[0]
+            info = record[key]['os_versions_map'].values()[0]
+            if os_version in update[key]['os_versions_map']:
+                update[key]['os_versions_map'][os_version].update(info)
+            else:
+                update[key]['os_versions_map'][os_version] = info
 
     memcache_inst.set('driverlog:default_data', default_data)
     memcache_inst.set('driverlog:update', update)
-    memcache_inst.set('driverlog:default_data_hash', _get_hash(default_data))
-    if has_update:
+
+    old_dd_hash = memcache_inst.get('driverlog:default_data_hash')
+    new_dd_hash = _get_hash(default_data)
+    memcache_inst.set('driverlog:default_data_hash', new_dd_hash)
+
+    if has_update or old_dd_hash != new_dd_hash:
         memcache_inst.set('driverlog:update_hash', time.time())
 
 

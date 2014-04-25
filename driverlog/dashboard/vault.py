@@ -12,6 +12,7 @@
 # implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
+
 import re
 
 import flask
@@ -22,32 +23,6 @@ from driverlog.openstack.common import log as logging
 
 
 LOG = logging.getLogger(__name__)
-
-
-LEVELS = [
-    {
-        'level_id': 'self_verification',
-        'level_name': 'self-verification',
-    },
-    {
-        'level_id': '3rd_party_verification',
-        'level_name': '3rd-party verification',
-    },
-    {
-        'level_id': 'external_ci_verification',
-        'level_name': 'verified by external CI'
-    }
-]
-
-
-def _build_levels_map():
-    levels_map = dict()
-    index = 1
-    for level in LEVELS:
-        level['level'] = index
-        levels_map[level['level_id']] = level
-        index += 1
-    return levels_map
 
 
 def _build_projects_map(default_data):
@@ -84,31 +59,13 @@ def _extend_drivers_info():
                                          key=lambda x: x['name'])
 
 
-def _build_drivers_map(default_data, levels_map, projects_map):
+def _build_drivers_map(default_data, projects_map):
 
     driver_map = {}
 
     for driver in default_data['drivers']:
 
         driver['project_name'] = projects_map[driver['project_id']]['name']
-        driver['os_versions_map'] = {}
-
-        max_level = LEVELS[0]
-        for os_version in driver['os_versions']:
-            level = levels_map[os_version['verification']]
-            os_version['verification_name'] = level['level_name']
-            os_version['level'] = level['level']
-            if 'os_version' not in os_version:
-                os_version['os_version'] = 'master'
-
-            if level['level'] > max_level['level']:
-                max_level = level
-                max_level['os_version'] = os_version['os_version']
-
-            driver['os_versions_map'][os_version['os_version']] = os_version
-
-        driver.update(max_level)
-
         key = (driver['project_id'].lower(),
                driver['vendor'].lower(),
                driver['name'].lower())
@@ -131,9 +88,6 @@ def get_vault():
                 flask.abort(500)
 
             conf = flask.current_app.config['CONF']
-
-            levels_map = _build_levels_map()
-            vault['levels_map'] = levels_map
 
             MEMCACHED_URI_PREFIX = r'^memcached:\/\/'
             stripped = re.sub(MEMCACHED_URI_PREFIX, '',
@@ -167,7 +121,7 @@ def get_vault():
             vault['releases_map'] = releases_map
 
             drivers_map = _build_drivers_map(
-                vault['default_data'], vault['levels_map'], projects_map)
+                vault['default_data'], projects_map)
             vault['drivers_map'] = drivers_map
 
             _extend_drivers_info()
@@ -176,19 +130,12 @@ def get_vault():
             vault['update_hash'] = hashes['update_hash']
             update = memcached.get('driverlog:update')
 
-            levels_map = vault['levels_map']
-
             for proj_vendor_driver, os_versions_map in update.iteritems():
                 ovm = os_versions_map['os_versions_map']
 
                 if proj_vendor_driver not in vault['drivers_map']:
                     LOG.info('Unknown driver %s, ignoring', proj_vendor_driver)
                 else:
-                    for os_version, info in ovm.iteritems():
-                        level = levels_map[info['verification']]
-                        info['verification_name'] = level['level_name']
-                        info['level'] = level['level']
-
                     vault['drivers_map'][proj_vendor_driver][
                         'os_versions_map'].update(ovm)
 
