@@ -420,8 +420,8 @@
         },
         {
             "project_id": "openstack/neutron",
-            "vendor": "Nicira",
-            "name": "Nicira Network Virtualization Platform (NVP) Plugin",
+            "vendor": "VMware",
+            "name": "VMware NSX Network Virtualization Platform Plugin",
             "wiki": "http://docs.openstack.org/admin-guide-cloud/content/nsx_plugin.html",
             "maintainer": {
                 "name": "Armando Migliaccio",
