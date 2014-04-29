@@ -614,6 +614,7 @@
             "name": "VMWare vShepre",
             "wiki": "http://docs.openstack.org/trunk/config-reference/content/vmware.html",
             "ci_id": "vmwareminesweeper"
+            "releases": ["Grizzly", "Havana", "Icehouse", "Juno"]
         },
         {
             "project_id": "openstack/sahara",
