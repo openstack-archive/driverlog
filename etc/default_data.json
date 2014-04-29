@@ -420,16 +420,6 @@
         },
         {
             "project_id": "openstack/neutron",
-            "vendor": "Nicira",
-            "name": "Nicira Network Virtualization Platform (NVP) Plugin",
-            "wiki": "http://docs.openstack.org/admin-guide-cloud/content/nsx_plugin.html",
-            "maintainer": {
-                "name": "Armando Migliaccio",
-                "irc": "armax"
-            }
-        },
-        {
-            "project_id": "openstack/neutron",
             "vendor": "Nuage Networks",
             "name": "Nuage Networks Neutron Plugin",
             "maintainer": {
@@ -533,6 +523,16 @@
             },
             "wiki": "https://wiki.openstack.org/wiki/Neutron/ML2/Tail-f-NCS-neutron-ml2-driver",
             "ci_id": "tailfncs"
+        },
+        {
+            "project_id": "openstack/neutron",
+            "vendor": "VMware",
+            "name": "VMware NSX Network Virtualization Platform Plugin",
+            "wiki": "http://docs.openstack.org/admin-guide-cloud/content/nsx_plugin.html",
+            "maintainer": {
+                "name": "Armando Migliaccio",
+                "irc": "armax"
+            }
         },
         {
             "project_id": "openstack/neutron",
