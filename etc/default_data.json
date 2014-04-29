@@ -565,10 +565,11 @@
         },
         {
             "project_id": "openstack/neutron",
-            "vendor": "VMWare",
-            "name": "Nicira Network Virtualization Platform (NVP) Plugin",
+            "vendor": "VMware",
+            "name": "VMware NSX Network Virtualization Platform Plugin",
             "description": "The NSX plug-in is designed to manage VMware NSX platform, formerly known as Nicira NVP.",
             "wiki": "http://docs.openstack.org/admin-guide-cloud/content/nsx_plugin.html",
+            "ci_id": "VMware Mine Sweeper",
             "maintainer": {
                 "name": "Armando Migliaccio",
                 "irc": "armax"
