@@ -427,6 +427,7 @@
                 "name": "Armando Migliaccio",
                 "irc": "armax"
             }
+            "releases": ["Essex", "Folsom", "Grizzly", "Havana", "Icehouse"]
         },
         {
             "project_id": "openstack/neutron",
