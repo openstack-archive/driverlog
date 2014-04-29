@@ -56,7 +56,7 @@ def update_generator(memcached, default_data, ci_ids_map, force_update=False):
             branch = review['branch']
 
             for approval in (review['currentPatchSet'].get('approvals') or []):
-                if approval['type'] != 'VRIF':
+                if approval['type'] != 'Verified':
                     continue
 
                 ci = approval['by']['username']
