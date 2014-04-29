@@ -334,7 +334,8 @@
                 "irc": "rcurran"
             },
             "wiki": "https://wiki.openstack.org/wiki/Neutron/ML2/MechCiscoNexus",
-            "ci_id": "cisco_neutron_ci"
+            "ci_id": "cisco_neutron_ci",
+            "releases": ["Havana", "Icehouse"]
         },
         {
             "project_id": "openstack/neutron",
@@ -345,7 +346,8 @@
                 "irc": "HenryG"
             },
             "wiki": "https://wiki.openstack.org/wiki/Cisco-neutron",
-            "ci_id": "cisco_neutron_ci"
+            "ci_id": "cisco_neutron_ci",
+            "releases": ["Havana", "Icehouse"]
         },
         {
             "project_id": "openstack/neutron",
