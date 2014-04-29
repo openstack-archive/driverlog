@@ -611,7 +611,7 @@
         {
             "project_id": "openstack/nova",
             "vendor": "VMware",
-            "name": "VMWare vShepre",
+            "name": "VMWare vSphere",
             "wiki": "http://docs.openstack.org/trunk/config-reference/content/vmware.html",
             "ci_id": "vmwareminesweeper"
         },
