@@ -321,6 +321,18 @@
         {
             "project_id": "openstack/neutron",
             "vendor": "Big Switch",
+            "name": "Big Switch Neutron ML2 Driver",
+            "description": "An ML2 Mechanism Driver to integrate ML2 deployments into Big Switch/Floodlight controlled networks. This driver only controls physical infrastructure so it is meant to be combined with the openvswitch mechanism driver.",
+            "maintainer": {
+                "name": "Kevin Benton",
+                "irc": "kevinbenton"
+            },
+            "wiki": "http://docs.openstack.org/trunk/config-reference/content/networking-plugin-ml2_bigswitch.html",
+            "ci_id": "bsn"
+        },
+        {
+            "project_id": "openstack/neutron",
+            "vendor": "Big Switch",
             "name": "Big Switch Controller Plugin",
             "description": "Floodlight can be run as the network backend for OpenStack using a Neutron plugin. Neutron exposes a networking-as-a-service model via a REST API that Floodlight has implemented.",
             "maintainer": {
