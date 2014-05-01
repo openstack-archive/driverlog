@@ -572,14 +572,6 @@
         },
         {
             "project_id": "openstack/nova",
-            "vendor": "Citrix",
-            "name": "Xen",
-            "description": "No description provided",
-            "wiki": "http://docs.openstack.org/trunk/config-reference/content/introduction-to-xen.html",
-            "ci_id": "citrix_xenserver_ci"
-        },
-        {
-            "project_id": "openstack/nova",
             "vendor": "IBM",
             "name": "PowerVM",
             "description": "PowerVM compute driver connects to an Integrated Virtualization Manager (IVM) to perform PowerVM Logical Partition (LPAR) deployment and management.",
@@ -639,6 +631,22 @@
             "description": "From the perspective of the Compute service, the QEMU hypervisor is very similar to the KVM hypervisor. The main difference is that QEMU does not support native virtualization.",
             "wiki": "http://docs.openstack.org/trunk/config-reference/content/qemu.html",
             "ci_id": "jenkins"
+        },
+        {
+            "project_id": "openstack/nova",
+            "vendor": "OpenStack Community",
+            "name": "XenAPI",
+            "description": "XenAPI compute driver connects to XenServer hypervisors via XenAPI. Used to power Rackspace Cloud Servers (Public Cloud).",
+            "wiki": "http://docs.openstack.org/trunk/config-reference/content/introduction-to-xen.html",
+            "ci_id": "citrix_xenserver_ci",
+            "releases": ["Austin", "Bexar", "Cactus", "Diablo", "Essex", "Folsom", "Grizzly", "Havana", "Icehouse"]
+        },
+        {
+            "project_id": "openstack/nova",
+            "vendor": "OpenStack Community",
+            "name": "Xen+Libvirt",
+            "description": "Support for the Xen hypervisor when used with libvirt",
+            "wiki": "http://docs.openstack.org/trunk/config-reference/content/introduction-to-xen.html"
         },
         {
             "project_id": "openstack/nova",
