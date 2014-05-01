@@ -591,7 +591,8 @@
             "name": "Hyper-V virtualization platform",
             "description": "It is possible to use Hyper-V as a compute node within an OpenStack Deployment. The nova-compute service runs as openstack-compute, a 32-bit service directly upon the Windows platform with the Hyper-V role enabled.",
             "wiki": "http://wiki.cloudbase.it/hyperv-tempest-exclusions",
-            "ci_id": "hyper-v-ci"
+            "ci_id": "hyper-v-ci",
+            "releases": ["Folsom", "Grizzly", "Havana", "Icehouse"]
         },
         {
             "project_id": "openstack/nova",
