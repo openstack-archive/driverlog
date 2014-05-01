@@ -582,8 +582,9 @@
             "project_id": "openstack/nova",
             "vendor": "IBM",
             "name": "PowerVM",
-            "description": "PowerVM compute driver connects to an Integrated Virtualization Manager (IVM) to perform PowerVM Logical Partition (LPAR) deployment and management.",
-            "wiki": "http://docs.openstack.org/trunk/config-reference/content/powervm.html"
+            "description": "Removed from Nova during Icehouse, PowerVM compute driver connects to an Integrated Virtualization Manager (IVM) to perform PowerVM Logical Partition (LPAR) deployment and management.",
+            "wiki": "http://docs.openstack.org/trunk/config-reference/content/powervm.html",
+            "releases": ["Folsom", "Grizzly", "Havana"]
         },
         {
             "project_id": "openstack/nova",
