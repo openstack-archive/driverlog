@@ -598,16 +598,15 @@
             "vendor": "OpenStack Community",
             "name": "Baremetal  driver",
             "description": "The baremetal driver is a hypervisor driver for OpenStack Nova Compute. It exposes hardware through the OpenStack APIs, using pluggable sub-drivers to deliver machine imaging (PXE) and power control (IPMI).",
-            "wiki": "http://docs.openstack.org/trunk/config-reference/content/baremetal.html",
-            "ci_id": "jenkins"
+            "wiki": "http://docs.openstack.org/trunk/config-reference/content/baremetal.html"
         },
         {
             "project_id": "openstack/nova",
             "vendor": "OpenStack Community",
             "name": "Docker driver",
-            "description": "The Docker driver is a hypervisor driver for OpenStack Compute. Docker extends LXC with a high level API providing a lightweight virtualization solution that runs processes in isolation.",
+            "description": "Adding during Havana, but removed from Nova during Icehouse, a prototype now lives outside the Nova tree. The Docker driver is a hypervisor driver for OpenStack Compute. Docker extends LXC with a high level API providing a lightweight virtualization solution that runs processes in isolation.",
             "wiki": "http://docs.openstack.org/trunk/config-reference/content/docker.html",
-            "ci_id": "jenkins"
+            "releases": ["Havana"]
         },
         {
             "project_id": "openstack/nova",
@@ -629,8 +628,7 @@
             "vendor": "OpenStack Community",
             "name": "LXC (Linux Containers)",
             "description": "LXC (Linux containers) is a virtualization technology that works at the operating system level. LXC (as currently implemented using libvirt in the Compute service) is not a secure virtualization technology for multi-tenant environments. ",
-            "wiki": "http://docs.openstack.org/trunk/config-reference/content/lxc.html",
-            "ci_id": "jenkins"
+            "wiki": "http://docs.openstack.org/trunk/config-reference/content/lxc.html"
         },
         {
             "project_id": "openstack/nova",
