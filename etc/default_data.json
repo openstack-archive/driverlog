@@ -352,18 +352,20 @@
                 "irc": "rcurran"
             },
             "wiki": "https://wiki.openstack.org/wiki/Neutron/ML2/MechCiscoNexus",
+            "releases": ["Havana", "Icehouse"],
             "ci_id": "cisco_neutron_ci"
         },
         {
             "project_id": "openstack/neutron",
             "vendor": "Cisco",
-            "name": "Cisco UCS/Nexus Plugin",
+            "name": "Cisco Nexus Plugin",
             "description": "A Cisco Plugin Framework for Neutron L2 Network Overlays Spanning Multiple Physical Switches.",
             "maintainer": {
                 "name": "Henry Gessau",
                 "irc": "HenryG"
             },
             "wiki": "https://wiki.openstack.org/wiki/Cisco-neutron",
+            "releases": ["Grizzly", "Havana", "Icehouse"],
             "ci_id": "cisco_neutron_ci"
         },
         {
