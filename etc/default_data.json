@@ -352,6 +352,7 @@
                 "irc": "rcurran"
             },
             "wiki": "https://wiki.openstack.org/wiki/Neutron/ML2/MechCiscoNexus",
+            "releases": ["Havana", "Icehouse"],
             "ci_id": "cisco_neutron_ci"
         },
         {
@@ -364,6 +365,7 @@
                 "irc": "HenryG"
             },
             "wiki": "https://wiki.openstack.org/wiki/Cisco-neutron",
+            "releases": ["Grizzly", "Havana", "Icehouse"],
             "ci_id": "cisco_neutron_ci"
         },
         {
