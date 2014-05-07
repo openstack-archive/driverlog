@@ -328,7 +328,8 @@
                 "irc": "kevinbenton"
             },
             "wiki": "http://docs.openstack.org/trunk/config-reference/content/networking-plugin-ml2_bigswitch.html",
-            "ci_id": "bsn"
+            "ci_id": "bsn",
+            "releases": ["Icehouse"]
         },
         {
             "project_id": "openstack/neutron",
@@ -340,7 +341,8 @@
                 "irc": "kevinbenton"
             },
             "wiki": "http://www.openflowhub.org/display/floodlightcontroller/OpenStack",
-            "ci_id": "bsn"
+            "ci_id": "bsn",
+            "releases": ["Folsom", "Grizzly", "Havana", "Icehouse"]
         },
         {
             "project_id": "openstack/neutron",
