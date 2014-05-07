@@ -281,11 +281,11 @@
             "name": "VMware VMDK Driver",
             "description": "The VMware VMDK driver to enable management of the OpenStack Block Storage volumes on vCenter-managed data stores. Volumes are backed by VMDK files on data stores that use any VMware-compatible storage technology such as NFS, iSCSI, FiberChannel, and vSAN.",
             "maintainer": {
-                "name": "Subramanian Neelakantan, Kartik Bommepally",
-                "email": "sneelakantan@vmware.com"
+                "name": "Vipin Balachandran",
+                "email": "vbala@vmware.com"
             },
             "wiki": "http://docs.openstack.org/trunk/config-reference/content/vmware-vmdk-driver.html",
-            "releases": ["Icehouse"]
+            "releases": ["Havana", "Icehouse"]
         },
         {
             "project_id": "openstack/cinder",
