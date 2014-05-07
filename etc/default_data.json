@@ -351,9 +351,25 @@
             "description": "Brocade Neutron Plugin for VDX/VCS provides a means to interface Openstack’s Networking to orchestrate Brocade’s physical switches.",
             "maintainer": {
                 "name": "Shiv Haris",
-                "irc": "shivh"
+                "email": "sharis@@brocade.com",
+                "irc": "shivharis"
             },
             "wiki": "https://wiki.openstack.org/wiki/Brocade-neutron-plugin",
+            "releases": ["Folsom", "Grizzly", "Havana", "Icehouse"],
+            "ci_id": "bci"
+        },
+        {
+            "project_id": "openstack/neutron",
+            "vendor": "Brocade",
+            "name": "Brocade Neutron ML2 Mechanism driver for VDX/VCS Switches",
+            "description": "Brocade Neutron ML2 Mechanism Driver for VDX/VCS provides a means to interface Openstack Networking to orchestrate Brocade physical switches.",
+            "maintainer": {
+                "name": "Shiv Haris",
+                "email": "sharis@brocade.com",
+                "irc": "shivharis"
+            },
+            "wiki": "https://wiki.openstack.org/wiki/Brocade-ML2-Mechanism",
+            "releases": ["Icehouse"],
             "ci_id": "bci"
         },
         {
