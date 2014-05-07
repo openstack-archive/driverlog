@@ -545,8 +545,7 @@
                 "name": "Neutron Team",
                 "irc": "rkukura"
             },
-            "wiki": "http://docs.openstack.org/trunk/config-reference/content/networking-plugin-linuxbridge_agent.html",
-            "ci_id": "jenkins"
+            "wiki": "http://docs.openstack.org/trunk/config-reference/content/networking-plugin-linuxbridge_agent.html"
         },
         {
             "project_id": "openstack/neutron",
@@ -557,16 +556,14 @@
                 "name": "NTT Team",
                 "irc": "nati_ueno"
             },
-            "wiki": "http://docs.openstack.org/trunk/config-reference/content/networking-plugin-meta.html",
-            "ci_id": "jenkins"
+            "wiki": "http://docs.openstack.org/trunk/config-reference/content/networking-plugin-meta.html"
         },
         {
             "project_id": "openstack/neutron",
             "vendor": "OpenStack Community",
             "name": "Open vSwitch Plugin",
             "description": "The Open vSwitch plug-in is a core plug-in working as part of the OpenStack Neutron Virtual Network Service",
-            "wiki": "http://docs.openstack.org/trunk/config-reference/content/networking-plugin-openvswitch_agent.html",
-            "ci_id": "jenkins"
+            "wiki": "http://docs.openstack.org/trunk/config-reference/content/networking-plugin-openvswitch_agent.html"
         },
         {
             "project_id": "openstack/neutron",
