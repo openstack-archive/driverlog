@@ -127,20 +127,32 @@
         {
             "project_id": "openstack/cinder",
             "vendor": "HP",
-            "name": "HP 3PAR Fibre Channel and iSCSI drivers",
-            "description": "The HP3PARFCDriver and HP3PARISCSIDriver drivers, run volume operations by communicating with the HP 3PAR storage system over HTTP, HTTPS, and SSH connections.",
+            "name": "HP 3PAR iSCSI driver",
+            "description": "The HP 3PAR StoreServ iSCSI Block Storage (Cinder) driver to provision volumes with an HP 3PAR StoreServ array and attach volumes over iSCSI.  The driver communicates over HTTP, HTTPS, and SSH connections.",
             "maintainer": {
                 "name": "Walter Boring, Kurt Martin, Jim Branen, Ramy Asselin",
                 "email": "walter.boring@hp.com"
             },
             "wiki": "http://docs.openstack.org/trunk/config-reference/content/hp-3par-driver.html",
-            "releases": ["Icehouse"]
+            "releases": ["Grizzly", "Havana", "Icehouse"]
         },
         {
             "project_id": "openstack/cinder",
             "vendor": "HP",
-            "name": "HP LeftHand SAN",
-            "description": "The HpSanISCSIDriver enables you to use a HP/Lefthand SAN that supports the Cliq interface. Every supported volume operation translates into a cliq call in the back-end.",
+            "name": "HP 3PAR Fibre Channel driver",
+            "description": "The HP 3PAR StoreServ Fibre Channel Block Storage (Cinder) driver to provision volumes with an HP 3PAR StoreServ array and attach volumes over Fibre Channel.  The driver communicates over HTTP, HTTPS, and SSH connections.",
+            "maintainer": {
+                "name": "Walter Boring, Kurt Martin, Jim Branen, Ramy Asselin",
+                "email": "walter.boring@hp.com"
+            },
+            "wiki": "http://docs.openstack.org/trunk/config-reference/content/hp-3par-driver.html",
+            "releases": ["Grizzly", "Havana", "Icehouse"]
+        },
+        {
+            "project_id": "openstack/cinder",
+            "vendor": "HP",
+            "name": "HP LeftHand StoreVirtual driver",
+            "description": "The HP StoreVirtual driver can be configured to run in one of two possible modes, legacy mode which uses SSH/CLIQ to communicate with the HP StoreVirtual Storage, or standard mode, which uses a new REST client to communicate with the array.",
             "maintainer": {
                 "name": "Kurt Martin, Walt Boring, Jim Branen, Ramy Asselin",
                 "email": "kurt.f.martin@hp.com"
