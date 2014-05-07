@@ -87,6 +87,14 @@
         },
         {
             "project_id": "openstack/cinder",
+            "vendor": "Cloudbase",
+            "name": "Windows Server driver",
+            "description": "There is a volume back-end driver for Windows Server 2012 / 2012 R2.", 
+            "wiki": "http://docs.openstack.org/trunk/config-reference/content/windows-volume-driver.html",
+            "releases": ["Grizzly", "Havana", "Icehouse"]
+        },
+        {
+            "project_id": "openstack/cinder",
             "vendor": "Coraid",
             "name": "Coraid AoE driver",
             "description": "The driver allows to configure the OpenStack Block Storage service for use with Coraid storage appliances. Coraid storage appliances use the low-latency ATA-over-Ethernet (ATA) protocol to provide high-bandwidth data transfer between hosts and data on the network.",
@@ -199,14 +207,6 @@
             },
             "wiki": "http://docs.openstack.org/trunk/config-reference/content/ibm-xiv-driver.html",
             "releases": ["Folsom", "Grizzly", "Havana", "Icehouse"]
-        },
-        {
-            "project_id": "openstack/cinder",
-            "vendor": "Microsoft",
-            "name": "Windows Server 2012",
-            "description": "There is a volume back-end for Windows.", 
-            "wiki": "http://docs.openstack.org/trunk/config-reference/content/windows-volume-driver.html",
-            "releases": ["Grizzly", "Havana", "Icehouse"]
         },
         {
             "project_id": "openstack/cinder",
@@ -371,7 +371,9 @@
             "vendor": "Cloudbase",
             "name": "Cloudbase Hyper-V Plugin",
             "description": "The Hyper-V Neutron plugin offers the networking options for Hyper-V Server based OpenSTack intstalltions.",
-            "wiki": "http://www.cloudbase.it/quantum-hyper-v-plugin/"
+            "wiki": "http://www.cloudbase.it/quantum-hyper-v-plugin/",
+            "ci_id": "hyper-v-ci",
+            "releases": ["Grizzly", "Havana", "Icehouse"]
         },
         {
             "project_id": "openstack/neutron",
@@ -580,20 +582,20 @@
         },
         {
             "project_id": "openstack/nova",
-            "vendor": "IBM",
-            "name": "PowerVM",
-            "description": "Removed from Nova during Icehouse, PowerVM compute driver connects to an Integrated Virtualization Manager (IVM) to perform PowerVM Logical Partition (LPAR) deployment and management.",
-            "wiki": "http://docs.openstack.org/trunk/config-reference/content/powervm.html",
-            "releases": ["Folsom", "Grizzly", "Havana"]
-        },
-        {
-            "project_id": "openstack/nova",
-            "vendor": "Microsoft",
+            "vendor": "Cloudbase",
             "name": "Hyper-V virtualization platform",
             "description": "It is possible to use Hyper-V as a compute node within an OpenStack Deployment. The nova-compute service runs as openstack-compute, a 32-bit service directly upon the Windows platform with the Hyper-V role enabled.",
             "wiki": "http://wiki.cloudbase.it/hyperv-tempest-exclusions",
             "ci_id": "hyper-v-ci",
             "releases": ["Folsom", "Grizzly", "Havana", "Icehouse"]
+        },
+        {
+            "project_id": "openstack/nova",
+            "vendor": "IBM",
+            "name": "PowerVM",
+            "description": "Removed from Nova during Icehouse, PowerVM compute driver connects to an Integrated Virtualization Manager (IVM) to perform PowerVM Logical Partition (LPAR) deployment and management.",
+            "wiki": "http://docs.openstack.org/trunk/config-reference/content/powervm.html",
+            "releases": ["Folsom", "Grizzly", "Havana"]
         },
         {
             "project_id": "openstack/nova",
