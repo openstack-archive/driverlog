@@ -536,13 +536,14 @@
         {
             "project_id": "openstack/neutron",
             "vendor": "Tail-f",
-            "name": "Neutron ML2 Driver For Tail-f NCS",
-            "description": "The Tail-f NCS Mechanism Driver implements the ML2 Plugin Mechanism Driver API. It allows OpenStack to talk to the Tail-f Network Control System (NCS) and let NCS provision a multi-vendor network in response to OpenStack network configuration changes.",
+            "name": "Tail-f NCS ML2 Mechanism Driver",
+            "description": "The Tail-f NCS Mechanism Driver allows OpenStack to drive the Tail-f Network Control System (NCS) so that NCS can provision a multi-vendor network in response to Neutron configuration changes.",
             "maintainer": {
                 "name": "Luke Gorrie",
                 "irc": "lukego",
-                "email": "tobbe@tail-f.com"
+                "email": "luke@tail-f.com"
             },
+            "releases": ["Havana", "Icehouse", "Juno"],
             "wiki": "https://wiki.openstack.org/wiki/Neutron/ML2/Tail-f-NCS-neutron-ml2-driver",
             "ci_id": "tailfncs"
         },
