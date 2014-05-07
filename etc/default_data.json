@@ -403,6 +403,19 @@
         },
         {
             "project_id": "openstack/neutron",
+            "vendor": "Embrane",
+            "name": "Embrane LBaaS Driver",
+            "description": "Embrane LBaaS driver enables heleos load balancing services using Neutron's API.",
+            "maintainer": {
+                "name": "Ivar Lazzaro",
+                "irc": "ivar-lazzaro"
+            },
+            "releases": ["Icehouse"],
+            "wiki": "https://wiki.openstack.org/wiki/Neutron/LBaaS/EmbraneDriver",
+            "ci_id": "eci"
+        },
+        {
+            "project_id": "openstack/neutron",
             "vendor": "Extreme Networks",
             "name": "Extreme Networks Plugin",
             "description": "The Extreme Networks OpenStack plugin runs on Extreme XOS 15.3 and later releases. This plug-in is supported on all EXOS based platforms and includes the latest OpenStack API capabilities. The Extreme Networks OpenStack 2.0 plugin enables “Networking-as-a-Service” for both Physical and Virtual Extreme Networks.",
