@@ -475,6 +475,20 @@
                 "irc": "irenab"
             },
             "wiki": "https://wiki.openstack.org/wiki/Mellanox-Neutron",
+            "releases": ["Havana", "Icehouse"]
+            "ci_id": "mellanox"
+        },
+        {
+            "project_id": "openstack/neutron",
+            "vendor": "Mellanox",
+            "name": "Mellanox Neutron ML2 Driver",
+            "description": "The Openstack Mellanox Neutron ML2 Driver supports Mellanox embedded switch functionality as part of the VPI (Ethernet/InfiniBand) HCA. Mellanox Neutron Plugin allows hardware vNICs (based on SR-IOV virtual functions) per each Virtual Machine vNIC to have its unique connectivity, security, and QoS attributes.",
+            "maintainer": {
+                "name": "Irena Berezovsky",
+                "irc": "irenab"
+            },
+            "wiki": "https://wiki.openstack.org/wiki/Mellanox-Neutron-ML2",
+            "releases": ["Icehouse", "Juno"]
             "ci_id": "mellanox"
         },
         {
