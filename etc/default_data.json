@@ -622,11 +622,11 @@
             "name": "VMware NSX Network Virtualization Platform Plugin",
             "description": "The NSX plug-in is designed to manage VMware NSX platform, formerly known as Nicira NVP.",
             "wiki": "http://docs.openstack.org/admin-guide-cloud/content/nsx_plugin.html",
-            "ci_id": "VMware Mine Sweeper",
             "maintainer": {
                 "name": "Armando Migliaccio",
                 "irc": "armax"
             },
+            "ci_id": "vmwareminesweeper",
             "releases": ["Essex", "Folsom", "Grizzly", "Havana", "Icehouse"]
         },
         {
@@ -723,10 +723,16 @@
         {
             "project_id": "openstack/nova",
             "vendor": "VMware",
-            "name": "VMWare vShepre",
+            "name": "VMware vSphere",
             "description": "OpenStack Compute supports the VMware vSphere product family. The VMware vCenter driver enables the nova-compute service to communicate with a VMware vCenter server that manages one or more ESX host clusters.",
             "wiki": "http://docs.openstack.org/trunk/config-reference/content/vmware.html",
-            "ci_id": "vmwareminesweeper"
+            "maintainer": {
+                "name": "Tracy Jones, Gary Kotton, Vui Chiap Lam",
+                "email": "tjones@vmware.com",
+                "irc": "tjones"
+            },
+            "ci_id": "vmwareminesweeper",
+            "releases": ["Grizzly", "Havana", "Icehouse", "Juno"]
         },
         {
             "project_id": "openstack/sahara",
