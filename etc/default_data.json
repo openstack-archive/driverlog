@@ -328,6 +328,7 @@
                 "irc": "Sukhdev"
             },
             "wiki": "https://wiki.openstack.org/wiki/Arista-neutron-ml2-driver",
+            "releases": ["Havana", "Icehouse", "Juno"],
             "ci_id": "arista-test"
         },
         {
