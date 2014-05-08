@@ -616,8 +616,9 @@
             "maintainer": {
                 "name": "Armando Migliaccio",
                 "irc": "armax"
-            },
-            "releases": ["Essex", "Folsom", "Grizzly", "Havana", "Icehouse"]
+            }
+            "ci_id": "vmwareminesweeper"
+	    "releases": ["Essex", "Folsom", "Grizzly", "Havana", "Icehouse"] 
         },
         {
             "project_id": "openstack/neutron",
@@ -713,10 +714,16 @@
         {
             "project_id": "openstack/nova",
             "vendor": "VMware",
-            "name": "VMWare vShepre",
+            "name": "VMware vSphere",
             "description": "OpenStack Compute supports the VMware vSphere product family. The VMware vCenter driver enables the nova-compute service to communicate with a VMware vCenter server that manages one or more ESX host clusters.",
             "wiki": "http://docs.openstack.org/trunk/config-reference/content/vmware.html",
             "ci_id": "vmwareminesweeper"
+	    "releases": ["Grizzly", "Havana", "Icehouse", "Juno"]
+            "maintainer": {
+                "name": "Tracy Jones, Gary Kotton, Vui Chiap Lam",
+                "email": "tjones@vmware.com, garyk@vmware.com, vuil@vmware.com"
+		"irc": "tjones, gark, vuil"
+            },
         },
         {
             "project_id": "openstack/sahara",
