@@ -89,7 +89,7 @@
             "project_id": "openstack/cinder",
             "vendor": "Cloudbase",
             "name": "Windows Server driver",
-            "description": "There is a volume back-end driver for Windows Server 2012 / 2012 R2.", 
+            "description": "There is a volume back-end driver for Windows Server 2012 / 2012 R2.",
             "wiki": "http://docs.openstack.org/trunk/config-reference/content/windows-volume-driver.html",
             "releases": ["Grizzly", "Havana", "Icehouse"]
         },
@@ -257,16 +257,14 @@
             "project_id": "openstack/cinder",
             "vendor": "OpenStack Community",
             "name": "NFS",
-            "wiki": "http://docs.openstack.org/trunk/config-reference/content/NFS-driver.html",
-            "ci_id": "jenkins"
+            "wiki": "http://docs.openstack.org/trunk/config-reference/content/NFS-driver.html"
         },
         {
             "project_id": "openstack/cinder",
             "vendor": "OpenStack Community",
             "name": "SheepDog Volume Driver",
             "description": "Sheepdog is an open-source distributed storage system that provides a virtual storage pool utilizing internal disk of commodity servers. This driver enables use of Sheepdog through Qemu/KVM.",
-            "wiki": "http://docs.openstack.org/trunk/config-reference/content/sheepdog-driver.html",
-            "ci_id": "jenkins"
+            "wiki": "http://docs.openstack.org/trunk/config-reference/content/sheepdog-driver.html"
         },
         {
             "project_id": "openstack/cinder",
