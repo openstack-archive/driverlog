@@ -5,6 +5,10 @@
             "name": "Cinder (Block Storage)"
         },
         {
+            "id": "openstack/glance",
+            "name": "Glance (Image Service)"
+        },
+        {
             "id": "openstack/neutron",
             "name": "Neutron (Networking)"
         },
