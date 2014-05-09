@@ -117,12 +117,36 @@
             "project_id": "openstack/cinder",
             "vendor": "EMC",
             "name": "EMC SMI-S iSCSI driver",
-            "description": "The EMC SMI-S iSCSI driver runs volume operations by communicating with the back-end EMC storage.",
+            "description": "The EMC SMI-S iSCSI driver runs volume operations by communicating with the back-end VMAX and VNX storage, using the EMC SMI-S Provider.",
             "maintainer": {
                 "name": "Xing Yang",
                 "email": "xing.yang@emc.com"
             },
-            "wiki": "http://docs.openstack.org/trunk/config-reference/content/emc-smis-iscsi-driver.html",
+            "wiki": "http://docs.openstack.org/trunk/config-reference/content/emc-smis-driver.html",
+            "releases": ["Grizzly", "Havana", "Icehouse"]
+        },
+        {
+            "project_id": "openstack/cinder",
+            "vendor": "EMC",
+            "name": "EMC SMI-S FC driver",
+            "description": "The EMC SMI-S FC driver runs volume operations by communicating with the back-end VMAX and VNX storage, using the EMC SMI-S Provider.",
+            "maintainer": {
+                "name": "Xing Yang",
+                "email": "xing.yang@emc.com"
+            },
+            "wiki": "http://docs.openstack.org/trunk/config-reference/content/emc-smis-driver.html",
+            "releases": ["Icehouse"]
+        },
+        {
+            "project_id": "openstack/cinder",
+            "vendor": "EMC",
+            "name": "EMC VNX direct driver",
+            "description": "The EMC VNX direct driver runs volume operations by communicating with the back-end VNX storage, using NaviSecCLI.",
+            "maintainer": {
+                "name": "Xing Yang",
+                "email": "xing.yang@emc.com"
+        },
+            "wiki": "http://docs.openstack.org/trunk/config-reference/content/emc-vnx-direct-driver.html",
             "releases": ["Icehouse"]
         },
         {
