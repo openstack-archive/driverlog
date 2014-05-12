@@ -171,3 +171,13 @@ def add_index(sequence, start=1, item_filter=lambda x: True):
 
 def safe_encode(s):
     return parse.quote_plus(s.encode('utf-8'))
+
+
+def copy_dict(source, include=None, exclude=None):
+    if not include and not exclude:
+        return source.copy()
+    else:
+        include = include or source.keys()
+        exclude = exclude or []
+        return dict([(k, v) for k, v in six.iteritems(source)
+                     if k in include and k not in exclude])
