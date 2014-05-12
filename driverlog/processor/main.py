@@ -45,6 +45,17 @@ def find_comment(review, ci):
     return None
 
 
+def find_vote(review, ci_id):
+    for approval in (review['currentPatchSet'].get('approvals') or []):
+        if approval['type'] not in ['Verified', 'VRIF']:
+            continue
+
+        if approval['by'].get('username') == ci_id:
+            return approval['value'] in ['1', '2']
+
+    return None
+
+
 def process_reviews(review_iterator, ci_ids_map, project_id):
     branch_ci_set = set()
 
@@ -52,36 +63,53 @@ def process_reviews(review_iterator, ci_ids_map, project_id):
         review_url = review['url']
         branch = review['branch']
 
-        for approval in (review['currentPatchSet'].get('approvals') or []):
-            if approval['type'] not in ['Verified', 'VRIF']:
+        for comment in reversed(review.get('comments') or []):
+            ci_id = comment['reviewer'].get('username')
+            if ci_id not in ci_ids_map:
                 continue
 
-            ci = approval['by']['username']
-            if ci not in ci_ids_map:
-                continue
-
-            branch_ci = (branch, ci)
+            branch_ci = (branch, ci_id)
             if branch_ci in branch_ci_set:
                 continue  # already seen, ignore
 
             branch_ci_set.add(branch_ci)
 
-            comment = find_comment(review, ci)
+            message = comment['message']
+            prefix = 'Patch Set %s:' % review['currentPatchSet']['number']
+            if comment['message'].find(prefix) != 0:
+                break  # all comments from the latest patch set passed
 
-            for one_ci in ci_ids_map[ci]:
-                yield {
-                    (project_id,
-                     one_ci['vendor'].lower(),
-                     one_ci['driver_name'].lower()): {
-                         'os_versions_map': {
-                             branch: {
-                                 'comment': comment,
-                                 'timestamp': approval['grantedOn'],
-                                 'review_url': review_url
+            message = message[len(prefix):].strip()
+
+            for one_ci in ci_ids_map[ci_id]:
+                result = None
+
+                # try to get result by parsing comment message
+                success_pattern = one_ci.get('success_pattern')
+                failure_pattern = one_ci.get('failure_pattern')
+                if success_pattern and re.search(success_pattern, message):
+                    result = True
+                elif failure_pattern and re.search(failure_pattern, message):
+                    result = False
+
+                # try to get result from vote
+                if not result:
+                    result = find_vote(review, ci_id)
+
+                if result:
+                    yield {
+                        (project_id,
+                         one_ci['vendor'].lower(),
+                         one_ci['driver_name'].lower()): {
+                             'os_versions_map': {
+                                 branch: {
+                                     'comment': message,
+                                     'timestamp': comment['timestamp'],
+                                     'review_url': review_url
+                                 }
                              }
                          }
-                     }
-                }
+                    }
 
 
 def update_generator(memcached, default_data, ci_ids_map, force_update=False):
@@ -130,6 +158,17 @@ def build_ci_map(drivers):
     return ci_map
 
 
+def transform_default_data(default_data):
+    for driver in default_data['drivers']:
+        driver['os_versions_map'] = {}
+        if 'releases' in driver:
+            for release in driver['releases']:
+                driver['os_versions_map'][release] = {
+                    'success': True,
+                    'comment': 'self-tested verification'
+                }
+
+
 def main():
     # init conf and logging
     conf = cfg.CONF
@@ -153,21 +192,7 @@ def main():
         LOG.critical('Unable to load default data')
         return not 0
 
-    ci_ids_map = collections.defaultdict(set)
-    for driver in default_data['drivers']:
-        vendor = driver['vendor']
-        driver_name = driver['name']
-        if 'ci_id' in driver:
-            ci_id = driver['ci_id']
-            ci_ids_map[ci_id].add((vendor, driver_name))
-
-        driver['os_versions_map'] = {}
-        if 'releases' in driver:
-            for release in driver['releases']:
-                driver['os_versions_map'][release] = {
-                    'success': True,
-                    'comment': 'self-tested verification'
-                }
+    ci_ids_map = build_ci_map(default_data['drivers'])
 
     update = {}
     if not cfg.CONF.force_update:
@@ -191,12 +216,16 @@ def main():
             else:
                 update[key]['os_versions_map'][os_version] = info
 
+    # write default data into memcache
+    transform_default_data(default_data)
     memcache_inst.set('driverlog:default_data', default_data)
-    memcache_inst.set('driverlog:update', update)
 
     old_dd_hash = memcache_inst.get('driverlog:default_data_hash')
     new_dd_hash = _get_hash(default_data)
     memcache_inst.set('driverlog:default_data_hash', new_dd_hash)
+
+    # write update into memcache
+    memcache_inst.set('driverlog:update', update)
 
     if has_update or old_dd_hash != new_dd_hash:
         memcache_inst.set('driverlog:update_hash', time.time())
