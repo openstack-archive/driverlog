@@ -65,17 +65,12 @@
                     "releases": {
                         "type": "array",
                         "items": {
-                            "type": "string"
+                            "type": "string",
+                            "pattern": "^[\\w]+$"
                         }
                     },
-                    "ci_id": {
-                        "type": "string"
-                    },
-                    "success_pattern": {
-                        "type": "string"
-                    },
-                    "failure_pattern": {
-                        "type": "string"
+                    "ci": {
+                        "$ref": "#/definitions/ci"
                     }
                 },
                 "required": ["project_id", "vendor", "name"],
@@ -105,6 +100,23 @@
                 }
             },
             "required": ["name"],
+            "additionalProperties": false
+        },
+        "ci": {
+            "type": "object",
+            "properties": {
+                "id": {
+                    "type": "string",
+                    "pattern": "^[\\S]+$"
+                },
+                "success_pattern": {
+                    "type": "string"
+                },
+                "failure_pattern": {
+                    "type": "string"
+                }
+            },
+            "required": ["id"],
             "additionalProperties": false
         }
     }

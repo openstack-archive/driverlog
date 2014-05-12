@@ -40,7 +40,9 @@
             }],
             "wiki": "https://wiki.openstack.org/wiki/Arista-neutron-ml2-driver",
             "releases": ["Havana", "Icehouse", "Juno"],
-            "ci_id": "arista-test"
+            "ci": {
+                "id": "arista-test"
+            }
         },
         {
             "project_id": "openstack/neutron",
@@ -53,9 +55,11 @@
             }],
             "wiki": "https://wiki.openstack.org/wiki/Neutron/ML2/MechCiscoNexus",
             "releases": ["Havana", "Icehouse"],
-            "ci_id": "cisco_neutron_ci",
-            "success_pattern": "neutron_zuul [^:]+: SUCCESS",
-            "failure_pattern": "neutron_zuul [^:]+: FAILURE"
+            "ci": {
+                "id": "cisco_neutron_ci",
+                "success_pattern": "neutron_zuul \\S+ : SUCCESS",
+                "failure_pattern": "neutron_zuul \\S+ : FAILURE"
+            }
         },
         {
             "project_id": "openstack/neutron",
@@ -68,7 +72,11 @@
             }],
             "wiki": "https://wiki.openstack.org/wiki/Cisco-neutron",
             "releases": ["Grizzly", "Havana", "Icehouse"],
-            "ci_id": "cisco_neutron_ci"
+            "ci": {
+                "id": "cisco_neutron_ci",
+                "success_pattern": "neutron_zuul \\S+ : SUCCESS",
+                "failure_pattern": "neutron_zuul \\S+ : FAILURE"
+            }
         }
     ]
 }

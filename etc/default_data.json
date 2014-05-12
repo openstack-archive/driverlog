@@ -412,7 +412,6 @@
                 }
             ],
             "wiki": "http://docs.openstack.org/trunk/config-reference/content/lvm-volume-driver.html",
-            "ci_id": "jenkins",
             "releases": ["Folsom", "Grizzly", "Havana", "Icehouse"]
         },
         {
@@ -524,7 +523,9 @@
             ],
             "wiki": "https://wiki.openstack.org/wiki/Arista-neutron-ml2-driver",
             "releases": ["Havana", "Icehouse", "Juno"],
-            "ci_id": "arista-test"
+            "ci": {
+                "id": "arista-test"
+            }
         },
         {
             "project_id": "openstack/neutron",
@@ -539,7 +540,9 @@
                 }
             ],
             "wiki": "http://docs.openstack.org/trunk/config-reference/content/networking-plugin-ml2_bigswitch.html",
-            "ci_id": "bsn",
+            "ci": {
+                "id": "bsn"
+            },
             "releases": ["Icehouse"]
         },
         {
@@ -555,7 +558,9 @@
                 }
             ],
             "wiki": "http://www.openflowhub.org/display/floodlightcontroller/OpenStack",
-            "ci_id": "bsn",
+            "ci": {
+                "id": "bsn"
+            },
             "releases": ["Folsom", "Grizzly", "Havana", "Icehouse"]
         },
         {
@@ -572,7 +577,9 @@
             ],
             "wiki": "https://wiki.openstack.org/wiki/Brocade-neutron-plugin",
             "releases": ["Folsom", "Grizzly", "Havana", "Icehouse"],
-            "ci_id": "bci"
+            "ci": {
+                "id": "bci"
+            }
         },
         {
             "project_id": "openstack/neutron",
@@ -588,7 +595,9 @@
             ],
             "wiki": "https://wiki.openstack.org/wiki/Brocade-ML2-Mechanism",
             "releases": ["Icehouse"],
-            "ci_id": "bci"
+            "ci": {
+                "id": "bci"
+            }
         },
         {
             "project_id": "openstack/neutron",
@@ -603,7 +612,9 @@
             ],
             "wiki": "https://wiki.openstack.org/wiki/Neutron/ML2/MechCiscoNexus",
             "releases": ["Havana", "Icehouse"],
-            "ci_id": "cisco_neutron_ci"
+            "ci": {
+                "id": "cisco_neutron_ci"
+            }
         },
         {
             "project_id": "openstack/neutron",
@@ -618,7 +629,9 @@
             ],
             "wiki": "https://wiki.openstack.org/wiki/Cisco-neutron",
             "releases": ["Grizzly", "Havana", "Icehouse"],
-            "ci_id": "cisco_neutron_ci"
+            "ci": {
+                "id": "cisco_neutron_ci"
+            }
         },
         {
             "project_id": "openstack/neutron",
@@ -638,7 +651,9 @@
                 }
             ],
             "wiki": "http://www.cloudbase.it/quantum-hyper-v-plugin/",
-            "ci_id": "hyper-v-ci",
+            "ci": {
+                "id": "hyper-v-ci"
+            },
             "releases": ["Grizzly", "Havana", "Icehouse"]
         },
         {
@@ -654,7 +669,9 @@
                 }
             ],
             "wiki": "https://wiki.openstack.org/wiki/Neutron/EmbraneNeutronPlugin",
-            "ci_id": "eci"
+            "ci": {
+                "id": "eci"
+            }
         },
         {
             "project_id": "openstack/neutron",
@@ -670,7 +687,9 @@
             ],
             "releases": ["Icehouse"],
             "wiki": "https://wiki.openstack.org/wiki/Neutron/LBaaS/EmbraneDriver",
-            "ci_id": "eci"
+            "ci": {
+                "id": "eci"
+            }
         },
         {
             "project_id": "openstack/neutron",
@@ -713,7 +732,9 @@
             ],
             "wiki": "https://wiki.openstack.org/wiki/Mellanox-Neutron",
             "releases": ["Havana", "Icehouse"],
-            "ci_id": "mellanox"
+            "ci": {
+                "id": "mellanox"
+            }
         },
         {
             "project_id": "openstack/neutron",
@@ -728,7 +749,9 @@
             ],
             "wiki": "https://wiki.openstack.org/wiki/Mellanox-Neutron-ML2",
             "releases": ["Icehouse", "Juno"],
-            "ci_id": "mellanox"
+            "ci": {
+                "id": "mellanox"
+            }
         },
         {
             "project_id": "openstack/neutron",
@@ -743,7 +766,9 @@
                 }
             ],
             "wiki": "https://wiki.openstack.org/wiki/Spec-QuantumMidoNetPlugin",
-            "ci_id": "midokura"
+            "ci": {
+                "id": "midokura"
+            }
         },
         {
             "project_id": "openstack/neutron",
@@ -758,7 +783,9 @@
                 }
             ],
             "wiki": "https://wiki.openstack.org/wiki/Neutron/NEC_OpenFlow_Plugin",
-            "ci_id": "nec-openstack-ci"
+            "ci": {
+                "id": "nec-openstack-ci"
+            }
         },
         {
             "project_id": "openstack/neutron",
@@ -773,7 +800,9 @@
                 }
             ],
             "wiki": "http://docs.openstack.org/trunk/config-reference/content/networking-plugin-nuage.html",
-            "ci_id": "nuage-ci"
+            "ci": {
+                "id": "nuage-ci"
+            }
         },
         {
             "project_id": "openstack/neutron",
@@ -781,7 +810,9 @@
             "name": "One Convergence NVSD Controller",
             "description": "One Convergence Neutron plugin provides Neutron APIs for the network virtualization solution implemented with One Convergence Network Virtualization and Services Delivery(NVSD) Controller.",
             "wiki": "https://github.com/openstack/neutron/tree/master/neutron/plugins/oneconvergence",
-            "ci_id": "oneconvergence"
+            "ci": {
+                "id": "oneconvergence"
+            }
         },
         {
             "project_id": "openstack/neutron",
@@ -796,7 +827,9 @@
                 }
             ],
             "wiki": "http://openstack.redhat.com/OpenDaylight_integration",
-            "ci_id": "odl-jenkins"
+            "ci": {
+                "id": "odl-jenkins"
+            }
         },
         {
             "project_id": "openstack/neutron",
@@ -838,7 +871,9 @@
                 }
             ],
             "wiki": "https://github.com/osrg/ryu/wiki/configuration_openstack_havana_with_ryu",
-            "ci_id": "neutronryu"
+            "ci": {
+                "id": "neutronryu"
+            }
         },
         {
             "project_id": "openstack/neutron",
@@ -867,7 +902,9 @@
                 }
             ],
             "wiki": "https://wiki.openstack.org/wiki/PLUMgrid-Neutron",
-            "ci_id": "plumgrid-ci"
+            "ci": {
+                "id": "plumgrid-ci"
+            }
         },
         {
             "project_id": "openstack/neutron",
@@ -883,7 +920,9 @@
             ],
             "releases": ["Havana", "Icehouse", "Juno"],
             "wiki": "https://wiki.openstack.org/wiki/Neutron/ML2/Tail-f-NCS-neutron-ml2-driver",
-            "ci_id": "tailfncs"
+            "ci": {
+                "id": "tailfncs"
+            }
         },
         {
             "project_id": "openstack/neutron",
@@ -900,7 +939,9 @@
                 }
             ],
             "releases": ["Essex", "Folsom", "Grizzly", "Havana", "Icehouse"],
-            "ci_id": "vmwareminesweeper"
+            "ci": {
+                "id": "vmwareminesweeper"
+            }
         },
         {
             "project_id": "openstack/neutron",
@@ -915,7 +956,9 @@
                 }
             ],
             "wiki": "https://wiki.openstack.org/wiki/Neutron/vArmour-Firewall",
-            "ci_id": "varmourci"
+            "ci": {
+                "id": "varmourci"
+            }
         },
         {
             "project_id": "openstack/nova",
@@ -935,7 +978,9 @@
                 }
             ],
             "wiki": "http://wiki.cloudbase.it/hyperv-tempest-exclusions",
-            "ci_id": "hyper-v-ci",
+            "ci": {
+                "id": "hyper-v-ci"
+            },
             "releases": ["Folsom", "Grizzly", "Havana", "Icehouse"]
         },
         {
@@ -1003,8 +1048,7 @@
                     "email": "mikal@stillhq.com"
                 }
             ],
-            "wiki": "http://docs.openstack.org/trunk/config-reference/content/kvm.html",
-            "ci_id": "jenkins"
+            "wiki": "http://docs.openstack.org/trunk/config-reference/content/kvm.html"
         },
         {
             "project_id": "openstack/nova",
@@ -1030,8 +1074,7 @@
                     "email": "mikal@stillhq.com"
                 }
             ],
-            "wiki": "http://docs.openstack.org/trunk/config-reference/content/qemu.html",
-            "ci_id": "jenkins"
+            "wiki": "http://docs.openstack.org/trunk/config-reference/content/qemu.html"
         },
         {
             "project_id": "openstack/nova",
@@ -1045,7 +1088,9 @@
                 }
             ],
             "wiki": "http://docs.openstack.org/trunk/config-reference/content/introduction-to-xen.html",
-            "ci_id": "citrix_xenserver_ci",
+            "ci": {
+                "id": "citrix_xenserver_ci"
+            },
             "releases": ["Austin", "Bexar", "Cactus", "Diablo", "Essex", "Folsom", "Grizzly", "Havana", "Icehouse"]
         },
         {
@@ -1067,7 +1112,9 @@
             "name": "VMware vSphere",
             "description": "OpenStack Compute supports the VMware vSphere product family. The VMware vCenter driver enables the nova-compute service to communicate with a VMware vCenter server that manages one or more ESX host clusters.",
             "wiki": "http://docs.openstack.org/trunk/config-reference/content/vmware.html",
-            "ci_id": "vmwareminesweeper",
+            "ci": {
+                "id": "vmwareminesweeper"
+            },
             "releases": ["Grizzly", "Havana", "Icehouse"],
             "maintainers": [
                 {
@@ -1112,7 +1159,9 @@
                 }
             ],
             "wiki": "http://docs.openstack.org/developer/sahara/userdoc/vanilla_plugin.html",
-            "ci_id": "savanna-ci"
+            "ci": {
+                "id": "savanna-ci"
+            }
         }
     ]
 }
