@@ -54,8 +54,8 @@
             "wiki": "https://wiki.openstack.org/wiki/Neutron/ML2/MechCiscoNexus",
             "releases": ["Havana", "Icehouse"],
             "ci_id": "cisco_neutron_ci",
-            "success_pattern": "neutron_zuul [^:]+: SUCCESS",
-            "failure_pattern": "neutron_zuul [^:]+: FAILURE"
+            "success_pattern": "neutron_zuul \\S+ : SUCCESS",
+            "failure_pattern": "neutron_zuul \\S+ : FAILURE"
         },
         {
             "project_id": "openstack/neutron",
