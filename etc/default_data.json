@@ -257,6 +257,18 @@
         {
             "project_id": "openstack/cinder",
             "vendor": "IBM",
+            "name": "IBM NAS driver",
+            "description": "The IBM NAS Driver works using NFS protocol, and implements other value added features. It allows support for IBM SONAS and Storwize V7000 Unified filers to host storage for OpenStack environment.",
+            "maintainer": {
+                "name": "IBM",
+                "email": "openstack_storage_drivers@il.ibm.com"
+            },
+            "wiki": "http://www-03.ibm.com/support/techdocs/atsmastr.nsf/WebIndex/WP102443",
+            "releases": ["Icehouse"]
+        },
+        {
+            "project_id": "openstack/cinder",
+            "vendor": "IBM",
             "name": "IBM Storwize family and SVC volume driver",
             "description": "The volume management driver for Storwize family and SAN Volume Controller (SVC) provides OpenStack Compute instances with access to IBM Storwize family or SVC storage systems.",
             "maintainer": {
