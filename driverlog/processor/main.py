@@ -33,10 +33,59 @@ from driverlog.processor import utils
 LOG = logging.getLogger(__name__)
 
 
-def update_generator(memcached, default_data, ci_ids_map, force_update=False):
+def find_comment(review, ci, patch_number):
+    for comment in reversed(review.get('comments') or []):
+        prefix = 'Patch Set %s:' % patch_number
+        if ((comment['reviewer'].get('username') == ci) and
+                (comment['message'].find(prefix) == 0)):
+            return comment['message'][len(prefix):].strip()
 
+    return None
+
+
+def process_reviews(review_iterator, ci_ids_map, project_id):
+    branch_ci_set = set()
+
+    for review in review_iterator:
+        review_url = review['url']
+        branch = review['branch']
+
+        for approval in (review['currentPatchSet'].get('approvals') or []):
+            if approval['type'] not in ['Verified', 'VRIF']:
+                continue
+
+            ci = approval['by']['username']
+            if ci not in ci_ids_map:
+                continue
+
+            branch_ci = (branch, ci)
+            if branch_ci in branch_ci_set:
+                continue  # already seen, ignore
+
+            branch_ci_set.add(branch_ci)
+
+            patch_number = review['currentPatchSet']['number']
+            comment = find_comment(review, ci, patch_number)
+
+            for vendor_driver in ci_ids_map[ci]:
+                vendor, driver_name = vendor_driver
+
+                yield {
+                    (project_id, vendor.lower(), driver_name.lower()): {
+                        'os_versions_map': {
+                            branch: {
+                                'comment': comment,
+                                'timestamp': approval['grantedOn'],
+                                'review_url': review_url
+                            }
+                        }
+                    }
+                }
+
+
+def update_generator(memcached, default_data, ci_ids_map, force_update=False):
     for project in default_data['projects']:
-        project_id = project['id']
+        project_id = project['id'].lower()
         rcs_inst = rcs.get_rcs(project_id, cfg.CONF.review_uri)
         rcs_inst.setup(key_filename=cfg.CONF.ssh_key_filename,
                        username=cfg.CONF.ssh_username)
@@ -49,52 +98,8 @@ def update_generator(memcached, default_data, ci_ids_map, force_update=False):
             last_id = memcached.get(rcs_key)
 
         review_iterator = rcs_inst.log(last_id)
-        branch_ci_set = set()
-
-        for review in review_iterator:
-            review_url = review['url']
-            branch = review['branch']
-
-            for approval in (review['currentPatchSet'].get('approvals') or []):
-                if approval['type'] != 'Verified':
-                    continue
-
-                ci = approval['by']['username']
-                if ci not in ci_ids_map:
-                    continue
-
-                branch_ci = (branch, ci)
-                if branch_ci in branch_ci_set:
-                    continue  # already seen, ignore
-                branch_ci_set.add(branch_ci)
-
-                patch_number = review['currentPatchSet']['number']
-                message = ''
-                for comment in reversed(review['comments']):
-                    prefix = 'Patch Set %s:' % patch_number
-                    if ((comment['reviewer'].get('username') == ci) and
-                            (comment['message'].find(prefix) == 0)):
-                        message = comment['message'][len(prefix):].strip()
-                        break
-
-                success = approval['value'] in ['1', '2']
-
-                for vendor_driver in ci_ids_map[ci]:
-                    vendor, driver_name = vendor_driver
-
-                    yield {
-                        (project_id.lower(), vendor.lower(),
-                         driver_name.lower()): {
-                             'os_versions_map': {
-                                 branch: {
-                                     'success': success,
-                                     'comment': message,
-                                     'timestamp': approval['grantedOn'],
-                                     'review_url': review_url
-                                 }
-                             }
-                         }
-                    }
+        for item in process_reviews(review_iterator, ci_ids_map, project_id):
+            yield item
 
         last_id = rcs_inst.get_last_id()
         LOG.debug('RCS last id is: %s', last_id)
