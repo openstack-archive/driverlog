@@ -67,6 +67,12 @@
                     },
                     "ci_id": {
                         "type": "string"
+                    },
+                    "success_pattern": {
+                        "type": "string"
+                    },
+                    "failure_pattern": {
+                        "type": "string"
                     }
                 },
                 "required": ["project_id", "vendor", "name"],

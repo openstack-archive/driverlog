@@ -1,0 +1,74 @@
+{
+    "projects": [
+        {
+            "id": "openstack/cinder",
+            "name": "Cinder (Block Storage)"
+        },
+        {
+            "id": "openstack/neutron",
+            "name": "Neutron (Networking)"
+        },
+        {
+            "id": "openstack/nova",
+            "name": "Nova (Compute)"
+        }
+    ],
+    "releases": [
+        {
+            "id": "havana",
+            "wiki": "https://wiki.openstack.org/wiki/ReleaseNotes/Havana"
+        },
+        {
+            "id": "icehouse",
+            "wiki": "https://wiki.openstack.org/wiki/ReleaseNotes/Icehouse"
+        },
+        {
+            "id": "juno",
+            "wiki": "https://wiki.openstack.org/wiki/Releases"
+        }
+    ],
+    "drivers": [
+        {
+            "project_id": "openstack/neutron",
+            "vendor": "Arista",
+            "name": "Arista Neutron ML2 Driver",
+            "description": "Arista ML2 Mechanism Driver implement ML2 Plugin Mechanism Driver API. This driver can manage all types of Arista switches.",
+            "maintainer": {
+                "name": "Sukhdev Kapur",
+                "irc": "Sukhdev",
+                "email": "sukhdev@arista.com"
+            },
+            "wiki": "https://wiki.openstack.org/wiki/Arista-neutron-ml2-driver",
+            "releases": ["Havana", "Icehouse", "Juno"],
+            "ci_id": "arista-test"
+        },
+        {
+            "project_id": "openstack/neutron",
+            "vendor": "Cisco",
+            "name": "Neutron ML2 Driver For Cisco Nexus Devices",
+            "description": "The Cisco Nexus ML2 Mechanism Driver implements the ML2 Plugin Mechanism Driver API. This driver manages multiple types of Cisco Nexus switches.",
+            "maintainer": {
+                "name": "Dane Leblanc",
+                "email": "leblancd@cisco.com"
+            },
+            "wiki": "https://wiki.openstack.org/wiki/Neutron/ML2/MechCiscoNexus",
+            "releases": ["Havana", "Icehouse"],
+            "ci_id": "cisco_neutron_ci",
+            "success_pattern": "neutron_zuul [^:]+: SUCCESS",
+            "failure_pattern": "neutron_zuul [^:]+: FAILURE"
+        },
+        {
+            "project_id": "openstack/neutron",
+            "vendor": "Cisco",
+            "name": "Cisco Nexus Plugin",
+            "description": "A Cisco Plugin Framework for Neutron L2 Network Overlays Spanning Multiple Physical Switches.",
+            "maintainer": {
+                "name": "Dane Leblanc",
+                "email": "leblancd@cisco.com"
+            },
+            "wiki": "https://wiki.openstack.org/wiki/Cisco-neutron",
+            "releases": ["Grizzly", "Havana", "Icehouse"],
+            "ci_id": "cisco_neutron_ci"
+        }
+    ]
+}

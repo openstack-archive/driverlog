@@ -33,7 +33,9 @@ from driverlog.processor import utils
 LOG = logging.getLogger(__name__)
 
 
-def find_comment(review, ci, patch_number):
+def find_comment(review, ci):
+    patch_number = review['currentPatchSet']['number']
+
     for comment in reversed(review.get('comments') or []):
         prefix = 'Patch Set %s:' % patch_number
         if ((comment['reviewer'].get('username') == ci) and
@@ -64,22 +66,21 @@ def process_reviews(review_iterator, ci_ids_map, project_id):
 
             branch_ci_set.add(branch_ci)
 
-            patch_number = review['currentPatchSet']['number']
-            comment = find_comment(review, ci, patch_number)
+            comment = find_comment(review, ci)
 
-            for vendor_driver in ci_ids_map[ci]:
-                vendor, driver_name = vendor_driver
-
+            for one_ci in ci_ids_map[ci]:
                 yield {
-                    (project_id, vendor.lower(), driver_name.lower()): {
-                        'os_versions_map': {
-                            branch: {
-                                'comment': comment,
-                                'timestamp': approval['grantedOn'],
-                                'review_url': review_url
-                            }
-                        }
-                    }
+                    (project_id,
+                     one_ci['vendor'].lower(),
+                     one_ci['driver_name'].lower()): {
+                         'os_versions_map': {
+                             branch: {
+                                 'comment': comment,
+                                 'timestamp': approval['grantedOn'],
+                                 'review_url': review_url
+                             }
+                         }
+                     }
                 }
 
 
@@ -110,6 +111,23 @@ def _get_hash(data):
     h = hashlib.new('sha1')
     h.update(json.dumps(data))
     return h.hexdigest()
+
+
+def build_ci_map(drivers):
+    ci_map = collections.defaultdict(list)
+    for driver in drivers:
+        if 'ci_id' in driver:
+            value = {
+                'vendor': driver['vendor'],
+                'driver_name': driver['name'],
+            }
+            if 'success_pattern' in driver:
+                value['success_pattern'] = driver['success_pattern']
+            if 'failure_pattern' in driver:
+                value['failure_pattern'] = driver['failure_pattern']
+
+            ci_map[driver['ci_id']].append(value)
+    return ci_map
 
 
 def main():
