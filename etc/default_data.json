@@ -541,7 +541,9 @@
             ],
             "wiki": "http://docs.openstack.org/trunk/config-reference/content/networking-plugin-ml2_bigswitch.html",
             "ci": {
-                "id": "bsn"
+                "id": "bsn",
+                "success_pattern": "BigSwitch-ML2-Driver \\S+ : SUCCESS",
+                "failure_pattern": "BigSwitch-ML2-Driver \\S+ : FAILURE"
             },
             "releases": ["Icehouse"]
         },
@@ -559,7 +561,9 @@
             ],
             "wiki": "http://www.openflowhub.org/display/floodlightcontroller/OpenStack",
             "ci": {
-                "id": "bsn"
+                "id": "bsn",
+                "success_pattern": "BigSwitch-Plugin \\S+ : SUCCESS",
+                "failure_pattern": "BigSwitch-Plugin \\S+ : FAILURE"
             },
             "releases": ["Folsom", "Grizzly", "Havana", "Icehouse"]
         },
@@ -613,7 +617,9 @@
             "wiki": "https://wiki.openstack.org/wiki/Neutron/ML2/MechCiscoNexus",
             "releases": ["Havana", "Icehouse"],
             "ci": {
-                "id": "cisco_neutron_ci"
+                "id": "cisco_neutron_ci",
+                "success_pattern": "neutron_zuul \\S+ : SUCCESS",
+                "failure_pattern": "neutron_zuul \\S+ : FAILURE"
             }
         },
         {
@@ -630,7 +636,9 @@
             "wiki": "https://wiki.openstack.org/wiki/Cisco-neutron",
             "releases": ["Grizzly", "Havana", "Icehouse"],
             "ci": {
-                "id": "cisco_neutron_ci"
+                "id": "cisco_neutron_ci",
+                "success_pattern": "neutron_zuul \\S+ : SUCCESS",
+                "failure_pattern": "neutron_zuul \\S+ : FAILURE"
             }
         },
         {
@@ -652,7 +660,9 @@
             ],
             "wiki": "http://www.cloudbase.it/quantum-hyper-v-plugin/",
             "ci": {
-                "id": "hyper-v-ci"
+                "id": "hyper-v-ci",
+                "success_pattern": "Build succeeded",
+                "failure_pattern": "Build failed"
             },
             "releases": ["Grizzly", "Havana", "Icehouse"]
         },
@@ -733,7 +743,9 @@
             "wiki": "https://wiki.openstack.org/wiki/Mellanox-Neutron",
             "releases": ["Havana", "Icehouse"],
             "ci": {
-                "id": "mellanox"
+                "id": "mellanox",
+                "success_pattern": "Check-MLNX-Neutron-plugin \\S+ : SUCCESS",
+                "failure_pattern": "Check-MLNX-Neutron-plugin \\S+ : FAILURE"
             }
         },
         {
@@ -750,7 +762,9 @@
             "wiki": "https://wiki.openstack.org/wiki/Mellanox-Neutron-ML2",
             "releases": ["Icehouse", "Juno"],
             "ci": {
-                "id": "mellanox"
+                "id": "mellanox",
+                "success_pattern": "Check-MLNX-Neutron-ML2-driver \\S+ : SUCCESS",
+                "failure_pattern": "Check-MLNX-Neutron-ML2-driver \\S+ : FAILURE"
             }
         },
         {
@@ -784,7 +798,9 @@
             ],
             "wiki": "https://wiki.openstack.org/wiki/Neutron/NEC_OpenFlow_Plugin",
             "ci": {
-                "id": "nec-openstack-ci"
+                "id": "nec-openstack-ci",
+                "success_pattern": "Build succeed",
+                "failure_pattern": "Build failed"
             }
         },
         {
@@ -1144,7 +1160,12 @@
                     "launchpad_id": "slukjanov"
                 }
             ],
-            "wiki": "http://docs.openstack.org/developer/sahara/userdoc/hdp_plugin.html"
+            "wiki": "http://docs.openstack.org/developer/sahara/userdoc/hdp_plugin.html",
+            "ci": {
+                "id": "savanna-ci",
+                "success_pattern": "gate-sahara-integration-hdp \\S+ : SUCCESS",
+                "failure_pattern": "gate-sahara-integration-hdp \\S+ : FAILURE"
+            }
         },
         {
             "project_id": "openstack/sahara",
@@ -1160,7 +1181,9 @@
             ],
             "wiki": "http://docs.openstack.org/developer/sahara/userdoc/vanilla_plugin.html",
             "ci": {
-                "id": "savanna-ci"
+                "id": "savanna-ci",
+                "success_pattern": "gate-sahara-integration-vanilla1 \\S+ : SUCCESS",
+                "failure_pattern": "gate-sahara-integration-vanilla1 \\S+ : FAILURE"
             }
         }
     ]

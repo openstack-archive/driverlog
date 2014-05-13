@@ -87,16 +87,18 @@ def process_reviews(review_iterator, ci_ids_map, project_id):
                 # try to get result by parsing comment message
                 success_pattern = one_ci.get('success_pattern')
                 failure_pattern = one_ci.get('failure_pattern')
+                result = None
+
                 if success_pattern and re.search(success_pattern, message):
                     result = True
                 elif failure_pattern and re.search(failure_pattern, message):
                     result = False
 
                 # try to get result from vote
-                if not result:
+                if result is None:
                     result = find_vote(review, ci_id)
 
-                if result:
+                if result is not None:
                     yield {
                         (project_id,
                          one_ci['vendor'].lower(),
