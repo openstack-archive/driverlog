@@ -170,7 +170,7 @@ function init_selectors(base_url) {
 }
 
 function show_summary(base_url) {
-    var table_column_names = ["project_name", "vendor", "driver_info", "in_trunk", "ci_tested", "maintainer_info"];
+    var table_column_names = ["project_name", "vendor", "driver_info", "in_trunk", "ci_tested", "maintainers_info"];
     var table_id = "data_table";
 
     $.ajax({
@@ -216,19 +216,23 @@ function show_summary(base_url) {
                     tableData[i].ci_tested = "<span style=\"color: darkred\">&#x2716;</span>";
                 }
 
-                tableData[i].maintainer_info = "";
-                if (tableData[i].maintainer) {
-                    var mn = tableData[i].maintainer.name;
-                    if (tableData[i].maintainer.email) {
-                        tableData[i].maintainer_info = "<a href=\"mailto:" + tableData[i].maintainer.email + "\">" + mn + "</a>";
-                    }
-                    else if (tableData[i].maintainer.irc) {
-                        tableData[i].maintainer_info = "<a href=\"irc:" + tableData[i].maintainer.irc + "\">" + mn + "</a>";
-                    } else {
-                        tableData[i].maintainer_info = mn;
+                tableData[i].maintainers_info = "";
+                if (tableData[i].maintainers) {
+                    for (j = 0; j < tableData[i].maintainers.length; j++) {
+                        var maintainer = tableData[i].maintainers[j];
+                        var mn = maintainer.name;
+                        if (maintainer.launchpad_id) {
+                            tableData[i].maintainers_info = "<a href=\"http://stackalytics.com/?user_id=" +
+                                maintainer.launchpad_id + "\" target=\"_blank\">" + mn + "</a>";
+                        }
+                        else if (maintainer.irc) {
+                            tableData[i].maintainers_info = "<a href=\"irc:" + maintainer.irc + "\">" + mn + "</a>";
+                        } else {
+                            tableData[i].maintainers_info = mn;
+                        }
                     }
                 } else {
-                    tableData[i].maintainer_info = "";
+                    tableData[i].maintainers_info = "";
                 }
             }
 
