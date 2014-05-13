@@ -57,6 +57,9 @@ def _extend_drivers_info():
                     })
         driver['releases_info'] = sorted(releases_info,
                                          key=lambda x: x['name'])
+        if 'maintainer' in driver:
+            if 'email' in driver['maintainer']:
+                del driver['maintainer']['email']
 
 
 def _build_drivers_map(default_data, projects_map):
