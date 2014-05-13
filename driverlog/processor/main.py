@@ -114,7 +114,8 @@ def process_reviews(review_iterator, ci_ids_map, project_id):
                     }
 
 
-def update_generator(memcached, default_data, ci_ids_map, force_update=False):
+def update_generator(memcached_inst, default_data, ci_ids_map,
+                     force_update=False):
     for project in default_data['projects']:
         project_id = project['id'].lower()
         rcs_inst = rcs.get_rcs(project_id, cfg.CONF.review_uri)
@@ -126,7 +127,7 @@ def update_generator(memcached, default_data, ci_ids_map, force_update=False):
         rcs_key = 'driverlog:rcs:' + parse.quote_plus(project_id)
         last_id = None
         if not force_update:
-            last_id = memcached.get(rcs_key)
+            last_id = memcached_inst.get(rcs_key)
 
         review_iterator = rcs_inst.log(last_id)
         for item in process_reviews(review_iterator, ci_ids_map, project_id):
@@ -134,7 +135,7 @@ def update_generator(memcached, default_data, ci_ids_map, force_update=False):
 
         last_id = rcs_inst.get_last_id()
         LOG.debug('RCS last id is: %s', last_id)
-        memcached.set(rcs_key, last_id)
+        memcached_inst.set(rcs_key, last_id)
 
 
 def _get_hash(data):
@@ -172,6 +173,49 @@ def transform_default_data(default_data):
                 }
 
 
+def store_default_data(default_data, memcached_inst):
+    transform_default_data(default_data)
+    memcached_inst.set('driverlog:default_data', default_data)
+
+    old_dd_hash = memcached_inst.get('driverlog:default_data_hash')
+    new_dd_hash = _get_hash(default_data)
+    memcached_inst.set('driverlog:default_data_hash', new_dd_hash)
+
+    return new_dd_hash != old_dd_hash
+
+
+def calculate_update(memcached_inst, default_data, force_update):
+
+    update = {}
+    if not force_update:
+        update = memcached_inst.get('driverlog:update') or {}
+
+    ci_ids_map = build_ci_map(default_data['drivers'])
+    need_update = force_update
+
+    for record in update_generator(memcached_inst, default_data, ci_ids_map,
+                                   force_update=force_update):
+        LOG.info('Got new record from Gerrit: %s', record)
+        need_update = True
+
+        key = record.keys()[0]
+        if key not in update:
+            update.update(record)
+        else:
+            os_version = record[key]['os_versions_map'].keys()[0]
+            info = record[key]['os_versions_map'].values()[0]
+            if os_version in update[key]['os_versions_map']:
+                update[key]['os_versions_map'][os_version].update(info)
+            else:
+                update[key]['os_versions_map'][os_version] = info
+
+    # write update into memcache
+    memcached_inst.set('driverlog:update', update)
+
+    if need_update:
+        memcached_inst.set('driverlog:update_hash', time.time())
+
+
 def main():
     # init conf and logging
     conf = cfg.CONF
@@ -188,50 +232,17 @@ def main():
         exit(1)
 
     memcached_uri = stripped.split(',')
-    memcache_inst = memcache.Client(memcached_uri)
+    memcached_inst = memcache.Client(memcached_uri)
 
     default_data = utils.read_json_from_uri(cfg.CONF.default_data_uri)
     if not default_data:
         LOG.critical('Unable to load default data')
         return not 0
 
-    ci_ids_map = build_ci_map(default_data['drivers'])
+    dd_update = store_default_data(default_data, memcached_inst)
 
-    update = {}
-    if not cfg.CONF.force_update:
-        update = memcache_inst.get('driverlog:update') or {}
-
-    has_update = False
-
-    for record in update_generator(memcache_inst, default_data, ci_ids_map,
-                                   force_update=cfg.CONF.force_update):
-        LOG.info('Got new record from Gerrit: %s', record)
-        has_update = True
-
-        key = record.keys()[0]
-        if key not in update:
-            update.update(record)
-        else:
-            os_version = record[key]['os_versions_map'].keys()[0]
-            info = record[key]['os_versions_map'].values()[0]
-            if os_version in update[key]['os_versions_map']:
-                update[key]['os_versions_map'][os_version].update(info)
-            else:
-                update[key]['os_versions_map'][os_version] = info
-
-    # write default data into memcache
-    transform_default_data(default_data)
-    memcache_inst.set('driverlog:default_data', default_data)
-
-    old_dd_hash = memcache_inst.get('driverlog:default_data_hash')
-    new_dd_hash = _get_hash(default_data)
-    memcache_inst.set('driverlog:default_data_hash', new_dd_hash)
-
-    # write update into memcache
-    memcache_inst.set('driverlog:update', update)
-
-    if has_update or old_dd_hash != new_dd_hash:
-        memcache_inst.set('driverlog:update_hash', time.time())
+    calculate_update(memcached_inst, default_data,
+                     cfg.CONF.force_update or dd_update)
 
 
 if __name__ == '__main__':

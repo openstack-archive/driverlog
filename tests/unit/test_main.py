@@ -14,6 +14,8 @@
 # limitations under the License.
 
 import json
+import memcache
+import mock
 
 from driverlog.processor import main
 
@@ -101,3 +103,123 @@ class TestMain(testtools.TestCase):
         self.assertTrue('Grizzly' in driver['os_versions_map'],
                         'Grizzly should be copied from releases into '
                         'os_version_map')
+
+    def _make_test_memcached(self, storage=None):
+        storage = storage or {}
+
+        def _memcache_get(key):
+            return storage.get(key)
+
+        def _memcache_set(key, value):
+            storage[key] = value
+
+        memcached_inst = mock.Mock(memcache.Client)
+        memcached_inst.get.side_effect = _memcache_get
+        memcached_inst.set.side_effect = _memcache_set
+        return memcached_inst
+
+    def _patch_rcs(self, rcs_getter):
+        def _get_rcs(project_id, review_uri):
+            rcs_inst = mock.Mock()
+            if project_id == 'openstack/neutron':
+                rcs_inst.log.return_value = [self.review]
+            else:
+                rcs_inst.log.return_value = []
+            return rcs_inst
+
+        rcs_getter.side_effect = _get_rcs
+
+    @mock.patch('oslo.config.cfg.CONF')
+    @mock.patch('driverlog.processor.rcs.get_rcs')
+    def test_calculate_update(self, rcs_getter, conf):
+        memcached_inst = self._make_test_memcached()
+        self._patch_rcs(rcs_getter)
+
+        # run!
+        main.calculate_update(memcached_inst, self.default_data, False)
+
+        # verify
+        update = memcached_inst.get('driverlog:update')
+
+        driver_key = ('openstack/neutron', 'cisco', 'cisco nexus plugin')
+        self.assertIn(driver_key, update)
+        self.assertIn('master', update[driver_key]['os_versions_map'])
+        self.assertEqual('https://review.openstack.org/92468',
+                         (update[driver_key]['os_versions_map']['master']
+                          ['review_url']))
+
+    @mock.patch('oslo.config.cfg.CONF')
+    @mock.patch('driverlog.processor.rcs.get_rcs')
+    def test_calculate_update_existing_version_data(self, rcs_getter, conf):
+        # checks that existing data will be overwritten with update
+        # preserving data for other versions
+
+        memcached_inst = self._make_test_memcached({
+            'driverlog:update': {
+                ('openstack/neutron', 'cisco', 'cisco nexus plugin'): {
+                    'os_versions_map': {
+                        'master': {
+                            'comment': 'Build succeeded.',
+                            'timestamp': 1234567890,
+                            'review_url': 'https://review.openstack.org/11111'
+                        },
+                        'stable/havana': {
+                            'comment': 'Build succeeded.',
+                            'timestamp': 1234567890,
+                            'review_url': 'https://review.openstack.org/22222'
+                        }
+                    }}}})
+        self._patch_rcs(rcs_getter)
+
+        # run!
+        main.calculate_update(memcached_inst, self.default_data, False)
+
+        # verify
+        update = memcached_inst.get('driverlog:update')
+
+        driver_key = ('openstack/neutron', 'cisco', 'cisco nexus plugin')
+        self.assertIn(driver_key, update)
+        self.assertIn('master', update[driver_key]['os_versions_map'])
+        self.assertEqual('https://review.openstack.org/92468',
+                         (update[driver_key]['os_versions_map']['master']
+                          ['review_url']))
+
+        self.assertIn('stable/havana', update[driver_key]['os_versions_map'])
+        self.assertEqual('https://review.openstack.org/22222',
+                         (update[driver_key]['os_versions_map']
+                          ['stable/havana']['review_url']))
+
+    @mock.patch('oslo.config.cfg.CONF')
+    @mock.patch('driverlog.processor.rcs.get_rcs')
+    def test_calculate_update_insert_version_data(self, rcs_getter, conf):
+        # checks that existing data will be overwritten with update
+
+        memcached_inst = self._make_test_memcached({
+            'driverlog:update': {
+                ('openstack/neutron', 'cisco', 'cisco nexus plugin'): {
+                    'os_versions_map': {
+                        'stable/havana': {
+                            'comment': 'Build succeeded.',
+                            'timestamp': 1234567890,
+                            'review_url': 'https://review.openstack.org/22222'
+                        }
+                    }}}})
+        self._patch_rcs(rcs_getter)
+
+        # run!
+        main.calculate_update(memcached_inst, self.default_data, False)
+
+        # verify
+        update = memcached_inst.get('driverlog:update')
+
+        driver_key = ('openstack/neutron', 'cisco', 'cisco nexus plugin')
+        self.assertIn(driver_key, update)
+        self.assertIn('master', update[driver_key]['os_versions_map'])
+        self.assertEqual('https://review.openstack.org/92468',
+                         (update[driver_key]['os_versions_map']['master']
+                          ['review_url']))
+
+        self.assertIn('stable/havana', update[driver_key]['os_versions_map'])
+        self.assertEqual('https://review.openstack.org/22222',
+                         (update[driver_key]['os_versions_map']
+                          ['stable/havana']['review_url']))
