@@ -197,18 +197,24 @@ function show_summary(base_url) {
                     tableData[i].driver_info += "<div>" + tableData[i].description + "</div>";
                 }
 
-                tableData[i].in_trunk = "";
+                var releases_list = [];
                 for (var j = 0; j < tableData[i].releases_info.length; j++) {
-                    tableData[i].in_trunk += "<a href=\"" + tableData[i].releases_info[j].wiki + "\" target=\"_blank\">" +
-                            tableData[i].releases_info[j].name + "</a> ";
+                    releases_list.push("<a href=\"" + tableData[i].releases_info[j].wiki + "\" target=\"_blank\">" +
+                            tableData[i].releases_info[j].name + "</a>");
                 }
+                tableData[i].in_trunk = releases_list.join(" ");
 
                 tableData[i].ci_tested = "";
-                if (tableData[i].os_versions_map["master"]) {
-                    var master = tableData[i].os_versions_map["master"];
-                    if (master.review_url) {
-                        tableData[i].ci_tested = "<a href=\"" + master.review_url +
-                                "\" target=\"_blank\" title=\"Click for details\"><span style=\"color: #008000\">&#x2714;</span></a>";
+                if (tableData[i].ci) {
+                    if (tableData[i].releases_info.length > 0) {
+                        var last_release = tableData[i].releases_info[tableData[i].releases_info.length - 1].release_id;
+                        var master = tableData[i].releases[last_release];
+                        if (master.review_url) {
+                            tableData[i].ci_tested = "<a href=\"" + master.review_url +
+                                    "\" target=\"_blank\" title=\"Click for details\"><span style=\"color: #008000\">&#x2714;</span></a>";
+                        } else {
+                            tableData[i].ci_tested = "<span style=\"color: #808080\">&#x2714;</span>";
+                        }
                     } else {
                         tableData[i].ci_tested = "<span style=\"color: #808080\">&#x2714;</span>";
                     }
@@ -216,21 +222,22 @@ function show_summary(base_url) {
                     tableData[i].ci_tested = "<span style=\"color: darkred\">&#x2716;</span>";
                 }
 
-                tableData[i].maintainers_info = "";
+                var maintainers_list = [];
                 if (tableData[i].maintainers) {
                     for (j = 0; j < tableData[i].maintainers.length; j++) {
                         var maintainer = tableData[i].maintainers[j];
                         var mn = maintainer.name;
                         if (maintainer.launchpad_id) {
-                            tableData[i].maintainers_info = "<a href=\"http://stackalytics.com/?user_id=" +
-                                maintainer.launchpad_id + "\" target=\"_blank\">" + mn + "</a>";
+                            maintainers_list.push("<a href=\"http://stackalytics.com/?user_id=" +
+                                maintainer.launchpad_id + "\" target=\"_blank\">" + mn + "</a>");
                         }
                         else if (maintainer.irc) {
-                            tableData[i].maintainers_info = "<a href=\"irc:" + maintainer.irc + "\">" + mn + "</a>";
+                            maintainers_list.push("<a href=\"irc:" + maintainer.irc + "\">" + mn + "</a>");
                         } else {
-                            tableData[i].maintainers_info = mn;
+                            maintainers_list.push(mn);
                         }
                     }
+                    tableData[i].maintainers_info = maintainers_list.join(", ");
                 } else {
                     tableData[i].maintainers_info = "";
                 }

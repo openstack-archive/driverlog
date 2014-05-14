@@ -14,7 +14,6 @@
 # limitations under the License.
 
 import os
-import urllib
 
 import flask
 from flask.ext import gravatar as gravatar_ext
@@ -23,7 +22,6 @@ import six
 
 from driverlog.dashboard import api
 from driverlog.dashboard import decorators
-from driverlog.dashboard import vault
 from driverlog.openstack.common import log as logging
 from driverlog.processor import config
 
@@ -59,35 +57,6 @@ else:
 @decorators.templated()
 def summary():
     pass
-
-
-@app.route('/details')
-@decorators.templated()
-def details():
-
-    project_id = flask.request.args.get('project_id') or ''
-    vendor = flask.request.args.get('vendor') or ''
-    driver_name = flask.request.args.get('driver_name') or ''
-
-    drivers_map = vault.get_vault()['drivers_map']
-    key = (urllib.unquote_plus(project_id).lower(),
-           urllib.unquote_plus(vendor).lower(),
-           urllib.unquote_plus(driver_name).lower())
-    if key not in drivers_map:
-        flask.abort(404)
-
-    driver = drivers_map[key]
-    os_versions_list = []
-    for os_version, os_version_info in driver['os_versions_map'].iteritems():
-        os_version_info['os_version'] = os_version
-        os_versions_list.append(os_version_info)
-
-    sorted(os_versions_list, key=lambda x: x['os_version'])
-    driver['os_versions'] = os_versions_list
-
-    return {
-        'driver': driver,
-    }
 
 
 @app.errorhandler(404)

@@ -37,13 +37,14 @@ class TestCIConfigValidity(testtools.TestCase):
 
     def test_ci_config_matches_sample_review(self):
         def verify_single_driver(driver_name):
-            ci_ids_map = main.build_ci_map(self.default_data['drivers'])
-            records = list(main.process_reviews(
-                [self.review], ci_ids_map, 'openstack/neutron'))
-            records = [r for r in records
-                       if r.keys()[0][2] == driver_name.lower()]
-            self.assertEqual(1, len(records), '1 record is expected for '
-                                              'driver %s' % driver_name)
+            for driver in self.default_data['drivers']:
+                if driver['name'] == driver_name:
+                    result = main.find_ci_result([self.review], driver['ci'])
+                    self.assertIsNotNone(result, 'CI result should be found '
+                                                 'for driver %s' % driver_name)
+                    return
+
+            self.fail('No result parsed for driver %s' % driver_name)
 
         verify_single_driver('Cisco Nexus Plugin')
         verify_single_driver('Neutron ML2 Driver For Cisco Nexus Devices')

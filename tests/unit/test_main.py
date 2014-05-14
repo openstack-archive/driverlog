@@ -18,89 +18,78 @@ import memcache
 import mock
 
 from driverlog.processor import main
+from driverlog.processor import utils
 
 import testtools
+
+
+def _read_sample_review():
+    with open('tests/unit/test_data/sample_review.json') as fd:
+        return json.load(fd)
+
+
+def _read_sample_default_data():
+    with open('tests/unit/test_data/sample_default_data.json') as fd:
+        return json.load(fd)
 
 
 class TestMain(testtools.TestCase):
     def setUp(self):
         super(TestMain, self).setUp()
 
-        with open('tests/unit/test_data/sample_review.json') as fd:
-            self.review = json.load(fd)
-
-        with open('tests/unit/test_data/sample_default_data.json') as fd:
-            self.default_data = json.load(fd)
-
-    def test_build_ci_map(self):
-        ci_map = main.build_ci_map(self.default_data['drivers'])
-        self.assertTrue('arista-test' in ci_map)
-        self.assertEqual([{
-            'vendor': 'Arista',
-            'driver_name': 'Arista Neutron ML2 Driver'
-        }], ci_map['arista-test'])
-
     def test_process_reviews_ci_vote_and_comment(self):
         # check that vote and matching comment are found
 
-        ci_ids_map = main.build_ci_map(self.default_data['drivers'])
-        records = list(main.process_reviews(
-            [self.review], ci_ids_map, 'openstack/neutron'))
-        records = [r for r in records if r.keys()[0][1] == 'arista']
+        result = main.find_ci_result([_read_sample_review()],
+                                     {'id': 'arista-test'})
 
-        self.assertEqual(1, len(records), 'One record is expected')
+        self.assertIsNotNone(result, 'CI result should be found')
 
         expected_record = {
-            ('openstack/neutron', 'arista', 'arista neutron ml2 driver'): {
-                'os_versions_map': {
-                    'master': {
-                        'comment': 'Verified+1\n\n'
-                                   'Arista third party testing PASSED '
-                                   '[ https://arista.box.com/s/x8z0 ]',
-                        'timestamp': 1399478047,
-                        'review_url': 'https://review.openstack.org/92468',
-                    }
-                }
-            }
+            'ci_result': True,
+            'comment': 'Verified+1\n\nArista third party testing PASSED '
+                       '[ https://arista.box.com/s/x8z0 ]',
+            'timestamp': 1399478047,
+            'review_url': 'https://review.openstack.org/92468',
         }
-        self.assertEqual(expected_record, records[0])
+        self.assertEqual(expected_record, result)
 
     def test_process_reviews_ci_only_comments(self):
         # check that comment is found and parsed correctly
 
-        ci_ids_map = main.build_ci_map(self.default_data['drivers'])
-        records = list(main.process_reviews(
-            [self.review], ci_ids_map, 'openstack/neutron'))
-        records = [r for r in records if r.keys()[0][1] == 'cisco']
+        result = main.find_ci_result([_read_sample_review()], {
+            'id': 'cisco_neutron_ci',
+            'success_pattern': 'neutron_zuul \\S+ : SUCCESS',
+            'failure_pattern': 'neutron_zuul \\S+ : FAILURE',
+        })
 
-        self.assertEqual(2, len(records), '2 records are expected '
-                                          '(since there are 2 cisco entries)')
+        self.assertIsNotNone(result, 'CI result should be found')
 
         expected_record = {
-            (
-                'openstack/neutron', 'cisco',
-                'neutron ml2 driver for cisco nexus devices'
-            ): {
-                'os_versions_map': {
-                    'master': {
-                        'comment': 'Build succeeded.\n\n'
-                                   '- neutron_zuul http://128.107.233.28:8080/'
-                                   'job/neutron_zuul/263 : SUCCESS in 18m 52s',
-                        'timestamp': 1399481091,
-                        'review_url': 'https://review.openstack.org/92468',
-                    }
-                }
-            }
+            'ci_result': True,
+            'comment': 'Build succeeded.\n\n- neutron_zuul '
+                       'http://128.107.233.28:8080/job/neutron_zuul/263 : '
+                       'SUCCESS in 18m 52s',
+            'timestamp': 1399481091,
+            'review_url': 'https://review.openstack.org/92468',
         }
-        self.assertEqual(expected_record, records[0])
+        self.assertEqual(expected_record, result)
 
-    def test_tranform_default_data(self):
+    def test_transform_default_data(self):
         driver = {
-            "project_id": "openstack/neutron",
-            "releases": ["Grizzly", "Havana", "Icehouse"], }
+            'project_id': 'openstack/neutron',
+            'vendor': 'Cisco',
+            'name': 'Cisco Nexus Plugin',
+            'releases': ['Grizzly', 'Havana', 'Icehouse'], }
         dd = {'drivers': [driver]}
+
         main.transform_default_data(dd)
-        self.assertTrue('Grizzly' in driver['os_versions_map'],
+
+        self.assertIn(('openstack/neutron', 'Cisco', 'Cisco Nexus Plugin'),
+                      dd['drivers'].keys())
+        driver = dd['drivers'][
+            ('openstack/neutron', 'Cisco', 'Cisco Nexus Plugin')]
+        self.assertTrue('grizzly' in driver['releases'],
                         'Grizzly should be copied from releases into '
                         'os_version_map')
 
@@ -119,12 +108,15 @@ class TestMain(testtools.TestCase):
         return memcached_inst
 
     def _patch_rcs(self, rcs_getter):
-        def _get_rcs(project_id, review_uri):
+        def _patch_log(**kwargs):
+            if (kwargs['project'] == 'openstack/neutron' and
+                    kwargs['branch'] == 'master'):
+                return [_read_sample_review()]
+            return []
+
+        def _get_rcs(review_uri):
             rcs_inst = mock.Mock()
-            if project_id == 'openstack/neutron':
-                rcs_inst.log.return_value = [self.review]
-            else:
-                rcs_inst.log.return_value = []
+            rcs_inst.log.side_effect = _patch_log
             return rcs_inst
 
         rcs_getter.side_effect = _get_rcs
@@ -136,16 +128,16 @@ class TestMain(testtools.TestCase):
         self._patch_rcs(rcs_getter)
 
         # run!
-        main.calculate_update(memcached_inst, self.default_data, False)
+        main.process(memcached_inst, _read_sample_default_data(), False)
 
         # verify
-        update = memcached_inst.get('driverlog:update')
+        update = memcached_inst.get('driverlog:default_data')['drivers']
 
-        driver_key = ('openstack/neutron', 'cisco', 'cisco nexus plugin')
-        self.assertIn(driver_key, update)
-        self.assertIn('master', update[driver_key]['os_versions_map'])
+        driver_key = ('openstack/neutron', 'Cisco', 'Cisco Nexus Plugin')
+        self.assertIn(driver_key, update.keys())
+        self.assertIn('havana', update[driver_key]['releases'].keys())
         self.assertEqual('https://review.openstack.org/92468',
-                         (update[driver_key]['os_versions_map']['master']
+                         (update[driver_key]['releases']['juno']
                           ['review_url']))
 
     @mock.patch('oslo.config.cfg.CONF')
@@ -154,72 +146,45 @@ class TestMain(testtools.TestCase):
         # checks that existing data will be overwritten with update
         # preserving data for other versions
 
+        # put default data with some updates into memory storage
+        dd = _read_sample_default_data()
+        main.transform_default_data(dd)
+        key = ('openstack/neutron', 'Cisco', 'Cisco Nexus Plugin')
+        dd['drivers'][key]['releases'].update({
+            'juno': {
+                'comment': 'Build succeeded.',
+                'timestamp': 1234567890,
+                'review_url': 'https://review.openstack.org/11111'
+            },
+            'havana': {
+                'comment': 'Build succeeded.',
+                'timestamp': 1234567890,
+                'review_url': 'https://review.openstack.org/22222'
+            }})
+
+        # put hash from default data to emulate that file is not changed
+        default_data_from_file = _read_sample_default_data()
+
         memcached_inst = self._make_test_memcached({
-            'driverlog:update': {
-                ('openstack/neutron', 'cisco', 'cisco nexus plugin'): {
-                    'os_versions_map': {
-                        'master': {
-                            'comment': 'Build succeeded.',
-                            'timestamp': 1234567890,
-                            'review_url': 'https://review.openstack.org/11111'
-                        },
-                        'stable/havana': {
-                            'comment': 'Build succeeded.',
-                            'timestamp': 1234567890,
-                            'review_url': 'https://review.openstack.org/22222'
-                        }
-                    }}}})
+            'driverlog:default_data': dd,
+            'driverlog:default_data_hash': utils.calc_hash(
+                default_data_from_file)})
         self._patch_rcs(rcs_getter)
 
         # run!
-        main.calculate_update(memcached_inst, self.default_data, False)
+        main.process(memcached_inst, default_data_from_file, False)
 
         # verify
-        update = memcached_inst.get('driverlog:update')
+        update = memcached_inst.get('driverlog:default_data')['drivers']
 
-        driver_key = ('openstack/neutron', 'cisco', 'cisco nexus plugin')
-        self.assertIn(driver_key, update)
-        self.assertIn('master', update[driver_key]['os_versions_map'])
+        driver_key = ('openstack/neutron', 'Cisco', 'Cisco Nexus Plugin')
+        self.assertIn(driver_key, update.keys())
+        self.assertIn('juno', update[driver_key]['releases'])
         self.assertEqual('https://review.openstack.org/92468',
-                         (update[driver_key]['os_versions_map']['master']
+                         (update[driver_key]['releases']['juno']
                           ['review_url']))
 
-        self.assertIn('stable/havana', update[driver_key]['os_versions_map'])
+        self.assertIn('havana', update[driver_key]['releases'])
         self.assertEqual('https://review.openstack.org/22222',
-                         (update[driver_key]['os_versions_map']
-                          ['stable/havana']['review_url']))
-
-    @mock.patch('oslo.config.cfg.CONF')
-    @mock.patch('driverlog.processor.rcs.get_rcs')
-    def test_calculate_update_insert_version_data(self, rcs_getter, conf):
-        # checks that existing data will be overwritten with update
-
-        memcached_inst = self._make_test_memcached({
-            'driverlog:update': {
-                ('openstack/neutron', 'cisco', 'cisco nexus plugin'): {
-                    'os_versions_map': {
-                        'stable/havana': {
-                            'comment': 'Build succeeded.',
-                            'timestamp': 1234567890,
-                            'review_url': 'https://review.openstack.org/22222'
-                        }
-                    }}}})
-        self._patch_rcs(rcs_getter)
-
-        # run!
-        main.calculate_update(memcached_inst, self.default_data, False)
-
-        # verify
-        update = memcached_inst.get('driverlog:update')
-
-        driver_key = ('openstack/neutron', 'cisco', 'cisco nexus plugin')
-        self.assertIn(driver_key, update)
-        self.assertIn('master', update[driver_key]['os_versions_map'])
-        self.assertEqual('https://review.openstack.org/92468',
-                         (update[driver_key]['os_versions_map']['master']
-                          ['review_url']))
-
-        self.assertIn('stable/havana', update[driver_key]['os_versions_map'])
-        self.assertEqual('https://review.openstack.org/22222',
-                         (update[driver_key]['os_versions_map']
-                          ['stable/havana']['review_url']))
+                         (update[driver_key]['releases']
+                          ['havana']['review_url']))
