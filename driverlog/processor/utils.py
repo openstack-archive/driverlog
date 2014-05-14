@@ -15,6 +15,7 @@
 
 import cgi
 import datetime
+import hashlib
 import json
 import re
 import time
@@ -181,3 +182,9 @@ def copy_dict(source, include=None, exclude=None):
         exclude = exclude or []
         return dict([(k, v) for k, v in six.iteritems(source)
                      if k in include and k not in exclude])
+
+
+def calc_hash(data):
+    h = hashlib.new('sha1')
+    h.update(json.dumps(data))
+    return h.hexdigest()

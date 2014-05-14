@@ -204,8 +204,8 @@ function show_summary(base_url) {
                 }
 
                 tableData[i].ci_tested = "";
-                if (tableData[i].os_versions_map["master"]) {
-                    var master = tableData[i].os_versions_map["master"];
+                if (tableData[i].os_versions_map["juno"]) {
+                    var master = tableData[i].os_versions_map["juno"];
                     if (master.review_url) {
                         tableData[i].ci_tested = "<a href=\"" + master.review_url +
                                 "\" target=\"_blank\" title=\"Click for details\"><span style=\"color: #008000\">&#x2714;</span></a>";

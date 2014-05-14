@@ -17,6 +17,7 @@ import json
 import re
 
 import paramiko
+import six
 
 from driverlog.openstack.common import log as logging
 
@@ -25,12 +26,12 @@ LOG = logging.getLogger(__name__)
 
 DEFAULT_PORT = 29418
 GERRIT_URI_PREFIX = r'^gerrit:\/\/'
-PAGE_LIMIT = 100
+PAGE_LIMIT = 5
 
 
 class Rcs(object):
-    def __init__(self, project_id, uri):
-        self.project_id = project_id
+    def __init__(self, uri):
+        pass
 
     def setup(self, **kwargs):
         pass
@@ -43,8 +44,8 @@ class Rcs(object):
 
 
 class Gerrit(Rcs):
-    def __init__(self, project_id, uri):
-        super(Gerrit, self).__init__(project_id, uri)
+    def __init__(self, uri):
+        super(Gerrit, self).__init__(uri)
 
         stripped = re.sub(GERRIT_URI_PREFIX, '', uri)
         if stripped:
@@ -83,11 +84,14 @@ class Gerrit(Rcs):
             LOG.exception(e)
             return False
 
-    def _get_cmd(self, project_id, sort_key=None, limit=PAGE_LIMIT):
+    def _get_cmd(self, sort_key=None, limit=PAGE_LIMIT, **kwargs):
+        params = ' '.join([(k + ':\'' + v + '\'')
+                           for k, v in six.iteritems(kwargs)])
+
         cmd = ('gerrit query --format JSON '
-               'project:\'%(project_id)s\' limit:%(limit)s '
+               '%(params)s limit:%(limit)s '
                '--current-patch-set --comments ' %
-               {'project_id': project_id, 'limit': limit})
+               {'params': params, 'limit': limit})
         cmd += ' is:merged'
         if sort_key:
             cmd += ' resume_sortkey:%016x' % sort_key
@@ -102,11 +106,11 @@ class Gerrit(Rcs):
             LOG.exception(e)
             return False
 
-    def _poll_reviews(self, project_id, start_id=None, last_id=None):
+    def _poll_reviews(self, start_id=None, last_id=None, **kwargs):
         sort_key = start_id
 
         while True:
-            cmd = self._get_cmd(project_id, sort_key)
+            cmd = self._get_cmd(sort_key, **kwargs)
             LOG.debug('Executing command: %s', cmd)
             exec_result = self._exec_command(cmd)
             if not exec_result:
@@ -124,55 +128,27 @@ class Gerrit(Rcs):
                         break
 
                     proceed = True
-                    review['project_id'] = project_id
                     yield review
 
             if not proceed:
                 break
 
-    def log(self, last_id):
+    def log(self, **kwargs):
         if not self._connect():
             return
 
         # poll new merged reviews from the top down to last_id
-        LOG.debug('Poll new reviews for project: %s', self.project_id)
-        for review in self._poll_reviews(self.project_id, last_id=last_id):
+        for review in self._poll_reviews(**kwargs):
             yield review
 
         self.client.close()
 
-    def get_last_id(self):
-        if not self._connect():
-            return None
 
-        LOG.debug('Get last id for project: %s', self.project_id)
-
-        cmd = self._get_cmd(self.project_id, limit=1)
-        LOG.debug('Executing command: %s', cmd)
-        exec_result = self._exec_command(cmd)
-        if not exec_result:
-            return None
-        stdin, stdout, stderr = exec_result
-
-        last_id = None
-        for line in stdout:
-            review = json.loads(line)
-            if 'sortKey' in review:
-                last_id = int(review['sortKey'], 16)
-                break
-
-        self.client.close()
-
-        LOG.debug('Project %(project_id)s last id is %(id)s',
-                  {'project_id': self.project_id, 'id': last_id})
-        return last_id
-
-
-def get_rcs(project_id, uri):
+def get_rcs(uri):
     LOG.debug('Review control system is requested for uri %s' % uri)
     match = re.search(GERRIT_URI_PREFIX, uri)
     if match:
-        return Gerrit(project_id, uri)
+        return Gerrit(uri)
     else:
         LOG.warning('Unsupported review control system, fallback to dummy')
-        return Rcs(project_id, uri)
+        return Rcs(uri)

@@ -26,8 +26,7 @@
                 "type": "object",
                 "properties": {
                     "id": {
-                        "type": "string",
-                        "pattern": "^[a-z]+$"
+                        "$ref": "#/definitions/release_id"
                     },
                     "wiki": {
                         "type": "string"
@@ -65,8 +64,7 @@
                     "releases": {
                         "type": "array",
                         "items": {
-                            "type": "string",
-                            "pattern": "^[\\w]+$"
+                            "$ref": "#/definitions/release_id"
                         }
                     },
                     "ci": {
@@ -118,6 +116,10 @@
             },
             "required": ["id"],
             "additionalProperties": false
+        },
+        "release_id": {
+            "type": "string",
+            "pattern": "^[A-Z][a-z]+$"
         }
     }
 }

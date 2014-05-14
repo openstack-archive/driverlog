@@ -13,16 +13,11 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-import hashlib
-import json
-
-import collections
 import re
+import time
 
 import memcache
 from oslo.config import cfg
-from six.moves.urllib import parse
-import time
 
 from driverlog.openstack.common import log as logging
 from driverlog.processor import config
@@ -33,19 +28,10 @@ from driverlog.processor import utils
 LOG = logging.getLogger(__name__)
 
 
-def find_comment(review, ci):
-    patch_number = review['currentPatchSet']['number']
-
-    for comment in reversed(review.get('comments') or []):
-        prefix = 'Patch Set %s:' % patch_number
-        if ((comment['reviewer'].get('username') == ci) and
-                (comment['message'].find(prefix) == 0)):
-            return comment['message'][len(prefix):].strip()
-
-    return None
-
-
-def find_vote(review, ci_id):
+def _find_vote(review, ci_id):
+    """
+    Finds vote corresponding to ci_id
+    """
     for approval in (review['currentPatchSet'].get('approvals') or []):
         if approval['type'] not in ['Verified', 'VRIF']:
             continue
@@ -56,164 +42,138 @@ def find_vote(review, ci_id):
     return None
 
 
-def process_reviews(review_iterator, ci_ids_map, project_id):
-    branch_ci_set = set()
+def find_ci_result(review_iterator, ci):
+    """
+    For a given stream of reviews finds result left by specified ci
+    """
 
     for review in review_iterator:
         review_url = review['url']
-        branch = review['branch']
 
         for comment in reversed(review.get('comments') or []):
-            ci_id = comment['reviewer'].get('username')
-            if ci_id not in ci_ids_map:
+            if comment['reviewer'].get('username') != ci['id']:
                 continue
-
-            branch_ci = (branch, ci_id)
-            if branch_ci in branch_ci_set:
-                continue  # already seen, ignore
-
-            branch_ci_set.add(branch_ci)
 
             message = comment['message']
             prefix = 'Patch Set %s:' % review['currentPatchSet']['number']
             if comment['message'].find(prefix) != 0:
                 break  # all comments from the latest patch set passed
-
             message = message[len(prefix):].strip()
 
-            for one_ci in ci_ids_map[ci_id]:
-                result = None
+            result = None
 
-                # try to get result by parsing comment message
-                success_pattern = one_ci.get('success_pattern')
-                failure_pattern = one_ci.get('failure_pattern')
-                result = None
+            # try to get result by parsing comment message
+            success_pattern = ci.get('success_pattern')
+            failure_pattern = ci.get('failure_pattern')
 
-                if success_pattern and re.search(success_pattern, message):
-                    result = True
-                elif failure_pattern and re.search(failure_pattern, message):
-                    result = False
+            if success_pattern and re.search(success_pattern, message):
+                result = True
+            elif failure_pattern and re.search(failure_pattern, message):
+                result = False
 
-                # try to get result from vote
-                if result is None:
-                    result = find_vote(review, ci_id)
+            # try to get result from vote
+            if result is None:
+                result = _find_vote(review, ci['id'])
 
-                if result is not None:
-                    yield {
-                        (project_id,
-                         one_ci['vendor'].lower(),
-                         one_ci['driver_name'].lower()): {
-                             'os_versions_map': {
-                                 branch: {
-                                     'comment': message,
-                                     'timestamp': comment['timestamp'],
-                                     'review_url': review_url
-                                 }
-                             }
-                         }
-                    }
+            if result is not None:
+                return {
+                    'ci_result': result,
+                    'comment': message,
+                    'timestamp': comment['timestamp'],
+                    'review_url': review_url,
+                }
 
 
-def update_generator(memcached_inst, default_data, ci_ids_map,
-                     force_update=False):
-    for project in default_data['projects']:
-        project_id = project['id'].lower()
-        rcs_inst = rcs.get_rcs(project_id, cfg.CONF.review_uri)
-        rcs_inst.setup(key_filename=cfg.CONF.ssh_key_filename,
-                       username=cfg.CONF.ssh_username)
-
-        LOG.debug('Processing reviews for project: %s', project_id)
-
-        rcs_key = 'driverlog:rcs:' + parse.quote_plus(project_id)
-        last_id = None
-        if not force_update:
-            last_id = memcached_inst.get(rcs_key)
-
-        review_iterator = rcs_inst.log(last_id)
-        for item in process_reviews(review_iterator, ci_ids_map, project_id):
-            yield item
-
-        last_id = rcs_inst.get_last_id()
-        LOG.debug('RCS last id is: %s', last_id)
-        memcached_inst.set(rcs_key, last_id)
+def _get_release_by_branch(releases, branch):
+    """
+    Translates branch name into release_id
+    """
+    release = branch.lower()
+    if release.find('/') > 0:
+        return release.split('/')[1]
+    elif release == 'master':
+        return releases[-1]['id'].lower()
 
 
-def _get_hash(data):
-    h = hashlib.new('sha1')
-    h.update(json.dumps(data))
-    return h.hexdigest()
+def update_drivers(drivers, releases):
+    """
+    Iterates all drivers and searches for results produced by their CIs
+    Returns True if info was updated
+    """
+    branches = [('stable/' + r['id'].lower()) for r in releases] + ['master']
 
+    rcs_inst = rcs.get_rcs(cfg.CONF.review_uri)
+    rcs_inst.setup(key_filename=cfg.CONF.ssh_key_filename,
+                   username=cfg.CONF.ssh_username)
 
-def build_ci_map(drivers):
-    ci_map = collections.defaultdict(list)
-    for driver in drivers:
-        if 'ci' in driver:
-            value = {
-                'vendor': driver['vendor'],
-                'driver_name': driver['name'],
-            }
-            ci = driver['ci']
-            if 'success_pattern' in ci:
-                value['success_pattern'] = ci['success_pattern']
-            if 'failure_pattern' in ci:
-                value['failure_pattern'] = ci['failure_pattern']
+    has_updates = False
 
-            ci_map[ci['id']].append(value)
-    return ci_map
+    for driver in drivers.values():
+        if 'ci' not in driver:
+            continue
+
+        project_id = driver['project_id']
+        ci_id = driver['ci']['id']
+
+        for branch in branches:
+            LOG.debug('Searching reviews for project: %(project_id)s, branch: '
+                      '%(branch)s, ci_id: %(ci_id)s',
+                      {'project_id': project_id, 'branch': branch,
+                       'ci_id': ci_id})
+
+            review_iterator = rcs_inst.log(project=project_id, branch=branch,
+                                           reviewer=ci_id)
+            ci_result = find_ci_result(review_iterator, driver['ci'])
+            if ci_result:
+                LOG.debug('Found CI result: %s', ci_result)
+                has_updates = True
+
+                key = (project_id, driver['vendor'], driver['name'])
+                os_version = _get_release_by_branch(releases, branch)
+                drivers[key]['os_versions_map'][os_version] = ci_result
+
+    return has_updates
 
 
 def transform_default_data(default_data):
+    transformed_drivers = {}
+
     for driver in default_data['drivers']:
         driver['os_versions_map'] = {}
         if 'releases' in driver:
             for release in driver['releases']:
-                driver['os_versions_map'][release] = {
-                    'success': True,
-                    'comment': 'self-tested verification'
+                driver['os_versions_map'][release.lower()] = {
+                    'ci_tested': False,
                 }
+            del driver['releases']
+
+        key = (driver['project_id'], driver['vendor'], driver['name'])
+        transformed_drivers[key] = driver
+
+    default_data['drivers'] = transformed_drivers
 
 
-def store_default_data(default_data, memcached_inst):
-    transform_default_data(default_data)
-    memcached_inst.set('driverlog:default_data', default_data)
+def process(memcached_inst, default_data, force_update):
 
     old_dd_hash = memcached_inst.get('driverlog:default_data_hash')
-    new_dd_hash = _get_hash(default_data)
-    memcached_inst.set('driverlog:default_data_hash', new_dd_hash)
+    new_dd_hash = utils.calc_hash(default_data)
 
-    return new_dd_hash != old_dd_hash
+    need_update = False
 
-
-def calculate_update(memcached_inst, default_data, force_update):
-
-    update = {}
-    if not force_update:
-        update = memcached_inst.get('driverlog:update') or {}
-
-    ci_ids_map = build_ci_map(default_data['drivers'])
-    need_update = force_update
-
-    for record in update_generator(memcached_inst, default_data, ci_ids_map,
-                                   force_update=force_update):
-        LOG.info('Got new record from Gerrit: %s', record)
+    if (new_dd_hash != old_dd_hash) or force_update:
+        transform_default_data(default_data)
         need_update = True
+    else:
+        default_data = memcached_inst.get('driverlog:default_data')
 
-        key = record.keys()[0]
-        if key not in update:
-            update.update(record)
-        else:
-            os_version = record[key]['os_versions_map'].keys()[0]
-            info = record[key]['os_versions_map'].values()[0]
-            if os_version in update[key]['os_versions_map']:
-                update[key]['os_versions_map'][os_version].update(info)
-            else:
-                update[key]['os_versions_map'][os_version] = info
-
-    # write update into memcache
-    memcached_inst.set('driverlog:update', update)
+    need_update |= update_drivers(default_data['drivers'],
+                                  default_data['releases'])
 
     if need_update:
-        memcached_inst.set('driverlog:update_hash', time.time())
+        # write default data into memcache
+        memcached_inst.set('driverlog:default_data', default_data)
+        memcached_inst.set('driverlog:default_data_hash', new_dd_hash)
+        memcached_inst.set('driverlog:update_time', time.time())
 
 
 def main():
@@ -239,10 +199,7 @@ def main():
         LOG.critical('Unable to load default data')
         return not 0
 
-    dd_update = store_default_data(default_data, memcached_inst)
-
-    calculate_update(memcached_inst, default_data,
-                     cfg.CONF.force_update or dd_update)
+    process(memcached_inst, default_data, cfg.CONF.force_update)
 
 
 if __name__ == '__main__':

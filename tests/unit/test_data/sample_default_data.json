@@ -15,15 +15,15 @@
     ],
     "releases": [
         {
-            "id": "havana",
+            "id": "Havana",
             "wiki": "https://wiki.openstack.org/wiki/ReleaseNotes/Havana"
         },
         {
-            "id": "icehouse",
+            "id": "Icehouse",
             "wiki": "https://wiki.openstack.org/wiki/ReleaseNotes/Icehouse"
         },
         {
-            "id": "juno",
+            "id": "Juno",
             "wiki": "https://wiki.openstack.org/wiki/Releases"
         }
     ],

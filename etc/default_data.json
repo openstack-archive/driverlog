@@ -23,43 +23,43 @@
     ],
     "releases": [
         {
-            "id": "austin",
+            "id": "Austin",
             "wiki": "https://wiki.openstack.org/wiki/ReleaseNotes/Austin"
         },
         {
-            "id": "bexar",
+            "id": "Bexar",
             "wiki": "https://wiki.openstack.org/wiki/ReleaseNotes/Bexar"
         },
         {
-            "id": "cactus",
+            "id": "Cactus",
             "wiki": "https://wiki.openstack.org/wiki/ReleaseNotes/Cactus"
         },
         {
-            "id": "diablo",
+            "id": "Diablo",
             "wiki": "https://wiki.openstack.org/wiki/ReleaseNotes/Diablo"
         },
         {
-            "id": "essex",
+            "id": "Essex",
             "wiki": "https://wiki.openstack.org/wiki/ReleaseNotes/Essex"
         },
         {
-            "id": "folsom",
+            "id": "Folsom",
             "wiki": "https://wiki.openstack.org/wiki/ReleaseNotes/Folsom"
         },
         {
-            "id": "grizzly",
+            "id": "Grizzly",
             "wiki": "https://wiki.openstack.org/wiki/ReleaseNotes/Grizzly"
         },
         {
-            "id": "havana",
+            "id": "Havana",
             "wiki": "https://wiki.openstack.org/wiki/ReleaseNotes/Havana"
         },
         {
-            "id": "icehouse",
+            "id": "Icehouse",
             "wiki": "https://wiki.openstack.org/wiki/ReleaseNotes/Icehouse"
         },
         {
-            "id": "juno",
+            "id": "Juno",
             "wiki": "https://wiki.openstack.org/wiki/Releases"
         }
     ],
