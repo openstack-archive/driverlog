@@ -77,3 +77,20 @@ class TestConfigFiles(testtools.TestCase):
             comparator=_compare_drivers,
             msg='List of drivers should be ordered by project_id, vendor '
                 'and name')
+
+    def test_release_reference_validity(self):
+        dd = self._read_file('etc/default_data.json')
+        release_ids = set([r['id'] for r in dd['releases']])
+
+        for driver in dd['drivers']:
+            for release_id in (driver.get('releases') or []):
+                self.assertTrue(release_id in release_ids,
+                                'Wrong release id: %s' % release_id)
+
+    def test_project_reference_validity(self):
+        dd = self._read_file('etc/default_data.json')
+        project_ids = set([p['id'] for p in dd['projects']])
+
+        for driver in dd['drivers']:
+            self.assertTrue(driver['project_id'] in project_ids,
+                            'Wrong project id: %s' % driver['project_id'])
