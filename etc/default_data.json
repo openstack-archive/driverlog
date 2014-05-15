@@ -171,7 +171,8 @@
             "maintainers": [
                 {
                     "name": "Xing Yang",
-                    "email": "xing.yang@emc.com"
+                    "email": "xing.yang@emc.com",
+                    "launchpad_id": "xing-yang"
                 }
             ],
             "wiki": "http://docs.openstack.org/trunk/config-reference/content/emc-smis-driver.html",
@@ -185,7 +186,8 @@
             "maintainers": [
                 {
                     "name": "Xing Yang",
-                    "email": "xing.yang@emc.com"
+                    "email": "xing.yang@emc.com",
+                    "launchpad_id": "xing-yang"
                 }
             ],
             "wiki": "http://docs.openstack.org/trunk/config-reference/content/emc-smis-driver.html",
@@ -199,7 +201,8 @@
             "maintainers": [
                 {
                     "name": "Xing Yang",
-                    "email": "xing.yang@emc.com"
+                    "email": "xing.yang@emc.com",
+                    "launchpad_id": "xing-yang"
                 }
             ],
             "wiki": "http://docs.openstack.org/trunk/config-reference/content/emc-vnx-direct-driver.html",
@@ -213,7 +216,8 @@
             "maintainers": [
                 {
                     "name": "Eric Harney",
-                    "email": "eharney@redhat.com"
+                    "email": "eharney@redhat.com",
+                    "launchpad_id": "eharney"
                 }
             ],
             "wiki": "http://docs.openstack.org/trunk/config-reference/content/GlusterFS-driver.html",
@@ -336,7 +340,7 @@
             "description": "The IBM NAS Driver works using NFS protocol, and implements other value added features. It allows support for IBM SONAS and Storwize V7000 Unified filers to host storage for OpenStack environment.",
             "maintainers": [
                 {
-                    "name": "IBM",
+                    "name": "IBM team",
                     "email": "openstack_storage_drivers@il.ibm.com"
                 }
             ],
@@ -380,7 +384,8 @@
                 {
                     "name": "Ben Swartzlander",
                     "irc": "bswartz",
-                    "email": "bswartz@netapp.com"
+                    "email": "bswartz@netapp.com",
+                    "launchpad_id": "bswartz"
                 }
             ],
             "wiki": "http://docs.openstack.org/trunk/config-reference/content/netapp-volume-driver.html",
@@ -394,7 +399,8 @@
             "maintainers": [
                 {
                     "name": "Mikhail Khodos",
-                    "email": "mikhail.khodos@nexenta.com"
+                    "email": "mikhail.khodos@nexenta.com",
+                    "launchpad_id": "hodosmb"
                 }
             ],
             "wiki": "http://docs.openstack.org/trunk/config-reference/content/nexenta-driver.html",
@@ -448,7 +454,8 @@
             "maintainers": [
                 {
                     "name": "Jean-Marc Saffroy",
-                    "email": "jean.marc.saffroy@scality.com"
+                    "email": "jean.marc.saffroy@scality.com",
+                    "launchpad_id": "jean-marc-saffroy"
                 }
             ],
             "releases": ["Grizzly", "Havana", "Icehouse"]
@@ -461,7 +468,8 @@
             "maintainers": [
                 {
                     "name": "John Griffith",
-                    "email": "john.griffith@solidfire.com"
+                    "email": "john.griffith@solidfire.com",
+                    "launchpad_id": "john-griffith"
                 }
             ],
             "wiki": "http://docs.openstack.org/trunk/config-reference/content/solidfire-volume-driver.html",
@@ -475,7 +483,8 @@
             "maintainers": [
                 {
                     "name": "Vipin Balachandran",
-                    "email": "vbala@vmware.com"
+                    "email": "vbala@vmware.com",
+                    "launchpad_id": "vbala"
                 }
             ],
             "wiki": "http://docs.openstack.org/trunk/config-reference/content/vmware-vmdk-driver.html",
@@ -489,7 +498,8 @@
             "maintainers": [
                 {
                     "name": "Vladimir Popovski",
-                    "email": "vladimir@zadarastorage.com"
+                    "email": "vladimir@zadarastorage.com",
+                    "launchpad_id": "vladimir.p"
                 }
             ],
             "wiki": "http://docs.openstack.org/trunk/config-reference/content/zadara-volume-driver.html",
@@ -522,7 +532,7 @@
                 }
             ],
             "wiki": "https://wiki.openstack.org/wiki/Arista-neutron-ml2-driver",
-            "releases": ["Havana", "Icehouse", "Juno"],
+            "releases": ["Havana", "Icehouse"],
             "ci": {
                 "id": "arista-test"
             }
@@ -536,7 +546,8 @@
                 {
                     "name": "Kevin Benton",
                     "irc": "kevinbenton",
-                    "email": "kevin.benton@bigswitch.com"
+                    "email": "kevin.benton@bigswitch.com",
+                    "launchpad_id": "kevinbenton"
                 }
             ],
             "wiki": "http://docs.openstack.org/trunk/config-reference/content/networking-plugin-ml2_bigswitch.html",
@@ -556,7 +567,8 @@
                 {
                     "name": "Kevin Benton",
                     "irc": "kevinbenton",
-                    "email": "kevin.benton@bigswitch.com"
+                    "email": "kevin.benton@bigswitch.com",
+                    "launchpad_id": "kevinbenton"
                 }
             ],
             "wiki": "http://www.openflowhub.org/display/floodlightcontroller/OpenStack",
@@ -679,7 +691,8 @@
                 {
                     "name": "Ivar Lazzaro",
                     "irc": "ivar-lazzaro",
-                    "email": "ivar@embrane.com"
+                    "email": "ivar@embrane.com",
+                    "launchpad_id": "mmaleckk"
                 }
             ],
             "wiki": "https://wiki.openstack.org/wiki/Neutron/EmbraneNeutronPlugin",
@@ -698,7 +711,8 @@
                 {
                     "name": "Ivar Lazzaro",
                     "irc": "ivar-lazzaro",
-                    "email": "ivar@embrane.com"
+                    "email": "ivar@embrane.com",
+                    "launchpad_id": "mmaleckk"
                 }
             ],
             "releases": ["Icehouse"],
@@ -745,7 +759,8 @@
                 {
                     "name": "Irena Berezovsky",
                     "irc": "irenab",
-                    "email": "irenab@mellanox.com"
+                    "email": "irenab@mellanox.com",
+                    "launchpad_id": "irenab"
                 }
             ],
             "wiki": "https://wiki.openstack.org/wiki/Mellanox-Neutron",
@@ -764,11 +779,13 @@
             "maintainers": [
                 {
                     "name": "Irena Berezovsky",
-                    "irc": "irenab"
+                    "irc": "irenab",
+                    "email": "irenab@mellanox.com",
+                    "launchpad_id": "irenab"
                 }
             ],
             "wiki": "https://wiki.openstack.org/wiki/Mellanox-Neutron-ML2",
-            "releases": ["Icehouse", "Juno"],
+            "releases": ["Icehouse"],
             "ci": {
                 "id": "mellanox",
                 "success_pattern": "Check-MLNX-Neutron-ML2-driver \\S+ : SUCCESS",
@@ -801,7 +818,8 @@
                 {
                     "name": "Akihiro Motoki",
                     "irc": "amotoki",
-                    "email": "nec-openstack-ci@iaas.jp.nec.com"
+                    "email": "nec-openstack-ci@iaas.jp.nec.com",
+                    "launchpad_id": "amotoki"
                 }
             ],
             "wiki": "https://wiki.openstack.org/wiki/Neutron/NEC_OpenFlow_Plugin",
@@ -820,7 +838,8 @@
                 {
                     "name": "Ronak Shah",
                     "email": "nuage-ci@nuagenetworks.net",
-                    "irc": "rms_13"
+                    "irc": "rms_13",
+                    "launchpad_id": "ronak-malav-shah"
                 }
             ],
             "wiki": "http://docs.openstack.org/trunk/config-reference/content/networking-plugin-nuage.html",
@@ -883,7 +902,8 @@
                 {
                     "name": "NTT Team",
                     "irc": "nati_ueno",
-                    "email": "nachi@ntti3.com"
+                    "email": "nachi@ntti3.com",
+                    "launchpad_id": "nati-ueno"
                 }
             ],
             "wiki": "http://docs.openstack.org/trunk/config-reference/content/networking-plugin-meta.html"
@@ -897,7 +917,8 @@
                 {
                     "name": "Nachi Ueno",
                     "irc": "nati_ueno",
-                    "email": "nachi@ntti3.com"
+                    "email": "nachi@ntti3.com",
+                    "launchpad_id": "nati-ueno"
                 }
             ],
             "wiki": "https://github.com/osrg/ryu/wiki/configuration_openstack_havana_with_ryu",
@@ -945,10 +966,11 @@
                 {
                     "name": "Luke Gorrie",
                     "irc": "lukego",
-                    "email": "luke@tail-f.com"
+                    "email": "luke@tail-f.com",
+                    "launchpad_id": "lukego"
                 }
             ],
-            "releases": ["Havana", "Icehouse", "Juno"],
+            "releases": ["Havana", "Icehouse"],
             "wiki": "https://wiki.openstack.org/wiki/Neutron/ML2/Tail-f-NCS-neutron-ml2-driver",
             "ci": {
                 "id": "tailfncs",
@@ -1027,7 +1049,8 @@
             "maintainers": [
                 {
                     "name": "Tiago Rodrigues de Mello",
-                    "email": "tmello@linux.vnet.ibm.com"
+                    "email": "tmello@linux.vnet.ibm.com",
+                    "launchpad_id": "timello"
                 }
             ],
             "wiki": "http://docs.openstack.org/trunk/config-reference/content/powervm.html",
@@ -1067,7 +1090,8 @@
             "maintainers": [
                 {
                     "name": "Ironic Team",
-                    "email": "devananda@hp.com"
+                    "email": "devananda@hp.com",
+                    "launchpad_id": "devananda"
                 }
             ],
             "description": "OpenStack Bare Metal Provisioning Program",
@@ -1158,7 +1182,8 @@
                 {
                     "name": "Tracy Jones",
                     "email": "tjones@vmware.com",
-                    "irc": "tjones"
+                    "irc": "tjones",
+                    "launchpad_id": "tjones-i"
                 },
                 {
                     "name": "Gary Kotton",
