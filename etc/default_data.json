@@ -582,7 +582,9 @@
             "wiki": "https://wiki.openstack.org/wiki/Brocade-neutron-plugin",
             "releases": ["Folsom", "Grizzly", "Havana", "Icehouse"],
             "ci": {
-                "id": "bci"
+                "id": "bci",
+                "success_pattern": "Brocade ML2: SUCCESS",
+                "failure_pattern": "Brocade ML2: FAIL"
             }
         },
         {
@@ -600,7 +602,9 @@
             "wiki": "https://wiki.openstack.org/wiki/Brocade-ML2-Mechanism",
             "releases": ["Icehouse"],
             "ci": {
-                "id": "bci"
+                "id": "bci",
+                "success_pattern": "Brocade ML2: SUCCESS",
+                "failure_pattern": "Brocade ML2: FAIL"
             }
         },
         {
@@ -680,7 +684,9 @@
             ],
             "wiki": "https://wiki.openstack.org/wiki/Neutron/EmbraneNeutronPlugin",
             "ci": {
-                "id": "eci"
+                "id": "eci",
+                "success_pattern": "Build Successful",
+                "failure_pattern": "Build Failed"
             }
         },
         {
@@ -698,7 +704,9 @@
             "releases": ["Icehouse"],
             "wiki": "https://wiki.openstack.org/wiki/Neutron/LBaaS/EmbraneDriver",
             "ci": {
-                "id": "eci"
+                "id": "eci",
+                "success_pattern": "Build Successful",
+                "failure_pattern": "Build Failed"
             }
         },
         {
@@ -817,7 +825,9 @@
             ],
             "wiki": "http://docs.openstack.org/trunk/config-reference/content/networking-plugin-nuage.html",
             "ci": {
-                "id": "nuage-ci"
+                "id": "nuage-ci",
+                "success_pattern": "SUCCESS",
+                "failure_pattern": "FAIL"
             }
         },
         {
@@ -827,7 +837,9 @@
             "description": "One Convergence Neutron plugin provides Neutron APIs for the network virtualization solution implemented with One Convergence Network Virtualization and Services Delivery(NVSD) Controller.",
             "wiki": "https://github.com/openstack/neutron/tree/master/neutron/plugins/oneconvergence",
             "ci": {
-                "id": "oneconvergence"
+                "id": "oneconvergence",
+                "success_pattern": "success",
+                "failure_pattern": "fail"
             }
         },
         {
@@ -844,7 +856,9 @@
             ],
             "wiki": "http://openstack.redhat.com/OpenDaylight_integration",
             "ci": {
-                "id": "odl-jenkins"
+                "id": "odl-jenkins",
+                "success_pattern": "success",
+                "failure_pattern": "fail"
             }
         },
         {
@@ -937,7 +951,9 @@
             "releases": ["Havana", "Icehouse", "Juno"],
             "wiki": "https://wiki.openstack.org/wiki/Neutron/ML2/Tail-f-NCS-neutron-ml2-driver",
             "ci": {
-                "id": "tailfncs"
+                "id": "tailfncs",
+                "success_pattern": "Successful",
+                "failure_pattern": "Failed"
             }
         },
         {
@@ -973,7 +989,9 @@
             ],
             "wiki": "https://wiki.openstack.org/wiki/Neutron/vArmour-Firewall",
             "ci": {
-                "id": "varmourci"
+                "id": "varmourci",
+                "success_pattern": "Successful",
+                "failure_pattern": "Failed"
             }
         },
         {
@@ -995,7 +1013,9 @@
             ],
             "wiki": "http://wiki.cloudbase.it/hyperv-tempest-exclusions",
             "ci": {
-                "id": "hyper-v-ci"
+                "id": "hyper-v-ci",
+                "success_pattern": "Successful",
+                "failure_pattern": "Failed"
             },
             "releases": ["Folsom", "Grizzly", "Havana", "Icehouse"]
         },
@@ -1129,7 +1149,9 @@
             "description": "OpenStack Compute supports the VMware vSphere product family. The VMware vCenter driver enables the nova-compute service to communicate with a VMware vCenter server that manages one or more ESX host clusters.",
             "wiki": "http://docs.openstack.org/trunk/config-reference/content/vmware.html",
             "ci": {
-                "id": "vmwareminesweeper"
+                "id": "vmwareminesweeper",
+                "success_pattern": "success",
+                "failure_pattern": "fail"
             },
             "releases": ["Grizzly", "Havana", "Icehouse"],
             "maintainers": [
