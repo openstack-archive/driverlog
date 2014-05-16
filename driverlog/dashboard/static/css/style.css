@@ -27,7 +27,7 @@ div.page {
     margin: 0 auto;
 }
 
-div.page h2 {
+h2 {
     font-family: 'PT Sans Narrow', 'Arial Narrow', arial, sans-serif;
     font-size: 23px;
     font-weight: normal;
@@ -37,10 +37,23 @@ div.page h2 {
     text-shadow: 1px 1px 0 #fff;
 }
 
-div.page h3 {
+h3 {
     font-family: 'PT Sans Narrow', 'Arial Narrow', arial, sans-serif;
-    font-size: 18px;
+    font-size: 19px;
+    font-weight: normal;
+    font-style: normal;
     margin-bottom: 10px;
+    color: #a41200;
+}
+
+h4 {
+    font-family: 'PT Sans Narrow', 'Arial Narrow', arial, sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    font-style: normal;
+    margin-top: 0.1em;
+    margin-bottom: 0.5em;
+    color: #a41200;
 }
 
 input[type="text"],
@@ -177,7 +190,7 @@ div#right_list_wrapper {
 }
 
 .record {
-    margin-bottom: 1em;
+    margin-bottom: 0.5em;
 }
 
 .record .header {
@@ -187,26 +200,6 @@ div#right_list_wrapper {
 .record .message {
     white-space: pre-wrap;
 }
-
-/*a[href^="https://blueprints"]:after {*/
-    /*content: "↗";*/
-    /*opacity: 0.3;*/
-/*}*/
-
-/*a[href^="https://review"]:after {*/
-    /*content: "↗";*/
-    /*opacity: 0.3;*/
-/*}*/
-
-/*a[href^="https://bugs"]:after {*/
-    /*content: "↗";*/
-    /*opacity: 0.3;*/
-/*}*/
-
-/*a[href^="https://launchpad"]:after {*/
-    /*content: "↗";*/
-    /*opacity: 0.3;*/
-/*}*/
 
 a[target]:not([target='']):after {
     content: "↗";
@@ -407,4 +400,8 @@ body .ui-tooltip {
 .not-specified {
     font-style: italic;
     color: #909090;
+}
+
+.capitalize:first-letter {
+    text-transform: uppercase;
 }

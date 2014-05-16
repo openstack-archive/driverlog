@@ -169,6 +169,61 @@ function init_selectors(base_url) {
 
 }
 
+function show_driver_info(driver) {
+    $("#driver_info_container").empty();
+    $("#driver_info_template").tmpl(driver).appendTo("#driver_info_container");
+
+    var table = $("#driver_info_releases_table");
+    table.dataTable({
+        "bInfo": false,
+        "bPaginate": false,
+        "bAutoWidth": false,
+        "bSearchable": false,
+        "bFilter": false,
+        "aaSorting": [[ 0, "desc" ]],
+        "aoColumnDefs": [
+            { "sClass": "center", "aTargets": [1] }
+        ]
+    });
+
+    table.find(".timeago").each(function () {
+        var message = $.timeago(new Date(this.title * 1000));
+        $(this).text(message);
+    });
+
+    $("#driver_info_container").find(".gravatar").each(function () {
+        var email = this.title;
+        if (!email) {
+            email = "driverlog";
+        }
+        $(this).append($.gravatar(email, {"image": "wavatar", "rating": "g", "size": 64}))
+    });
+
+    $("#driver_info_dialog").dialog("open");
+}
+
+function setup_driver_info_handler(table_id, element_id, driver) {
+    $("#driver_info_dialog").dialog({
+        autoOpen: false,
+        width: "70%",
+        modal: true,
+        buttons: {
+            Close: function () {
+                $(this).dialog("close");
+            }
+        },
+        close: function () {
+        }
+    });
+
+    $("#" + table_id).on("click", "#" + element_id, function (event) {
+        event.preventDefault();
+        event.stopPropagation();
+
+        show_driver_info(driver);
+    });
+}
+
 function show_summary(base_url) {
     var table_column_names = ["project_name", "vendor", "driver_info", "in_trunk", "ci_tested", "maintainers_info"];
     var table_id = "data_table";
@@ -193,9 +248,13 @@ function show_summary(base_url) {
                     tableData[i].driver_info = tableData[i].name;
                 }
                 tableData[i].driver_info = "<div>" + tableData[i].driver_info + "</div>";
+
                 if (tableData[i].description) {
-                    tableData[i].driver_info += "<div>" + tableData[i].description + "</div>";
+                    tableData[i].driver_info += "<div>" + tableData[i].description +
+                        " <a href=\"#\" title=\"Show driver details\"><span id=\"driver_" + i + "\" class=\"icon-info\" style=\"color: AAAAAA;\"></span></a>" + "</div>";
                 }
+
+                setup_driver_info_handler(table_id, "driver_" + i, tableData[i]);
 
                 var releases_list = [];
                 for (var j = 0; j < tableData[i].releases_info.length; j++) {
