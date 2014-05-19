@@ -331,7 +331,7 @@
                 }
             ],
             "wiki": "http://docs.openstack.org/trunk/config-reference/content/GPFS-driver.html",
-            "releases": ["Folsom", "Grizzly", "Havana", "Icehouse"]
+            "releases": ["Havana", "Icehouse"]
         },
         {
             "project_id": "openstack/cinder",
