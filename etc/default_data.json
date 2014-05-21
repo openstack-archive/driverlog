@@ -359,7 +359,7 @@
                 }
             ],
             "wiki": "http://docs.openstack.org/trunk/config-reference/content/ibm-storwize-svc-driver.html",
-            "releases": ["Icehouse"]
+            "releases": ["Folsom", "Grizzly", "Havana", "Icehouse"]
         },
         {
             "project_id": "openstack/cinder",
