@@ -986,10 +986,10 @@
             "wiki": "http://docs.openstack.org/admin-guide-cloud/content/nsx_plugin.html",
             "maintainers": [
                 {
-                    "name": "Armando Migliaccio",
-                    "irc": "armax",
-                    "email": "amigliaccio@vmware.com",
-                    "launchpad_id": "armando-migliaccio"
+                    "name": "Aaron Rosen",
+                    "irc": "arosen",
+                    "email": "aaronorosen@gmail.com",
+                    "launchpad_id": "arosen"
                 }
             ],
             "releases": ["Essex", "Folsom", "Grizzly", "Havana", "Icehouse"],
