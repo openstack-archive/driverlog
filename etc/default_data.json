@@ -959,6 +959,38 @@
         },
         {
             "project_id": "openstack/neutron",
+            "vendor": "Radware",
+            "name": "Radware LBaaS Driver for Alteon",
+            "description": "Radware LBaaS Driver provides load balancing as a service based on Alteon, enabling on demand provisioning of load balancing capacity, overlay network agnostic, overlay gateway bypass, high availability, tenant isolation and SLA guarantee",
+            "maintainers": [
+                {
+                    "name": "Avishay Balderman",
+                    "irc": "avishayb",
+                    "email": "avishayb@radware.com",
+                    "launchpad_id": "avishayb"
+
+                },
+                {
+                    "name": "Evgeny Fedoruk",
+                    "irc": " evgenyf",
+                    "email": "evgenyf@radware.com",
+                    "launchpad_id": "evgenyf"
+                },
+                {
+                    "name": "Samuel Bercovici",
+                    "irc": " samuelbercovici",
+                    "email": "samuelb@radware.com",
+                    "launchpad_id": "samuelb"
+                }
+            ],
+            "releases": ["Havana", "Icehouse"],
+            "wiki": "https://wiki.openstack.org/wiki/Neutron/LBaaS/RadwareAlteon",
+            "ci": {
+               "id": "radware3rdpartytesting"
+            }
+        },
+        {
+            "project_id": "openstack/neutron",
             "vendor": "Tail-f",
             "name": "Tail-f NCS ML2 Mechanism Driver",
             "description": "The Tail-f NCS Mechanism Driver allows OpenStack to drive the Tail-f Network Control System (NCS) so that NCS can provision a multi-vendor network in response to Neutron configuration changes.",
