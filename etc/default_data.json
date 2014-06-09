@@ -896,6 +896,20 @@
         {
             "project_id": "openstack/neutron",
             "vendor": "OpenStack Community",
+            "name": "Modular Layer 2 Plugin",
+            "description": "The ML2 plug-in is a core plug-in working as part of the OpenStack Neutron Virtual Network Service",
+            "maintainers": [
+                {
+                    "name": "Neutron Team",
+                    "irc": "rkukura",
+                    "email": "kukura@noironetworks.com"
+                }
+            ],
+            "wiki": "http://docs.openstack.org/trunk/config-reference/content/networking-options-plugins-ml2.html"
+        },
+        {
+            "project_id": "openstack/neutron",
+            "vendor": "OpenStack Community",
             "name": "Meta Plugin",
             "description": "The Meta Plug-in allows you to use multiple plug-ins at the same time.",
             "maintainers": [
