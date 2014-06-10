@@ -813,16 +813,17 @@
             "project_id": "openstack/neutron",
             "vendor": "NEC",
             "name": "NEC OpenFlow Plugin",
-            "description": "NEC OpenFlow plugin talks to OpenFlow Controller and each Neutron would be mapped to an virtual layer-2 network slice on an OpenFlow enabled network. The interface between the Neutron plugin and OpenFlow Controller is RESTful API. This API is supported by two implementations:Tream Sliceable Switch (OSS) and NEC ProgrammableFlow Controller (NEC Commercial Product).",
+            "description": "NEC OpenFlow plugin talks to OpenFlow Controller and each Neutron would be mapped to an virtual layer-2 network slice on an OpenFlow enabled network. Trema Sliceable Switch (Open Source Implementation) and NEC ProgrammableFlow Controller are supported.",
             "maintainers": [
                 {
                     "name": "Akihiro Motoki",
                     "irc": "amotoki",
-                    "email": "nec-openstack-ci@iaas.jp.nec.com",
+                    "email": "motoki@da.jp.nec.com",
                     "launchpad_id": "amotoki"
                 }
             ],
             "wiki": "https://wiki.openstack.org/wiki/Neutron/NEC_OpenFlow_Plugin",
+            "releases": ["Folsom", "Grizzly", "Havana", "Icehouse"],
             "ci": {
                 "id": "nec-openstack-ci",
                 "success_pattern": "Build succeed",
