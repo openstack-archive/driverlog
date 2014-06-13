@@ -512,9 +512,9 @@
             "description": "A10 Network Driver is specifically designed to manage Thunder Series Appliances.",
             "maintainers": [
                 {
-                    "name": "Micheal Thompson",
-                    "irc": "layer427expert",
-                    "email": "mthompson@a10networks.com"
+                    "name": "Doug Wiegley",
+                    "irc": "dougwig",
+                    "email": "dougw@a10networks.com"
                 }
             ],
             "wiki": "https://wiki.openstack.org/wiki/Neutron/LBaaS/A10Networks"
