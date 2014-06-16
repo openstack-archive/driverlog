@@ -1091,6 +1091,21 @@
         {
             "project_id": "openstack/nova",
             "vendor": "IBM",
+            "name": "PowerKVM",
+            "description": "IBM® PowerKVM™ provides an open virtualization choice for IBM scale-out Linux systems based on the POWER8™ technology. This solution includes the Linux open source technology of KVM virtualization, and is designed to complement the performance, scalability and security qualities of Linux.",
+            "maintainers": [
+                {
+                    "name": "Kurt Taylor",
+                    "email": "krtaylor@us.ibm.com",
+                    "launchpad_id": "krtaylor"
+                }
+            ],
+            "wiki": "http://www.ibm.com/systems/power/software/linux/powerkvm",
+            "releases": ["Icehouse"]
+        },
+        {
+            "project_id": "openstack/nova",
+            "vendor": "IBM",
             "name": "PowerVM",
             "description": "Removed from Nova during Icehouse, PowerVM compute driver connects to an Integrated Virtualization Manager (IVM) to perform PowerVM Logical Partition (LPAR) deployment and management.",
             "maintainers": [
