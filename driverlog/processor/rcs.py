@@ -39,8 +39,8 @@ class Rcs(object):
     def log(self, last_id):
         return []
 
-    def get_last_id(self):
-        return -1
+    def close(self):
+        pass
 
 
 class Gerrit(Rcs):
@@ -70,12 +70,14 @@ class Gerrit(Rcs):
         else:
             self.username = None
 
+        return self._connect()
+
     def _connect(self):
         try:
             self.client.connect(self.hostname, port=self.port,
                                 key_filename=self.key_filename,
                                 username=self.username)
-            LOG.debug('Successfully connected to Gerrit')
+            LOG.debug('Successfully connected to gerrit')
             return True
         except Exception as e:
             LOG.error('Failed to connect to gerrit %(host)s:%(port)s. '
@@ -106,8 +108,8 @@ class Gerrit(Rcs):
             LOG.exception(e)
             return False
 
-    def _poll_reviews(self, start_id=None, last_id=None, **kwargs):
-        sort_key = start_id
+    def log(self, **kwargs):
+        sort_key = None
 
         while True:
             cmd = self._get_cmd(sort_key, **kwargs)
@@ -123,24 +125,13 @@ class Gerrit(Rcs):
 
                 if 'sortKey' in review:
                     sort_key = int(review['sortKey'], 16)
-                    if sort_key <= last_id:
-                        proceed = False
-                        break
-
                     proceed = True
                     yield review
 
             if not proceed:
                 break
 
-    def log(self, **kwargs):
-        if not self._connect():
-            return
-
-        # poll new merged reviews from the top down to last_id
-        for review in self._poll_reviews(**kwargs):
-            yield review
-
+    def close(self):
         self.client.close()
 
 

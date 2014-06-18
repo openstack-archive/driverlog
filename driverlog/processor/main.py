@@ -133,6 +133,8 @@ def update_drivers(drivers, releases):
                 ci_result['ci_tested'] = True
                 drivers[key]['releases'][os_version] = ci_result
 
+    rcs_inst.close()
+
     return has_updates
 
 
