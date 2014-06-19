@@ -42,26 +42,6 @@ def exception_handler():
     return decorator
 
 
-def templated(template=None, return_code=200):
-    def decorator(f):
-        @functools.wraps(f)
-        def templated_decorated_function(*args, **kwargs):
-
-            template_name = template
-            if template_name is None:
-                template_name = (flask.request.endpoint.replace('.', '/') +
-                                 '.html')
-            ctx = f(*args, **kwargs)
-            if ctx is None:
-                ctx = {}
-
-            return flask.render_template(template_name, **ctx), return_code
-
-        return templated_decorated_function
-
-    return decorator
-
-
 def jsonify(root='data'):
     def decorator(func):
         @functools.wraps(func)

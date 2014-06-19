@@ -15,12 +15,8 @@
 
 import datetime
 
-from flask.ext import gravatar as gravatar_ext
-
 
 INFINITY_HTML = '&#x221E;'
-
-gravatar = gravatar_ext.Gravatar(None, size=64, rating='g', default='wavatar')
 
 
 def format_datetime(timestamp):
