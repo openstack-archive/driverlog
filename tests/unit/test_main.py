@@ -40,8 +40,8 @@ class TestMain(testtools.TestCase):
     def test_process_reviews_ci_vote_and_comment(self):
         # check that vote and matching comment are found
 
-        result = main.find_ci_result([_read_sample_review()],
-                                     {'id': 'arista-test'})
+        result = next(main.find_ci_result([_read_sample_review()],
+                                          {'id': 'arista-test'}), None)
 
         self.assertIsNotNone(result, 'CI result should be found')
 
@@ -57,11 +57,11 @@ class TestMain(testtools.TestCase):
     def test_process_reviews_ci_only_comments(self):
         # check that comment is found and parsed correctly
 
-        result = main.find_ci_result([_read_sample_review()], {
+        result = next(main.find_ci_result([_read_sample_review()], {
             'id': 'cisco_neutron_ci',
             'success_pattern': 'neutron_zuul \\S+ : SUCCESS',
             'failure_pattern': 'neutron_zuul \\S+ : FAILURE',
-        })
+        }), None)
 
         self.assertIsNotNone(result, 'CI result should be found')
 
@@ -108,9 +108,9 @@ class TestMain(testtools.TestCase):
         return memcached_inst
 
     def _patch_rcs(self, rcs_getter):
-        def _patch_log(**kwargs):
-            if (kwargs['project'] == 'openstack/neutron' and
-                    kwargs['branch'] == 'master'):
+        def _patch_log(params):
+            if (params['project'] == 'openstack/neutron' and
+                    params['branch'] == 'master'):
                 return [_read_sample_review()]
             return []
 

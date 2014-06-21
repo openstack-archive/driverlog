@@ -42,7 +42,7 @@ def _find_vote(review, ci_id):
     return None
 
 
-def find_ci_result(review_iterator, ci):
+def find_ci_result(review_iterator, ci, last_patch_only=False):
     """
     For a given stream of reviews finds result left by specified ci
     """
@@ -56,7 +56,7 @@ def find_ci_result(review_iterator, ci):
 
             message = comment['message']
             prefix = 'Patch Set %s:' % review['currentPatchSet']['number']
-            if comment['message'].find(prefix) != 0:
+            if (comment['message'].find(prefix) != 0) and last_patch_only:
                 break  # all comments from the latest patch set passed
             message = message[len(prefix):].strip()
 
@@ -76,7 +76,7 @@ def find_ci_result(review_iterator, ci):
                 result = _find_vote(review, ci['id'])
 
             if result is not None:
-                return {
+                yield {
                     'ci_result': result,
                     'comment': message,
                     'timestamp': comment['timestamp'],
@@ -101,6 +101,7 @@ def update_drivers(drivers, releases):
     Returns True if info was updated
     """
     branches = [('stable/' + r['id'].lower()) for r in releases] + ['master']
+    branches = ['master']
 
     rcs_inst = rcs.get_rcs(cfg.CONF.review_uri)
     rcs_inst.setup(key_filename=cfg.CONF.ssh_key_filename,
@@ -121,17 +122,55 @@ def update_drivers(drivers, releases):
                       {'project_id': project_id, 'branch': branch,
                        'ci_id': ci_id})
 
-            review_iterator = rcs_inst.log(project=project_id, branch=branch,
-                                           reviewer=ci_id)
-            ci_result = find_ci_result(review_iterator, driver['ci'])
-            if ci_result:
-                LOG.debug('Found CI result: %s', ci_result)
+            key = (project_id, driver['vendor'], driver['name'])
+
+            # find the latest result in merged patches
+            review_iterator = rcs_inst.log({
+                'project': project_id, 'branch': branch, 'reviewer': ci_id,
+                'is': 'merged'})
+
+            last_merged_result = next(find_ci_result(
+                review_iterator, driver['ci'], True), None)
+
+            if last_merged_result:
+                LOG.debug('Found merged run of CI "%s": %s', ci_id,
+                          last_merged_result)
                 has_updates = True
 
-                key = (project_id, driver['vendor'], driver['name'])
                 os_version = _get_release_by_branch(releases, branch)
-                ci_result['ci_tested'] = True
-                drivers[key]['releases'][os_version] = ci_result
+                last_merged_result['ci_tested'] = True
+                drivers[key]['releases'][os_version] = last_merged_result
+
+            # get all CI execution results for last week
+            review_iterator = rcs_inst.log({
+                'project': project_id, 'branch': branch, 'reviewer': ci_id,
+                'NOT age': '1day', 'limit': 50})
+
+            total_runs = 0
+            total_success_runs = 0
+            last_run = {}
+            last_run_timestamp = None
+
+            for one_result in find_ci_result(review_iterator, driver['ci']):
+                if (last_run_timestamp and
+                        last_run_timestamp < one_result['timestamp']):
+                    last_run_timestamp = one_result['timestamp']
+                    last_run = one_result
+                total_runs += 1
+                if one_result['ci_result']:
+                    total_success_runs += 1
+
+            if total_runs > 0:
+                ci_result = {
+                    'total_runs': total_runs,
+                    'total_success_runs': total_success_runs,
+                    'last_run': last_run,
+                    'last_merged_run': last_merged_result
+                }
+
+                LOG.debug('Adding ci results for branch %(branch)s: %(res)s',
+                          {'branch': branch, 'res': ci_result})
+                drivers[key]['branches'][branch] = ci_result
 
     rcs_inst.close()
 
@@ -149,6 +188,7 @@ def transform_default_data(default_data):
                     'ci_tested': False,
                 }
         driver['releases'] = transformed_releases
+        driver['branches'] = {}
 
         key = (driver['project_id'], driver['vendor'], driver['name'])
         transformed_drivers[key] = driver

@@ -36,7 +36,7 @@ class Rcs(object):
     def setup(self, **kwargs):
         pass
 
-    def log(self, last_id):
+    def log(self, params):
         return []
 
     def close(self):
@@ -86,15 +86,15 @@ class Gerrit(Rcs):
             LOG.exception(e)
             return False
 
-    def _get_cmd(self, sort_key=None, limit=PAGE_LIMIT, **kwargs):
-        params = ' '.join([(k + ':\'' + v + '\'')
-                           for k, v in six.iteritems(kwargs)])
+    def _get_cmd(self, params, sort_key=None):
+        params['limit'] = params.get('limit', PAGE_LIMIT)
+        params_str = ' '.join([('%s:\'%s\'' % (k, v))
+                               for k, v in six.iteritems(params)])
 
         cmd = ('gerrit query --format JSON '
-               '%(params)s limit:%(limit)s '
-               '--current-patch-set --comments ' %
-               {'params': params, 'limit': limit})
-        cmd += ' is:merged'
+               '%(params)s '
+               '--current-patch-set --patch-sets --comments ' %
+               {'params': params_str})
         if sort_key:
             cmd += ' resume_sortkey:%016x' % sort_key
         return cmd
@@ -108,11 +108,11 @@ class Gerrit(Rcs):
             LOG.exception(e)
             return False
 
-    def log(self, **kwargs):
+    def log(self, params):
         sort_key = None
 
         while True:
-            cmd = self._get_cmd(sort_key, **kwargs)
+            cmd = self._get_cmd(params, sort_key=sort_key)
             LOG.debug('Executing command: %s', cmd)
             exec_result = self._exec_command(cmd)
             if not exec_result:
