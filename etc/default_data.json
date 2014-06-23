@@ -841,7 +841,13 @@
                     "email": "nuage-ci@nuagenetworks.net",
                     "irc": "rms_13",
                     "launchpad_id": "ronak-malav-shah"
-                }
+                },
+                {
+                    "name": "Franck Yelles",
+                    "email": "franck.yelles@nuagenetworks.net",
+                    "irc": "lyxus",
+                    "launchpad_id": "franck110"
+                }                
             ],
             "wiki": "http://docs.openstack.org/trunk/config-reference/content/networking-plugin-nuage.html",
             "ci": {
