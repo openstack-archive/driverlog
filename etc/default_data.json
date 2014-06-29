@@ -634,8 +634,8 @@
             "releases": ["Havana", "Icehouse"],
             "ci": {
                 "id": "cisco_neutron_ci",
-                "success_pattern": "neutron_zuul \\S+ : SUCCESS",
-                "failure_pattern": "neutron_zuul \\S+ : FAILURE"
+                "success_pattern": "ml2_nexus \\S+ : SUCCESS",
+                "failure_pattern": "ml2_nexus \\S+ : FAILURE"
             }
         },
         {
