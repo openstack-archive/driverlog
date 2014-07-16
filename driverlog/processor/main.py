@@ -29,9 +29,7 @@ LOG = logging.getLogger(__name__)
 
 
 def _find_vote(review, ci_id):
-    """
-    Finds vote corresponding to ci_id
-    """
+    """Finds vote corresponding to ci_id."""
     for approval in (review['currentPatchSet'].get('approvals') or []):
         if approval['type'] not in ['Verified', 'VRIF']:
             continue
@@ -43,9 +41,7 @@ def _find_vote(review, ci_id):
 
 
 def find_ci_result(review_iterator, ci):
-    """
-    For a given stream of reviews finds result left by specified ci
-    """
+    """For a given stream of reviews finds result left by specified ci."""
 
     for review in review_iterator:
         review_url = review['url']
@@ -85,9 +81,7 @@ def find_ci_result(review_iterator, ci):
 
 
 def _get_release_by_branch(releases, branch):
-    """
-    Translates branch name into release_id
-    """
+    """Translates branch name into release_id."""
     release = branch.lower()
     if release.find('/') > 0:
         return release.split('/')[1]
@@ -96,8 +90,8 @@ def _get_release_by_branch(releases, branch):
 
 
 def update_drivers(drivers, releases):
-    """
-    Iterates all drivers and searches for results produced by their CIs
+    """Iterates all drivers and searches for results produced by their CIs.
+
     Returns True if info was updated
     """
     branches = [('stable/' + r['id'].lower()) for r in releases] + ['master']

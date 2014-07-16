@@ -14,12 +14,12 @@
 # limitations under the License.
 
 import json
-import memcache
-import mock
 
 from driverlog.processor import main
 from driverlog.processor import utils
 
+import memcache
+import mock
 import testtools
 
 
