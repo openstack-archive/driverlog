@@ -964,8 +964,8 @@
         {
             "project_id": "openstack/neutron",
             "vendor": "PLUMgrid",
-            "name": "PLUMgrid Plugin",
-            "description": "The PLUMgrid plugin supports Neutron Core V2 APIs over an infrastructure running PLUMgrid Network Virtualization Platform.",
+            "name": "PLUMgrid OpenStack Networking Suite Neutron Plugin",
+            "description": "PLUMgrid Neutron Plugin enables PLUMgrid OpenStack Networking Suite, which is a secure, comprehensive and open software solution that delivers terabits of performance and scales across tens of thousands of workloads. The product suite provides highly automated workflows that significantly reduce the deployment time of OpenStack clouds, enables users to create private Virtual Domains™ for their projects and is compatible with the leading OpenStack distributions.",
             "maintainers": [
                 {
                     "name": "Fawad Khaliq",
