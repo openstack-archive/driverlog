@@ -927,7 +927,13 @@
                     "launchpad_id": "nati-ueno"
                 }
             ],
-            "wiki": "http://docs.openstack.org/trunk/config-reference/content/networking-plugin-meta.html"
+            "releases": ["Folsom", "Grizzly", "Havana", "Icehouse"],
+            "wiki": "http://docs.openstack.org/trunk/config-reference/content/networking-plugin-meta.html",
+            "ci": {
+                "id": "metaplugintest",
+                "success_pattern": "Build Successful",
+                "failure_pattern": "Build Failed"
+            }
         },
         {
             "project_id": "openstack/neutron",
