@@ -448,6 +448,21 @@
         },
         {
             "project_id": "openstack/cinder",
+            "vendor": "ProphetStor",
+            "name": "ProphetStor DPL drivers",
+            "description": "ProphetStor DPL Storage Server enables x86 commodity hardware as enterprise-grade storage systems. ProphetStor can serve as a storage node for the OpenStack and its virtual servers through iSCSI and Fibre protocols.",
+            "maintainers": [
+                {
+                    "name": "Rick Chen",
+                    "email": "rick.chen@prophetstor.com",
+                    "launchpad_id": "Rick"
+                }
+            ],
+            "wiki": "http://docs.openstack.org/trunk/config-reference/content/prophetstor-dpl-driver.html",
+            "releases": ["Juno"]
+        },
+        {
+            "project_id": "openstack/cinder",
             "vendor": "Scality",
             "name": "Scality SOFS driver",
             "description": "The driver manages volumes on the Scality SOFS filesystem. This gives OpenStack users the option of storing their data on a Scality Ring object storage cluster.",
