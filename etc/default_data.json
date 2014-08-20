@@ -636,6 +636,24 @@
         },
         {
             "project_id": "openstack/neutron",
+            "vendor": "Brocade",
+            "name": "Brocade Vyatta",
+            "description": "CI for Brocade Vyatta vRouter Plugins",
+            "maintainers": [
+                {
+                    "name": "Karthik Natarajan",
+                    "email": "DL-GRP-VYATTA-OSS@Brocade.com"
+                }
+            ],
+            "releases": ["Juno"],
+            "ci": {
+                "id": "brocade-oss-service",
+                "success_pattern": "brocade_ci_oss \\S+ : SUCCESS",
+                "failure_pattern": "brocade_ci_oss \\S+ : FAIL"
+            }
+        },
+        {
+            "project_id": "openstack/neutron",
             "vendor": "Cisco",
             "name": "Neutron ML2 Driver For Cisco Nexus Devices",
             "description": "The Cisco Nexus ML2 Mechanism Driver implements the ML2 Plugin Mechanism Driver API. This driver manages multiple types of Cisco Nexus switches.",
