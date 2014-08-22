@@ -523,7 +523,7 @@
         {
             "project_id": "openstack/neutron",
             "vendor": "A10 Networks",
-            "name": "A10 Networks LBaaS Driver for Thunder Series",
+            "name": "A10 Networks LBaaS Driver",
             "description": "A10 Network Driver is specifically designed to manage Thunder Series Appliances.",
             "maintainers": [
                 {
@@ -532,7 +532,12 @@
                     "email": "dougw@a10networks.com"
                 }
             ],
-            "wiki": "https://wiki.openstack.org/wiki/Neutron/LBaaS/A10Networks"
+            "wiki": "https://wiki.openstack.org/wiki/Neutron/LBaaS/A10Networks",
+
+            "releases": ["Juno"],
+            "ci": {
+                "id": "a10networks-ci"
+            }
         },
         {
             "project_id": "openstack/neutron",
