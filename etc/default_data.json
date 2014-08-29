@@ -1,4 +1,4 @@
-{
+﻿{
     "projects": [
         {
             "id": "openstack/cinder",
@@ -100,6 +100,7 @@
             ],
             "description": "The Xen Storage Manager volume driver (xensm) is a XenAPI hypervisor specific volume driver, and can be used to provide basic storage functionality, including volume creation and destruction, on a number of different storage back-ends.",
             "wiki": "http://docs.openstack.org/trunk/config-reference/content/xensm.html"
+            "releases": [
         },
         {
             "project_id": "openstack/cinder",
@@ -114,6 +115,7 @@
                 }
             ],
             "wiki": "http://docs.openstack.org/trunk/config-reference/content/xenapinfs.html"
+            "releases": ["Grizzly"]
         },
         {
             "project_id": "openstack/cinder",
@@ -144,6 +146,7 @@
                 {
                     "name": "Alyseo team",
                     "email": "openstack@alyseo.com"
+                    "launchpad_id": "yacine-b"
                 }
             ],
             "wiki": "http://docs.openstack.org/trunk/config-reference/content/coraid_aoe_driver_configuration.html",
@@ -158,6 +161,7 @@
                 {
                     "name": "Arkady Kanevsky",
                     "email": "arkady_kanevsky@dell.com"
+                    "launchpad_id": "arkady-kanevsky"
                 }
             ],
             "wiki": "http://docs.openstack.org/trunk/config-reference/content/dell-equallogic-driver.html",
@@ -292,14 +296,17 @@
                 {
                     "name": "Seiji Aguchi",
                     "email": "seiji.aguchi.tr@hitachi.com"
+                    "launchpad_id": "seiji-aguchi"
                 },
                 {
                     "name": "Steven Sonnenberg",
                     "email": "steven.sonnenberg@hds.com"
+                    "launchpad_id": "steven-sonnenberg"
                 },
                 {
                     "name": "Lakhinder Walia",
                     "email": "lakhinder.walia@hds.com"
+                    "launchpad_id": "lakhindr"
                 }
             ],
             "wiki": "http://docs.openstack.org/trunk/config-reference/content/hds-volume-driver.html",
@@ -314,6 +321,7 @@
                 {
                     "name": "Zhang Chao",
                     "email": "zhangchao010@huawei.com"
+                    "launchpad_id": "zhangchao010"
                 }
             ],
             "wiki": "http://docs.openstack.org/trunk/config-reference/content/huawei-storage-driver.html",
@@ -415,6 +423,7 @@
                 {
                     "name": "Cinder Team",
                     "email": "john.griffith@solidfire.com"
+                    "launchpad_id": "john-griffith"
                 }
             ],
             "wiki": "http://docs.openstack.org/trunk/config-reference/content/lvm-volume-driver.html",
@@ -424,11 +433,12 @@
             "project_id": "openstack/cinder",
             "vendor": "OpenStack Community",
             "name": "NFS",
-            "description": "No description provided.",
+            "description": "The Network File System (NFS) is a distributed file system protocol. An NFS server exports one or more of its file systems, known as shares. An NFS client can mount these exported shares on its own file system. File actions on this mounted remote file system can be performed as if the file system were local.",
             "maintainers": [
                 {
                     "name": "Cinder Team",
                     "email": "john.griffith@solidfire.com"
+                    "launchpad_id": "john-griffith"
                 }
             ],
             "wiki": "http://docs.openstack.org/trunk/config-reference/content/NFS-driver.html"
@@ -442,6 +452,7 @@
                 {
                     "name": "Cinder Team",
                     "email": "john.griffith@solidfire.com"
+                    "launchpad_id": "john-griffith"
                 }
             ],
             "wiki": "http://docs.openstack.org/trunk/config-reference/content/sheepdog-driver.html"
@@ -530,6 +541,7 @@
                     "name": "Doug Wiegley",
                     "irc": "dougwig",
                     "email": "dougw@a10networks.com"
+                    "launchpad_id": "dougwig"
                 }
             ],
             "wiki": "https://wiki.openstack.org/wiki/Neutron/LBaaS/A10Networks",
@@ -549,6 +561,7 @@
                     "name": "Sukhdev Kapur",
                     "irc": "Sukhdev",
                     "email": "sukhdev@arista.com"
+                    "launchpad_id": "sukhdev-8"
                 }
             ],
             "wiki": "https://wiki.openstack.org/wiki/Arista-neutron-ml2-driver",
@@ -609,6 +622,7 @@
                     "name": "Shiv Haris",
                     "email": "sharis@brocade.com",
                     "irc": "shivharis"
+                    "launchpad_id": "shh"
                 }
             ],
             "wiki": "https://wiki.openstack.org/wiki/Brocade-neutron-plugin",
@@ -629,6 +643,7 @@
                     "name": "Shiv Haris",
                     "email": "sharis@brocade.com",
                     "irc": "shivharis"
+                    "launchpad_id": "shh"
                 }
             ],
             "wiki": "https://wiki.openstack.org/wiki/Brocade-ML2-Mechanism",
@@ -648,6 +663,7 @@
                 {
                     "name": "Karthik Natarajan",
                     "email": "dl-grp-vyatta-oss@brocade.com"
+                    "launchpad_id": "natarajk"
                 }
             ],
             "releases": ["Juno"],
@@ -666,6 +682,7 @@
                 {
                     "name": "Dane Leblanc",
                     "email": "leblancd@cisco.com"
+                    "launchpad_id": "leblancd"
                 }
             ],
             "wiki": "https://wiki.openstack.org/wiki/Neutron/ML2/MechCiscoNexus",
@@ -685,6 +702,7 @@
                 {
                     "name": "Dane Leblanc",
                     "email": "leblancd@cisco.com"
+                    "launchpad_id": "leblancd"
                 }
             ],
             "wiki": "https://wiki.openstack.org/wiki/Cisco-neutron",
@@ -777,6 +795,7 @@
                 {
                     "name": "Mohammad Banikazemi",
                     "email": "mb@us.ibm.com"
+                    "launchpad_id": "mb-s"
                 }
             ],
             "wiki": "http://docs.openstack.org/trunk/config-reference/content/networking-plugin-linuxbridge_agent.html"
@@ -916,6 +935,7 @@
                     "name": "OpenDaylight Team",
                     "irc": "mestery",
                     "email": "mestery@mestery.com"
+                    "launchpad_id": "mestery"
                 }
             ],
             "wiki": "http://openstack.redhat.com/OpenDaylight_integration",
@@ -948,6 +968,7 @@
                     "name": "Neutron Team",
                     "irc": "rkukura",
                     "email": "kukura@noironetworks.com"
+                    "launchpad_id": "rkukura"
                 }
             ],
             "wiki": "http://docs.openstack.org/trunk/config-reference/content/networking-options-plugins-ml2.html"
@@ -1001,6 +1022,7 @@
                     "name": "Neutron Team",
                     "irc": "mestery",
                     "email": "mestery@mestery.com"
+                    "launchpad_id": "mestery"
                 }
             ],
             "wiki": "http://docs.openstack.org/trunk/config-reference/content/networking-plugin-openvswitch_agent.html"
@@ -1015,6 +1037,7 @@
                     "name": "Fawad Khaliq",
                     "irc": "fawadkhaliq",
                     "email": "fawad@plumgrid.com"
+                    "launchpad_id": "fawadkhaliq"
                 }
             ],
             "wiki": "https://wiki.openstack.org/wiki/PLUMgrid-Neutron",
@@ -1025,7 +1048,7 @@
         {
             "project_id": "openstack/neutron",
             "vendor": "Radware",
-            "name": "Radware LBaaS Driver for Alteon",
+            "name": "Radware LBaaS Driver for Alteon.",
             "description": "Radware LBaaS Driver provides load balancing as a service based on Alteon, enabling on demand provisioning of load balancing capacity, overlay network agnostic, overlay gateway bypass, high availability, tenant isolation and SLA guarantee",
             "maintainers": [
                 {
@@ -1104,6 +1127,7 @@
                     "name": "Gary Duan",
                     "email": "openstack-ci-test@varmour.com",
                     "irc": "garyduan"
+                    "launchpad_id": "gduan"
                 }
             ],
             "wiki": "https://wiki.openstack.org/wiki/Neutron/vArmour-Firewall",
@@ -1177,6 +1201,7 @@
                 {
                     "name": "Nova Team",
                     "email": "mikal@stillhq.com"
+                    "launchpad_id": 
                 }
             ],
             "wiki": "http://docs.openstack.org/trunk/config-reference/content/baremetal.html"
@@ -1190,6 +1215,7 @@
                 {
                     "name": "Nova Team",
                     "email": "mikal@stillhq.com"
+                    "launchpad_id": "milakstill"
                 }
             ],
             "wiki": "http://docs.openstack.org/trunk/config-reference/content/docker.html",
@@ -1206,7 +1232,7 @@
                     "launchpad_id": "devananda"
                 }
             ],
-            "description": "OpenStack Bare Metal Provisioning Program",
+            "description": "OpenStack Bare Metal Provisioning Program.",
             "wiki": "https://wiki.openstack.org/wiki/Ironic"
         },
         {
@@ -1218,6 +1244,7 @@
                 {
                     "name": "Nova Team",
                     "email": "mikal@stillhq.com"
+                    "launchpad_id": "milakstill"
                 }
             ],
             "wiki": "http://docs.openstack.org/trunk/config-reference/content/kvm.html"
@@ -1231,6 +1258,7 @@
                 {
                     "name": "Nova Team",
                     "email": "mikal@stillhq.com"
+                    "launchpad_id": "milakstill"
                 }
             ],
             "wiki": "http://docs.openstack.org/trunk/config-reference/content/lxc.html"
@@ -1244,6 +1272,7 @@
                 {
                     "name": "Nova Team",
                     "email": "mikal@stillhq.com"
+                    "launchpad_id": "milakstill"
                 }
             ],
             "wiki": "http://docs.openstack.org/trunk/config-reference/content/qemu.html"
@@ -1257,6 +1286,7 @@
                 {
                     "name": "Nova Team",
                     "email": "mikal@stillhq.com"
+                    "launchpad_id": "milakstill"
                 }
             ],
             "wiki": "http://docs.openstack.org/trunk/config-reference/content/introduction-to-xen.html",
@@ -1269,11 +1299,12 @@
             "project_id": "openstack/nova",
             "vendor": "OpenStack Community",
             "name": "Xen+Libvirt",
-            "description": "Support for the Xen hypervisor when used with libvirt",
+            "description": "Support for the Xen hypervisor when used with libvirt.",
             "maintainers": [
                 {
                     "name": "Nova Team",
                     "email": "mikal@stillhq.com"
+                    "launchpad_id": "milakstill"
                 }
             ],
             "wiki": "http://docs.openstack.org/trunk/config-reference/content/introduction-to-xen.html"
