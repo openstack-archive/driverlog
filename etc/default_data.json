@@ -113,7 +113,10 @@
                     "launchpad_id": "mate-lakat"
                 }
             ],
-            "wiki": "http://docs.openstack.org/trunk/config-reference/content/xenapinfs.html"
+            "wiki": "http://docs.openstack.org/trunk/config-reference/content/xenapinfs.html",
+            "releases": [
+                       "Grizzly"
+            ]
         },
         {
             "project_id": "openstack/cinder",
@@ -143,7 +146,8 @@
             "maintainers": [
                 {
                     "name": "Alyseo team",
-                    "email": "openstack@alyseo.com"
+                    "email": "openstack@alyseo.com",
+                    "launchpad_id": "yacine-b"
                 }
             ],
             "wiki": "http://docs.openstack.org/trunk/config-reference/content/coraid_aoe_driver_configuration.html",
@@ -157,7 +161,8 @@
             "maintainers": [
                 {
                     "name": "Arkady Kanevsky",
-                    "email": "arkady_kanevsky@dell.com"
+                    "email": "arkady_kanevsky@dell.com",
+                    "launchpad_id": "arkady-kanevsky"
                 }
             ],
             "wiki": "http://docs.openstack.org/trunk/config-reference/content/dell-equallogic-driver.html",
@@ -291,15 +296,18 @@
             "maintainers": [
                 {
                     "name": "Seiji Aguchi",
-                    "email": "seiji.aguchi.tr@hitachi.com"
+                    "email": "seiji.aguchi.tr@hitachi.com",
+                    "launchpad_id": "seiji-aguchi"
                 },
                 {
                     "name": "Steven Sonnenberg",
-                    "email": "steven.sonnenberg@hds.com"
+                    "email": "steven.sonnenberg@hds.com",
+                    "launchpad_id": "steven-sonnenberg"
                 },
                 {
                     "name": "Lakhinder Walia",
-                    "email": "lakhinder.walia@hds.com"
+                    "email": "lakhinder.walia@hds.com",
+                    "launchpad_id": "lakhindr"
                 }
             ],
             "wiki": "http://docs.openstack.org/trunk/config-reference/content/hds-volume-driver.html",
@@ -313,7 +321,8 @@
             "maintainers": [
                 {
                     "name": "Zhang Chao",
-                    "email": "zhangchao010@huawei.com"
+                    "email": "zhangchao010@huawei.com",
+                    "launchpad_id": "zhangchao010"
                 }
             ],
             "wiki": "http://docs.openstack.org/trunk/config-reference/content/huawei-storage-driver.html",
@@ -365,7 +374,7 @@
             "project_id": "openstack/cinder",
             "vendor": "IBM",
             "name": "IBM XIV/DS8K volume driver",
-            "description": "There is a unified volume back-end for IBM XIV and DS8K storage. ",
+            "description": "There is a unified volume back-end for IBM XIV and DS8K storage.",
             "maintainers": [
                 {
                     "name": "IBM team",
@@ -379,7 +388,7 @@
             "project_id": "openstack/cinder",
             "vendor": "NetApp",
             "name": "NetApp Unified Driver",
-            "description": "The NetApp Unified Driver for Cinder provides integration for multiple storage controller families and protocols. A storage family corresponds to storage systems built on different NetApp technologies such as clustered Data ONTAP, 7-Mode, and NetApp E-Series and EF-Series systems. The storage protocol refers to the protocol used to initiate data storage and access operations to those storage systems.  Clustered Data ONTAP systems can be used with Cinder via Parallelized NFS (pNFS), NFS, and iSCSI storage protocols.  7-mode systems can be used with either NFS or iSCSI. E-Series and EF-Series systems are accessible via iSCSI.",
+            "description": "The NetApp Unified Driver for Cinder provides integration for multiple storage controller families and protocols. A storage family corresponds to storage systems built on different NetApp technologies such as clustered Data ONTAP, 7-Mode, and NetApp E-Series and EF-Series systems. The storage protocol refers to the protocol used to initiate data storage and access operations to those storage systems.  Clustered Data ONTAP systems can be used with Cinder via Parallelized NFS (pNFS), NFS, and iSCSI storage protocols. 7-mode systems can be used with either NFS or iSCSI. E-Series and EF-Series systems are accessible via iSCSI.",
             "maintainers": [
                 {
                     "name": "NetApp OpenStack Team",
@@ -414,7 +423,8 @@
             "maintainers": [
                 {
                     "name": "Cinder Team",
-                    "email": "john.griffith@solidfire.com"
+                    "email": "john.griffith@solidfire.com",
+                    "launchpad_id": "john-griffith"
                 }
             ],
             "wiki": "http://docs.openstack.org/trunk/config-reference/content/lvm-volume-driver.html",
@@ -424,11 +434,12 @@
             "project_id": "openstack/cinder",
             "vendor": "OpenStack Community",
             "name": "NFS",
-            "description": "No description provided.",
+            "description": "The Network File System (NFS) is a distributed file system protocol. An NFS server exports one or more of its file systems, known as shares. An NFS client can mount these exported shares on its own file system. File actions on this mounted remote file system can be performed as if the file system were local.",
             "maintainers": [
                 {
                     "name": "Cinder Team",
-                    "email": "john.griffith@solidfire.com"
+                    "email": "john.griffith@solidfire.com",
+                    "launchpad_id": "john-griffith"
                 }
             ],
             "wiki": "http://docs.openstack.org/trunk/config-reference/content/NFS-driver.html"
@@ -437,11 +448,12 @@
             "project_id": "openstack/cinder",
             "vendor": "OpenStack Community",
             "name": "SheepDog Volume Driver",
-            "description": "Sheepdog is an open-source distributed storage system that provides a virtual storage pool utilizing internal disk of commodity servers. This driver enables use of Sheepdog through Qemu/KVM.",
+            "description": "Sheepdog is an open-source distributed storage system that provides a virtual storage pool utilizing internal disk of commodity servers. This driver enables use of Sheepdog through QEMU/KVM.",
             "maintainers": [
                 {
                     "name": "Cinder Team",
-                    "email": "john.griffith@solidfire.com"
+                    "email": "john.griffith@solidfire.com",
+                    "launchpad_id": "john-griffith"
                 }
             ],
             "wiki": "http://docs.openstack.org/trunk/config-reference/content/sheepdog-driver.html"
@@ -479,7 +491,7 @@
             "project_id": "openstack/cinder",
             "vendor": "SolidFire",
             "name": "SolidFire Driver",
-            "description": "The SolidFire Cluster is a high performance all SSD iSCSI storage devices. The driver allows to configure the use of a SolidFire cluster with Block Storage",
+            "description": "The SolidFire Cluster is a high performance all SSD iSCSI storage devices. The driver allows to configure the use of a SolidFire cluster with Block Storage.",
             "maintainers": [
                 {
                     "name": "John Griffith",
@@ -529,7 +541,8 @@
                 {
                     "name": "Doug Wiegley",
                     "irc": "dougwig",
-                    "email": "dougw@a10networks.com"
+                    "email": "dougw@a10networks.com",
+                    "launchpad_id": "dougwig"
                 }
             ],
             "wiki": "https://wiki.openstack.org/wiki/Neutron/LBaaS/A10Networks",
@@ -548,7 +561,8 @@
                 {
                     "name": "Sukhdev Kapur",
                     "irc": "Sukhdev",
-                    "email": "sukhdev@arista.com"
+                    "email": "sukhdev@arista.com",
+                    "launchpad_id": "sukhdev-8"
                 }
             ],
             "wiki": "https://wiki.openstack.org/wiki/Arista-neutron-ml2-driver",
@@ -608,7 +622,8 @@
                 {
                     "name": "Shiv Haris",
                     "email": "sharis@brocade.com",
-                    "irc": "shivharis"
+                    "irc": "shivharis",
+                    "launchpad_id": "shh"
                 }
             ],
             "wiki": "https://wiki.openstack.org/wiki/Brocade-neutron-plugin",
@@ -628,7 +643,8 @@
                 {
                     "name": "Shiv Haris",
                     "email": "sharis@brocade.com",
-                    "irc": "shivharis"
+                    "irc": "shivharis",
+                    "launchpad_id": "shh"
                 }
             ],
             "wiki": "https://wiki.openstack.org/wiki/Brocade-ML2-Mechanism",
@@ -647,7 +663,8 @@
             "maintainers": [
                 {
                     "name": "Karthik Natarajan",
-                    "email": "dl-grp-vyatta-oss@brocade.com"
+                    "email": "dl-grp-vyatta-oss@brocade.com",
+                    "launchpad_id": "natarajk"
                 }
             ],
             "releases": ["Juno"],
@@ -665,7 +682,8 @@
             "maintainers": [
                 {
                     "name": "Dane Leblanc",
-                    "email": "leblancd@cisco.com"
+                    "email": "leblancd@cisco.com",
+                    "launchpad_id": "leblancd"
                 }
             ],
             "wiki": "https://wiki.openstack.org/wiki/Neutron/ML2/MechCiscoNexus",
@@ -684,7 +702,8 @@
             "maintainers": [
                 {
                     "name": "Dane Leblanc",
-                    "email": "leblancd@cisco.com"
+                    "email": "leblancd@cisco.com",
+                    "launchpad_id": "leblancd"
                 }
             ],
             "wiki": "https://wiki.openstack.org/wiki/Cisco-neutron",
@@ -699,7 +718,7 @@
             "project_id": "openstack/neutron",
             "vendor": "Cloudbase",
             "name": "Cloudbase Hyper-V Plugin",
-            "description": "The Hyper-V Neutron plugin offers the networking options for Hyper-V Server based OpenSTack intstalltions.",
+            "description": "The Hyper-V Neutron plugin offers the networking options for Hyper-V Server based OpenSTack installations.",
             "maintainers": [
                 {
                     "name": "Alessandro Pilotti",
@@ -776,7 +795,8 @@
             "maintainers": [
                 {
                     "name": "Mohammad Banikazemi",
-                    "email": "mb@us.ibm.com"
+                    "email": "mb@us.ibm.com",
+                    "launchpad_id": "mb-s"
                 }
             ],
             "wiki": "http://docs.openstack.org/trunk/config-reference/content/networking-plugin-linuxbridge_agent.html"
@@ -910,12 +930,13 @@
             "project_id": "openstack/neutron",
             "vendor": "OpenDaylight",
             "name": "OpenDaylight ML2 MechanismDriver",
-            "description": "No description provided",
+            "description": "OpenDaylight has driver for Neutron ML2 (Modular Layer 2) plugin to enable communication between Neutron and OpenDaylight. On the SDN controller side, OpenDaylight has northbound APIs to interact with Neutron and use OVSDB (Open vSwitch Database Management Protocol) for southbound configuration of vSwitches on compute nodes. Thus OpenDaylight can manage network connectivity and initiate GRE or VXLAN tunnels for compute nodes.",
             "maintainers": [
                 {
                     "name": "OpenDaylight Team",
                     "irc": "mestery",
-                    "email": "mestery@mestery.com"
+                    "email": "mestery@mestery.com",
+                    "launchpad_id": "mestery"
                 }
             ],
             "wiki": "http://openstack.redhat.com/OpenDaylight_integration",
@@ -929,7 +950,7 @@
             "project_id": "openstack/neutron",
             "vendor": "OpenStack Community",
             "name": "Linux Bridge Plugin",
-            "description": "Neutron Linux Bridge plugin configures a Linux Bridge to create Neutron Network, Port, and Attachment abstractions. Plugin manages VLANs. ",
+            "description": "Neutron Linux Bridge plugin configures a Linux Bridge to create Neutron Network, Port, and Attachment abstractions. Plugin manages VLANs.",
             "maintainers": [
                 {
                     "name": "Neutron Team",
@@ -947,7 +968,8 @@
                 {
                     "name": "Neutron Team",
                     "irc": "rkukura",
-                    "email": "kukura@noironetworks.com"
+                    "email": "kukura@noironetworks.com",
+                    "launchpad_id": "rkukura"
                 }
             ],
             "wiki": "http://docs.openstack.org/trunk/config-reference/content/networking-options-plugins-ml2.html"
@@ -977,7 +999,7 @@
             "project_id": "openstack/neutron",
             "vendor": "OpenStack Community",
             "name": "Ryu OpenFlow Controller Plugin",
-            "description": "The Ryu OpenFlow Controller plugin enables Ryu Network Operating System with OpenStack as Network controller",
+            "description": "The Ryu OpenFlow Controller plugin enables Ryu Network Operating System with OpenStack as Network controller.",
             "maintainers": [
                 {
                     "name": "Nachi Ueno",
@@ -995,12 +1017,13 @@
             "project_id": "openstack/neutron",
             "vendor": "OpenStack Community",
             "name": "Open vSwitch Plugin",
-            "description": "The Open vSwitch plug-in is a core plug-in working as part of the OpenStack Neutron Virtual Network Service",
+            "description": "The Open vSwitch plug-in is a core plug-in working as part of the OpenStack Neutron Virtual Network Service.",
             "maintainers": [
                 {
                     "name": "Neutron Team",
                     "irc": "mestery",
-                    "email": "mestery@mestery.com"
+                    "email": "mestery@mestery.com",
+                    "launchpad_id": "mestery"
                 }
             ],
             "wiki": "http://docs.openstack.org/trunk/config-reference/content/networking-plugin-openvswitch_agent.html"
@@ -1014,7 +1037,8 @@
                 {
                     "name": "Fawad Khaliq",
                     "irc": "fawadkhaliq",
-                    "email": "fawad@plumgrid.com"
+                    "email": "fawad@plumgrid.com",
+                    "launchpad_id": "fawadkhaliq"
                 }
             ],
             "wiki": "https://wiki.openstack.org/wiki/PLUMgrid-Neutron",
@@ -1025,8 +1049,8 @@
         {
             "project_id": "openstack/neutron",
             "vendor": "Radware",
-            "name": "Radware LBaaS Driver for Alteon",
-            "description": "Radware LBaaS Driver provides load balancing as a service based on Alteon, enabling on demand provisioning of load balancing capacity, overlay network agnostic, overlay gateway bypass, high availability, tenant isolation and SLA guarantee",
+            "name": "Radware LBaaS Driver for Alteon.",
+            "description": "Radware LBaaS Driver provides load balancing as a service based on Alteon, enabling on demand provisioning of load balancing capacity, overlay network agnostic, overlay gateway bypass, high availability, tenant isolation and SLA guarantee.",
             "maintainers": [
                 {
                     "name": "Avishay Balderman",
@@ -1103,7 +1127,8 @@
                 {
                     "name": "Gary Duan",
                     "email": "openstack-ci-test@varmour.com",
-                    "irc": "garyduan"
+                    "irc": "garyduan",
+                    "launchpad_id": "gduan"
                 }
             ],
             "wiki": "https://wiki.openstack.org/wiki/Neutron/vArmour-Firewall",
@@ -1176,7 +1201,8 @@
             "maintainers": [
                 {
                     "name": "Nova Team",
-                    "email": "mikal@stillhq.com"
+                    "email": "mikal@stillhq.com",
+                    "launchpad_id": "mikalstill"
                 }
             ],
             "wiki": "http://docs.openstack.org/trunk/config-reference/content/baremetal.html"
@@ -1189,7 +1215,8 @@
             "maintainers": [
                 {
                     "name": "Nova Team",
-                    "email": "mikal@stillhq.com"
+                    "email": "mikal@stillhq.com",
+                    "launchpad_id": "milakstill"
                 }
             ],
             "wiki": "http://docs.openstack.org/trunk/config-reference/content/docker.html",
@@ -1206,7 +1233,7 @@
                     "launchpad_id": "devananda"
                 }
             ],
-            "description": "OpenStack Bare Metal Provisioning Program",
+            "description": "OpenStack Bare Metal Provisioning Program.",
             "wiki": "https://wiki.openstack.org/wiki/Ironic"
         },
         {
@@ -1217,7 +1244,8 @@
             "maintainers": [
                 {
                     "name": "Nova Team",
-                    "email": "mikal@stillhq.com"
+                    "email": "mikal@stillhq.com",
+                    "launchpad_id": "milakstill"
                 }
             ],
             "wiki": "http://docs.openstack.org/trunk/config-reference/content/kvm.html"
@@ -1226,11 +1254,12 @@
             "project_id": "openstack/nova",
             "vendor": "OpenStack Community",
             "name": "LXC (Linux Containers)",
-            "description": "LXC (Linux containers) is a virtualization technology that works at the operating system level. LXC (as currently implemented using libvirt in the Compute service) is not a secure virtualization technology for multi-tenant environments. ",
+            "description": "LXC (Linux containers) is a virtualization technology that works at the operating system level. LXC (as currently implemented using libvirt in the Compute service) is not a secure virtualization technology for multi-tenant environments.",
             "maintainers": [
                 {
                     "name": "Nova Team",
-                    "email": "mikal@stillhq.com"
+                    "email": "mikal@stillhq.com",
+                    "launchpad_id": "milakstill"
                 }
             ],
             "wiki": "http://docs.openstack.org/trunk/config-reference/content/lxc.html"
@@ -1243,7 +1272,8 @@
             "maintainers": [
                 {
                     "name": "Nova Team",
-                    "email": "mikal@stillhq.com"
+                    "email": "mikal@stillhq.com",
+                    "launchpad_id": "milakstill"
                 }
             ],
             "wiki": "http://docs.openstack.org/trunk/config-reference/content/qemu.html"
@@ -1256,7 +1286,8 @@
             "maintainers": [
                 {
                     "name": "Nova Team",
-                    "email": "mikal@stillhq.com"
+                    "email": "mikal@stillhq.com",
+                    "launchpad_id": "milakstill"
                 }
             ],
             "wiki": "http://docs.openstack.org/trunk/config-reference/content/introduction-to-xen.html",
@@ -1269,11 +1300,12 @@
             "project_id": "openstack/nova",
             "vendor": "OpenStack Community",
             "name": "Xen+Libvirt",
-            "description": "Support for the Xen hypervisor when used with libvirt",
+            "description": "Support for the Xen hypervisor when used with libvirt.",
             "maintainers": [
                 {
                     "name": "Nova Team",
-                    "email": "mikal@stillhq.com"
+                    "email": "mikal@stillhq.com",
+                    "launchpad_id": "milakstill"
                 }
             ],
             "wiki": "http://docs.openstack.org/trunk/config-reference/content/introduction-to-xen.html"
