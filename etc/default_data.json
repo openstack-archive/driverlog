@@ -1023,15 +1023,39 @@
             "description": "The Ryu OpenFlow Controller plugin enables Ryu Network Operating System with OpenStack as Network controller.",
             "maintainers": [
                 {
-                    "name": "Nachi Ueno",
-                    "irc": "nati_ueno",
-                    "email": "nachi@ntti3.com",
-                    "launchpad_id": "nati-ueno"
+                    "name": "YAMAMOTO Takashi",
+                    "irc": "yamamoto",
+                    "email": "yamamoto@valinux.co.jp",
+                    "launchpad_id": "yamamoto"
                 }
             ],
-            "wiki": "https://github.com/osrg/ryu/wiki/configuration_openstack_havana_with_ryu",
+            "releases": ["Folsom", "Grizzly", "Havana", "Icehouse"],
+            "wiki": "https://github.com/osrg/ryu/wiki/OpenStack",
             "ci": {
-                "id": "neutronryu"
+                "id": "neutronryu",
+                "success_pattern": "check-tempest-dsvm-ryuplugin \\S+ : SUCCESS",
+                "failure_pattern": "check-tempest-dsvm-ryuplugin \\S+ : FAILURE"
+            }
+        },
+        {
+            "project_id": "openstack/neutron",
+            "vendor": "OpenStack Community",
+            "name": "OpenFlow Agent",
+            "description": "The OpenFlow Agent (aka. ofagent) and the associated ML2 Mechanism Driver controls OpenFlow switches as a part of OpenStack Neutron.",
+            "maintainers": [
+                {
+                    "name": "YAMAMOTO Takashi",
+                    "irc": "yamamoto",
+                    "email": "yamamoto@valinux.co.jp",
+                    "launchpad_id": "yamamoto"
+                }
+            ],
+            "releases": ["Icehouse"],
+            "wiki": "https://github.com/osrg/ryu/wiki/OpenStack",
+            "ci": {
+                "id": "neutronryu",
+                "success_pattern": "check-tempest-dsvm-ofagent \\S+ : SUCCESS",
+                "failure_pattern": "check-tempest-dsvm-ofagent \\S+ : FAILURE"
             }
         },
         {
