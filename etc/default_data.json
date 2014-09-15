@@ -261,6 +261,7 @@
                   "id":"emc-vnx-ci",
                   "success_pattern": "Build Successful",
                   "failure_pattern": "Build Failed"
+
            }
         },
         {
@@ -326,7 +327,7 @@
         {
             "project_id": "openstack/cinder",
             "vendor": "Fujitsu",
-            "name": "Fujitsu Eternus DX ISCSI Volume driver",
+            "name": "Fujitsu Eternus DX FC Volume driver",
             "description": "This driver supports ETERNUS DX S2 and the S3 series and runs volume operations by communicating with the backend Fujitsu storage.It uses a CIM client in Python called PyWBEM to perform CIM operations over HTTP..",
             "maintainers": [
                 {
@@ -341,7 +342,7 @@
         {
             "project_id": "openstack/cinder",
             "vendor": "Fujitsu",
-            "name": "Fujitsu Eternus DX FC Volume driver",
+            "name": "Fujitsu Eternus DX ISCSI Volume driver",
             "description": "This driver supports ETERNUS DX S2 and the S3 series and runs volume operations by communicating with the backend Fujitsu storage.It uses a CIM client in Python called PyWBEM to perform CIM operations over HTTP..",
             "maintainers": [
                 {
@@ -1156,7 +1157,6 @@
                 }
             ],
             "wiki": "http://specs.openstack.org/openstack/neutron-specs/specs/juno/vyatta_l3_plugin.html",
-            "releases": ["Juno"],
             "ci": {
                 "id": "brocade-oss-service",
                 "success_pattern": "brocade_ci_oss \\S+ : SUCCESS",
@@ -1379,10 +1379,10 @@
             "description": "The Openstack Mellanox Neutron plugin supports Mellanox embedded switch functionality as part of the VPI (Ethernet/InfiniBand) HCA. Mellanox Neutron Plugin allows hardware vNICs (based on SR-IOV virtual functions) per each Virtual Machine vNIC to have its unique connectivity, security, and QoS attributes.",
             "maintainers": [
                 {
-                    "name": "Omri Marcovitch",
-                    "irc": "omrim",
-                    "email": "omrim@mellanox.com",
-                    "launchpad_id": "omrim"
+                    "name": "Irena Berezovsky",
+                    "irc": "irenab",
+                    "email": "irenab@mellanox.com",
+                    "launchpad_id": "irenab"
                 }
             ],
             "wiki": "https://wiki.openstack.org/wiki/Mellanox-Neutron",
@@ -1400,10 +1400,10 @@
             "description": "The Openstack Mellanox Neutron ML2 Driver supports Mellanox embedded switch functionality as part of the VPI (Ethernet/InfiniBand) HCA. Mellanox ML2 Driver allows hardware vNICs (based on SR-IOV virtual functions) per each Virtual Machine vNIC to have its unique connectivity, security, and QoS attributes.",
             "maintainers": [
                 {
-                    "name": "Omri Marcovitch",
-                    "irc": "omrim",
-                    "email": "omrim@mellanox.com",
-                    "launchpad_id": "omrim"
+                    "name": "Irena Berezovsky",
+                    "irc": "irenab",
+                    "email": "irenab@mellanox.com",
+                    "launchpad_id": "irenab"
                 }
             ],
             "wiki": "https://wiki.openstack.org/wiki/Mellanox-Neutron-ML2",
@@ -1802,7 +1802,7 @@
             "project_id": "openstack/nova",
             "vendor": "IBM",
             "name": "PowerKVM",
-            "description": "IBM PowerKVM provides an open virtualization choice for IBM scale-out Linux systems based on the POWER8Ã¢ÂÂ¢ technology. This solution includes the Linux open source technology of KVM virtualization, and is designed to complement the performance, scalability and security qualities of Linux.",
+            "description": "IBM PowerKVM provides an open virtualization choice for IBM scale-out Linux systems based on the POWER8â¢ technology. This solution includes the Linux open source technology of KVM virtualization, and is designed to complement the performance, scalability and security qualities of Linux.",
             "maintainers": [
                 {
                     "name": "Kurt Taylor",
@@ -1841,12 +1841,7 @@
             "maintainers": [
             ],
             "wiki": "https://wiki.openstack.org/wiki/Baremetal",
-            "releases": ["Grizzly", "Havana", "Icehouse", "Juno"],
-            "ci": {
-                 "id": "tripleo_ci",
-                 "success_pattern": "Build Successful",
-                 "failure_pattern": "Build Failed"
-              }
+            "releases": ["Grizzly", "Havana", "Icehouse", "Juno"]
         },
         {
             "project_id": "openstack/nova",
@@ -1861,7 +1856,7 @@
                 }
             ],
             "wiki": "http://docs.openstack.org/trunk/config-reference/content/docker.html",
-            "releases": ["Havana"]
+            "releases": ["Havana", "Icehouse"]
         },
         {
             "project_id": "openstack/nova",
@@ -2087,4 +2082,3 @@
           }
     ]
 }
-
