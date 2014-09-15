@@ -251,13 +251,22 @@
                     "launchpad_id": "xing-yang"
                 }
             ],
+<<<<<<< HEAD
             "wiki": "http://docs.openstack.org/trunk/config-reference/content/emc-vnx-direct-driver.html",
             "releases": ["Icehouse", "Juno"],
+=======
+            "wiki": "http://docs.openstack.org/trunk/config-reference/content/emc-smis-driver.html",
+            "releases": ["Icehouse"],
+>>>>>>> 80ee008... Added info on CI
             "ci": {
                   "id":"emc-vnx-ci",
                   "success_pattern": "Build Successful",
                   "failure_pattern": "Build Failed"
+<<<<<<< HEAD
            }
+=======
+            }
+>>>>>>> 80ee008... Added info on CI
         },
         {
             "project_id": "openstack/cinder",
@@ -272,12 +281,17 @@
                 }
             ],
             "wiki": "http://docs.openstack.org/trunk/config-reference/content/emc-vnx-direct-driver.html",
+<<<<<<< HEAD
             "releases": ["Juno"],
+=======
+            "releases": ["Icehouse"],
+>>>>>>> 80ee008... Added info on CI
             "ci": {
                   "id":"emc-vnx-ci",
                   "success_pattern": "Build Successful",
                   "failure_pattern": "Build Failed"
            }
+<<<<<<< HEAD
         },
         {
             "project_id": "openstack/cinder",
@@ -318,6 +332,8 @@
                   "success_pattern": "Build Successful",
                   "failure_pattern": "Build Failed"
            }
+=======
+>>>>>>> 80ee008... Added info on CI
         },
         {
             "project_id": "openstack/cinder",
@@ -331,13 +347,26 @@
                     "launchpad_id": "j-ishizaki"
                 }
             ],
+<<<<<<< HEAD
             "wiki": "http://www.fujitsu.com/global/products/computing/storage/eternus/news/openstack.html",
             "releases": ["Havana", "Icehouse", "Juno"]
+=======
+            "wiki": "http://www.fujitsu.com/global/support/products/computing/storage/disk/download/openstack-vd.html",
+<<<<<<< HEAD
+            "releases": ["Juno"]
+>>>>>>> 80ee008... Added info on CI
+=======
+            "releases": ["Havana, "Icehouse", "Juno"]
+>>>>>>> 98c1a68... Added information on releases
           },
         {
             "project_id": "openstack/cinder",
             "vendor": "Fujitsu",
+<<<<<<< HEAD
             "name": "Fujitsu Eternus DX FC Volume driver",
+=======
+            "name": "Fujitsu ISCSI Volume driver",
+>>>>>>> 98c1a68... Added information on releases
             "description": "This driver supports ETERNUS DX S2 and the S3 series and runs volume operations by communicating with the backend Fujitsu storage.It uses a CIM client in Python called PyWBEM to perform CIM operations over HTTP..",
             "maintainers": [
                 {
@@ -347,9 +376,15 @@
                 }
             ],
             "wiki": "http://www.fujitsu.com/global/products/computing/storage/eternus/news/openstack.html",
+<<<<<<< HEAD
             "releases": ["Havana", "Icehouse", "Juno"]
          },
          {
+=======
+            "releases": ["Havana, "Icehouse", "Juno"]
+          },
+          {
+>>>>>>> 98c1a68... Added information on releases
             "project_id": "openstack/cinder",
             "vendor": "Fusion-io",
             "name": "Fusion-io Control Volume driver",
@@ -1006,7 +1041,6 @@
                 }
             ],
             "wiki": "http://specs.openstack.org/openstack/neutron-specs/specs/juno/vyatta_l3_plugin.html",
-            "releases": ["Juno"],
             "ci": {
                 "id": "brocade-oss-service",
                 "success_pattern": "brocade_ci_oss \\S+ : SUCCESS",
@@ -1229,10 +1263,10 @@
             "description": "The Openstack Mellanox Neutron plugin supports Mellanox embedded switch functionality as part of the VPI (Ethernet/InfiniBand) HCA. Mellanox Neutron Plugin allows hardware vNICs (based on SR-IOV virtual functions) per each Virtual Machine vNIC to have its unique connectivity, security, and QoS attributes.",
             "maintainers": [
                 {
-                    "name": "Omri Marcovitch",
-                    "irc": "omrim",
-                    "email": "omrim@mellanox.com",
-                    "launchpad_id": "omrim"
+                    "name": "Irena Berezovsky",
+                    "irc": "irenab",
+                    "email": "irenab@mellanox.com",
+                    "launchpad_id": "irenab"
                 }
             ],
             "wiki": "https://wiki.openstack.org/wiki/Mellanox-Neutron",
@@ -1250,10 +1284,10 @@
             "description": "The Openstack Mellanox Neutron ML2 Driver supports Mellanox embedded switch functionality as part of the VPI (Ethernet/InfiniBand) HCA. Mellanox ML2 Driver allows hardware vNICs (based on SR-IOV virtual functions) per each Virtual Machine vNIC to have its unique connectivity, security, and QoS attributes.",
             "maintainers": [
                 {
-                    "name": "Omri Marcovitch",
-                    "irc": "omrim",
-                    "email": "omrim@mellanox.com",
-                    "launchpad_id": "omrim"
+                    "name": "Irena Berezovsky",
+                    "irc": "irenab",
+                    "email": "irenab@mellanox.com",
+                    "launchpad_id": "irenab"
                 }
             ],
             "wiki": "https://wiki.openstack.org/wiki/Mellanox-Neutron-ML2",
@@ -1266,6 +1300,7 @@
         },
         {
             "project_id": "openstack/neutron",
+<<<<<<< HEAD
             "vendor": "Mellanox",
             "name": "Mellanox Neutron ML2 SR-IOV Driver",
             "description": "The Openstack Mellanox Neutron ML2 SR-IOV Driver supports Mellanox embedded switch functionality as part of the VPI (Ethernet/InfiniBand) HCA. Mellanox Neutron ML2 SR-IOV Driver allows hardware vNICs (based on SR-IOV virtual functions) per each Virtual Machine vNIC to have its unique connectivity, security, and QoS attributes.",
@@ -1287,6 +1322,8 @@
         },
         {
             "project_id": "openstack/neutron",
+=======
+>>>>>>> 80ee008... Added info on CI
             "vendor": "Midokura",
             "name": "MidoNet Plugin",
             "description": "MidoNet Neutron plugin enables MidoNet virtual networking technology for those using OpenStack Neutron cloud networking orchestration.",
@@ -1652,7 +1689,11 @@
             "project_id": "openstack/nova",
             "vendor": "IBM",
             "name": "PowerKVM",
+<<<<<<< HEAD
             "description": "IBM PowerKVM provides an open virtualization choice for IBM scale-out Linux systems based on the POWER8Ã¢ÂÂ¢ technology. This solution includes the Linux open source technology of KVM virtualization, and is designed to complement the performance, scalability and security qualities of Linux.",
+=======
+            "description": "IBM PowerKVM provides an open virtualization choice for IBM scale-out Linux systems based on the POWER8â¢ technology. This solution includes the Linux open source technology of KVM virtualization, and is designed to complement the performance, scalability and security qualities of Linux.",
+>>>>>>> 80ee008... Added info on CI
             "maintainers": [
                 {
                     "name": "Kurt Taylor",
@@ -1696,12 +1737,16 @@
                 }
             ],
             "wiki": "http://docs.openstack.org/trunk/config-reference/content/baremetal.html",
+<<<<<<< HEAD
             "releases": ["Austin", "Bexar", "Cactus", "Diablo", "Essex", "Folsom", "Grizzly", "Havana"],
             "ci": {
                  "id": "tripleo_ci",
                  "success_pattern": "Build Successful",
                  "failure_pattern": "Build Failed"
               }
+=======
+            "releases": ["Icehouse"]
+>>>>>>> 98c1a68... Added information on releases
         },
         {
             "project_id": "openstack/nova",
@@ -1716,7 +1761,7 @@
                 }
             ],
             "wiki": "http://docs.openstack.org/trunk/config-reference/content/docker.html",
-            "releases": ["Havana"]
+            "releases": ["Havana", "Icehouse"]
         },
         {
             "project_id": "openstack/nova",
@@ -1765,7 +1810,11 @@
                     "launchpad_id": "milakstill"
                 }
             ],
+<<<<<<< HEAD
             "releases": ["Austin", "Bexar", "Cactus", "Diablo", "Essex", "Folsom", "Grizzly", "Havana", "Icehouse", "Juno"],
+=======
+            "releases": ["Icehouse"],
+>>>>>>> 98c1a68... Added information on releases
             "wiki": "http://docs.openstack.org/trunk/config-reference/content/lxc.html"
         },
         {
@@ -1821,12 +1870,16 @@
                 }
             ],
             "wiki": "http://docs.openstack.org/trunk/config-reference/content/introduction-to-xen.html",
+<<<<<<< HEAD
             "releases": ["Austin", "Bexar", "Cactus", "Diablo", "Essex", "Folsom", "Grizzly", "Havana"],
             "ci": {
                  "id": "jenkins_ci",
                  "success_pattern": "Build Successful",
                  "failure_pattern": "Build Failed"
                 }
+=======
+            "releases": ["Icehouse"]
+>>>>>>> 98c1a68... Added information on releases
         },
         {
             "project_id": "openstack/nova",
@@ -1916,4 +1969,7 @@
           }
     ]
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 80ee008... Added info on CI
