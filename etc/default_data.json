@@ -232,7 +232,11 @@
                   "id":"emc-vnx-ci",
                   "success_pattern": "Build Successful",
                   "failure_pattern": "Build Failed"
+<<<<<<< HEAD
+               }
+=======
             }
+>>>>>>> 1703065... Added information on CI for Nova
         },
         {
             "project_id": "openstack/cinder",
@@ -348,11 +352,24 @@
             ],
             "wiki": "http://www.fujitsu.com/global/products/computing/storage/eternus/news/openstack.html",
             "releases": ["Havana", "Icehouse", "Juno"]
+            "wiki": "http://www.fujitsu.com/global/support/products/computing/storage/disk/download/openstack-vd.html",
+<<<<<<< HEAD
+=======
+            "releases": ["Havana, "Icehouse", "Juno"]
+>>>>>>> 98c1a68... Added information on releases
           },
         {
             "project_id": "openstack/cinder",
             "vendor": "Fujitsu",
+<<<<<<< HEAD
+<<<<<<< HEAD
             "name": "Fujitsu Eternus DX FC Volume driver",
+=======
+            "name": "Fujitsu ISCSI Volume driver",
+>>>>>>> 98c1a68... Added information on releases
+=======
+            "name": "Fujitsu Eternus DX FC Volume driver",
+>>>>>>> 1703065... Added information on CI for Nova
             "description": "This driver supports ETERNUS DX S2 and the S3 series and runs volume operations by communicating with the backend Fujitsu storage.It uses a CIM client in Python called PyWBEM to perform CIM operations over HTTP..",
             "maintainers": [
                 {
@@ -362,8 +379,16 @@
                 }
             ],
             "wiki": "http://www.fujitsu.com/global/products/computing/storage/eternus/news/openstack.html",
+<<<<<<< HEAD
             "releases": ["Havana", "Icehouse", "Juno"]
          },
+<<<<<<< HEAD
+=======
+            "releases": ["Havana, "Icehouse", "Juno"]
+          },
+>>>>>>> 98c1a68... Added information on releases
+=======
+>>>>>>> 1703065... Added information on CI for Nova
           {
             "project_id": "openstack/cinder",
             "vendor": "Fusion-io",
@@ -970,7 +995,7 @@
             "project_id": "openstack/neutron",
             "vendor": "Brocade",
             "name": "Brocade Neutron plugin",
-            "description": "Brocade Neutron Plugin for VDX/VCS provides a means to interface Openstackâs Networking to orchestrate Brocadeâs physical switches.",
+            "description": "Brocade Neutron Plugin for VDX/VCS provides a means to interface OpenstackÃ¢ÂÂs Networking to orchestrate BrocadeÃ¢ÂÂs physical switches.",
             "maintainers": [
                 {
                     "name": "Shiv Haris",
@@ -1159,7 +1184,7 @@
             "project_id": "openstack/neutron",
             "vendor": "Extreme Networks",
             "name": "Extreme Networks Plugin",
-            "description": "The Extreme Networks OpenStack plugin runs on Extreme XOS 15.3 and later releases. This plug-in is supported on all EXOS based platforms and includes the latest OpenStack API capabilities. The Extreme Networks OpenStack 2.0 plugin enables âNetworking-as-a-Serviceâ for both Physical and Virtual Extreme Networks.",
+            "description": "The Extreme Networks OpenStack plugin runs on Extreme XOS 15.3 and later releases. This plug-in is supported on all EXOS based platforms and includes the latest OpenStack API capabilities. The Extreme Networks OpenStack 2.0 plugin enables Ã¢ÂÂNetworking-as-a-ServiceÃ¢ÂÂ for both Physical and Virtual Extreme Networks.",
             "wiki": "http://extrcdn.extremenetworks.com/wp-content/uploads/2014/02/SDN_OpenStack_Install_Guide_Final1.pdf"
         },
         {
@@ -1666,7 +1691,7 @@
             "project_id": "openstack/nova",
             "vendor": "IBM",
             "name": "PowerKVM",
-            "description": "IBM PowerKVM provides an open virtualization choice for IBM scale-out Linux systems based on the POWER8â¢ technology. This solution includes the Linux open source technology of KVM virtualization, and is designed to complement the performance, scalability and security qualities of Linux.",
+            "description": "IBM PowerKVM provides an open virtualization choice for IBM scale-out Linux systems based on the POWER8Ã¢ÂÂ¢ technology. This solution includes the Linux open source technology of KVM virtualization, and is designed to complement the performance, scalability and security qualities of Linux.",
             "maintainers": [
                 {
                     "name": "Kurt Taylor",
@@ -1700,7 +1725,7 @@
         {
             "project_id": "openstack/nova",
             "vendor": "OpenStack Community",
-            "name": "Baremetal  driver",
+            "name": "Baremetal driver",
             "description": "The baremetal driver is a hypervisor driver for OpenStack Nova Compute. It exposes hardware through the OpenStack APIs, using pluggable sub-drivers to deliver machine imaging (PXE) and power control (IPMI).",
             "maintainers": [
                 {
@@ -1710,7 +1735,20 @@
                 }
             ],
             "wiki": "http://docs.openstack.org/trunk/config-reference/content/baremetal.html",
+<<<<<<< HEAD
+<<<<<<< HEAD
             "releases": ["Austin", "Bexar", "Cactus", "Diablo", "Essex", "Folsom", "Grizzly", "Havana"]
+=======
+            "releases": ["Icehouse"]
+>>>>>>> 98c1a68... Added information on releases
+=======
+            "releases": ["Austin", "Bexar", "Cactus", "Diablo", "Essex", "Folsom", "Grizzly", "Havana"],
+            "ci": {
+                 "id": "tripleo_ci",
+                 "success_pattern": "Build Successful",
+                 "failure_pattern": "Build Failed"
+              }
+>>>>>>> 1703065... Added information on CI for Nova
         },
         {
             "project_id": "openstack/nova",
@@ -1740,7 +1778,12 @@
                 }
             ],
             "releases": ["Juno"],
-            "wiki": "https://wiki.openstack.org/wiki/Ironic"
+            "wiki": "https://wiki.openstack.org/wiki/Ironic",
+            "ci": {
+                "id": "tripleo_ci",
+                 "success_pattern": "Build Successful",
+                 "failure_pattern": "Build Failed"
+              }
         },
         {
             "project_id": "openstack/nova",
@@ -1769,7 +1812,11 @@
                     "launchpad_id": "milakstill"
                 }
             ],
+<<<<<<< HEAD
             "releases": ["Austin", "Bexar", "Cactus", "Diablo", "Essex", "Folsom", "Grizzly", "Havana", "Icehouse", "Juno"],
+=======
+            "releases": ["Icehouse"],
+>>>>>>> 98c1a68... Added information on releases
             "wiki": "http://docs.openstack.org/trunk/config-reference/content/lxc.html"
         },
         {
@@ -1785,7 +1832,12 @@
                 }
             ],
             "wiki": "http://docs.openstack.org/trunk/config-reference/content/qemu.html",
-            "releases": ["Austin", "Bexar", "Cactus", "Diablo", "Essex", "Folsom", "Grizzly", "Havana", "Icehouse", "Juno"]
+            "releases": ["Austin", "Bexar", "Cactus", "Diablo", "Essex", "Folsom", "Grizzly", "Havana", "Icehouse", "Juno"],
+            "ci": {
+                "id": "jenkins_ci",
+                 "success_pattern": "Build Successful",
+                 "failure_pattern": "Build Failed"
+               }
         },
         {
             "project_id": "openstack/nova",
@@ -1820,7 +1872,20 @@
                 }
             ],
             "wiki": "http://docs.openstack.org/trunk/config-reference/content/introduction-to-xen.html",
+<<<<<<< HEAD
+<<<<<<< HEAD
             "releases": ["Austin", "Bexar", "Cactus", "Diablo", "Essex", "Folsom", "Grizzly", "Havana"]
+=======
+            "releases": ["Icehouse"]
+>>>>>>> 98c1a68... Added information on releases
+=======
+            "releases": ["Austin", "Bexar", "Cactus", "Diablo", "Essex", "Folsom", "Grizzly", "Havana"],
+            "ci": {
+                 "id": "jenkins_ci",
+                 "success_pattern": "Build Successful",
+                 "failure_pattern": "Build Failed"
+                }
+>>>>>>> 1703065... Added information on CI for Nova
         },
         {
             "project_id": "openstack/nova",
@@ -1910,3 +1975,4 @@
           }
     ]
 }
+
