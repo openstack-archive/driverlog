@@ -335,8 +335,9 @@
             "description": "The GPFS driver enables the use of GPFS in a fashion similar to that of the NFS driver. With the GPFS driver, instances do not actually access a storage device at the block level. Instead, volume backing files are created in a GPFS file system and mapped to instances, which emulate a block device.",
             "maintainers": [
                 {
-                    "name": "IBM team",
-                    "email": "openstack_storage_drivers@il.ibm.com"
+                    "name": "Sasikanth Eda",
+                    "email": "sasikanth.eda@in.ibm.com",
+                    "launchpad-id": "sasikanth"
                 }
             ],
             "wiki": "http://docs.openstack.org/trunk/config-reference/content/GPFS-driver.html",
@@ -422,8 +423,14 @@
             "description": "The default volume back-end uses local volumes managed by LVM. This driver supports different transport protocols to attach volumes, currently ISCSI and ISER.",
             "maintainers": [
                 {
+<<<<<<< HEAD
                     "name": "Cinder Team",
                     "email": "john.griffith@solidfire.com",
+=======
+                    "name": "John Griffith",
+                    "email": "john.griffith@solidfire.com",
+                    "irc": "#jgriffith",
+>>>>>>> 62f6948... Added information on the following maintainers:
                     "launchpad_id": "john-griffith"
                 }
             ],
@@ -437,8 +444,14 @@
             "description": "The Network File System (NFS) is a distributed file system protocol. An NFS server exports one or more of its file systems, known as shares. An NFS client can mount these exported shares on its own file system. File actions on this mounted remote file system can be performed as if the file system were local.",
             "maintainers": [
                 {
+<<<<<<< HEAD
                     "name": "Cinder Team",
                     "email": "john.griffith@solidfire.com",
+=======
+                    "name": "John Griffith",
+                    "email": "john.griffith@solidfire.com",
+                    "irc": "#jgriffith",
+>>>>>>> 62f6948... Added information on the following maintainers:
                     "launchpad_id": "john-griffith"
                 }
             ],
@@ -451,8 +464,14 @@
             "description": "Sheepdog is an open-source distributed storage system that provides a virtual storage pool utilizing internal disk of commodity servers. This driver enables use of Sheepdog through QEMU/KVM.",
             "maintainers": [
                 {
+<<<<<<< HEAD
                     "name": "Cinder Team",
                     "email": "john.griffith@solidfire.com",
+=======
+                    "name": "John Griffith",
+                    "email": "john.griffith@solidfire.com",
+                    "irc": "#jgriffith",
+>>>>>>> 62f6948... Added information on the following maintainers:
                     "launchpad_id": "john-griffith"
                 }
             ],
@@ -617,7 +636,7 @@
             "project_id": "openstack/neutron",
             "vendor": "Brocade",
             "name": "Brocade Neutron plugin",
-            "description": "Brocade Neutron Plugin for VDX/VCS provides a means to interface Openstack’s Networking to orchestrate Brocade’s physical switches.",
+            "description": "Brocade Neutron Plugin for VDX/VCS provides a means to interface Openstackâs Networking to orchestrate Brocadeâs physical switches.",
             "maintainers": [
                 {
                     "name": "Shiv Haris",
@@ -784,7 +803,7 @@
             "project_id": "openstack/neutron",
             "vendor": "Extreme Networks",
             "name": "Extreme Networks Plugin",
-            "description": "The Extreme Networks OpenStack plugin runs on Extreme XOS 15.3 and later releases. This plug-in is supported on all EXOS based platforms and includes the latest OpenStack API capabilities. The Extreme Networks OpenStack 2.0 plugin enables “Networking-as-a-Service” for both Physical and Virtual Extreme Networks.",
+            "description": "The Extreme Networks OpenStack plugin runs on Extreme XOS 15.3 and later releases. This plug-in is supported on all EXOS based platforms and includes the latest OpenStack API capabilities. The Extreme Networks OpenStack 2.0 plugin enables âNetworking-as-a-Serviceâ for both Physical and Virtual Extreme Networks.",
             "wiki": "http://extrcdn.extremenetworks.com/wp-content/uploads/2014/02/SDN_OpenStack_Install_Guide_Final1.pdf"
         },
         {
@@ -953,7 +972,7 @@
             "project_id": "openstack/neutron",
             "vendor": "Nuage Networks",
             "name": "Nuage Networks Neutron Plugin",
-            "description": "Nuage Networks’ OpenStack networking plugin enables integration of OpenStack with Nuage Networks’ Virtual Service Platform (VSP).",
+            "description": "Nuage Networksâ OpenStack networking plugin enables integration of OpenStack with Nuage Networksâ Virtual Service Platform (VSP).",
             "maintainers": [
                 {
                     "name": "Ronak Shah",
@@ -1014,8 +1033,10 @@
             "description": "Neutron Linux Bridge plugin configures a Linux Bridge to create Neutron Network, Port, and Attachment abstractions. Plugin manages VLANs.",
             "maintainers": [
                 {
-                    "name": "Neutron Team",
-                    "irc": "rkukura"
+                    "name": "Kyle Mestery",
+                    "irc": "rmestery",
+                    "email": kmestery@cisco.com",
+                    "launchpad_id": "mestery"
                 }
             ],
             "wiki": "http://docs.openstack.org/trunk/config-reference/content/networking-plugin-linuxbridge_agent.html"
@@ -1027,10 +1048,17 @@
             "description": "The ML2 plug-in is a core plug-in working as part of the OpenStack Neutron Virtual Network Service",
             "maintainers": [
                 {
+<<<<<<< HEAD
                     "name": "Neutron Team",
                     "irc": "rkukura",
                     "email": "kukura@noironetworks.com",
                     "launchpad_id": "rkukura"
+=======
+                    "name": "Kyle Mestery",
+                    "irc": "rmestery",
+                    "email": kmestery@cisco.com",
+                    "launchpad_id": "mestery"
+>>>>>>> 62f6948... Added information on the following maintainers:
                 }
             ],
             "wiki": "http://docs.openstack.org/trunk/config-reference/content/networking-options-plugins-ml2.html"
@@ -1105,7 +1133,7 @@
             "description": "The Open vSwitch plug-in is a core plug-in working as part of the OpenStack Neutron Virtual Network Service.",
             "maintainers": [
                 {
-                    "name": "Neutron Team",
+                    "name": "Kyle Mestery",
                     "irc": "mestery",
                     "email": "mestery@mestery.com",
                     "launchpad_id": "mestery"
@@ -1117,7 +1145,7 @@
             "project_id": "openstack/neutron",
             "vendor": "PLUMgrid",
             "name": "PLUMgrid OpenStack Networking Suite Neutron Plugin",
-            "description": "PLUMgrid Neutron Plugin enables PLUMgrid OpenStack Networking Suite, which is a secure, comprehensive and open software solution that delivers terabits of performance and scales across tens of thousands of workloads. The product suite provides highly automated workflows that significantly reduce the deployment time of OpenStack clouds, enables users to create private Virtual Domains™ for their projects and is compatible with the leading OpenStack distributions.",
+            "description": "PLUMgrid Neutron Plugin enables PLUMgrid OpenStack Networking Suite, which is a secure, comprehensive and open software solution that delivers terabits of performance and scales across tens of thousands of workloads. The product suite provides highly automated workflows that significantly reduce the deployment time of OpenStack clouds, enables users to create private Virtual Domainsâ¢ for their projects and is compatible with the leading OpenStack distributions.",
             "maintainers": [
                 {
                     "name": "Fawad Khaliq",
@@ -1252,7 +1280,7 @@
             "project_id": "openstack/nova",
             "vendor": "IBM",
             "name": "PowerKVM",
-            "description": "IBM® PowerKVM™ provides an open virtualization choice for IBM scale-out Linux systems based on the POWER8™ technology. This solution includes the Linux open source technology of KVM virtualization, and is designed to complement the performance, scalability and security qualities of Linux.",
+            "description": "IBMÂ® PowerKVMâ¢ provides an open virtualization choice for IBM scale-out Linux systems based on the POWER8â¢ technology. This solution includes the Linux open source technology of KVM virtualization, and is designed to complement the performance, scalability and security qualities of Linux.",
             "maintainers": [
                 {
                     "name": "Kurt Taylor",
@@ -1285,7 +1313,11 @@
             "description": "The baremetal driver is a hypervisor driver for OpenStack Nova Compute. It exposes hardware through the OpenStack APIs, using pluggable sub-drivers to deliver machine imaging (PXE) and power control (IPMI).",
             "maintainers": [
                 {
+<<<<<<< HEAD
                     "name": "Nova Team",
+=======
+                    "name": "Michael Still",
+>>>>>>> 62f6948... Added information on the following maintainers:
                     "email": "mikal@stillhq.com",
                     "launchpad_id": "mikalstill"
                 }
@@ -1299,7 +1331,11 @@
             "description": "Adding during Havana, but removed from Nova during Icehouse, a prototype now lives outside the Nova tree. The Docker driver is a hypervisor driver for OpenStack Compute. Docker extends LXC with a high level API providing a lightweight virtualization solution that runs processes in isolation.",
             "maintainers": [
                 {
+<<<<<<< HEAD
                     "name": "Nova Team",
+=======
+                    "name": "Michael Still",
+>>>>>>> 62f6948... Added information on the following maintainers:
                     "email": "mikal@stillhq.com",
                     "launchpad_id": "milakstill"
                 }
@@ -1328,7 +1364,11 @@
             "description": "KVM is configured as the default hypervisor for Compute.",
             "maintainers": [
                 {
+<<<<<<< HEAD
                     "name": "Nova Team",
+=======
+                    "name": "Michael Still",
+>>>>>>> 62f6948... Added information on the following maintainers:
                     "email": "mikal@stillhq.com",
                     "launchpad_id": "milakstill"
                 }
@@ -1342,7 +1382,11 @@
             "description": "LXC (Linux containers) is a virtualization technology that works at the operating system level. LXC (as currently implemented using libvirt in the Compute service) is not a secure virtualization technology for multi-tenant environments.",
             "maintainers": [
                 {
+<<<<<<< HEAD
                     "name": "Nova Team",
+=======
+                    "name": "Michael Still",
+>>>>>>> 62f6948... Added information on the following maintainers:
                     "email": "mikal@stillhq.com",
                     "launchpad_id": "milakstill"
                 }
@@ -1356,7 +1400,11 @@
             "description": "From the perspective of the Compute service, the QEMU hypervisor is very similar to the KVM hypervisor. The main difference is that QEMU does not support native virtualization.",
             "maintainers": [
                 {
+<<<<<<< HEAD
                     "name": "Nova Team",
+=======
+                    "name": "Michael Still",
+>>>>>>> 62f6948... Added information on the following maintainers:
                     "email": "mikal@stillhq.com",
                     "launchpad_id": "milakstill"
                 }
@@ -1370,7 +1418,11 @@
             "description": "XenAPI compute driver connects to XenServer hypervisors via XenAPI. Used to power Rackspace Cloud Servers (Public Cloud).",
             "maintainers": [
                 {
+<<<<<<< HEAD
                     "name": "Nova Team",
+=======
+                    "name": "Michael Still",
+>>>>>>> 62f6948... Added information on the following maintainers:
                     "email": "mikal@stillhq.com",
                     "launchpad_id": "milakstill"
                 }
@@ -1388,7 +1440,11 @@
             "description": "Support for the Xen hypervisor when used with libvirt.",
             "maintainers": [
                 {
+<<<<<<< HEAD
                     "name": "Nova Team",
+=======
+                    "name": "Michael Still",
+>>>>>>> 62f6948... Added information on the following maintainers:
                     "email": "mikal@stillhq.com",
                     "launchpad_id": "milakstill"
                 }
@@ -1431,7 +1487,7 @@
             "description": "The Hortonworks Data Platform (HDP) Sahara plugin provides a way to provision HDP clusters on OpenStack using templates in a single click and in an easily repeatable fashion.",
             "maintainers": [
                 {
-                    "name": "Sahara Team",
+                    "name": "Sergey Lukjanov",
                     "email": "slukjanov@mirantis.com",
                     "launchpad_id": "slukjanov"
                 }
@@ -1450,7 +1506,7 @@
             "description": "Vanilla plugin is a reference plugin implementation which allows to operate with cluster with Apache Hadoop.",
             "maintainers": [
                 {
-                    "name": "Sahara Team",
+                    "name": "Sergey Lukjanov",
                     "email": "slukjanov@mirantis.com",
                     "launchpad_id": "slukjanov"
                 }
@@ -1464,3 +1520,4 @@
         }
     ]
 }
+
