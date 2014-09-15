@@ -77,15 +77,17 @@
                 },
                 {
                     "name": "Mike Perez",
+                    "email": "thingee@gmail.com",
                     "launchpad_id": "thingee"
                 },
                 {
                     "name": "Edward Hope-Morley",
-                    "launchpad_id": "edward-hope-morley"
+                    "email": "edward.hope-morley@canonical.com",
+                    "launchpad_id": "hopem"
                 }
             ],
             "wiki": "http://docs.openstack.org/trunk/config-reference/content/ceph-rados.html",
-            "releases": ["Cactus", "Diablo", "Essex", "Folsom", "Grizzly", "Havana", "Icehouse"]
+            "releases": ["Cactus", "Diablo", "Essex", "Folsom", "Grizzly", "Havana", "Icehouse", "Juno"]
         },
         {
             "project_id": "openstack/cinder",
@@ -99,7 +101,8 @@
                 }
             ],
             "description": "The Xen Storage Manager volume driver (xensm) is a XenAPI hypervisor specific volume driver, and can be used to provide basic storage functionality, including volume creation and destruction, on a number of different storage back-ends.",
-            "wiki": "http://docs.openstack.org/trunk/config-reference/content/xensm.html"
+            "wiki": "http://docs.openstack.org/trunk/config-reference/content/xensm.html",
+            "releases": ["Juno"]
         },
         {
             "project_id": "openstack/cinder",
@@ -114,9 +117,7 @@
                 }
             ],
             "wiki": "http://docs.openstack.org/trunk/config-reference/content/xenapinfs.html",
-            "releases": [
-                       "Grizzly"
-            ]
+            "releases": ["Grizzly"]
         },
         {
             "project_id": "openstack/cinder",
@@ -145,15 +146,35 @@
             "description": "The driver allows to configure the OpenStack Block Storage service for use with Coraid storage appliances. Coraid storage appliances use the low-latency ATA-over-Ethernet (ATA) protocol to provide high-bandwidth data transfer between hosts and data on the network.",
             "maintainers": [
                 {
-                    "name": "Alyseo team",
-                    "email": "openstack@alyseo.com",
+                    "name": "Yacine Kheddache",
+                    "email": "yacine@alyseo.com",
                     "launchpad_id": "yacine-b"
                 }
             ],
             "wiki": "http://docs.openstack.org/trunk/config-reference/content/coraid_aoe_driver_configuration.html",
-            "releases": ["Grizzly", "Havana", "Icehouse"]
+            "releases": ["Grizzly", "Havana", "Icehouse", "Juno"]
         },
         {
+            "project_id": "openstack/cinder",
+            "vendor": "Datera",
+            "name": "Datera Volume driver",
+            "description": "Datera Volume driver can allow OpenStack services communicate with Datera storage for both vHost and ISCSI.",
+            "maintainers": [
+                {
+                    "name": "Mike Perez",
+                    "email": "thingee@gmail.com",
+                    "launchpad_id": "thingee"
+                }
+            ],
+            "wiki": "http://docs.openstack.org/developer/cinder/api/cinder.volume.drivers.datera.html?highlight=datera#module-cinder.volume.drivers.datera",
+            "releases": ["Juno"],
+            "ci": {
+                  "id":"datera-ci",
+                  "success_pattern": "Build Successful",
+                  "failure_pattern": "Build Failed"
+            }
+          },
+          {
             "project_id": "openstack/cinder",
             "vendor": "Dell",
             "name": "Dell EqualLogic volume driver",
@@ -166,7 +187,7 @@
                 }
             ],
             "wiki": "http://docs.openstack.org/trunk/config-reference/content/dell-equallogic-driver.html",
-            "releases": ["Havana", "Icehouse"]
+            "releases": ["Havana", "Icehouse", "Juno"]
         },
         {
             "project_id": "openstack/cinder",
@@ -215,6 +236,49 @@
         },
         {
             "project_id": "openstack/cinder",
+            "vendor": "Fujitsu",
+            "name": "Fujitsu DX Volume driver",
+            "description": "This driver supports ETERNUS DX S2 and the S3 series and runs volume operations by communicating with the backend Fujitsu storage.It uses a CIM client in Python called PyWBEM to perform CIM operations over HTTP..",
+            "maintainers": [
+                {
+                    "name": "Jun Ishizaki",
+                    "email": "j-ishizaki@jp.fujitsu.com",
+                    "launchpad_id": "j-ishizaki"
+                }
+            ],
+            "releases": ["Juno"]
+          },
+          {
+            "project_id": "openstack/cinder",
+            "vendor": "Fujitsu",
+            "name": "ISCSI Drivers for ETERNUS DX arrays based on SMI-S",
+            "description": "This driver supports ETERNUS DX S2 and the S3 series and runs volume operations by communicating with the backend Fujitsu storage.It uses a CIM client in Python called PyWBEM to perform CIM operations over HTTP..",
+            "maintainers": [
+                {
+                    "name": "Jun Ishizaki",
+                    "email": "j-ishizaki@jp.fujitsu.com",
+                    "launchpad_id": "j-ishizaki"
+                }
+            ],
+            "releases": ["Juno"]
+          },
+          {
+            "project_id": "openstack/cinder",
+            "vendor": "Fusion-io",
+            "name": "Fusion-io Control Volume driver",
+            "description": "This driver will allow Cinder to interact with the Fusion-io ioControl Hybrid storage array.",
+            "maintainers": [
+                {
+                    "name": "Edward Balduf",
+                    "email": "ebalduf@fusionio.com",
+                    "launchpad_id": "ebalduf"
+                }
+            ],
+            "wiki": "http://docs.openstack.org/developer/cinder/api/cinder.volume.drivers.fusionio.ioControl.html",
+            "releases": ["Juno"]
+          },
+        {
+            "project_id": "openstack/cinder",
             "vendor": "Gluster",
             "name": "GlusterFS driver",
             "description": "This driver enables use of GlusterFS in a similar fashion as the NFS driver. It supports basic volume operations, and like NFS, does not support snapshot/clone.",
@@ -226,7 +290,7 @@
                 }
             ],
             "wiki": "http://docs.openstack.org/trunk/config-reference/content/GlusterFS-driver.html",
-            "releases": ["Grizzly", "Havana", "Icehouse"]
+            "releases": ["Grizzly", "Havana", "Icehouse", "Juno"]
         },
         {
             "project_id": "openstack/cinder",
@@ -246,7 +310,7 @@
                 }
             ],
             "wiki": "http://docs.openstack.org/trunk/config-reference/content/hp-3par-driver.html",
-            "releases": ["Grizzly", "Havana", "Icehouse"]
+            "releases": ["Grizzly", "Havana", "Icehouse", "Juno"]
         },
         {
             "project_id": "openstack/cinder",
@@ -266,7 +330,7 @@
                 }
             ],
             "wiki": "http://docs.openstack.org/trunk/config-reference/content/hp-3par-driver.html",
-            "releases": ["Grizzly", "Havana", "Icehouse"]
+            "releases": ["Grizzly", "Havana", "Icehouse", "Juno"]
         },
         {
             "project_id": "openstack/cinder",
@@ -286,7 +350,7 @@
                 }
             ],
             "wiki": "http://docs.openstack.org/trunk/config-reference/content/HPSan-driver.html",
-            "releases": ["Diablo", "Essex", "Folsom", "Grizzly", "Havana", "Icehouse"]
+            "releases": ["Diablo", "Essex", "Folsom", "Grizzly", "Havana", "Icehouse", "Juno"]
         },
         {
             "project_id": "openstack/cinder",
@@ -311,7 +375,7 @@
                 }
             ],
             "wiki": "http://docs.openstack.org/trunk/config-reference/content/hds-volume-driver.html",
-            "releases": ["Havana"]
+            "releases": ["Havana", "Juno"]
         },
         {
             "project_id": "openstack/cinder",
@@ -326,7 +390,7 @@
                 }
             ],
             "wiki": "http://docs.openstack.org/trunk/config-reference/content/huawei-storage-driver.html",
-            "releases": ["Havana"]
+            "releases": ["Havana", "Juno"]
         },
         {
             "project_id": "openstack/cinder",
@@ -335,12 +399,13 @@
             "description": "The GPFS driver enables the use of GPFS in a fashion similar to that of the NFS driver. With the GPFS driver, instances do not actually access a storage device at the block level. Instead, volume backing files are created in a GPFS file system and mapped to instances, which emulate a block device.",
             "maintainers": [
                 {
-                    "name": "IBM team",
-                    "email": "openstack_storage_drivers@il.ibm.com"
+                    "name": "Sasikanth Eda",
+                    "email": "sasikanth.eda@in.ibm.com",
+                    "launchpad_id": "sasikanth"
                 }
             ],
             "wiki": "http://docs.openstack.org/trunk/config-reference/content/GPFS-driver.html",
-            "releases": ["Havana", "Icehouse"]
+            "releases": ["Havana", "Icehouse", "Juno"]
         },
         {
             "project_id": "openstack/cinder",
@@ -349,12 +414,13 @@
             "description": "The IBM NAS Driver works using NFS protocol, and implements other value added features. It allows support for IBM SONAS and Storwize V7000 Unified filers to host storage for OpenStack environment.",
             "maintainers": [
                 {
-                    "name": "IBM team",
-                    "email": "openstack_storage_drivers@il.ibm.com"
+                    "name": "Nilesh Bhosale",
+                    "email": "nilesh.bhosale@in.ibm.com",
+                    "launchpad_id": "nilesh-bhosale"
                 }
             ],
             "wiki": "http://www-03.ibm.com/support/techdocs/atsmastr.nsf/WebIndex/WP102443",
-            "releases": ["Icehouse"]
+            "releases": ["Icehouse", "Juno"]
         },
         {
             "project_id": "openstack/cinder",
@@ -363,12 +429,13 @@
             "description": "The volume management driver for Storwize family and SAN Volume Controller (SVC) provides OpenStack Compute instances with access to IBM Storwize family or SVC storage systems.",
             "maintainers": [
                 {
-                    "name": "IBM team",
-                    "email": "openstack_storage_drivers@il.ibm.com"
+                    "name": "Tao Bai",
+                    "email": "baitaosh@cn.ibm.com",
+                    "launchpad_id": "baitao2010"
                 }
             ],
             "wiki": "http://docs.openstack.org/trunk/config-reference/content/ibm-storwize-svc-driver.html",
-            "releases": ["Folsom", "Grizzly", "Havana", "Icehouse"]
+            "releases": ["Folsom", "Grizzly", "Havana", "Icehouse", "Juno"]
         },
         {
             "project_id": "openstack/cinder",
@@ -377,8 +444,9 @@
             "description": "There is a unified volume back-end for IBM XIV and DS8K storage.",
             "maintainers": [
                 {
-                    "name": "IBM team",
-                    "email": "openstack_storage_drivers@il.ibm.com"
+                    "name": "Erik Zaadi",
+                    "email": "erikz@il.ibm.com",
+                    "launchpad_id": "erikzaadi"
                 }
             ],
             "wiki": "http://docs.openstack.org/trunk/config-reference/content/ibm-xiv-driver.html",
@@ -391,14 +459,13 @@
             "description": "The NetApp Unified Driver for Cinder provides integration for multiple storage controller families and protocols. A storage family corresponds to storage systems built on different NetApp technologies such as clustered Data ONTAP, 7-Mode, and NetApp E-Series and EF-Series systems. The storage protocol refers to the protocol used to initiate data storage and access operations to those storage systems.  Clustered Data ONTAP systems can be used with Cinder via Parallelized NFS (pNFS), NFS, and iSCSI storage protocols. 7-mode systems can be used with either NFS or iSCSI. E-Series and EF-Series systems are accessible via iSCSI.",
             "maintainers": [
                 {
-                    "name": "NetApp OpenStack Team",
-                    "irc": "#openstack-netapp",
-                    "email": "xdl-openstack-dev@netapp.com",
-                    "launchpad_id": "netapp"
+                    "name": "Clinton Knight",
+                    "email": "cknight@netapp.com",
+                    "launchpad_id": "clintonk"
                 }
             ],
             "wiki": "http://docs.openstack.org/trunk/config-reference/content/netapp-volume-driver.html",
-            "releases": ["Essex", "Folsom", "Grizzly", "Havana", "Icehouse"]
+            "releases": ["Essex", "Folsom", "Grizzly", "Havana", "Icehouse", "Juno"]
         },
         {
             "project_id": "openstack/cinder",
@@ -413,7 +480,22 @@
                 }
             ],
             "wiki": "http://docs.openstack.org/trunk/config-reference/content/nexenta-driver.html",
-            "releases": ["Essex", "Folsom", "Grizzly", "Havana", "Icehouse"]
+            "releases": ["Essex", "Folsom", "Grizzly", "Havana", "Icehouse", "Juno"]
+        },
+        {
+            "project_id": "openstack/cinder",
+            "vendor": "Nimble Storage",
+            "name": "Nimble Storage Volume driver",
+            "description": "Nimble Storage is hybrid storage combining both flash SSD and near-line SAS disks. The architecture is based on CASL (Cache Accelerated Sequential Layout) where random writes are coalesced in NVRAM + flushed to disks sequentially, with the flash/SSD as read acceleration cache. CASL architecture provides non-disruptive upgrade for compute (processer/memory), cache (flash SSDs), capacity (disk shelves) as well as scale-out where up to four nodes of Nimble controllers can be clustered.",
+            "maintainers": [
+                {
+                    "name": "Jay Wang",
+                    "email": "jwang@nimblestorage.com",
+                    "launchpad_id": "jwang-6"
+                }
+            ],
+             "wiki": "http://docs.openstack.org/developer/cinder/api/cinder.volume.drivers.nimble.html?highlight=nimble#module-cinder.volume.drivers.nimble",
+             "releases": ["Juno"]
         },
         {
             "project_id": "openstack/cinder",
@@ -422,13 +504,14 @@
             "description": "The default volume back-end uses local volumes managed by LVM. This driver supports different transport protocols to attach volumes, currently ISCSI and ISER.",
             "maintainers": [
                 {
-                    "name": "Cinder Team",
+                    "name": "John Griffith",
                     "email": "john.griffith@solidfire.com",
+                    "irc": "#jgriffith",
                     "launchpad_id": "john-griffith"
                 }
             ],
             "wiki": "http://docs.openstack.org/trunk/config-reference/content/lvm-volume-driver.html",
-            "releases": ["Folsom", "Grizzly", "Havana", "Icehouse"]
+            "releases": ["Folsom", "Grizzly", "Havana", "Icehouse", "Juno"]
         },
         {
             "project_id": "openstack/cinder",
@@ -437,12 +520,14 @@
             "description": "The Network File System (NFS) is a distributed file system protocol. An NFS server exports one or more of its file systems, known as shares. An NFS client can mount these exported shares on its own file system. File actions on this mounted remote file system can be performed as if the file system were local.",
             "maintainers": [
                 {
-                    "name": "Cinder Team",
+                    "name": "John Griffith",
                     "email": "john.griffith@solidfire.com",
+                    "irc": "#jgriffith",
                     "launchpad_id": "john-griffith"
                 }
             ],
-            "wiki": "http://docs.openstack.org/trunk/config-reference/content/NFS-driver.html"
+            "wiki": "http://docs.openstack.org/trunk/config-reference/content/NFS-driver.html",
+            "releases": ["Juno"]
         },
         {
             "project_id": "openstack/cinder",
@@ -451,12 +536,29 @@
             "description": "Sheepdog is an open-source distributed storage system that provides a virtual storage pool utilizing internal disk of commodity servers. This driver enables use of Sheepdog through QEMU/KVM.",
             "maintainers": [
                 {
-                    "name": "Cinder Team",
+                    "name": "John Griffith",
                     "email": "john.griffith@solidfire.com",
+                    "irc": "#jgriffith",
                     "launchpad_id": "john-griffith"
                 }
             ],
-            "wiki": "http://docs.openstack.org/trunk/config-reference/content/sheepdog-driver.html"
+            "wiki": "http://docs.openstack.org/trunk/config-reference/content/sheepdog-driver.html",
+            "releases": ["Juno"]
+        },
+        {
+            "project_id": "openstack/cinder",
+            "vendor": "Oracle",
+            "name": "ZFS Storage Appliance driver",
+            "description": "Cinder Driver support for Oracle's ZFS Storage Appliance product line. It's an iSCSI driver that uses REST API to communicate out of band with the storage controller.",
+            "maintainers": [
+                {
+                    "name": "Juan Zuluaga",
+                    "email": "juan.c.zuluaga@oracle.com",
+                    "launchpad_id": "juan-zuluaga"
+                }
+            ],
+            "wiki": "http://docs.openstack.org/developer/cinder/api/cinder.volume.drivers.zfssa.zfssaiscsi.html?highlight=zfs#module-cinder.volume.drivers.zfssa.zfssaiscsi",
+            "releases": ["Juno"]
         },
         {
             "project_id": "openstack/cinder",
@@ -475,6 +577,36 @@
         },
         {
             "project_id": "openstack/cinder",
+            "vendor": "Pure Storage",
+            "name": "Volume driver for Pure Storage FlashArray storage system",
+            "description": "Pure Storage builds all-flash storage arrays. The active/active controller architecture is based on the Purity Operating Environment and providing an adaptive metadata fabric that is scalable, granular to 512B, and protected. Pure systems are based on durable, resilient MLC flash and providing consistent high performance. Pure Storage FlashArrays leverage deduplication and compression technologies to reduce data written thereby lowering costs and increasing density. FlashArrays are designed for non-disruptive operations and can be upgraded or expanded without disruption or performance degradation.",
+            "maintainers": [
+                {
+                    "name": "Viktor Ying",
+                    "email": "victor.ying@purestorage.com",
+                    "launchpad_id": "viktor-ying"
+                },
+                {
+                    "name": "Wes Mertes",
+                    "email": "wes@purestorage.com",
+                    "launchpad_id": "wes-w"
+                 },
+                 {
+                    "name": "Zach Olstein",
+                    "email": "zach.olstein@purestorage.com",
+                    "launchpad_id": "zach-olstein"
+                 }
+            ],
+            "wiki": "http://specs.openstack.org/openstack/cinder-specs/specs/juno/pure-iscsi-volume-driver.html",
+            "releases": ["Juno"],
+            "ci": {
+                   "id": "purestorage-cinder-ci",
+                   "success_pattern": "Build Successful",
+                   "failure_pattern": "Build Failed"
+          }
+        },
+        {
+            "project_id": "openstack/cinder",
             "vendor": "Scality",
             "name": "Scality SOFS driver",
             "description": "The driver manages volumes on the Scality SOFS filesystem. This gives OpenStack users the option of storing their data on a Scality Ring object storage cluster.",
@@ -485,7 +617,13 @@
                     "launchpad_id": "jean-marc-saffroy"
                 }
             ],
-            "releases": ["Grizzly", "Havana", "Icehouse"]
+            "wiki": "http://www.scality.com/scality-delivers-persistent-block-storage-for-virtual-machines-march-13th-2013",
+            "releases": ["Grizzly", "Havana", "Icehouse", "Juno"],
+            "ci": {
+                   "id": "scality-ci",
+                   "success_pattern": "Build Successful",
+                   "failure_pattern": "Build Failed"
+           }
         },
         {
             "project_id": "openstack/cinder",
@@ -515,7 +653,7 @@
                 }
             ],
             "wiki": "http://docs.openstack.org/trunk/config-reference/content/vmware-vmdk-driver.html",
-            "releases": ["Havana", "Icehouse"]
+            "releases": ["Havana", "Icehouse", "Juno"]
         },
         {
             "project_id": "openstack/cinder",
@@ -530,7 +668,7 @@
                 }
             ],
             "wiki": "http://docs.openstack.org/trunk/config-reference/content/zadara-volume-driver.html",
-            "releases": ["Folsom", "Grizzly", "Havana", "Icehouse"]
+            "releases": ["Folsom", "Grizzly", "Havana", "Icehouse", "Juno"]
         },
         {
             "project_id": "openstack/neutron",
@@ -546,10 +684,11 @@
                 }
             ],
             "wiki": "https://wiki.openstack.org/wiki/Neutron/LBaaS/A10Networks",
-
             "releases": ["Juno"],
             "ci": {
-                "id": "a10networks-ci"
+                "id": "a10networks-ci",
+                "success_pattern": "Build Successful",
+                "failure_pattern": "Build Failed"
             }
         },
         {
@@ -568,7 +707,9 @@
             "wiki": "https://wiki.openstack.org/wiki/Arista-neutron-ml2-driver",
             "releases": ["Havana", "Icehouse"],
             "ci": {
-                "id": "arista-test"
+                "id": "arista-test",
+                "success_pattern": "Build Successful",
+                "failure_pattern": "Build Failed"
             }
         },
         {
@@ -590,7 +731,7 @@
                 "success_pattern": "BigSwitch-ML2-Driver \\S+ : SUCCESS",
                 "failure_pattern": "BigSwitch-ML2-Driver \\S+ : FAILURE"
             },
-            "releases": ["Icehouse"]
+            "releases": ["Icehouse", "Juno"]
         },
         {
             "project_id": "openstack/neutron",
@@ -617,7 +758,7 @@
             "project_id": "openstack/neutron",
             "vendor": "Brocade",
             "name": "Brocade Neutron plugin",
-            "description": "Brocade Neutron Plugin for VDX/VCS provides a means to interface Openstack’s Networking to orchestrate Brocade’s physical switches.",
+            "description": "Brocade Neutron Plugin for VDX/VCS provides a means to interface Openstackâs Networking to orchestrate Brocadeâs physical switches.",
             "maintainers": [
                 {
                     "name": "Shiv Haris",
@@ -647,7 +788,7 @@
                     "launchpad_id": "shh"
                 }
             ],
-            "wiki": "https://wiki.openstack.org/wiki/Brocade-ML2-Mechanism",
+            "wiki": "https://wiki.openstack.org/wiki/Neutron/ML2/BrocadeML2Mechanism",
             "releases": ["Icehouse"],
             "ci": {
                 "id": "bci",
@@ -667,6 +808,7 @@
                     "launchpad_id": "natarajk"
                 }
             ],
+            "wiki": "http://specs.openstack.org/openstack/neutron-specs/specs/juno/vyatta_l3_plugin.html",
             "releases": ["Juno"],
             "ci": {
                 "id": "brocade-oss-service",
@@ -687,7 +829,7 @@
                 }
             ],
             "wiki": "https://wiki.openstack.org/wiki/Neutron/ML2/MechCiscoNexus",
-            "releases": ["Havana", "Icehouse"],
+            "releases": ["Havana", "Icehouse", "Juno"],
             "ci": {
                 "id": "cisco_neutron_ci",
                 "success_pattern": "ml2_nexus \\S+ : SUCCESS",
@@ -707,12 +849,32 @@
                 }
             ],
             "wiki": "https://wiki.openstack.org/wiki/Cisco-neutron",
-            "releases": ["Grizzly", "Havana", "Icehouse"],
+            "releases": ["Grizzly", "Havana", "Icehouse", "Juno"],
             "ci": {
                 "id": "cisco_neutron_ci",
                 "success_pattern": "neutron_zuul \\S+ : SUCCESS",
                 "failure_pattern": "neutron_zuul \\S+ : FAILURE"
             }
+        },
+        {
+            "project_id": "openstack/neutron",
+            "vendor": "Citrix",
+            "name": "NetScaler LBaas driver",
+            "description": "The NetScaler loadbalancer integration in Neutron LBaaS implements all the LBaaS driver CRUD APIs defined in the IceHouse release: It implements all the defined operations on VIPs, Pools, Pool Members and Health Monitors. The integration consists of a driver class configured in the Neutron config file (neutron.conf), and the accompanying unit tests.",
+            "maintainers": [
+                {
+                    "name": "Youcef Laribi",
+                    "email": "youcef.laribi@citrix.com",
+                    "launchpad_id": "youcef-laribi"
+                }
+            ],
+            "wiki": "https://wiki.openstack.org/wiki/Neutron/LBaaS/NetScaler",
+            "releases": ["Havana", "Icehouse", "Juno"],
+            "ci": {
+                  "id": "openstack-citrix-ci",
+                  "success_pattern": "Build Successful",
+                  "failure_pattern": "Build Failed"
+           }
         },
         {
             "project_id": "openstack/neutron",
@@ -753,6 +915,7 @@
                 }
             ],
             "wiki": "https://wiki.openstack.org/wiki/Neutron/EmbraneNeutronPlugin",
+            "releases": ["Juno"],
             "ci": {
                 "id": "eci",
                 "success_pattern": "Build Successful",
@@ -772,7 +935,7 @@
                     "launchpad_id": "mmaleckk"
                 }
             ],
-            "releases": ["Icehouse"],
+            "releases": ["Icehouse", "Juno"],
             "wiki": "https://wiki.openstack.org/wiki/Neutron/LBaaS/EmbraneDriver",
             "ci": {
                 "id": "eci",
@@ -784,7 +947,7 @@
             "project_id": "openstack/neutron",
             "vendor": "Extreme Networks",
             "name": "Extreme Networks Plugin",
-            "description": "The Extreme Networks OpenStack plugin runs on Extreme XOS 15.3 and later releases. This plug-in is supported on all EXOS based platforms and includes the latest OpenStack API capabilities. The Extreme Networks OpenStack 2.0 plugin enables “Networking-as-a-Service” for both Physical and Virtual Extreme Networks.",
+            "description": "The Extreme Networks OpenStack plugin runs on Extreme XOS 15.3 and later releases. This plug-in is supported on all EXOS based platforms and includes the latest OpenStack API capabilities. The Extreme Networks OpenStack 2.0 plugin enables âNetworking-as-a-Serviceâ for both Physical and Virtual Extreme Networks.",
             "wiki": "http://extrcdn.extremenetworks.com/wp-content/uploads/2014/02/SDN_OpenStack_Install_Guide_Final1.pdf"
         },
         {
@@ -794,9 +957,10 @@
             "description": "Freescale SDN ML2 Mechanism Driver is designed to support Cloud Resource Discovery Service (CRD).",
             "maintainers": [
                 {
-                    "name": "Freescale Openstack Team",
+                    "name": "Trinath Somanchi",
                     "irc": "trinaths",
-                    "email": "fslosci@freescale.com"
+                    "email": "trinath.somanchi@freescale.com",
+                    "launchpad_id": "trinaths"
                 }
             ],
             "wiki": "https://wiki.openstack.org/wiki/Freescale_SDN_ML2_Mechanism_Driver",
@@ -814,9 +978,9 @@
             "description": "Freescale FWaaS Plugin is designed to support Cloud Resource Discovery Service (CRD).",
             "maintainers": [
                 {
-                    "name": "Freescale Openstack Team",
+                    "name": "Trinath Somanchi",
                     "irc": "trinaths",
-                    "email": "fslosci@freescale.com"
+                    "email": "trinath.somanchi@freescale.com"
                 }
             ],
             "wiki": "https://wiki.openstack.org/wiki/Freescale_Firewall_as_a_Service_Plugin",
@@ -839,20 +1003,41 @@
                     "launchpad_id": "mb-s"
                 }
             ],
-            "wiki": "http://docs.openstack.org/trunk/config-reference/content/networking-plugin-linuxbridge_agent.html"
+            "wiki": "https://wiki.openstack.org/wiki/IBM-Neutron",
+            "releases": ["Juno"]
         },
         {
             "project_id": "openstack/neutron",
             "vendor": "Juniper",
             "name": "Juniper Networks plug-in for OpenStack Neutron",
             "description": "The Juniper Networks plug-in for OpenStack Neutron enables orchestration of virtual and physical network configurations. The plug-in supports Junos Space Network Director API (NDAPI) as well as NETCONF/DMI to configure the physical network.",
-            "wiki": "http://www.juniper.net/techpubs/en_US/release-independent/junos/topics/topic-map/openstack-neutron-plugin.html"
+            "wiki": "http://www.juniper.net/techpubs/en_US/release-independent/junos/topics/topic-map/openstack-neutron-dmi-plugin.html"
+        },
+        {
+            "project_id": "openstack/neutron",
+            "vendor": "Juniper",
+            "name": "Juniper Opencontrail plugin for Neutron resources",
+            "description": "Opencontrail is open source network virtualization solution. It uses standards based BGP L3VPN closed user groups to implement virtual networks.",
+            "maintainers": [
+                {
+                    "name": "Praneet Bachheti",
+                    "email": "praneetb@juniper.net",
+                    "launchpad_id": "praneetb"
+                },
+                {
+                    "name": "Hampapur Ajay",
+                    "email": "hajay@juniper.net",
+                    "launchpad_id": "hajay"
+                }
+            ],
+            "wiki": "http://opencontrail.org/opencontrail-architecture-documentation",
+            "releases": ["Icehouse", "Juno"]
         },
         {
             "project_id": "openstack/neutron",
             "vendor": "Mellanox",
             "name": "Mellanox Neutron Plugin",
-            "description": "The Openstack Mellanox Neutron plugin supports Mellanox embedded switch functionality as part of the VPI (Ethernet/InfiniBand) HCA. Mellanox Neutron Plugin allows hardware vNICs (based on SR-IOV virtual functions) per each Virtual Machine vNIC to have its unique connectivity, security, and QoS attributes.",
+            "description": "The Openstack Mellanox Neutron plugin supports Mellanox embedded switch functionality as part of the VPI (Ethernet/InfiniBand) HCA.",
             "maintainers": [
                 {
                     "name": "Omri Marcovitch",
@@ -924,6 +1109,7 @@
                 }
             ],
             "wiki": "https://wiki.openstack.org/wiki/Spec-QuantumMidoNetPlugin",
+            "releases": ["Juno"],
             "ci": {
                 "id": "midokura"
             }
@@ -942,7 +1128,7 @@
                 }
             ],
             "wiki": "https://wiki.openstack.org/wiki/Neutron/NEC_OpenFlow_Plugin",
-            "releases": ["Folsom", "Grizzly", "Havana", "Icehouse"],
+            "releases": ["Folsom", "Grizzly", "Havana", "Icehouse", "Juno"],
             "ci": {
                 "id": "nec-openstack-ci",
                 "success_pattern": "Build succeed",
@@ -953,7 +1139,7 @@
             "project_id": "openstack/neutron",
             "vendor": "Nuage Networks",
             "name": "Nuage Networks Neutron Plugin",
-            "description": "Nuage Networks’ OpenStack networking plugin enables integration of OpenStack with Nuage Networks’ Virtual Service Platform (VSP).",
+            "description": "Nuage Networks OpenStack networking plugin enables integration of OpenStack with Nuage Networks Virtual Service Platform (VSP).",
             "maintainers": [
                 {
                     "name": "Ronak Shah",
@@ -969,6 +1155,7 @@
                 }
             ],
             "wiki": "http://docs.openstack.org/trunk/config-reference/content/networking-plugin-nuage.html",
+            "releases": ["Juno"],
             "ci": {
                 "id": "nuage-ci",
                 "success_pattern": "SUCCESS",
@@ -980,7 +1167,15 @@
             "vendor": "One Convergence",
             "name": "One Convergence NVSD Controller",
             "description": "One Convergence Neutron plugin provides Neutron APIs for the network virtualization solution implemented with One Convergence Network Virtualization and Services Delivery(NVSD) Controller.",
-            "wiki": "https://github.com/openstack/neutron/tree/master/neutron/plugins/oneconvergence",
+            "maintainers": [
+                {
+                    "name": "Gary Kotton",
+                    "email": "gkotton@redhat.com",
+                    "launchpad_id": "garyk"
+                }
+            ],
+            "wiki": "http://docs.openstack.org/trunk/config-reference/content/networking-plugin-nvsd.html",
+            "releases": ["Juno"],
             "ci": {
                 "id": "oneconvergence",
                 "success_pattern": "success",
@@ -994,13 +1189,14 @@
             "description": "OpenDaylight has driver for Neutron ML2 (Modular Layer 2) plugin to enable communication between Neutron and OpenDaylight. On the SDN controller side, OpenDaylight has northbound APIs to interact with Neutron and use OVSDB (Open vSwitch Database Management Protocol) for southbound configuration of vSwitches on compute nodes. Thus OpenDaylight can manage network connectivity and initiate GRE or VXLAN tunnels for compute nodes.",
             "maintainers": [
                 {
-                    "name": "OpenDaylight Team",
+                    "name": "Kyle Mestery",
                     "irc": "mestery",
-                    "email": "mestery@mestery.com",
+                    "email": "kmestery@cisco.com",
                     "launchpad_id": "mestery"
                 }
             ],
             "wiki": "http://openstack.redhat.com/OpenDaylight_integration",
+            "releases": ["Juno"],
             "ci": {
                 "id": "odl-jenkins",
                 "success_pattern": "SUCCESS",
@@ -1014,11 +1210,14 @@
             "description": "Neutron Linux Bridge plugin configures a Linux Bridge to create Neutron Network, Port, and Attachment abstractions. Plugin manages VLANs.",
             "maintainers": [
                 {
-                    "name": "Neutron Team",
-                    "irc": "rkukura"
+                    "name": "Kyle Mestery",
+                    "irc": "rmestery",
+                    "email": "kmestery@cisco.com",
+                    "launchpad_id": "mestery"
                 }
             ],
-            "wiki": "http://docs.openstack.org/trunk/config-reference/content/networking-plugin-linuxbridge_agent.html"
+            "wiki": "http://docs.openstack.org/trunk/config-reference/content/networking-plugin-linuxbridge_agent.html",
+            "releases": ["Juno"]
         },
         {
             "project_id": "openstack/neutron",
@@ -1027,13 +1226,14 @@
             "description": "The ML2 plug-in is a core plug-in working as part of the OpenStack Neutron Virtual Network Service",
             "maintainers": [
                 {
-                    "name": "Neutron Team",
-                    "irc": "rkukura",
-                    "email": "kukura@noironetworks.com",
-                    "launchpad_id": "rkukura"
+                    "name": "Kyle Mestery",
+                    "irc": "rmestery",
+                    "email": "kmestery@cisco.com",
+                    "launchpad_id": "mestery"
                 }
             ],
-            "wiki": "http://docs.openstack.org/trunk/config-reference/content/networking-options-plugins-ml2.html"
+            "wiki": "http://docs.openstack.org/trunk/config-reference/content/networking-options-plugins-ml2.html",
+            "releases": ["Juno"]
         },
         {
             "project_id": "openstack/neutron",
@@ -1042,13 +1242,13 @@
             "description": "The Meta Plug-in allows you to use multiple plug-ins at the same time.",
             "maintainers": [
                 {
-                    "name": "NTT Team",
+                    "name": "Nachi Ueno",
                     "irc": "nati_ueno",
                     "email": "nachi@ntti3.com",
                     "launchpad_id": "nati-ueno"
                 }
             ],
-            "releases": ["Folsom", "Grizzly", "Havana", "Icehouse"],
+            "releases": ["Folsom", "Grizzly", "Havana", "Icehouse", "Juno"],
             "wiki": "http://docs.openstack.org/trunk/config-reference/content/networking-plugin-meta.html",
             "ci": {
                 "id": "metaplugintest",
@@ -1063,13 +1263,13 @@
             "description": "The Ryu OpenFlow Controller plugin enables Ryu Network Operating System with OpenStack as Network controller.",
             "maintainers": [
                 {
-                    "name": "YAMAMOTO Takashi",
+                    "name": "Yamamoto Takashi",
                     "irc": "yamamoto",
                     "email": "yamamoto@valinux.co.jp",
                     "launchpad_id": "yamamoto"
                 }
             ],
-            "releases": ["Folsom", "Grizzly", "Havana", "Icehouse"],
+            "releases": ["Folsom", "Grizzly", "Havana", "Icehouse", "Juno"],
             "wiki": "https://github.com/osrg/ryu/wiki/OpenStack",
             "ci": {
                 "id": "neutronryu",
@@ -1084,14 +1284,14 @@
             "description": "The OpenFlow Agent (aka. ofagent) and the associated ML2 Mechanism Driver controls OpenFlow switches as a part of OpenStack Neutron.",
             "maintainers": [
                 {
-                    "name": "YAMAMOTO Takashi",
+                    "name": "Yamamoto Takashi",
                     "irc": "yamamoto",
                     "email": "yamamoto@valinux.co.jp",
                     "launchpad_id": "yamamoto"
                 }
             ],
-            "releases": ["Icehouse"],
             "wiki": "https://github.com/osrg/ryu/wiki/OpenStack",
+            "releases": ["Icehouse", "Juno"],
             "ci": {
                 "id": "neutronryu",
                 "success_pattern": "check-tempest-dsvm-ofagent \\S+ : SUCCESS",
@@ -1105,19 +1305,20 @@
             "description": "The Open vSwitch plug-in is a core plug-in working as part of the OpenStack Neutron Virtual Network Service.",
             "maintainers": [
                 {
-                    "name": "Neutron Team",
+                    "name": "Kyle Mestery",
                     "irc": "mestery",
-                    "email": "mestery@mestery.com",
+                    "email": "kmestery@cisco.com",
                     "launchpad_id": "mestery"
                 }
             ],
-            "wiki": "http://docs.openstack.org/trunk/config-reference/content/networking-plugin-openvswitch_agent.html"
+            "wiki": "http://docs.openstack.org/trunk/config-reference/content/networking-plugin-openvswitch_agent.html",
+            "releases": ["Juno"]
         },
         {
             "project_id": "openstack/neutron",
             "vendor": "PLUMgrid",
             "name": "PLUMgrid OpenStack Networking Suite Neutron Plugin",
-            "description": "PLUMgrid Neutron Plugin enables PLUMgrid OpenStack Networking Suite, which is a secure, comprehensive and open software solution that delivers terabits of performance and scales across tens of thousands of workloads. The product suite provides highly automated workflows that significantly reduce the deployment time of OpenStack clouds, enables users to create private Virtual Domains™ for their projects and is compatible with the leading OpenStack distributions.",
+            "description": "PLUMgrid Neutron Plugin enables PLUMgrid OpenStack Networking Suite which is a secure comprehensive and open software solution that delivers terabits of performance and scales across tens of thousands of workloads.",
             "maintainers": [
                 {
                     "name": "Fawad Khaliq",
@@ -1127,6 +1328,7 @@
                 }
             ],
             "wiki": "https://wiki.openstack.org/wiki/PLUMgrid-Neutron",
+            "releases": ["Juno"],
             "ci": {
                 "id": "plumgrid-ci"
             }
@@ -1157,8 +1359,8 @@
                     "launchpad_id": "samuelb"
                 }
             ],
-            "releases": ["Havana", "Icehouse"],
             "wiki": "https://wiki.openstack.org/wiki/Neutron/LBaaS/RadwareAlteon",
+            "releases": ["Havana", "Icehouse", "Juno"],
             "ci": {
                "id": "radware3rdpartytesting"
             }
@@ -1189,7 +1391,6 @@
             "vendor": "VMware",
             "name": "VMware NSX Network Virtualization Platform Plugin",
             "description": "The NSX plug-in is designed to manage VMware NSX platform, formerly known as Nicira NVP.",
-            "wiki": "http://docs.openstack.org/admin-guide-cloud/content/nsx_plugin.html",
             "maintainers": [
                 {
                     "name": "Aaron Rosen",
@@ -1198,7 +1399,8 @@
                     "launchpad_id": "arosen"
                 }
             ],
-            "releases": ["Essex", "Folsom", "Grizzly", "Havana", "Icehouse"],
+            "wiki": "http://docs.openstack.org/admin-guide-cloud/content/nsx_plugin.html",
+            "releases": ["Essex", "Folsom", "Grizzly", "Havana", "Icehouse", "Juno"],
             "ci": {
                 "id": "vmwareminesweeper"
             }
@@ -1217,6 +1419,7 @@
                 }
             ],
             "wiki": "https://wiki.openstack.org/wiki/Neutron/vArmour-Firewall",
+            "releases": ["Juno"],
             "ci": {
                 "id": "varmourci",
                 "success_pattern": "Successful",
@@ -1241,18 +1444,18 @@
                 }
             ],
             "wiki": "http://wiki.cloudbase.it/hyperv-tempest-exclusions",
+            "releases": ["Folsom", "Grizzly", "Havana", "Icehouse", "Juno"],
             "ci": {
                 "id": "hyper-v-ci",
                 "success_pattern": "Build succeeded",
                 "failure_pattern": "Build failed"
-            },
-            "releases": ["Folsom", "Grizzly", "Havana", "Icehouse"]
+            }
         },
         {
             "project_id": "openstack/nova",
             "vendor": "IBM",
             "name": "PowerKVM",
-            "description": "IBM® PowerKVM™ provides an open virtualization choice for IBM scale-out Linux systems based on the POWER8™ technology. This solution includes the Linux open source technology of KVM virtualization, and is designed to complement the performance, scalability and security qualities of Linux.",
+            "description": "IBMÂ® PowerKVMâ¢ provides an open virtualization choice for IBM scale-out Linux systems based on the POWER8â¢ technology. This solution includes the Linux open source technology of KVM virtualization, and is designed to complement the performance, scalability and security qualities of Linux.",
             "maintainers": [
                 {
                     "name": "Kurt Taylor",
@@ -1285,12 +1488,13 @@
             "description": "The baremetal driver is a hypervisor driver for OpenStack Nova Compute. It exposes hardware through the OpenStack APIs, using pluggable sub-drivers to deliver machine imaging (PXE) and power control (IPMI).",
             "maintainers": [
                 {
-                    "name": "Nova Team",
+                    "name": "Michael Still",
                     "email": "mikal@stillhq.com",
                     "launchpad_id": "mikalstill"
                 }
             ],
-            "wiki": "http://docs.openstack.org/trunk/config-reference/content/baremetal.html"
+            "wiki": "http://docs.openstack.org/trunk/config-reference/content/baremetal.html",
+            "releases": ["Juno"]
         },
         {
             "project_id": "openstack/nova",
@@ -1299,7 +1503,7 @@
             "description": "Adding during Havana, but removed from Nova during Icehouse, a prototype now lives outside the Nova tree. The Docker driver is a hypervisor driver for OpenStack Compute. Docker extends LXC with a high level API providing a lightweight virtualization solution that runs processes in isolation.",
             "maintainers": [
                 {
-                    "name": "Nova Team",
+                    "name": "Michael Still",
                     "email": "mikal@stillhq.com",
                     "launchpad_id": "milakstill"
                 }
@@ -1311,14 +1515,15 @@
             "project_id": "openstack/nova",
             "vendor": "OpenStack Community",
             "name": "Ironic",
+            "description": "OpenStack Bare Metal Provisioning Program.",
             "maintainers": [
                 {
-                    "name": "Ironic Team",
+                    "name": "Devananda van der Veen",
                     "email": "devananda@hp.com",
                     "launchpad_id": "devananda"
                 }
             ],
-            "description": "OpenStack Bare Metal Provisioning Program.",
+            "releases": ["Juno"],
             "wiki": "https://wiki.openstack.org/wiki/Ironic"
         },
         {
@@ -1328,7 +1533,7 @@
             "description": "KVM is configured as the default hypervisor for Compute.",
             "maintainers": [
                 {
-                    "name": "Nova Team",
+                    "name": "Michael Still",
                     "email": "mikal@stillhq.com",
                     "launchpad_id": "milakstill"
                 }
@@ -1342,7 +1547,7 @@
             "description": "LXC (Linux containers) is a virtualization technology that works at the operating system level. LXC (as currently implemented using libvirt in the Compute service) is not a secure virtualization technology for multi-tenant environments.",
             "maintainers": [
                 {
-                    "name": "Nova Team",
+                    "name": "Michael Still",
                     "email": "mikal@stillhq.com",
                     "launchpad_id": "milakstill"
                 }
@@ -1356,7 +1561,7 @@
             "description": "From the perspective of the Compute service, the QEMU hypervisor is very similar to the KVM hypervisor. The main difference is that QEMU does not support native virtualization.",
             "maintainers": [
                 {
-                    "name": "Nova Team",
+                    "name": "Michael Still",
                     "email": "mikal@stillhq.com",
                     "launchpad_id": "milakstill"
                 }
@@ -1370,7 +1575,7 @@
             "description": "XenAPI compute driver connects to XenServer hypervisors via XenAPI. Used to power Rackspace Cloud Servers (Public Cloud).",
             "maintainers": [
                 {
-                    "name": "Nova Team",
+                    "name": "Michael Still",
                     "email": "mikal@stillhq.com",
                     "launchpad_id": "milakstill"
                 }
@@ -1379,7 +1584,7 @@
             "ci": {
                 "id": "citrix_xenserver_ci"
             },
-            "releases": ["Austin", "Bexar", "Cactus", "Diablo", "Essex", "Folsom", "Grizzly", "Havana", "Icehouse"]
+            "releases": ["Austin", "Bexar", "Cactus", "Diablo", "Essex", "Folsom", "Grizzly", "Havana", "Icehouse", "Juno"]
         },
         {
             "project_id": "openstack/nova",
@@ -1388,12 +1593,13 @@
             "description": "Support for the Xen hypervisor when used with libvirt.",
             "maintainers": [
                 {
-                    "name": "Nova Team",
+                    "name": "Michael Still",
                     "email": "mikal@stillhq.com",
                     "launchpad_id": "milakstill"
                 }
             ],
-            "wiki": "http://docs.openstack.org/trunk/config-reference/content/introduction-to-xen.html"
+            "wiki": "http://docs.openstack.org/trunk/config-reference/content/introduction-to-xen.html",
+            "releases": ["Juno"]
         },
         {
             "project_id": "openstack/nova",
@@ -1406,7 +1612,7 @@
                 "success_pattern": "success",
                 "failure_pattern": "fail"
             },
-            "releases": ["Grizzly", "Havana", "Icehouse"],
+            "releases": ["Grizzly", "Havana", "Icehouse", "Juno"],
             "maintainers": [
                 {
                     "name": "Tracy Jones",
@@ -1416,10 +1622,12 @@
                 },
                 {
                     "name": "Gary Kotton",
+                    "email": "gkotton@redhat.com",
                     "launchpad_id": "garyk"
                 },
                 {
                     "name": "Vui Chiap Lam",
+                    "email": "vui@vmware.com",
                     "launchpad_id": "vui"
                 }
             ]
@@ -1431,7 +1639,7 @@
             "description": "The Hortonworks Data Platform (HDP) Sahara plugin provides a way to provision HDP clusters on OpenStack using templates in a single click and in an easily repeatable fashion.",
             "maintainers": [
                 {
-                    "name": "Sahara Team",
+                    "name": "Sergey Lukjanov",
                     "email": "slukjanov@mirantis.com",
                     "launchpad_id": "slukjanov"
                 }
@@ -1441,26 +1649,42 @@
                 "id": "savanna-ci",
                 "success_pattern": "gate-sahara-integration-hdp \\S+ : SUCCESS",
                 "failure_pattern": "gate-sahara-integration-hdp \\S+ : FAILURE"
-            }
-        },
-        {
+               }
+          },
+          {
             "project_id": "openstack/sahara",
             "vendor": "OpenStack Community",
             "name": "Vanilla Plugin",
             "description": "Vanilla plugin is a reference plugin implementation which allows to operate with cluster with Apache Hadoop.",
             "maintainers": [
                 {
-                    "name": "Sahara Team",
+                    "name": "Sergey Lukjanov",
                     "email": "slukjanov@mirantis.com",
                     "launchpad_id": "slukjanov"
                 }
             ],
             "wiki": "http://docs.openstack.org/developer/sahara/userdoc/vanilla_plugin.html",
+            "releases": ["Icehouse", "Juno"],
             "ci": {
-                "id": "savanna-ci",
-                "success_pattern": "gate-sahara-integration-vanilla1 \\S+ : SUCCESS",
-                "failure_pattern": "gate-sahara-integration-vanilla1 \\S+ : FAILURE"
+                   "id": "vanillabot",
+                   "success_pattern": "Build Successful",
+                   "failure_pattern": "Build Failed"
             }
-        }
+          },
+          {
+            "project_id": "openstack/sahara",
+            "vendor": "OpenStack Community",
+            "name": "Spark Plugin",
+            "description": "Vanilla plugin is a reference plugin implementation which allows to operate with cluster with Apache Hadoop.",
+            "maintainers": [
+                {
+                    "name": "Andrew Lazarev",
+                    "email": "alazarev@mirantis.com",
+                    "launchpad_id": "alazarev"
+                }
+            ],
+            "wiki": "https://wiki.openstack.org/wiki/Sahara/SparkPlugin",
+            "releases": ["Juno"]
+          }
     ]
 }
