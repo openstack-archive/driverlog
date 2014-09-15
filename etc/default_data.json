@@ -462,7 +462,7 @@
             "project_id": "openstack/cinder",
             "vendor": "ProphetStor",
             "name": "ProphetStor driver",
-            "description": "ProphetStor Storage Server enables x86 commodity hardware as enterprise-grade storage systems. ProphetStor storage can serve as a storage node for the OpenStack and its virtual servers through iSCSI and Fibre protocols.",
+            "description": "ProphetStor Fibre Channel and iSCSI drivers add support for ProphetStor Flexvisor through OpenStack Cinder. ProphetStor Flexvisor enables commodity x86 hardware as software-defined storage leveraging well-proven ZFS for disk management to provide enterprise grade storage services such as snapshots, data protection with different RAID levels, replication, and deduplication etc.",
             "maintainers": [
                 {
                     "name": "Rick Chen",
