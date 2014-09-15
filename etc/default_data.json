@@ -152,7 +152,12 @@
                 }
             ],
             "wiki": "http://docs.openstack.org/trunk/config-reference/content/coraid_aoe_driver_configuration.html",
-            "releases": ["Grizzly", "Havana", "Icehouse", "Juno"]
+            "releases": ["Grizzly", "Havana", "Icehouse", "Juno"],
+            "ci": {
+                  "id":"coraid-ci",
+                  "success_pattern": "Build Successful",
+                  "failure_pattern": "Build Failed"
+            }
         },
         {
             "project_id": "openstack/cinder",
@@ -187,7 +192,12 @@
                 }
             ],
             "wiki": "http://docs.openstack.org/trunk/config-reference/content/dell-equallogic-driver.html",
-            "releases": ["Havana", "Icehouse", "Juno"]
+            "releases": ["Havana", "Icehouse", "Juno"],
+            "ci": {
+                  "id":"dell-storagecenter-ci",
+                  "success_pattern": "Build Successful",
+                  "failure_pattern": "Build Failed"
+            }
         },
         {
             "project_id": "openstack/cinder",
@@ -217,7 +227,12 @@
                 }
             ],
             "wiki": "http://docs.openstack.org/trunk/config-reference/content/emc-smis-driver.html",
-            "releases": ["Icehouse"]
+            "releases": ["Icehouse"],
+            "ci": {
+                  "id":"emc-vnx-ci",
+                  "success_pattern": "Build Successful",
+                  "failure_pattern": "Build Failed"
+            }
         },
         {
             "project_id": "openstack/cinder",
@@ -232,7 +247,12 @@
                 }
             ],
             "wiki": "http://docs.openstack.org/trunk/config-reference/content/emc-vnx-direct-driver.html",
-            "releases": ["Icehouse"]
+            "releases": ["Icehouse"],
+            "ci": {
+                  "id":"emc-vnx-ci",
+                  "success_pattern": "Build Successful",
+                  "failure_pattern": "Build Failed"
+           }
         },
         {
             "project_id": "openstack/cinder",
@@ -246,6 +266,7 @@
                     "launchpad_id": "j-ishizaki"
                 }
             ],
+            "wiki": "http://www.fujitsu.com/global/support/products/computing/storage/disk/download/openstack-vd.html",
             "releases": ["Juno"]
           },
           {
@@ -310,7 +331,12 @@
                 }
             ],
             "wiki": "http://docs.openstack.org/trunk/config-reference/content/hp-3par-driver.html",
-            "releases": ["Grizzly", "Havana", "Icehouse", "Juno"]
+            "releases": ["Grizzly", "Havana", "Icehouse", "Juno"],
+            "ci": {
+                  "id":"hp-cinder-ci",
+                  "success_pattern": "Build Successful",
+                  "failure_pattern": "Build Failed"
+           }
         },
         {
             "project_id": "openstack/cinder",
@@ -330,7 +356,12 @@
                 }
             ],
             "wiki": "http://docs.openstack.org/trunk/config-reference/content/hp-3par-driver.html",
-            "releases": ["Grizzly", "Havana", "Icehouse", "Juno"]
+            "releases": ["Grizzly", "Havana", "Icehouse", "Juno"],
+            "ci": {
+                  "id":"hp-cinder-ci",
+                  "success_pattern": "Build Successful",
+                  "failure_pattern": "Build Failed"
+           }
         },
         {
             "project_id": "openstack/cinder",
@@ -350,7 +381,12 @@
                 }
             ],
             "wiki": "http://docs.openstack.org/trunk/config-reference/content/HPSan-driver.html",
-            "releases": ["Diablo", "Essex", "Folsom", "Grizzly", "Havana", "Icehouse", "Juno"]
+            "releases": ["Diablo", "Essex", "Folsom", "Grizzly", "Havana", "Icehouse", "Juno"],
+            "ci": {
+                  "id":"hp-cinder-ci",
+                  "success_pattern": "Build Successful",
+                  "failure_pattern": "Build Failed"
+           }
         },
         {
             "project_id": "openstack/cinder",
@@ -390,7 +426,12 @@
                 }
             ],
             "wiki": "http://docs.openstack.org/trunk/config-reference/content/huawei-storage-driver.html",
-            "releases": ["Havana", "Juno"]
+            "releases": ["Havana", "Juno"],
+            "ci": {
+                   "id": "huawei-ci",
+                   "success_pattern": "Build Successful",
+                   "failure_pattern": "Build Failed"
+            }
         },
         {
             "project_id": "openstack/cinder",
@@ -405,7 +446,12 @@
                 }
             ],
             "wiki": "http://docs.openstack.org/trunk/config-reference/content/GPFS-driver.html",
-            "releases": ["Havana", "Icehouse", "Juno"]
+            "releases": ["Havana", "Icehouse", "Juno"],
+            "ci": {
+                   "id": "ibm-gpfs-ci",
+                   "success_pattern": "Build Successful",
+                   "failure_pattern": "Build Failed"
+           }
         },
         {
             "project_id": "openstack/cinder",
@@ -420,7 +466,12 @@
                 }
             ],
             "wiki": "http://www-03.ibm.com/support/techdocs/atsmastr.nsf/WebIndex/WP102443",
-            "releases": ["Icehouse", "Juno"]
+            "releases": ["Icehouse", "Juno"],
+            "ci": {
+                   "id": "ibm-ibmnas-ci",
+                   "success_pattern": "Build Successful",
+                   "failure_pattern": "Build Failed"
+            }
         },
         {
             "project_id": "openstack/cinder",
@@ -435,7 +486,12 @@
                 }
             ],
             "wiki": "http://docs.openstack.org/trunk/config-reference/content/ibm-storwize-svc-driver.html",
-            "releases": ["Folsom", "Grizzly", "Havana", "Icehouse", "Juno"]
+            "releases": ["Folsom", "Grizzly", "Havana", "Icehouse", "Juno"],
+            "ci": {
+                   "id": "ibm-storwize-ci",
+                   "success_pattern": "Build Successful",
+                   "failure_pattern": "Build Failed"
+           }
         },
         {
             "project_id": "openstack/cinder",
@@ -450,7 +506,12 @@
                 }
             ],
             "wiki": "http://docs.openstack.org/trunk/config-reference/content/ibm-xiv-driver.html",
-            "releases": ["Folsom", "Grizzly", "Havana", "Icehouse"]
+            "releases": ["Folsom", "Grizzly", "Havana", "Icehouse"],
+            "ci": {
+                   "id": "ibm-xiv-ci",
+                   "success_pattern": "Build Successful",
+                   "failure_pattern": "Build Failed"
+           }
         },
         {
             "project_id": "openstack/cinder",
@@ -465,7 +526,12 @@
                 }
             ],
             "wiki": "http://docs.openstack.org/trunk/config-reference/content/netapp-volume-driver.html",
-            "releases": ["Essex", "Folsom", "Grizzly", "Havana", "Icehouse", "Juno"]
+            "releases": ["Essex", "Folsom", "Grizzly", "Havana", "Icehouse", "Juno"],
+            "ci": {
+                   "id": "netapp-ci",
+                   "success_pattern": "Build Successful",
+                   "failure_pattern": "Build Failed"
+            }
         },
         {
             "project_id": "openstack/cinder",
@@ -573,7 +639,132 @@
                 }
             ],
             "wiki": "http://docs.openstack.org/trunk/config-reference/content/prophetstor-dpl-driver.html",
-            "releases": ["Juno"]
+            "releases": ["Juno"],
+            "ci": {
+                   "id": "prophetstor-ci",
+                   "success_pattern": "Build Successful",
+                   "failure_pattern": "Build Failed"
+            }
+        },
+        {
+            "project_id": "openstack/cinder",
+            "vendor": "Pure Storage",
+            "name": "Volume driver for Pure Storage FlashArray storage system",
+            "description": "Pure Storage builds all-flash storage arrays. The active/active controller architecture is based on the Purity Operating Environment and providing an adaptive metadata fabric that is scalable, granular to 512B, and protected. Pure systems are based on durable, resilient MLC flash and providing consistent high performance. Pure Storage FlashArrays leverage deduplication and compression technologies to reduce data written thereby lowering costs and increasing density. FlashArrays are designed for non-disruptive operations and can be upgraded or expanded without disruption or performance degradation.",
+            "maintainers": [
+                {
+                    "name": "Viktor Ying",
+                    "email": "victor.ying@purestorage.com",
+                    "launchpad_id": "viktor-ying"
+                },
+                {
+                    "name": "Wes Mertes",
+                    "email": "wes@purestorage.com",
+                    "launchpad_id": "wes-w"
+                 },
+                 {
+                    "name": "Zach Olstein",
+                    "email": "zach.olstein@purestorage.com",
+                    "launchpad_id": "zach-olstein"
+                 }
+            ],
+            "wiki": "http://specs.openstack.org/openstack/cinder-specs/specs/juno/pure-iscsi-volume-driver.html",
+            "releases": ["Juno"],
+            "ci": {
+                   "id": "purestorage-cinder-ci",
+                   "success_pattern": "Build Successful",
+                   "failure_pattern": "Build Failed"
+          }
+        },
+        {
+            "project_id": "openstack/cinder",
+            "vendor": "Pure Storage",
+            "name": "Volume driver for Pure Storage FlashArray storage system",
+            "description": "Pure Storage builds all-flash storage arrays. The active/active controller architecture is based on the Purity Operating Environment and providing an adaptive metadata fabric that is scalable, granular to 512B, and protected. Pure systems are based on durable, resilient MLC flash and providing consistent high performance. Pure Storage FlashArrays leverage deduplication and compression technologies to reduce data written thereby lowering costs and increasing density. FlashArrays are designed for non-disruptive operations and can be upgraded or expanded without disruption or performance degradation.",
+            "maintainers": [
+                {
+                    "name": "Viktor Ying",
+                    "email": "victor.ying@purestorage.com",
+                    "launchpad_id": "viktor-ying"
+                },
+                {
+                    "name": "Wes Mertes",
+                    "email": "wes@purestorage.com",
+                    "launchpad_id": "wes-w"
+                 },
+                 {
+                    "name": "Zach Olstein",
+                    "email": "zach.olstein@purestorage.com",
+                    "launchpad_id": "zach-olstein"
+                 }
+            ],
+            "wiki": "http://specs.openstack.org/openstack/cinder-specs/specs/juno/pure-iscsi-volume-driver.html",
+            "releases": ["Juno"],
+            "ci": {
+                   "id": "purestorage-cinder-ci",
+                   "success_pattern": "Build Successful",
+                   "failure_pattern": "Build Failed"
+          }
+        },
+        {
+            "project_id": "openstack/cinder",
+            "vendor": "Pure Storage",
+            "name": "Volume driver for Pure Storage FlashArray storage system",
+            "description": "Pure Storage builds all-flash storage arrays. The active/active controller architecture is based on the Purity Operating Environment and providing an adaptive metadata fabric that is scalable, granular to 512B, and protected. Pure systems are based on durable, resilient MLC flash and providing consistent high performance. Pure Storage FlashArrays leverage deduplication and compression technologies to reduce data written thereby lowering costs and increasing density. FlashArrays are designed for non-disruptive operations and can be upgraded or expanded without disruption or performance degradation.",
+            "maintainers": [
+                {
+                    "name": "Viktor Ying",
+                    "email": "victor.ying@purestorage.com",
+                    "launchpad_id": "viktor-ying"
+                },
+                {
+                    "name": "Wes Mertes",
+                    "email": "wes@purestorage.com",
+                    "launchpad_id": "wes-w"
+                 },
+                 {
+                    "name": "Zach Olstein",
+                    "email": "zach.olstein@purestorage.com",
+                    "launchpad_id": "zach-olstein"
+                 }
+            ],
+            "wiki": "http://specs.openstack.org/openstack/cinder-specs/specs/juno/pure-iscsi-volume-driver.html",
+            "releases": ["Juno"],
+            "ci": {
+                   "id": "purestorage-cinder-ci",
+                   "success_pattern": "Build Successful",
+                   "failure_pattern": "Build Failed"
+          }
+        },
+        {
+            "project_id": "openstack/cinder",
+            "vendor": "Pure Storage",
+            "name": "Volume driver for Pure Storage FlashArray storage system",
+            "description": "Pure Storage builds all-flash storage arrays. The active/active controller architecture is based on the Purity Operating Environment and providing an adaptive metadata fabric that is scalable, granular to 512B, and protected. Pure systems are based on durable, resilient MLC flash and providing consistent high performance. Pure Storage FlashArrays leverage deduplication and compression technologies to reduce data written thereby lowering costs and increasing density. FlashArrays are designed for non-disruptive operations and can be upgraded or expanded without disruption or performance degradation.",
+            "maintainers": [
+                {
+                    "name": "Viktor Ying",
+                    "email": "victor.ying@purestorage.com",
+                    "launchpad_id": "viktor-ying"
+                },
+                {
+                    "name": "Wes Mertes",
+                    "email": "wes@purestorage.com",
+                    "launchpad_id": "wes-w"
+                 },
+                 {
+                    "name": "Zach Olstein",
+                    "email": "zach.olstein@purestorage.com",
+                    "launchpad_id": "zach-olstein"
+                 }
+            ],
+            "wiki": "http://specs.openstack.org/openstack/cinder-specs/specs/juno/pure-iscsi-volume-driver.html",
+            "releases": ["Juno"],
+            "ci": {
+                   "id": "purestorage-cinder-ci",
+                   "success_pattern": "Build Successful",
+                   "failure_pattern": "Build Failed"
+          }
         },
         {
             "project_id": "openstack/cinder",
@@ -1004,14 +1195,26 @@
                 }
             ],
             "wiki": "https://wiki.openstack.org/wiki/IBM-Neutron",
-            "releases": ["Juno"]
+            "releases": ["Juno"],
+            "ci": {
+                  "id":"ibmsdnve",
+                  "success_pattern": "Build Successful",
+                  "failure_pattern": "Build Failed"
+           }
         },
         {
             "project_id": "openstack/neutron",
             "vendor": "Juniper",
             "name": "Juniper Networks plug-in for OpenStack Neutron",
             "description": "The Juniper Networks plug-in for OpenStack Neutron enables orchestration of virtual and physical network configurations. The plug-in supports Junos Space Network Director API (NDAPI) as well as NETCONF/DMI to configure the physical network.",
-            "wiki": "http://www.juniper.net/techpubs/en_US/release-independent/junos/topics/topic-map/openstack-neutron-dmi-plugin.html"
+            "wiki": "http://www.juniper.net/techpubs/en_US/release-independent/junos/topics/topic-map/openstack-neutron-dmi-plugin.html",
+            "maintainers": [
+               {
+                   "name": "Chandan Dutta Chowdhury",
+                   "email": "chandanc@juniper.net",
+                   "launchpad_id": "chandanc"
+                }
+            ]
         },
         {
             "project_id": "openstack/neutron",
@@ -1111,7 +1314,9 @@
             "wiki": "https://wiki.openstack.org/wiki/Spec-QuantumMidoNetPlugin",
             "releases": ["Juno"],
             "ci": {
-                "id": "midokura"
+                "id": "midokura",
+                "success_pattern": "Build succeed",
+                "failure_pattern": "Build failed"
             }
         },
         {
@@ -1330,7 +1535,9 @@
             "wiki": "https://wiki.openstack.org/wiki/PLUMgrid-Neutron",
             "releases": ["Juno"],
             "ci": {
-                "id": "plumgrid-ci"
+                "id": "plumgrid-ci",
+                 "success_pattern": "Build Successful",
+                 "failure_pattern": "Build Failed"
             }
         },
         {
@@ -1362,8 +1569,10 @@
             "wiki": "https://wiki.openstack.org/wiki/Neutron/LBaaS/RadwareAlteon",
             "releases": ["Havana", "Icehouse", "Juno"],
             "ci": {
-               "id": "radware3rdpartytesting"
-            }
+               "id": "radware3rdpartytesting",
+                "success_pattern": "Build Successful",
+                "failure_pattern": "Build Failed"
+           }
         },
         {
             "project_id": "openstack/neutron",
@@ -1402,7 +1611,9 @@
             "wiki": "http://docs.openstack.org/admin-guide-cloud/content/nsx_plugin.html",
             "releases": ["Essex", "Folsom", "Grizzly", "Havana", "Icehouse", "Juno"],
             "ci": {
-                "id": "vmwareminesweeper"
+                "id": "vmwareminesweeper",
+                "success_pattern": "Build Successful",
+                "failure_pattern": "Build Failed"
             }
         },
         {
@@ -1455,7 +1666,7 @@
             "project_id": "openstack/nova",
             "vendor": "IBM",
             "name": "PowerKVM",
-            "description": "IBMÂ® PowerKVMâ¢ provides an open virtualization choice for IBM scale-out Linux systems based on the POWER8â¢ technology. This solution includes the Linux open source technology of KVM virtualization, and is designed to complement the performance, scalability and security qualities of Linux.",
+            "description": "IBM PowerKVM provides an open virtualization choice for IBM scale-out Linux systems based on the POWER8â¢ technology. This solution includes the Linux open source technology of KVM virtualization, and is designed to complement the performance, scalability and security qualities of Linux.",
             "maintainers": [
                 {
                     "name": "Kurt Taylor",
@@ -1464,7 +1675,12 @@
                 }
             ],
             "wiki": "http://www.ibm.com/systems/power/software/linux/powerkvm",
-            "releases": ["Icehouse"]
+            "releases": ["Icehouse"],
+            "ci": {
+                  "id":"powerkvm",
+                  "success_pattern": "Build Successful",
+                  "failure_pattern": "Build Failed"
+           }
         },
         {
             "project_id": "openstack/nova",
@@ -1582,7 +1798,9 @@
             ],
             "wiki": "http://docs.openstack.org/trunk/config-reference/content/introduction-to-xen.html",
             "ci": {
-                "id": "citrix_xenserver_ci"
+                "id": "citrix_xenserver_ci",
+                 "success_pattern": "Build Successful",
+                 "failure_pattern": "Build Failed"
             },
             "releases": ["Austin", "Bexar", "Cactus", "Diablo", "Essex", "Folsom", "Grizzly", "Havana", "Icehouse", "Juno"]
         },
