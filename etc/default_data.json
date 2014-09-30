@@ -172,7 +172,7 @@
                 }
             ],
             "wiki": "http://docs.openstack.org/developer/cinder/api/cinder.volume.drivers.datera.html?highlight=datera#module-cinder.volume.drivers.datera",
-            "releases": ["Juno"],
+            "releases": ["Icehouse", "Juno"],
             "ci": {
                   "id":"datera-ci",
                   "success_pattern": "Build Successful",
@@ -212,7 +212,7 @@
                 }
             ],
             "wiki": "http://docs.openstack.org/trunk/config-reference/content/emc-smis-driver.html",
-            "releases": ["Grizzly", "Havana", "Icehouse"]
+            "releases": ["Grizzly", "Havana", "Icehouse", "Juno"]
         },
         {
             "project_id": "openstack/cinder",
@@ -237,6 +237,26 @@
         {
             "project_id": "openstack/cinder",
             "vendor": "EMC",
+            "name": "EMC ViPR driver",
+            "description": "ViPR integrates with OpenStack through a Cinder plugin driver from the Havana release, by enabling the block storage provisioning for OpenStack users. This empowers OpenStack users to consume the block storage capabilities of all the heterogeneous storage managed by ViPR.",
+            "maintainers": [
+                {
+                    "name": "Xing Yang",
+                    "email": "xing.yang@emc.com",
+                    "launchpad_id": "xing-yang"
+                }
+            ],
+            "wiki": "http://www.rethinkstorage.com/vipr-and-openstack-integration-how-it-works#.VCqlM62tj00",
+            "releases": ["Havana", "Icehouse", "Juno"],
+            "ci": {
+                  "id":"emc-vipr-ci",
+                  "success_pattern": "Build Successful",
+                  "failure_pattern": "Build Failed"
+           }
+        },
+        {
+            "project_id": "openstack/cinder",
+            "vendor": "EMC",
             "name": "EMC VNX direct driver",
             "description": "The EMC VNX direct driver runs volume operations by communicating with the back-end VNX storage, using NaviSecCLI.",
             "maintainers": [
@@ -247,9 +267,29 @@
                 }
             ],
             "wiki": "http://docs.openstack.org/trunk/config-reference/content/emc-vnx-direct-driver.html",
-            "releases": ["Icehouse"],
+            "releases": ["Icehouse", "Juno"],
             "ci": {
                   "id":"emc-vnx-ci",
+                  "success_pattern": "Build Successful",
+                  "failure_pattern": "Build Failed"
+           }
+        },
+        {
+            "project_id": "openstack/cinder",
+            "vendor": "EMC",
+            "name": "EMC XtremIO Cinder driver",
+            "description": "The XtremIO cinder driver enables OpenStack clouds to access the XtremIO storage. The XtremIO Cinder driver directs the creation and deletion of volumes on the XtremIO storage and attaches or detaches volumes to/from OpenStack instances or virtual machines (VMs).",
+            "maintainers": [
+                {
+                    "name": "Xing Yang",
+                    "email": "xing.yang@emc.com",
+                    "launchpad_id": "xing-yang"
+                }
+            ],
+            "wiki": "http://www.xtremio.com/wp-content/uploads/2014/07/h13287-ds-xtremio-openstack.pdf",
+            "releases": ["Icehouse", "Juno"],
+            "ci": {
+                  "id":"emc-xio-ci",
                   "success_pattern": "Build Successful",
                   "failure_pattern": "Build Failed"
            }
@@ -266,13 +306,13 @@
                     "launchpad_id": "j-ishizaki"
                 }
             ],
-            "wiki": "http://www.fujitsu.com/global/support/products/computing/storage/disk/download/openstack-vd.html",
-            "releases": ["Juno"]
-          },
-          {
+            "wiki": "http://www.fujitsu.com/global/products/computing/storage/eternus/news/openstack.html",
+            "releases": ["Havana", "Icehouse", "Juno"]
+         },
+         {
             "project_id": "openstack/cinder",
             "vendor": "Fujitsu",
-            "name": "ISCSI Drivers for ETERNUS DX arrays based on SMI-S",
+            "name": "Fujitsu ISCSI Volume driver",
             "description": "This driver supports ETERNUS DX S2 and the S3 series and runs volume operations by communicating with the backend Fujitsu storage.It uses a CIM client in Python called PyWBEM to perform CIM operations over HTTP..",
             "maintainers": [
                 {
@@ -281,7 +321,8 @@
                     "launchpad_id": "j-ishizaki"
                 }
             ],
-            "releases": ["Juno"]
+            "wiki": "http://www.fujitsu.com/global/products/computing/storage/eternus/news/openstack.html",
+            "releases": ["Havana", "Icehouse", "Juno"]
           },
           {
             "project_id": "openstack/cinder",
@@ -297,7 +338,7 @@
             ],
             "wiki": "http://docs.openstack.org/developer/cinder/api/cinder.volume.drivers.fusionio.ioControl.html",
             "releases": ["Juno"]
-          },
+        },
         {
             "project_id": "openstack/cinder",
             "vendor": "Gluster",
@@ -561,7 +602,7 @@
                 }
             ],
              "wiki": "http://docs.openstack.org/developer/cinder/api/cinder.volume.drivers.nimble.html?highlight=nimble#module-cinder.volume.drivers.nimble",
-             "releases": ["Juno"]
+             "releases": ["Icehouse", "Juno"]
         },
         {
             "project_id": "openstack/cinder",
@@ -1024,13 +1065,13 @@
                     "launchpad_id": "ociuhandu"
                 }
             ],
-            "wiki": "http://www.cloudbase.it/quantum-hyper-v-plugin/",
+            "wiki": "http://www.cloudbase.it/openstack/",
             "ci": {
                 "id": "hyper-v-ci",
                 "success_pattern": "Build succeeded",
                 "failure_pattern": "Build failed"
             },
-            "releases": ["Grizzly", "Havana", "Icehouse"]
+            "releases": ["Grizzly", "Havana", "Icehouse", "Juno"]
         },
         {
             "project_id": "openstack/neutron",
@@ -1629,7 +1670,7 @@
                 }
             ],
             "wiki": "http://docs.openstack.org/trunk/config-reference/content/baremetal.html",
-            "releases": ["Juno"]
+            "releases": ["Austin", "Bexar", "Cactus", "Diablo", "Essex", "Folsom", "Grizzly", "Havana"]
         },
         {
             "project_id": "openstack/nova",
@@ -1687,6 +1728,7 @@
                     "launchpad_id": "milakstill"
                 }
             ],
+            "releases": ["Austin", "Bexar", "Cactus", "Diablo", "Essex", "Folsom", "Grizzly", "Havana"],
             "wiki": "http://docs.openstack.org/trunk/config-reference/content/lxc.html"
         },
         {
@@ -1701,7 +1743,8 @@
                     "launchpad_id": "milakstill"
                 }
             ],
-            "wiki": "http://docs.openstack.org/trunk/config-reference/content/qemu.html"
+            "wiki": "http://docs.openstack.org/trunk/config-reference/content/qemu.html",
+            "releases": ["Juno"]
         },
         {
             "project_id": "openstack/nova",
@@ -1736,7 +1779,7 @@
                 }
             ],
             "wiki": "http://docs.openstack.org/trunk/config-reference/content/introduction-to-xen.html",
-            "releases": ["Juno"]
+            "releases": ["Austin", "Bexar", "Cactus", "Diablo", "Essex", "Folsom", "Grizzly", "Havana"]
         },
         {
             "project_id": "openstack/nova",
@@ -1782,6 +1825,7 @@
                 }
             ],
             "wiki": "http://docs.openstack.org/developer/sahara/userdoc/hdp_plugin.html",
+            "releases": ["Juno"],
             "ci": {
                 "id": "savanna-ci",
                 "success_pattern": "gate-sahara-integration-hdp \\S+ : SUCCESS",
