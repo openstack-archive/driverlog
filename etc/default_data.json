@@ -172,7 +172,7 @@
                 }
             ],
             "wiki": "http://docs.openstack.org/developer/cinder/api/cinder.volume.drivers.datera.html?highlight=datera#module-cinder.volume.drivers.datera",
-            "releases": ["Juno"],
+            "releases": ["Icehouse", "Juno"],
             "ci": {
                   "id":"datera-ci",
                   "success_pattern": "Build Successful",
@@ -267,12 +267,12 @@
                 }
             ],
             "wiki": "http://www.fujitsu.com/global/support/products/computing/storage/disk/download/openstack-vd.html",
-            "releases": ["Juno"]
-          },
-          {
+            "releases": ["Havana", "Icehouse", "Juno"]
+         },
+         {
             "project_id": "openstack/cinder",
             "vendor": "Fujitsu",
-            "name": "ISCSI Drivers for ETERNUS DX arrays based on SMI-S",
+            "name": "Fujitsu ISCSI Volume driver",
             "description": "This driver supports ETERNUS DX S2 and the S3 series and runs volume operations by communicating with the backend Fujitsu storage.It uses a CIM client in Python called PyWBEM to perform CIM operations over HTTP..",
             "maintainers": [
                 {
@@ -281,7 +281,8 @@
                     "launchpad_id": "j-ishizaki"
                 }
             ],
-            "releases": ["Juno"]
+            "wiki": "http://www.fujitsu.com/global/products/computing/storage/eternus/news/openstack.html",
+            "releases": ["Havana", "Icehouse", "Juno"]
           },
           {
             "project_id": "openstack/cinder",
@@ -297,7 +298,7 @@
             ],
             "wiki": "http://docs.openstack.org/developer/cinder/api/cinder.volume.drivers.fusionio.ioControl.html",
             "releases": ["Juno"]
-          },
+        },
         {
             "project_id": "openstack/cinder",
             "vendor": "Gluster",
@@ -561,7 +562,7 @@
                 }
             ],
              "wiki": "http://docs.openstack.org/developer/cinder/api/cinder.volume.drivers.nimble.html?highlight=nimble#module-cinder.volume.drivers.nimble",
-             "releases": ["Juno"]
+             "releases": ["Icehouse", "Juno"]
         },
         {
             "project_id": "openstack/cinder",
@@ -1024,13 +1025,13 @@
                     "launchpad_id": "ociuhandu"
                 }
             ],
-            "wiki": "http://www.cloudbase.it/quantum-hyper-v-plugin/",
+            "wiki": "http://www.cloudbase.it/openstack/",
             "ci": {
                 "id": "hyper-v-ci",
                 "success_pattern": "Build succeeded",
                 "failure_pattern": "Build failed"
             },
-            "releases": ["Grizzly", "Havana", "Icehouse"]
+            "releases": ["Grizzly", "Havana", "Icehouse", "Juno"]
         },
         {
             "project_id": "openstack/neutron",
@@ -1629,7 +1630,7 @@
                 }
             ],
             "wiki": "http://docs.openstack.org/trunk/config-reference/content/baremetal.html",
-            "releases": ["Juno"]
+            "releases": ["Austin", "Bexar", "Cactus", "Diablo", "Essex", "Folsom", "Grizzly", "Havana"]
         },
         {
             "project_id": "openstack/nova",
@@ -1687,6 +1688,7 @@
                     "launchpad_id": "milakstill"
                 }
             ],
+            "releases": ["Austin", "Bexar", "Cactus", "Diablo", "Essex", "Folsom", "Grizzly", "Havana"],
             "wiki": "http://docs.openstack.org/trunk/config-reference/content/lxc.html"
         },
         {
@@ -1701,7 +1703,8 @@
                     "launchpad_id": "milakstill"
                 }
             ],
-            "wiki": "http://docs.openstack.org/trunk/config-reference/content/qemu.html"
+            "wiki": "http://docs.openstack.org/trunk/config-reference/content/qemu.html",
+            "releases": ["Juno"]
         },
         {
             "project_id": "openstack/nova",
@@ -1736,7 +1739,7 @@
                 }
             ],
             "wiki": "http://docs.openstack.org/trunk/config-reference/content/introduction-to-xen.html",
-            "releases": ["Juno"]
+            "releases": ["Austin", "Bexar", "Cactus", "Diablo", "Essex", "Folsom", "Grizzly", "Havana"]
         },
         {
             "project_id": "openstack/nova",
