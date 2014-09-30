@@ -257,6 +257,26 @@
         {
             "project_id": "openstack/cinder",
             "vendor": "EMC",
+            "name": "EMC ViPR driver",
+            "description": "ViPR integrates with OpenStack through a Cinder plugin driver from the Havana release, by enabling the block storage provisioning for OpenStack users. This empowers OpenStack users to consume the block storage capabilities of all the heterogeneous storage managed by ViPR.",
+            "maintainers": [
+                {
+                    "name": "Xing Yang",
+                    "email": "xing.yang@emc.com",
+                    "launchpad_id": "xing-yang"
+                }
+            ],
+            "wiki": "http://www.rethinkstorage.com/vipr-and-openstack-integration-how-it-works#.VCqlM62tj00",
+            "releases": ["Havana", "Icehouse", "Juno"],
+            "ci": {
+                  "id":"emc-vipr-ci",
+                  "success_pattern": "Build Successful",
+                  "failure_pattern": "Build Failed"
+           }
+        },
+        {
+            "project_id": "openstack/cinder",
+            "vendor": "EMC",
             "name": "EMC VNX direct driver",
             "description": "The EMC VNX direct driver runs volume operations by communicating with the back-end VNX storage, using NaviSecCLI.",
             "maintainers": [
@@ -296,23 +316,28 @@
         },
         {
             "project_id": "openstack/cinder",
-            "vendor": "Fujitsu",
-            "name": "Fujitsu DX Volume driver",
-            "description": "This driver supports ETERNUS DX S2 and the S3 series and runs volume operations by communicating with the backend Fujitsu storage.It uses a CIM client in Python called PyWBEM to perform CIM operations over HTTP..",
+            "vendor": "EMC",
+            "name": "EMC XtremIO Cinder driver",
+            "description": "The XtremIO cinder driver enables OpenStack clouds to access the XtremIO storage. The XtremIO Cinder driver directs the creation and deletion of volumes on the XtremIO storage and attaches or detaches volumes to/from OpenStack instances or virtual machines (VMs).",
             "maintainers": [
                 {
-                    "name": "Jun Ishizaki",
-                    "email": "j-ishizaki@jp.fujitsu.com",
-                    "launchpad_id": "j-ishizaki"
+                    "name": "Xing Yang",
+                    "email": "xing.yang@emc.com",
+                    "launchpad_id": "xing-yang"
                 }
             ],
-            "wiki": "http://www.fujitsu.com/global/products/computing/storage/eternus/news/openstack.html",
-            "releases": ["Havana", "Icehouse", "Juno"]
-         },
-         {
+            "wiki": "http://www.xtremio.com/wp-content/uploads/2014/07/h13287-ds-xtremio-openstack.pdf",
+            "releases": ["Icehouse", "Juno"],
+            "ci": {
+                  "id":"emc-xio-ci",
+                  "success_pattern": "Build Successful",
+                  "failure_pattern": "Build Failed"
+           }
+        },
+        {
             "project_id": "openstack/cinder",
             "vendor": "Fujitsu",
-            "name": "Fujitsu ISCSI Volume driver",
+            "name": "Fujitsu Eternus DX ISCSI Volume driver",
             "description": "This driver supports ETERNUS DX S2 and the S3 series and runs volume operations by communicating with the backend Fujitsu storage.It uses a CIM client in Python called PyWBEM to perform CIM operations over HTTP..",
             "maintainers": [
                 {
@@ -324,6 +349,21 @@
             "wiki": "http://www.fujitsu.com/global/products/computing/storage/eternus/news/openstack.html",
             "releases": ["Havana", "Icehouse", "Juno"]
           },
+        {
+            "project_id": "openstack/cinder",
+            "vendor": "Fujitsu",
+            "name": "Fujitsu Eternus DX FC Volume driver",
+            "description": "This driver supports ETERNUS DX S2 and the S3 series and runs volume operations by communicating with the backend Fujitsu storage.It uses a CIM client in Python called PyWBEM to perform CIM operations over HTTP..",
+            "maintainers": [
+                {
+                    "name": "Jun Ishizaki",
+                    "email": "j-ishizaki@jp.fujitsu.com",
+                    "launchpad_id": "j-ishizaki"
+                }
+            ],
+            "wiki": "http://www.fujitsu.com/global/products/computing/storage/eternus/news/openstack.html",
+            "releases": ["Havana", "Icehouse", "Juno"]
+         },
           {
             "project_id": "openstack/cinder",
             "vendor": "Fusion-io",
@@ -634,7 +674,7 @@
                 }
             ],
             "wiki": "http://docs.openstack.org/trunk/config-reference/content/NFS-driver.html",
-            "releases": ["Juno"]
+            "releases": ["Folsom", "Grizzly", "Havana", "Icehouse", "Juno"]
         },
         {
             "project_id": "openstack/cinder",
@@ -650,7 +690,7 @@
                 }
             ],
             "wiki": "http://docs.openstack.org/trunk/config-reference/content/sheepdog-driver.html",
-            "releases": ["Juno"]
+            "releases": ["Icehouse", "Juno"]
         },
         {
             "project_id": "openstack/cinder",
@@ -1215,7 +1255,7 @@
                 }
             ],
             "wiki": "http://opencontrail.org/opencontrail-architecture-documentation",
-            "releases": ["Icehouse", "Juno"]
+            "releases": ["Juno"]
         },
         {
             "project_id": "openstack/neutron",
@@ -1382,7 +1422,7 @@
                 }
             ],
             "wiki": "http://docs.openstack.org/trunk/config-reference/content/networking-plugin-linuxbridge_agent.html",
-            "releases": ["Juno"]
+            "releases": ["Folsom", "Grizzly", "Havana", "Icehouse"]
         },
         {
             "project_id": "openstack/neutron",
@@ -1398,7 +1438,7 @@
                 }
             ],
             "wiki": "http://docs.openstack.org/trunk/config-reference/content/networking-options-plugins-ml2.html",
-            "releases": ["Juno"]
+            "releases": ["Havana", "Icehouse", "Juno"]
         },
         {
             "project_id": "openstack/neutron",
@@ -1714,7 +1754,8 @@
                     "launchpad_id": "milakstill"
                 }
             ],
-            "wiki": "http://docs.openstack.org/trunk/config-reference/content/kvm.html"
+            "wiki": "http://docs.openstack.org/trunk/config-reference/content/kvm.html",
+            "releases": ["Austin", "Bexar", "Cactus", "Diablo", "Essex", "Folsom", "Grizzly", "Havana", "Icehouse", "Juno"]
         },
         {
             "project_id": "openstack/nova",
@@ -1728,7 +1769,7 @@
                     "launchpad_id": "milakstill"
                 }
             ],
-            "releases": ["Austin", "Bexar", "Cactus", "Diablo", "Essex", "Folsom", "Grizzly", "Havana"],
+            "releases": ["Austin", "Bexar", "Cactus", "Diablo", "Essex", "Folsom", "Grizzly", "Havana", "Icehouse", "Juno"],
             "wiki": "http://docs.openstack.org/trunk/config-reference/content/lxc.html"
         },
         {
@@ -1744,7 +1785,7 @@
                 }
             ],
             "wiki": "http://docs.openstack.org/trunk/config-reference/content/qemu.html",
-            "releases": ["Juno"]
+            "releases": ["Austin", "Bexar", "Cactus", "Diablo", "Essex", "Folsom", "Grizzly", "Havana", "Icehouse", "Juno"]
         },
         {
             "project_id": "openstack/nova",
