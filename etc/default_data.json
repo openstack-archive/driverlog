@@ -257,6 +257,26 @@
         {
             "project_id": "openstack/cinder",
             "vendor": "EMC",
+            "name": "EMC ViPR driver",
+            "description": "ViPR integrates with OpenStack through a Cinder plugin driver from the Havana release, by enabling the block storage provisioning for OpenStack users. This empowers OpenStack users to consume the block storage capabilities of all the heterogeneous storage managed by ViPR.",
+            "maintainers": [
+                {
+                    "name": "Xing Yang",
+                    "email": "xing.yang@emc.com",
+                    "launchpad_id": "xing-yang"
+                }
+            ],
+            "wiki": "http://www.rethinkstorage.com/vipr-and-openstack-integration-how-it-works#.VCqlM62tj00",
+            "releases": ["Havana", "Icehouse", "Juno"],
+            "ci": {
+                  "id":"emc-vipr-ci",
+                  "success_pattern": "Build Successful",
+                  "failure_pattern": "Build Failed"
+           }
+        },
+        {
+            "project_id": "openstack/cinder",
+            "vendor": "EMC",
             "name": "EMC VNX direct driver",
             "description": "The EMC VNX direct driver runs volume operations by communicating with the back-end VNX storage, using NaviSecCLI.",
             "maintainers": [
@@ -270,6 +290,26 @@
             "releases": ["Icehouse", "Juno"],
             "ci": {
                   "id":"emc-vnx-ci",
+                  "success_pattern": "Build Successful",
+                  "failure_pattern": "Build Failed"
+           }
+        },
+        {
+            "project_id": "openstack/cinder",
+            "vendor": "EMC",
+            "name": "EMC XtremIO Cinder driver",
+            "description": "The XtremIO cinder driver enables OpenStack clouds to access the XtremIO storage. The XtremIO Cinder driver directs the creation and deletion of volumes on the XtremIO storage and attaches or detaches volumes to/from OpenStack instances or virtual machines (VMs).",
+            "maintainers": [
+                {
+                    "name": "Xing Yang",
+                    "email": "xing.yang@emc.com",
+                    "launchpad_id": "xing-yang"
+                }
+            ],
+            "wiki": "http://www.xtremio.com/wp-content/uploads/2014/07/h13287-ds-xtremio-openstack.pdf",
+            "releases": ["Icehouse", "Juno"],
+            "ci": {
+                  "id":"emc-xio-ci",
                   "success_pattern": "Build Successful",
                   "failure_pattern": "Build Failed"
            }
