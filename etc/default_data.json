@@ -202,8 +202,8 @@
         {
             "project_id": "openstack/cinder",
             "vendor": "EMC",
-            "name": "EMC SMI-S iSCSI driver",
-            "description": "The EMC SMI-S iSCSI driver runs volume operations by communicating with the back-end VMAX and VNX storage, using the EMC SMI-S Provider.",
+            "name": "EMC VMAX iSCSI driver",
+            "description": "The EMC VMAX iSCSI driver runs volume operations by communicating with the back-end VMAX storage, using the EMC SMI-S Provider.",
             "maintainers": [
                 {
                     "name": "Xing Yang",
@@ -211,14 +211,19 @@
                     "launchpad_id": "xing-yang"
                 }
             ],
-            "wiki": "http://docs.openstack.org/trunk/config-reference/content/emc-smis-driver.html",
-            "releases": ["Grizzly", "Havana", "Icehouse", "Juno"]
+            "wiki": "http://docs.openstack.org/trunk/config-reference/content/emc-vmax-driver.html",
+            "releases": ["Grizzly", "Havana", "Icehouse", "Juno"],
+            "ci": {
+                  "id":"emc-vmax-ci",
+                  "success_pattern": "Build Successful",
+                  "failure_pattern": "Build Failed"
+           }
         },
         {
             "project_id": "openstack/cinder",
             "vendor": "EMC",
-            "name": "EMC SMI-S FC driver",
-            "description": "The EMC SMI-S FC driver runs volume operations by communicating with the back-end VMAX and VNX storage, using the EMC SMI-S Provider.",
+            "name": "EMC VMAX FC driver",
+            "description": "The EMC VMAX FC driver runs volume operations by communicating with the back-end VMAX storage, using the EMC SMI-S Provider.",
             "maintainers": [
                 {
                     "name": "Xing Yang",
@@ -226,10 +231,10 @@
                     "launchpad_id": "xing-yang"
                 }
             ],
-            "wiki": "http://docs.openstack.org/trunk/config-reference/content/emc-smis-driver.html",
-            "releases": ["Icehouse"],
+            "wiki": "http://docs.openstack.org/trunk/config-reference/content/emc-vmax-driver.html",
+            "releases": ["Icehouse", "Juno"],
             "ci": {
-                  "id":"emc-vnx-ci",
+                  "id":"emc-vmax-ci",
                   "success_pattern": "Build Successful",
                   "failure_pattern": "Build Failed"
                }
@@ -237,48 +242,8 @@
         {
             "project_id": "openstack/cinder",
             "vendor": "EMC",
-            "name": "EMC ViPR driver",
-            "description": "ViPR integrates with OpenStack through a Cinder plugin driver from the Havana release, by enabling the block storage provisioning for OpenStack users. This empowers OpenStack users to consume the block storage capabilities of all the heterogeneous storage managed by ViPR.",
-            "maintainers": [
-                {
-                    "name": "Xing Yang",
-                    "email": "xing.yang@emc.com",
-                    "launchpad_id": "xing-yang"
-                }
-            ],
-            "wiki": "http://www.rethinkstorage.com/vipr-and-openstack-integration-how-it-works#.VCqlM62tj00",
-            "releases": ["Havana", "Icehouse", "Juno"],
-            "ci": {
-                  "id":"emc-vipr-ci",
-                  "success_pattern": "Build Successful",
-                  "failure_pattern": "Build Failed"
-           }
-        },
-        {
-            "project_id": "openstack/cinder",
-            "vendor": "EMC",
-            "name": "EMC ViPR driver",
-            "description": "ViPR integrates with OpenStack through a Cinder plugin driver from the Havana release, by enabling the block storage provisioning for OpenStack users. This empowers OpenStack users to consume the block storage capabilities of all the heterogeneous storage managed by ViPR.",
-            "maintainers": [
-                {
-                    "name": "Xing Yang",
-                    "email": "xing.yang@emc.com",
-                    "launchpad_id": "xing-yang"
-                }
-            ],
-            "wiki": "http://www.rethinkstorage.com/vipr-and-openstack-integration-how-it-works#.VCqlM62tj00",
-            "releases": ["Havana", "Icehouse", "Juno"],
-            "ci": {
-                  "id":"emc-vipr-ci",
-                  "success_pattern": "Build Successful",
-                  "failure_pattern": "Build Failed"
-           }
-        },
-        {
-            "project_id": "openstack/cinder",
-            "vendor": "EMC",
-            "name": "EMC VNX direct driver",
-            "description": "The EMC VNX direct driver runs volume operations by communicating with the back-end VNX storage, using NaviSecCLI.",
+            "name": "EMC VNX iSCSI direct driver",
+            "description": "The EMC VNX iSCSI direct driver runs volume operations by communicating with the back-end VNX storage, using NaviSecCLI.",
             "maintainers": [
                 {
                     "name": "Xing Yang",
@@ -297,8 +262,28 @@
         {
             "project_id": "openstack/cinder",
             "vendor": "EMC",
-            "name": "EMC XtremIO Cinder driver",
-            "description": "The XtremIO cinder driver enables OpenStack clouds to access the XtremIO storage. The XtremIO Cinder driver directs the creation and deletion of volumes on the XtremIO storage and attaches or detaches volumes to/from OpenStack instances or virtual machines (VMs).",
+            "name": "EMC VNX FC direct driver",
+            "description": "The EMC VNX FC direct driver runs volume operations by communicating with the back-end VNX storage, using NaviSecCLI.",
+            "maintainers": [
+                {
+                    "name": "Xing Yang",
+                    "email": "xing.yang@emc.com",
+                    "launchpad_id": "xing-yang"
+                }
+            ],
+            "wiki": "http://docs.openstack.org/trunk/config-reference/content/emc-vnx-direct-driver.html",
+            "releases": ["Juno"],
+            "ci": {
+                  "id":"emc-vnx-ci",
+                  "success_pattern": "Build Successful",
+                  "failure_pattern": "Build Failed"
+           }
+        },
+        {
+            "project_id": "openstack/cinder",
+            "vendor": "EMC",
+            "name": "EMC XtremIO iSCSI driver",
+            "description": "The XtremIO iSCSI driver enables OpenStack clouds to access the XtremIO storage. The XtremIO Cinder driver directs the creation and deletion of volumes on the XtremIO storage and attaches or detaches volumes to/from OpenStack instances or virtual machines (VMs).",
             "maintainers": [
                 {
                     "name": "Xing Yang",
@@ -307,7 +292,7 @@
                 }
             ],
             "wiki": "http://www.xtremio.com/wp-content/uploads/2014/07/h13287-ds-xtremio-openstack.pdf",
-            "releases": ["Icehouse", "Juno"],
+            "releases": ["Juno"],
             "ci": {
                   "id":"emc-xio-ci",
                   "success_pattern": "Build Successful",
@@ -317,8 +302,8 @@
         {
             "project_id": "openstack/cinder",
             "vendor": "EMC",
-            "name": "EMC XtremIO Cinder driver",
-            "description": "The XtremIO cinder driver enables OpenStack clouds to access the XtremIO storage. The XtremIO Cinder driver directs the creation and deletion of volumes on the XtremIO storage and attaches or detaches volumes to/from OpenStack instances or virtual machines (VMs).",
+            "name": "EMC XtremIO FC driver",
+            "description": "The XtremIO FC driver enables OpenStack clouds to access the XtremIO storage. The XtremIO Cinder driver directs the creation and deletion of volumes on the XtremIO storage and attaches or detaches volumes to/from OpenStack instances or virtual machines (VMs).",
             "maintainers": [
                 {
                     "name": "Xing Yang",
@@ -327,7 +312,7 @@
                 }
             ],
             "wiki": "http://www.xtremio.com/wp-content/uploads/2014/07/h13287-ds-xtremio-openstack.pdf",
-            "releases": ["Icehouse", "Juno"],
+            "releases": ["Juno"],
             "ci": {
                   "id":"emc-xio-ci",
                   "success_pattern": "Build Successful",
