@@ -1,0 +1,11 @@
+Verified+2: Jenkins
+Code-Review+2: Ilya Shakhat <ishakhat@mirantis.com>
+Workflow+1: Ilya Shakhat <ishakhat@mirantis.com>
+Code-Review+1: Jean-Marc Saffroy <jean.marc.saffroy@scality.com>
+Code-Review+1: David Pineau <dav.pineau@gmail.com>
+Code-Review+1: Irina <ipovolotskaya@mirantis.com>
+Submitted-by: Jenkins
+Submitted-at: Mon, 06 Oct 2014 15:54:45 +0000
+Reviewed-on: https://review.openstack.org/126294
+Project: stackforge/driverlog
+Branch: refs/heads/master
