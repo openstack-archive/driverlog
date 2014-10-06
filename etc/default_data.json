@@ -1169,7 +1169,7 @@
             "description": "Freescale SDN ML2 Mechanism Driver is designed to support Cloud Resource Discovery Service (CRD).",
             "maintainers": [
                 {
-                    "name": "Trinath Somanchi",
+                    "name": "Freescale Openstack Team",
                     "irc": "trinaths",
                     "email": "trinath.somanchi@freescale.com",
                     "launchpad_id": "trinaths"
@@ -1181,26 +1181,6 @@
                 "id": "freescale-ci",
                 "success_pattern": "Freescale-ML2-Mechanism-Driver \\S+ : SUCCESS",
                 "failure_pattern": "Freescale-ML2-Mechanism-Driver \\S+ : FAILURE"
-            }
-        },
-        {
-            "project_id": "openstack/neutron",
-            "vendor": "Freescale",
-            "name": "Freescale FWaaS Plugin",
-            "description": "Freescale FWaaS Plugin is designed to support Cloud Resource Discovery Service (CRD).",
-            "maintainers": [
-                {
-                    "name": "Trinath Somanchi",
-                    "irc": "trinaths",
-                    "email": "trinath.somanchi@freescale.com"
-                }
-            ],
-            "wiki": "https://wiki.openstack.org/wiki/Freescale_Firewall_as_a_Service_Plugin",
-            "releases": ["Juno"],
-            "ci": {
-                "id": "freescale-ci",
-                "success_pattern": "Freescale-FWaaS-Plugin \\S+ : SUCCESS",
-                "failure_pattern": "Freescale-FWaaS-Plugin \\S+ : FAILURE"
             }
         },
         {
