@@ -538,7 +538,7 @@
             "project_id": "openstack/cinder",
             "vendor": "IBM",
             "name": "IBM NAS driver",
-            "description": "The IBM NAS Driver works using NFS protocol, and implements other value added features. It allows support for IBM SONAS and Storwize V7000 Unified filers to host storage for OpenStack environment.",
+            "description": "The IBM NAS Driver works using NFS protocol, and implements other value added features. It allows IBM SONAS and Storwize V7000 Unified filers and NFS based GPFS storage system deployments to provide block storage for OpenStack environment.",
             "maintainers": [
                 {
                     "name": "Nilesh Bhosale",
