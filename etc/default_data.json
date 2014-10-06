@@ -809,18 +809,13 @@
             "description": "The driver manages volumes on the Scality SOFS filesystem. This gives OpenStack users the option of storing their data on a Scality Ring object storage cluster.",
             "maintainers": [
                 {
-                    "name": "Jean-Marc Saffroy",
-                    "email": "jean.marc.saffroy@scality.com",
-                    "launchpad_id": "jean-marc-saffroy"
+                    "name": "Jordan Pittier",
+                    "email": "jordan.pittier@scality.com",
+                    "launchpad_id": "jordan-pittier"
                 }
             ],
             "wiki": "http://www.scality.com/scality-delivers-persistent-block-storage-for-virtual-machines-march-13th-2013",
-            "releases": ["Grizzly", "Havana", "Icehouse", "Juno"],
-            "ci": {
-                   "id": "scality-ci",
-                   "success_pattern": "Build Successful",
-                   "failure_pattern": "Build Failed"
-           }
+            "releases": ["Grizzly", "Havana", "Icehouse", "Juno"]
         },
         {
             "project_id": "openstack/cinder",
