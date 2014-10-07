@@ -671,10 +671,9 @@
             "description": "The default volume back-end uses local volumes managed by LVM. This driver supports different transport protocols to attach volumes, currently ISCSI and ISER.",
             "maintainers": [
                 {
-                    "name": "John Griffith",
-                    "email": "john.griffith@solidfire.com",
-                    "irc": "#jgriffith",
-                    "launchpad_id": "john-griffith"
+                    "name": "Mike Perez",
+                    "email": "thingee@gmail.com",
+                    "launchpad_id": "thingee"
                 }
             ],
             "wiki": "http://docs.openstack.org/trunk/config-reference/content/lvm-volume-driver.html",
@@ -687,10 +686,9 @@
             "description": "The Network File System (NFS) is a distributed file system protocol. An NFS server exports one or more of its file systems, known as shares. An NFS client can mount these exported shares on its own file system. File actions on this mounted remote file system can be performed as if the file system were local.",
             "maintainers": [
                 {
-                    "name": "John Griffith",
-                    "email": "john.griffith@solidfire.com",
-                    "irc": "#jgriffith",
-                    "launchpad_id": "john-griffith"
+                    "name": "Mike Perez",
+                    "email": "thingee@gmail.com",
+                    "launchpad_id": "thingee"
                 }
             ],
             "wiki": "http://docs.openstack.org/trunk/config-reference/content/NFS-driver.html",
@@ -703,10 +701,9 @@
             "description": "Sheepdog is an open-source distributed storage system that provides a virtual storage pool utilizing internal disk of commodity servers. This driver enables use of Sheepdog through QEMU/KVM.",
             "maintainers": [
                 {
-                    "name": "John Griffith",
-                    "email": "john.griffith@solidfire.com",
-                    "irc": "#jgriffith",
-                    "launchpad_id": "john-griffith"
+                    "name": "Mike Perez",
+                    "email": "thingee@gmail.com",
+                    "launchpad_id": "thingee"
                 }
             ],
             "wiki": "http://docs.openstack.org/trunk/config-reference/content/sheepdog-driver.html",
