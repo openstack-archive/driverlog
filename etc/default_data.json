@@ -221,7 +221,7 @@
                   "id":"emc-vmax-ci",
                   "success_pattern": "Build Successful",
                   "failure_pattern": "Build Failed"
-           }
+            }
         },
         {
             "project_id": "openstack/cinder",
@@ -241,7 +241,7 @@
                   "id":"emc-vmax-ci",
                   "success_pattern": "Build Successful",
                   "failure_pattern": "Build Failed"
-               }
+           }
         },
         {
             "project_id": "openstack/cinder",
@@ -261,7 +261,10 @@
                   "id":"emc-vnx-ci",
                   "success_pattern": "Build Successful",
                   "failure_pattern": "Build Failed"
+<<<<<<< HEAD
 
+=======
+>>>>>>> Add new Cinder PTL
            }
         },
         {
@@ -328,7 +331,11 @@
             "project_id": "openstack/cinder",
             "vendor": "Fujitsu",
             "name": "Fujitsu Eternus DX FC Volume driver",
+<<<<<<< HEAD
             "description": "This driver supports ETERNUS DX S2 and the S3 series and runs volume operations by communicating with the backend Fujitsu storage.It uses a CIM client in Python called PyWBEM to perform CIM operations over HTTP..",
+=======
+            "description": "This driver supports ETERNUS DX S2 and the S3 series and runs volume operations by communicating with the backend Fujitsu storage.It uses a CIM client in Python called PyWBEM to perform CIM operations over HTTP.",
+>>>>>>> Add new Cinder PTL
             "maintainers": [
                 {
                     "name": "Jun Ishizaki",
@@ -343,7 +350,11 @@
             "project_id": "openstack/cinder",
             "vendor": "Fujitsu",
             "name": "Fujitsu Eternus DX ISCSI Volume driver",
+<<<<<<< HEAD
             "description": "This driver supports ETERNUS DX S2 and the S3 series and runs volume operations by communicating with the backend Fujitsu storage.It uses a CIM client in Python called PyWBEM to perform CIM operations over HTTP..",
+=======
+            "description": "This driver supports ETERNUS DX S2 and the S3 series and runs volume operations by communicating with the backend Fujitsu storage.It uses a CIM client in Python called PyWBEM to perform CIM operations over HTTP.",
+>>>>>>> Add new Cinder PTL
             "maintainers": [
                 {
                     "name": "Jun Ishizaki",
@@ -387,8 +398,8 @@
         {
             "project_id": "openstack/cinder",
             "vendor": "HP",
-            "name": "HP 3PAR iSCSI driver",
-            "description": "The HP 3PAR StoreServ iSCSI Block Storage (Cinder) driver to provision volumes with an HP 3PAR StoreServ array and attach volumes over iSCSI.  The driver communicates over HTTP, HTTPS, and SSH connections.",
+            "name": "HP 3PAR Fibre Channel driver",
+            "description": "The HP 3PAR StoreServ Fibre Channel Block Storage (Cinder) driver to provision volumes with an HP 3PAR StoreServ array and attach volumes over Fibre Channel.  The driver communicates over HTTP, HTTPS, and SSH connections.",
             "maintainers": [
                 {
                     "name": "Walter Boring",
@@ -412,8 +423,8 @@
         {
             "project_id": "openstack/cinder",
             "vendor": "HP",
-            "name": "HP 3PAR Fibre Channel driver",
-            "description": "The HP 3PAR StoreServ Fibre Channel Block Storage (Cinder) driver to provision volumes with an HP 3PAR StoreServ array and attach volumes over Fibre Channel.  The driver communicates over HTTP, HTTPS, and SSH connections.",
+            "name": "HP 3PAR iSCSI driver",
+            "description": "The HP 3PAR StoreServ iSCSI Block Storage (Cinder) driver to provision volumes with an HP 3PAR StoreServ array and attach volumes over iSCSI.  The driver communicates over HTTP, HTTPS, and SSH connections.",
             "maintainers": [
                 {
                     "name": "Walter Boring",
@@ -641,14 +652,13 @@
             "description": "The default volume back-end uses local volumes managed by LVM. This driver supports different transport protocols to attach volumes, currently ISCSI and ISER.",
             "maintainers": [
                 {
-                    "name": "John Griffith",
-                    "email": "john.griffith@solidfire.com",
-                    "irc": "#jgriffith",
-                    "launchpad_id": "john-griffith"
+                    "name": "Mike Perez",
+                    "email": "thingee@gmail.com",
+                    "launchpad_id": "thingee"
                 }
             ],
             "wiki": "http://docs.openstack.org/trunk/config-reference/content/lvm-volume-driver.html",
-            "releases": ["Folsom", "Grizzly", "Havana", "Icehouse", "Juno"]
+            "releases": ["Austin", "Bexar", "Cactus", "Diablo", "Essex", "Folsom", "Grizzly", "Havana", "Icehouse", "Juno"]
         },
         {
             "project_id": "openstack/cinder",
@@ -657,10 +667,9 @@
             "description": "The Network File System (NFS) is a distributed file system protocol. An NFS server exports one or more of its file systems, known as shares. An NFS client can mount these exported shares on its own file system. File actions on this mounted remote file system can be performed as if the file system were local.",
             "maintainers": [
                 {
-                    "name": "John Griffith",
-                    "email": "john.griffith@solidfire.com",
-                    "irc": "#jgriffith",
-                    "launchpad_id": "john-griffith"
+                    "name": "Mike Perez",
+                    "email": "thingee@gmail.com",
+                    "launchpad_id": "thingee"
                 }
             ],
             "wiki": "http://docs.openstack.org/trunk/config-reference/content/NFS-driver.html",
@@ -673,10 +682,9 @@
             "description": "Sheepdog is an open-source distributed storage system that provides a virtual storage pool utilizing internal disk of commodity servers. This driver enables use of Sheepdog through QEMU/KVM.",
             "maintainers": [
                 {
-                    "name": "John Griffith",
-                    "email": "john.griffith@solidfire.com",
-                    "irc": "#jgriffith",
-                    "launchpad_id": "john-griffith"
+                    "name": "Mike Perez",
+                    "email": "thingee@gmail.com",
+                    "launchpad_id": "thingee"
                 }
             ],
             "wiki": "http://docs.openstack.org/trunk/config-reference/content/sheepdog-driver.html",
@@ -1379,10 +1387,10 @@
             "description": "The Openstack Mellanox Neutron plugin supports Mellanox embedded switch functionality as part of the VPI (Ethernet/InfiniBand) HCA. Mellanox Neutron Plugin allows hardware vNICs (based on SR-IOV virtual functions) per each Virtual Machine vNIC to have its unique connectivity, security, and QoS attributes.",
             "maintainers": [
                 {
-                    "name": "Irena Berezovsky",
-                    "irc": "irenab",
-                    "email": "irenab@mellanox.com",
-                    "launchpad_id": "irenab"
+                    "name": "Omri Marcovitch",
+                    "irc": "omrim",
+                    "email": "omrim@mellanox.com",
+                    "launchpad_id": "omrim"
                 }
             ],
             "wiki": "https://wiki.openstack.org/wiki/Mellanox-Neutron",
@@ -1400,10 +1408,10 @@
             "description": "The Openstack Mellanox Neutron ML2 Driver supports Mellanox embedded switch functionality as part of the VPI (Ethernet/InfiniBand) HCA. Mellanox ML2 Driver allows hardware vNICs (based on SR-IOV virtual functions) per each Virtual Machine vNIC to have its unique connectivity, security, and QoS attributes.",
             "maintainers": [
                 {
-                    "name": "Irena Berezovsky",
-                    "irc": "irenab",
-                    "email": "irenab@mellanox.com",
-                    "launchpad_id": "irenab"
+                    "name": "Omri Marcovitch",
+                    "irc": "omrim",
+                    "email": "omrim@mellanox.com",
+                    "launchpad_id": "omrim"
                 }
             ],
             "wiki": "https://wiki.openstack.org/wiki/Mellanox-Neutron-ML2",
@@ -1802,7 +1810,7 @@
             "project_id": "openstack/nova",
             "vendor": "IBM",
             "name": "PowerKVM",
-            "description": "IBM PowerKVM provides an open virtualization choice for IBM scale-out Linux systems based on the POWER8â¢ technology. This solution includes the Linux open source technology of KVM virtualization, and is designed to complement the performance, scalability and security qualities of Linux.",
+            "description": "IBM PowerKVM provides an open virtualization choice for IBM scale-out Linux systems based on the POWER8Ã¢ÂÂ¢ technology. This solution includes the Linux open source technology of KVM virtualization, and is designed to complement the performance, scalability and security qualities of Linux.",
             "maintainers": [
                 {
                     "name": "Kurt Taylor",
@@ -2023,6 +2031,21 @@
           {
             "project_id": "openstack/sahara",
             "vendor": "OpenStack Community",
+            "name": "Spark Plugin",
+            "description": "Vanilla plugin is a reference plugin implementation which allows to operate with cluster with Apache Hadoop.",
+            "maintainers": [
+                {
+                    "name": "Andrew Lazarev",
+                    "email": "alazarev@mirantis.com",
+                    "launchpad_id": "alazarev"
+                }
+            ],
+            "wiki": "https://wiki.openstack.org/wiki/Sahara/SparkPlugin",
+            "releases": ["Juno"]
+          },
+          {
+            "project_id": "openstack/sahara",
+            "vendor": "OpenStack Community",
             "name": "Vanilla Plugin",
             "description": "Vanilla plugin is a reference plugin implementation which allows to operate with cluster with Apache Hadoop.",
             "maintainers": [
@@ -2082,3 +2105,4 @@
           }
     ]
 }
+
