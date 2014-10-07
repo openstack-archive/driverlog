@@ -1864,26 +1864,6 @@
                 }
             ]
         },
-        {
-            "project_id": "openstack/sahara",
-            "vendor": "Hortonworks",
-            "name": "Hortonworks Data Platform Plugin",
-            "description": "The Hortonworks Data Platform (HDP) Sahara plugin provides a way to provision HDP clusters on OpenStack using templates in a single click and in an easily repeatable fashion.",
-            "maintainers": [
-                {
-                    "name": "Sergey Lukjanov",
-                    "email": "slukjanov@mirantis.com",
-                    "launchpad_id": "slukjanov"
-                }
-            ],
-            "wiki": "http://docs.openstack.org/developer/sahara/userdoc/hdp_plugin.html",
-            "releases": ["Juno"],
-            "ci": {
-                "id": "savanna-ci",
-                "success_pattern": "gate-sahara-integration-hdp \\S+ : SUCCESS",
-                "failure_pattern": "gate-sahara-integration-hdp \\S+ : FAILURE"
-               }
-          },
           {
             "project_id": "openstack/sahara",
             "vendor": "OpenStack Community",
@@ -1899,10 +1879,30 @@
             "wiki": "http://docs.openstack.org/developer/sahara/userdoc/vanilla_plugin.html",
             "releases": ["Icehouse", "Juno"],
             "ci": {
-                   "id": "vanillabot",
-                   "success_pattern": "Build Successful",
-                   "failure_pattern": "Build Failed"
-            }
+                "id": "savanna-ci",
+                "success_pattern": "gate-sahara-integration-vanilla-.* \\S+ : SUCCESS",
+                "failure_pattern": "gate-sahara-integration-vanilla-.* \\S+ : FAILURE"
+               }
+          },
+          {
+            "project_id": "openstack/sahara",
+            "vendor": "Hortonworks",
+            "name": "Hortonworks Data Platform Plugin",
+            "description": "The Hortonworks Data Platform (HDP) Sahara plugin provides a way to provision HDP clusters on OpenStack using templates in a single click and in an easily repeatable fashion.",
+            "maintainers": [
+                {
+                    "name": "Sergey Lukjanov",
+                    "email": "slukjanov@mirantis.com",
+                    "launchpad_id": "slukjanov"
+                }
+            ],
+            "wiki": "http://docs.openstack.org/developer/sahara/userdoc/hdp_plugin.html",
+            "releases": ["Icehouse", "Juno"],
+            "ci": {
+                "id": "savanna-ci",
+                "success_pattern": "gate-sahara-integration-hdp.* \\S+ : SUCCESS",
+                "failure_pattern": "gate-sahara-integration-hdp.* \\S+ : FAILURE"
+               }
           },
           {
             "project_id": "openstack/sahara",
@@ -1911,13 +1911,38 @@
             "description": "Vanilla plugin is a reference plugin implementation which allows to operate with cluster with Apache Hadoop.",
             "maintainers": [
                 {
-                    "name": "Andrew Lazarev",
-                    "email": "alazarev@mirantis.com",
-                    "launchpad_id": "alazarev"
+                    "name": "Daniele Venzano",
+                    "email": "venza@brownhat.org",
+                    "launchpad_id": "venza"
                 }
             ],
-            "wiki": "https://wiki.openstack.org/wiki/Sahara/SparkPlugin",
-            "releases": ["Juno"]
+            "wiki": "http://docs.openstack.org/developer/sahara/userdoc/spark_plugin.html",
+            "releases": ["Juno"],
+            "ci": {
+                "id": "savanna-ci",
+                "success_pattern": "gate-sahara-integration-spark-.* \\S+ : SUCCESS",
+                "failure_pattern": "gate-sahara-integration-spark-.* \\S+ : FAILURE"
+               }
+          },
+          {
+            "project_id": "openstack/sahara",
+            "vendor": "OpenStack Community",
+            "name": "Cloudera Plugin (Beta)",
+            "description": "Cloudera plugin provides an ability to launch CDH clusters with Cloudera Manager management console.",
+            "maintainers": [
+                {
+                    "name": "Sergey Reshetnyak",
+                    "email": "sreshetniak@mirantis.com",
+                    "launchpad_id": "sreshetniak"
+                }
+            ],
+            "wiki": "https://wiki.openstack.org/wiki/Sahara/CDHPlugin",
+            "releases": ["Juno"],
+            "ci": {
+                "id": "savanna-ci",
+                "success_pattern": "gate-sahara-integration-cdh-.* \\S+ : SUCCESS",
+                "failure_pattern": "gate-sahara-integration-cdh-.* \\S+ : FAILURE"
+               }
           }
     ]
 }
