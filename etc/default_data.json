@@ -567,16 +567,16 @@
             "project_id": "openstack/cinder",
             "vendor": "IBM",
             "name": "IBM XIV/DS8K volume driver",
-            "description": "There is a unified volume back-end for IBM XIV and DS8K storage.",
+            "description": "The IBM XIV/DS8K volume driver is installed on OpenStack Cinder nodes and enables utilization of storage resources provided by IBM XIV and DS8000 storage systems.",
             "maintainers": [
                 {
-                    "name": "Erik Zaadi",
-                    "email": "erikz@il.ibm.com",
-                    "launchpad_id": "erikzaadi"
+                    "name": "Alon Marx",
+                    "email": "alonma@il.ibm.com",
+                    "launchpad_id": "alonmarx"
                 }
             ],
             "wiki": "http://docs.openstack.org/trunk/config-reference/content/ibm-xiv-driver.html",
-            "releases": ["Folsom", "Grizzly", "Havana", "Icehouse"],
+            "releases": ["Folsom", "Grizzly", "Havana", "Icehouse", "Juno"],
             "ci": {
                    "id": "ibm-xiv-ci",
                    "success_pattern": "Build Successful",
