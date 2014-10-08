@@ -9,6 +9,10 @@
             "name": "Glance (Image Service)"
         },
         {
+            "id": "openstack/ironic",
+            "name": "Ironic (Bare Metal Provisioning)"
+        },
+        {
             "id": "openstack/neutron",
             "name": "Neutron (Networking)"
         },
@@ -873,6 +877,147 @@
             "releases": ["Folsom", "Grizzly", "Havana", "Icehouse", "Juno"]
         },
         {
+            "project_id": "openstack/ironic",
+            "vendor": "AMD/SeaMicro",
+            "name": "pxe_seamicro",
+            "description": "This driver interfaces with SeaMicro's high density computing devices.",
+            "maintainers": [],
+            "releases": ["Icehouse", "Juno"]
+        },
+        {
+            "project_id": "openstack/ironic",
+            "vendor": "Cray",
+            "name": "pxe_snmp",
+            "description": "This driver uses SNMP instead of IPMI for power management of power distribution units.",
+            "maintainers": [
+                {
+                    "name": "Stig Telfer",
+                    "email": "stelfer@cray.com",
+                    "launchpad_id": "stigtelfer"
+                }
+            ],
+            "releases": ["Juno"]
+        },
+        {
+            "project_id": "openstack/ironic",
+            "vendor": "HP",
+            "name": "iscsi_ilo",
+            "description": "The iscsi_ilo driver from HP utilizes HP's integrated lights-out management facilities, in conjunction with an iSCSI-based deploy mechanism. It does not use PXE.",
+            "maintainers": [
+                {
+                    "name": "Ramakrishnan G",
+                    "email": "rameshg87@gmail.com",
+                    "launchpad_id": "rameshg87"
+                }
+            ],
+            "releases": ["Juno"]
+        },
+        {
+            "project_id": "openstack/ironic",
+            "vendor": "IBM",
+            "name": "pxe_ipminative",
+            "description": "pxe_ipminative is like the pxe_ipmitool driver, but substitutes IBM's 'pyghmi' library, a native python IPMI utility, for the generic ipmitool package.",
+            "maintainers": [
+                {
+                    "name": "Ling Gao",
+                    "email": "linggao@us.ibm.com",
+                    "launchpad_id": "linggao",
+                    "irc": "linggao"
+                }
+            ],
+            "releases": ["Icehouse", "Juno"],
+            "ci": {
+                "id": "ibm-xcat-ci",
+                 "success_pattern": "Build Successful",
+                 "failure_pattern": "Build Failed"
+               }
+        },
+        {
+            "project_id": "openstack/ironic",
+            "vendor": "OpenStack Community",
+            "name": "agent_ssh",
+            "description": "agent_ssh is a testing driver, which combines the ironic-python-agent deploy mechanism with SSH-based power control to enable upstream CI.",
+            "maintainers": [
+                {
+                    "name": "Jim Rollenhagen",
+                    "email": "jim@jimrollenhagen.com",
+                    "launchpad_id": "jroll",
+                    "irc": "jroll"
+                }
+            ],
+            "releases": ["Juno"],
+            "ci": {
+                "id": "jenkins_ci",
+                 "success_pattern": "Build Successful",
+                 "failure_pattern": "Build Failed"
+               }
+        },
+        {
+            "project_id": "openstack/ironic",
+            "vendor": "OpenStack Community",
+            "name": "agent_ipmitool",
+            "description": "agent_ipmitool uses the ironic-python-agent project for advanced provisioning functionality not available with the PXE driver.",
+            "maintainers": [
+                {
+                    "name": "Jim Rollenhagen",
+                    "email": "jim@jimrollenhagen.com",
+                    "launchpad_id": "jroll",
+                    "irc": "jroll"
+                }
+            ],
+            "releases": ["Juno"]
+        },
+        {
+            "project_id": "openstack/ironic",
+            "vendor": "OpenStack Community",
+            "name": "pxe_iboot",
+            "description": "This driver uses iBoot instead of IPMI for power management.",
+            "maintainers": [
+                {
+                    "name": "Dan Prince",
+                    "irc": "dprince",
+                    "email": "dprince@redhat.com",
+                    "launchpad_id": "dan-prince"
+                }
+            ],
+            "releases": ["Juno"]
+        },
+        {
+            "project_id": "openstack/ironic",
+            "vendor": "OpenStack Community",
+            "name": "pxe_ipmitool",
+            "description": "pxe_ipmitool is the recommended default driver for Ironic in Icehouse and Juno.",
+            "maintainers": [
+                {
+                    "name": "Devananda van der Veen",
+                    "email": "devananda.vdv@gmail.com",
+                    "launchpad_id": "devananda",
+                    "irc": "devananda"
+                }
+            ],
+            "releases": ["Icehouse", "Juno"]
+        },
+        {
+            "project_id": "openstack/ironic",
+            "vendor": "OpenStack Community",
+            "name": "pxe_ssh",
+            "description": "pxe_ssh is a testing driver, which combines the PXE deploy mechanism with SSH-based power control to enable upstream CI.",
+            "maintainers": [
+                {
+                    "name": "Devananda van der Veen",
+                    "email": "devananda.vdv@gmail.com",
+                    "launchpad_id": "devananda",
+                    "irc": "devananda"
+                }
+            ],
+            "releases": ["Icehouse", "Juno"],
+            "ci": {
+                "id": "jenkins_ci",
+                 "success_pattern": "Build Successful",
+                 "failure_pattern": "Build Failed"
+               }
+        },
+        {
             "project_id": "openstack/neutron",
             "vendor": "A10 Networks",
             "name": "A10 Networks LBaaS Driver",
@@ -1692,16 +1837,11 @@
             "project_id": "openstack/nova",
             "vendor": "OpenStack Community",
             "name": "Baremetal driver",
-            "description": "The baremetal driver is a hypervisor driver for OpenStack Nova Compute. It exposes hardware through the OpenStack APIs, using pluggable sub-drivers to deliver machine imaging (PXE) and power control (IPMI).",
+            "description": "The baremetal driver was a hypervisor driver for OpenStack Nova Compute that was added during Grizzly, but soon spun out into the Ironic project. The driver, though deprecated, remained in Nova until the Ironic driver was landed during Juno. Baremetal will be removed in Kilo.",
             "maintainers": [
-                {
-                    "name": "Michael Still",
-                    "email": "mikal@stillhq.com",
-                    "launchpad_id": "mikalstill"
-                }
             ],
-            "wiki": "http://docs.openstack.org/trunk/config-reference/content/baremetal.html",
-            "releases": ["Austin", "Bexar", "Cactus", "Diablo", "Essex", "Folsom", "Grizzly", "Havana"],
+            "wiki": "https://wiki.openstack.org/wiki/Baremetal",
+            "releases": ["Grizzly", "Havana", "Icehouse", "Juno"],
             "ci": {
                  "id": "tripleo_ci",
                  "success_pattern": "Build Successful",
@@ -1726,22 +1866,23 @@
         {
             "project_id": "openstack/nova",
             "vendor": "OpenStack Community",
-            "name": "Ironic",
-            "description": "OpenStack Bare Metal Provisioning Program.",
+            "name": "Ironic driver",
+            "description": "Compute driver for Ironic (Bare Metal Provisioning) program, enabling Nova to provision physical machines. Built during Icehouse within the Ironic tree, it was moved to Nova's tree during Juno.",
             "maintainers": [
                 {
                     "name": "Devananda van der Veen",
-                    "email": "devananda@hp.com",
-                    "launchpad_id": "devananda"
+                    "email": "devananda.vdv@gmail.com",
+                    "launchpad_id": "devananda",
+                    "irc": "devananda"
                 }
             ],
-            "releases": ["Juno"],
-            "wiki": "https://wiki.openstack.org/wiki/Ironic",
             "ci": {
-                "id": "tripleo_ci",
+                "id": "jenkins_ci",
                  "success_pattern": "Build Successful",
                  "failure_pattern": "Build Failed"
-              }
+               },
+            "releases": ["Icehouse", "Juno"],
+            "wiki": "https://wiki.openstack.org/wiki/Ironic"
         },
         {
             "project_id": "openstack/nova",
