@@ -1205,6 +1205,46 @@
         },
         {
             "project_id": "openstack/neutron",
+            "vendor": "Cisco",
+            "name": "Cisco APIC ML2 Driver",
+            "description": "The Cisco APIC ML2 Mechanism driver provides Neutron's core API abstraction to be implemented against an ACI fabric.",
+            "maintainers": [
+                {
+                    "name": "Ivar Lazzaro",
+                    "email": "ivarlazzaro@gmail.com",
+                    "launchpad_id": "ivar-lazzaro"
+                }
+            ],
+            "wiki": "https://wiki.openstack.org/wiki/Neutron/Cisco-APIC-ML2-driver",
+            "releases": ["Juno"],
+            "ci": {
+                "id": "cisco_neutron_ci",
+                "success_pattern": "apic \\S+ : SUCCESS",
+                "failure_pattern": "apic \\S+ : FAILURE"
+            }
+        },
+        {
+            "project_id": "openstack/neutron",
+            "vendor": "Cisco",
+            "name": "Cisco APIC L3 Service",
+            "description": "The Cisco APIC L3 service provides Neutron's L3 API abstraction to be implemented against an ACI fabric.",
+            "maintainers": [
+                {
+                    "name": "Ivar Lazzaro",
+                    "email": "ivarlazzaro@gmail.com",
+                    "launchpad_id": "ivar-lazzaro"
+                }
+            ],
+            "wiki": "https://wiki.openstack.org/wiki/Neutron/Cisco-APIC-ML2-driver",
+            "releases": ["Juno"],
+            "ci": {
+                "id": "cisco_neutron_ci",
+                "success_pattern": "apic \\S+ : SUCCESS",
+                "failure_pattern": "apic \\S+ : FAILURE"
+            }
+        },
+        {
+            "project_id": "openstack/neutron",
             "vendor": "Citrix",
             "name": "NetScaler LBaas driver",
             "description": "The NetScaler loadbalancer integration in Neutron LBaaS implements all the LBaaS driver CRUD APIs defined in the IceHouse release: It implements all the defined operations on VIPs, Pools, Pool Members and Health Monitors. The integration consists of a driver class configured in the Neutron config file (neutron.conf), and the accompanying unit tests.",
