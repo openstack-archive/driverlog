@@ -1245,6 +1245,26 @@
         },
         {
             "project_id": "openstack/neutron",
+            "vendor": "Cisco",
+            "name": "Cisco VPNaaS",
+            "description": "The Cisco VPNaaS provides VPN IPsec site-to-site connections using the Cisco Cloud Services Router.",
+            "maintainers": [
+                {
+                    "name": "Paul Michali",
+                    "email": "pcm@cisco.com",
+                    "launchpad_id": "pcm_"
+                }
+            ],
+            "wiki": "http://docwiki.cisco.com/wiki/Install_and_Setup_of_Cisco_Cloud_Services_Router_(CSR)_for_OpenStack_VPN",
+            "releases": ["Icehouse", "Juno"],
+            "ci": {
+                "id": "cisco_neutron_ci",
+                "success_pattern": "vpnaas-nexus \\S+ : SUCCESS",
+                "failure_pattern": "vpnaas-nexus \\S+ : FAILURE"
+            }
+        },
+        {
+            "project_id": "openstack/neutron",
             "vendor": "Citrix",
             "name": "NetScaler LBaas driver",
             "description": "The NetScaler loadbalancer integration in Neutron LBaaS implements all the LBaaS driver CRUD APIs defined in the IceHouse release: It implements all the defined operations on VIPs, Pools, Pool Members and Health Monitors. The integration consists of a driver class configured in the Neutron config file (neutron.conf), and the accompanying unit tests.",
