@@ -1166,6 +1166,26 @@
         {
             "project_id": "openstack/neutron",
             "vendor": "Cisco",
+            "name": "CSR1kv router service plugin",
+            "description": "A Cisco service plugin that implements Neutron L3 router API for CSR1kv VMs.",
+            "maintainers": [
+                {
+                    "name": "Bob Melander",
+                    "email": "bmelande@cisco.com",
+                    "launchpad_id": "bob-melander"
+                }
+            ],
+            "wiki": "https://",
+            "releases": ["Juno"],
+            "ci": {
+                "id": "csr1kv",
+                "success_pattern": "csr1kv \\S+ : SUCCESS",
+                "failure_pattern": "csr1kv \\S+ : FAILURE"
+            }
+        },
+        {
+            "project_id": "openstack/neutron",
+            "vendor": "Cisco",
             "name": "Neutron ML2 Driver For Cisco Nexus Devices",
             "description": "The Cisco Nexus ML2 Mechanism Driver implements the ML2 Plugin Mechanism Driver API. This driver manages multiple types of Cisco Nexus switches.",
             "maintainers": [
