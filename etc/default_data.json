@@ -206,26 +206,6 @@
         {
             "project_id": "openstack/cinder",
             "vendor": "EMC",
-            "name": "EMC VMAX iSCSI driver",
-            "description": "The EMC VMAX iSCSI driver runs volume operations by communicating with the back-end VMAX storage, using the EMC SMI-S Provider.",
-            "maintainers": [
-                {
-                    "name": "Xing Yang",
-                    "email": "xing.yang@emc.com",
-                    "launchpad_id": "xing-yang"
-                }
-            ],
-            "wiki": "http://docs.openstack.org/trunk/config-reference/content/emc-vmax-driver.html",
-            "releases": ["Grizzly", "Havana", "Icehouse", "Juno"],
-            "ci": {
-                  "id":"emc-vmax-ci",
-                  "success_pattern": "Build Successful",
-                  "failure_pattern": "Build Failed"
-           }
-        },
-        {
-            "project_id": "openstack/cinder",
-            "vendor": "EMC",
             "name": "EMC VMAX FC driver",
             "description": "The EMC VMAX FC driver runs volume operations by communicating with the back-end VMAX storage, using the EMC SMI-S Provider.",
             "maintainers": [
@@ -241,7 +221,7 @@
                   "id":"emc-vmax-ci",
                   "success_pattern": "Build Successful",
                   "failure_pattern": "Build Failed"
-               }
+           }
         },
         {
             "project_id": "openstack/cinder",
@@ -325,9 +305,29 @@
         },
         {
             "project_id": "openstack/cinder",
+            "vendor": "EMC",
+            "name": "EMC VMAX iSCSI driver",
+            "description": "The EMC VMAX iSCSI driver runs volume operations by communicating with the back-end VMAX storage, using the EMC SMI-S Provider.",
+            "maintainers": [
+                {
+                    "name": "Xing Yang",
+                    "email": "xing.yang@emc.com",
+                    "launchpad_id": "xing-yang"
+                }
+            ],
+            "wiki": "http://docs.openstack.org/trunk/config-reference/content/emc-vmax-driver.html",
+            "releases": ["Grizzly", "Havana", "Icehouse", "Juno"],
+            "ci": {
+                  "id":"emc-vmax-ci",
+                  "success_pattern": "Build Successful",
+                  "failure_pattern": "Build Failed"
+            }
+        },
+        {
+            "project_id": "openstack/cinder",
             "vendor": "Fujitsu",
-            "name": "Fujitsu Eternus DX ISCSI Volume driver",
-            "description": "This driver supports ETERNUS DX S2 and the S3 series and runs volume operations by communicating with the backend Fujitsu storage.It uses a CIM client in Python called PyWBEM to perform CIM operations over HTTP..",
+            "name": "Fujitsu Eternus DX FC Volume driver",
+            "description": "This driver supports ETERNUS DX S2 and the S3 series and runs volume operations by communicating with the backend Fujitsu storage.It uses a CIM client in Python called PyWBEM to perform CIM operations over HTTP.",
             "maintainers": [
                 {
                     "name": "Jun Ishizaki",
@@ -341,8 +341,8 @@
         {
             "project_id": "openstack/cinder",
             "vendor": "Fujitsu",
-            "name": "Fujitsu Eternus DX FC Volume driver",
-            "description": "This driver supports ETERNUS DX S2 and the S3 series and runs volume operations by communicating with the backend Fujitsu storage.It uses a CIM client in Python called PyWBEM to perform CIM operations over HTTP..",
+            "name": "Fujitsu Eternus DX ISCSI Volume driver",
+            "description": "This driver supports ETERNUS DX S2 and the S3 series and runs volume operations by communicating with the backend Fujitsu storage.It uses a CIM client in Python called PyWBEM to perform CIM operations over HTTP.",
             "maintainers": [
                 {
                     "name": "Jun Ishizaki",
@@ -386,8 +386,8 @@
         {
             "project_id": "openstack/cinder",
             "vendor": "HP",
-            "name": "HP 3PAR iSCSI driver",
-            "description": "The HP 3PAR StoreServ iSCSI Block Storage (Cinder) driver to provision volumes with an HP 3PAR StoreServ array and attach volumes over iSCSI.  The driver communicates over HTTP, HTTPS, and SSH connections.",
+            "name": "HP 3PAR Fibre Channel driver",
+            "description": "The HP 3PAR StoreServ Fibre Channel Block Storage (Cinder) driver to provision volumes with an HP 3PAR StoreServ array and attach volumes over Fibre Channel.  The driver communicates over HTTP, HTTPS, and SSH connections.",
             "maintainers": [
                 {
                     "name": "Walter Boring",
@@ -411,8 +411,8 @@
         {
             "project_id": "openstack/cinder",
             "vendor": "HP",
-            "name": "HP 3PAR Fibre Channel driver",
-            "description": "The HP 3PAR StoreServ Fibre Channel Block Storage (Cinder) driver to provision volumes with an HP 3PAR StoreServ array and attach volumes over Fibre Channel.  The driver communicates over HTTP, HTTPS, and SSH connections.",
+            "name": "HP 3PAR iSCSI driver",
+            "description": "The HP 3PAR StoreServ iSCSI Block Storage (Cinder) driver to provision volumes with an HP 3PAR StoreServ array and attach volumes over iSCSI.  The driver communicates over HTTP, HTTPS, and SSH connections.",
             "maintainers": [
                 {
                     "name": "Walter Boring",
@@ -640,14 +640,13 @@
             "description": "The default volume back-end uses local volumes managed by LVM. This driver supports different transport protocols to attach volumes, currently ISCSI and ISER.",
             "maintainers": [
                 {
-                    "name": "John Griffith",
-                    "email": "john.griffith@solidfire.com",
-                    "irc": "#jgriffith",
-                    "launchpad_id": "john-griffith"
+                    "name": "Mike Perez",
+                    "email": "thingee@gmail.com",
+                    "launchpad_id": "thingee"
                 }
             ],
             "wiki": "http://docs.openstack.org/trunk/config-reference/content/lvm-volume-driver.html",
-            "releases": ["Folsom", "Grizzly", "Havana", "Icehouse", "Juno"]
+            "releases": ["Austin", "Bexar", "Cactus", "Diablo", "Essex", "Folsom", "Grizzly", "Havana", "Icehouse", "Juno"]
         },
         {
             "project_id": "openstack/cinder",
@@ -656,10 +655,9 @@
             "description": "The Network File System (NFS) is a distributed file system protocol. An NFS server exports one or more of its file systems, known as shares. An NFS client can mount these exported shares on its own file system. File actions on this mounted remote file system can be performed as if the file system were local.",
             "maintainers": [
                 {
-                    "name": "John Griffith",
-                    "email": "john.griffith@solidfire.com",
-                    "irc": "#jgriffith",
-                    "launchpad_id": "john-griffith"
+                    "name": "Mike Perez",
+                    "email": "thingee@gmail.com",
+                    "launchpad_id": "thingee"
                 }
             ],
             "wiki": "http://docs.openstack.org/trunk/config-reference/content/NFS-driver.html",
@@ -672,10 +670,9 @@
             "description": "Sheepdog is an open-source distributed storage system that provides a virtual storage pool utilizing internal disk of commodity servers. This driver enables use of Sheepdog through QEMU/KVM.",
             "maintainers": [
                 {
-                    "name": "John Griffith",
-                    "email": "john.griffith@solidfire.com",
-                    "irc": "#jgriffith",
-                    "launchpad_id": "john-griffith"
+                    "name": "Mike Perez",
+                    "email": "thingee@gmail.com",
+                    "launchpad_id": "thingee"
                 }
             ],
             "wiki": "http://docs.openstack.org/trunk/config-reference/content/sheepdog-driver.html",
@@ -882,7 +879,8 @@
             "name": "pxe_seamicro",
             "description": "This driver interfaces with SeaMicro's high density computing devices.",
             "maintainers": [],
-            "releases": ["Icehouse", "Juno"]
+            "releases": ["Icehouse", "Juno"],
+            "wiki": "http://www.seamicro.com/sites/default/files/SeaMicro-Openstack-Blueprint.pdf"
         },
         {
             "project_id": "openstack/ironic",
@@ -896,7 +894,8 @@
                     "launchpad_id": "stigtelfer"
                 }
             ],
-            "releases": ["Juno"]
+            "releases": ["Juno"],
+            "wiki": "http://docs.openstack.org/developer/ironic/api/ironic.drivers.pxe.html"
         },
         {
             "project_id": "openstack/ironic",
@@ -910,7 +909,8 @@
                     "launchpad_id": "rameshg87"
                 }
             ],
-            "releases": ["Juno"]
+            "releases": ["Juno"],
+            "wiki": "http://docs.openstack.org/developer/ironic/_modules/ironic/drivers/ilo.html"
         },
         {
             "project_id": "openstack/ironic",
@@ -926,6 +926,7 @@
                 }
             ],
             "releases": ["Icehouse", "Juno"],
+            "wiki": "https://wiki.openstack.org/wiki/Ironic/Drivers",
             "ci": {
                 "id": "ibm-xcat-ci",
                  "success_pattern": "Build Successful",
@@ -946,6 +947,7 @@
                 }
             ],
             "releases": ["Juno"],
+            "wiki": "http://docs.openstack.org/developer/ironic/api/ironic.drivers.agent.html?highlight=agent%20ssh#ironic.drivers.agent.AgentAndSSHDriver",
             "ci": {
                 "id": "jenkins_ci",
                  "success_pattern": "Build Successful",
@@ -965,7 +967,8 @@
                     "irc": "jroll"
                 }
             ],
-            "releases": ["Juno"]
+            "releases": ["Juno"],
+            "wiki": "http://docs.openstack.org/developer/ironic/api/ironic.drivers.agent.html"
         },
         {
             "project_id": "openstack/ironic",
@@ -980,7 +983,8 @@
                     "launchpad_id": "dan-prince"
                 }
             ],
-            "releases": ["Juno"]
+            "releases": ["Juno"],
+            "wiki": "http://docs.openstack.org/developer/ironic/api/ironic.drivers.pxe.html"
         },
         {
             "project_id": "openstack/ironic",
@@ -995,7 +999,8 @@
                     "irc": "devananda"
                 }
             ],
-            "releases": ["Icehouse", "Juno"]
+            "releases": ["Icehouse", "Juno"],
+            "wiki": "http://docs.openstack.org/developer/ironic/api/ironic.drivers.pxe.html"
         },
         {
             "project_id": "openstack/ironic",
@@ -1011,6 +1016,7 @@
                 }
             ],
             "releases": ["Icehouse", "Juno"],
+            "wiki": "http://docs.openstack.org/developer/ironic/api/ironic.drivers.pxe.html",
             "ci": {
                 "id": "jenkins_ci",
                  "success_pattern": "Build Successful",
@@ -1842,7 +1848,7 @@
             "project_id": "openstack/nova",
             "vendor": "IBM",
             "name": "PowerKVM",
-            "description": "IBM PowerKVM provides an open virtualization choice for IBM scale-out Linux systems based on the POWER8Ã¢ÂÂ¢ technology. This solution includes the Linux open source technology of KVM virtualization, and is designed to complement the performance, scalability and security qualities of Linux.",
+            "description": "IBM PowerKVM provides an open virtualization choice for IBM scale-out Linux systems based on the PowerKVM technology. This solution includes the Linux open source technology of KVM virtualization, and is designed to complement the performance, scalability and security qualities of Linux.",
             "maintainers": [
                 {
                     "name": "Kurt Taylor",
@@ -2064,6 +2070,21 @@
                 "success_pattern": "gate-sahara-integration-hdp.* \\S+ : SUCCESS",
                 "failure_pattern": "gate-sahara-integration-hdp.* \\S+ : FAILURE"
                }
+          },
+          {
+            "project_id": "openstack/sahara",
+            "vendor": "OpenStack Community",
+            "name": "Spark Plugin",
+            "description": "Vanilla plugin is a reference plugin implementation which allows to operate with cluster with Apache Hadoop.",
+            "maintainers": [
+                {
+                    "name": "Andrew Lazarev",
+                    "email": "alazarev@mirantis.com",
+                    "launchpad_id": "alazarev"
+                }
+            ],
+            "wiki": "https://wiki.openstack.org/wiki/Sahara/SparkPlugin",
+            "releases": ["Juno"]
           },
           {
             "project_id": "openstack/sahara",
