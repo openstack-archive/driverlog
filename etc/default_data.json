@@ -141,7 +141,7 @@
                 }
             ],
             "wiki": "http://docs.openstack.org/trunk/config-reference/content/windows-volume-driver.html",
-            "releases": ["Grizzly", "Havana", "Icehouse"]
+            "releases": ["Grizzly", "Havana", "Icehouse", "Juno"]
         },
         {
             "project_id": "openstack/cinder",
