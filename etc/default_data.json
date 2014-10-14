@@ -1545,6 +1545,27 @@
         },
         {
             "project_id": "openstack/neutron",
+            "vendor": "Nuage Networks",
+            "name": "Nuage Networks Neutron ML2 Driver",
+            "description": "An ML2 Mechanism Driver to integrate ML2 deployments into Nuage Networks Virtual Service Platform (VSP)."
+            "maintainers": [
+                {
+                    "name": "Ronak Shah",
+                    "irc": "rms_!3",
+                    "email": "ronak.malav.shah@gmail.com",
+                    "launchpad_id": "ronak-malav-shah"
+                }
+            ],
+            "wiki": "http://docs.openstack.org/trunk/config-reference/content/networking-plugin-ml2_nuage.html",
+            "ci": {
+                "id": "nuage-ci",
+                "success_pattern": "ML2-SUCCESS",
+                "failure_pattern": "ML2-FAILURE"
+            },
+            "releases": ["Juno"]
+        },
+        {
+            "project_id": "openstack/neutron",
             "vendor": "One Convergence",
             "name": "One Convergence NVSD Controller",
             "description": "One Convergence Neutron plugin provides Neutron APIs for the network virtualization solution implemented with One Convergence Network Virtualization and Services Delivery(NVSD) Controller.",
