@@ -1524,23 +1524,38 @@
             "maintainers": [
                 {
                     "name": "Ronak Shah",
-                    "email": "nuage-ci@nuagenetworks.net",
+                    "email": "ronak.malav.shah@gmail.com",
                     "irc": "rms_13",
                     "launchpad_id": "ronak-malav-shah"
-                },
-                {
-                    "name": "Franck Yelles",
-                    "email": "franck.yelles@nuagenetworks.net",
-                    "irc": "lyxus",
-                    "launchpad_id": "franck110"
                 }
             ],
             "wiki": "http://docs.openstack.org/trunk/config-reference/content/networking-plugin-nuage.html",
-            "releases": ["Juno"],
+            "releases": ["Icehouse", "Juno"],
             "ci": {
                 "id": "nuage-ci",
                 "success_pattern": "SUCCESS",
                 "failure_pattern": "FAIL"
+            }
+        },
+        {
+            "project_id": "openstack/neutron",
+            "vendor": "Nuage Networks",
+            "name": "Nuage Networks ML2 driver",
+            "description": "Nuage Networks OpenStack ML2 plugin driver enables integration of OpenStack with Nuage Networks Virtual Service Platform (VSP).",
+            "maintainers": [
+                {
+                    "name": "Ronak Shah",
+                    "email": "ronak.malav.shah@gmail.com",
+                    "irc": "rms_13",
+                    "launchpad_id": "ronak-malav-shah"
+                }
+            ],
+            "wiki": "http://docs.openstack.org/trunk/config-reference/content/networking-plugin-ml2_nuage.html",
+            "releases": ["Juno"],
+            "ci": {
+                "id": "nuage-ci",
+                "success_pattern": "ML2-SUCCESS",
+                "failure_pattern": "ML2-FAIL"
             }
         },
         {
