@@ -1735,7 +1735,7 @@
                 }
             ],
             "wiki": "https://wiki.openstack.org/wiki/PLUMgrid-Neutron",
-            "releases": ["Juno"],
+            "releases": ["Grizzly", "Havana", "Icehouse", "Juno"],
             "ci": {
                 "id": "plumgrid-ci",
                  "success_pattern": "Build Successful",
