@@ -720,80 +720,10 @@
             "description": "Pure Storage builds all-flash storage arrays. The active/active controller architecture is based on the Purity Operating Environment and providing an adaptive metadata fabric that is scalable, granular to 512B, and protected. Pure systems are based on durable, resilient MLC flash and providing consistent high performance. Pure Storage FlashArrays leverage deduplication and compression technologies to reduce data written thereby lowering costs and increasing density. FlashArrays are designed for non-disruptive operations and can be upgraded or expanded without disruption or performance degradation.",
             "maintainers": [
                 {
-                    "name": "Viktor Ying",
-                    "email": "victor.ying@purestorage.com",
-                    "launchpad_id": "viktor-ying"
-                },
-                {
-                    "name": "Wes Mertes",
-                    "email": "wes@purestorage.com",
-                    "launchpad_id": "wes-w"
-                 },
-                 {
-                    "name": "Zach Olstein",
-                    "email": "zach.olstein@purestorage.com",
-                    "launchpad_id": "zach-olstein"
-                 }
-            ],
-            "wiki": "http://specs.openstack.org/openstack/cinder-specs/specs/juno/pure-iscsi-volume-driver.html",
-            "releases": ["Juno"],
-            "ci": {
-                   "id": "purestorage-cinder-ci",
-                   "success_pattern": "Build Successful",
-                   "failure_pattern": "Build Failed"
-          }
-        },
-        {
-            "project_id": "openstack/cinder",
-            "vendor": "Pure Storage",
-            "name": "Volume driver for Pure Storage FlashArray storage system",
-            "description": "Pure Storage builds all-flash storage arrays. The active/active controller architecture is based on the Purity Operating Environment and providing an adaptive metadata fabric that is scalable, granular to 512B, and protected. Pure systems are based on durable, resilient MLC flash and providing consistent high performance. Pure Storage FlashArrays leverage deduplication and compression technologies to reduce data written thereby lowering costs and increasing density. FlashArrays are designed for non-disruptive operations and can be upgraded or expanded without disruption or performance degradation.",
-            "maintainers": [
-                {
-                    "name": "Viktor Ying",
-                    "email": "victor.ying@purestorage.com",
-                    "launchpad_id": "viktor-ying"
-                },
-                {
-                    "name": "Wes Mertes",
-                    "email": "wes@purestorage.com",
-                    "launchpad_id": "wes-w"
-                 },
-                 {
-                    "name": "Zach Olstein",
-                    "email": "zach.olstein@purestorage.com",
-                    "launchpad_id": "zach-olstein"
-                 }
-            ],
-            "wiki": "http://specs.openstack.org/openstack/cinder-specs/specs/juno/pure-iscsi-volume-driver.html",
-            "releases": ["Juno"],
-            "ci": {
-                   "id": "purestorage-cinder-ci",
-                   "success_pattern": "Build Successful",
-                   "failure_pattern": "Build Failed"
-          }
-        },
-        {
-            "project_id": "openstack/cinder",
-            "vendor": "Pure Storage",
-            "name": "Volume driver for Pure Storage FlashArray storage system",
-            "description": "Pure Storage builds all-flash storage arrays. The active/active controller architecture is based on the Purity Operating Environment and providing an adaptive metadata fabric that is scalable, granular to 512B, and protected. Pure systems are based on durable, resilient MLC flash and providing consistent high performance. Pure Storage FlashArrays leverage deduplication and compression technologies to reduce data written thereby lowering costs and increasing density. FlashArrays are designed for non-disruptive operations and can be upgraded or expanded without disruption or performance degradation.",
-            "maintainers": [
-                {
-                    "name": "Viktor Ying",
-                    "email": "victor.ying@purestorage.com",
-                    "launchpad_id": "viktor-ying"
-                },
-                {
-                    "name": "Wes Mertes",
-                    "email": "wes@purestorage.com",
-                    "launchpad_id": "wes-w"
-                 },
-                 {
-                    "name": "Zach Olstein",
-                    "email": "zach.olstein@purestorage.com",
-                    "launchpad_id": "zach-olstein"
-                 }
+                    "name": "Pure Storage Openstack Dev Team",
+                    "email": "openstack-dev@purestorage.com",
+                    "launchpad_id": "pure-storage-openstack-team"
+                }
             ],
             "wiki": "http://specs.openstack.org/openstack/cinder-specs/specs/juno/pure-iscsi-volume-driver.html",
             "releases": ["Juno"],
