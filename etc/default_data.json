@@ -1194,34 +1194,19 @@
                     "name": "Dane Leblanc",
                     "email": "leblancd@cisco.com",
                     "launchpad_id": "leblancd"
+                },
+                {
+                    "name": "Nikolay Fedotov",
+                    "email": "nfedotov@cisco.com"
                 }
+
             ],
             "wiki": "https://wiki.openstack.org/wiki/Neutron/ML2/MechCiscoNexus",
             "releases": ["Havana", "Icehouse", "Juno"],
             "ci": {
                 "id": "cisco_neutron_ci",
-                "success_pattern": "ml2_nexus \\S+ : SUCCESS",
-                "failure_pattern": "ml2_nexus \\S+ : FAILURE"
-            }
-        },
-        {
-            "project_id": "openstack/neutron",
-            "vendor": "Cisco",
-            "name": "Cisco Nexus Plugin",
-            "description": "A Cisco Plugin Framework for Neutron L2 Network Overlays Spanning Multiple Physical Switches.",
-            "maintainers": [
-                {
-                    "name": "Dane Leblanc",
-                    "email": "leblancd@cisco.com",
-                    "launchpad_id": "leblancd"
-                }
-            ],
-            "wiki": "https://wiki.openstack.org/wiki/Cisco-neutron",
-            "releases": ["Grizzly", "Havana", "Icehouse", "Juno"],
-            "ci": {
-                "id": "cisco_neutron_ci",
-                "success_pattern": "neutron_zuul \\S+ : SUCCESS",
-                "failure_pattern": "neutron_zuul \\S+ : FAILURE"
+                "success_pattern": "ml2-nexus \\S+ : SUCCESS",
+                "failure_pattern": "ml2-nexus \\S+ : FAILURE"
             }
         },
         {
