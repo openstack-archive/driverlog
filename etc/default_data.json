@@ -1201,6 +1201,32 @@
         },
         {
             "project_id": "openstack/neutron",
+            "vendor": "Cisco",
+            "name": "Cisco Nexus 1000V Plugin",
+            "description": "Cisco Nexus 1000V is a state-of-the-art virtual switch for datacenters. This plugin implements the Neutron core APIs and integrates with the Nexus 1000V control and data planes.",
+            "maintainers": [
+                {
+                    "name": "Abhishek Raut",
+                    "email": "abhraut@cisco.com",
+                    "launchpad_id": "abhraut"
+                },
+                {
+                    "name": "Sourabh Patwardhan",
+                    "email": "sopatwar@cisco.com"
+                    "launchpad_id": "sopatwar"
+                }
+
+            ],
+            "wiki": "https://wiki.openstack.org/wiki/Cisco-n1kv-neutron",
+            "releases": ["Havana", "Icehouse", "Juno"],
+            "ci": {
+                "id": "cisco_neutron_ci",
+                "success_pattern": "n1kv_neutron \\S+ : SUCCESS",
+                "failure_pattern": "n1kv_neutron \\S+ : FAILURE"
+            }
+        },
+        {
+            "project_id": "openstack/neutron",
             "vendor": "Citrix",
             "name": "NetScaler LBaas driver",
             "description": "The NetScaler loadbalancer integration in Neutron LBaaS implements all the LBaaS driver CRUD APIs defined in the IceHouse release: It implements all the defined operations on VIPs, Pools, Pool Members and Health Monitors. The integration consists of a driver class configured in the Neutron config file (neutron.conf), and the accompanying unit tests.",
