@@ -335,8 +335,8 @@
                     "launchpad_id": "j-ishizaki"
                 }
             ],
-            "wiki": "http://www.fujitsu.com/global/products/computing/storage/eternus/news/openstack.html",
-            "releases": ["Havana", "Icehouse", "Juno"]
+            "wiki": "http://docs.openstack.org/trunk/config-reference/content/fujitsu-smis-driver.html",
+            "releases": ["Juno"]
           },
         {
             "project_id": "openstack/cinder",
@@ -350,8 +350,8 @@
                     "launchpad_id": "j-ishizaki"
                 }
             ],
-            "wiki": "http://www.fujitsu.com/global/products/computing/storage/eternus/news/openstack.html",
-            "releases": ["Havana", "Icehouse", "Juno"]
+            "wiki": "http://docs.openstack.org/trunk/config-reference/content/fujitsu-smis-driver.html",
+            "releases": ["Juno"]
          },
          {
             "project_id": "openstack/cinder",
