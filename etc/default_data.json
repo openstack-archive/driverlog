@@ -751,7 +751,7 @@
             "project_id": "openstack/cinder",
             "vendor": "SolidFire",
             "name": "SolidFire Driver",
-            "description": "The SolidFire Cluster is a high performance all SSD iSCSI storage devices. The driver allows to configure the use of a SolidFire cluster with Block Storage.",
+            "description": "The SolidFire Cluster is a high performance all SSD iSCSI clustered storage device, providing IOP's based QoS. The driver allows to configure the use of a SolidFire cluster with Block Storage.",
             "maintainers": [
                 {
                     "name": "John Griffith",
@@ -760,7 +760,7 @@
                 }
             ],
             "wiki": "http://docs.openstack.org/trunk/config-reference/content/solidfire-volume-driver.html",
-            "releases": ["Folsom", "Grizzly", "Havana", "Icehouse"]
+            "releases": ["Folsom", "Grizzly", "Havana", "Icehouse", "Juno"]
         },
         {
             "project_id": "openstack/cinder",
