@@ -461,21 +461,45 @@
         {
             "project_id": "openstack/cinder",
             "vendor": "Hitachi",
-            "name": "HDS iSCSI volume driver",
-            "description": "This Block Storage volume driver provides iSCSI support for HUS (Hitachi Unified Storage) arrays such as, HUS-110, HUS-130, and HUS-150.",
+            "name": "HDS HNAS iSCSI and NFS driver",
+            "description": "This Block Storage volume driver provides iSCSI and NFS support for HNAS (Hitachi Network-attached Storage) arrays such as, HNAS 3000 and 4000 family.",
             "maintainers": [
-                {
-                    "name": "Seiji Aguchi",
-                    "email": "seiji.aguchi.tr@hitachi.com",
-                    "launchpad_id": "seiji-aguchi"
-                },
                 {   "name": "Steve Quinn",
                     "email": "steve.quinn@hds.com",
                     "launchpad_id": "steve-quinn"
                 }
             ],
-            "wiki": "http://docs-draft.openstack.org/39/89639/6/gate/gate-openstack-manuals-tox-doc-publish-checkbuild/417916f/publish-docs/trunk/config-reference/content/hitachi-storage-volume-driver.html",
-            "releases": ["Havana", "Juno"]
+            "wiki": "http://docs.openstack.org/trunk/config-reference/content/hds-hnas-driver.html",
+            "releases": ["Juno"]
+        },
+        {
+            "project_id": "openstack/cinder",
+            "vendor": "Hitachi",
+            "name": "HDS iSCSI volume driver",
+            "description": "This Block Storage volume driver provides iSCSI support for HUS (Hitachi Unified Storage) arrays such as, HUS-110, HUS-130, and HUS-150.",
+            "maintainers": [
+                {   "name": "Steve Quinn",
+                    "email": "steve.quinn@hds.com",
+                    "launchpad_id": "steve-quinn"
+                }
+            ],
+            "wiki": "http://docs.openstack.org/trunk/config-reference/content/hds-volume-driver.html",
+            "releases": ["Havana", "Icehouse", "Juno"]
+        },
+        {
+            "project_id": "openstack/cinder",
+            "vendor": "Hitachi",
+            "name": "Hitachi storage volume driver",
+            "description": "This Block Storage volume driver provides iSCSI and Fibre Channel support for Hitachi storages such as, VSP G1000 (Virtual Storage Platform G1000), VSP (Virtual Storage Platform), HUS VM (Hitachi Unified Storage VM), and HUS 100 Family (Hitachi Unified Storage 100 Family).",
+            "maintainers": [
+                {
+                    "name": "Seiji Aguchi",
+                    "email": "seiji.aguchi.tr@hitachi.com",
+                    "launchpad_id": "seiji-aguchi"
+                }
+            ],
+            "wiki": "http://docs.openstack.org/trunk/config-reference/content/hitachi-storage-volume-driver.html",
+            "releases": ["Juno"]
         },
         {
             "project_id": "openstack/cinder",
