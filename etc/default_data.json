@@ -1636,27 +1636,6 @@
         {
             "project_id": "openstack/neutron",
             "vendor": "OpenStack Community",
-            "name": "Ryu OpenFlow Controller Plugin",
-            "description": "The Ryu OpenFlow Controller plugin enables Ryu Network Operating System with OpenStack as Network controller.",
-            "maintainers": [
-                {
-                    "name": "Yamamoto Takashi",
-                    "irc": "yamamoto",
-                    "email": "yamamoto@valinux.co.jp",
-                    "launchpad_id": "yamamoto"
-                }
-            ],
-            "releases": ["Folsom", "Grizzly", "Havana", "Icehouse", "Juno"],
-            "wiki": "https://github.com/osrg/ryu/wiki/OpenStack",
-            "ci": {
-                "id": "neutronryu",
-                "success_pattern": "check-tempest-dsvm-ryuplugin \\S+ : SUCCESS",
-                "failure_pattern": "check-tempest-dsvm-ryuplugin \\S+ : FAILURE"
-            }
-        },
-        {
-            "project_id": "openstack/neutron",
-            "vendor": "OpenStack Community",
             "name": "OpenFlow Agent",
             "description": "The OpenFlow Agent (aka. ofagent) and the associated ML2 Mechanism Driver controls OpenFlow switches as a part of OpenStack Neutron.",
             "maintainers": [
