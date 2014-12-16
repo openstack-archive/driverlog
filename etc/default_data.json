@@ -603,6 +603,21 @@
         },
         {
             "project_id": "openstack/cinder",
+            "vendor": "Maxta Inc",
+            "name": "MxSP Cinder driver",
+            "description":"Maxta Storage Platform (MxSP) Cinder driver allows integrating Maxta's Hyper-Converged solution with Openstack.",
+            "maintainers": [
+              {
+                "name": "Maxta",
+                "email": "openstack@maxta.com",
+                "launchpad_id": "maxtainc"
+              }
+            ],
+            "wiki": "http://www.maxta.com/wp-content/uploads/Maxta_MirantisOpenstack_Runbook.pdf",
+            "releases": ["Icehouse"]
+          },
+        {
+            "project_id": "openstack/cinder",
             "vendor": "NetApp",
             "name": "NetApp Unified Driver",
             "description": "The NetApp Unified Driver for Cinder provides integration for multiple storage controller families and protocols. A storage family corresponds to storage systems built on different NetApp technologies such as clustered Data ONTAP, 7-Mode, and NetApp E-Series and EF-Series systems. The storage protocol refers to the protocol used to initiate data storage and access operations to those storage systems.  Clustered Data ONTAP systems can be used with Cinder via Parallelized NFS (pNFS), NFS, and iSCSI storage protocols. 7-mode systems can be used with either NFS or iSCSI. E-Series and EF-Series systems are accessible via iSCSI.",
