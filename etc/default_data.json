@@ -2143,7 +2143,7 @@
             "project_id": "openstack/cinder",
             "vendor": "Maxta Inc",
             "name": "MxSP Cinder driver",
-            "description":"Maxta Storage Platform (MxSP) Cinder driver allows integrating Maxta's Hyper-Converged solution with Openstack.",
+            "description":"Maxta Storage Platform (MxSP) Cinder driver allows integrating Maxta's Hyper-Converged solution with Openstack",
             "maintainers": [
               {
                 "name": "Maxta",
