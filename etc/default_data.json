@@ -613,8 +613,7 @@
                    "launchpad_id": "maxtainc"
                }
            ],
-           "wiki": "http://www.maxta.com/wp-content/uploads/Maxta_MirantisOpenstack_Runbook.pdf",
-           "releases": ["Icehouse"]
+           "wiki": "http://www.maxta.com/wp-content/uploads/Maxta_MirantisOpenstack_Runbook.pdf"
         },
         {
             "project_id": "openstack/cinder",
