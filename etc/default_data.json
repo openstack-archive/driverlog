@@ -1378,6 +1378,27 @@
             }
         },
         {
+         i   "project_id": "openstack/neutron-fwaas",
+            "vendor": "Freescale",
+            "name": "Freescale FWaaS Plugin",
+            "description": "Freescale FWaaS Plugin is designed to support Cloud Resource Discovery Service (CRD).",
+            "maintainers": [
+                {
+                    "name": "Freescale Openstack Team",
+                    "irc": "trinaths",
+                    "email": "trinath.somanchi@freescale.com",
+                    "launchpad_id": "trinaths"
+                }
+            ],
+            "wiki": "https://wiki.openstack.org/wiki/Freescale_Firewall_as_a_Service_Plugin",
+            "releases": ["Kilo"],
+            "ci": {
+                "id": "freescale-ci",
+                "success_pattern": "Freescale-FWaaS-Plugin \\S+ : SUCCESS",
+                "failure_pattern": "Freescale-FWaaS-Plugin \\S+ : FAILURE"
+            }
+        },    
+        {
             "project_id": "openstack/neutron",
             "vendor": "IBM",
             "name": "IBM SDN-VE Plugin",
