@@ -1384,9 +1384,9 @@
             "description": "This plugin implements Neutron v2 APIs by using IBM-SDNVE controller.",
             "maintainers": [
                 {
-                    "name": "Mohammad Banikazemi",
-                    "email": "mb@us.ibm.com",
-                    "launchpad_id": "mb-s"
+                    "name": "Daya Kamath",
+                    "email": "dkamath@us.ibm.com",
+                    "launchpad_id": "daya-k"
                 }
             ],
             "wiki": "https://wiki.openstack.org/wiki/IBM-Neutron",
