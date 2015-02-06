@@ -1370,7 +1370,7 @@
                     "name": "Freescale Openstack Team",
                     "irc": "trinaths",
                     "email": "trinath.somanchi@freescale.com",
-                    "launchpad_id": "trinaths"
+                    "launchpad_id": "trinath-somanchi"
                 }
             ],
             "wiki": "https://wiki.openstack.org/wiki/Freescale_SDN_ML2_Mechanism_Driver",
@@ -1391,7 +1391,7 @@
                     "name": "Freescale Openstack Team",
                     "irc": "trinaths",
                     "email": "trinath.somanchi@freescale.com",
-                    "launchpad_id": "trinaths"
+                    "launchpad_id": "trinath-somanchi"
                 }
             ],
             "wiki": "https://wiki.openstack.org/wiki/Freescale_Firewall_as_a_Service_Plugin",
