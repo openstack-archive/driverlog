@@ -149,6 +149,26 @@
         },
         {
             "project_id": "openstack/cinder",
+            "vendor": "CloudFounders",
+            "name": "CloudFounders Open vStorage driver",
+            "description": "The driver allows to configure the OpenStack Block Storage service for use with CloudFounders Open vStorage appliance. Open vStorage is an open-source software defined storage VM storagerouter, a layer in between Virtual machines and storage backends. It is compatible with Swift (via S3) interface as backend and nova compute nodes as frontend, it serves volumes via a virtual filesystem using .raw files. Multiple Storage Routers can coordinate between them and allow live migration with near-zero copy (only local cache is synced).",
+            "maintainers": [
+                {
+                    "name": "Eduard Biceri Matei",
+                    "email": "eduard.matei@cloudfounders.com",
+                    "launchpad_id": "cubusbacau"
+                }
+            ],
+            "wiki": "http://doc.openvstorage.com/doc_openvstorage/Installation",
+            "releases": ["Kilo"],
+            "ci": {
+                  "id":"cloudfoundersci",
+                  "success_pattern": "Build Successful",
+                  "failure_pattern": "Build Failed"
+            }
+        },
+        {
+            "project_id": "openstack/cinder",
             "vendor": "Coraid",
             "name": "Coraid AoE driver",
             "description": "The driver allows to configure the OpenStack Block Storage service for use with Coraid storage appliances. Coraid storage appliances use the low-latency ATA-over-Ethernet (ATA) protocol to provide high-bandwidth data transfer between hosts and data on the network.",
