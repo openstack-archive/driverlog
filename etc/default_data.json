@@ -515,7 +515,11 @@
                 }
             ],
             "wiki": "http://docs.openstack.org/trunk/config-reference/content/hds-hnas-driver.html",
-            "releases": ["Juno"]
+            "releases": ["Juno"],
+            "ci": {
+                  "id":"hds-hnas-ci",
+                  "success_pattern": "Build Successful",
+                  "failure_pattern": "Build Failed"
         },
         {
             "project_id": "openstack/cinder",
@@ -544,7 +548,11 @@
                 }
             ],
             "wiki": "http://docs.openstack.org/trunk/config-reference/content/hitachi-storage-volume-driver.html",
-            "releases": ["Juno"]
+            "releases": ["Juno"],
+            "ci": {
+                  "id":"hds-hnas-ci",
+                  "success_pattern": "Build Successful",
+                  "failure_pattern": "Build Failed"
         },
         {
             "project_id": "openstack/cinder",
