@@ -417,16 +417,21 @@
             "project_id": "openstack/cinder",
             "vendor": "Gluster",
             "name": "GlusterFS driver",
-            "description": "This driver enables use of GlusterFS in a similar fashion as the NFS driver. It supports basic volume operations, and like NFS, does not support snapshot/clone.",
+            "description": "This driver enables use of GlusterFS in a similar fashion as the NFS driver. It supports basic volume operations together with snapshot/clone ones.",
             "maintainers": [
                 {
-                    "name": "Eric Harney",
-                    "email": "eharney@redhat.com",
-                    "launchpad_id": "eharney"
+                    "name": "Bharat Kumar Kobagana",
+                    "email": "bharat.kobagana@redhat.com",
+                    "launchpad_id": "bharat-kobagana"
                 }
             ],
             "wiki": "http://docs.openstack.org/trunk/config-reference/content/GlusterFS-driver.html",
-            "releases": ["Grizzly", "Havana", "Icehouse", "Juno"]
+            "releases": ["Grizzly", "Havana", "Icehouse", "Juno"],
+            "ci": {
+                "id": "gate-tempest-dsvm-full-glusterfs",
+                "success_pattern": "gate-tempest-dsvm-full-glusterfs \\S+ : SUCCESS",
+                "failure_pattern": "gate-tempest-dsvm-full-glusterfs \\S+ : FAILURE"
+            }
         },
         {
             "project_id": "openstack/cinder",
