@@ -1,0 +1,8 @@
+Verified+2: Jenkins
+Code-Review+2: Ilya Shakhat <ishakhat@mirantis.com>
+Workflow+1: Ilya Shakhat <ishakhat@mirantis.com>
+Submitted-by: Jenkins
+Submitted-at: Mon, 09 Mar 2015 20:03:31 +0000
+Reviewed-on: https://review.openstack.org/162730
+Project: stackforge/driverlog
+Branch: refs/heads/master
