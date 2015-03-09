@@ -1793,7 +1793,7 @@
             "project_id": "openstack/neutron",
             "vendor": "PLUMgrid",
             "name": "PLUMgrid OpenStack Networking Suite Neutron Plugin",
-            "description": "PLUMgrid Neutron Plugin enables PLUMgrid OpenStack Networking Suite which is a secure comprehensive and open software solution that delivers terabits of performance and scales across tens of thousands of workloads.",
+            "description": "PLUMgrid Neutron Plugin enables PLUMgrid Open Networking Suite which is a secure comprehensive and open software solution that delivers terabits of performance and scales across tens of thousands of workloads.",
             "maintainers": [
                 {
                     "name": "Fawad Khaliq",
@@ -1803,7 +1803,7 @@
                 }
             ],
             "wiki": "https://wiki.openstack.org/wiki/PLUMgrid-Neutron",
-            "releases": ["Grizzly", "Havana", "Icehouse", "Juno"],
+            "releases": ["Grizzly", "Havana", "Icehouse", "Juno", "Kilo"],
             "ci": {
                 "id": "plumgrid-ci",
                  "success_pattern": "Build Successful",
