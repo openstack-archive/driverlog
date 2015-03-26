@@ -827,6 +827,27 @@
         },
         {
             "project_id": "openstack/cinder",
+            "vendor": "Quobyte Inc.",
+            "name": "Quobyte Cinder driver",
+            "description":"Volume driver for Quobyte software defined storage system. Quobyte provides a software defined storage system running on plain Linux servers. Quobyte allows reconfiguration at runtime without storage service interruption. Storage behaviour is fully configurable via policies which also control automation and hardware independent configuration.",
+            "maintainers": [
+                {
+                    "name": "Silvan Kaiser",
+                    "irc": "kaisers",
+                    "email": "silvan@quobyte.com",
+                    "launchpad_id": "kaisers"
+                }
+            ],
+            "wiki": "https://wiki.openstack.org/wiki/Quobyte",
+            "ci": {
+               "id": "quobyteci",
+               "success_pattern": "SUCCESS",
+               "failure_pattern": "FAILURE"
+            },
+            "releases": ["Kilo"]
+        },
+        {
+            "project_id": "openstack/cinder",
             "vendor": "Scality",
             "name": "Scality SOFS driver",
             "description": "The driver manages volumes on the Scality SOFS filesystem. This gives OpenStack users the option of storing their data on a Scality Ring object storage cluster.",
