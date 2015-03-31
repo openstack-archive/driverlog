@@ -92,10 +92,25 @@
                     "name": "Edward Hope-Morley",
                     "email": "edward.hope-morley@canonical.com",
                     "launchpad_id": "hopem"
+                },
+                {
+                    "name": "Eric Harney",
+                    "email": "eharney@redhat.com",
+                    "launchpad_id": "eharney"
+                },
+                {
+                    "name": "Jon Bernard",
+                    "email": "jobernar@redhat.com",
+                    "launchpad_id": "jbernard"
                 }
             ],
             "wiki": "http://docs.openstack.org/trunk/config-reference/content/ceph-rados.html",
-            "releases": ["Cactus", "Diablo", "Essex", "Folsom", "Grizzly", "Havana", "Icehouse", "Juno"]
+            "releases": ["Cactus", "Diablo", "Essex", "Folsom", "Grizzly", "Havana", "Icehouse", "Juno", "Kilo"],
+            "ci": {
+                "id": "check-tempest-dsvm-full-ceph",
+                "success_pattern": "check-tempest-dsvm-full-ceph \\S+ : SUCCESS",
+                "failure_pattern": "check-tempest-dsvm-full-ceph \\S+ : FAILURE"
+            }
         },
         {
             "project_id": "openstack/cinder",
