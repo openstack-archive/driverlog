@@ -879,7 +879,12 @@
                 }
             ],
             "wiki": "http://docs.openstack.org/trunk/config-reference/content/solidfire-volume-driver.html",
-            "releases": ["Folsom", "Grizzly", "Havana", "Icehouse", "Juno"]
+            "releases": ["Folsom", "Grizzly", "Havana", "Icehouse", "Juno", "Kilo"],
+            "ci": {"id": "SolidFire-dsvm-full",
+                   "success_pattern": "SolidFire-dsvm-full \\S+ : SUCCESS",
+                   "failure_pattern": "SolidFire-dsvm-full \\S+ : FAILURE"
+            }
+
         },
         {
             "project_id": "openstack/cinder",
