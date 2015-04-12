@@ -2011,6 +2011,20 @@
         },
         {
             "project_id": "openstack/nova",
+            "vendor": "IBM",
+            "name": "zVM", 
+            "description": "description": "IBM zVM provides an open virtualization choice for IBM scale-out Linux systems based on the zVM technology. This solution includes the IBM zVM virtualization solutions which runs on IBM s390 architecture, and is designed to complement the performance, scalability and security qualities of Linux. Currently the driver is located on stackforge: https://github.com/stackforge/zvm-driver."
+            "maintainers": [
+                {
+                    "name": "Ji Chen",
+                    "email": "jichenjc@cn.ibm.com",
+                    "launchpad_id": "jichenjc"
+                }
+            "wiki": "http://www.vm.ibm.com/sysman/openstk.html",
+            "releases": []
+        },
+        {
+            "project_id": "openstack/nova",
             "vendor": "OpenStack Community",
             "name": "Baremetal driver",
             "description": "The baremetal driver was a hypervisor driver for OpenStack Nova Compute that was added during Grizzly, but soon spun out into the Ironic project. The driver, though deprecated, remained in Nova until the Ironic driver was landed during Juno. Baremetal will be removed in Kilo.",
