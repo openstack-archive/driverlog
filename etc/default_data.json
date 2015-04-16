@@ -1247,7 +1247,7 @@
             "wiki": "https://",
             "releases": ["Juno"],
             "ci": {
-                "id": "csr1kv",
+                "id": "cisco_csr1kv_ci",
                 "success_pattern": "csr1kv \\S+ : SUCCESS",
                 "failure_pattern": "csr1kv \\S+ : FAILURE"
             }
@@ -1265,14 +1265,15 @@
                 },
                 {
                     "name": "Nikolay Fedotov",
-                    "email": "nfedotov@cisco.com"
+                    "email": "nfedotov@cisco.com",
+                    "launchpad_id": "nfedotov"
                 }
 
             ],
             "wiki": "https://wiki.openstack.org/wiki/Neutron/ML2/MechCiscoNexus",
             "releases": ["Havana", "Icehouse", "Juno"],
             "ci": {
-                "id": "cisco_neutron_ci",
+                "id": "cisco_ml2_ci",
                 "success_pattern": "ml2-nexus \\S+ : SUCCESS",
                 "failure_pattern": "ml2-nexus \\S+ : FAILURE"
             }
@@ -1292,7 +1293,7 @@
             "wiki": "https://wiki.openstack.org/wiki/Neutron/Cisco-APIC-ML2-driver",
             "releases": ["Juno"],
             "ci": {
-                "id": "cisco_neutron_ci",
+                "id": "cisco_apic_ci",
                 "success_pattern": "apic \\S+ : SUCCESS",
                 "failure_pattern": "apic \\S+ : FAILURE"
             }
@@ -1312,7 +1313,7 @@
             "wiki": "https://wiki.openstack.org/wiki/Neutron/Cisco-APIC-ML2-driver",
             "releases": ["Juno"],
             "ci": {
-                "id": "cisco_neutron_ci",
+                "id": "cisco_apic_ci",
                 "success_pattern": "apic \\S+ : SUCCESS",
                 "failure_pattern": "apic \\S+ : FAILURE"
             }
@@ -1332,7 +1333,7 @@
             "wiki": "http://docwiki.cisco.com/wiki/Install_and_Setup_of_Cisco_Cloud_Services_Router_(CSR)_for_OpenStack_VPN",
             "releases": ["Icehouse", "Juno"],
             "ci": {
-                "id": "cisco_neutron_ci",
+                "id": "cisco_vpnaas_ci",
                 "success_pattern": "vpnaas-nexus \\S+ : SUCCESS",
                 "failure_pattern": "vpnaas-nexus \\S+ : FAILURE"
             }
@@ -1358,9 +1359,9 @@
             "wiki": "https://wiki.openstack.org/wiki/Cisco-n1kv-neutron",
             "releases": ["Havana", "Icehouse", "Juno"],
             "ci": {
-                "id": "cisco_neutron_ci",
-                "success_pattern": "n1kv_neutron \\S+ : SUCCESS",
-                "failure_pattern": "n1kv_neutron \\S+ : FAILURE"
+                "id": "cisco_n1kv_ci",
+                "success_pattern": "n1kv-ml2 \\S+ : SUCCESS",
+                "failure_pattern": "n1kv-ml2 \\S+ : FAILURE"
             }
         },
         {
@@ -1901,9 +1902,9 @@
             "releases": ["Havana", "Icehouse"],
             "wiki": "https://wiki.openstack.org/wiki/Neutron/ML2/Tail-f-NCS-neutron-ml2-driver",
             "ci": {
-                "id": "tailfncs",
-                "success_pattern": "Successful",
-                "failure_pattern": "Failed"
+                "id": "cisco_tailf_ci",
+                "success_pattern": "tailf-ncs \\S+ : SUCCESS",
+                "failure_pattern": "tailf-ncs \\S+ : FAILURE"
             }
         },
         {
