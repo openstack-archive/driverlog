@@ -2186,13 +2186,27 @@
                 },
                 {
                     "name": "Gary Kotton",
-                    "email": "gkotton@redhat.com",
+                    "email": "gkotton@vmware.com",
+                    "irc": "garyk",
                     "launchpad_id": "garyk"
                 },
                 {
-                    "name": "Vui Chiap Lam",
-                    "email": "vui@vmware.com",
-                    "launchpad_id": "vui"
+                    "name": "Radoslav Gerganov",
+                    "email": "rgerganov@vmware.com",
+                    "irc": "rgerganov",
+                    "launchpad_id": "rgerganov"
+                },
+                {
+                    "name": "Eric Brown",
+                    "email": "browne@vmware.com",
+                    "irc": "browne",
+                    "launchpad_id": "ericwb"
+                },
+                {
+                    "name": "Sabari Murugesan",
+                    "email": "smurugesan@vmware.com",
+                    "irc": "sabari",
+                    "launchpad_id": "smurugesan"
                 }
             ]
         },
