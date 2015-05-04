@@ -465,8 +465,8 @@
                     "launchpad_id": "kurt-f-martin"
                 }
             ],
-            "wiki": "http://docs.openstack.org/trunk/config-reference/content/hp-3par-driver.html",
-            "releases": ["Grizzly", "Havana", "Icehouse", "Juno"],
+            "wiki": "http://docs.openstack.org/kilo/config-reference/content/hp-3par-driver.html",
+            "releases": ["Grizzly", "Havana", "Icehouse", "Juno", "Kilo"],
             "ci": {
                   "id":"hp-cinder-ci",
                   "success_pattern": "Build Successful",
@@ -490,8 +490,8 @@
                     "launchpad_id": "kurt-f-martin"
                 }
             ],
-            "wiki": "http://docs.openstack.org/trunk/config-reference/content/hp-3par-driver.html",
-            "releases": ["Grizzly", "Havana", "Icehouse", "Juno"],
+            "wiki": "http://docs.openstack.org/kilo/config-reference/content/hp-3par-driver.html",
+            "releases": ["Grizzly", "Havana", "Icehouse", "Juno", "Kilo"],
             "ci": {
                   "id":"hp-cinder-ci",
                   "success_pattern": "Build Successful",
@@ -515,8 +515,8 @@
                     "launchpad_id": "kurt-f-martin"
                 }
             ],
-            "wiki": "http://docs.openstack.org/trunk/config-reference/content/HPSan-driver.html",
-            "releases": ["Diablo", "Essex", "Folsom", "Grizzly", "Havana", "Icehouse", "Juno"],
+            "wiki": "http://docs.openstack.org/kilo/config-reference/content/HP-LeftHand-StoreVirtual-driver.html",
+            "releases": ["Diablo", "Essex", "Folsom", "Grizzly", "Havana", "Icehouse", "Juno", "Kilo"],
             "ci": {
                   "id":"hp-cinder-ci",
                   "success_pattern": "Build Successful",
