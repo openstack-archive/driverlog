@@ -64,10 +64,14 @@
         },
         {
             "id": "Juno",
-            "wiki": "https://wiki.openstack.org/wiki/Releases"
+            "wiki": "https://wiki.openstack.org/wiki/ReleaseNotes/Juno"
         },
         {
             "id": "Kilo",
+            "wiki": "https://wiki.openstack.org/wiki/ReleaseNotes/Kilo"
+        },
+        {
+            "id": "Liberty",
             "wiki": "https://wiki.openstack.org/wiki/Releases"
         }
     ],
