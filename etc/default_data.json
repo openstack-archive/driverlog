@@ -104,7 +104,7 @@
                     "launchpad_id": "jbernard"
                 }
             ],
-            "wiki": "http://docs.openstack.org/trunk/config-reference/content/ceph-rados.html",
+            "wiki": "http://docs.openstack.org/kilo/config-reference/content/ceph-rados.html",
             "releases": ["Cactus", "Diablo", "Essex", "Folsom", "Grizzly", "Havana", "Icehouse", "Juno", "Kilo"],
             "ci": {
                 "id": "check-tempest-dsvm-full-ceph",
@@ -124,7 +124,7 @@
                 }
             ],
             "description": "The Xen Storage Manager volume driver (xensm) is a XenAPI hypervisor specific volume driver, and can be used to provide basic storage functionality, including volume creation and destruction, on a number of different storage back-ends.",
-            "wiki": "http://docs.openstack.org/trunk/config-reference/content/xensm.html",
+            "wiki": "http://docs.openstack.org/juno/config-reference/content/xensm.html",
             "releases": ["Juno"]
         },
         {
@@ -139,7 +139,7 @@
                     "launchpad_id": "mate-lakat"
                 }
             ],
-            "wiki": "http://docs.openstack.org/trunk/config-reference/content/xenapinfs.html",
+            "wiki": "http://docs.openstack.org/juno/config-reference/content/xenapinfs.html",
             "releases": ["Grizzly"]
         },
         {
@@ -159,7 +159,7 @@
                     "launchpad_id": "ociuhandu"
                 }
             ],
-            "wiki": "http://docs.openstack.org/trunk/config-reference/content/windows-volume-driver.html",
+            "wiki": "http://docs.openstack.org/juno/config-reference/content/windows-volume-driver.html",
             "releases": ["Grizzly", "Havana", "Icehouse", "Juno"]
         },
         {
@@ -194,7 +194,7 @@
                     "launchpad_id": "yacine-b"
                 }
             ],
-            "wiki": "http://docs.openstack.org/trunk/config-reference/content/coraid_aoe_driver_configuration.html",
+            "wiki": "http://docs.openstack.org/juno/config-reference/content/coraid_aoe_driver_configuration.html",
             "releases": ["Grizzly", "Havana", "Icehouse", "Juno"],
             "ci": {
                   "id":"coraid-ci",
@@ -234,7 +234,7 @@
                     "launchpad_id": "arkady-kanevsky"
                 }
             ],
-            "wiki": "http://docs.openstack.org/trunk/config-reference/content/dell-equallogic-driver.html",
+            "wiki": "http://docs.openstack.org/kilo/config-reference/content/dell-equallogic-driver.html",
             "releases": ["Havana", "Icehouse", "Juno", "Kilo"],
             "ci": {
                   "id":"dell-storagecenter-ci",
@@ -255,7 +255,7 @@
                     "launchpad_id": "sean-mcginnis"
                 }
             ],
-            "wiki": "http://docs.openstack.org/trunk/config-reference/content/dell-storagecenter-driver.html",
+            "wiki": "http://docs.openstack.org/kilo/config-reference/content/dell-storagecenter-driver.html",
             "releases": ["Kilo"],
             "ci": {
                   "id":"dell-storagecenter-ci",
@@ -275,7 +275,7 @@
                     "launchpad_id": "xing-yang"
                 }
             ],
-            "wiki": "http://docs.openstack.org/trunk/config-reference/content/emc-vmax-driver.html",
+            "wiki": "http://docs.openstack.org/juno/config-reference/content/emc-vmax-driver.html",
             "releases": ["Icehouse", "Juno"],
             "ci": {
                   "id":"emc-vmax-ci",
@@ -295,7 +295,7 @@
                     "launchpad_id": "xing-yang"
                 }
             ],
-            "wiki": "http://docs.openstack.org/trunk/config-reference/content/emc-vnx-direct-driver.html",
+            "wiki": "http://docs.openstack.org/juno/config-reference/content/emc-vnx-direct-driver.html",
             "releases": ["Icehouse", "Juno"],
             "ci": {
                   "id":"emc-vnx-ci",
@@ -315,7 +315,7 @@
                     "launchpad_id": "xing-yang"
                 }
             ],
-            "wiki": "http://docs.openstack.org/trunk/config-reference/content/emc-vnx-direct-driver.html",
+            "wiki": "http://docs.openstack.org/juno/config-reference/content/emc-vnx-direct-driver.html",
             "releases": ["Juno"],
             "ci": {
                   "id":"emc-vnx-ci",
@@ -375,7 +375,7 @@
                     "launchpad_id": "xing-yang"
                 }
             ],
-            "wiki": "http://docs.openstack.org/trunk/config-reference/content/emc-vmax-driver.html",
+            "wiki": "http://docs.openstack.org/juno/config-reference/content/emc-vmax-driver.html",
             "releases": ["Grizzly", "Havana", "Icehouse", "Juno"],
             "ci": {
                   "id":"emc-vmax-ci",
@@ -440,7 +440,7 @@
                     "launchpad_id": "bharat-kobagana"
                 }
             ],
-            "wiki": "http://docs.openstack.org/trunk/config-reference/content/GlusterFS-driver.html",
+            "wiki": "http://docs.openstack.org/juno/config-reference/content/GlusterFS-driver.html",
             "releases": ["Grizzly", "Havana", "Icehouse", "Juno"],
             "ci": {
                 "id": "gate-tempest-dsvm-full-glusterfs",
@@ -534,7 +534,7 @@
                     "launchpad_id": "steve-quinn"
                 }
             ],
-            "wiki": "http://docs.openstack.org/trunk/config-reference/content/hds-hnas-driver.html",
+            "wiki": "http://docs.openstack.org/juno/config-reference/content/hds-hnas-driver.html",
             "releases": ["Juno"],
             "ci": {
                   "id":"hds-hnas-ci",
@@ -553,7 +553,7 @@
                     "launchpad_id": "steve-quinn"
                 }
             ],
-            "wiki": "http://docs.openstack.org/trunk/config-reference/content/hds-volume-driver.html",
+            "wiki": "http://docs.openstack.org/juno/config-reference/content/hds-volume-driver.html",
             "releases": ["Havana", "Icehouse", "Juno"]
         },
         {
@@ -568,7 +568,7 @@
                     "launchpad_id": "seiji-aguchi"
                 }
             ],
-            "wiki": "http://docs.openstack.org/trunk/config-reference/content/hitachi-storage-volume-driver.html",
+            "wiki": "http://docs.openstack.org/juno/config-reference/content/hitachi-storage-volume-driver.html",
             "releases": ["Juno"],
             "ci": {
                   "id":"hds-hnas-ci",
@@ -588,7 +588,7 @@
                     "launchpad_id": "zhangchao010"
                 }
             ],
-            "wiki": "http://docs.openstack.org/trunk/config-reference/content/huawei-storage-driver.html",
+            "wiki": "http://docs.openstack.org/juno/config-reference/content/huawei-storage-driver.html",
             "releases": ["Havana", "Juno"],
             "ci": {
                    "id": "huawei-ci",
@@ -608,7 +608,7 @@
                     "launchpad_id": "sasikanth"
                 }
             ],
-            "wiki": "http://docs.openstack.org/trunk/config-reference/content/GPFS-driver.html",
+            "wiki": "http://docs.openstack.org/juno/config-reference/content/GPFS-driver.html",
             "releases": ["Havana", "Icehouse", "Juno"],
             "ci": {
                    "id": "ibm-gpfs-ci",
@@ -648,7 +648,7 @@
                     "launchpad_id": "baitao2010"
                 }
             ],
-            "wiki": "http://docs.openstack.org/trunk/config-reference/content/ibm-storwize-svc-driver.html",
+            "wiki": "http://docs.openstack.org/juno/config-reference/content/ibm-storwize-svc-driver.html",
             "releases": ["Folsom", "Grizzly", "Havana", "Icehouse", "Juno"],
             "ci": {
                    "id": "ibm-storwize-ci",
@@ -668,7 +668,7 @@
                     "launchpad_id": "alonmarx"
                 }
             ],
-            "wiki": "http://docs.openstack.org/trunk/config-reference/content/ibm-xiv-driver.html",
+            "wiki": "http://docs.openstack.org/juno/config-reference/content/ibm-xiv-driver.html",
             "releases": ["Folsom", "Grizzly", "Havana", "Icehouse", "Juno"],
             "ci": {
                    "id": "ibm-xiv-ci",
@@ -702,7 +702,7 @@
                     "launchpad_id": "clintonk"
                 }
             ],
-            "wiki": "http://docs.openstack.org/trunk/config-reference/content/netapp-volume-driver.html",
+            "wiki": "http://docs.openstack.org/juno/config-reference/content/netapp-volume-driver.html",
             "releases": ["Essex", "Folsom", "Grizzly", "Havana", "Icehouse", "Juno"],
             "ci": {
                    "id": "netapp-ci",
@@ -722,7 +722,7 @@
                     "launchpad_id": "hodosmb"
                 }
             ],
-            "wiki": "http://docs.openstack.org/trunk/config-reference/content/nexenta-driver.html",
+            "wiki": "http://docs.openstack.org/juno/config-reference/content/nexenta-driver.html",
             "releases": ["Essex", "Folsom", "Grizzly", "Havana", "Icehouse", "Juno"]
         },
         {
@@ -752,7 +752,7 @@
                     "launchpad_id": "thingee"
                 }
             ],
-            "wiki": "http://docs.openstack.org/trunk/config-reference/content/lvm-volume-driver.html",
+            "wiki": "http://docs.openstack.org/kilo/config-reference/content/lvm-volume-driver.html",
             "releases": ["Austin", "Bexar", "Cactus", "Diablo", "Essex", "Folsom", "Grizzly", "Havana", "Icehouse", "Juno"]
         },
         {
@@ -767,7 +767,7 @@
                     "launchpad_id": "thingee"
                 }
             ],
-            "wiki": "http://docs.openstack.org/trunk/config-reference/content/NFS-driver.html",
+            "wiki": "http://docs.openstack.org/kilo/config-reference/content/NFS-driver.html",
             "releases": ["Folsom", "Grizzly", "Havana", "Icehouse", "Juno"]
         },
         {
@@ -782,7 +782,7 @@
                     "launchpad_id": "thingee"
                 }
             ],
-            "wiki": "http://docs.openstack.org/trunk/config-reference/content/sheepdog-driver.html",
+            "wiki": "http://docs.openstack.org/juno/config-reference/content/sheepdog-driver.html",
             "releases": ["Icehouse", "Juno"]
         },
         {
@@ -812,7 +812,7 @@
                     "launchpad_id": "rick-chen"
                 }
             ],
-            "wiki": "http://docs.openstack.org/trunk/config-reference/content/prophetstor-dpl-driver.html",
+            "wiki": "http://docs.openstack.org/juno/config-reference/content/prophetstor-dpl-driver.html",
             "releases": ["Juno"],
             "ci": {
                    "id": "prophetstor-ci",
@@ -893,7 +893,7 @@
                     "launchpad_id": "john-griffith"
                 }
             ],
-            "wiki": "http://docs.openstack.org/trunk/config-reference/content/solidfire-volume-driver.html",
+            "wiki": "http://docs.openstack.org/kilo/config-reference/content/solidfire-volume-driver.html",
             "releases": ["Folsom", "Grizzly", "Havana", "Icehouse", "Juno", "Kilo"],
             "ci": {"id": "SolidFire-dsvm-full",
                    "success_pattern": "SolidFire-dsvm-full \\S+ : SUCCESS",
@@ -913,7 +913,7 @@
                     "launchpad_id": "vbala"
                 }
             ],
-            "wiki": "http://docs.openstack.org/trunk/config-reference/content/vmware-vmdk-driver.html",
+            "wiki": "http://docs.openstack.org/juno/config-reference/content/vmware-vmdk-driver.html",
             "releases": ["Havana", "Icehouse", "Juno"],
             "ci": {
                 "id": "vmwareminesweeper",
@@ -933,7 +933,7 @@
                     "launchpad_id": "vladimir.p"
                 }
             ],
-            "wiki": "http://docs.openstack.org/trunk/config-reference/content/zadara-volume-driver.html",
+            "wiki": "http://docs.openstack.org/juno/config-reference/content/zadara-volume-driver.html",
             "releases": ["Folsom", "Grizzly", "Havana", "Icehouse", "Juno"]
         },
         {
@@ -1141,7 +1141,7 @@
                     "launchpad_id": "kevinbenton"
                 }
             ],
-            "wiki": "http://docs.openstack.org/trunk/config-reference/content/networking-plugin-ml2_bigswitch.html",
+            "wiki": "http://docs.openstack.org/juno/config-reference/content/networking-plugin-ml2_bigswitch.html",
             "ci": {
                 "id": "bsn",
                 "success_pattern": "BigSwitch-ML2-Driver \\S+ : SUCCESS",
@@ -1671,7 +1671,7 @@
                     "launchpad_id": "ronak-malav-shah"
                 }
             ],
-            "wiki": "http://docs.openstack.org/trunk/config-reference/content/networking-plugin-nuage.html",
+            "wiki": "http://docs.openstack.org/juno/config-reference/content/networking-plugin-nuage.html",
             "releases": ["Icehouse", "Juno"],
             "ci": {
                 "id": "nuage-ci",
@@ -1712,7 +1712,7 @@
                     "launchpad_id": "garyk"
                 }
             ],
-            "wiki": "http://docs.openstack.org/trunk/config-reference/content/networking-plugin-nvsd.html",
+            "wiki": "http://docs.openstack.org/juno/config-reference/content/networking-plugin-nvsd.html",
             "releases": ["Juno"],
             "ci": {
                 "id": "oneconvergence",
@@ -1754,7 +1754,7 @@
                     "launchpad_id": "mestery"
                 }
             ],
-            "wiki": "http://docs.openstack.org/trunk/config-reference/content/networking-plugin-linuxbridge_agent.html",
+            "wiki": "http://docs.openstack.org/icehouse/config-reference/content/networking-plugin-linuxbridge_agent.html",
             "releases": ["Folsom", "Grizzly", "Havana", "Icehouse"]
         },
         {
@@ -1770,7 +1770,7 @@
                     "launchpad_id": "mestery"
                 }
             ],
-            "wiki": "http://docs.openstack.org/trunk/config-reference/content/networking-options-plugins-ml2.html",
+            "wiki": "http://docs.openstack.org/juno/config-reference/content/networking-options-plugins-ml2.html",
             "releases": ["Havana", "Icehouse", "Juno"]
         },
         {
@@ -1787,7 +1787,7 @@
                 }
             ],
             "releases": ["Folsom", "Grizzly", "Havana", "Icehouse", "Juno"],
-            "wiki": "http://docs.openstack.org/trunk/config-reference/content/networking-plugin-meta.html",
+            "wiki": "http://docs.openstack.org/juno/config-reference/content/networking-plugin-meta.html",
             "ci": {
                 "id": "metaplugintest",
                 "success_pattern": "Build Successful",
@@ -1828,7 +1828,7 @@
                     "launchpad_id": "mestery"
                 }
             ],
-            "wiki": "http://docs.openstack.org/trunk/config-reference/content/networking-plugin-openvswitch_agent.html",
+            "wiki": "http://docs.openstack.org/juno/config-reference/content/networking-plugin-openvswitch_agent.html",
             "releases": ["Juno"]
         },
         {
@@ -2006,7 +2006,7 @@
                     "launchpad_id": "timello"
                 }
             ],
-            "wiki": "http://docs.openstack.org/trunk/config-reference/content/powervm.html",
+            "wiki": "http://docs.openstack.org/havana/config-reference/content/powervm.html",
             "releases": ["Folsom", "Grizzly", "Havana"]
         },
         {
@@ -2051,7 +2051,7 @@
                     "launchpad_id": "milakstill"
                 }
             ],
-            "wiki": "http://docs.openstack.org/trunk/config-reference/content/docker.html",
+            "wiki": "http://docs.openstack.org/havana/config-reference/content/docker.html",
             "releases": ["Havana"]
         },
         {
@@ -2087,7 +2087,7 @@
                     "launchpad_id": "milakstill"
                 }
             ],
-            "wiki": "http://docs.openstack.org/trunk/config-reference/content/kvm.html",
+            "wiki": "http://docs.openstack.org/juno/config-reference/content/kvm.html",
             "releases": ["Austin", "Bexar", "Cactus", "Diablo", "Essex", "Folsom", "Grizzly", "Havana", "Icehouse", "Juno"]
         },
         {
@@ -2103,7 +2103,7 @@
                 }
             ],
             "releases": ["Austin", "Bexar", "Cactus", "Diablo", "Essex", "Folsom", "Grizzly", "Havana", "Icehouse", "Juno"],
-            "wiki": "http://docs.openstack.org/trunk/config-reference/content/lxc.html"
+            "wiki": "http://docs.openstack.org/juno/config-reference/content/lxc.html"
         },
         {
             "project_id": "openstack/nova",
@@ -2117,7 +2117,7 @@
                     "launchpad_id": "milakstill"
                 }
             ],
-            "wiki": "http://docs.openstack.org/trunk/config-reference/content/qemu.html",
+            "wiki": "http://docs.openstack.org/juno/config-reference/content/qemu.html",
             "releases": ["Austin", "Bexar", "Cactus", "Diablo", "Essex", "Folsom", "Grizzly", "Havana", "Icehouse", "Juno"],
             "ci": {
                 "id": "jenkins_ci",
@@ -2137,7 +2137,7 @@
                     "launchpad_id": "milakstill"
                 }
             ],
-            "wiki": "http://docs.openstack.org/trunk/config-reference/content/introduction-to-xen.html",
+            "wiki": "http://docs.openstack.org/juno/config-reference/content/introduction-to-xen.html",
             "ci": {
                 "id": "citrix_xenserver_ci",
                  "success_pattern": "Build Successful",
@@ -2157,7 +2157,7 @@
                     "launchpad_id": "milakstill"
                 }
             ],
-            "wiki": "http://docs.openstack.org/trunk/config-reference/content/introduction-to-xen.html",
+            "wiki": "http://docs.openstack.org/havana/config-reference/content/introduction-to-xen.html",
             "releases": ["Austin", "Bexar", "Cactus", "Diablo", "Essex", "Folsom", "Grizzly", "Havana"],
             "ci": {
                  "id": "jenkins_ci",
@@ -2170,7 +2170,7 @@
             "vendor": "VMware",
             "name": "VMware vSphere",
             "description": "OpenStack Compute supports the VMware vSphere product family. The VMware vCenter driver enables the nova-compute service to communicate with a VMware vCenter server that manages one or more ESX host clusters.",
-            "wiki": "http://docs.openstack.org/trunk/config-reference/content/vmware.html",
+            "wiki": "http://docs.openstack.org/juno/config-reference/content/vmware.html",
             "ci": {
                 "id": "vmwareminesweeper",
                 "success_pattern": "success",
