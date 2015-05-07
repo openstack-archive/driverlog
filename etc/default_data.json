@@ -927,6 +927,25 @@
         },
         {
             "project_id": "openstack/cinder",
+            "vendor": "X-IO Technologies",
+            "name": "Volume Driver for X-IO ISE Block Storage",
+            "description": "The ISE from X-IO Technologies is a block storage element supporting Fibre Channel and iSCSI. The volume driver from X-IO allows the cloud administrator to provision volumes on connected ISEs taking advantage of QoS, Media affinity, etc.",
+            "maintainers": [
+                {
+                    "name": "Richard Hedlind",
+                    "email": "openstack-dev@x-io.com",
+                    "launchpad_id": "richard-hedlind"
+                }
+            ],
+            "wiki": "http://docs.openstack.org/kilo/config-reference/content/xio-volume-driver.html",
+            "releases": ["Kilo"],
+            "ci": {"id": "xio-dsvm-xio-fc",
+                   "success_pattern": "SUCCESS",
+                   "failure_pattern": "FAILURE"
+            }
+        },
+        {
+            "project_id": "openstack/cinder",
             "vendor": "Zadara Storage",
             "name": "Zadara VPSA Cloud Block Storage",
             "description": "There is a volume back-end for Zadara.",
