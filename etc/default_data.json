@@ -129,7 +129,7 @@
             ],
             "description": "The Xen Storage Manager volume driver (xensm) is a XenAPI hypervisor specific volume driver, and can be used to provide basic storage functionality, including volume creation and destruction, on a number of different storage back-ends.",
             "wiki": "http://docs.openstack.org/juno/config-reference/content/xensm.html",
-            "releases": ["Juno"]
+            "releases": ["Grizzly"]
         },
         {
             "project_id": "openstack/cinder",
@@ -164,7 +164,7 @@
                 }
             ],
             "wiki": "http://docs.openstack.org/juno/config-reference/content/windows-volume-driver.html",
-            "releases": ["Grizzly", "Havana", "Icehouse", "Juno"]
+            "releases": ["Grizzly", "Havana", "Icehouse", "Juno", "Kilo"]
         },
         {
             "project_id": "openstack/cinder",
@@ -219,7 +219,7 @@
                 }
             ],
             "wiki": "http://docs.openstack.org/developer/cinder/api/cinder.volume.drivers.datera.html?highlight=datera#module-cinder.volume.drivers.datera",
-            "releases": ["Icehouse", "Juno"],
+            "releases": ["Juno", "Kilo"],
             "ci": {
                   "id":"datera-ci",
                   "success_pattern": "Build Successful",
@@ -280,7 +280,7 @@
                 }
             ],
             "wiki": "http://docs.openstack.org/juno/config-reference/content/emc-vmax-driver.html",
-            "releases": ["Icehouse", "Juno"],
+            "releases": ["Icehouse", "Juno", "Kilo"],
             "ci": {
                   "id":"emc-vmax-ci",
                   "success_pattern": "Build Successful",
@@ -300,7 +300,7 @@
                 }
             ],
             "wiki": "http://docs.openstack.org/juno/config-reference/content/emc-vnx-direct-driver.html",
-            "releases": ["Icehouse", "Juno"],
+            "releases": ["Icehouse", "Juno", "Kilo"],
             "ci": {
                   "id":"emc-vnx-ci",
                   "success_pattern": "Build Successful",
@@ -320,7 +320,7 @@
                 }
             ],
             "wiki": "http://docs.openstack.org/juno/config-reference/content/emc-vnx-direct-driver.html",
-            "releases": ["Juno"],
+            "releases": ["Juno", "Kilo"],
             "ci": {
                   "id":"emc-vnx-ci",
                   "success_pattern": "Build Successful",
@@ -340,7 +340,7 @@
                 }
             ],
             "wiki": "http://www.xtremio.com/wp-content/uploads/2014/07/h13287-ds-xtremio-openstack.pdf",
-            "releases": ["Juno"],
+            "releases": ["Juno", "Kilo"],
             "ci": {
                   "id":"emc-xio-ci",
                   "success_pattern": "Build Successful",
@@ -360,7 +360,7 @@
                 }
             ],
             "wiki": "http://www.xtremio.com/wp-content/uploads/2014/07/h13287-ds-xtremio-openstack.pdf",
-            "releases": ["Juno"],
+            "releases": ["Juno", "Kilo"],
             "ci": {
                   "id":"emc-xio-ci",
                   "success_pattern": "Build Successful",
@@ -380,7 +380,7 @@
                 }
             ],
             "wiki": "http://docs.openstack.org/juno/config-reference/content/emc-vmax-driver.html",
-            "releases": ["Grizzly", "Havana", "Icehouse", "Juno"],
+            "releases": ["Grizzly", "Havana", "Icehouse", "Juno", "Kilo"],
             "ci": {
                   "id":"emc-vmax-ci",
                   "success_pattern": "Build Successful",
@@ -445,7 +445,7 @@
                 }
             ],
             "wiki": "http://docs.openstack.org/juno/config-reference/content/GlusterFS-driver.html",
-            "releases": ["Grizzly", "Havana", "Icehouse", "Juno"],
+            "releases": ["Grizzly", "Havana", "Icehouse", "Juno", "Kilo"],
             "ci": {
                 "id": "gate-tempest-dsvm-full-glusterfs",
                 "success_pattern": "gate-tempest-dsvm-full-glusterfs \\S+ : SUCCESS",
@@ -520,7 +520,7 @@
                 }
             ],
             "wiki": "http://docs.openstack.org/kilo/config-reference/content/HP-LeftHand-StoreVirtual-driver.html",
-            "releases": ["Diablo", "Essex", "Folsom", "Grizzly", "Havana", "Icehouse", "Juno", "Kilo"],
+            "releases": ["Diablo", "Essex", "Folsom", "Grizzly", "Havana", "Icehouse", "Juno"],
             "ci": {
                   "id":"hp-cinder-ci",
                   "success_pattern": "Build Successful",
@@ -539,7 +539,7 @@
                 }
             ],
             "wiki": "http://docs.openstack.org/juno/config-reference/content/hds-hnas-driver.html",
-            "releases": ["Juno"],
+            "releases": ["Juno", "Kilo"],
             "ci": {
                   "id":"hds-hnas-ci",
                   "success_pattern": "Build Successful",
@@ -558,7 +558,7 @@
                 }
             ],
             "wiki": "http://docs.openstack.org/juno/config-reference/content/hds-volume-driver.html",
-            "releases": ["Havana", "Icehouse", "Juno"]
+            "releases": ["Havana", "Icehouse", "Juno", "Kilo"]
         },
         {
             "project_id": "openstack/cinder",
@@ -573,7 +573,7 @@
                 }
             ],
             "wiki": "http://docs.openstack.org/juno/config-reference/content/hitachi-storage-volume-driver.html",
-            "releases": ["Juno"],
+            "releases": ["Juno", "Kilo"],
             "ci": {
                   "id":"hds-hnas-ci",
                   "success_pattern": "Build Successful",
@@ -593,7 +593,7 @@
                 }
             ],
             "wiki": "http://docs.openstack.org/juno/config-reference/content/huawei-storage-driver.html",
-            "releases": ["Havana", "Juno"],
+            "releases": ["Havana", "Juno", "Kilo"],
             "ci": {
                    "id": "huawei-ci",
                    "success_pattern": "Build Successful",
@@ -613,7 +613,7 @@
                 }
             ],
             "wiki": "http://docs.openstack.org/juno/config-reference/content/GPFS-driver.html",
-            "releases": ["Havana", "Icehouse", "Juno"],
+            "releases": ["Havana", "Icehouse", "Juno", "Kilo"],
             "ci": {
                    "id": "ibm-gpfs-ci",
                    "success_pattern": "Build Successful",
@@ -633,7 +633,7 @@
                 }
             ],
             "wiki": "http://www-03.ibm.com/support/techdocs/atsmastr.nsf/WebIndex/WP102443",
-            "releases": ["Icehouse", "Juno"],
+            "releases": ["Icehouse", "Juno", "Kilo"],
             "ci": {
                    "id": "ibm-ibmnas-ci",
                    "success_pattern": "Build Successful",
@@ -653,7 +653,7 @@
                 }
             ],
             "wiki": "http://docs.openstack.org/juno/config-reference/content/ibm-storwize-svc-driver.html",
-            "releases": ["Folsom", "Grizzly", "Havana", "Icehouse", "Juno"],
+            "releases": ["Folsom", "Grizzly", "Havana", "Icehouse", "Juno", "Kilo"],
             "ci": {
                    "id": "ibm-storwize-ci",
                    "success_pattern": "Build Successful",
@@ -673,26 +673,12 @@
                 }
             ],
             "wiki": "http://docs.openstack.org/juno/config-reference/content/ibm-xiv-driver.html",
-            "releases": ["Folsom", "Grizzly", "Havana", "Icehouse", "Juno"],
+            "releases": ["Folsom", "Grizzly", "Havana", "Icehouse", "Juno", "Kilo"],
             "ci": {
                    "id": "ibm-xiv-ci",
                    "success_pattern": "Build Successful",
                    "failure_pattern": "Build Failed"
            }
-        },
-        {
-           "project_id": "openstack/cinder",
-           "vendor": "Maxta Inc",
-           "name": "MxSP Cinder driver",
-           "description":"Maxta Storage Platform (MxSP) Cinder driver allows integrating Maxta's Hyper-Converged solution with Openstack.",
-           "maintainers": [
-               {
-                   "name": "Maxta",
-                   "email": "openstack@maxta.com",
-                   "launchpad_id": "maxtainc"
-               }
-           ],
-           "wiki": "http://www.maxta.com/wp-content/uploads/Maxta_MirantisOpenstack_Runbook.pdf"
         },
         {
             "project_id": "openstack/cinder",
@@ -707,7 +693,7 @@
                 }
             ],
             "wiki": "http://docs.openstack.org/juno/config-reference/content/netapp-volume-driver.html",
-            "releases": ["Essex", "Folsom", "Grizzly", "Havana", "Icehouse", "Juno"],
+            "releases": ["Essex", "Folsom", "Grizzly", "Havana", "Icehouse", "Juno", "Kilo"],
             "ci": {
                    "id": "netapp-ci",
                    "success_pattern": "Build Successful",
@@ -742,7 +728,7 @@
                 }
             ],
              "wiki": "http://docs.openstack.org/developer/cinder/api/cinder.volume.drivers.nimble.html?highlight=nimble#module-cinder.volume.drivers.nimble",
-             "releases": ["Icehouse", "Juno"]
+             "releases": ["Juno", "Kilo"]
         },
         {
             "project_id": "openstack/cinder",
@@ -757,7 +743,7 @@
                 }
             ],
             "wiki": "http://docs.openstack.org/kilo/config-reference/content/lvm-volume-driver.html",
-            "releases": ["Austin", "Bexar", "Cactus", "Diablo", "Essex", "Folsom", "Grizzly", "Havana", "Icehouse", "Juno"]
+            "releases": ["Austin", "Bexar", "Cactus", "Diablo", "Essex", "Folsom", "Grizzly", "Havana", "Icehouse", "Juno", "Kilo"]
         },
         {
             "project_id": "openstack/cinder",
@@ -772,7 +758,7 @@
                 }
             ],
             "wiki": "http://docs.openstack.org/kilo/config-reference/content/NFS-driver.html",
-            "releases": ["Folsom", "Grizzly", "Havana", "Icehouse", "Juno"]
+            "releases": ["Folsom", "Grizzly", "Havana", "Icehouse", "Juno", "Kilo"]
         },
         {
             "project_id": "openstack/cinder",
@@ -787,7 +773,7 @@
                 }
             ],
             "wiki": "http://docs.openstack.org/juno/config-reference/content/sheepdog-driver.html",
-            "releases": ["Icehouse", "Juno"]
+            "releases": ["Icehouse", "Juno", "Kilo"]
         },
         {
             "project_id": "openstack/cinder",
@@ -802,7 +788,7 @@
                 }
             ],
             "wiki": "http://docs.openstack.org/developer/cinder/api/cinder.volume.drivers.zfssa.zfssaiscsi.html?highlight=zfs#module-cinder.volume.drivers.zfssa.zfssaiscsi",
-            "releases": ["Juno"]
+            "releases": ["Juno", "Kilo"]
         },
         {
             "project_id": "openstack/cinder",
@@ -817,7 +803,7 @@
                 }
             ],
             "wiki": "http://docs.openstack.org/juno/config-reference/content/prophetstor-dpl-driver.html",
-            "releases": ["Juno"],
+            "releases": ["Juno", "Kilo"],
             "ci": {
                    "id": "prophetstor-ci",
                    "success_pattern": "Build Successful",
@@ -837,7 +823,7 @@
                 }
             ],
             "wiki": "http://specs.openstack.org/openstack/cinder-specs/specs/juno/pure-iscsi-volume-driver.html",
-            "releases": ["Juno"],
+            "releases": ["Juno", "Kilo"],
             "ci": {
                    "id": "purestorage-cinder-ci",
                    "success_pattern": "Build Successful",
@@ -883,7 +869,7 @@
                 }
             ],
             "wiki": "http://www.scality.com/scality-delivers-persistent-block-storage-for-virtual-machines-march-13th-2013",
-            "releases": ["Grizzly", "Havana", "Icehouse", "Juno"]
+            "releases": ["Grizzly", "Havana", "Icehouse", "Juno", "Kilo"]
         },
         {
             "project_id": "openstack/cinder",
@@ -918,7 +904,7 @@
                 }
             ],
             "wiki": "http://docs.openstack.org/juno/config-reference/content/vmware-vmdk-driver.html",
-            "releases": ["Havana", "Icehouse", "Juno"],
+            "releases": ["Havana", "Icehouse", "Juno", "Kilo"],
             "ci": {
                 "id": "vmwareminesweeper",
                 "success_pattern": "Build Successful",
@@ -958,6 +944,21 @@
             ],
             "wiki": "http://docs.openstack.org/juno/config-reference/content/zadara-volume-driver.html",
             "releases": ["Folsom", "Grizzly", "Havana", "Icehouse", "Juno"]
+        },
+        {
+            "project_id": "openstack/cinder",
+            "vendor": "Cloud Byte",
+            "name": "Cloud Byte",
+            "description": "Volume driver for Cloud Byte",
+            "maintainers": [
+                {
+                    "name": "Amit Das",
+                    "email": "amit.das@cloudbyte.com",
+                    "launchpad_id": "amit-das-8"
+                }
+            ],
+            "wiki": "",
+            "releases": ["Kilo"]
         },
         {
             "project_id": "openstack/ironic",
