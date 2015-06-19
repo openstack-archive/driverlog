@@ -13,6 +13,10 @@
             "name": "Ironic (Bare Metal Provisioning)"
         },
         {
+            "id": "openstack/manila",
+            "name": "Manila (Shared File Storage)"
+        },
+        {
             "id": "openstack/neutron",
             "name": "Neutron (Networking)"
         },
@@ -703,6 +707,7 @@
             "maintainers": [
                 {
                     "name": "Clinton Knight",
+                    "irc": "cknight",
                     "email": "cknight@netapp.com",
                     "launchpad_id": "clintonk"
                 }
@@ -1109,6 +1114,27 @@
                  "success_pattern": "Build Successful",
                  "failure_pattern": "Build Failed"
                }
+        },
+        {
+            "project_id": "openstack/manila",
+            "vendor": "NetApp",
+            "name": "NetApp Unified Driver",
+            "description": "The NetApp Unified Driver for Manila manages NFS and CIFS file shares on NetApp Clustered Data ONTAP storage controllers.  The driver supports both Manila driver modes (driver_handles_share_servers = True/False).",
+            "maintainers": [
+                {
+                    "name": "Clinton Knight",
+                    "irc": "cknight",
+                    "email": "cknight@netapp.com",
+                    "launchpad_id": "clintonk"
+                }
+            ],
+            "wiki": "http://netapp.github.io/openstack-deploy-ops-guide/",
+            "releases": ["Kilo"],
+            "ci": {
+                   "id": "netapp-ci",
+                   "success_pattern": "Build Successful",
+                   "failure_pattern": "Build Failed"
+            }
         },
         {
             "project_id": "openstack/neutron",
