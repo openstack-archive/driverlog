@@ -1137,6 +1137,22 @@
             }
         },
         {
+            "project_id": "openstack/manila",
+            "vendor": "Quobyte",
+            "name": "Quobyte Manila Driver",
+            "description": "The Quobyte Manila driver provides access to shared storage residing on a Quobyte volume.",
+            "maintainers": [
+                {
+                    "name": "Silvan Kaiser",
+                    "irc": "kaisers",
+                    "email": "silvan@quobyte.com",
+                    "launchpad_id": "kaisers"
+                }
+            ],
+            "wiki": "https://wiki.openstack.org/wiki/Manila/Quobyte",
+            "releases": ["Kilo"]
+        },
+        {
             "project_id": "openstack/neutron",
             "vendor": "A10 Networks",
             "name": "A10 Networks LBaaS Driver",
