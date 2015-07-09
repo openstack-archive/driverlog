@@ -1,6 +1,10 @@
 {
     "projects": [
         {
+            "id": "fuel/plugins",
+            "name": "Fuel Plugins"
+        },
+        {
             "id": "openstack/cinder",
             "name": "Cinder (Block Storage)"
         },
