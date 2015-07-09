@@ -1,6 +1,10 @@
 {
     "projects": [
         {
+            "id": "fuel/fuel",
+            "name": "Fuel"
+        },
+        {
             "id": "openstack/cinder",
             "name": "Cinder (Block Storage)"
         },
@@ -80,6 +84,106 @@
         }
     ],
     "drivers": [
+        {   "project_id": "fuel/fuel",
+            "vendor": "Mirantis",
+            "name": "Elasticsearch-Kibana",
+            "description": "Deploys Elasticsearch server and the Kibana web interface.",
+            "maintainers": [
+               {
+                    "name": "Guillaume Thouvenin",
+                    "email": "gthouvenin@mirantis.com",
+                    "launchpad_id": "guillaume-thouvenin"
+                },
+                {
+                    "name": "Simon Pasquier",
+                    "email": "spasquier@mirantis.com",
+                    "launchpad_id": "simon-pasquier"
+                },
+                {
+                    "name": "Swann Croiset",
+                    "email": "scroiset@mirantis.com",
+                    "launchpad_id": "swann-w"
+                }
+            ],
+            "wiki": "https://www.mirantis.com/products/openstack-drivers-and-plugins/fuel-plugins/"
+        },
+        {   "project_id": "fuel/fuel",
+            "vendor": "Mirantis",
+            "name": "InfluxDB-Grafana",
+            "description": "This plugin deploys InfluxDB server and the Grafana web interface.",
+            "maintainers": [
+               {
+                    "name": "Guillaume Thouvenin",
+                    "email": "gthouvenin@mirantis.com",
+                    "launchpad_id": "guillaume-thouvenin"
+                },
+                {
+                    "name": "Simon Pasquier",
+                    "email": "spasquier@mirantis.com",
+                    "launchpad_id": "simon-pasquier"
+                },
+                {
+                    "name": "Swann Croiset",
+                    "email": "scroiset@mirantis.com",
+                    "launchpad_id": "swann-w"
+                }
+            ],
+            "wiki": "https://www.mirantis.com/products/openstack-drivers-and-plugins/fuel-plugins/"
+        },
+        {   "project_id": "fuel/fuel",
+            "vendor": "Mirantis",
+            "name": "The Logging, Monitoring And Alerting (LMA) Collector ",
+            "description": "Collects logs, metrics and notifications from system and OpenStack services and forwards that information to external backends such as Elasticsearch and InfluxDB.",
+            "maintainers": [
+               {
+                    "name": "Guillaume Thouvenin",
+                    "email": "gthouvenin@mirantis.com",
+                    "launchpad_id": "guillaume-thouvenin"
+                },
+                {
+                    "name": "Simon Pasquier",
+                    "email": "spasquier@mirantis.com",
+                    "launchpad_id": "simon-pasquier"
+                },
+                {
+                    "name": "Swann Croiset",
+                    "email": "scroiset@mirantis.com",
+                    "launchpad_id": "swann-w"
+                }
+            ],
+            "wiki": "https://www.mirantis.com/products/openstack-drivers-and-plugins/fuel-plugins/"
+        },
+        {   "project_id": "fuel/fuel",
+            "vendor": "Mirantis",
+            "name": "VPNaaS plugin for Neutron",
+            "description": "Neutron extension that introduces VPN feature set",
+            "maintainers": [
+                {
+                    "name": "Andrey Epifanov",
+                    "email": "aepifanov@mirantis.com",
+                    "launchpad_id": "aepifanov"
+                },
+                {
+                    "name": "Sergey Kolekonov",
+                    "email": "skolekonov@mirantis.com",
+                    "launchpad_id": "skolekonov"
+                }
+            ],
+            "wiki": "https://www.mirantis.com/products/openstack-drivers-and-plugins/fuel-plugins/"
+        },
+        {   "project_id": "fuel/fuel",
+            "vendor": "Mirantis",
+            "name": "Zabbix - Monitoring",
+            "description": "The Zabbix UI is installed on a controller and Zabbix agents are deployed to monitor all OpenStack nodes (plus the OpenStack APIs), their configurations further optimized to monitor specific services on each node.",
+            "maintainers": [
+                {
+                    "name": "Szymon Banka",
+                    "email": "sbanka@mirantis.com",
+                    "launchpad_id": "sbanka"
+                }
+            ],
+            "wiki": "https://www.mirantis.com/products/openstack-drivers-and-plugins/fuel-plugins/"
+        },
         {
             "project_id": "openstack/cinder",
             "vendor": "Ceph",
