@@ -109,8 +109,26 @@
         },
         {   "project_id": "fuel/fuel",
             "vendor": "Mirantis",
+            "name": "FWaaS",
+            "description": "....",
+            "maintainers": [
+                {
+                    "name": "Andrey Epifanov",
+                    "email": "aepifanov@mirantis.com",
+                    "launchpad_id": "aepifanov"
+                },
+                {
+                    "name": "Sergey Kolekonov",
+                    "email": "skolekonov@mirantis.com",
+                    "launchpad_id": "skolekonov"
+                }
+            ],
+            "wiki": "https://www.mirantis.com/products/openstack-drivers-and-plugins/fuel-plugins/"
+        },
+        {   "project_id": "fuel/fuel",
+            "vendor": "Mirantis",
             "name": "InfluxDB-Grafana plugin for Fuel",
-            "description": "This plugin deploys InfluxDB server and the Grafana web interface.",
+            "description": "Part of the Logging, Monitoring and Alerting (LMA) Toolchain, this plugin deploys InfluxDB server and the Grafana web interface. These components are used primarily for databasing and analysis of metrics that change over time (metric time-series).",
             "maintainers": [
                {
                     "name": "Guillaume Thouvenin",
@@ -133,7 +151,7 @@
         {   "project_id": "fuel/fuel",
             "vendor": "Mirantis",
             "name": "The Logging, Monitoring And Alerting (LMA) Collector plugin for Fuel",
-            "description": "Collects logs, metrics and notifications from system and OpenStack services and forwards that information to external backends such as Elasticsearch and InfluxDB.",
+            "description": "Installed on OpenStack controller, compute, and storage nodes, this module collects logs, metrics and notifications from system and OpenStack services and forwards that information to external backend databases such as Elasticsearch and InfluxDB.",
             "maintainers": [
                {
                     "name": "Guillaume Thouvenin",
@@ -156,7 +174,7 @@
         {   "project_id": "fuel/fuel",
             "vendor": "Mirantis",
             "name": "VPNaaS plugin for Fuel",
-            "description": "Neutron extension that introduces VPN feature set",
+            "description": "This Neutron extension introduces a flexible IPSec VPN feature-set supported by Neutron CLI and, more simply, in Horizon, by adding a new set of tabs to Network. VPNs can be easily and quickly implemented to connect groups of VMs on separate subnets, either within the same cloud or between clouds, across network or internet.",
             "maintainers": [
                 {
                     "name": "Andrey Epifanov",
@@ -174,7 +192,7 @@
         {   "project_id": "fuel/fuel",
             "vendor": "Mirantis",
             "name": "Zabbix Monitoring plugin for Fuel",
-            "description": "The Zabbix UI is installed on a controller and Zabbix agents are deployed to monitor all OpenStack nodes (plus the OpenStack APIs), their configurations further optimized to monitor specific services on each node.",
+            "description": "This plugin deploys Zabbix, the leading open source enterprise monitoring and analysis solution. The Zabbix UI is installed on a controller and Zabbix agents are deployed to monitor all OpenStack nodes (plus the OpenStack APIs), their configurations further optimized to monitor specific services on each node.",
             "maintainers": [
                 {
                     "name": "Szymon Banka",
@@ -188,7 +206,7 @@
             "project_id": "openstack/cinder",
             "vendor": "Ceph",
             "name": "Ceph RADOS Block Device (RBD)",
-            "description": "The Ceph RADOS Block Device driver  allows to use Ceph RADOS block devices (RBD) for volumes.",
+            "description": "The Ceph RADOS Block Device driver allows to use Ceph RADOS block devices (RBD) for volumes.",
             "maintainers": [
                 {
                     "name": "Josh Durgin",
