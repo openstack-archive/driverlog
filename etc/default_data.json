@@ -1622,6 +1622,26 @@
         },
         {
             "project_id": "openstack/neutron",
+            "vendor": "KEMP Technologies",
+            "name": "KEMP Technologies LBaaS V2 Driver",
+            "description": "KEMP Technologies LBaaS V2 driver that will allow the use of KEMP appliances as the back end",
+            "maintainers": [
+                {
+                    "name": "Roy Dunican",
+                    "email": "rdunican@kemptechnologies.com",
+                    "launchpad_id": "rdunican"
+                },
+                {
+                    "name": "Shane McGough",
+                    "email": "smcgough@kemptechnologies.com",
+                    "launchpad_id": "smcgough"
+                }
+            ],
+            "wiki": "https://support.kemptechnologies.com/hc/en-us/articles/204979325-Openstack-LBaaS-Driver",
+            "releases": ["Liberty"]
+        },
+        {
+            "project_id": "openstack/neutron",
             "vendor": "Mellanox",
             "name": "Mellanox Neutron Plugin",
             "description": "The Openstack Mellanox Neutron plugin supports Mellanox embedded switch functionality as part of the VPI (Ethernet/InfiniBand) HCA. Mellanox Neutron Plugin allows hardware vNICs (based on SR-IOV virtual functions) per each Virtual Machine vNIC to have its unique connectivity, security, and QoS attributes.",
