@@ -1005,6 +1005,19 @@
             ],
             "wiki": "https://www.mirantis.com/products/openstack-drivers-and-plugins/fuel-plugins/"
         },
+        {  "project_id": "openstack/fuel",
+            "vendor": "Mirantis",
+            "name": "EMC VNX plugin for Fuel",
+            "description": "EMC VNX plugin for Fuel extends Mirantis OpenStack functionality by adding support for EMC VNX arrays in Cinder using iSCSI protocol. It replaces Cinder LVM driver which is the default volume backend that uses local volumes managed by LVM. Enabling EMC VNX plugin in Mirantis OpenStack means that all Cinder services are run on Controller nodes.",
+            "maintainers": [
+               {
+                    "name": "Szymon Banka",
+                    "email": "sbanka@mirantis.com",
+                    "launchpad_id": "sbanka"
+                }
+            ],
+            "wiki": "https://www.fuel-infra.org/plugins/catalog.html"
+        },
         {   "project_id": "openstack/fuel",
             "vendor": "Mirantis",
             "name": "FWaaS plugin for Fuel",
