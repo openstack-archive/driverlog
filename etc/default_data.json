@@ -1126,6 +1126,20 @@
             ],
             "wiki": "https://www.mirantis.com/products/openstack-drivers-and-plugins/fuel-plugins/"
         },
+        {   "project_id": "openstack/fuel",
+            "vendor": "Project Calico",
+            "name": "Calico plugin for Fuel",
+            "description": "This plugin provides Calico's Layer 3 Virtual Networking for Highly Scalable Data Centers",
+            "maintainers": [
+                {
+                    "name": "Emma Gordon",
+                    "email": "emma@projectcalico.org",
+                    "launchpad_id": "emma-0"
+                }
+            ],
+            "releases": ["Juno"],
+            "wiki": "https://github.com/stackforge/fuel-plugin-calico"
+        },
         {
             "project_id": "openstack/ironic",
             "vendor": "AMD/SeaMicro",
