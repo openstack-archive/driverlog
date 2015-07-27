@@ -17,9 +17,9 @@ import re
 import time
 
 import memcache
-from oslo.config import cfg
+from oslo_config import cfg
+from oslo_log import log as logging
 
-from driverlog.openstack.common import log as logging
 from driverlog.processor import config
 from driverlog.processor import rcs
 from driverlog.processor import utils

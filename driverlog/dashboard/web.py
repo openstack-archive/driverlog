@@ -16,10 +16,10 @@
 import os
 
 import flask
-from oslo.config import cfg
+from oslo_config import cfg
+from oslo_log import log as logging
 
 from driverlog.dashboard import api
-from driverlog.openstack.common import log as logging
 from driverlog.processor import config
 
 

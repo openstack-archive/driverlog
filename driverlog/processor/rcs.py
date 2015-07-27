@@ -16,10 +16,9 @@
 import json
 import re
 
+from oslo_log import log as logging
 import paramiko
 import six
-
-from driverlog.openstack.common import log as logging
 
 
 LOG = logging.getLogger(__name__)

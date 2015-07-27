@@ -14,9 +14,8 @@
 # limitations under the License.
 
 import flask
+from oslo_log import log as logging
 from six.moves.urllib import parse
-
-from driverlog.openstack.common import log as logging
 
 
 LOG = logging.getLogger(__name__)

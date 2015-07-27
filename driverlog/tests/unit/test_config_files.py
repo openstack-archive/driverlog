@@ -61,7 +61,7 @@ class TestConfigFiles(testtools.TestCase):
 
     def test_sample_default_data_schema_conformance(self):
         self._verify_default_data_by_schema(
-            'tests/unit/test_data/sample_default_data.json')
+            'driverlog/tests/unit/test_data/sample_default_data.json')
 
     def test_projects_in_alphabetical_order(self):
         projects = self._read_file('etc/default_data.json')['projects']

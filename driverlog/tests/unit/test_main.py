@@ -24,12 +24,12 @@ import testtools
 
 
 def _read_sample_review():
-    with open('tests/unit/test_data/sample_review.json') as fd:
+    with open('driverlog/tests/unit/test_data/sample_review.json') as fd:
         return json.load(fd)
 
 
 def _read_sample_default_data():
-    with open('tests/unit/test_data/sample_default_data.json') as fd:
+    with open('driverlog/tests/unit/test_data/sample_default_data.json') as fd:
         return json.load(fd)
 
 
@@ -121,7 +121,7 @@ class TestMain(testtools.TestCase):
 
         rcs_getter.side_effect = _get_rcs
 
-    @mock.patch('oslo.config.cfg.CONF')
+    @mock.patch('oslo_config.cfg.CONF')
     @mock.patch('driverlog.processor.rcs.get_rcs')
     def test_calculate_update(self, rcs_getter, conf):
         memcached_inst = self._make_test_memcached()
@@ -140,7 +140,7 @@ class TestMain(testtools.TestCase):
                          (update[driver_key]['releases']['juno']
                           ['review_url']))
 
-    @mock.patch('oslo.config.cfg.CONF')
+    @mock.patch('oslo_config.cfg.CONF')
     @mock.patch('driverlog.processor.rcs.get_rcs')
     def test_calculate_update_existing_version_data(self, rcs_getter, conf):
         # checks that existing data will be overwritten with update

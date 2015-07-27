@@ -21,11 +21,10 @@ import re
 import time
 
 import iso8601
+from oslo_log import log as logging
 import six
 from six.moves.urllib import parse
 from six.moves.urllib import request
-
-from driverlog.openstack.common import log as logging
 
 
 LOG = logging.getLogger(__name__)
