@@ -917,6 +917,31 @@
         },
         {
             "project_id": "openstack/cinder",
+            "vendor": "Tintri",
+            "name": "Tintri Volume Driver",
+            "description": "Tintri VMstore is a smart storage that sees, learns and adapts for cloud and virtualization",
+            "maintainers": [
+                {
+                    "name": "Sean Chen",
+                    "email": "openstack-dev@tintri.com",
+                    "launchpad_id": "schen"
+                },
+                {
+                    "name": "Apoorva Deshpande",
+                    "email": "openstack-dev@tintri.com",
+                    "launchpad_id": "apoorvad"
+                }
+            ],
+            "wiki": "http://docs.openstack.org/liberty/config-reference/content/tintri-volume-driver.html",
+            "releases": ["Liberty"],
+            "ci": {"id": "tintri-ci",
+                   "success_pattern": "tintri-ci \\S+ : SUCCESS",
+                   "failure_pattern": "tintri-ci \\S+ : FAILURE"
+            }
+
+        },
+        {
+            "project_id": "openstack/cinder",
             "vendor": "VMware",
             "name": "VMware VMDK Driver",
             "description": "The VMware VMDK driver to enable management of the OpenStack Block Storage volumes on vCenter-managed data stores. Volumes are backed by VMDK files on data stores that use any VMware-compatible storage technology such as NFS, iSCSI, FiberChannel, and vSAN.",
