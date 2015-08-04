@@ -980,7 +980,7 @@
                     "launchpad_id": "sbogatkin"
                 }
             ],
-            "wiki": "https://www.fuel-infra.org/plugins/catalog.html"
+            "wiki": "https://github.com/stackforge/fuel-plugin-external-glusterfs"
         },
         {   "project_id": "openstack/fuel",
             "vendor": "Mirantis",
@@ -1003,7 +1003,7 @@
                     "launchpad_id": "swann-w"
                 }
             ],
-            "wiki": "https://www.mirantis.com/products/openstack-drivers-and-plugins/fuel-plugins/"
+            "wiki": "https://github.com/stackforge/fuel-plugin-elasticsearch-kibana"
         },
         {  "project_id": "openstack/fuel",
             "vendor": "Mirantis",
@@ -1016,7 +1016,7 @@
                     "launchpad_id": "sbanka"
                 }
             ],
-            "wiki": "https://www.fuel-infra.org/plugins/catalog.html"
+            "wiki": "https://github.com/stackforge/fuel-plugin-external-emc"
         },
         {   "project_id": "openstack/fuel",
             "vendor": "Mirantis",
@@ -1034,7 +1034,7 @@
                     "launchpad_id": "skolekonov"
                 }
             ],
-            "wiki": "https://www.mirantis.com/products/openstack-drivers-and-plugins/fuel-plugins/"
+            "wiki": "https://github.com/stackforge/fuel-plugin-neutron-fwaas"
         },
         {   "project_id": "openstack/fuel",
             "vendor": "Mirantis",
@@ -1057,7 +1057,7 @@
                     "launchpad_id": "swann-w"
                 }
             ],
-            "wiki": "https://www.mirantis.com/products/openstack-drivers-and-plugins/fuel-plugins/"
+            "wiki": "https://github.com/stackforge/fuel-plugin-influxdb-grafana"
         },
         {  "project_id": "openstack/fuel",
             "vendor": "Mirantis",
@@ -1070,7 +1070,7 @@
                     "launchpad_id": "sbogatkin"
                 }
             ],
-            "wiki": "https://www.fuel-infra.org/plugins/catalog.html"
+            "wiki": "https://github.com/stackforge/fuel-plugin-neutron-lbaas"
         },
         {   "project_id": "openstack/fuel",
             "vendor": "Mirantis",
@@ -1093,7 +1093,7 @@
                     "launchpad_id": "swann-w"
                 }
             ],
-            "wiki": "https://www.mirantis.com/products/openstack-drivers-and-plugins/fuel-plugins/"
+            "wiki": "https://github.com/stackforge/fuel-plugin-lma-collector"
         },
         {   "project_id": "openstack/fuel",
             "vendor": "Mirantis",
@@ -1111,7 +1111,7 @@
                     "launchpad_id": "skolekonov"
                 }
             ],
-            "wiki": "https://www.mirantis.com/products/openstack-drivers-and-plugins/fuel-plugins/"
+            "wiki": "https://github.com/stackforge/fuel-plugin-neutron-vpnaas"
         },
         {   "project_id": "openstack/fuel",
             "vendor": "Mirantis",
@@ -1124,7 +1124,7 @@
                     "launchpad_id": "sbanka"
                 }
             ],
-            "wiki": "https://www.mirantis.com/products/openstack-drivers-and-plugins/fuel-plugins/"
+            "wiki": "https://github.com/stackforge/fuel-plugin-external-zabbix"
         },
         {   "project_id": "openstack/fuel",
             "vendor": "Project Calico",
