@@ -1165,6 +1165,24 @@
             "releases": ["Juno"],
             "wiki": "https://github.com/stackforge/fuel-plugin-calico"
         },
+        {  "project_id": "openstack/fuel",
+            "vendor": "SolidFire Inc",
+            "name": "SolidFire plugin for Fuel",
+            "description": "The SolidFire plugin for Fuel extends Mirantis OpenStack functionality by adding support for SolidFire clusters in Cinder using iSCSI protocol. It replaces Cinder LVM driver which is the default volume backend that uses local volumes managed by LVM. Enabling the SolidFire plugin in Mirantis OpenStack means that all Cinder services are run on Controller nodes.",
+            "maintainers": [
+               {
+                    "name": "Ed Balduf",
+                    "email": "ed.balduf@solidfire.com",
+                    "launchpad_id": "ebalduf"
+               }
+               {
+                    "name": "John Griffith",
+                    "email": "john.griffith@solidfire.com",
+                    "launchpad_id": "john-griffith"
+                }
+            ],
+            "wiki": "https://github.com/stackforge/fuel-plugin-solidfire-cinder"
+        },
         {
             "project_id": "openstack/ironic",
             "vendor": "AMD/SeaMicro",
