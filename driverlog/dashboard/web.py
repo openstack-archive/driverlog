@@ -35,6 +35,9 @@ conf.register_opts(config.OPTS)
 
 
 def main():
+    logging.register_options(conf)
+    logging.set_defaults()
+
     conf_file = os.getenv('DRIVERLOG_CONF')
     if conf_file and os.path.isfile(conf_file):
         conf(default_config_files=[conf_file])
@@ -44,7 +47,7 @@ def main():
     else:
         conf(project='driverlog')
 
-    logging.setup('driverlog')
+    logging.setup(conf, 'driverlog')
 
     app.run(cfg.CONF.listen_host, cfg.CONF.listen_port)
 

@@ -178,10 +178,14 @@ def main():
     conf = cfg.CONF
     conf.register_cli_opts(config.OPTS)
     conf.register_opts(config.OPTS)
-    conf()
+    logging.register_options(conf)
+    logging.set_defaults()
 
-    logging.setup('driverlog')
+    conf(project='driverlog')
+
+    logging.setup(conf, 'driverlog')
     LOG.info('Logging enabled')
+    conf.log_opt_values(LOG, logging.DEBUG)
 
     MEMCACHED_URI_PREFIX = r'^memcached:\/\/'
     stripped = re.sub(MEMCACHED_URI_PREFIX, '', cfg.CONF.runtime_storage_uri)
