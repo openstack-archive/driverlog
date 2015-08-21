@@ -42,7 +42,6 @@ def main():
     if conf_file and os.path.isfile(conf_file):
         conf(default_config_files=[conf_file])
         app.config['DEBUG'] = cfg.CONF.debug
-        app.config['CONF'] = cfg.CONF
         LOG.info('DriverLog.dashboard is configured via "%s"', conf_file)
     else:
         conf(project='driverlog')

@@ -160,6 +160,10 @@ def process(memcached_inst, default_data, force_update):
     if (new_dd_hash != old_dd_hash) or force_update:
         transform_default_data(default_data)
         need_update = True
+
+        if old_dd_hash is None:
+            LOG.info('Memcached is empty, pre-fill it with defaults')
+            memcached_inst.set('driverlog:default_data', default_data)
     else:
         default_data = memcached_inst.get('driverlog:default_data')
 

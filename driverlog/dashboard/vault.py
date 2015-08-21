@@ -17,6 +17,7 @@ import re
 
 import flask
 import memcache
+from oslo_config import cfg
 from oslo_log import log as logging
 
 
@@ -62,17 +63,11 @@ def get_vault():
     vault = getattr(flask.current_app, 'driverlog_vault', None)
     if not vault:
         try:
-            if 'CONF' not in flask.current_app.config:
-                LOG.critical('Configure environment variable DRIVERLOG_CONF '
-                             'with path to config file')
-                flask.abort(500)
-
             vault = {}
-            conf = flask.current_app.config['CONF']
 
             MEMCACHED_URI_PREFIX = r'^memcached:\/\/'
             stripped = re.sub(MEMCACHED_URI_PREFIX, '',
-                              conf.runtime_storage_uri)
+                              cfg.CONF.runtime_storage_uri)
 
             memcached_uri = stripped.split(',')
             memcached = memcache.Client(memcached_uri)
@@ -90,7 +85,7 @@ def get_vault():
         memcached = vault['memcached']
         update_time = memcached.get('driverlog:update_time')
 
-        if vault.get('update_time') != update_time:
+        if update_time is None or vault.get('update_time') != update_time:
             vault['update_time'] = update_time
 
             default_data = memcached.get('driverlog:default_data')
