@@ -1086,6 +1086,19 @@
         },
         {  "project_id": "openstack/fuel",
             "vendor": "Mirantis",
+            "name": "Juniper Contrail Networking plugin for Fuel",
+            "description": "This plugin enables configuration and deployment of the Juniper Contrail Networking SDN. This plugin can also be used with OpenContrail.",
+            "maintainers": [
+               {
+                    "name": "Oleksandr Martsyniuk",
+                    "email": "omartsyniuk@mirantis.com",
+                    "launchpad_id": "omartsyniuk"
+                }
+            ],
+            "wiki": "https://github.com/stackforge/fuel-plugin-contrail"
+        },
+        {  "project_id": "openstack/fuel",
+            "vendor": "Mirantis",
             "name": "LBaaS plugin for Fuel",
             "description": "",
             "maintainers": [
