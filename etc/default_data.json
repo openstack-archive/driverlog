@@ -994,7 +994,20 @@
             "wiki": "http://docs.openstack.org/juno/config-reference/content/zadara-volume-driver.html",
             "releases": ["Folsom", "Grizzly", "Havana", "Icehouse", "Juno"]
         },
-                 {  "project_id": "openstack/fuel",
+        {   "project_id": "openstack/fuel",
+            "vendor": "Mellanox",
+            "name": "ConnectX-3 Pro Network Adapter Support plugin for Fuel",
+            "description": "This plugin configures support for Mellanox ConnectX-3 Pro network adapters, enabling high-performance SR-IOV compute traffic networking, iSER (iSCSI) block storage networking, or (as of Mirantis OpenStack 6.1) Infiniband networking. This plugin configures support for Mellanox ConnectX-3 Pro network adapters, enabling high-performance SR-IOV compute traffic networking, iSER (iSCSI) block storage networking, or Infiniband networking.",
+            "maintainers": [
+               {
+                    "name": "Aviram Bar Heim",
+                    "email": "aviramb@mellanox.com",
+                    "launchpad_id": "aviramb"
+                }
+            ],
+            "wiki": "https://github.com/stackforge/fuel-plugin-mellanox"
+        },
+        {  "project_id": "openstack/fuel",
             "vendor": "Mirantis",
             "name": "GlusterFS plugin for Fuel",
             "description": "Enables GlusterFS driver in Cinder for your GlusterFS cluster.",
