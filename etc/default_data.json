@@ -1087,7 +1087,7 @@
         {  "project_id": "openstack/fuel",
             "vendor": "Mirantis",
             "name": "LBaaS plugin for Fuel",
-            "description": "",
+            "description": "Note, that the plugin has no failover of load-balanced objects and HTTPS termination.",
             "maintainers": [
                {
                     "name": "Stanislaw Bogatkin",
