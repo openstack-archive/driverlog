@@ -1123,6 +1123,19 @@
             ],
             "wiki": "https://github.com/stackforge/fuel-plugin-neutron-lbaas"
         },
+        {  "project_id": "openstack/fuel",
+            "vendor": "Mirantis",
+            "name": "OpenDaylight Plugin for Fuel",
+            "description": "This is a proof of concept of the plugin which will install OpenDaylight controller and set it as manager for OVS using ovsdb plugin.",
+            "maintainers": [
+               {
+                    "name": "Michal Skalski",
+                    "email": "mskalski@mirantis.com",
+                    "launchpad_id": "michal+launchpad"
+                }
+            ],
+            "wiki": "https://github.com/stackforge/fuel-plugin-opendaylight"
+        },
         {   "project_id": "openstack/fuel",
             "vendor": "Mirantis",
             "name": "The Logging, Monitoring And Alerting (LMA) Collector plugin for Fuel",
