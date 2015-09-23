@@ -847,7 +847,7 @@
                 }
             ],
             "wiki": "http://specs.openstack.org/openstack/cinder-specs/specs/juno/pure-iscsi-volume-driver.html",
-            "releases": ["Juno", "Kilo"],
+            "releases": ["Juno", "Kilo", "Liberty"],
             "ci": {
                    "id": "purestorage-cinder-ci",
                    "success_pattern": "Build Successful",
