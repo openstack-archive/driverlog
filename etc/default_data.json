@@ -2553,7 +2553,7 @@
                 }
             ]
         },
-          {
+        {
             "project_id": "openstack/sahara",
             "vendor": "Hortonworks",
             "name": "Hortonworks Data Platform Plugin",
@@ -2566,29 +2566,14 @@
                 }
             ],
             "wiki": "http://docs.openstack.org/developer/sahara/userdoc/hdp_plugin.html",
-            "releases": ["Icehouse", "Juno"],
+            "releases": ["Icehouse", "Juno", "Kilo", "Liberty"],
             "ci": {
-                "id": "savanna-ci",
-                "success_pattern": "gate-sahara-integration-hdp.* \\S+ : SUCCESS",
-                "failure_pattern": "gate-sahara-integration-hdp.* \\S+ : FAILURE"
-               }
-          },
-          {
-            "project_id": "openstack/sahara",
-            "vendor": "OpenStack Community",
-            "name": "Spark Plugin",
-            "description": "Vanilla plugin is a reference plugin implementation which allows to operate with cluster with Apache Hadoop.",
-            "maintainers": [
-                {
-                    "name": "Andrew Lazarev",
-                    "email": "alazarev@mirantis.com",
-                    "launchpad_id": "alazarev"
-                }
-            ],
-            "wiki": "https://wiki.openstack.org/wiki/Sahara/SparkPlugin",
-            "releases": ["Juno"]
-          },
-          {
+                "id": "sahara-ci",
+                "success_pattern": "gate-sahara.*-hdp.* \\S+ : SUCCESS",
+                "failure_pattern": "gate-sahara.*-hdp.* \\S+ : FAILURE"
+            }
+        },
+        {
             "project_id": "openstack/sahara",
             "vendor": "OpenStack Community",
             "name": "Vanilla Plugin",
@@ -2601,14 +2586,14 @@
                 }
             ],
             "wiki": "http://docs.openstack.org/developer/sahara/userdoc/vanilla_plugin.html",
-            "releases": ["Icehouse", "Juno"],
+            "releases": ["Icehouse", "Juno", "Kilo", "Liberty"],
             "ci": {
-                "id": "savanna-ci",
-                "success_pattern": "gate-sahara-integration-vanilla-.* \\S+ : SUCCESS",
-                "failure_pattern": "gate-sahara-integration-vanilla-.* \\S+ : FAILURE"
-               }
-          },
-          {
+                "id": "sahara-ci",
+                "success_pattern": "gate-sahara.*-vanilla.* \\S+ : SUCCESS",
+                "failure_pattern": "gate-sahara.*-vanilla.* \\S+ : FAILURE"
+            }
+        },
+        {
             "project_id": "openstack/sahara",
             "vendor": "OpenStack Community",
             "name": "Spark Plugin",
@@ -2621,17 +2606,17 @@
                 }
             ],
             "wiki": "http://docs.openstack.org/developer/sahara/userdoc/spark_plugin.html",
-            "releases": ["Juno"],
+            "releases": ["Juno", "Kilo", "Liberty"],
             "ci": {
-                "id": "savanna-ci",
-                "success_pattern": "gate-sahara-integration-spark-.* \\S+ : SUCCESS",
-                "failure_pattern": "gate-sahara-integration-spark-.* \\S+ : FAILURE"
-               }
-          },
-          {
+                "id": "sahara-ci",
+                "success_pattern": "gate-sahara.*-spark.* \\S+ : SUCCESS",
+                "failure_pattern": "gate-sahara.*-spark.* \\S+ : FAILURE"
+            }
+        },
+        {
             "project_id": "openstack/sahara",
             "vendor": "OpenStack Community",
-            "name": "Cloudera Plugin (Beta)",
+            "name": "Cloudera Plugin",
             "description": "Cloudera plugin provides an ability to launch CDH clusters with Cloudera Manager management console.",
             "maintainers": [
                 {
@@ -2641,13 +2626,33 @@
                 }
             ],
             "wiki": "https://wiki.openstack.org/wiki/Sahara/CDHPlugin",
-            "releases": ["Juno"],
+            "releases": ["Juno", "Kilo", "Liberty"],
             "ci": {
-                "id": "savanna-ci",
-                "success_pattern": "gate-sahara-integration-cdh-.* \\S+ : SUCCESS",
-                "failure_pattern": "gate-sahara-integration-cdh-.* \\S+ : FAILURE"
-               }
-          }
+                "id": "sahara-ci",
+                "success_pattern": "gate-sahara.*-cdh.* \\S+ : SUCCESS",
+                "failure_pattern": "gate-sahara.*-cdh.* \\S+ : FAILURE"
+            }
+        },
+        {
+            "project_id": "openstack/sahara",
+            "vendor": "MapR",
+            "name": "MapR plugin",
+            "description": "The MapR Distribution provides a full Hadoop stack that includes the MapR File System (MapR-FS), MapReduce, a complete Hadoop ecosystem, and the MapR Control System user interface",
+            "maintainers": [
+                {
+                    "name": "Artem Osadchyi",
+                    "email": "aosadchiy@maprtech.com",
+                    "launchpad_id": "aosadchiy"
+                }
+            ],
+            "wiki": "https://wiki.openstack.org/wiki/Sahara/MapRPlugin",
+            "releases": ["Kilo", "Liberty"],
+            "ci": {
+                "id": "sahara-ci",
+                "success_pattern": "gate-sahara.*-mapr.* \\S+ : SUCCESS",
+                "failure_pattern": "gate-sahara.*-mapr.* \\S+ : FAILURE"
+            }
+        }
     ]
 }
 
