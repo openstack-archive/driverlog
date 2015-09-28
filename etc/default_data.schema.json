@@ -43,6 +43,9 @@
                     "project_id": {
                         "type": "string"
                     },
+                    "repo": {
+                        "type": "string"
+                    },
                     "vendor": {
                         "type": "string"
                     },

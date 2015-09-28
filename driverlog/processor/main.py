@@ -115,7 +115,9 @@ def update_drivers(drivers, releases):
                       {'project_id': project_id, 'branch': branch,
                        'ci_id': ci_id})
 
-            review_iterator = rcs_inst.log(project=project_id, branch=branch,
+            review_project_id = driver.get('repo') or project_id
+            review_iterator = rcs_inst.log(project=review_project_id,
+                                           branch=branch,
                                            reviewer=ci_id)
             ci_result = find_ci_result(review_iterator, driver['ci'])
             if ci_result:
