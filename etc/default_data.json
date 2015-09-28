@@ -483,12 +483,12 @@
             "maintainers": [
                 {
                     "name": "Walter Boring",
-                    "email": "walter.boring@hp.com",
+                    "email": "walter.boring@hpe.com",
                     "launchpad_id": "walter-boring"
                 },
                 {
                     "name": "Kurt Martin",
-                    "email": "kurt.f.martin@hp.com",
+                    "email": "kurt.f.martin@hpe.com",
                     "launchpad_id": "kurt-f-martin"
                 }
             ],
@@ -508,12 +508,12 @@
             "maintainers": [
                 {
                     "name": "Walter Boring",
-                    "email": "walter.boring@hp.com",
+                    "email": "walter.boring@hpe.com",
                     "launchpad_id": "walter-boring"
                 },
                 {
                     "name": "Kurt Martin",
-                    "email": "kurt.f.martin@hp.com",
+                    "email": "kurt.f.martin@hpe.com",
                     "launchpad_id": "kurt-f-martin"
                 }
             ],
@@ -533,17 +533,17 @@
             "maintainers": [
                 {
                     "name": "Walter Boring",
-                    "email": "walter.boring@hp.com",
+                    "email": "walter.boring@hpe.com",
                     "launchpad_id": "walter-boring"
                 },
                 {
                     "name": "Kurt Martin",
-                    "email": "kurt.f.martin@hp.com",
+                    "email": "kurt.f.martin@hpe.com",
                     "launchpad_id": "kurt-f-martin"
                 }
             ],
             "wiki": "http://docs.openstack.org/kilo/config-reference/content/HP-LeftHand-StoreVirtual-driver.html",
-            "releases": ["Diablo", "Essex", "Folsom", "Grizzly", "Havana", "Icehouse", "Juno"],
+            "releases": ["Diablo", "Essex", "Folsom", "Grizzly", "Havana", "Icehouse", "Juno", "Kilo"],
             "ci": {
                   "id":"hp-cinder-ci",
                   "success_pattern": "Build Successful",
