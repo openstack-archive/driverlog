@@ -13,9 +13,11 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+import functools
 import json
 
 import jsonschema
+import six
 import testtools
 
 
@@ -31,9 +33,16 @@ class TestConfigFiles(testtools.TestCase):
     def setUp(self):
         super(TestConfigFiles, self).setUp()
 
+    def _read_raw_file(self, file_name):
+        if six.PY3:
+            opener = functools.partial(open, encoding='utf8')
+        else:
+            opener = open
+        with opener(file_name, 'r') as content_file:
+            return content_file.read()
+
     def _read_file(self, file_name):
-        with open(file_name, 'r') as content_file:
-            return json.load(content_file)
+        return json.loads(self._read_raw_file(file_name))
 
     def _verify_ordering(self, array,
                          comparator=lambda x, y: (x > y) - (x < y), msg=''):
@@ -94,3 +103,13 @@ class TestConfigFiles(testtools.TestCase):
         for driver in dd['drivers']:
             self.assertTrue(driver['project_id'] in project_ids,
                             'Wrong project id: %s' % driver['project_id'])
+
+    def test_default_data_whitespace_issues(self):
+        data = self._read_raw_file('etc/default_data.json')
+        line_n = 1
+        for line in data.split('\n'):
+            msg = 'Whitespace issue in "%s", line %s: ' % (line, line_n)
+            self.assertTrue(line.find('\t') == -1, msg=msg + 'tab character')
+            self.assertEqual(line.rstrip(), line,
+                             message=msg + 'trailing spaces')
+            line_n += 1
