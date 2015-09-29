@@ -117,7 +117,17 @@
                 }
             ],
             "wiki": "http://docs.openstack.org/kilo/config-reference/content/ceph-rados.html",
-            "releases": ["Cactus", "Diablo", "Essex", "Folsom", "Grizzly", "Havana", "Icehouse", "Juno", "Kilo"],
+            "releases": [
+                "Cactus",
+                "Diablo",
+                "Essex",
+                "Folsom",
+                "Grizzly",
+                "Havana",
+                "Icehouse",
+                "Juno",
+                "Kilo"
+            ],
             "ci": {
                 "id": "jenkins",
                 "success_pattern": "gate-tempest-dsvm-full-ceph \\S+ : SUCCESS",
@@ -137,7 +147,9 @@
             ],
             "description": "The Xen Storage Manager volume driver (xensm) is a XenAPI hypervisor specific volume driver, and can be used to provide basic storage functionality, including volume creation and destruction, on a number of different storage back-ends.",
             "wiki": "http://docs.openstack.org/juno/config-reference/content/xensm.html",
-            "releases": ["Grizzly"]
+            "releases": [
+                "Grizzly"
+            ]
         },
         {
             "project_id": "openstack/cinder",
@@ -152,7 +164,9 @@
                 }
             ],
             "wiki": "http://docs.openstack.org/juno/config-reference/content/xenapinfs.html",
-            "releases": ["Grizzly"]
+            "releases": [
+                "Grizzly"
+            ]
         },
         {
             "project_id": "openstack/cinder",
@@ -167,7 +181,9 @@
                 }
             ],
             "wiki": "",
-            "releases": ["Kilo"]
+            "releases": [
+                "Kilo"
+            ]
         },
         {
             "project_id": "openstack/cinder",
@@ -187,7 +203,13 @@
                 }
             ],
             "wiki": "http://docs.openstack.org/juno/config-reference/content/windows-volume-driver.html",
-            "releases": ["Grizzly", "Havana", "Icehouse", "Juno", "Kilo"]
+            "releases": [
+                "Grizzly",
+                "Havana",
+                "Icehouse",
+                "Juno",
+                "Kilo"
+            ]
         },
         {
             "project_id": "openstack/cinder",
@@ -202,11 +224,13 @@
                 }
             ],
             "wiki": "http://doc.openvstorage.com/doc_openvstorage/Installation",
-            "releases": ["Kilo"],
+            "releases": [
+                "Kilo"
+            ],
             "ci": {
-                  "id":"cloudfoundersci",
-                  "success_pattern": "SUCCESS",
-                  "failure_pattern": "FAILURE"
+                "id": "cloudfoundersci",
+                "success_pattern": "SUCCESS",
+                "failure_pattern": "FAILURE"
             }
         },
         {
@@ -222,11 +246,16 @@
                 }
             ],
             "wiki": "http://docs.openstack.org/juno/config-reference/content/coraid_aoe_driver_configuration.html",
-            "releases": ["Grizzly", "Havana", "Icehouse", "Juno"],
+            "releases": [
+                "Grizzly",
+                "Havana",
+                "Icehouse",
+                "Juno"
+            ],
             "ci": {
-                  "id":"coraid-ci",
-                  "success_pattern": "Build Successful",
-                  "failure_pattern": "Build Failed"
+                "id": "coraid-ci",
+                "success_pattern": "Build Successful",
+                "failure_pattern": "Build Failed"
             }
         },
         {
@@ -242,14 +271,17 @@
                 }
             ],
             "wiki": "http://docs.openstack.org/developer/cinder/api/cinder.volume.drivers.datera.html?highlight=datera#module-cinder.volume.drivers.datera",
-            "releases": ["Juno", "Kilo"],
+            "releases": [
+                "Juno",
+                "Kilo"
+            ],
             "ci": {
-                  "id":"datera-ci",
-                  "success_pattern": "Build Successful",
-                  "failure_pattern": "Build Failed"
+                "id": "datera-ci",
+                "success_pattern": "Build Successful",
+                "failure_pattern": "Build Failed"
             }
-          },
-          {
+        },
+        {
             "project_id": "openstack/cinder",
             "vendor": "Dell",
             "name": "Dell EqualLogic volume driver",
@@ -262,15 +294,20 @@
                 }
             ],
             "wiki": "http://docs.openstack.org/kilo/config-reference/content/dell-equallogic-driver.html",
-            "releases": ["Havana", "Icehouse", "Juno", "Kilo"],
+            "releases": [
+                "Havana",
+                "Icehouse",
+                "Juno",
+                "Kilo"
+            ],
             "ci": {
-                  "id":"dell-storage-ci",
-                  "success_pattern": "dell-eql-dsvm-volume \\S+ : SUCCESS",
-                  "failure_pattern": "dell-eql-dsvm-volume \\S+ : FAILURE"
+                "id": "dell-storage-ci",
+                "success_pattern": "dell-eql-dsvm-volume \\S+ : SUCCESS",
+                "failure_pattern": "dell-eql-dsvm-volume \\S+ : FAILURE"
             }
         },
         {
-          "project_id": "openstack/cinder",
+            "project_id": "openstack/cinder",
             "vendor": "Dell",
             "name": "Dell Storage Center volume driver",
             "description": "The Dell Storage Center volume driver interacts with configured Storage Center arrays and supports various operations, such as volume creation and deletion, volume attachment and detachment, snapshot creation and deletion, and clone creation.",
@@ -283,11 +320,13 @@
                 }
             ],
             "wiki": "http://docs.openstack.org/kilo/config-reference/content/dell-storagecenter-driver.html",
-            "releases": ["Kilo"],
+            "releases": [
+                "Kilo"
+            ],
             "ci": {
-                  "id":"dell-storage-ci",
-                  "success_pattern": "dell-sc-iscsi-dsvm-volume \\S+ : SUCCESS",
-                  "failure_pattern": "dell-sc-iscsi-dsvm-volume \\S+ : FAILURE"
+                "id": "dell-storage-ci",
+                "success_pattern": "dell-sc-iscsi-dsvm-volume \\S+ : SUCCESS",
+                "failure_pattern": "dell-sc-iscsi-dsvm-volume \\S+ : FAILURE"
             }
         },
         {
@@ -303,12 +342,16 @@
                 }
             ],
             "wiki": "http://docs.openstack.org/juno/config-reference/content/emc-vmax-driver.html",
-            "releases": ["Icehouse", "Juno", "Kilo"],
+            "releases": [
+                "Icehouse",
+                "Juno",
+                "Kilo"
+            ],
             "ci": {
-                  "id":"emc-vmax-ci",
-                  "success_pattern": "Build Successful",
-                  "failure_pattern": "Build Failed"
-           }
+                "id": "emc-vmax-ci",
+                "success_pattern": "Build Successful",
+                "failure_pattern": "Build Failed"
+            }
         },
         {
             "project_id": "openstack/cinder",
@@ -323,12 +366,16 @@
                 }
             ],
             "wiki": "http://docs.openstack.org/juno/config-reference/content/emc-vnx-direct-driver.html",
-            "releases": ["Icehouse", "Juno", "Kilo"],
+            "releases": [
+                "Icehouse",
+                "Juno",
+                "Kilo"
+            ],
             "ci": {
-                  "id":"emc-vnx-ci",
-                  "success_pattern": "EMC_VNX_ISCSI \\S+ : SUCCESS",
-                  "failure_pattern": "EMC_VNX_ISCSI \\S+ : FAILURE"
-           }
+                "id": "emc-vnx-ci",
+                "success_pattern": "EMC_VNX_ISCSI \\S+ : SUCCESS",
+                "failure_pattern": "EMC_VNX_ISCSI \\S+ : FAILURE"
+            }
         },
         {
             "project_id": "openstack/cinder",
@@ -343,12 +390,15 @@
                 }
             ],
             "wiki": "http://docs.openstack.org/juno/config-reference/content/emc-vnx-direct-driver.html",
-            "releases": ["Juno", "Kilo"],
+            "releases": [
+                "Juno",
+                "Kilo"
+            ],
             "ci": {
-                  "id":"emc-vnx-ci",
-                  "success_pattern": "EMC_VNX_FC \\S+ : SUCCESS",
-                  "failure_pattern": "EMC_VNX_FC \\S+ : FAILURE"
-           }
+                "id": "emc-vnx-ci",
+                "success_pattern": "EMC_VNX_FC \\S+ : SUCCESS",
+                "failure_pattern": "EMC_VNX_FC \\S+ : FAILURE"
+            }
         },
         {
             "project_id": "openstack/cinder",
@@ -363,12 +413,15 @@
                 }
             ],
             "wiki": "http://www.xtremio.com/wp-content/uploads/2014/07/h13287-ds-xtremio-openstack.pdf",
-            "releases": ["Juno", "Kilo"],
+            "releases": [
+                "Juno",
+                "Kilo"
+            ],
             "ci": {
-                  "id":"emc-xio-ci",
-                  "success_pattern": "EMC_XIO_ISCSI \\S+ : SUCCESS",
-                  "failure_pattern": "EMC_XIO_ISCSI \\S+ : FAILURE"
-           }
+                "id": "emc-xio-ci",
+                "success_pattern": "EMC_XIO_ISCSI \\S+ : SUCCESS",
+                "failure_pattern": "EMC_XIO_ISCSI \\S+ : FAILURE"
+            }
         },
         {
             "project_id": "openstack/cinder",
@@ -383,12 +436,15 @@
                 }
             ],
             "wiki": "http://www.xtremio.com/wp-content/uploads/2014/07/h13287-ds-xtremio-openstack.pdf",
-            "releases": ["Juno", "Kilo"],
+            "releases": [
+                "Juno",
+                "Kilo"
+            ],
             "ci": {
-                  "id":"emc-xio-ci",
-                  "success_pattern": "EMC_XIO_FC \\S+ : SUCCESS",
-                  "failure_pattern": "EMC_XIO_FC \\S+ : FAILURE"
-           }
+                "id": "emc-xio-ci",
+                "success_pattern": "EMC_XIO_FC \\S+ : SUCCESS",
+                "failure_pattern": "EMC_XIO_FC \\S+ : FAILURE"
+            }
         },
         {
             "project_id": "openstack/cinder",
@@ -403,11 +459,17 @@
                 }
             ],
             "wiki": "http://docs.openstack.org/juno/config-reference/content/emc-vmax-driver.html",
-            "releases": ["Grizzly", "Havana", "Icehouse", "Juno", "Kilo"],
+            "releases": [
+                "Grizzly",
+                "Havana",
+                "Icehouse",
+                "Juno",
+                "Kilo"
+            ],
             "ci": {
-                  "id":"emc-vmax-ci",
-                  "success_pattern": "Build Successful",
-                  "failure_pattern": "Build Failed"
+                "id": "emc-vmax-ci",
+                "success_pattern": "Build Successful",
+                "failure_pattern": "Build Failed"
             }
         },
         {
@@ -423,8 +485,10 @@
                 }
             ],
             "wiki": "http://docs.openstack.org/trunk/config-reference/content/fujitsu-smis-driver.html",
-            "releases": ["Juno"]
-          },
+            "releases": [
+                "Juno"
+            ]
+        },
         {
             "project_id": "openstack/cinder",
             "vendor": "Fujitsu",
@@ -438,9 +502,11 @@
                 }
             ],
             "wiki": "http://docs.openstack.org/trunk/config-reference/content/fujitsu-smis-driver.html",
-            "releases": ["Juno"]
-         },
-         {
+            "releases": [
+                "Juno"
+            ]
+        },
+        {
             "project_id": "openstack/cinder",
             "vendor": "Fusion-io",
             "name": "Fusion-io Control Volume driver",
@@ -453,7 +519,9 @@
                 }
             ],
             "wiki": "http://docs.openstack.org/developer/cinder/api/cinder.volume.drivers.fusionio.ioControl.html",
-            "releases": ["Juno"]
+            "releases": [
+                "Juno"
+            ]
         },
         {
             "project_id": "openstack/cinder",
@@ -468,7 +536,13 @@
                 }
             ],
             "wiki": "http://docs.openstack.org/juno/config-reference/content/GlusterFS-driver.html",
-            "releases": ["Grizzly", "Havana", "Icehouse", "Juno", "Kilo"],
+            "releases": [
+                "Grizzly",
+                "Havana",
+                "Icehouse",
+                "Juno",
+                "Kilo"
+            ],
             "ci": {
                 "id": "jenkins",
                 "success_pattern": "gate-tempest-dsvm-full-glusterfs-nv \\S+ : SUCCESS",
@@ -493,12 +567,18 @@
                 }
             ],
             "wiki": "http://docs.openstack.org/kilo/config-reference/content/hp-3par-driver.html",
-            "releases": ["Grizzly", "Havana", "Icehouse", "Juno", "Kilo"],
+            "releases": [
+                "Grizzly",
+                "Havana",
+                "Icehouse",
+                "Juno",
+                "Kilo"
+            ],
             "ci": {
-                  "id":"hp-cinder-ci",
-                  "success_pattern": "Build Successful",
-                  "failure_pattern": "Build Failed"
-           }
+                "id": "hp-cinder-ci",
+                "success_pattern": "Build Successful",
+                "failure_pattern": "Build Failed"
+            }
         },
         {
             "project_id": "openstack/cinder",
@@ -518,12 +598,18 @@
                 }
             ],
             "wiki": "http://docs.openstack.org/kilo/config-reference/content/hp-3par-driver.html",
-            "releases": ["Grizzly", "Havana", "Icehouse", "Juno", "Kilo"],
+            "releases": [
+                "Grizzly",
+                "Havana",
+                "Icehouse",
+                "Juno",
+                "Kilo"
+            ],
             "ci": {
-                  "id":"hp-cinder-ci",
-                  "success_pattern": "Build Successful",
-                  "failure_pattern": "Build Failed"
-           }
+                "id": "hp-cinder-ci",
+                "success_pattern": "Build Successful",
+                "failure_pattern": "Build Failed"
+            }
         },
         {
             "project_id": "openstack/cinder",
@@ -543,12 +629,21 @@
                 }
             ],
             "wiki": "http://docs.openstack.org/kilo/config-reference/content/HP-LeftHand-StoreVirtual-driver.html",
-            "releases": ["Diablo", "Essex", "Folsom", "Grizzly", "Havana", "Icehouse", "Juno", "Kilo"],
+            "releases": [
+                "Diablo",
+                "Essex",
+                "Folsom",
+                "Grizzly",
+                "Havana",
+                "Icehouse",
+                "Juno",
+                "Kilo"
+            ],
             "ci": {
-                  "id":"hp-cinder-ci",
-                  "success_pattern": "Build Successful",
-                  "failure_pattern": "Build Failed"
-           }
+                "id": "hp-cinder-ci",
+                "success_pattern": "Build Successful",
+                "failure_pattern": "Build Failed"
+            }
         },
         {
             "project_id": "openstack/cinder",
@@ -556,18 +651,22 @@
             "name": "HDS HNAS iSCSI and NFS driver",
             "description": "This Block Storage volume driver provides iSCSI and NFS support for HNAS (Hitachi Network-attached Storage) arrays such as, HNAS 3000 and 4000 family.",
             "maintainers": [
-                {   "name": "Steve Quinn",
+                {
+                    "name": "Steve Quinn",
                     "email": "steve.quinn@hds.com",
                     "launchpad_id": "steve-quinn"
                 }
             ],
             "wiki": "http://docs.openstack.org/juno/config-reference/content/hds-hnas-driver.html",
-            "releases": ["Juno", "Kilo"],
+            "releases": [
+                "Juno",
+                "Kilo"
+            ],
             "ci": {
-                  "id":"hds-hnas-ci",
-                  "success_pattern": "Build succeeded",
-                  "failure_pattern": "Build failed"
-           }
+                "id": "hds-hnas-ci",
+                "success_pattern": "Build succeeded",
+                "failure_pattern": "Build failed"
+            }
         },
         {
             "project_id": "openstack/cinder",
@@ -575,13 +674,19 @@
             "name": "HDS iSCSI volume driver",
             "description": "This Block Storage volume driver provides iSCSI support for HUS (Hitachi Unified Storage) arrays such as, HUS-110, HUS-130, and HUS-150.",
             "maintainers": [
-                {   "name": "Steve Quinn",
+                {
+                    "name": "Steve Quinn",
                     "email": "steve.quinn@hds.com",
                     "launchpad_id": "steve-quinn"
                 }
             ],
             "wiki": "http://docs.openstack.org/juno/config-reference/content/hds-volume-driver.html",
-            "releases": ["Havana", "Icehouse", "Juno", "Kilo"]
+            "releases": [
+                "Havana",
+                "Icehouse",
+                "Juno",
+                "Kilo"
+            ]
         },
         {
             "project_id": "openstack/cinder",
@@ -596,12 +701,15 @@
                 }
             ],
             "wiki": "http://docs.openstack.org/juno/config-reference/content/hitachi-storage-volume-driver.html",
-            "releases": ["Juno", "Kilo"],
+            "releases": [
+                "Juno",
+                "Kilo"
+            ],
             "ci": {
-                  "id":"hds-hnas-ci",
-                  "success_pattern": "Build succeeded",
-                  "failure_pattern": "Build failed"
-           }
+                "id": "hds-hnas-ci",
+                "success_pattern": "Build succeeded",
+                "failure_pattern": "Build failed"
+            }
         },
         {
             "project_id": "openstack/cinder",
@@ -616,11 +724,15 @@
                 }
             ],
             "wiki": "http://docs.openstack.org/juno/config-reference/content/huawei-storage-driver.html",
-            "releases": ["Havana", "Juno", "Kilo"],
+            "releases": [
+                "Havana",
+                "Juno",
+                "Kilo"
+            ],
             "ci": {
-                   "id": "huawei-volume-ci",
-                   "success_pattern": "Build succeeded",
-                   "failure_pattern": "Build failed"
+                "id": "huawei-volume-ci",
+                "success_pattern": "Build succeeded",
+                "failure_pattern": "Build failed"
             }
         },
         {
@@ -636,12 +748,17 @@
                 }
             ],
             "wiki": "http://docs.openstack.org/juno/config-reference/content/GPFS-driver.html",
-            "releases": ["Havana", "Icehouse", "Juno", "Kilo"],
+            "releases": [
+                "Havana",
+                "Icehouse",
+                "Juno",
+                "Kilo"
+            ],
             "ci": {
-                   "id": "ibm-gpfs-ci",
-                   "success_pattern": "Build Successful",
-                   "failure_pattern": "Build Failed"
-           }
+                "id": "ibm-gpfs-ci",
+                "success_pattern": "Build Successful",
+                "failure_pattern": "Build Failed"
+            }
         },
         {
             "project_id": "openstack/cinder",
@@ -656,12 +773,16 @@
                 }
             ],
             "wiki": "http://www-03.ibm.com/support/techdocs/atsmastr.nsf/WebIndex/WP102443",
-            "releases": ["Icehouse", "Juno", "Kilo"],
+            "releases": [
+                "Icehouse",
+                "Juno",
+                "Kilo"
+            ],
             "ci": {
-                   "id": "ibm-ibmnas-ci",
-                   "success_pattern": "Build Successful",
-                   "failure_pattern": "Build Failed"
-           }
+                "id": "ibm-ibmnas-ci",
+                "success_pattern": "Build Successful",
+                "failure_pattern": "Build Failed"
+            }
         },
         {
             "project_id": "openstack/cinder",
@@ -676,12 +797,19 @@
                 }
             ],
             "wiki": "http://docs.openstack.org/juno/config-reference/content/ibm-storwize-svc-driver.html",
-            "releases": ["Folsom", "Grizzly", "Havana", "Icehouse", "Juno", "Kilo"],
+            "releases": [
+                "Folsom",
+                "Grizzly",
+                "Havana",
+                "Icehouse",
+                "Juno",
+                "Kilo"
+            ],
             "ci": {
-                   "id": "ibm-storwize-ci",
-                   "success_pattern": "Build succeeded",
-                   "failure_pattern": "Build failed"
-           }
+                "id": "ibm-storwize-ci",
+                "success_pattern": "Build succeeded",
+                "failure_pattern": "Build failed"
+            }
         },
         {
             "project_id": "openstack/cinder",
@@ -696,12 +824,19 @@
                 }
             ],
             "wiki": "http://docs.openstack.org/juno/config-reference/content/ibm-xiv-driver.html",
-            "releases": ["Folsom", "Grizzly", "Havana", "Icehouse", "Juno", "Kilo"],
+            "releases": [
+                "Folsom",
+                "Grizzly",
+                "Havana",
+                "Icehouse",
+                "Juno",
+                "Kilo"
+            ],
             "ci": {
-                   "id": "ibmxivci",
-                   "success_pattern": "Build succeeded",
-                   "failure_pattern": "Build failed"
-           }
+                "id": "ibmxivci",
+                "success_pattern": "Build succeeded",
+                "failure_pattern": "Build failed"
+            }
         },
         {
             "project_id": "openstack/cinder",
@@ -717,11 +852,20 @@
                 }
             ],
             "wiki": "http://docs.openstack.org/kilo/config-reference/content/netapp-volume-driver.html",
-            "releases": ["Essex", "Folsom", "Grizzly", "Havana", "Icehouse", "Juno", "Kilo", "Liberty"],
+            "releases": [
+                "Essex",
+                "Folsom",
+                "Grizzly",
+                "Havana",
+                "Icehouse",
+                "Juno",
+                "Kilo",
+                "Liberty"
+            ],
             "ci": {
-                   "id": "netapp-ci",
-                   "success_pattern": "Build succeeded",
-                   "failure_pattern": "Build failed"
+                "id": "netapp-ci",
+                "success_pattern": "Build succeeded",
+                "failure_pattern": "Build failed"
             }
         },
         {
@@ -737,7 +881,14 @@
                 }
             ],
             "wiki": "http://docs.openstack.org/juno/config-reference/content/nexenta-driver.html",
-            "releases": ["Essex", "Folsom", "Grizzly", "Havana", "Icehouse", "Juno"]
+            "releases": [
+                "Essex",
+                "Folsom",
+                "Grizzly",
+                "Havana",
+                "Icehouse",
+                "Juno"
+            ]
         },
         {
             "project_id": "openstack/cinder",
@@ -751,8 +902,11 @@
                     "launchpad_id": "jwang-6"
                 }
             ],
-             "wiki": "http://docs.openstack.org/developer/cinder/api/cinder.volume.drivers.nimble.html?highlight=nimble#module-cinder.volume.drivers.nimble",
-             "releases": ["Juno", "Kilo"]
+            "wiki": "http://docs.openstack.org/developer/cinder/api/cinder.volume.drivers.nimble.html?highlight=nimble#module-cinder.volume.drivers.nimble",
+            "releases": [
+                "Juno",
+                "Kilo"
+            ]
         },
         {
             "project_id": "openstack/cinder",
@@ -767,7 +921,19 @@
                 }
             ],
             "wiki": "http://docs.openstack.org/kilo/config-reference/content/lvm-volume-driver.html",
-            "releases": ["Austin", "Bexar", "Cactus", "Diablo", "Essex", "Folsom", "Grizzly", "Havana", "Icehouse", "Juno", "Kilo"]
+            "releases": [
+                "Austin",
+                "Bexar",
+                "Cactus",
+                "Diablo",
+                "Essex",
+                "Folsom",
+                "Grizzly",
+                "Havana",
+                "Icehouse",
+                "Juno",
+                "Kilo"
+            ]
         },
         {
             "project_id": "openstack/cinder",
@@ -782,7 +948,14 @@
                 }
             ],
             "wiki": "http://docs.openstack.org/kilo/config-reference/content/NFS-driver.html",
-            "releases": ["Folsom", "Grizzly", "Havana", "Icehouse", "Juno", "Kilo"]
+            "releases": [
+                "Folsom",
+                "Grizzly",
+                "Havana",
+                "Icehouse",
+                "Juno",
+                "Kilo"
+            ]
         },
         {
             "project_id": "openstack/cinder",
@@ -797,7 +970,11 @@
                 }
             ],
             "wiki": "http://docs.openstack.org/juno/config-reference/content/sheepdog-driver.html",
-            "releases": ["Icehouse", "Juno", "Kilo"]
+            "releases": [
+                "Icehouse",
+                "Juno",
+                "Kilo"
+            ]
         },
         {
             "project_id": "openstack/cinder",
@@ -812,7 +989,10 @@
                 }
             ],
             "wiki": "http://docs.openstack.org/developer/cinder/api/cinder.volume.drivers.zfssa.zfssaiscsi.html?highlight=zfs#module-cinder.volume.drivers.zfssa.zfssaiscsi",
-            "releases": ["Juno", "Kilo"]
+            "releases": [
+                "Juno",
+                "Kilo"
+            ]
         },
         {
             "project_id": "openstack/cinder",
@@ -827,11 +1007,14 @@
                 }
             ],
             "wiki": "http://docs.openstack.org/juno/config-reference/content/prophetstor-dpl-driver.html",
-            "releases": ["Juno", "Kilo"],
+            "releases": [
+                "Juno",
+                "Kilo"
+            ],
             "ci": {
-                   "id": "prophetstor-ci",
-                   "success_pattern": "Build Successful",
-                   "failure_pattern": "Build Failed"
+                "id": "prophetstor-ci",
+                "success_pattern": "Build Successful",
+                "failure_pattern": "Build Failed"
             }
         },
         {
@@ -847,18 +1030,22 @@
                 }
             ],
             "wiki": "http://specs.openstack.org/openstack/cinder-specs/specs/juno/pure-iscsi-volume-driver.html",
-            "releases": ["Juno", "Kilo", "Liberty"],
+            "releases": [
+                "Juno",
+                "Kilo",
+                "Liberty"
+            ],
             "ci": {
-                   "id": "purestorage-cinder-ci",
-                   "success_pattern": "Build succeeded",
-                   "failure_pattern": "Build failed"
-          }
+                "id": "purestorage-cinder-ci",
+                "success_pattern": "Build succeeded",
+                "failure_pattern": "Build failed"
+            }
         },
         {
             "project_id": "openstack/cinder",
             "vendor": "Quobyte Inc.",
             "name": "Quobyte Cinder driver",
-            "description":"Volume driver for Quobyte software defined storage system. Quobyte storage runs on plain Linux servers and allows reconfiguration at runtime without storage service interruption. Storage behaviour is fully configurable via policies which also control automation and hardware independent configuration.",
+            "description": "Volume driver for Quobyte software defined storage system. Quobyte storage runs on plain Linux servers and allows reconfiguration at runtime without storage service interruption. Storage behaviour is fully configurable via policies which also control automation and hardware independent configuration.",
             "maintainers": [
                 {
                     "name": "Silvan Kaiser",
@@ -869,11 +1056,13 @@
             ],
             "wiki": "https://wiki.openstack.org/wiki/Quobyte",
             "ci": {
-               "id": "quobyteci",
-               "success_pattern": "SUCCESS",
-               "failure_pattern": "FAILURE"
+                "id": "quobyteci",
+                "success_pattern": "SUCCESS",
+                "failure_pattern": "FAILURE"
             },
-            "releases": ["Kilo"]
+            "releases": [
+                "Kilo"
+            ]
         },
         {
             "project_id": "openstack/cinder",
@@ -893,7 +1082,13 @@
                 }
             ],
             "wiki": "http://www.scality.com/scality-delivers-persistent-block-storage-for-virtual-machines-march-13th-2013",
-            "releases": ["Grizzly", "Havana", "Icehouse", "Juno", "Kilo"]
+            "releases": [
+                "Grizzly",
+                "Havana",
+                "Icehouse",
+                "Juno",
+                "Kilo"
+            ]
         },
         {
             "project_id": "openstack/cinder",
@@ -908,12 +1103,19 @@
                 }
             ],
             "wiki": "http://docs.openstack.org/kilo/config-reference/content/solidfire-volume-driver.html",
-            "releases": ["Folsom", "Grizzly", "Havana", "Icehouse", "Juno", "Kilo"],
-            "ci": {"id": "SolidFire-dsvm-full",
-                   "success_pattern": "SolidFire-dsvm-full \\S+ : SUCCESS",
-                   "failure_pattern": "SolidFire-dsvm-full \\S+ : FAILURE"
+            "releases": [
+                "Folsom",
+                "Grizzly",
+                "Havana",
+                "Icehouse",
+                "Juno",
+                "Kilo"
+            ],
+            "ci": {
+                "id": "SolidFire-dsvm-full",
+                "success_pattern": "SolidFire-dsvm-full \\S+ : SUCCESS",
+                "failure_pattern": "SolidFire-dsvm-full \\S+ : FAILURE"
             }
-
         },
         {
             "project_id": "openstack/cinder",
@@ -933,12 +1135,14 @@
                 }
             ],
             "wiki": "http://docs.openstack.org/liberty/config-reference/content/tintri-volume-driver.html",
-            "releases": ["Liberty"],
-            "ci": {"id": "tintri-ci",
-                   "success_pattern": "tintri-ci \\S+ : SUCCESS",
-                   "failure_pattern": "tintri-ci \\S+ : FAILURE"
+            "releases": [
+                "Liberty"
+            ],
+            "ci": {
+                "id": "tintri-ci",
+                "success_pattern": "tintri-ci \\S+ : SUCCESS",
+                "failure_pattern": "tintri-ci \\S+ : FAILURE"
             }
-
         },
         {
             "project_id": "openstack/cinder",
@@ -953,7 +1157,12 @@
                 }
             ],
             "wiki": "http://docs.openstack.org/juno/config-reference/content/vmware-vmdk-driver.html",
-            "releases": ["Havana", "Icehouse", "Juno", "Kilo"],
+            "releases": [
+                "Havana",
+                "Icehouse",
+                "Juno",
+                "Kilo"
+            ],
             "ci": {
                 "id": "vmwareminesweeper",
                 "success_pattern": "Build successful",
@@ -973,10 +1182,13 @@
                 }
             ],
             "wiki": "http://docs.openstack.org/kilo/config-reference/content/xio-volume-driver.html",
-            "releases": ["Kilo"],
-            "ci": {"id": "xio-dsvm-xio-fc",
-                   "success_pattern": "SUCCESS",
-                   "failure_pattern": "FAILURE"
+            "releases": [
+                "Kilo"
+            ],
+            "ci": {
+                "id": "xio-dsvm-xio-fc",
+                "success_pattern": "SUCCESS",
+                "failure_pattern": "FAILURE"
             }
         },
         {
@@ -992,14 +1204,21 @@
                 }
             ],
             "wiki": "http://docs.openstack.org/juno/config-reference/content/zadara-volume-driver.html",
-            "releases": ["Folsom", "Grizzly", "Havana", "Icehouse", "Juno"]
+            "releases": [
+                "Folsom",
+                "Grizzly",
+                "Havana",
+                "Icehouse",
+                "Juno"
+            ]
         },
-        {   "project_id": "openstack/fuel",
+        {
+            "project_id": "openstack/fuel",
             "vendor": "Mellanox",
             "name": "ConnectX-3 Pro Network Adapter Support plugin for Fuel",
             "description": "This plugin configures support for Mellanox ConnectX-3 Pro network adapters, enabling high-performance SR-IOV compute traffic networking, iSER (iSCSI) block storage networking, or (as of Mirantis OpenStack 6.1) Infiniband networking. This plugin configures support for Mellanox ConnectX-3 Pro network adapters, enabling high-performance SR-IOV compute traffic networking, iSER (iSCSI) block storage networking, or Infiniband networking.",
             "maintainers": [
-               {
+                {
                     "name": "Aviram Bar Heim",
                     "email": "aviramb@mellanox.com",
                     "launchpad_id": "aviramb"
@@ -1007,12 +1226,13 @@
             ],
             "wiki": "https://github.com/stackforge/fuel-plugin-mellanox"
         },
-        {  "project_id": "openstack/fuel",
+        {
+            "project_id": "openstack/fuel",
             "vendor": "Mirantis",
             "name": "GlusterFS plugin for Fuel",
             "description": "Enables GlusterFS driver in Cinder for your GlusterFS cluster.",
             "maintainers": [
-               {
+                {
                     "name": "Stanislaw Bogatkin",
                     "email": "sbogatkin@mirantis.com",
                     "launchpad_id": "sbogatkin"
@@ -1020,12 +1240,13 @@
             ],
             "wiki": "https://github.com/stackforge/fuel-plugin-external-glusterfs"
         },
-        {   "project_id": "openstack/fuel",
+        {
+            "project_id": "openstack/fuel",
             "vendor": "Mirantis",
             "name": "Elasticsearch-Kibana plugin for Fuel",
             "description": "Part of the Logging, Monitoring and Alerting (LMA) toolchain, this plugin deploys Elasticsearch server and the Kibana web interface, used primarily for filtering and analyzing deep system logs and notifications.",
             "maintainers": [
-               {
+                {
                     "name": "Guillaume Thouvenin",
                     "email": "gthouvenin@mirantis.com",
                     "launchpad_id": "guillaume-thouvenin"
@@ -1043,12 +1264,13 @@
             ],
             "wiki": "https://github.com/stackforge/fuel-plugin-elasticsearch-kibana"
         },
-        {  "project_id": "openstack/fuel",
+        {
+            "project_id": "openstack/fuel",
             "vendor": "Mirantis",
             "name": "EMC VNX plugin for Fuel",
             "description": "EMC VNX plugin for Fuel extends Mirantis OpenStack functionality by adding support for EMC VNX arrays in Cinder using iSCSI protocol. It replaces Cinder LVM driver which is the default volume backend that uses local volumes managed by LVM. Enabling EMC VNX plugin in Mirantis OpenStack means that all Cinder services are run on Controller nodes.",
             "maintainers": [
-               {
+                {
                     "name": "Szymon Banka",
                     "email": "sbanka@mirantis.com",
                     "launchpad_id": "sbanka"
@@ -1056,7 +1278,8 @@
             ],
             "wiki": "https://github.com/stackforge/fuel-plugin-external-emc"
         },
-        {   "project_id": "openstack/fuel",
+        {
+            "project_id": "openstack/fuel",
             "vendor": "Mirantis",
             "name": "FWaaS plugin for Fuel",
             "description": "This plugin enables OpenStack Firewall-as-a-Service, which uses iptables to apply firewall policy to all networking routers in a project, effectively creating a project-based perimeter firewall. FWaaS is thus distinct from Security Groups, which work at the instance level.",
@@ -1074,12 +1297,13 @@
             ],
             "wiki": "https://github.com/stackforge/fuel-plugin-neutron-fwaas"
         },
-        {   "project_id": "openstack/fuel",
+        {
+            "project_id": "openstack/fuel",
             "vendor": "Mirantis",
             "name": "InfluxDB-Grafana plugin for Fuel",
             "description": "Part of the Logging, Monitoring and Alerting (LMA) Toolchain, this plugin deploys InfluxDB server and the Grafana web interface. These components are used primarily for databasing and analysis of metrics that change over time (metric time-series).",
             "maintainers": [
-               {
+                {
                     "name": "Guillaume Thouvenin",
                     "email": "gthouvenin@mirantis.com",
                     "launchpad_id": "guillaume-thouvenin"
@@ -1097,12 +1321,13 @@
             ],
             "wiki": "https://github.com/stackforge/fuel-plugin-influxdb-grafana"
         },
-        {  "project_id": "openstack/fuel",
+        {
+            "project_id": "openstack/fuel",
             "vendor": "Mirantis",
             "name": "Juniper Contrail Networking plugin for Fuel",
             "description": "This plugin enables configuration and deployment of the Juniper Contrail Networking SDN. This plugin can also be used with OpenContrail.",
             "maintainers": [
-               {
+                {
                     "name": "Oleksandr Martsyniuk",
                     "email": "omartsyniuk@mirantis.com",
                     "launchpad_id": "omartsyniuk"
@@ -1110,12 +1335,13 @@
             ],
             "wiki": "https://github.com/stackforge/fuel-plugin-contrail"
         },
-        {  "project_id": "openstack/fuel",
+        {
+            "project_id": "openstack/fuel",
             "vendor": "Mirantis",
             "name": "LBaaS plugin for Fuel",
             "description": "Note, that the plugin has no failover of load-balanced objects and HTTPS termination.",
             "maintainers": [
-               {
+                {
                     "name": "Stanislaw Bogatkin",
                     "email": "sbogatkin@mirantis.com",
                     "launchpad_id": "sbogatkin"
@@ -1123,25 +1349,27 @@
             ],
             "wiki": "https://github.com/stackforge/fuel-plugin-neutron-lbaas"
         },
-        {  "project_id": "openstack/fuel",
-           "vendor": "Mirantis",
-           "name": "OpenDaylight Plugin for Fuel",
-           "description": "This is a proof of concept of the plugin which will install OpenDaylight controller and set it as manager for OVS using ovsdb plugin.",
-           "maintainers": [
-              {
-                   "name": "Michal Skalski",
-                   "email": "mskalski@mirantis.com",
-                   "launchpad_id": "michal+launchpad"
-               }
-           ],
-           "wiki": "https://github.com/stackforge/fuel-plugin-opendaylight"
+        {
+            "project_id": "openstack/fuel",
+            "vendor": "Mirantis",
+            "name": "OpenDaylight Plugin for Fuel",
+            "description": "This is a proof of concept of the plugin which will install OpenDaylight controller and set it as manager for OVS using ovsdb plugin.",
+            "maintainers": [
+                {
+                    "name": "Michal Skalski",
+                    "email": "mskalski@mirantis.com",
+                    "launchpad_id": "michal+launchpad"
+                }
+            ],
+            "wiki": "https://github.com/stackforge/fuel-plugin-opendaylight"
         },
-        {   "project_id": "openstack/fuel",
+        {
+            "project_id": "openstack/fuel",
             "vendor": "Mirantis",
             "name": "The Logging, Monitoring And Alerting (LMA) Collector plugin for Fuel",
             "description": "Installed on OpenStack controller, compute, and storage nodes, this module collects logs, metrics and notifications from system and OpenStack services and forwards that information to external backend databases such as Elasticsearch and InfluxDB.",
             "maintainers": [
-               {
+                {
                     "name": "Guillaume Thouvenin",
                     "email": "gthouvenin@mirantis.com",
                     "launchpad_id": "guillaume-thouvenin"
@@ -1159,7 +1387,8 @@
             ],
             "wiki": "https://github.com/stackforge/fuel-plugin-lma-collector"
         },
-        {   "project_id": "openstack/fuel",
+        {
+            "project_id": "openstack/fuel",
             "vendor": "Mirantis",
             "name": "VPNaaS plugin for Fuel",
             "description": "This Neutron extension introduces a flexible IPSec VPN feature-set supported by Neutron CLI and, more simply, in Horizon, by adding a new set of tabs to Network. VPNs can be easily and quickly implemented to connect groups of VMs on separate subnets, either within the same cloud or between clouds, across network or internet.",
@@ -1177,7 +1406,8 @@
             ],
             "wiki": "https://github.com/stackforge/fuel-plugin-neutron-vpnaas"
         },
-        {   "project_id": "openstack/fuel",
+        {
+            "project_id": "openstack/fuel",
             "vendor": "Mirantis",
             "name": "Zabbix Monitoring plugin for Fuel",
             "description": "This plugin deploys Zabbix, the leading open source enterprise monitoring and analysis solution. The Zabbix UI is installed on a controller and Zabbix agents are deployed to monitor all OpenStack nodes (plus the OpenStack APIs), their configurations further optimized to monitor specific services on each node.",
@@ -1190,7 +1420,8 @@
             ],
             "wiki": "https://github.com/stackforge/fuel-plugin-external-zabbix"
         },
-        {   "project_id": "openstack/fuel",
+        {
+            "project_id": "openstack/fuel",
             "vendor": "Project Calico",
             "name": "Calico plugin for Fuel",
             "description": "This plugin provides Calico's Layer 3 Virtual Networking for Highly Scalable Data Centers",
@@ -1201,20 +1432,23 @@
                     "launchpad_id": "emma-0"
                 }
             ],
-            "releases": ["Juno"],
+            "releases": [
+                "Juno"
+            ],
             "wiki": "https://github.com/stackforge/fuel-plugin-calico"
         },
-        {  "project_id": "openstack/fuel",
+        {
+            "project_id": "openstack/fuel",
             "vendor": "SolidFire Inc",
             "name": "SolidFire plugin for Fuel",
             "description": "The SolidFire plugin for Fuel extends Mirantis OpenStack functionality by adding support for SolidFire clusters in Cinder using iSCSI protocol. It replaces Cinder LVM driver which is the default volume backend that uses local volumes managed by LVM. Enabling the SolidFire plugin in Mirantis OpenStack means that all Cinder services are run on Controller nodes.",
             "maintainers": [
-               {
+                {
                     "name": "Ed Balduf",
                     "email": "ed.balduf@solidfire.com",
                     "launchpad_id": "ebalduf"
-               },
-               {
+                },
+                {
                     "name": "John Griffith",
                     "email": "john.griffith@solidfire.com",
                     "launchpad_id": "john-griffith"
@@ -1228,7 +1462,10 @@
             "name": "pxe_seamicro",
             "description": "This driver interfaces with SeaMicro's high density computing devices.",
             "maintainers": [],
-            "releases": ["Icehouse", "Juno"],
+            "releases": [
+                "Icehouse",
+                "Juno"
+            ],
             "wiki": "http://www.seamicro.com/sites/default/files/SeaMicro-Openstack-Blueprint.pdf"
         },
         {
@@ -1243,7 +1480,9 @@
                     "launchpad_id": "stigtelfer"
                 }
             ],
-            "releases": ["Juno"],
+            "releases": [
+                "Juno"
+            ],
             "wiki": "http://docs.openstack.org/developer/ironic/api/ironic.drivers.pxe.html"
         },
         {
@@ -1258,7 +1497,9 @@
                     "launchpad_id": "rameshg87"
                 }
             ],
-            "releases": ["Juno"],
+            "releases": [
+                "Juno"
+            ],
             "wiki": "http://docs.openstack.org/developer/ironic/_modules/ironic/drivers/ilo.html"
         },
         {
@@ -1274,13 +1515,16 @@
                     "irc": "linggao"
                 }
             ],
-            "releases": ["Icehouse", "Juno"],
+            "releases": [
+                "Icehouse",
+                "Juno"
+            ],
             "wiki": "https://wiki.openstack.org/wiki/Ironic/Drivers",
             "ci": {
                 "id": "ibm-xcat-ci",
-                 "success_pattern": "Build Successful",
-                 "failure_pattern": "Build Failed"
-               }
+                "success_pattern": "Build Successful",
+                "failure_pattern": "Build Failed"
+            }
         },
         {
             "project_id": "openstack/ironic",
@@ -1295,13 +1539,15 @@
                     "irc": "jroll"
                 }
             ],
-            "releases": ["Juno"],
+            "releases": [
+                "Juno"
+            ],
             "wiki": "http://docs.openstack.org/developer/ironic/api/ironic.drivers.agent.html?highlight=agent%20ssh#ironic.drivers.agent.AgentAndSSHDriver",
             "ci": {
                 "id": "jenkins_ci",
-                 "success_pattern": "Build Successful",
-                 "failure_pattern": "Build Failed"
-               }
+                "success_pattern": "Build Successful",
+                "failure_pattern": "Build Failed"
+            }
         },
         {
             "project_id": "openstack/ironic",
@@ -1316,7 +1562,9 @@
                     "irc": "jroll"
                 }
             ],
-            "releases": ["Juno"],
+            "releases": [
+                "Juno"
+            ],
             "wiki": "http://docs.openstack.org/developer/ironic/api/ironic.drivers.agent.html"
         },
         {
@@ -1332,7 +1580,9 @@
                     "launchpad_id": "dan-prince"
                 }
             ],
-            "releases": ["Juno"],
+            "releases": [
+                "Juno"
+            ],
             "wiki": "http://docs.openstack.org/developer/ironic/api/ironic.drivers.pxe.html"
         },
         {
@@ -1348,7 +1598,10 @@
                     "irc": "devananda"
                 }
             ],
-            "releases": ["Icehouse", "Juno"],
+            "releases": [
+                "Icehouse",
+                "Juno"
+            ],
             "wiki": "http://docs.openstack.org/developer/ironic/api/ironic.drivers.pxe.html"
         },
         {
@@ -1364,13 +1617,16 @@
                     "irc": "devananda"
                 }
             ],
-            "releases": ["Icehouse", "Juno"],
+            "releases": [
+                "Icehouse",
+                "Juno"
+            ],
             "wiki": "http://docs.openstack.org/developer/ironic/api/ironic.drivers.pxe.html",
             "ci": {
                 "id": "jenkins_ci",
-                 "success_pattern": "Build Successful",
-                 "failure_pattern": "Build Failed"
-               }
+                "success_pattern": "Build Successful",
+                "failure_pattern": "Build Failed"
+            }
         },
         {
             "project_id": "openstack/manila",
@@ -1386,11 +1642,13 @@
                 }
             ],
             "wiki": "http://netapp.github.io/openstack-deploy-ops-guide/",
-            "releases": ["Kilo"],
+            "releases": [
+                "Kilo"
+            ],
             "ci": {
-                   "id": "netapp-ci",
-                   "success_pattern": "Build succeeded",
-                   "failure_pattern": "Build failed"
+                "id": "netapp-ci",
+                "success_pattern": "Build succeeded",
+                "failure_pattern": "Build failed"
             }
         },
         {
@@ -1407,7 +1665,9 @@
                 }
             ],
             "wiki": "https://wiki.openstack.org/wiki/Manila/Quobyte",
-            "releases": ["Kilo"]
+            "releases": [
+                "Kilo"
+            ]
         },
         {
             "project_id": "openstack/neutron",
@@ -1423,7 +1683,9 @@
                 }
             ],
             "wiki": "https://wiki.openstack.org/wiki/Neutron/LBaaS/A10Networks",
-            "releases": ["Juno"],
+            "releases": [
+                "Juno"
+            ],
             "ci": {
                 "id": "a10networks-ci",
                 "success_pattern": "Build Successful",
@@ -1444,7 +1706,10 @@
                 }
             ],
             "wiki": "https://wiki.openstack.org/wiki/Arista-neutron-ml2-driver",
-            "releases": ["Havana", "Icehouse"],
+            "releases": [
+                "Havana",
+                "Icehouse"
+            ],
             "ci": {
                 "id": "arista-test",
                 "success_pattern": "Build Successful",
@@ -1470,7 +1735,10 @@
                 "success_pattern": "BigSwitch-ML2-Driver \\S+ : SUCCESS",
                 "failure_pattern": "BigSwitch-ML2-Driver \\S+ : FAILURE"
             },
-            "releases": ["Icehouse", "Juno"]
+            "releases": [
+                "Icehouse",
+                "Juno"
+            ]
         },
         {
             "project_id": "openstack/neutron",
@@ -1491,7 +1759,12 @@
                 "success_pattern": "BigSwitch-Plugin \\S+ : SUCCESS",
                 "failure_pattern": "BigSwitch-Plugin \\S+ : FAILURE"
             },
-            "releases": ["Folsom", "Grizzly", "Havana", "Icehouse"]
+            "releases": [
+                "Folsom",
+                "Grizzly",
+                "Havana",
+                "Icehouse"
+            ]
         },
         {
             "project_id": "openstack/neutron",
@@ -1507,7 +1780,12 @@
                 }
             ],
             "wiki": "https://wiki.openstack.org/wiki/Brocade-neutron-plugin",
-            "releases": ["Folsom", "Grizzly", "Havana", "Icehouse"],
+            "releases": [
+                "Folsom",
+                "Grizzly",
+                "Havana",
+                "Icehouse"
+            ],
             "ci": {
                 "id": "bci",
                 "success_pattern": "Brocade ML2: SUCCESS",
@@ -1528,7 +1806,9 @@
                 }
             ],
             "wiki": "https://wiki.openstack.org/wiki/Neutron/ML2/BrocadeML2Mechanism",
-            "releases": ["Icehouse"],
+            "releases": [
+                "Icehouse"
+            ],
             "ci": {
                 "id": "bci",
                 "success_pattern": "Brocade ML2: SUCCESS",
@@ -1548,7 +1828,9 @@
                 }
             ],
             "wiki": "http://specs.openstack.org/openstack/neutron-specs/specs/juno/vyatta_l3_plugin.html",
-            "releases": ["Juno"],
+            "releases": [
+                "Juno"
+            ],
             "ci": {
                 "id": "brocade-oss-service",
                 "success_pattern": "brocade_ci_oss \\S+ : SUCCESS",
@@ -1568,7 +1850,9 @@
                 }
             ],
             "wiki": "https://",
-            "releases": ["Juno"],
+            "releases": [
+                "Juno"
+            ],
             "ci": {
                 "id": "cisco_csr1kv_ci",
                 "success_pattern": "csr1kv \\S+ : SUCCESS",
@@ -1591,10 +1875,13 @@
                     "email": "nfedotov@cisco.com",
                     "launchpad_id": "nfedotov"
                 }
-
             ],
             "wiki": "https://wiki.openstack.org/wiki/Neutron/ML2/MechCiscoNexus",
-            "releases": ["Havana", "Icehouse", "Juno"],
+            "releases": [
+                "Havana",
+                "Icehouse",
+                "Juno"
+            ],
             "ci": {
                 "id": "cisco_ml2_ci",
                 "success_pattern": "ml2-nexus \\S+ : SUCCESS",
@@ -1614,7 +1901,9 @@
                 }
             ],
             "wiki": "https://wiki.openstack.org/wiki/Neutron/Cisco-APIC-ML2-driver",
-            "releases": ["Juno"],
+            "releases": [
+                "Juno"
+            ],
             "ci": {
                 "id": "cisco_apic_ci",
                 "success_pattern": "apic \\S+ : SUCCESS",
@@ -1634,7 +1923,9 @@
                 }
             ],
             "wiki": "https://wiki.openstack.org/wiki/Neutron/Cisco-APIC-ML2-driver",
-            "releases": ["Juno"],
+            "releases": [
+                "Juno"
+            ],
             "ci": {
                 "id": "cisco_apic_ci",
                 "success_pattern": "apic \\S+ : SUCCESS",
@@ -1654,7 +1945,10 @@
                 }
             ],
             "wiki": "http://docwiki.cisco.com/wiki/Install_and_Setup_of_Cisco_Cloud_Services_Router_(CSR)_for_OpenStack_VPN",
-            "releases": ["Icehouse", "Juno"],
+            "releases": [
+                "Icehouse",
+                "Juno"
+            ],
             "ci": {
                 "id": "cisco_vpnaas_ci",
                 "success_pattern": "vpnaas-nexus \\S+ : SUCCESS",
@@ -1677,10 +1971,13 @@
                     "email": "sopatwar@cisco.com",
                     "launchpad_id": "sopatwar"
                 }
-
             ],
             "wiki": "https://wiki.openstack.org/wiki/Cisco-n1kv-neutron",
-            "releases": ["Havana", "Icehouse", "Juno"],
+            "releases": [
+                "Havana",
+                "Icehouse",
+                "Juno"
+            ],
             "ci": {
                 "id": "cisco_n1kv_ci",
                 "success_pattern": "n1kv-ml2 \\S+ : SUCCESS",
@@ -1700,12 +1997,16 @@
                 }
             ],
             "wiki": "https://wiki.openstack.org/wiki/Neutron/LBaaS/NetScaler",
-            "releases": ["Havana", "Icehouse", "Juno"],
+            "releases": [
+                "Havana",
+                "Icehouse",
+                "Juno"
+            ],
             "ci": {
-                  "id": "openstack-citrix-ci",
-                  "success_pattern": "Build Successful",
-                  "failure_pattern": "Build Failed"
-           }
+                "id": "openstack-citrix-ci",
+                "success_pattern": "Build Successful",
+                "failure_pattern": "Build Failed"
+            }
         },
         {
             "project_id": "openstack/neutron",
@@ -1730,7 +2031,12 @@
                 "success_pattern": "Build succeeded",
                 "failure_pattern": "Build failed"
             },
-            "releases": ["Grizzly", "Havana", "Icehouse", "Juno"]
+            "releases": [
+                "Grizzly",
+                "Havana",
+                "Icehouse",
+                "Juno"
+            ]
         },
         {
             "project_id": "openstack/neutron",
@@ -1746,7 +2052,9 @@
                 }
             ],
             "wiki": "https://wiki.openstack.org/wiki/Neutron/EmbraneNeutronPlugin",
-            "releases": ["Juno"],
+            "releases": [
+                "Juno"
+            ],
             "ci": {
                 "id": "eci",
                 "success_pattern": "Build Successful",
@@ -1766,7 +2074,10 @@
                     "launchpad_id": "mmaleckk"
                 }
             ],
-            "releases": ["Icehouse", "Juno"],
+            "releases": [
+                "Icehouse",
+                "Juno"
+            ],
             "wiki": "https://wiki.openstack.org/wiki/Neutron/LBaaS/EmbraneDriver",
             "ci": {
                 "id": "eci",
@@ -1795,7 +2106,9 @@
                 }
             ],
             "wiki": "https://wiki.openstack.org/wiki/Freescale_SDN_ML2_Mechanism_Driver",
-            "releases": ["Juno"],
+            "releases": [
+                "Juno"
+            ],
             "ci": {
                 "id": "freescale-ci",
                 "success_pattern": "Freescale-ML2-Mechanism-Driver \\S+ : SUCCESS",
@@ -1816,7 +2129,9 @@
                 }
             ],
             "wiki": "https://wiki.openstack.org/wiki/Freescale_Firewall_as_a_Service_Plugin",
-            "releases": ["Kilo"],
+            "releases": [
+                "Kilo"
+            ],
             "ci": {
                 "id": "freescale-ci",
                 "success_pattern": "Freescale-FWaaS-Plugin \\S+ : SUCCESS",
@@ -1836,12 +2151,14 @@
                 }
             ],
             "wiki": "https://wiki.openstack.org/wiki/IBM-Neutron",
-            "releases": ["Juno"],
+            "releases": [
+                "Juno"
+            ],
             "ci": {
-                  "id":"ibmsdnve",
-                  "success_pattern": "Build Successful",
-                  "failure_pattern": "Build Failed"
-           }
+                "id": "ibmsdnve",
+                "success_pattern": "Build Successful",
+                "failure_pattern": "Build Failed"
+            }
         },
         {
             "project_id": "openstack/neutron",
@@ -1850,10 +2167,10 @@
             "description": "The Juniper Networks plug-in for OpenStack Neutron enables orchestration of virtual and physical network configurations. The plug-in supports Junos Space Network Director API (NDAPI) as well as NETCONF/DMI to configure the physical network.",
             "wiki": "http://www.juniper.net/techpubs/en_US/release-independent/junos/topics/topic-map/openstack-neutron-dmi-plugin.html",
             "maintainers": [
-               {
-                   "name": "Chandan Dutta Chowdhury",
-                   "email": "chandanc@juniper.net",
-                   "launchpad_id": "chandanc"
+                {
+                    "name": "Chandan Dutta Chowdhury",
+                    "email": "chandanc@juniper.net",
+                    "launchpad_id": "chandanc"
                 }
             ]
         },
@@ -1875,7 +2192,9 @@
                 }
             ],
             "wiki": "http://opencontrail.org/opencontrail-architecture-documentation",
-            "releases": ["Juno"]
+            "releases": [
+                "Juno"
+            ]
         },
         {
             "project_id": "openstack/neutron",
@@ -1895,7 +2214,9 @@
                 }
             ],
             "wiki": "https://support.kemptechnologies.com/hc/en-us/articles/204979325-Openstack-LBaaS-Driver",
-            "releases": ["Liberty"]
+            "releases": [
+                "Liberty"
+            ]
         },
         {
             "project_id": "openstack/neutron",
@@ -1911,7 +2232,10 @@
                 }
             ],
             "wiki": "https://wiki.openstack.org/wiki/Mellanox-Neutron",
-            "releases": ["Havana", "Icehouse"],
+            "releases": [
+                "Havana",
+                "Icehouse"
+            ],
             "ci": {
                 "id": "mellanox",
                 "success_pattern": "Check-MLNX-Neutron-plugin \\S+ : SUCCESS",
@@ -1932,7 +2256,10 @@
                 }
             ],
             "wiki": "https://wiki.openstack.org/wiki/Mellanox-Neutron-ML2",
-            "releases": ["Icehouse", "Juno"],
+            "releases": [
+                "Icehouse",
+                "Juno"
+            ],
             "ci": {
                 "id": "mellanox",
                 "success_pattern": "Check-MLNX-Neutron-ML2-driver \\S+ : SUCCESS",
@@ -1953,7 +2280,9 @@
                 }
             ],
             "wiki": "https://wiki.openstack.org/wiki/SR-IOV-Passthrough-For-Networking",
-            "releases": ["Juno"],
+            "releases": [
+                "Juno"
+            ],
             "ci": {
                 "id": "mellanox",
                 "success_pattern": "Check-MLNX-Neutron-ML2-driver \\S+ : SUCCESS",
@@ -1973,7 +2302,9 @@
                 }
             ],
             "wiki": "https://wiki.openstack.org/wiki/Spec-QuantumMidoNetPlugin",
-            "releases": ["Juno"],
+            "releases": [
+                "Juno"
+            ],
             "ci": {
                 "id": "midokura",
                 "success_pattern": "Build succeed",
@@ -1994,7 +2325,13 @@
                 }
             ],
             "wiki": "https://wiki.openstack.org/wiki/Neutron/NEC_OpenFlow_Plugin",
-            "releases": ["Folsom", "Grizzly", "Havana", "Icehouse", "Juno"],
+            "releases": [
+                "Folsom",
+                "Grizzly",
+                "Havana",
+                "Icehouse",
+                "Juno"
+            ],
             "ci": {
                 "id": "nec-openstack-ci",
                 "success_pattern": "Build succeed",
@@ -2015,7 +2352,10 @@
                 }
             ],
             "wiki": "http://docs.openstack.org/juno/config-reference/content/networking-plugin-nuage.html",
-            "releases": ["Icehouse", "Juno"],
+            "releases": [
+                "Icehouse",
+                "Juno"
+            ],
             "ci": {
                 "id": "nuage-ci",
                 "success_pattern": "SUCCESS",
@@ -2036,7 +2376,9 @@
                 }
             ],
             "wiki": "http://docs.openstack.org/trunk/config-reference/content/networking-plugin-ml2_nuage.html",
-            "releases": ["Juno"],
+            "releases": [
+                "Juno"
+            ],
             "ci": {
                 "id": "nuage-ci",
                 "success_pattern": "ML2-SUCCESS",
@@ -2056,7 +2398,9 @@
                 }
             ],
             "wiki": "http://docs.openstack.org/juno/config-reference/content/networking-plugin-nvsd.html",
-            "releases": ["Juno"],
+            "releases": [
+                "Juno"
+            ],
             "ci": {
                 "id": "oneconvergence",
                 "success_pattern": "success",
@@ -2077,7 +2421,9 @@
                 }
             ],
             "wiki": "http://openstack.redhat.com/OpenDaylight_integration",
-            "releases": ["Juno"],
+            "releases": [
+                "Juno"
+            ],
             "ci": {
                 "id": "odl-jenkins",
                 "success_pattern": "SUCCESS",
@@ -2098,7 +2444,12 @@
                 }
             ],
             "wiki": "http://docs.openstack.org/icehouse/config-reference/content/networking-plugin-linuxbridge_agent.html",
-            "releases": ["Folsom", "Grizzly", "Havana", "Icehouse"]
+            "releases": [
+                "Folsom",
+                "Grizzly",
+                "Havana",
+                "Icehouse"
+            ]
         },
         {
             "project_id": "openstack/neutron",
@@ -2114,7 +2465,11 @@
                 }
             ],
             "wiki": "http://docs.openstack.org/juno/config-reference/content/networking-options-plugins-ml2.html",
-            "releases": ["Havana", "Icehouse", "Juno"]
+            "releases": [
+                "Havana",
+                "Icehouse",
+                "Juno"
+            ]
         },
         {
             "project_id": "openstack/neutron",
@@ -2129,7 +2484,13 @@
                     "launchpad_id": "nati-ueno"
                 }
             ],
-            "releases": ["Folsom", "Grizzly", "Havana", "Icehouse", "Juno"],
+            "releases": [
+                "Folsom",
+                "Grizzly",
+                "Havana",
+                "Icehouse",
+                "Juno"
+            ],
             "wiki": "http://docs.openstack.org/juno/config-reference/content/networking-plugin-meta.html",
             "ci": {
                 "id": "metaplugintest",
@@ -2151,7 +2512,10 @@
                 }
             ],
             "wiki": "https://github.com/osrg/ryu/wiki/OpenStack",
-            "releases": ["Icehouse", "Juno"],
+            "releases": [
+                "Icehouse",
+                "Juno"
+            ],
             "ci": {
                 "id": "neutronryu",
                 "success_pattern": "check-tempest-dsvm-ofagent \\S+ : SUCCESS",
@@ -2172,7 +2536,9 @@
                 }
             ],
             "wiki": "http://docs.openstack.org/juno/config-reference/content/networking-plugin-openvswitch_agent.html",
-            "releases": ["Juno"]
+            "releases": [
+                "Juno"
+            ]
         },
         {
             "project_id": "openstack/neutron",
@@ -2188,11 +2554,18 @@
                 }
             ],
             "wiki": "https://wiki.openstack.org/wiki/PLUMgrid-Neutron",
-            "releases": ["Grizzly", "Havana", "Icehouse", "Juno", "Kilo", "Liberty"],
+            "releases": [
+                "Grizzly",
+                "Havana",
+                "Icehouse",
+                "Juno",
+                "Kilo",
+                "Liberty"
+            ],
             "ci": {
                 "id": "plumgrid-ci",
-                 "success_pattern": "Build Successful",
-                 "failure_pattern": "Build Failed"
+                "success_pattern": "Build Successful",
+                "failure_pattern": "Build Failed"
             }
         },
         {
@@ -2206,7 +2579,6 @@
                     "irc": "avishayb",
                     "email": "avishayb@radware.com",
                     "launchpad_id": "avishayb"
-
                 },
                 {
                     "name": "Evgeny Fedoruk",
@@ -2222,12 +2594,16 @@
                 }
             ],
             "wiki": "https://wiki.openstack.org/wiki/Neutron/LBaaS/RadwareAlteon",
-            "releases": ["Havana", "Icehouse", "Juno"],
+            "releases": [
+                "Havana",
+                "Icehouse",
+                "Juno"
+            ],
             "ci": {
-               "id": "radware3rdpartytesting",
+                "id": "radware3rdpartytesting",
                 "success_pattern": "Build Successful",
                 "failure_pattern": "Build Failed"
-           }
+            }
         },
         {
             "project_id": "openstack/neutron",
@@ -2242,7 +2618,10 @@
                     "launchpad_id": "lukego"
                 }
             ],
-            "releases": ["Havana", "Icehouse"],
+            "releases": [
+                "Havana",
+                "Icehouse"
+            ],
             "wiki": "https://wiki.openstack.org/wiki/Neutron/ML2/Tail-f-NCS-neutron-ml2-driver",
             "ci": {
                 "id": "cisco_tailf_ci",
@@ -2264,7 +2643,14 @@
                 }
             ],
             "wiki": "http://docs.openstack.org/admin-guide-cloud/content/nsx_plugin.html",
-            "releases": ["Essex", "Folsom", "Grizzly", "Havana", "Icehouse", "Juno"],
+            "releases": [
+                "Essex",
+                "Folsom",
+                "Grizzly",
+                "Havana",
+                "Icehouse",
+                "Juno"
+            ],
             "ci": {
                 "id": "vmwareminesweeper",
                 "success_pattern": "Build Successful",
@@ -2285,7 +2671,9 @@
                 }
             ],
             "wiki": "https://wiki.openstack.org/wiki/Neutron/vArmour-Firewall",
-            "releases": ["Juno"],
+            "releases": [
+                "Juno"
+            ],
             "ci": {
                 "id": "varmourci",
                 "success_pattern": "Successful",
@@ -2310,7 +2698,13 @@
                 }
             ],
             "wiki": "http://wiki.cloudbase.it/hyperv-tempest-exclusions",
-            "releases": ["Folsom", "Grizzly", "Havana", "Icehouse", "Juno"],
+            "releases": [
+                "Folsom",
+                "Grizzly",
+                "Havana",
+                "Icehouse",
+                "Juno"
+            ],
             "ci": {
                 "id": "hyper-v-ci",
                 "success_pattern": "Build succeeded",
@@ -2330,12 +2724,14 @@
                 }
             ],
             "wiki": "http://www.ibm.com/systems/power/software/linux/powerkvm",
-            "releases": ["Icehouse"],
+            "releases": [
+                "Icehouse"
+            ],
             "ci": {
-                  "id":"powerkvm",
-                  "success_pattern": "Build Successful",
-                  "failure_pattern": "Build Failed"
-           }
+                "id": "powerkvm",
+                "success_pattern": "Build Successful",
+                "failure_pattern": "Build Failed"
+            }
         },
         {
             "project_id": "openstack/nova",
@@ -2350,7 +2746,11 @@
                 }
             ],
             "wiki": "http://docs.openstack.org/havana/config-reference/content/powervm.html",
-            "releases": ["Folsom", "Grizzly", "Havana"]
+            "releases": [
+                "Folsom",
+                "Grizzly",
+                "Havana"
+            ]
         },
         {
             "project_id": "openstack/nova",
@@ -2375,12 +2775,17 @@
             "maintainers": [
             ],
             "wiki": "https://wiki.openstack.org/wiki/Baremetal",
-            "releases": ["Grizzly", "Havana", "Icehouse", "Juno"],
+            "releases": [
+                "Grizzly",
+                "Havana",
+                "Icehouse",
+                "Juno"
+            ],
             "ci": {
-                 "id": "tripleo_ci",
-                 "success_pattern": "Build Successful",
-                 "failure_pattern": "Build Failed"
-              }
+                "id": "tripleo_ci",
+                "success_pattern": "Build Successful",
+                "failure_pattern": "Build Failed"
+            }
         },
         {
             "project_id": "openstack/nova",
@@ -2395,7 +2800,9 @@
                 }
             ],
             "wiki": "http://docs.openstack.org/havana/config-reference/content/docker.html",
-            "releases": ["Havana"]
+            "releases": [
+                "Havana"
+            ]
         },
         {
             "project_id": "openstack/nova",
@@ -2412,10 +2819,13 @@
             ],
             "ci": {
                 "id": "jenkins_ci",
-                 "success_pattern": "Build Successful",
-                 "failure_pattern": "Build Failed"
-               },
-            "releases": ["Icehouse", "Juno"],
+                "success_pattern": "Build Successful",
+                "failure_pattern": "Build Failed"
+            },
+            "releases": [
+                "Icehouse",
+                "Juno"
+            ],
             "wiki": "https://wiki.openstack.org/wiki/Ironic"
         },
         {
@@ -2431,7 +2841,18 @@
                 }
             ],
             "wiki": "http://docs.openstack.org/juno/config-reference/content/kvm.html",
-            "releases": ["Austin", "Bexar", "Cactus", "Diablo", "Essex", "Folsom", "Grizzly", "Havana", "Icehouse", "Juno"]
+            "releases": [
+                "Austin",
+                "Bexar",
+                "Cactus",
+                "Diablo",
+                "Essex",
+                "Folsom",
+                "Grizzly",
+                "Havana",
+                "Icehouse",
+                "Juno"
+            ]
         },
         {
             "project_id": "openstack/nova",
@@ -2445,7 +2866,18 @@
                     "launchpad_id": "milakstill"
                 }
             ],
-            "releases": ["Austin", "Bexar", "Cactus", "Diablo", "Essex", "Folsom", "Grizzly", "Havana", "Icehouse", "Juno"],
+            "releases": [
+                "Austin",
+                "Bexar",
+                "Cactus",
+                "Diablo",
+                "Essex",
+                "Folsom",
+                "Grizzly",
+                "Havana",
+                "Icehouse",
+                "Juno"
+            ],
             "wiki": "http://docs.openstack.org/juno/config-reference/content/lxc.html"
         },
         {
@@ -2461,12 +2893,23 @@
                 }
             ],
             "wiki": "http://docs.openstack.org/juno/config-reference/content/qemu.html",
-            "releases": ["Austin", "Bexar", "Cactus", "Diablo", "Essex", "Folsom", "Grizzly", "Havana", "Icehouse", "Juno"],
+            "releases": [
+                "Austin",
+                "Bexar",
+                "Cactus",
+                "Diablo",
+                "Essex",
+                "Folsom",
+                "Grizzly",
+                "Havana",
+                "Icehouse",
+                "Juno"
+            ],
             "ci": {
                 "id": "jenkins_ci",
-                 "success_pattern": "Build Successful",
-                 "failure_pattern": "Build Failed"
-               }
+                "success_pattern": "Build Successful",
+                "failure_pattern": "Build Failed"
+            }
         },
         {
             "project_id": "openstack/nova",
@@ -2483,10 +2926,21 @@
             "wiki": "http://docs.openstack.org/juno/config-reference/content/introduction-to-xen.html",
             "ci": {
                 "id": "citrix_xenserver_ci",
-                 "success_pattern": "Build Successful",
-                 "failure_pattern": "Build Failed"
+                "success_pattern": "Build Successful",
+                "failure_pattern": "Build Failed"
             },
-            "releases": ["Austin", "Bexar", "Cactus", "Diablo", "Essex", "Folsom", "Grizzly", "Havana", "Icehouse", "Juno"]
+            "releases": [
+                "Austin",
+                "Bexar",
+                "Cactus",
+                "Diablo",
+                "Essex",
+                "Folsom",
+                "Grizzly",
+                "Havana",
+                "Icehouse",
+                "Juno"
+            ]
         },
         {
             "project_id": "openstack/nova",
@@ -2501,12 +2955,21 @@
                 }
             ],
             "wiki": "http://docs.openstack.org/havana/config-reference/content/introduction-to-xen.html",
-            "releases": ["Austin", "Bexar", "Cactus", "Diablo", "Essex", "Folsom", "Grizzly", "Havana"],
+            "releases": [
+                "Austin",
+                "Bexar",
+                "Cactus",
+                "Diablo",
+                "Essex",
+                "Folsom",
+                "Grizzly",
+                "Havana"
+            ],
             "ci": {
-                 "id": "jenkins_ci",
-                 "success_pattern": "Build Successful",
-                 "failure_pattern": "Build Failed"
-                }
+                "id": "jenkins_ci",
+                "success_pattern": "Build Successful",
+                "failure_pattern": "Build Failed"
+            }
         },
         {
             "project_id": "openstack/nova",
@@ -2519,7 +2982,12 @@
                 "success_pattern": "success",
                 "failure_pattern": "fail"
             },
-            "releases": ["Grizzly", "Havana", "Icehouse", "Juno"],
+            "releases": [
+                "Grizzly",
+                "Havana",
+                "Icehouse",
+                "Juno"
+            ],
             "maintainers": [
                 {
                     "name": "Tracy Jones",
@@ -2566,7 +3034,12 @@
                 }
             ],
             "wiki": "http://docs.openstack.org/developer/sahara/userdoc/hdp_plugin.html",
-            "releases": ["Icehouse", "Juno", "Kilo", "Liberty"],
+            "releases": [
+                "Icehouse",
+                "Juno",
+                "Kilo",
+                "Liberty"
+            ],
             "ci": {
                 "id": "sahara-ci",
                 "success_pattern": "gate-sahara.*-hdp.* \\S+ : SUCCESS",
@@ -2586,7 +3059,10 @@
                 }
             ],
             "wiki": "https://wiki.openstack.org/wiki/Sahara/MapRPlugin",
-            "releases": ["Kilo", "Liberty"],
+            "releases": [
+                "Kilo",
+                "Liberty"
+            ],
             "ci": {
                 "id": "sahara-ci",
                 "success_pattern": "gate-sahara.*-mapr.* \\S+ : SUCCESS",
@@ -2606,7 +3082,11 @@
                 }
             ],
             "wiki": "http://docs.openstack.org/developer/sahara/userdoc/spark_plugin.html",
-            "releases": ["Juno", "Kilo", "Liberty"],
+            "releases": [
+                "Juno",
+                "Kilo",
+                "Liberty"
+            ],
             "ci": {
                 "id": "sahara-ci",
                 "success_pattern": "gate-sahara.*-spark.* \\S+ : SUCCESS",
@@ -2626,7 +3106,12 @@
                 }
             ],
             "wiki": "http://docs.openstack.org/developer/sahara/userdoc/vanilla_plugin.html",
-            "releases": ["Icehouse", "Juno", "Kilo", "Liberty"],
+            "releases": [
+                "Icehouse",
+                "Juno",
+                "Kilo",
+                "Liberty"
+            ],
             "ci": {
                 "id": "sahara-ci",
                 "success_pattern": "gate-sahara.*-vanilla.* \\S+ : SUCCESS",
@@ -2646,7 +3131,11 @@
                 }
             ],
             "wiki": "https://wiki.openstack.org/wiki/Sahara/CDHPlugin",
-            "releases": ["Juno", "Kilo", "Liberty"],
+            "releases": [
+                "Juno",
+                "Kilo",
+                "Liberty"
+            ],
             "ci": {
                 "id": "sahara-ci",
                 "success_pattern": "gate-sahara.*-cdh.* \\S+ : SUCCESS",
