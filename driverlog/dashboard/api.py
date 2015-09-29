@@ -56,9 +56,11 @@ def get_drivers_internal(**params):
 @decorators.jsonify('drivers')
 @decorators.exception_handler()
 def get_drivers():
-    selected_project_id = parameters.get_single_parameter({}, 'project_id')
+    selected_project_id = (parameters.get_single_parameter({}, 'project_id') or
+                           parameters.get_single_parameter({}, 'project_id'))
     selected_vendor = parameters.get_single_parameter({}, 'vendor')
-    selected_release = parameters.get_single_parameter({}, 'release_id')
+    selected_release = (parameters.get_single_parameter({}, 'release_id') or
+                        parameters.get_single_parameter({}, 'release'))
 
     return get_drivers_internal(project_id=selected_project_id,
                                 vendor=selected_vendor,
