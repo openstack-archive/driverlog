@@ -119,9 +119,9 @@
             "wiki": "http://docs.openstack.org/kilo/config-reference/content/ceph-rados.html",
             "releases": ["Cactus", "Diablo", "Essex", "Folsom", "Grizzly", "Havana", "Icehouse", "Juno", "Kilo"],
             "ci": {
-                "id": "check-tempest-dsvm-full-ceph",
-                "success_pattern": "check-tempest-dsvm-full-ceph \\S+ : SUCCESS",
-                "failure_pattern": "check-tempest-dsvm-full-ceph \\S+ : FAILURE"
+                "id": "jenkins",
+                "success_pattern": "gate-tempest-dsvm-full-ceph \\S+ : SUCCESS",
+                "failure_pattern": "gate-tempest-dsvm-full-ceph \\S+ : FAILURE"
             }
         },
         {
@@ -205,8 +205,8 @@
             "releases": ["Kilo"],
             "ci": {
                   "id":"cloudfoundersci",
-                  "success_pattern": "Build Successful",
-                  "failure_pattern": "Build Failed"
+                  "success_pattern": "SUCCESS",
+                  "failure_pattern": "FAILURE"
             }
         },
         {
@@ -264,9 +264,9 @@
             "wiki": "http://docs.openstack.org/kilo/config-reference/content/dell-equallogic-driver.html",
             "releases": ["Havana", "Icehouse", "Juno", "Kilo"],
             "ci": {
-                  "id":"dell-storagecenter-ci",
-                  "success_pattern": "Build Successful",
-                  "failure_pattern": "Build Failed"
+                  "id":"dell-storage-ci",
+                  "success_pattern": "dell-eql-dsvm-volume \\S+ : SUCCESS",
+                  "failure_pattern": "dell-eql-dsvm-volume \\S+ : FAILURE"
             }
         },
         {
@@ -285,9 +285,9 @@
             "wiki": "http://docs.openstack.org/kilo/config-reference/content/dell-storagecenter-driver.html",
             "releases": ["Kilo"],
             "ci": {
-                  "id":"dell-storagecenter-ci",
-                  "success_pattern": "Build Successful",
-                  "failure_pattern": "Build Failed"
+                  "id":"dell-storage-ci",
+                  "success_pattern": "dell-sc-iscsi-dsvm-volume \\S+ : SUCCESS",
+                  "failure_pattern": "dell-sc-iscsi-dsvm-volume \\S+ : FAILURE"
             }
         },
         {
@@ -326,8 +326,8 @@
             "releases": ["Icehouse", "Juno", "Kilo"],
             "ci": {
                   "id":"emc-vnx-ci",
-                  "success_pattern": "Build Successful",
-                  "failure_pattern": "Build Failed"
+                  "success_pattern": "EMC_VNX_ISCSI \\S+ : SUCCESS",
+                  "failure_pattern": "EMC_VNX_ISCSI \\S+ : FAILURE"
            }
         },
         {
@@ -346,8 +346,8 @@
             "releases": ["Juno", "Kilo"],
             "ci": {
                   "id":"emc-vnx-ci",
-                  "success_pattern": "Build Successful",
-                  "failure_pattern": "Build Failed"
+                  "success_pattern": "EMC_VNX_FC \\S+ : SUCCESS",
+                  "failure_pattern": "EMC_VNX_FC \\S+ : FAILURE"
            }
         },
         {
@@ -366,8 +366,8 @@
             "releases": ["Juno", "Kilo"],
             "ci": {
                   "id":"emc-xio-ci",
-                  "success_pattern": "Build Successful",
-                  "failure_pattern": "Build Failed"
+                  "success_pattern": "EMC_XIO_ISCSI \\S+ : SUCCESS",
+                  "failure_pattern": "EMC_XIO_ISCSI \\S+ : FAILURE"
            }
         },
         {
@@ -386,8 +386,8 @@
             "releases": ["Juno", "Kilo"],
             "ci": {
                   "id":"emc-xio-ci",
-                  "success_pattern": "Build Successful",
-                  "failure_pattern": "Build Failed"
+                  "success_pattern": "EMC_XIO_FC \\S+ : SUCCESS",
+                  "failure_pattern": "EMC_XIO_FC \\S+ : FAILURE"
            }
         },
         {
@@ -470,9 +470,9 @@
             "wiki": "http://docs.openstack.org/juno/config-reference/content/GlusterFS-driver.html",
             "releases": ["Grizzly", "Havana", "Icehouse", "Juno", "Kilo"],
             "ci": {
-                "id": "gate-tempest-dsvm-full-glusterfs",
-                "success_pattern": "gate-tempest-dsvm-full-glusterfs \\S+ : SUCCESS",
-                "failure_pattern": "gate-tempest-dsvm-full-glusterfs \\S+ : FAILURE"
+                "id": "jenkins",
+                "success_pattern": "gate-tempest-dsvm-full-glusterfs-nv \\S+ : SUCCESS",
+                "failure_pattern": "gate-tempest-dsvm-full-glusterfs-nv \\S+ : FAILURE"
             }
         },
         {
@@ -565,8 +565,8 @@
             "releases": ["Juno", "Kilo"],
             "ci": {
                   "id":"hds-hnas-ci",
-                  "success_pattern": "Build Successful",
-                  "failure_pattern": "Build Failed"
+                  "success_pattern": "Build succeeded",
+                  "failure_pattern": "Build failed"
            }
         },
         {
@@ -599,8 +599,8 @@
             "releases": ["Juno", "Kilo"],
             "ci": {
                   "id":"hds-hnas-ci",
-                  "success_pattern": "Build Successful",
-                  "failure_pattern": "Build Failed"
+                  "success_pattern": "Build succeeded",
+                  "failure_pattern": "Build failed"
            }
         },
         {
@@ -618,9 +618,9 @@
             "wiki": "http://docs.openstack.org/juno/config-reference/content/huawei-storage-driver.html",
             "releases": ["Havana", "Juno", "Kilo"],
             "ci": {
-                   "id": "huawei-ci",
-                   "success_pattern": "Build Successful",
-                   "failure_pattern": "Build Failed"
+                   "id": "huawei-volume-ci",
+                   "success_pattern": "Build succeeded",
+                   "failure_pattern": "Build failed"
             }
         },
         {
@@ -679,8 +679,8 @@
             "releases": ["Folsom", "Grizzly", "Havana", "Icehouse", "Juno", "Kilo"],
             "ci": {
                    "id": "ibm-storwize-ci",
-                   "success_pattern": "Build Successful",
-                   "failure_pattern": "Build Failed"
+                   "success_pattern": "Build succeeded",
+                   "failure_pattern": "Build failed"
            }
         },
         {
@@ -698,9 +698,9 @@
             "wiki": "http://docs.openstack.org/juno/config-reference/content/ibm-xiv-driver.html",
             "releases": ["Folsom", "Grizzly", "Havana", "Icehouse", "Juno", "Kilo"],
             "ci": {
-                   "id": "ibm-xiv-ci",
-                   "success_pattern": "Build Successful",
-                   "failure_pattern": "Build Failed"
+                   "id": "ibmxivci",
+                   "success_pattern": "Build succeeded",
+                   "failure_pattern": "Build failed"
            }
         },
         {
@@ -720,8 +720,8 @@
             "releases": ["Essex", "Folsom", "Grizzly", "Havana", "Icehouse", "Juno", "Kilo", "Liberty"],
             "ci": {
                    "id": "netapp-ci",
-                   "success_pattern": "Build Successful",
-                   "failure_pattern": "Build Failed"
+                   "success_pattern": "Build succeeded",
+                   "failure_pattern": "Build failed"
             }
         },
         {
@@ -850,8 +850,8 @@
             "releases": ["Juno", "Kilo", "Liberty"],
             "ci": {
                    "id": "purestorage-cinder-ci",
-                   "success_pattern": "Build Successful",
-                   "failure_pattern": "Build Failed"
+                   "success_pattern": "Build succeeded",
+                   "failure_pattern": "Build failed"
           }
         },
         {
@@ -956,8 +956,8 @@
             "releases": ["Havana", "Icehouse", "Juno", "Kilo"],
             "ci": {
                 "id": "vmwareminesweeper",
-                "success_pattern": "Build Successful",
-                "failure_pattern": "Build Failed"
+                "success_pattern": "Build successful",
+                "failure_pattern": "Build failed"
             }
         },
         {
@@ -1389,8 +1389,8 @@
             "releases": ["Kilo"],
             "ci": {
                    "id": "netapp-ci",
-                   "success_pattern": "Build Successful",
-                   "failure_pattern": "Build Failed"
+                   "success_pattern": "Build succeeded",
+                   "failure_pattern": "Build failed"
             }
         },
         {
