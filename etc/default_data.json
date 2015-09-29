@@ -572,7 +572,8 @@
                 "Havana",
                 "Icehouse",
                 "Juno",
-                "Kilo"
+                "Kilo",
+                "Liberty"
             ],
             "ci": {
                 "id": "hp-cinder-ci",
@@ -603,7 +604,8 @@
                 "Havana",
                 "Icehouse",
                 "Juno",
-                "Kilo"
+                "Kilo",
+                "Liberty"
             ],
             "ci": {
                 "id": "hp-cinder-ci",
@@ -637,7 +639,8 @@
                 "Havana",
                 "Icehouse",
                 "Juno",
-                "Kilo"
+                "Kilo",
+                "Liberty"
             ],
             "ci": {
                 "id": "hp-cinder-ci",
