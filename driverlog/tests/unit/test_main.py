@@ -37,23 +37,6 @@ class TestMain(testtools.TestCase):
     def setUp(self):
         super(TestMain, self).setUp()
 
-    def test_process_reviews_ci_vote_and_comment(self):
-        # check that vote and matching comment are found
-
-        result = main.find_ci_result([_read_sample_review()],
-                                     {'id': 'arista-test'})
-
-        self.assertIsNotNone(result, 'CI result should be found')
-
-        expected_record = {
-            'ci_result': True,
-            'comment': 'Verified+1\n\nArista third party testing PASSED '
-                       '[ https://arista.box.com/s/x8z0 ]',
-            'timestamp': 1399478047,
-            'review_url': 'https://review.openstack.org/92468',
-        }
-        self.assertEqual(expected_record, result)
-
     def test_process_reviews_ci_only_comments(self):
         # check that comment is found and parsed correctly
 
@@ -67,7 +50,7 @@ class TestMain(testtools.TestCase):
 
         expected_record = {
             'ci_result': True,
-            'comment': 'Build succeeded.\n\n- neutron_zuul '
+            'comment': '- neutron_zuul '
                        'http://128.107.233.28:8080/job/neutron_zuul/263 : '
                        'SUCCESS in 18m 52s',
             'timestamp': 1399481091,

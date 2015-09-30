@@ -16,15 +16,19 @@
     "releases": [
         {
             "id": "Havana",
-            "wiki": "https://wiki.openstack.org/wiki/ReleaseNotes/Havana"
+            "wiki": "https://wiki.openstack.org/wiki/ReleaseNotes/Havana",
+            "start": "2013-Apr-04"
         },
         {
             "id": "Icehouse",
-            "wiki": "https://wiki.openstack.org/wiki/ReleaseNotes/Icehouse"
+            "wiki": "https://wiki.openstack.org/wiki/ReleaseNotes/Icehouse",
+            "start": "2013-Oct-17"
         },
         {
             "id": "Juno",
-            "wiki": "https://wiki.openstack.org/wiki/Releases"
+            "wiki": "https://wiki.openstack.org/wiki/ReleaseNotes/Juno",
+            "start": "2014-Apr-17",
+            "active": true
         }
     ],
     "drivers": [
@@ -41,7 +45,9 @@
             "wiki": "https://wiki.openstack.org/wiki/Arista-neutron-ml2-driver",
             "releases": ["Havana", "Icehouse", "Juno"],
             "ci": {
-                "id": "arista-test"
+                "id": "arista-test",
+                "success_pattern": "SUCCESS",
+                "failure_pattern": "FAILURE"
             }
         },
         {

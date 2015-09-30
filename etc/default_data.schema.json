@@ -30,9 +30,15 @@
                     },
                     "wiki": {
                         "type": "string"
+                    },
+                    "active": {
+                        "type": "boolean"
+                    },
+                    "start": {
+                        "$ref": "#/definitions/date_format"
                     }
                 },
-                "required": ["id", "wiki"]
+                "required": ["id", "wiki", "start"]
             }
         },
         "drivers": {
@@ -117,12 +123,16 @@
                     "type": "string"
                 }
             },
-            "required": ["id"],
+            "required": ["id", "success_pattern", "failure_pattern"],
             "additionalProperties": false
         },
         "release_id": {
             "type": "string",
             "pattern": "^[A-Z][a-z]+$"
+        },
+        "date_format": {
+            "type": ["string"],
+            "pattern": "^20\\d{2}-(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)-[0-3]\\d$"
         }
     }
 }

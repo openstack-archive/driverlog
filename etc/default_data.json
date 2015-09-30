@@ -36,51 +36,66 @@
     "releases": [
         {
             "id": "Austin",
-            "wiki": "https://wiki.openstack.org/wiki/ReleaseNotes/Austin"
+            "wiki": "https://wiki.openstack.org/wiki/ReleaseNotes/Austin",
+            "start": "2010-Jan-01"
         },
         {
             "id": "Bexar",
-            "wiki": "https://wiki.openstack.org/wiki/ReleaseNotes/Bexar"
+            "wiki": "https://wiki.openstack.org/wiki/ReleaseNotes/Bexar",
+            "start": "2010-Oct-21"
         },
         {
             "id": "Cactus",
-            "wiki": "https://wiki.openstack.org/wiki/ReleaseNotes/Cactus"
+            "wiki": "https://wiki.openstack.org/wiki/ReleaseNotes/Cactus",
+            "start": "2011-Feb-03"
         },
         {
             "id": "Diablo",
-            "wiki": "https://wiki.openstack.org/wiki/ReleaseNotes/Diablo"
+            "wiki": "https://wiki.openstack.org/wiki/ReleaseNotes/Diablo",
+            "start": "2011-Apr-15"
         },
         {
             "id": "Essex",
-            "wiki": "https://wiki.openstack.org/wiki/ReleaseNotes/Essex"
+            "wiki": "https://wiki.openstack.org/wiki/ReleaseNotes/Essex",
+            "start": "2011-Sep-22"
         },
         {
             "id": "Folsom",
-            "wiki": "https://wiki.openstack.org/wiki/ReleaseNotes/Folsom"
+            "wiki": "https://wiki.openstack.org/wiki/ReleaseNotes/Folsom",
+            "start": "2012-Apr-05"
         },
         {
             "id": "Grizzly",
-            "wiki": "https://wiki.openstack.org/wiki/ReleaseNotes/Grizzly"
+            "wiki": "https://wiki.openstack.org/wiki/ReleaseNotes/Grizzly",
+            "start": "2012-Oct-04"
         },
         {
             "id": "Havana",
-            "wiki": "https://wiki.openstack.org/wiki/ReleaseNotes/Havana"
+            "wiki": "https://wiki.openstack.org/wiki/ReleaseNotes/Havana",
+            "start": "2013-Apr-04"
         },
         {
             "id": "Icehouse",
-            "wiki": "https://wiki.openstack.org/wiki/ReleaseNotes/Icehouse"
+            "wiki": "https://wiki.openstack.org/wiki/ReleaseNotes/Icehouse",
+            "start": "2013-Oct-17"
         },
         {
             "id": "Juno",
-            "wiki": "https://wiki.openstack.org/wiki/ReleaseNotes/Juno"
+            "wiki": "https://wiki.openstack.org/wiki/ReleaseNotes/Juno",
+            "start": "2014-Apr-17",
+            "active": true
         },
         {
             "id": "Kilo",
-            "wiki": "https://wiki.openstack.org/wiki/ReleaseNotes/Kilo"
+            "wiki": "https://wiki.openstack.org/wiki/ReleaseNotes/Kilo",
+            "start": "2014-Oct-16",
+            "active": true
         },
         {
             "id": "Liberty",
-            "wiki": "https://wiki.openstack.org/wiki/Releases"
+            "wiki": "https://wiki.openstack.org/wiki/Releases",
+            "start": "2015-Apr-30",
+            "active": true
         }
     ],
     "drivers": [

@@ -26,6 +26,7 @@ LOG = logging.getLogger(__name__)
 DEFAULT_PORT = 29418
 GERRIT_URI_PREFIX = r'^gerrit:\/\/'
 PAGE_LIMIT = 5
+CHUNK_LIMIT = 2
 
 
 class Rcs(object):
@@ -110,7 +111,11 @@ class Gerrit(Rcs):
     def log(self, **kwargs):
         sort_key = None
 
-        while True:
+        # DriverLog looks for merged CRs reviewed by specified gerrit-id
+        # it is possible that CR is already merged, but CI didn't vote yet
+        # that's why we grab PAGE_LIMIT*CHUNK_LIMIT CRs from Gerrit
+
+        for i in range(CHUNK_LIMIT):
             cmd = self._get_cmd(sort_key, **kwargs)
             LOG.debug('Executing command: %s', cmd)
             exec_result = self._exec_command(cmd)

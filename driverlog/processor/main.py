@@ -28,18 +28,6 @@ from driverlog.processor import utils
 LOG = logging.getLogger(__name__)
 
 
-def _find_vote(review, ci_id):
-    """Finds vote corresponding to ci_id."""
-    for approval in (review['currentPatchSet'].get('approvals') or []):
-        if approval['type'] not in ['Verified', 'VRIF']:
-            continue
-
-        if approval['by'].get('username') == ci_id:
-            return approval['value'] in ['1', '2']
-
-    return None
-
-
 def find_ci_result(review_iterator, ci):
     """For a given stream of reviews finds result left by specified ci."""
 
@@ -51,9 +39,14 @@ def find_ci_result(review_iterator, ci):
                 continue
 
             message = comment['message']
+
+            prefix = 'Patch Set'
+            if comment['message'].find(prefix) != 0:
+                continue  # look for special messages only
+
             prefix = 'Patch Set %s:' % review['currentPatchSet']['number']
             if comment['message'].find(prefix) != 0:
-                break  # all comments from the latest patch set passed
+                break  # all comments from the latest patch set already parsed
             message = message[len(prefix):].strip()
 
             result = None
@@ -62,30 +55,36 @@ def find_ci_result(review_iterator, ci):
             success_pattern = ci.get('success_pattern')
             failure_pattern = ci.get('failure_pattern')
 
-            if success_pattern and re.search(success_pattern, message):
-                result = True
-            elif failure_pattern and re.search(failure_pattern, message):
-                result = False
+            message_lines = (l for l in message.split('\n') if l.strip())
 
-            # try to get result from vote
-            if result is None:
-                result = _find_vote(review, ci['id'])
+            line = ''
+            for line in message_lines:
+                if success_pattern and re.search(success_pattern, line):
+                    result = True
+                    break
+                elif failure_pattern and re.search(failure_pattern, line):
+                    result = False
+                    break
 
             if result is not None:
                 return {
                     'ci_result': result,
-                    'comment': message,
+                    'comment': line,
                     'timestamp': comment['timestamp'],
                     'review_url': review_url,
                 }
 
 
-def _get_release_by_branch(releases, branch):
+def _get_release_by_branch(record_ts, releases, branch):
     """Translates branch name into release_id."""
     release = branch.lower()
     if release.find('/') > 0:
         return release.split('/')[1]
     elif release == 'master':
+        for r in reversed(releases):
+            start = utils.date_to_timestamp(r.get('start'))
+            if record_ts > start:
+                return r['id'].lower()
         return releases[-1]['id'].lower()
 
 
@@ -94,7 +93,8 @@ def update_drivers(drivers, releases):
 
     Returns True if info was updated
     """
-    branches = [('stable/' + r['id'].lower()) for r in releases] + ['master']
+    branches = [('stable/' + r['id'].lower()) for r in releases
+                if r.get('active')] + ['master']
 
     rcs_inst = rcs.get_rcs(cfg.CONF.review_uri)
     rcs_inst.setup(key_filename=cfg.CONF.ssh_key_filename,
@@ -121,13 +121,17 @@ def update_drivers(drivers, releases):
                                            reviewer=ci_id)
             ci_result = find_ci_result(review_iterator, driver['ci'])
             if ci_result:
-                LOG.debug('Found CI result: %s', ci_result)
+                LOG.info('Found CI result: %s', ci_result)
                 has_updates = True
 
                 key = (project_id, driver['vendor'], driver['name'])
-                os_version = _get_release_by_branch(releases, branch)
+                os_version = _get_release_by_branch(ci_result['timestamp'],
+                                                    releases, branch)
                 ci_result['ci_tested'] = True
                 drivers[key]['releases'][os_version] = ci_result
+            else:
+                LOG.warn('CI result is not found for driver: %s in branch: %s',
+                         driver['name'], branch)
 
     rcs_inst.close()
 
