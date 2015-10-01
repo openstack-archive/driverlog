@@ -3122,7 +3122,7 @@
                 "Liberty"
             ],
             "ci": {
-                "id": "sahara-ci",
+                "id": "savanna-ci",
                 "success_pattern": "gate-sahara.*-hdp.* \\S+ : SUCCESS",
                 "failure_pattern": "gate-sahara.*-hdp.* \\S+ : FAILURE"
             }
@@ -3145,7 +3145,7 @@
                 "Liberty"
             ],
             "ci": {
-                "id": "sahara-ci",
+                "id": "savanna-ci",
                 "success_pattern": "gate-sahara.*-mapr.* \\S+ : SUCCESS",
                 "failure_pattern": "gate-sahara.*-mapr.* \\S+ : FAILURE"
             }
@@ -3169,7 +3169,7 @@
                 "Liberty"
             ],
             "ci": {
-                "id": "sahara-ci",
+                "id": "savanna-ci",
                 "success_pattern": "gate-sahara.*-spark.* \\S+ : SUCCESS",
                 "failure_pattern": "gate-sahara.*-spark.* \\S+ : FAILURE"
             }
@@ -3194,7 +3194,7 @@
                 "Liberty"
             ],
             "ci": {
-                "id": "sahara-ci",
+                "id": "savanna-ci",
                 "success_pattern": "gate-sahara.*-vanilla.* \\S+ : SUCCESS",
                 "failure_pattern": "gate-sahara.*-vanilla.* \\S+ : FAILURE"
             }
@@ -3218,7 +3218,7 @@
                 "Liberty"
             ],
             "ci": {
-                "id": "sahara-ci",
+                "id": "savanna-ci",
                 "success_pattern": "gate-sahara.*-cdh.* \\S+ : SUCCESS",
                 "failure_pattern": "gate-sahara.*-cdh.* \\S+ : FAILURE"
             }
