@@ -428,7 +428,7 @@
                     "launchpad_id": "xing-yang"
                 }
             ],
-            "wiki": "http://docs.openstack.org/juno/config-reference/content/emc-vmax-driver.html",
+            "wiki": "http://docs.openstack.org/liberty/config-reference/content/emc-vmax-driver.html",
             "releases": [
                 "Icehouse",
                 "Juno",
@@ -437,15 +437,15 @@
             ],
             "ci": {
                 "id": "emc-vmax-ci",
-                "success_pattern": "Build Successful",
-                "failure_pattern": "Build Failed"
+                "success_pattern": "EMC_VMAX_FC \\S+ : SUCCESS",
+                "failure_pattern": "EMC_VMAX_FC \\S+ : FAILURE"
             }
         },
         {
             "project_id": "openstack/cinder",
             "vendor": "EMC",
             "name": "EMC ScaleIO",
-            "description": "",
+            "description": "The EMC ScaleIO driver supports ScaleIO Data Client connected volumes by using ScaleIO REST API.",
             "maintainers": [
                 {
                     "name": "Xing Yang",
@@ -456,7 +456,12 @@
             "wiki": "",
             "releases": [
                 "Liberty"
-            ]
+            ],
+            "ci": {
+                "id": "emc-scaleio-ci",
+                "success_pattern": "EMC_SCALEIO \\S+ : SUCCESS",
+                "failure_pattern": "EMC_SCALEIO \\S+ : FAILURE"
+            }
         },
         {
             "project_id": "openstack/cinder",
@@ -470,7 +475,7 @@
                     "launchpad_id": "xing-yang"
                 }
             ],
-            "wiki": "http://docs.openstack.org/juno/config-reference/content/emc-vnx-direct-driver.html",
+            "wiki": "http://docs.openstack.org/liberty/config-reference/content/emc-vnx-direct-driver.html",
             "releases": [
                 "Icehouse",
                 "Juno",
@@ -495,7 +500,7 @@
                     "launchpad_id": "xing-yang"
                 }
             ],
-            "wiki": "http://docs.openstack.org/juno/config-reference/content/emc-vnx-direct-driver.html",
+            "wiki": "http://docs.openstack.org/liberty/config-reference/content/emc-vnx-direct-driver.html",
             "releases": [
                 "Juno",
                 "Kilo",
@@ -519,7 +524,7 @@
                     "launchpad_id": "xing-yang"
                 }
             ],
-            "wiki": "http://www.xtremio.com/wp-content/uploads/2014/07/h13287-ds-xtremio-openstack.pdf",
+            "wiki": "http://docs.openstack.org/liberty/config-reference/content/XtremIO-cinder-driver.html",
             "releases": [
                 "Juno",
                 "Kilo",
@@ -543,7 +548,7 @@
                     "launchpad_id": "xing-yang"
                 }
             ],
-            "wiki": "http://www.xtremio.com/wp-content/uploads/2014/07/h13287-ds-xtremio-openstack.pdf",
+            "wiki": "http://docs.openstack.org/liberty/config-reference/content/XtremIO-cinder-driver.html",
             "releases": [
                 "Juno",
                 "Kilo",
@@ -578,8 +583,8 @@
             ],
             "ci": {
                 "id": "emc-vmax-ci",
-                "success_pattern": "Build Successful",
-                "failure_pattern": "Build Failed"
+                "success_pattern": "EMC_VMAX_ISCSI \\S+ : SUCCESS",
+                "failure_pattern": "EMC_VMAX_ISCSI \\S+ : FAILURE"
             }
         },
         {
@@ -2075,6 +2080,55 @@
             "releases": [
                 "Kilo"
             ]
+        },
+        {
+            "project_id": "openstack/manila",
+            "vendor": "EMC",
+            "name": "EMC VNX Manila Driver",
+            "description": "The VNX Manila driver is a plugin for the EMC Manila driver framework which allows Manila to interface with a VNX backend to provide shared filesystems. The driver supports Manila driver mode (driver_handles_share_servers = True).",
+            "maintainers": [
+                {
+                    "name": "Xing Yang",
+                    "irc": "xyang",
+                    "email": "xing.yang@emc.com",
+                    "launchpad_id": "xing-yang"
+                }
+            ],
+            "wiki": "https://github.com/openstack/manila/blob/master/doc/source/devref/emc_vnx_driver.rst",
+            "releases": [
+                "Juno",
+                "Kilo",
+                "Liberty"
+            ],
+            "ci": {
+                "id": "emc-vnx-ci",
+                "success_pattern": "EMC_VNX_MANILA \\S+ : SUCCESS",
+                "failure_pattern": "EMC_VNX_MANILA \\S+ : FAILURE"
+            }
+        },
+        {
+            "project_id": "openstack/manila",
+            "vendor": "EMC",
+            "name": "EMC Isilon Manila Driver",
+            "description": "The Isilon Manila driver is a plugin for the EMC Manila driver framework which allows Manila to interface with an Isilon backend to provide a shared filesystems. The driver supports Manila driver mode (driver_handles_share_servers = False).",
+            "maintainers": [
+                {
+                    "name": "Xing Yang",
+                    "irc": "xyang",
+                    "email": "xing.yang@emc.com",
+                    "launchpad_id": "xing-yang"
+                }
+            ],
+            "wiki": "https://github.com/openstack/manila/blob/master/doc/source/devref/emc_isilon_driver.rst",
+            "releases": [
+                "Kilo",
+                "Liberty"
+            ],
+            "ci": {
+                "id": "emc-isilon-ci",
+                "success_pattern": "EMC_ISILON \\S+ : SUCCESS",
+                "failure_pattern": "EMC_ISILON \\S+ : FAILURE"
+            }
         },
         {
             "project_id": "openstack/neutron",
