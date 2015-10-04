@@ -453,7 +453,7 @@
                     "launchpad_id": "xing-yang"
                 }
             ],
-            "wiki": "",
+            "wiki": "http://docs.openstack.org/liberty/config-reference/content/ScaleIO-cinder-driver.html",
             "releases": [
                 "Liberty"
             ],
