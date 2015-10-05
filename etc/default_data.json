@@ -591,7 +591,7 @@
                 "Liberty"
             ],
             "ci": {
-                "id": "hp-cinder-ci",
+                "id": "hp-storage-ci",
                 "success_pattern": "Build Successful",
                 "failure_pattern": "Build Failed"
             }
@@ -623,7 +623,7 @@
                 "Liberty"
             ],
             "ci": {
-                "id": "hp-cinder-ci",
+                "id": "hp-storage-ci",
                 "success_pattern": "Build Successful",
                 "failure_pattern": "Build Failed"
             }
@@ -658,7 +658,7 @@
                 "Liberty"
             ],
             "ci": {
-                "id": "hp-cinder-ci",
+                "id": "hp-storage-ci",
                 "success_pattern": "Build Successful",
                 "failure_pattern": "Build Failed"
             }
