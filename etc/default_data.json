@@ -101,9 +101,26 @@
     "drivers": [
         {
             "project_id": "openstack/cinder",
+            "vendor": "Block Bridge",
+            "name": "Block Bridge iSCSI",
+            "description": "Volume driver.",
+            "maintainers": [
+                {
+                    "name": "Joshua Huber",
+                    "email": "jhuber@blockbridge.com",
+                    "launchpad_id": "huber"
+                }
+            ],
+            "wiki": "",
+            "releases": [
+                "Liberty"
+            ]
+        },
+        {
+            "project_id": "openstack/cinder",
             "vendor": "Ceph",
             "name": "Ceph RADOS Block Device (RBD)",
-            "description": "The Ceph RADOS Block Device driver allows to use Ceph RADOS block devices (RBD) for volumes.",
+            "description": "The Ceph RADOS Block Device volume driver allows to use Ceph RADOS block devices (RBD) for volumes.",
             "maintainers": [
                 {
                     "name": "Josh Durgin",
@@ -141,7 +158,8 @@
                 "Havana",
                 "Icehouse",
                 "Juno",
-                "Kilo"
+                "Kilo",
+                "Liberty"
             ],
             "ci": {
                 "id": "jenkins",
@@ -152,24 +170,7 @@
         {
             "project_id": "openstack/cinder",
             "vendor": "Citrix",
-            "name": "XenAPI Storage Manager volume driver",
-            "maintainers": [
-                {
-                    "name": "Mate Lakat",
-                    "email": "mate.lakat@citrix.com",
-                    "launchpad_id": "mate-lakat"
-                }
-            ],
-            "description": "The Xen Storage Manager volume driver (xensm) is a XenAPI hypervisor specific volume driver, and can be used to provide basic storage functionality, including volume creation and destruction, on a number of different storage back-ends.",
-            "wiki": "http://docs.openstack.org/juno/config-reference/content/xensm.html",
-            "releases": [
-                "Grizzly"
-            ]
-        },
-        {
-            "project_id": "openstack/cinder",
-            "vendor": "Citrix",
-            "name": "XenAPINFS",
+            "name": "XenAPINFS volume driver",
             "description": "XenAPINFS is a Block Storage (Cinder) driver that uses an NFS share through the XenAPI Storage Manager to store virtual disk images and expose those virtual disks as volumes. This driver does not access the NFS share directly. It accesses the share only through XenAPI Storage Manager. Consider this driver as a reference implementation for use of the XenAPI Storage Manager in OpenStack (present in XenServer and XCP).",
             "maintainers": [
                 {
@@ -186,8 +187,8 @@
         {
             "project_id": "openstack/cinder",
             "vendor": "Cloud Byte",
-            "name": "Cloud Byte",
-            "description": "Volume driver for Cloud Byte",
+            "name": "Cloud Byte iSCSI volume driver",
+            "description": "Volume driver for Cloud Byte iSCSI",
             "maintainers": [
                 {
                     "name": "Amit Das",
@@ -197,14 +198,15 @@
             ],
             "wiki": "",
             "releases": [
-                "Kilo"
+                "Kilo",
+                "Liberty"
             ]
         },
         {
             "project_id": "openstack/cinder",
             "vendor": "Cloudbase",
-            "name": "Windows Server driver",
-            "description": "There is a volume back-end driver for Windows Server 2012 / 2012 R2.",
+            "name": "Microsoft iSCSI volume driver",
+            "description": "",
             "maintainers": [
                 {
                     "name": "Alessandro Pilotti",
@@ -219,11 +221,34 @@
             ],
             "wiki": "http://docs.openstack.org/juno/config-reference/content/windows-volume-driver.html",
             "releases": [
-                "Grizzly",
                 "Havana",
                 "Icehouse",
                 "Juno",
-                "Kilo"
+                "Kilo",
+                "Liberty"
+            ]
+        },
+        {
+            "project_id": "openstack/cinder",
+            "vendor": "Cloudbase",
+            "name": "Microsoft SMB/NFS volume driver",
+            "description": "",
+            "maintainers": [
+                {
+                    "name": "Alessandro Pilotti",
+                    "email": "apilotti@cloudbasesolutions.com",
+                    "launchpad_id": "alexpilotti"
+                },
+                {
+                    "name": "Octavian Ciuhandu",
+                    "email": "ociuhandu@cloudbasesolutions.com",
+                    "launchpad_id": "ociuhandu"
+                }
+            ],
+            "wiki": "http://docs.openstack.org/juno/config-reference/content/windows-volume-driver.html",
+            "releases": [
+                "Kilo",
+                "Liberty"
             ]
         },
         {
@@ -276,7 +301,7 @@
         {
             "project_id": "openstack/cinder",
             "vendor": "Datera",
-            "name": "Datera Volume driver",
+            "name": "Datera iSCSI Volume driver",
             "description": "Datera Volume driver can allow OpenStack services communicate with Datera storage for both vHost and ISCSI.",
             "maintainers": [
                 {
@@ -288,7 +313,8 @@
             "wiki": "http://docs.openstack.org/developer/cinder/api/cinder.volume.drivers.datera.html?highlight=datera#module-cinder.volume.drivers.datera",
             "releases": [
                 "Juno",
-                "Kilo"
+                "Kilo",
+                "Liberty"
             ],
             "ci": {
                 "id": "datera-ci",
@@ -299,7 +325,7 @@
         {
             "project_id": "openstack/cinder",
             "vendor": "Dell",
-            "name": "Dell EqualLogic volume driver",
+            "name": "Dell EqualLogic iSCSI volume driver",
             "description": "The Dell EqualLogic volume driver interacts with configured EqualLogic arrays and supports various operations, such as volume creation and deletion, volume attachment and detachment, snapshot creation and deletion, and clone creation.",
             "maintainers": [
                 {
@@ -313,7 +339,8 @@
                 "Havana",
                 "Icehouse",
                 "Juno",
-                "Kilo"
+                "Kilo",
+                "Liberty"
             ],
             "ci": {
                 "id": "dell-storage-ci",
@@ -324,7 +351,7 @@
         {
             "project_id": "openstack/cinder",
             "vendor": "Dell",
-            "name": "Dell Storage Center volume driver",
+            "name": "Dell Storage Center iSCSI/FC volume driver",
             "description": "The Dell Storage Center volume driver interacts with configured Storage Center arrays and supports various operations, such as volume creation and deletion, volume attachment and detachment, snapshot creation and deletion, and clone creation.",
             "maintainers": [
                 {
@@ -336,7 +363,8 @@
             ],
             "wiki": "http://docs.openstack.org/kilo/config-reference/content/dell-storagecenter-driver.html",
             "releases": [
-                "Kilo"
+                "Kilo",
+                "Liberty"
             ],
             "ci": {
                 "id": "dell-storage-ci",
@@ -344,6 +372,50 @@
                 "failure_pattern": "dell-sc-iscsi-dsvm-volume \\S+ : FAILURE"
             }
         },
+        {
+            "project_id": "openstack/cinder",
+            "vendor": "Dot Hill",
+            "name": "Dot Hill iSCSI/FC volume driver",
+            "description": "",
+            "maintainers": [
+                {
+                    "name": "Nikesh Mahalaka",
+                    "email": "nikesh.mahalak@dothill.com",
+                    "irc": "nikesh",
+                    "launchpad_id": "nikesh-mahalaka"
+                }
+            ],
+            "wiki": "",
+            "releases": [
+                "Liberty"
+            ]
+        },
+        {
+            "project_id": "openstack/cinder",
+            "vendor": "Dot Hill",
+            "name": "HP MSA iSCSI/FC volume driver",
+            "description": "",
+            "maintainers": [
+                {
+                    "name": "Nikesh Mahalaka",
+                    "email": "nikesh.mahalak@dothill.com",
+                    "irc": "nikesh",
+                    "launchpad_id": "nikesh-mahalaka"
+                }
+            ],
+            "releases": [
+                "Diablo",
+                "Essex",
+                "Folsom",
+                "Grizzly",
+                "Havana",
+                "Icehouse",
+                "Juno",
+                "Kilo",
+                "Liberty"
+            ]
+        },
+
         {
             "project_id": "openstack/cinder",
             "vendor": "EMC",
@@ -360,13 +432,31 @@
             "releases": [
                 "Icehouse",
                 "Juno",
-                "Kilo"
+                "Kilo",
+                "Liberty"
             ],
             "ci": {
                 "id": "emc-vmax-ci",
                 "success_pattern": "Build Successful",
                 "failure_pattern": "Build Failed"
             }
+        },
+        {
+            "project_id": "openstack/cinder",
+            "vendor": "EMC",
+            "name": "EMC ScaleIO",
+            "description": "",
+            "maintainers": [
+                {
+                    "name": "Xing Yang",
+                    "email": "xing.yang@emc.com",
+                    "launchpad_id": "xing-yang"
+                }
+            ],
+            "wiki": "",
+            "releases": [
+                "Liberty"
+            ]
         },
         {
             "project_id": "openstack/cinder",
@@ -384,7 +474,8 @@
             "releases": [
                 "Icehouse",
                 "Juno",
-                "Kilo"
+                "Kilo",
+                "Liberty"
             ],
             "ci": {
                 "id": "emc-vnx-ci",
@@ -407,7 +498,8 @@
             "wiki": "http://docs.openstack.org/juno/config-reference/content/emc-vnx-direct-driver.html",
             "releases": [
                 "Juno",
-                "Kilo"
+                "Kilo",
+                "Liberty"
             ],
             "ci": {
                 "id": "emc-vnx-ci",
@@ -430,7 +522,8 @@
             "wiki": "http://www.xtremio.com/wp-content/uploads/2014/07/h13287-ds-xtremio-openstack.pdf",
             "releases": [
                 "Juno",
-                "Kilo"
+                "Kilo",
+                "Liberty"
             ],
             "ci": {
                 "id": "emc-xio-ci",
@@ -453,7 +546,8 @@
             "wiki": "http://www.xtremio.com/wp-content/uploads/2014/07/h13287-ds-xtremio-openstack.pdf",
             "releases": [
                 "Juno",
-                "Kilo"
+                "Kilo",
+                "Liberty"
             ],
             "ci": {
                 "id": "emc-xio-ci",
@@ -479,7 +573,8 @@
                 "Havana",
                 "Icehouse",
                 "Juno",
-                "Kilo"
+                "Kilo",
+                "Liberty"
             ],
             "ci": {
                 "id": "emc-vmax-ci",
@@ -556,13 +651,32 @@
                 "Havana",
                 "Icehouse",
                 "Juno",
-                "Kilo"
+                "Kilo",
+                "Liberty"
             ],
             "ci": {
                 "id": "jenkins",
                 "success_pattern": "gate-tempest-dsvm-full-glusterfs-nv \\S+ : SUCCESS",
                 "failure_pattern": "gate-tempest-dsvm-full-glusterfs-nv \\S+ : FAILURE"
             }
+        },
+        {
+            "project_id": "openstack/cinder",
+            "vendor": "HGST",
+            "name": "HGST Flash Storage",
+            "description": "",
+            "maintainers": [
+                {
+                    "name": "Earle Philhower III",
+                    "email": "earle.philhower.iii@hgst.com",
+                    "irc": "earlephilhower",
+                    "launchpad_id": "earle-philhower-iii"
+                }
+            ],
+            "wiki": "",
+            "releases": [
+                "Liberty"
+            ]
         },
         {
             "project_id": "openstack/cinder",
@@ -665,6 +779,27 @@
         },
         {
             "project_id": "openstack/cinder",
+            "vendor": "HP",
+            "name": "HP XP iSCSI/FC volume driver",
+            "description": "",
+            "maintainers": [
+                {
+                    "name": "Walter Boring",
+                    "email": "walter.boring@hpe.com",
+                    "launchpad_id": "walter-boring"
+                },
+                {
+                    "name": "Kurt Martin",
+                    "email": "kurt.f.martin@hpe.com",
+                    "launchpad_id": "kurt-f-martin"
+                }
+            ],
+            "releases": [
+                "Liberty"
+            ]
+        },
+        {
+            "project_id": "openstack/cinder",
             "vendor": "Hitachi",
             "name": "HDS HNAS iSCSI and NFS driver",
             "description": "This Block Storage volume driver provides iSCSI and NFS support for HNAS (Hitachi Network-attached Storage) arrays such as, HNAS 3000 and 4000 family.",
@@ -678,7 +813,8 @@
             "wiki": "http://docs.openstack.org/juno/config-reference/content/hds-hnas-driver.html",
             "releases": [
                 "Juno",
-                "Kilo"
+                "Kilo",
+                "Liberty"
             ],
             "ci": {
                 "id": "hds-hnas-ci",
@@ -703,13 +839,14 @@
                 "Havana",
                 "Icehouse",
                 "Juno",
-                "Kilo"
+                "Kilo",
+                "Liberty"
             ]
         },
         {
             "project_id": "openstack/cinder",
             "vendor": "Hitachi",
-            "name": "Hitachi storage volume driver",
+            "name": "Hitachi iSCSI/FC storage volume driver",
             "description": "This Block Storage volume driver provides iSCSI and Fibre Channel support for Hitachi storages such as, VSP G1000 (Virtual Storage Platform G1000), VSP (Virtual Storage Platform), HUS VM (Hitachi Unified Storage VM), and HUS 100 Family (Hitachi Unified Storage 100 Family).",
             "maintainers": [
                 {
@@ -721,7 +858,8 @@
             "wiki": "http://docs.openstack.org/juno/config-reference/content/hitachi-storage-volume-driver.html",
             "releases": [
                 "Juno",
-                "Kilo"
+                "Kilo",
+                "Liberty"
             ],
             "ci": {
                 "id": "hds-hnas-ci",
@@ -732,7 +870,7 @@
         {
             "project_id": "openstack/cinder",
             "vendor": "Huawei",
-            "name": "Huawei storage driver",
+            "name": "Huawei 18000 ISCSI/FC volume driver",
             "description": "The Huawei driver supports the iSCSI and Fibre Channel connections and enables OceanStor T series unified storage, OceanStor Dorado high-performance storage, and OceanStor HVS high-end storage to provide block storage services for OpenStack.",
             "maintainers": [
                 {
@@ -745,7 +883,8 @@
             "releases": [
                 "Havana",
                 "Juno",
-                "Kilo"
+                "Kilo",
+                "Liberty"
             ],
             "ci": {
                 "id": "huawei-volume-ci",
@@ -756,7 +895,25 @@
         {
             "project_id": "openstack/cinder",
             "vendor": "IBM",
-            "name": "IBM GPFS volume driver",
+            "name": "IBM FlashSystem iSCSI/FC volume driver",
+            "description": "",
+            "maintainers": [
+                {
+                    "name": "Edwin Wang",
+                    "email": "edwin.wang@cn.ibm.com",
+                    "launchpad_id": "edwin-wang"
+                }
+            ],
+            "wiki": "http://docs.openstack.org/config-reference/content/ibm-flashsystem-volume-driver.html",
+            "releases": [
+                "Kilo",
+                "Liberty"
+            ]
+        },
+        {
+            "project_id": "openstack/cinder",
+            "vendor": "IBM",
+            "name": "IBM GPFS NFS volume driver",
             "description": "The GPFS driver enables the use of GPFS in a fashion similar to that of the NFS driver. With the GPFS driver, instances do not actually access a storage device at the block level. Instead, volume backing files are created in a GPFS file system and mapped to instances, which emulate a block device.",
             "maintainers": [
                 {
@@ -770,7 +927,8 @@
                 "Havana",
                 "Icehouse",
                 "Juno",
-                "Kilo"
+                "Kilo",
+                "Liberty"
             ],
             "ci": {
                 "id": "ibm-gpfs-ci",
@@ -781,7 +939,7 @@
         {
             "project_id": "openstack/cinder",
             "vendor": "IBM",
-            "name": "IBM NAS driver",
+            "name": "IBM NAS NFS volume driver",
             "description": "The IBM NAS Driver works using NFS protocol, and implements other value added features. It allows IBM SONAS and Storwize V7000 Unified filers and NFS based GPFS storage system deployments to provide block storage for OpenStack environment.",
             "maintainers": [
                 {
@@ -794,7 +952,8 @@
             "releases": [
                 "Icehouse",
                 "Juno",
-                "Kilo"
+                "Kilo",
+                "Liberty"
             ],
             "ci": {
                 "id": "ibm-ibmnas-ci",
@@ -805,7 +964,7 @@
         {
             "project_id": "openstack/cinder",
             "vendor": "IBM",
-            "name": "IBM Storwize family and SVC volume driver",
+            "name": "IBM Storwize family and SVC iSCSI/FC volume driver",
             "description": "The volume management driver for Storwize family and SAN Volume Controller (SVC) provides OpenStack Compute instances with access to IBM Storwize family or SVC storage systems.",
             "maintainers": [
                 {
@@ -821,7 +980,8 @@
                 "Havana",
                 "Icehouse",
                 "Juno",
-                "Kilo"
+                "Kilo",
+                "Liberty"
             ],
             "ci": {
                 "id": "ibm-storwize-ci",
@@ -832,7 +992,7 @@
         {
             "project_id": "openstack/cinder",
             "vendor": "IBM",
-            "name": "IBM XIV/DS8K volume driver",
+            "name": "IBM XIV/DS8K iSCSI/FC volume driver",
             "description": "The IBM XIV/DS8K volume driver is installed on OpenStack Cinder nodes and enables utilization of storage resources provided by IBM XIV and DS8000 storage systems.",
             "maintainers": [
                 {
@@ -848,13 +1008,86 @@
                 "Havana",
                 "Icehouse",
                 "Juno",
-                "Kilo"
+                "Kilo",
+                "Liberty"
             ],
             "ci": {
                 "id": "ibmxivci",
                 "success_pattern": "Build succeeded",
                 "failure_pattern": "Build failed"
             }
+        },
+        {
+            "project_id": "openstack/cinder",
+            "vendor": "InfoTrend",
+            "name": "InfoTrend iSCSI/FC",
+            "description": "",
+            "maintainers": [
+                {
+                    "name": "Jessy Lee",
+                    "email": "jessy1092@gmail.com",
+                    "launchpad_id": "jessy1092"
+                }
+            ],
+            "releases": [
+                "Liberty"
+            ]
+        },
+        {
+            "project_id": "openstack/cinder",
+            "vendor": "Lenovo",
+            "name": "Lenovo Storage iSCSI/FC",
+            "description": "",
+            "maintainers": [
+                {
+                    "name": "Nikesh Mahalaka",
+                    "email": "nikesh.mahalak@dothill.com",
+                    "irc": "nikesh",
+                    "launchpad_id": "nikesh-mahalaka"
+                }
+            ],
+            "wiki": "",
+            "releases": [
+                "Liberty"
+            ]
+        },
+        {
+            "project_id": "openstack/cinder",
+            "vendor": "LinBit",
+            "name": "DRBD",
+            "description": "",
+            "maintainers": [
+                {
+                    "name": "Philipp Marek",
+                    "email": "philipp.marek@linbit.com",
+                    "launchpad_id": "philipp-marek"
+                }
+            ],
+            "wiki": "",
+            "releases": [
+                "Liberty"
+            ]
+        },
+        {
+            "project_id": "openstack/cinder",
+            "vendor": "Mirantis",
+            "name": "Generic Block Device volume driver",
+            "description": "For generic local block device usage.",
+            "maintainers": [
+                {
+                    "name": "Sean McGinnis",
+                    "email": "sean_mcginnis@dell.com",
+                    "irc": "smcginnis",
+                    "launchpad_id": "sean-mcginnis"
+                }
+            ],
+            "releases": [
+                "Havana",
+                "Icehouse",
+                "Juno",
+                "Kilo",
+                "Liberty"
+            ]
         },
         {
             "project_id": "openstack/cinder",
@@ -911,7 +1144,7 @@
         {
             "project_id": "openstack/cinder",
             "vendor": "Nimble Storage",
-            "name": "Nimble Storage Volume driver",
+            "name": "Nimble Storage iSCSI Volume driver",
             "description": "Nimble Storage is hybrid storage combining both flash SSD and near-line SAS disks. The architecture is based on CASL (Cache Accelerated Sequential Layout) where random writes are coalesced in NVRAM + flushed to disks sequentially, with the flash/SSD as read acceleration cache. CASL architecture provides non-disruptive upgrade for compute (processer/memory), cache (flash SSDs), capacity (disk shelves) as well as scale-out where up to four nodes of Nimble controllers can be clustered.",
             "maintainers": [
                 {
@@ -923,7 +1156,8 @@
             "wiki": "http://docs.openstack.org/developer/cinder/api/cinder.volume.drivers.nimble.html?highlight=nimble#module-cinder.volume.drivers.nimble",
             "releases": [
                 "Juno",
-                "Kilo"
+                "Kilo",
+                "Liberty"
             ]
         },
         {
@@ -933,9 +1167,10 @@
             "description": "The default volume back-end uses local volumes managed by LVM. This driver supports different transport protocols to attach volumes, currently ISCSI and ISER.",
             "maintainers": [
                 {
-                    "name": "Mike Perez",
-                    "email": "thingee@gmail.com",
-                    "launchpad_id": "thingee"
+                    "name": "Sean McGinnis",
+                    "email": "sean_mcginnis@dell.com",
+                    "irc": "smcginnis",
+                    "launchpad_id": "sean-mcginnis"
                 }
             ],
             "wiki": "http://docs.openstack.org/kilo/config-reference/content/lvm-volume-driver.html",
@@ -950,7 +1185,8 @@
                 "Havana",
                 "Icehouse",
                 "Juno",
-                "Kilo"
+                "Kilo",
+                "Liberty"
             ]
         },
         {
@@ -960,9 +1196,10 @@
             "description": "The Network File System (NFS) is a distributed file system protocol. An NFS server exports one or more of its file systems, known as shares. An NFS client can mount these exported shares on its own file system. File actions on this mounted remote file system can be performed as if the file system were local.",
             "maintainers": [
                 {
-                    "name": "Mike Perez",
-                    "email": "thingee@gmail.com",
-                    "launchpad_id": "thingee"
+                    "name": "Sean McGinnis",
+                    "email": "sean_mcginnis@dell.com",
+                    "irc": "smcginnis",
+                    "launchpad_id": "sean-mcginnis"
                 }
             ],
             "wiki": "http://docs.openstack.org/kilo/config-reference/content/NFS-driver.html",
@@ -972,9 +1209,31 @@
                 "Havana",
                 "Icehouse",
                 "Juno",
-                "Kilo"
+                "Kilo",
+                "Liberty"
             ]
         },
+        {
+            "project_id": "openstack/cinder",
+            "vendor": "OpenStack Community",
+            "name": "Remote FS",
+            "description": "",
+            "maintainers": [
+                {
+                    "name": "Sean McGinnis",
+                    "email": "sean_mcginnis@dell.com",
+                    "irc": "smcginnis",
+                    "launchpad_id": "sean-mcginnis"
+                }
+            ],
+            "wiki": "",
+            "releases": [
+                "Juno",
+                "Kilo",
+                "Liberty"
+            ]
+        },
+
         {
             "project_id": "openstack/cinder",
             "vendor": "OpenStack Community",
@@ -982,22 +1241,24 @@
             "description": "Sheepdog is an open-source distributed storage system that provides a virtual storage pool utilizing internal disk of commodity servers. This driver enables use of Sheepdog through QEMU/KVM.",
             "maintainers": [
                 {
-                    "name": "Mike Perez",
-                    "email": "thingee@gmail.com",
-                    "launchpad_id": "thingee"
+                    "name": "Sean McGinnis",
+                    "email": "sean_mcginnis@dell.com",
+                    "irc": "smcginnis",
+                    "launchpad_id": "sean-mcginnis"
                 }
             ],
             "wiki": "http://docs.openstack.org/juno/config-reference/content/sheepdog-driver.html",
             "releases": [
                 "Icehouse",
                 "Juno",
-                "Kilo"
+                "Kilo",
+                "Liberty"
             ]
         },
         {
             "project_id": "openstack/cinder",
             "vendor": "Oracle",
-            "name": "ZFS Storage Appliance driver",
+            "name": "ZFS Storage Appliance iSCSI/NFS driver",
             "description": "Cinder Driver support for Oracle's ZFS Storage Appliance product line. It's an iSCSI driver that uses REST API to communicate out of band with the storage controller.",
             "maintainers": [
                 {
@@ -1009,13 +1270,31 @@
             "wiki": "http://docs.openstack.org/developer/cinder/api/cinder.volume.drivers.zfssa.zfssaiscsi.html?highlight=zfs#module-cinder.volume.drivers.zfssa.zfssaiscsi",
             "releases": [
                 "Juno",
-                "Kilo"
+                "Kilo",
+                "Liberty"
+            ]
+        },
+        {
+            "project_id": "openstack/cinder",
+            "vendor": "Parallels",
+            "name": "VZStorage",
+            "description": "",
+            "maintainers": [
+                {
+                    "name": "Dmitry Guryanov",
+                    "email": "dguryanov@parallels.com",
+                    "launchpad_id": "dguryanov"
+                }
+            ],
+            "wiki": "",
+            "releases": [
+                "Liberty"
             ]
         },
         {
             "project_id": "openstack/cinder",
             "vendor": "ProphetStor",
-            "name": "ProphetStor driver",
+            "name": "ProphetStor iSCSI/FC volume driver",
             "description": "ProphetStor Fibre Channel and iSCSI drivers add support for ProphetStor Flexvisor through OpenStack Cinder. ProphetStor Flexvisor enables commodity x86 hardware as software-defined storage leveraging well-proven ZFS for disk management to provide enterprise grade storage services such as snapshots, data protection with different RAID levels, replication, and deduplication etc.",
             "maintainers": [
                 {
@@ -1027,7 +1306,8 @@
             "wiki": "http://docs.openstack.org/juno/config-reference/content/prophetstor-dpl-driver.html",
             "releases": [
                 "Juno",
-                "Kilo"
+                "Kilo",
+                "Liberty"
             ],
             "ci": {
                 "id": "prophetstor-ci",
@@ -1037,7 +1317,7 @@
         },
         {
             "project_id": "openstack/cinder",
-            "vendor": "Pure Storage",
+            "vendor": "Pure iSCSI/FC Storage",
             "name": "Volume driver for Pure Storage FlashArray storage system",
             "description": "Pure Storage builds all-flash storage arrays. The active/active controller architecture is based on the Purity Operating Environment and providing an adaptive metadata fabric that is scalable, granular to 512B, and protected. Pure systems are based on durable, resilient MLC flash and providing consistent high performance. Pure Storage FlashArrays leverage deduplication and compression technologies to reduce data written thereby lowering costs and increasing density. FlashArrays are designed for non-disruptive operations and can be upgraded or expanded without disruption or performance degradation.",
             "maintainers": [
@@ -1062,7 +1342,7 @@
         {
             "project_id": "openstack/cinder",
             "vendor": "Quobyte Inc.",
-            "name": "Quobyte Cinder driver",
+            "name": "Quobyte RemoteFS volume driver",
             "description": "Volume driver for Quobyte software defined storage system. Quobyte storage runs on plain Linux servers and allows reconfiguration at runtime without storage service interruption. Storage behaviour is fully configurable via policies which also control automation and hardware independent configuration.",
             "maintainers": [
                 {
@@ -1079,7 +1359,8 @@
                 "failure_pattern": "FAILURE"
             },
             "releases": [
-                "Kilo"
+                "Kilo",
+                "Liberty"
             ]
         },
         {
@@ -1105,7 +1386,31 @@
                 "Havana",
                 "Icehouse",
                 "Juno",
-                "Kilo"
+                "Kilo",
+                "Liberty"
+            ]
+        },
+        {
+            "project_id": "openstack/cinder",
+            "vendor": "Scality",
+            "name": "Scality iSCSI REST Block volume driver",
+            "description": "",
+            "maintainers": [
+                {
+                    "name": "Jordan Pittier",
+                    "email": "jordan.pittier@scality.com",
+                    "launchpad_id": "jordan-pittier"
+                },
+                {
+                    "name": "David Pineau",
+                    "email": "david.pineau@scality.com",
+                    "launchpad_id": "dav-pineau"
+                }
+            ],
+            "wiki": "",
+            "releases": [
+                "Kilo",
+                "Liberty"
             ]
         },
         {
@@ -1127,7 +1432,8 @@
                 "Havana",
                 "Icehouse",
                 "Juno",
-                "Kilo"
+                "Kilo",
+                "Liberty"
             ],
             "ci": {
                 "id": "SolidFire-dsvm-full",
@@ -1179,7 +1485,8 @@
                 "Havana",
                 "Icehouse",
                 "Juno",
-                "Kilo"
+                "Kilo",
+                "Liberty"
             ],
             "ci": {
                 "id": "vmwareminesweeper",
@@ -1189,8 +1496,26 @@
         },
         {
             "project_id": "openstack/cinder",
+            "vendor": "Violin Memory",
+            "name": "Violin Memory iSCSI/FC volume driver",
+            "description": "",
+            "maintainers": [
+                {
+                    "name": "Ryan Lucio",
+                    "email": "rlucio@vmem.com",
+                    "launchpad_id": "rlucio"
+                }
+            ],
+            "wiki": "",
+            "releases": [
+                "Kilo",
+                "Liberty"
+            ]
+        },
+        {
+            "project_id": "openstack/cinder",
             "vendor": "X-IO Technologies",
-            "name": "Volume Driver for X-IO ISE Block Storage",
+            "name": "X-IO ISE Block Storage iSCSI/FC",
             "description": "The ISE from X-IO Technologies is a block storage element supporting Fibre Channel and iSCSI. The volume driver from X-IO allows the cloud administrator to provision volumes on connected ISEs taking advantage of QoS, Media affinity, etc.",
             "maintainers": [
                 {
@@ -1201,7 +1526,8 @@
             ],
             "wiki": "http://docs.openstack.org/kilo/config-reference/content/xio-volume-driver.html",
             "releases": [
-                "Kilo"
+                "Kilo",
+                "Liberty"
             ],
             "ci": {
                 "id": "xio-dsvm-xio-fc",
