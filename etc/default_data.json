@@ -1558,6 +1558,26 @@
         },
         {
             "project_id": "openstack/fuel",
+            "repo": "openstack/fuel-plugin-xenserver",
+            "vendor": "Citrix",
+            "name": "Xenserver plugin for Fuel",
+            "description": "XenServer Fuel Plugin will help to deploy Mirantis OpenStack over XenServer hosts and make sure they work as xenapi rather than qemu.",
+            "maintainers": [
+                {
+                    "name": "Bob Ball",
+                    "email": "bob.ball@citrix.com",
+                    "launchpad_id": "bob.ball"
+                },
+                {
+                    "name": "Zhihao Hua",
+                    "email": "zhihao.hua@citrix.com",
+                    "launchpad_id": "john-hua"
+                }
+            ],
+            "wiki": "https://github.com/openstack/fuel-plugin-xenserver"
+        },
+        {
+            "project_id": "openstack/fuel",
             "repo": "stackforge/fuel-plugin-mellanox",
             "vendor": "Mellanox",
             "name": "ConnectX-3 Pro Network Adapter Support plugin for Fuel",
@@ -1729,6 +1749,21 @@
                 }
             ],
             "wiki": "https://github.com/stackforge/fuel-plugin-neutron-lbaas"
+        },
+        {
+            "project_id": "openstack/fuel",
+            "repo": "stackforge/fuel-plugin-cinder-netapp",
+            "vendor": "Mirantis",
+            "name": "NetApp plugin for Fuel",
+            "description": "NetApp – This Fuel Plugin enables use of NetApp’s NFS driver as a Cinder back-end, enabling use of Mirantis OpenStack with feature-rich, Clustered Data ONTAP-based NetApp FAS storage systems (CDOT), 7-Mode systems, and performance-optimized SANtricity-based NetApp E Series storage systems.",
+            "maintainers": [
+                {
+                    "name": "Aleksandr Vorobiov",
+                    "email": "avorobiov@mirantis.com",
+                    "launchpad_id": "avorobiov"
+                }
+            ],
+            "wiki": "https://github.com/stackforge/fuel-plugin-cinder-netapp"
         },
         {
             "project_id": "openstack/fuel",
