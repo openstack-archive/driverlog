@@ -205,13 +205,20 @@
         {
             "project_id": "openstack/cinder",
             "vendor": "Cloudbase",
-            "name": "Microsoft iSCSI volume driver",
-            "description": "",
+            "name": "Windows Server iSCSI Cinder driver",
+            "description": "Windows iSCSI volume back-end driver for Windows Server 2012 and above.",
+            "project_id": "openstack/cinder",
+            "vendor": "Cloudbase",
             "maintainers": [
                 {
                     "name": "Alessandro Pilotti",
                     "email": "apilotti@cloudbasesolutions.com",
                     "launchpad_id": "alexpilotti"
+                },
+                {
+                    "name": "Lucian Petrut",
+                    "email": "lpetrut@cloudbasesolutions.com",
+                    "launchpad_id": "petrutlucian94"
                 },
                 {
                     "name": "Octavian Ciuhandu",
@@ -221,23 +228,36 @@
             ],
             "wiki": "http://docs.openstack.org/juno/config-reference/content/windows-volume-driver.html",
             "releases": [
+                "Grizzly",
                 "Havana",
                 "Icehouse",
                 "Juno",
                 "Kilo",
                 "Liberty"
-            ]
+            ],
+            "ci": {
+                "id": "microsoft-iscsi-ci",
+                "success_pattern": "SUCCESS",
+                "failure_pattern": "FAILURE"
+            }
         },
         {
             "project_id": "openstack/cinder",
             "vendor": "Cloudbase",
-            "name": "Microsoft SMB/NFS volume driver",
-            "description": "",
+            "name": "Windows SMB3 Cinder driver",
+            "description": "SMB3 volume back-end driver for Windows Server 2012 and above.",
+            "project_id": "openstack/cinder",
+            "vendor": "Cloudbase",
             "maintainers": [
                 {
                     "name": "Alessandro Pilotti",
                     "email": "apilotti@cloudbasesolutions.com",
                     "launchpad_id": "alexpilotti"
+                },
+                {
+                    "name": "Lucian Petrut",
+                    "email": "lpetrut@cloudbasesolutions.com",
+                    "launchpad_id": "petrutlucian94"
                 },
                 {
                     "name": "Octavian Ciuhandu",
@@ -249,7 +269,47 @@
             "releases": [
                 "Kilo",
                 "Liberty"
-            ]
+            ],
+            "ci": {
+                "id": "microsoft-iscsi-ci",
+                "success_pattern": "SUCCESS",
+                "failure_pattern": "FAILURE"
+            }
+        },
+        {
+            "project_id": "openstack/cinder",
+            "vendor": "Cloudbase",
+            "name": "Linux SMB3 Cinder driver",
+            "description": "SMB3 volume back-end driver for Linux.",
+            "project_id": "openstack/cinder",
+            "vendor": "Cloudbase",
+            "maintainers": [
+                {
+                    "name": "Alessandro Pilotti",
+                    "email": "apilotti@cloudbasesolutions.com",
+                    "launchpad_id": "alexpilotti"
+                },
+                {
+                    "name": "Lucian Petrut",
+                    "email": "lpetrut@cloudbasesolutions.com",
+                    "launchpad_id": "petrutlucian94"
+                },
+                {
+                    "name": "Octavian Ciuhandu",
+                    "email": "ociuhandu@cloudbasesolutions.com",
+                    "launchpad_id": "ociuhandu"
+                }
+            ],
+            "wiki": "http://docs.openstack.org/juno/config-reference/content/windows-volume-driver.html",
+            "releases": [
+                "Kilo",
+                "Liberty"
+            ],
+            "ci": {
+                "id": "microsoft-iscsi-ci",
+                "success_pattern": "SUCCESS",
+                "failure_pattern": "FAILURE"
+            }
         },
         {
             "project_id": "openstack/cinder",
@@ -2075,6 +2135,38 @@
                 "failure_pattern": "Build Failed"
             }
         },
+       {
+            "project_id": "openstack/manila",
+            "vendor": "Cloudbase",
+            "name": "Windows SMB Driver, ",
+            "description": "The Windows SMB Driver for Manila manages SMB file shares on Windows Server 2012 and above. The driver supports both Manila driver modes (driver_handles_share_servers = True/False).",
+            "maintainers": [
+                {
+                    "name": "Alessandro Pilotti",
+                    "email": "apilotti@cloudbasesolutions.com",
+                    "launchpad_id": "alexpilotti"
+                },
+                {
+                    "name": "Lucian Petrut",
+                    "email": "lpetrut@cloudbasesolutions.com",
+                    "launchpad_id": "petrutlucian94"
+                },
+                {
+                    "name": "Octavian Ciuhandu",
+                    "email": "ociuhandu@cloudbasesolutions.com",
+                    "launchpad_id": "ociuhandu"
+                }
+            ],
+            "wiki": "https://github.com/openstack/manila/blob/master/doc/source/devref/share_back_ends_feature_support_mapping.rst",
+            "releases": [
+                "Liberty"
+            ],
+            "ci": {
+                "id": "microsoft_manila_ci",
+                "success_pattern": "Build succeeded",
+                "failure_pattern": "Build failed"
+            }
+        },
         {
             "project_id": "openstack/manila",
             "vendor": "EMC",
@@ -2508,6 +2600,7 @@
             "project_id": "openstack/neutron",
             "vendor": "Cloudbase",
             "name": "Cloudbase Hyper-V Plugin",
+            "repo": "stackforge/networking-hyperv",
             "description": "The Hyper-V Neutron plugin offers the networking options for Hyper-V Server based OpenSTack installations.",
             "maintainers": [
                 {
@@ -2516,6 +2609,10 @@
                     "launchpad_id": "alexpilotti"
                 },
                 {
+                    "name": "Claudiu Belu",
+                    "email": "cbelu@cloudbasesolutions.com",
+                    "launchpad_id": "cbelu"
+                },
                     "name": "Octavian Ciuhandu",
                     "email": "ociuhandu@cloudbasesolutions.com",
                     "launchpad_id": "ociuhandu"
