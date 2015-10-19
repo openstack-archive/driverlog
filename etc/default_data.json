@@ -1707,15 +1707,45 @@
         },
         {
             "project_id": "openstack/fuel",
+            "repo": "openstack/fuel-plugin-zabbix-monitoring-emc",
+            "vendor": "Mirantis",
+            "name": "EMC hardware monitoring to Zabbix plugin",
+            "description": "EMC hardware monitoring extension plugin extends Zabbix plugin functionality by adding monitoring of incoming SNMP traps sent from EMC VNX arrays via management network to management VIP address. It configures snmptt to parse and pass EMC VNX specific traps to Zabbix.",
+            "maintainers": [
+                    {
+                    "name": "Gregory Elkinbard",
+                    "email": "gelkinbard@mirantis.com",
+                    "launchpad_id": "gelkinbard"
+                }
+            ],
+            "wiki": "https://github.com/openstack/fuel-plugin-zabbix-monitoring-emc"
+        },
+        {
+            "project_id": "openstack/fuel",
+            "repo": "openstack/fuel-plugin-zabbix-monitoring-extreme-networks",
+            "vendor": "Mirantis",
+            "name": "Extreme Networks hardware monitoring to Zabbix plugin",
+            "description": "This plugin extends Zabbix plugin functionality by adding monitoring of incoming SNMP traps sent from Extreme Networks hardware via management network to management VIP address.",
+            "maintainers": [
+                    {
+                    "name": "Gregory Elkinbard",
+                    "email": "gelkinbard@mirantis.com",
+                    "launchpad_id": "gelkinbard"
+                }
+            ],
+            "wiki": "https://github.com/openstack/fuel-plugin-zabbix-monitoring-extreme-networks"
+        },
+        {
+            "project_id": "openstack/fuel",
             "repo": "openstack/fuel-plugin-external-emc",
             "vendor": "Mirantis",
             "name": "EMC VNX plugin for Fuel",
             "description": "EMC VNX plugin for Fuel extends Mirantis OpenStack functionality by adding support for EMC VNX arrays in Cinder using iSCSI protocol. It replaces Cinder LVM driver which is the default volume backend that uses local volumes managed by LVM. Enabling EMC VNX plugin in Mirantis OpenStack means that all Cinder services are run on Controller nodes.",
             "maintainers": [
-                {
-                    "name": "Szymon Banka",
-                    "email": "sbanka@mirantis.com",
-                    "launchpad_id": "sbanka"
+                    {
+                    "name": "Gregory Elkinbard",
+                    "email": "gelkinbard@mirantis.com",
+                    "launchpad_id": "gelkinbard"
                 }
             ],
             "wiki": "https://github.com/openstack/fuel-plugin-external-emc",
@@ -1847,6 +1877,31 @@
         },
         {
             "project_id": "openstack/fuel",
+            "repo": "openstack/fuel-plugin-zabbix-snmptrapd",
+            "vendor": "Mirantis",
+            "name": "SNMP plugin for Fuel",
+            "description": "SNMP trap daemon plugin extends Zabbix plugin functionality by adding ability to receive SNMP traps from management network and pass them to Zabbix.",
+            "maintainers": [
+                {
+                    "name": "Guillaume Thouvenin",
+                    "email": "gthouvenin@mirantis.com",
+                    "launchpad_id": "guillaume-thouvenin"
+                },
+                {
+                    "name": "Simon Pasquier",
+                    "email": "spasquier@mirantis.com",
+                    "launchpad_id": "simon-pasquier"
+                },
+                {
+                    "name": "Swann Croiset",
+                    "email": "scroiset@mirantis.com",
+                    "launchpad_id": "swann-w"
+                }
+            ],
+            "wiki": "https://github.com/openstack/fuel-plugin-zabbix-snmptrapd"
+        },
+        {
+            "project_id": "openstack/fuel",
             "repo": "openstack/fuel-plugin-lma-collector",
             "vendor": "Mirantis",
             "name": "The Logging, Monitoring And Alerting (LMA) Collector plugin for Fuel",
@@ -1908,9 +1963,19 @@
             "description": "This plugin deploys Zabbix, the leading open source enterprise monitoring and analysis solution. The Zabbix UI is installed on a controller and Zabbix agents are deployed to monitor all OpenStack nodes (plus the OpenStack APIs), their configurations further optimized to monitor specific services on each node.",
             "maintainers": [
                 {
-                    "name": "Szymon Banka",
-                    "email": "sbanka@mirantis.com",
-                    "launchpad_id": "sbanka"
+                    "name": "Guillaume Thouvenin",
+                    "email": "gthouvenin@mirantis.com",
+                    "launchpad_id": "guillaume-thouvenin"
+                },
+                {
+                    "name": "Simon Pasquier",
+                    "email": "spasquier@mirantis.com",
+                    "launchpad_id": "simon-pasquier"
+                },
+                {
+                    "name": "Swann Croiset",
+                    "email": "scroiset@mirantis.com",
+                    "launchpad_id": "swann-w"
                 }
             ],
             "wiki": "https://github.com/openstack/fuel-plugin-external-zabbix",
@@ -2600,7 +2665,7 @@
             "project_id": "openstack/neutron",
             "vendor": "Cloudbase",
             "name": "Cloudbase Hyper-V Plugin",
-            "repo": "stackforge/networking-hyperv",
+            "repo": "openstack/networking-hyperv",
             "description": "The Hyper-V Neutron plugin offers the networking options for Hyper-V Server based OpenSTack installations.",
             "maintainers": [
                 {
