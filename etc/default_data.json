@@ -1583,7 +1583,7 @@
         },
         {
             "project_id": "openstack/fuel",
-            "repo": "stackforge/fuel-plugin-mellanox",
+            "repo": "openstack/fuel-plugin-mellanox",
             "vendor": "Mellanox",
             "name": "ConnectX-3 Pro Network Adapter Support plugin for Fuel",
             "description": "This plugin configures support for Mellanox ConnectX-3 Pro network adapters, enabling high-performance SR-IOV compute traffic networking, iSER (iSCSI) block storage networking, or (as of Mirantis OpenStack 6.1) Infiniband networking. This plugin configures support for Mellanox ConnectX-3 Pro network adapters, enabling high-performance SR-IOV compute traffic networking, iSER (iSCSI) block storage networking, or Infiniband networking.",
@@ -1594,7 +1594,7 @@
                     "launchpad_id": "aviramb"
                 }
             ],
-            "wiki": "https://github.com/stackforge/fuel-plugin-mellanox",
+            "wiki": "https://github.com/openstack/fuel-plugin-mellanox",
             "ci": {
                 "id": "mellanox",
                 "success_pattern": "SUCCESS",
@@ -1613,11 +1613,11 @@
                     "launchpad_id": "sbogatkin"
                 }
             ],
-            "wiki": "https://github.com/stackforge/fuel-plugin-external-glusterfs"
+            "wiki": "https://github.com/openstack/fuel-plugin-external-glusterfs"
         },
         {
             "project_id": "openstack/fuel",
-            "repo": "stackforge/fuel-plugin-elasticsearch-kibana",
+            "repo": "openstack/fuel-plugin-elasticsearch-kibana",
             "vendor": "Mirantis",
             "name": "Elasticsearch-Kibana plugin for Fuel",
             "description": "Part of the Logging, Monitoring and Alerting (LMA) toolchain, this plugin deploys Elasticsearch server and the Kibana web interface, used primarily for filtering and analyzing deep system logs and notifications.",
@@ -1638,7 +1638,7 @@
                     "launchpad_id": "swann-w"
                 }
             ],
-            "wiki": "https://github.com/stackforge/fuel-plugin-elasticsearch-kibana",
+            "wiki": "https://github.com/openstack/fuel-plugin-elasticsearch-kibana",
             "ci": {
                 "id": "plugins.ci",
                 "success_pattern": "fuel-plugin.eskibana.build \\S+ : SUCCESS",
@@ -1647,7 +1647,7 @@
         },
         {
             "project_id": "openstack/fuel",
-            "repo": "stackforge/fuel-plugin-external-emc",
+            "repo": "openstack/fuel-plugin-external-emc",
             "vendor": "Mirantis",
             "name": "EMC VNX plugin for Fuel",
             "description": "EMC VNX plugin for Fuel extends Mirantis OpenStack functionality by adding support for EMC VNX arrays in Cinder using iSCSI protocol. It replaces Cinder LVM driver which is the default volume backend that uses local volumes managed by LVM. Enabling EMC VNX plugin in Mirantis OpenStack means that all Cinder services are run on Controller nodes.",
@@ -1658,7 +1658,7 @@
                     "launchpad_id": "sbanka"
                 }
             ],
-            "wiki": "https://github.com/stackforge/fuel-plugin-external-emc",
+            "wiki": "https://github.com/openstack/fuel-plugin-external-emc",
             "ci": {
                 "id": "plugins.ci",
                 "success_pattern": "fuel-plugin.emc.build \\S+ : SUCCESS",
@@ -1667,7 +1667,7 @@
         },
         {
             "project_id": "openstack/fuel",
-            "repo": "stackforge/fuel-plugin-neutron-fwaas",
+            "repo": "openstack/fuel-plugin-neutron-fwaas",
             "vendor": "Mirantis",
             "name": "FWaaS plugin for Fuel",
             "description": "This plugin enables OpenStack Firewall-as-a-Service, which uses iptables to apply firewall policy to all networking routers in a project, effectively creating a project-based perimeter firewall. FWaaS is thus distinct from Security Groups, which work at the instance level.",
@@ -1683,7 +1683,7 @@
                     "launchpad_id": "skolekonov"
                 }
             ],
-            "wiki": "https://github.com/stackforge/fuel-plugin-neutron-fwaas",
+            "wiki": "https://github.com/openstack/fuel-plugin-neutron-fwaas",
             "ci": {
                 "id": "fuel-tpi-ci",
                 "success_pattern": "fuel-plugin.fwaas.build \\S+ : SUCCESS",
@@ -1692,7 +1692,7 @@
         },
         {
             "project_id": "openstack/fuel",
-            "repo": "stackforge/fuel-plugin-influxdb-grafana",
+            "repo": "openstack/fuel-plugin-influxdb-grafana",
             "vendor": "Mirantis",
             "name": "InfluxDB-Grafana plugin for Fuel",
             "description": "Part of the Logging, Monitoring and Alerting (LMA) Toolchain, this plugin deploys InfluxDB server and the Grafana web interface. These components are used primarily for databasing and analysis of metrics that change over time (metric time-series).",
@@ -1713,7 +1713,7 @@
                     "launchpad_id": "swann-w"
                 }
             ],
-            "wiki": "https://github.com/stackforge/fuel-plugin-influxdb-grafana",
+            "wiki": "https://github.com/openstack/fuel-plugin-influxdb-grafana",
             "ci": {
                 "id": "plugins.ci",
                 "success_pattern": "fuel-plugin.influxdb.build \\S+ : SUCCESS",
@@ -1722,7 +1722,7 @@
         },
         {
             "project_id": "openstack/fuel",
-            "repo": "stackforge/fuel-plugin-contrail",
+            "repo": "openstack/fuel-plugin-contrail",
             "vendor": "Mirantis",
             "name": "Juniper Contrail Networking plugin for Fuel",
             "description": "This plugin enables configuration and deployment of the Juniper Contrail Networking SDN. This plugin can also be used with OpenContrail.",
@@ -1733,7 +1733,7 @@
                     "launchpad_id": "omartsyniuk"
                 }
             ],
-            "wiki": "https://github.com/stackforge/fuel-plugin-contrail",
+            "wiki": "https://github.com/openstack/fuel-plugin-contrail",
             "ci": {
                 "id": "plugins.ci",
                 "success_pattern": "fuel-plugin.contrail.build \\S+ : SUCCESS",
@@ -1742,7 +1742,7 @@
         },
         {
             "project_id": "openstack/fuel",
-            "repo": "stackforge/fuel-plugin-neutron-lbaas",
+            "repo": "openstack/fuel-plugin-neutron-lbaas",
             "vendor": "Mirantis",
             "name": "LBaaS plugin for Fuel",
             "description": "Note, that the plugin has no failover of load-balanced objects and HTTPS termination.",
@@ -1753,11 +1753,11 @@
                     "launchpad_id": "sbogatkin"
                 }
             ],
-            "wiki": "https://github.com/stackforge/fuel-plugin-neutron-lbaas"
+            "wiki": "https://github.com/openstack/fuel-plugin-neutron-lbaas"
         },
         {
             "project_id": "openstack/fuel",
-            "repo": "stackforge/fuel-plugin-cinder-netapp",
+            "repo": "openstack/fuel-plugin-cinder-netapp",
             "vendor": "Mirantis",
             "name": "NetApp plugin for Fuel",
             "description": "NetApp – This Fuel Plugin enables use of NetApp’s NFS driver as a Cinder back-end with Clustered Data ONTAP-based NetApp FAS storage systems (CDOT), 7-Mode systems, and performance-optimized SANtricity-based NetApp E Series storage systems.",
@@ -1768,11 +1768,11 @@
                     "launchpad_id": "avorobiov"
                 }
             ],
-            "wiki": "https://github.com/stackforge/fuel-plugin-cinder-netapp"
+            "wiki": "https://github.com/openstack/fuel-plugin-cinder-netapp"
         },
         {
             "project_id": "openstack/fuel",
-            "repo": "stackforge/fuel-plugin-opendaylight",
+            "repo": "openstack/fuel-plugin-opendaylight",
             "vendor": "Mirantis",
             "name": "OpenDaylight Plugin for Fuel",
             "description": "This is a proof of concept of the plugin which will install OpenDaylight controller and set it as manager for OVS using ovsdb plugin.",
@@ -1783,11 +1783,11 @@
                     "launchpad_id": "michal+launchpad"
                 }
             ],
-            "wiki": "https://github.com/stackforge/fuel-plugin-opendaylight"
+            "wiki": "https://github.com/openstack/fuel-plugin-opendaylight"
         },
         {
             "project_id": "openstack/fuel",
-            "repo": "stackforge/fuel-plugin-lma-collector",
+            "repo": "openstack/fuel-plugin-lma-collector",
             "vendor": "Mirantis",
             "name": "The Logging, Monitoring And Alerting (LMA) Collector plugin for Fuel",
             "description": "Installed on OpenStack controller, compute, and storage nodes, this module collects logs, metrics and notifications from system and OpenStack services and forwards that information to external backend databases such as Elasticsearch and InfluxDB.",
@@ -1808,7 +1808,7 @@
                     "launchpad_id": "swann-w"
                 }
             ],
-            "wiki": "https://github.com/stackforge/fuel-plugin-lma-collector",
+            "wiki": "https://github.com/openstack/fuel-plugin-lma-collector",
             "ci": {
                 "id": "plugins.ci",
                 "success_pattern": "fuel-plugin.lma.build \\S+ : SUCCESS",
@@ -1817,7 +1817,7 @@
         },
         {
             "project_id": "openstack/fuel",
-            "repo": "stackforge/fuel-plugin-neutron-vpnaas",
+            "repo": "openstack/fuel-plugin-neutron-vpnaas",
             "vendor": "Mirantis",
             "name": "VPNaaS plugin for Fuel",
             "description": "This Neutron extension introduces a flexible IPSec VPN feature-set supported by Neutron CLI and, more simply, in Horizon, by adding a new set of tabs to Network. VPNs can be easily and quickly implemented to connect groups of VMs on separate subnets, either within the same cloud or between clouds, across network or internet.",
@@ -1833,7 +1833,7 @@
                     "launchpad_id": "skolekonov"
                 }
             ],
-            "wiki": "https://github.com/stackforge/fuel-plugin-neutron-vpnaas",
+            "wiki": "https://github.com/openstack/fuel-plugin-neutron-vpnaas",
             "ci": {
                 "id": "fuel-tpi-ci",
                 "success_pattern": "fuel-plugin.vpnaas.build \\S+ : SUCCESS",
@@ -1842,7 +1842,7 @@
         },
         {
             "project_id": "openstack/fuel",
-            "repo": "stackforge/fuel-plugin-external-zabbix",
+            "repo": "openstack/fuel-plugin-external-zabbix",
             "vendor": "Mirantis",
             "name": "Zabbix Monitoring plugin for Fuel",
             "description": "This plugin deploys Zabbix, the leading open source enterprise monitoring and analysis solution. The Zabbix UI is installed on a controller and Zabbix agents are deployed to monitor all OpenStack nodes (plus the OpenStack APIs), their configurations further optimized to monitor specific services on each node.",
@@ -1853,7 +1853,7 @@
                     "launchpad_id": "sbanka"
                 }
             ],
-            "wiki": "https://github.com/stackforge/fuel-plugin-external-zabbix",
+            "wiki": "https://github.com/openstack/fuel-plugin-external-zabbix",
             "ci": {
                 "id": "plugins.ci",
                 "success_pattern": "fuel-plugin.zabbix.build \\S+ : SUCCESS",
@@ -1862,7 +1862,7 @@
         },
         {
             "project_id": "openstack/fuel",
-            "repo": "stackforge/fuel-plugin-calico",
+            "repo": "openstack/fuel-plugin-calico",
             "vendor": "Project Calico",
             "name": "Calico plugin for Fuel",
             "description": "This plugin provides Calico's Layer 3 Virtual Networking for Highly Scalable Data Centers",
@@ -1876,7 +1876,7 @@
             "releases": [
                 "Juno"
             ],
-            "wiki": "https://github.com/stackforge/fuel-plugin-calico",
+            "wiki": "https://github.com/openstack/fuel-plugin-calico",
             "ci": {
                 "id": "plugins.ci",
                 "success_pattern": "fuel-plugin.calico.build \\S+ : SUCCESS",
@@ -1885,7 +1885,7 @@
         },
         {
             "project_id": "openstack/fuel",
-            "repo": "stackforge/fuel-plugin-solidfire-cinder",
+            "repo": "openstack/fuel-plugin-solidfire-cinder",
             "vendor": "SolidFire Inc",
             "name": "SolidFire plugin for Fuel",
             "description": "The SolidFire plugin for Fuel extends Mirantis OpenStack functionality by adding support for SolidFire clusters in Cinder using iSCSI protocol. It replaces Cinder LVM driver which is the default volume backend that uses local volumes managed by LVM. Enabling the SolidFire plugin in Mirantis OpenStack means that all Cinder services are run on Controller nodes.",
@@ -1901,7 +1901,7 @@
                     "launchpad_id": "john-griffith"
                 }
             ],
-            "wiki": "https://github.com/stackforge/fuel-plugin-solidfire-cinder"
+            "wiki": "https://github.com/openstack/fuel-plugin-solidfire-cinder"
         },
         {
             "project_id": "openstack/ironic",
@@ -3252,7 +3252,7 @@
             "project_id": "openstack/nova",
             "vendor": "IBM",
             "name": "zVM",
-            "description": "IBM zVM provides an open virtualization choice for IBM scale-out Linux systems based on the zVM technology. This solution includes the IBM zVM virtualization solutions which runs on IBM s390 architecture, and is designed to complement the performance, scalability and security qualities of Linux. Currently the driver is located on stackforge: https://github.com/stackforge/zvm-driver.",
+            "description": "IBM zVM provides an open virtualization choice for IBM scale-out Linux systems based on the zVM technology. This solution includes the IBM zVM virtualization solutions which runs on IBM s390 architecture, and is designed to complement the performance, scalability and security qualities of Linux. Currently the driver is located on openstack: https://github.com/openstack/zvm-driver.",
             "maintainers": [
                 {
                     "name": "Ji Chen",
