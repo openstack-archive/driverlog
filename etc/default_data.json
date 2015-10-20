@@ -2599,9 +2599,9 @@
         {
             "project_id": "openstack/neutron",
             "vendor": "Cloudbase",
-            "name": "Cloudbase Hyper-V Plugin",
+            "name": "Cloudbase Hyper-V Agent",
             "repo": "stackforge/networking-hyperv",
-            "description": "The Hyper-V Neutron plugin offers the networking options for Hyper-V Server based OpenSTack installations.",
+            "description": "The Hyper-V Neutron agent offers the networking options for Hyper-V Server based OpenStack installations.",
             "maintainers": [
                 {
                     "name": "Alessandro Pilotti",
@@ -2619,7 +2619,7 @@
                     "launchpad_id": "ociuhandu"
                 }
             ],
-            "wiki": "http://www.cloudbase.it/openstack/",
+            "wiki": "http://www.cloudbase.it/neutron-hyper-v-plugin",
             "ci": {
                 "id": "hyper-v-ci",
                 "success_pattern": "Build succeeded",
@@ -2629,7 +2629,9 @@
                 "Grizzly",
                 "Havana",
                 "Icehouse",
-                "Juno"
+                "Juno",
+                "Kilo",
+                "Liberty"
             ]
         },
         {
@@ -3286,18 +3288,25 @@
                     "launchpad_id": "alexpilotti"
                 },
                 {
+                    "name": "Claudiu Belu",
+                    "email": "cbelu@cloudbasesolutions.com",
+                    "launchpad_id": "cbelu"
+                },
+                {
                     "name": "Octavian Ciuhandu",
                     "email": "ociuhandu@cloudbasesolutions.com",
                     "launchpad_id": "ociuhandu"
                 }
             ],
-            "wiki": "http://wiki.cloudbase.it/hyperv-tempest-exclusions",
+            "wiki": "http://www.cloudbase.it/openstack-compute-installer",
             "releases": [
                 "Folsom",
                 "Grizzly",
                 "Havana",
                 "Icehouse",
-                "Juno"
+                "Juno",
+                "Kilo",
+                "Liberty"
             ],
             "ci": {
                 "id": "hyper-v-ci",
