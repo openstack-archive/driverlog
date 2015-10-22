@@ -2303,6 +2303,29 @@
         },
         {
             "project_id": "openstack/manila",
+            "vendor": "HP",
+            "name": "HP 3PAR Driver",
+            "description": "The HP 3PAR Shared File Systems (Manila) driver provisions shares with HP 3PAR StoreServ Storage with the HP 3PAR File Persona Software Suite. The driver communicates over HTTP, HTTPS, and SSH connections.",
+            "maintainers": [
+                {
+                    "name": "Mark Sturdevant",
+                    "email": "mark.sturdevant@hpe.com",
+                    "launchpad_id": "mark-sturdevant"
+                }
+            ],
+            "wiki": "http://docs.openstack.org/liberty/config-reference/content/hp-3par-driver.html",
+            "releases": [
+                "Kilo",
+                "Liberty"
+            ],
+            "ci": {
+                "id": "hp-storage-ci",
+                "success_pattern": "Build succeeded",
+                "failure_pattern": "Build failed"
+            }
+        },
+        {
+            "project_id": "openstack/manila",
             "vendor": "NetApp",
             "name": "NetApp Unified Driver",
             "description": "The NetApp Unified Driver for Manila manages NFS and CIFS file shares on NetApp Clustered Data ONTAP storage controllers.  The driver supports both Manila driver modes (driver_handles_share_servers = True/False).",
