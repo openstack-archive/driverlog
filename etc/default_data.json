@@ -3274,6 +3274,27 @@
         },
         {
             "project_id": "openstack/neutron",
+            "repo": "openstack/networking-calico",
+            "vendor": "Project Calico",
+            "name": "Calico ML2 Driver",
+            "description": "Calico (http://www.projectcalico.org/) uses IP routing to provide connectivity between the workloads in a data center that provide or use IP-based services - whether VMs, containers or bare metal appliances; and iptables, to impose any desired fine-grained security policy between those workloads. Calico thus differs from most other Neutron backends, which use bridging and tunneling to simulate L2-level connectivity between the VMs attached to a Neutron network.",
+            "maintainers": [
+                {
+                    "name": "Neil Jerram",
+                    "email": "neil@projectcalico.org",
+                    "irc": "neiljerram"
+                }
+            ],
+            "wiki": "http://docs.openstack.org/developer/networking-calico/",
+            "releases": [
+                "Icehouse",
+                "Juno",
+                "Kilo",
+                "Liberty"
+            ]
+        },
+        {
+            "project_id": "openstack/neutron",
             "vendor": "Radware",
             "name": "Radware LBaaS Driver for Alteon.",
             "description": "Radware LBaaS Driver provides load balancing as a service based on Alteon, enabling on demand provisioning of load balancing capacity, overlay network agnostic, overlay gateway bypass, high availability, tenant isolation and SLA guarantee.",
@@ -3855,4 +3876,3 @@
         }
     ]
 }
-
