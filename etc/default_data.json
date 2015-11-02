@@ -2535,6 +2535,27 @@
         },
         {
             "project_id": "openstack/neutron",
+            "repo": "openstack/networking-calico",
+            "vendor": "Project Calico",
+            "name": "Calico ML2 Driver",
+            "description": "Calico (http://www.projectcalico.org/) uses IP routing to provide connectivity between the workloads in a data center that provide or use IP-based services - whether VMs, containers or bare metal appliances; and iptables, to impose any desired fine-grained security policy between those workloads. Calico thus differs from most other Neutron backends, which use bridging and tunneling to simulate L2-level connectivity between the VMs attached to a Neutron network.",
+            "maintainers": [
+                {
+                    "name": "Neil Jerram",
+                    "email": "neil@projectcalico.org",
+                    "irc": "neiljerram"
+                }
+            ],
+            "wiki": "http://docs.openstack.org/developer/networking-calico/",
+            "releases": [
+                "Icehouse",
+                "Juno",
+                "Kilo",
+                "Liberty"
+            ]
+        },
+        {
+            "project_id": "openstack/neutron",
             "vendor": "Cisco",
             "name": "CSR1kv router service plugin",
             "description": "A Cisco service plugin that implements Neutron L3 router API for CSR1kv VMs.",
