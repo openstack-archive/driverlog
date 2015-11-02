@@ -2007,6 +2007,21 @@
         },
         {
             "project_id": "openstack/fuel",
+            "repo": "openstack/fuel-plugin-ceilometer-redis",
+            "vendor": "Mirantis",
+            "name": "Ceilometer Redis plugin",
+            "description": "This plugin deploys Redis, which used by Ceilometer's agents for workload partitioning",
+            "maintainers": [
+                {
+                    "name": "Nadya Shakhat",
+                    "email": "nshakhat@mirantis.com",
+                    "launchpad_id": "nprivalova"
+                }
+            ],
+            "wiki": "https://github.com/openstack/fuel-plugin-ceilometer-redis"
+        },
+        {
+            "project_id": "openstack/fuel",
             "repo": "openstack/fuel-plugin-calico",
             "vendor": "Project Calico",
             "name": "Calico plugin for Fuel",
