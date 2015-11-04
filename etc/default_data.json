@@ -2390,6 +2390,23 @@
         },
         {
             "project_id": "openstack/neutron",
+            "vendor": "Alcatel-Lucent Enterprise",
+            "name": "Alcatel-Lucent Enterprise Omniswitch ML2 Mechanism Driver",
+            "description": "Networking-ale-omniswitch package contains Alcatel-Lucent Enterprise Omniswitch vendor code for Openstack Neutron.",
+            "maintainers": [
+                {
+                    "name": "Vadivel Poonathan",
+                    "email": "vadivel.poonathan@alcatel-lucent.com",
+                    "launchpad_id": "vadivel-poonathan"
+                }
+            ],
+            "wiki": "https://wiki.openstack.org/wiki/Neutron/ML2/ALE-Omniswitch",
+            "releases": [
+                "Liberty"
+            ]
+        },
+        {
+            "project_id": "openstack/neutron",
             "vendor": "Arista",
             "name": "Arista Neutron ML2 Driver",
             "description": "Arista ML2 Mechanism Driver implement ML2 Plugin Mechanism Driver API. This driver can manage all types of Arista switches.",
