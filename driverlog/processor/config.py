@@ -20,6 +20,8 @@ from oslo_config import cfg
 
 OPTS = [
     cfg.StrOpt('default-data-uri',
+               default='https://git.openstack.org/cgit/'
+                       'openstack/driverlog/plain/etc/default_data.json',
                help='URI for default data'),
     cfg.StrOpt('listen-host', default='127.0.0.1',
                help='The address dashboard listens on'),
