@@ -13,6 +13,8 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+import copy
+
 from oslo_config import cfg
 
 
@@ -34,3 +36,7 @@ OPTS = [
     cfg.BoolOpt('force-update', default=False,
                 help='Forcibly read default data and update records'),
 ]
+
+
+def list_opts():
+    yield (None, copy.deepcopy(OPTS))
