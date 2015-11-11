@@ -2740,7 +2740,7 @@
             "project_id": "openstack/neutron",
             "vendor": "Cloudbase",
             "name": "Cloudbase Hyper-V ML2 Agent",
-            "repo": "stackforge/networking-hyperv",
+            "repo": "openstack/networking-hyperv",
             "description": "The Hyper-V Neutron ML2 agent offers the networking options for Hyper-V Server based OpenStack installations.",
             "maintainers": [
                 {
