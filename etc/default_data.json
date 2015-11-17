@@ -2043,6 +2043,21 @@
                 "failure_pattern": "fuel-plugin.calico.build \\S+ : FAILURE"
             }
         },
+          {
+            "project_id": "openstack/fuel",
+            "repo": "openstack/fuel-plugin-purestorage-cinder",
+            "vendor": "Pure Storage",
+            "name": "Pure Storage plugin for Fuel",
+            "description": "Pure Storage plugin for Fuel adds support for Pure Storage FlashArray block storage array. The Pure Storage FlashArray is an iSCSI capable block storage device used as a Cinder backend.",
+            "maintainers": [
+                {
+                    "name": "Simon Dodsley",
+                    "email": "simon@purestorage.com",
+                    "launchpad_id": "simon-dodsley"
+                }
+            ],
+            "wiki": "https://github.com/openstack/fuel-plugin-purestorage-cinder"
+        },
         {
             "project_id": "openstack/fuel",
             "repo": "openstack/fuel-plugin-solidfire-cinder",
