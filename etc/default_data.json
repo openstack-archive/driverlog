@@ -3603,7 +3603,9 @@
             },
             "releases": [
                 "Icehouse",
-                "Juno"
+                "Juno",
+                "Kilo",
+                "Liberty"
             ],
             "wiki": "https://wiki.openstack.org/wiki/Ironic"
         },
@@ -3619,6 +3621,11 @@
                     "launchpad_id": "milakstill"
                 }
             ],
+            "ci": {
+                "id": "jenkins_ci",
+                "success_pattern": "Build Successful",
+                "failure_pattern": "Build Failed"
+            },
             "wiki": "http://docs.openstack.org/juno/config-reference/content/kvm.html",
             "releases": [
                 "Austin",
@@ -3630,7 +3637,9 @@
                 "Grizzly",
                 "Havana",
                 "Icehouse",
-                "Juno"
+                "Juno",
+                "Kilo",
+                "Liberty"
             ]
         },
         {
@@ -3655,7 +3664,9 @@
                 "Grizzly",
                 "Havana",
                 "Icehouse",
-                "Juno"
+                "Juno",
+                "Kilo",
+                "Liberty"
             ],
             "wiki": "http://docs.openstack.org/juno/config-reference/content/lxc.html"
         },
@@ -3682,7 +3693,9 @@
                 "Grizzly",
                 "Havana",
                 "Icehouse",
-                "Juno"
+                "Juno",
+                "Kilo",
+                "Liberty"
             ],
             "ci": {
                 "id": "jenkins_ci",
@@ -3705,8 +3718,8 @@
             "wiki": "http://docs.openstack.org/juno/config-reference/content/introduction-to-xen.html",
             "ci": {
                 "id": "citrix_xenserver_ci",
-                "success_pattern": "Build Successful",
-                "failure_pattern": "Build Failed"
+                "success_pattern": "success",
+                "failure_pattern": "fail"
             },
             "releases": [
                 "Austin",
@@ -3718,7 +3731,9 @@
                 "Grizzly",
                 "Havana",
                 "Icehouse",
-                "Juno"
+                "Juno",
+                "Kilo",
+                "Liberty"
             ]
         },
         {
@@ -3742,12 +3757,16 @@
                 "Essex",
                 "Folsom",
                 "Grizzly",
-                "Havana"
+                "Havana",
+                "Icehouse",
+                "Juno",
+                "Kilo",
+                "Liberty"
             ],
             "ci": {
-                "id": "jenkins_ci",
-                "success_pattern": "Build Successful",
-                "failure_pattern": "Build Failed"
+                "id": "xen_project_ci",
+                "success_pattern": "success",
+                "failure_pattern": "fail"
             }
         },
         {
@@ -3765,7 +3784,9 @@
                 "Grizzly",
                 "Havana",
                 "Icehouse",
-                "Juno"
+                "Juno",
+                "Kilo",
+                "Liberty"
             ],
             "maintainers": [
                 {
