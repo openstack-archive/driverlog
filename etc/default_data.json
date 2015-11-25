@@ -1595,7 +1595,7 @@
                 "Liberty"
             ],
             "ci": {
-                "id": "xio-dsvm-xio-fc",
+                "id": "xio-ise-iscsi-ci",
                 "success_pattern": "SUCCESS",
                 "failure_pattern": "FAILURE"
             }
