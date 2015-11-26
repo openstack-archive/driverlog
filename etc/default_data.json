@@ -213,8 +213,6 @@
             "vendor": "Cloudbase",
             "name": "Windows Server iSCSI Cinder driver",
             "description": "Windows iSCSI volume back-end driver for Windows Server 2012 and above.",
-            "project_id": "openstack/cinder",
-            "vendor": "Cloudbase",
             "maintainers": [
                 {
                     "name": "Alessandro Pilotti",
@@ -252,8 +250,6 @@
             "vendor": "Cloudbase",
             "name": "Windows SMB3 Cinder driver",
             "description": "SMB3 volume back-end driver for Windows Server 2012 and above.",
-            "project_id": "openstack/cinder",
-            "vendor": "Cloudbase",
             "maintainers": [
                 {
                     "name": "Alessandro Pilotti",
@@ -287,8 +283,6 @@
             "vendor": "Cloudbase",
             "name": "Linux SMB3 Cinder driver",
             "description": "SMB3 volume back-end driver for Linux.",
-            "project_id": "openstack/cinder",
-            "vendor": "Cloudbase",
             "maintainers": [
                 {
                     "name": "Alessandro Pilotti",
