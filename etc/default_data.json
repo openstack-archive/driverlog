@@ -93,8 +93,14 @@
         },
         {
             "id": "Liberty",
-            "wiki": "https://wiki.openstack.org/wiki/Releases",
+            "wiki": "https://wiki.openstack.org/wiki/ReleaseNotes/Liberty",
             "start": "2015-Apr-30",
+            "active": true
+        },
+        {
+            "id": "Mitaka",
+            "wiki": "https://wiki.openstack.org/wiki/Releases",
+            "start": "2015-Oct-15",
             "active": true
         }
     ],
