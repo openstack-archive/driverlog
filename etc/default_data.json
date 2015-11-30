@@ -963,22 +963,23 @@
             "description": "",
             "maintainers": [
                 {
-                    "name": "Edwin Wang",
-                    "email": "edwin.wang@cn.ibm.com",
-                    "launchpad_id": "edwin-wang"
+                    "name": "Yan Lin Ren",
+                    "email": "renylin@cn.ibm.com",
+                    "launchpad_id": "renylin"
                 }
             ],
-            "wiki": "http://docs.openstack.org/config-reference/content/ibm-flashsystem-volume-driver.html",
+            "wiki": "http://docs.openstack.org/liberty/config-reference/content/ibm-flashsystem-volume-driver.html",
             "releases": [
                 "Kilo",
-                "Liberty"
+                "Liberty",
+                "Mitaka"
             ]
         },
         {
             "project_id": "openstack/cinder",
             "vendor": "IBM",
-            "name": "IBM GPFS NFS volume driver",
-            "description": "The GPFS driver enables the use of GPFS in a fashion similar to that of the NFS driver. With the GPFS driver, instances do not actually access a storage device at the block level. Instead, volume backing files are created in a GPFS file system and mapped to instances, which emulate a block device.",
+            "name": "IBM GPFS volume driver",
+            "description": "The GPFS driver enables the use of GPFS to provide efficient and scalable storage for Cinder volumes.  With the GPFS driver, instances do not actually access a storage device at the block level.  Instead, volume backing files are created in a GPFS file system and mapped to instances, which emulate a block device.  The GPFS storage is accessed from compute nodes using either a GPFS or NFS client.",
             "maintainers": [
                 {
                     "name": "Sasikanth Eda",
@@ -986,13 +987,14 @@
                     "launchpad_id": "sasikanth"
                 }
             ],
-            "wiki": "http://docs.openstack.org/juno/config-reference/content/GPFS-driver.html",
+            "wiki": "http://docs.openstack.org/liberty/config-reference/content/GPFS-driver.html",
             "releases": [
                 "Havana",
                 "Icehouse",
                 "Juno",
                 "Kilo",
-                "Liberty"
+                "Liberty",
+                "Mitaka"
             ],
             "ci": {
                 "id": "ibm-gpfs-ci",
@@ -1007,17 +1009,18 @@
             "description": "The IBM NAS Driver works using NFS protocol, and implements other value added features. It allows IBM SONAS and Storwize V7000 Unified filers and NFS based GPFS storage system deployments to provide block storage for OpenStack environment.",
             "maintainers": [
                 {
-                    "name": "Nilesh Bhosale",
-                    "email": "nilesh.bhosale@in.ibm.com",
-                    "launchpad_id": "nilesh-bhosale"
+                    "name": "Sasikanth Eda",
+                    "email": "sasikanth.eda@in.ibm.com",
+                    "launchpad_id": "sasikanth"
                 }
             ],
-            "wiki": "http://www-03.ibm.com/support/techdocs/atsmastr.nsf/WebIndex/WP102443",
+            "wiki": "http://docs.openstack.org/liberty/config-reference/content/ibm-sonas-7k-driver.html",
             "releases": [
                 "Icehouse",
                 "Juno",
                 "Kilo",
-                "Liberty"
+                "Liberty",
+                "Mitaka"
             ],
             "ci": {
                 "id": "ibm-ibmnas-ci",
@@ -1032,12 +1035,12 @@
             "description": "The volume management driver for Storwize family and SAN Volume Controller (SVC) provides OpenStack Compute instances with access to IBM Storwize family or SVC storage systems.",
             "maintainers": [
                 {
-                    "name": "Tao Bai",
-                    "email": "baitaosh@cn.ibm.com",
-                    "launchpad_id": "baitao2010"
+                    "name": "Yu Zhang",
+                    "email": "shzyu@cn.ibm.com",
+                    "launchpad_id": "ivysdu"
                 }
             ],
-            "wiki": "http://docs.openstack.org/juno/config-reference/content/ibm-storwize-svc-driver.html",
+            "wiki": "http://docs.openstack.org/liberty/config-reference/content/ibm-storwize-svc-driver.html",
             "releases": [
                 "Folsom",
                 "Grizzly",
@@ -1045,10 +1048,11 @@
                 "Icehouse",
                 "Juno",
                 "Kilo",
-                "Liberty"
+                "Liberty",
+                "Mitaka"
             ],
             "ci": {
-                "id": "ibm-storwize-ci",
+                "id": "ibm-storewize-ci",
                 "success_pattern": "Build succeeded",
                 "failure_pattern": "Build failed"
             }
@@ -1060,12 +1064,12 @@
             "description": "The IBM XIV/DS8K volume driver is installed on OpenStack Cinder nodes and enables utilization of storage resources provided by IBM XIV and DS8000 storage systems.",
             "maintainers": [
                 {
-                    "name": "Alon Marx",
-                    "email": "alonma@il.ibm.com",
-                    "launchpad_id": "alonmarx"
+                    "name": "Isaac Beckman",
+                    "email": "isaacb@il.ibm.com",
+                    "launchpad_id": "isaacb"
                 }
             ],
-            "wiki": "http://docs.openstack.org/juno/config-reference/content/ibm-xiv-driver.html",
+            "wiki": "http://docs.openstack.org/liberty/config-reference/content/ibm-xiv-driver.html",
             "releases": [
                 "Folsom",
                 "Grizzly",
@@ -1073,7 +1077,8 @@
                 "Icehouse",
                 "Juno",
                 "Kilo",
-                "Liberty"
+                "Liberty",
+                "Mitaka"
             ],
             "ci": {
                 "id": "ibmxivci",
