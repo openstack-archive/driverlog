@@ -963,15 +963,16 @@
             "description": "",
             "maintainers": [
                 {
-                    "name": "Edwin Wang",
-                    "email": "edwin.wang@cn.ibm.com",
-                    "launchpad_id": "edwin-wang"
+                    "name": "Yan Lin Ren",
+                    "email": "renylin@cn.ibm.com",
+                    "launchpad_id": "renylin"
                 }
             ],
             "wiki": "http://docs.openstack.org/config-reference/content/ibm-flashsystem-volume-driver.html",
             "releases": [
                 "Kilo",
-                "Liberty"
+                "Liberty",
+                "Mitaka"
             ]
         },
         {
@@ -992,7 +993,8 @@
                 "Icehouse",
                 "Juno",
                 "Kilo",
-                "Liberty"
+                "Liberty",
+                "Mitaka"
             ],
             "ci": {
                 "id": "ibm-gpfs-ci",
@@ -1007,9 +1009,9 @@
             "description": "The IBM NAS Driver works using NFS protocol, and implements other value added features. It allows IBM SONAS and Storwize V7000 Unified filers and NFS based GPFS storage system deployments to provide block storage for OpenStack environment.",
             "maintainers": [
                 {
-                    "name": "Nilesh Bhosale",
-                    "email": "nilesh.bhosale@in.ibm.com",
-                    "launchpad_id": "nilesh-bhosale"
+                    "name": "Sasikanth Eda",
+                    "email": "sasikanth.eda@in.ibm.com",
+                    "launchpad_id": "sasikanth"
                 }
             ],
             "wiki": "http://www-03.ibm.com/support/techdocs/atsmastr.nsf/WebIndex/WP102443",
@@ -1017,7 +1019,8 @@
                 "Icehouse",
                 "Juno",
                 "Kilo",
-                "Liberty"
+                "Liberty",
+                "Mitaka"
             ],
             "ci": {
                 "id": "ibm-ibmnas-ci",
@@ -1032,9 +1035,9 @@
             "description": "The volume management driver for Storwize family and SAN Volume Controller (SVC) provides OpenStack Compute instances with access to IBM Storwize family or SVC storage systems.",
             "maintainers": [
                 {
-                    "name": "Tao Bai",
-                    "email": "baitaosh@cn.ibm.com",
-                    "launchpad_id": "baitao2010"
+                    "name": "Yu Zhang",
+                    "email": "shzyu@cn.ibm.com",
+                    "launchpad_id": "ivysdu"
                 }
             ],
             "wiki": "http://docs.openstack.org/juno/config-reference/content/ibm-storwize-svc-driver.html",
@@ -1045,7 +1048,8 @@
                 "Icehouse",
                 "Juno",
                 "Kilo",
-                "Liberty"
+                "Liberty",
+                "Mitaka"
             ],
             "ci": {
                 "id": "ibm-storwize-ci",
@@ -1073,7 +1077,8 @@
                 "Icehouse",
                 "Juno",
                 "Kilo",
-                "Liberty"
+                "Liberty",
+                "Mitaka"
             ],
             "ci": {
                 "id": "ibmxivci",
