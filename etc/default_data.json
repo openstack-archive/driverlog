@@ -3159,6 +3159,24 @@
         },
         {
             "project_id": "openstack/neutron",
+            "vendor": "Open Networking Laboratory",
+            "name": "Networking-ONOS ML2 Driver",
+            "description": "ONOS Neutron Modular Layer 2 plugin helps to establish communication between Neutron and ONOS Controller side has northbound APIs to interact Neutron and use OVSDB (Open vSwitch Database Management Protocol) to configure vSwitches on compute nodes.",
+            "maintainers": [
+                {
+                    "name": "dongfeng",
+                    "irc": "albert_dongfeng",
+                    "email": "albert.dongfeng@huawei.com",
+                    "launchpad_id": "albert-dongfeng"
+                }
+            ],
+            "wiki": "https://github.com/openstack/networking-onos/blob/master/README.rst",
+            "releases": [
+                "Liberty"
+            ],
+        },
+        {
+            "project_id": "openstack/neutron",
             "vendor": "OpenDaylight",
             "name": "OpenDaylight ML2 MechanismDriver",
             "description": "OpenDaylight has driver for Neutron ML2 (Modular Layer 2) plugin to enable communication between Neutron and OpenDaylight. On the SDN controller side, OpenDaylight has northbound APIs to interact with Neutron and use OVSDB (Open vSwitch Database Management Protocol) for southbound configuration of vSwitches on compute nodes. Thus OpenDaylight can manage network connectivity and initiate GRE or VXLAN tunnels for compute nodes.",
