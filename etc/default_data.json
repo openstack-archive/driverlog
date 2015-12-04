@@ -792,7 +792,7 @@
                     "launchpad_id": "kurt-f-martin"
                 }
             ],
-            "wiki": "http://docs.openstack.org/kilo/config-reference/content/hp-3par-driver.html",
+            "wiki": "http://docs.openstack.org/liberty/config-reference/content/hp-3par-driver.html",
             "releases": [
                 "Grizzly",
                 "Havana",
@@ -824,7 +824,7 @@
                     "launchpad_id": "kurt-f-martin"
                 }
             ],
-            "wiki": "http://docs.openstack.org/kilo/config-reference/content/HP-LeftHand-StoreVirtual-driver.html",
+            "wiki": "http://docs.openstack.org/liberty/config-reference/content/HP-LeftHand-StoreVirtual-driver.html",
             "releases": [
                 "Diablo",
                 "Essex",
@@ -862,6 +862,87 @@
             "releases": [
                 "Liberty"
             ]
+        },
+        {
+            "project_id": "openstack/cinder",
+            "vendor": "HPE",
+            "name": "HPE 3PAR Fibre Channel driver",
+            "description": "The Hewlett Packard Enterprise (HPE) 3PAR StoreServ Fibre Channel Block Storage (Cinder) driver to provision volumes with an HPE 3PAR StoreServ array and attach volumes over Fibre Channel.  The driver communicates over HTTP, HTTPS, and SSH connections.",
+            "maintainers": [
+                {
+                    "name": "Walter Boring",
+                    "email": "walter.boring@hpe.com",
+                    "launchpad_id": "walter-boring"
+                },
+                {
+                    "name": "Kurt Martin",
+                    "email": "kurt.f.martin@hpe.com",
+                    "launchpad_id": "kurt-f-martin"
+                }
+            ],
+            "wiki": "http://docs.openstack.org/mitaka/config-reference/content/hpe-3par-driver.html",
+            "releases": [
+                "Mitaka"
+            ],
+            "ci": {
+                "id": "hp-storage-ci",
+                "success_pattern": "3par-fc-driver-master-client.* \\S+ : SUCCESS",
+                "failure_pattern": "3par-fc-driver-master-client.* \\S+ : FAILURE"
+            }
+        },
+        {
+            "project_id": "openstack/cinder",
+            "vendor": "HPE",
+            "name": "HPE 3PAR iSCSI driver",
+            "description": "The Hewlett Packard Enterprise (HPE) 3PAR StoreServ iSCSI Block Storage (Cinder) driver to provision volumes with an HPE 3PAR StoreServ array and attach volumes over iSCSI.  The driver communicates over HTTP, HTTPS, and SSH connections.",
+            "maintainers": [
+                {
+                    "name": "Walter Boring",
+                    "email": "walter.boring@hpe.com",
+                    "launchpad_id": "walter-boring"
+                },
+                {
+                    "name": "Kurt Martin",
+                    "email": "kurt.f.martin@hpe.com",
+                    "launchpad_id": "kurt-f-martin"
+                }
+            ],
+            "wiki": "http://docs.openstack.org/mitaka/config-reference/content/hpe-3par-driver.html",
+            "releases": [
+                "Mitaka"
+            ],
+            "ci": {
+                "id": "hp-storage-ci",
+                "success_pattern": "3par-iscsi-driver-master-client.* \\S+ : SUCCESS",
+                "failure_pattern": "3par-iscsi-driver-master-client.* \\S+ : FAILURE"
+            }
+        },
+        {
+            "project_id": "openstack/cinder",
+            "vendor": "HPE",
+            "name": "HPE LeftHand StoreVirtual driver",
+            "description": "The Hewlett Packard Enterprise (HPE) StoreVirtual driver can be configured to run using a REST client to communicate with the array.",
+            "maintainers": [
+                {
+                    "name": "Walter Boring",
+                    "email": "walter.boring@hpe.com",
+                    "launchpad_id": "walter-boring"
+                },
+                {
+                    "name": "Kurt Martin",
+                    "email": "kurt.f.martin@hpe.com",
+                    "launchpad_id": "kurt-f-martin"
+                }
+            ],
+            "wiki": "http://docs.openstack.org/mitaka/config-reference/content/HPE-LeftHand-StoreVirtual-driver.html",
+            "releases": [
+                "Mitaka"
+            ],
+            "ci": {
+                "id": "hp-storage-ci",
+                "success_pattern": "lefthand-iscsi-driver-master-client.* \\S+ : SUCCESS",
+                "failure_pattern": "lefthand-iscsi-driver-master-client.* \\S+ : FAILURE"
+            }
         },
         {
             "project_id": "openstack/cinder",
@@ -2351,6 +2432,29 @@
             "releases": [
                 "Kilo",
                 "Liberty"
+            ],
+            "ci": {
+                "id": "hp-storage-ci",
+                "success_pattern": "Build succeeded",
+                "failure_pattern": "Build failed"
+            }
+        },
+        {
+            "project_id": "openstack/manila",
+            "vendor": "HPE",
+            "name": "HPE 3PAR Driver",
+            "description": "The Hewlett Packard Enterprise (HPE) 3PAR Shared File Systems (Manila) driver provisions shares with HPE 3PAR StoreServ Storage with the HPE 3PAR File Persona Software Suite. The driver communicates over HTTP, HTTPS, and SSH connections.",
+            "maintainers": [
+                {
+                    "name": "Mark Sturdevant",
+                    "email": "mark.sturdevant@hpe.com",
+                    "launchpad_id": "mark-sturdevant"
+                }
+            ],
+            "wiki":
+"http://docs.openstack.org/liberty/config-reference/content/hpe-3par-driver.html",
+            "releases": [
+                "Mitaka"
             ],
             "ci": {
                 "id": "hp-storage-ci",
