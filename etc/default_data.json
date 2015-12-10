@@ -2164,6 +2164,52 @@
             "wiki": "https://github.com/openstack/fuel-plugin-solidfire-cinder"
         },
         {
+            "project_id": "openstack/fuel",
+            "repo": "openstack/fuel-plugin-scaleio",
+            "vendor": "EMC",
+            "name": "ScaleIO plugin for Fuel",
+            "description": "The ScaleIO plugin for Fuel extends Mirantis OpenStack functionality by deploying a EMC ScaleIO cluster and configuring it as the default volume backend for the OpenStack environment.",
+            "maintainers": [
+                {
+                    "name": "Adrian Moreno Martinez",
+                    "email": "adrian.moreno@emc.com",
+                    "launchpad_id": "adrianmo"
+                },
+                {
+                    "name": "Magdy Salem",
+                    "email": "magdy.salem@emc.com",
+                    "launchpad_id": "magdy-salem"
+                }
+            ],
+            "releases": [
+                "Juno"
+            ],
+            "wiki": "https://github.com/openstack/fuel-plugin-scaleio"
+        },
+        {
+            "project_id": "openstack/fuel",
+            "repo": "openstack/fuel-plugin-scaleio-cinder",
+            "vendor": "EMC",
+            "name": "ScaleIO Cinder plugin for Fuel",
+            "description": "The ScaleIO plugin for Fuel extends Mirantis OpenStack functionality by configuring a external EMC ScaleIO cluster as the default volume backend for the OpenStack environment.",
+            "maintainers": [
+                {
+                    "name": "Magdy Salem",
+                    "email": "magdy.salem@emc.com",
+                    "launchpad_id": "magdy-salem"
+                },
+                {
+                    "name": "Adrian Moreno Martinez",
+                    "email": "adrian.moreno@emc.com",
+                    "launchpad_id": "adrianmo"
+                }
+            ],
+            "releases": [
+                "Juno"
+            ],
+            "wiki": "https://github.com/openstack/fuel-plugin-scaleio-cinder"
+        },
+        {
             "project_id": "openstack/ironic",
             "vendor": "AMD/SeaMicro",
             "name": "pxe_seamicro",
