@@ -2210,6 +2210,21 @@
             "wiki": "https://github.com/openstack/fuel-plugin-solidfire-cinder"
         },
         {
+            "project_id": "openstack/fuel",
+            "repo": "openstack/fuel-plugin-openbook", 
+            "vendor": "Talligent Inc",
+            "name": "Openbook plugin for Fuel",
+            "description": "Deploys Openbook for billing/invoicing, chargeback/showback, and customer lifecycle management for OpenStack.",
+            "maintainers": [
+                {
+                    "name": "Jeremy Fluhmann",
+                    "email": "jeremy@talligent.com",
+                    "launchpad_id": "fluhmann"
+                }
+            ],
+            "wiki": "https://github.com/openstack/fuel-plugin-openbook"
+        },
+        {
             "project_id": "openstack/ironic",
             "vendor": "AMD/SeaMicro",
             "name": "pxe_seamicro",
