@@ -1931,6 +1931,26 @@
                 "failure_pattern": "fuel-plugin.fwaas.build \\S+ : FAILURE"
             }
         },
+	{
+            "project_id": "openstack/fuel",
+            "repo": "openstack/fuel-plugin-nsxv",
+            "vendor": "Mirantis",
+            "name": "VMware NSX plugin for Fuel",
+            "description": "VMware NSX plugin for Fuel allows deployment of Mirantis OpenStack with VMware NSX software defined networking platform.  It allows to use Neutron with OpenStack that utilize vSphere computing (ESXi) clusters.",
+            "maintainers": [
+                {
+                    "name": "Artem Savinov",
+                    "email": "asavinov@mirantis.com",
+                    "launchpad_id": "asavinov"
+                },
+                {
+                    "name": "Igor Zinovik",
+                    "email": "izinovik@mirantis.com",
+                    "launchpad_id": "izinovik"
+                }
+            ],
+            "wiki": "https://github.com/openstack/fuel-plugin-nsxv",
+	},
         {
             "project_id": "openstack/fuel",
             "repo": "openstack/fuel-plugin-influxdb-grafana",
