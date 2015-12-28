@@ -25,8 +25,8 @@ LOG = logging.getLogger(__name__)
 
 DEFAULT_PORT = 29418
 GERRIT_URI_PREFIX = r'^gerrit:\/\/'
-PAGE_LIMIT = 5
-CHUNK_LIMIT = 2
+PAGE_LIMIT = 10
+REQUEST_COUNT_LIMIT = 20
 
 
 class Rcs(object):
@@ -59,6 +59,8 @@ class Gerrit(Rcs):
         self.client.load_system_host_keys()
         self.client.set_missing_host_key_policy(paramiko.AutoAddPolicy())
 
+        self.request_count = 0
+
     def setup(self, **kwargs):
         if 'key_filename' in kwargs:
             self.key_filename = kwargs['key_filename']
@@ -86,7 +88,7 @@ class Gerrit(Rcs):
             LOG.exception(e)
             return False
 
-    def _get_cmd(self, sort_key=None, limit=PAGE_LIMIT, **kwargs):
+    def _get_cmd(self, limit=PAGE_LIMIT, **kwargs):
         params = ' '.join([(k + ':\'' + v + '\'')
                            for k, v in six.iteritems(kwargs)])
 
@@ -95,45 +97,42 @@ class Gerrit(Rcs):
                '--current-patch-set --comments ' %
                {'params': params, 'limit': limit})
         cmd += ' is:merged'
-        if sort_key:
-            cmd += ' resume_sortkey:%016x' % sort_key
         return cmd
 
     def _exec_command(self, cmd):
+        # check how many requests were sent over connection and reconnect
+        if self.request_count >= REQUEST_COUNT_LIMIT:
+            self.close()
+            self.request_count = 0
+            self._connect()
+        else:
+            self.request_count += 1
+
         try:
             return self.client.exec_command(cmd)
         except Exception as e:
             LOG.error('Error %(error)s while execute command %(cmd)s',
                       {'error': e, 'cmd': cmd})
             LOG.exception(e)
+            self.request_count = REQUEST_COUNT_LIMIT
             return False
 
     def log(self, **kwargs):
-        sort_key = None
-
         # DriverLog looks for merged CRs reviewed by specified gerrit-id
         # it is possible that CR is already merged, but CI didn't vote yet
-        # that's why we grab PAGE_LIMIT*CHUNK_LIMIT CRs from Gerrit
+        # that's why we grab PAGE_LIMIT CRs from Gerrit
 
-        for i in range(CHUNK_LIMIT):
-            cmd = self._get_cmd(sort_key, **kwargs)
-            LOG.debug('Executing command: %s', cmd)
-            exec_result = self._exec_command(cmd)
-            if not exec_result:
-                break
+        cmd = self._get_cmd(**kwargs)
+        LOG.debug('Executing command: %s', cmd)
+        exec_result = self._exec_command(cmd)
+        if exec_result:
             stdin, stdout, stderr = exec_result
 
-            proceed = False
             for line in stdout:
                 review = json.loads(line)
 
-                if 'sortKey' in review:
-                    sort_key = int(review['sortKey'], 16)
-                    proceed = True
+                if 'currentPatchSet' in review:  # avoid non-reviews
                     yield review
-
-            if not proceed:
-                break
 
     def close(self):
         self.client.close()
