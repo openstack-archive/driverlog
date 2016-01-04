@@ -682,6 +682,57 @@
             ]
         },
         {
+            "project_id": "openstack/ironic",
+            "vendor": "Fujitsu",
+            "name": "agent_irmc driver",
+            "description": "This driver enables Virtual Media deploy with IPA (Ironic Python Agent) and power control via ServerView Common Command Interface (SCCI).",
+            "maintainers": [
+                {
+                    "name": "Isao Watanabe",
+                    "email": "watanabe_isao@jp.fujitsu.com",
+                    "launchpad_id": "watanabe.isao"
+                }
+            ],
+            "wiki": "http://docs.openstack.org/developer/ironic/drivers/irmc.html",
+            "releases": [
+                "Liberty"
+            ]
+        },
+        {
+            "project_id": "openstack/ironic",
+            "vendor": "Fujitsu",
+            "name": "iscsi_irmc driver",
+            "description": "This driver enables Virtual Media deploy with image build from Diskimage Builder and power control via ServerView Common Command Interface (SCCI).",
+            "maintainers": [
+                {
+                    "name": "Isao Watanabe",
+                    "email": "watanabe_isao@jp.fujitsu.com",
+                    "launchpad_id": "watanabe.isao"
+                }
+            ],
+            "wiki": "http://docs.openstack.org/developer/ironic/drivers/irmc.html",
+            "releases": [
+                "Liberty"
+            ]
+        },
+        {
+            "project_id": "openstack/ironic",
+            "vendor": "Fujitsu",
+            "name": "pxe_irmc driver",
+            "description": "This driver enables PXE deploy and power control via ServerView Common Command Interface (SCCI).",
+            "maintainers": [
+                {
+                    "name": "Isao Watanabe",
+                    "email": "watanabe_isao@jp.fujitsu.com",
+                    "launchpad_id": "watanabe.isao"
+                }
+            ],
+            "wiki": "http://docs.openstack.org/developer/ironic/drivers/irmc.html",
+            "releases": [
+                "Kilo"
+            ]
+        },
+        {
             "project_id": "openstack/cinder",
             "vendor": "Fusion-io",
             "name": "Fusion-io Control Volume driver",
