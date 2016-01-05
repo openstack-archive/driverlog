@@ -648,6 +648,23 @@
             }
         },
         {
+            "project_id": "openstack/neutron",
+            "vendor": "Fujitsu",
+            "name": "FUJITSU Converged Fabric Switch ML2 driver",
+            "description": "FUJTISU Converged Fabric Switch ML2 driver implements the ML2 Plugin Mechanism Driver API. This driver manages multiple types of FUJITSU Converged Fabric Switches.",
+            "maintainers": [
+                {
+                    "name": "Isao Watanabe",
+                    "email": "watanabe_isao@jp.fujitsu.com",
+                    "launchpad_id": "watanabe.isao"
+                }
+            ],
+            "wiki": "http://docs.openstack.org/developer/networking-fujitsu/",
+            "releases": [
+                "Liberty"
+            ]
+        },
+        {
             "project_id": "openstack/cinder",
             "vendor": "Fujitsu",
             "name": "Fujitsu Eternus DX FC Volume driver",
