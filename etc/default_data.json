@@ -3034,6 +3034,28 @@
         },
         {
             "project_id": "openstack/neutron",
+            "vendor": "Fujitsu",
+            "name": "FUJITSU Converged Fabric Switch ML2 driver",
+            "description": "FUJTISU Converged Fabric Switch ML2 driver implements the ML2 Plugin Mechanism Driver API. This driver manages multiple types of FUJITSU Converged Fabric Switches.",
+            "maintainers": [
+                {
+                    "name": "Isao Watanabe",
+                    "email": "watanabe_isao@jp.fujitsu.com",
+                    "launchpad_id": "watanabe.isao"
+                }
+            ],
+            "wiki": "http://docs.openstack.org/developer/networking-fujitsu/",
+            "releases": [
+                "Liberty"
+            ],
+            "ci": {
+                "id": "Fujitsu_C-Fabric_CI",
+                "success_pattern": "Build succeeded",
+                "failure_pattern": "Build failed"
+            }
+        },
+        {
+            "project_id": "openstack/neutron",
             "vendor": "Freescale",
             "name": "Freescale SDN ML2 Mechanism Driver",
             "description": "Freescale SDN ML2 Mechanism Driver is designed to support Cloud Resource Discovery Service (CRD).",
