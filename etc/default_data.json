@@ -2416,7 +2416,77 @@
                 "failure_pattern": "Build Failed"
             }
         },
-       {
+        {
+            "project_id": "openstack/ironic",
+            "vendor": "The HP OneView driver for Ironic enables the users of OneView to use Ironic as a bare metal provider to their managed physical hardware. The iscsi_pxe_oneview driver implement the core interfaces of an Ironic Driver, and use the python-oneviewclient to provide communication between Ironic and OneView through OneView’s Rest API",
+            "name": "iscsi_pxe_oneview",
+            "description": "This driver uses HP OneView's REST API t",
+            "maintainers": [
+                {
+                    "name": "Thiago Paiva Brito",
+                    "email": "thiagop@lsd.ufcg.edu.br",
+                    "launchpad_id": "thiagop",
+                    "irc": "thiagop"
+                },
+                {
+                    "name": "Sinval Neto",
+                    "email": "sinval@lsd.ufcg.edu.br",
+                    "launchpad_id": "sinvalneto01",
+                    "irc": "sinval"
+                },
+                {
+                    "name": "Lilia Sampaio",
+                    "email": "liliars@lsd.ufcg.edu.br",
+                    "launchpad_id": "liliars",
+                    "irc": "liliars"
+                }
+            ],
+            "releases": [
+                "4.3"
+            ],
+            "wiki": "http://docs.openstack.org/developer/ironic/drivers/oneview.html",
+            "ci": {
+                "id": "ufcg-oneview-ci",
+                "success_pattern": "Build Successful",
+                "failure_pattern": "Build Failed"
+            }
+        },
+        {
+            "project_id": "openstack/ironic",
+            "vendor": "The HP OneView driver for Ironic enables the users of OneView to use Ironic as a bare metal provider to their managed physical hardware. The agent_pxe_oneview driver implement the core interfaces of an Ironic Driver, and use the python-oneviewclient to provide communication between Ironic and OneView through OneView’s Rest API",
+            "name": "agent_pxe_oneview",
+            "description": "This driver uses HP OneView's REST API t",
+            "maintainers": [
+                {
+                    "name": "Thiago Paiva Brito",
+                    "email": "thiagop@lsd.ufcg.edu.br",
+                    "launchpad_id": "thiagop",
+                    "irc": "thiagop"
+                },
+                {
+                    "name": "Sinval Neto",
+                    "email": "sinval@lsd.ufcg.edu.br",
+                    "launchpad_id": "sinvalneto01",
+                    "irc": "sinval"
+                },
+                {
+                    "name": "Lilia Sampaio",
+                    "email": "liliars@lsd.ufcg.edu.br",
+                    "launchpad_id": "liliars",
+                    "irc": "liliars"
+                }
+            ],
+            "releases": [
+                "4.3"
+            ],
+            "wiki": "http://docs.openstack.org/developer/ironic/drivers/oneview.html",
+            "ci": {
+                "id": "ufcg-oneview-ci",
+                "success_pattern": "Build Successful",
+                "failure_pattern": "Build Failed"
+            }
+        },
+        {
             "project_id": "openstack/manila",
             "vendor": "Cloudbase",
             "name": "Windows SMB Driver, ",
