@@ -2499,6 +2499,28 @@
         },
         {
             "project_id": "openstack/manila",
+            "vendor": "Hitachi",
+            "name": "HDS HNAS NFS driver",
+            "description": "This Shared File-system Service driver provides NFS support for HNAS (Hitachi Network-attached Storage) arrays such as, HNAS 3000 and 4000 family.",
+            "maintainers": [
+                {
+                    "name": "Steve Quinn",
+                    "email": "steve.quinn@hds.com",
+                    "launchpad_id": "steve-quinn"
+                }
+            ],
+            "wiki": "https://github.com/openstack/openstack-manuals/blob/master/doc/config-reference/source/shared-file-systems/drivers/hitachi-hnas-driver.rst",
+            "releases": [
+                "Liberty"
+            ],
+            "ci": {
+                "id": "hitachi-hnas-ssc",
+                "success_pattern": "Build succeeded",
+                "failure_pattern": "Build failed"
+            }
+        },
+        {
+            "project_id": "openstack/manila",
             "vendor": "HP",
             "name": "HP 3PAR Driver",
             "description": "The HP 3PAR Shared File Systems (Manila) driver provisions shares with HP 3PAR StoreServ Storage with the HP 3PAR File Persona Software Suite. The driver communicates over HTTP, HTTPS, and SSH connections.",
