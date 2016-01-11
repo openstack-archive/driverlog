@@ -1593,6 +1593,33 @@
         },
         {
             "project_id": "openstack/cinder",
+            "vendor": "Tegile Systems",
+            "name": "Tegile IntelliFlash Volume Driver",
+            "description": "Tegile IntelliFlash arrays leverage the performance of flash technology while using hard disk drives to lower cost per GB",
+            "maintainers": [
+                {
+                    "name": "Abhilash Divakaran",
+                    "email": "abhilashd@tegile.com",
+                    "launchpad_id": "abhilashd"
+                },
+                {
+                    "name": "Tegile OpenStack Team",
+                    "email": "openstack@tegile.com",
+                    "launchpad_id": "tegile-openstack-team"
+                }
+            ],
+            "wiki": "https://wiki.openstack.org/wiki/Tegile",
+            "releases": [
+                "Mitaka"
+            ],
+            "ci": {
+                "id": "tegile",
+                "success_pattern": "Build succeeded",
+                "failure_pattern": "Build failed"
+            }
+        },
+        {
+            "project_id": "openstack/cinder",
             "vendor": "Tintri",
             "name": "Tintri Volume Driver",
             "description": "Tintri VMstore is a smart storage that sees, learns and adapts for cloud and virtualization",
