@@ -651,35 +651,45 @@
             "project_id": "openstack/cinder",
             "vendor": "Fujitsu",
             "name": "Fujitsu Eternus DX FC Volume driver",
-            "description": "This driver supports ETERNUS DX S2 and the S3 series and runs volume operations by communicating with the backend Fujitsu storage.It uses a CIM client in Python called PyWBEM to perform CIM operations over HTTP.",
+            "description": "This driver supports ETERNUS DX S3 series and runs volume operations by communicating with the backend Fujitsu storage. It uses a CIM client in Python called PyWBEM to perform CIM operations over HTTP.",
             "maintainers": [
                 {
-                    "name": "Jun Ishizaki",
-                    "email": "j-ishizaki@jp.fujitsu.com",
-                    "launchpad_id": "j-ishizaki"
+                    "name": "Yusuke Hayashi",
+                    "email": "hayashi-yusuke@jp.fujitsu.com",
+                    "launchpad_id": "hayashi-yusuke"
                 }
             ],
             "wiki": "http://docs.openstack.org/trunk/config-reference/content/fujitsu-smis-driver.html",
             "releases": [
                 "Juno"
-            ]
+            ],
+            "ci": {
+                "id": "Fujitsu_ETERNUS_FC_CI",
+                "success_pattern": "Build succeeded",
+                "failure_pattern": "Build failed"
+            }
         },
         {
             "project_id": "openstack/cinder",
             "vendor": "Fujitsu",
             "name": "Fujitsu Eternus DX ISCSI Volume driver",
-            "description": "This driver supports ETERNUS DX S2 and the S3 series and runs volume operations by communicating with the backend Fujitsu storage.It uses a CIM client in Python called PyWBEM to perform CIM operations over HTTP.",
+            "description": "This driver supports ETERNUS DX S3 series and runs volume operations by communicating with the backend Fujitsu storage. It uses a CIM client in Python called PyWBEM to perform CIM operations over HTTP.",
             "maintainers": [
                 {
-                    "name": "Jun Ishizaki",
-                    "email": "j-ishizaki@jp.fujitsu.com",
-                    "launchpad_id": "j-ishizaki"
+                    "name": "Yusuke Hayashi",
+                    "email": "hayashi-yusuke@jp.fujitsu.com",
+                    "launchpad_id": "hayashi-yusuke"
                 }
             ],
             "wiki": "http://docs.openstack.org/trunk/config-reference/content/fujitsu-smis-driver.html",
             "releases": [
                 "Juno"
-            ]
+            ],
+            "ci": {
+                "id": "Fujitsu_ETERNUS_CI",
+                "success_pattern": "Build succeeded",
+                "failure_pattern": "Build failed"
+            }
         },
         {
             "project_id": "openstack/cinder",
