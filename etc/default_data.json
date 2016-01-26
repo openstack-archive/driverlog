@@ -2026,9 +2026,9 @@
             "description": "This plugin enables configuration and deployment of the Juniper Contrail Networking SDN. This plugin can also be used with OpenContrail.",
             "maintainers": [
                 {
-                    "name": "Oleksandr Martsyniuk",
-                    "email": "omartsyniuk@mirantis.com",
-                    "launchpad_id": "omartsyniuk"
+                    "name": "Illia Polliul",
+                    "email": "ipolliul@mirantis.com",
+                    "launchpad_id": "ipolliul"
                 }
             ],
             "wiki": "https://github.com/openstack/fuel-plugin-contrail",
