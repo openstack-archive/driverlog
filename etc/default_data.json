@@ -1025,16 +1025,16 @@
         {
             "project_id": "openstack/cinder",
             "vendor": "Huawei",
-            "name": "Huawei 18000 ISCSI/FC volume driver",
-            "description": "The Huawei driver supports the iSCSI and Fibre Channel connections and enables OceanStor T series unified storage, OceanStor Dorado high-performance storage, and OceanStor HVS high-end storage to provide block storage services for OpenStack.",
+            "name": "Huawei ISCSI/FC volume driver",
+            "description": "The Huawei driver supports the iSCSI and Fibre Channel connections and enables OceanStor TV2 storage, OceanStor V3 series storage, and OceanStor 18000 high-end storage to provide block storage services for OpenStack.",
             "maintainers": [
                 {
-                    "name": "Zhang Chao",
-                    "email": "zhangchao010@huawei.com",
-                    "launchpad_id": "zhangchao010"
+                    "name": "Wilson Liu(Liu Xinguo)",
+                    "email": "liuxinguo@huawei.com",
+                    "launchpad_id": "295988511-t"
                 }
             ],
-            "wiki": "http://docs.openstack.org/juno/config-reference/content/huawei-storage-driver.html",
+            "wiki": "http://docs.openstack.org/liberty/config-reference/content/huawei-storage-driver.html",
             "releases": [
                 "Havana",
                 "Juno",
