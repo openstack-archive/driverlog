@@ -2740,6 +2740,29 @@
         },
         {
             "project_id": "openstack/manila",
+            "vendor": "Huawei",
+            "name": "Huawei Manila Driver",
+            "description": "Huawei Manlia driver is a plug-in based on the Shared File Systems service. The Huawei Manila driver can be used to provide functions such as the share and snapshot for virtual machines, or instances, in OpenStack. Huawei Manila driver enables the OceanStor V3 series V300R002 storage system to provide only network filesystems for OpenStack.",
+            "maintainers": [
+                {
+                    "name": "Hu Yang",
+                    "email": "huyang1@huawei.com",
+                    "launchpad_id": "huyang1"
+                }
+            ],
+            "wiki": "http://docs.openstack.org/liberty/config-reference/content/huawei-driver.html",
+            "releases": [
+                "Kilo",
+                "Liberty"
+            ],
+            "ci": {
+                "id": "huawei-manila-ci",
+                "success_pattern": "Build succeeded",
+                "failure_pattern": "Build failed"
+            }
+        },
+        {
+            "project_id": "openstack/manila",
             "vendor": "NetApp",
             "name": "NetApp Unified Driver",
             "description": "The NetApp Unified Driver for Manila manages NFS and CIFS file shares on NetApp Clustered Data ONTAP storage controllers.  The driver supports both Manila driver modes (driver_handles_share_servers = True/False).",
