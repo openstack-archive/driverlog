@@ -1771,14 +1771,14 @@
             "description": "The ScaleIO plugin for Fuel extends Mirantis OpenStack functionality by configuring a external EMC ScaleIO cluster as the default volume backend for the OpenStack environment.",
             "maintainers": [
                 {
-                    "name": "Magdy Salem",
-                    "email": "magdy.salem@emc.com",
-                    "launchpad_id": "magdy-salem"
+                    "name": "Alexandre Levine",
+                    "email": "Alexandre.Levine@emc.com",
+                    "launchpad_id": "alexandrelevine"
                 },
                 {
-                    "name": "Adrian Moreno Martinez",
-                    "email": "adrian.moreno@emc.com",
-                    "launchpad_id": "adrianmo"
+                    "name": "Fedor Tersin",
+                    "email": "fedor.tersin@emc.com",
+                    "launchpad_id": "ftersin"
                 }
             ],
             "releases": [
@@ -1793,15 +1793,15 @@
             "name": "ScaleIO plugin for Fuel",
             "description": "The ScaleIO plugin for Fuel extends Mirantis OpenStack functionality by deploying a EMC ScaleIO cluster and configuring it as the default volume backend for the OpenStack environment.",
             "maintainers": [
-                {
-                    "name": "Adrian Moreno Martinez",
-                    "email": "adrian.moreno@emc.com",
-                    "launchpad_id": "adrianmo"
+                 {
+                    "name": "Alexandre Levine",
+                    "email": "Alexandre.Levine@emc.com",
+                    "launchpad_id": "alexandrelevine"
                 },
                 {
-                    "name": "Magdy Salem",
-                    "email": "magdy.salem@emc.com",
-                    "launchpad_id": "magdy-salem"
+                    "name": "Fedor Tersin",
+                    "email": "fedor.tersin@emc.com",
+                    "launchpad_id": "ftersin"
                 }
             ],
             "releases": [
@@ -2216,9 +2216,9 @@
             "description": "This plugin provides Calico's Layer 3 Virtual Networking for Highly Scalable Data Centers",
             "maintainers": [
                 {
-                    "name": "Emma Gordon",
-                    "email": "emma@projectcalico.org",
-                    "launchpad_id": "emma-0"
+                    "name": «Neil Jerram»,
+                    "email": "Neil.Jerram@metaswitch.com",
+                    "launchpad_id": "neil-jerram"
                 }
             ],
             "releases": [
