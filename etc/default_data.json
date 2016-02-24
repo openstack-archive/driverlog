@@ -2210,6 +2210,20 @@
         },
         {
             "project_id": "openstack/fuel",
+            "repo": "openstack/fuel-plugin-detach-rabbitmq",
+            "vendor": "Mirantis",
+            "name": "Detach RabbitMQ plugin for Fuel",
+            "description": "This plugin allows to install RabbitMQ on dedicated nodes",
+            "maintainers": [
+                {
+                    "name": "Matthew Mosesohn",
+                    "email": "mmosesohn@mirantis.com",
+                    "launchpad_id": "raytrac3r"
+                }
+            ]
+        },
+        {
+            "project_id": "openstack/fuel",
             "repo": "openstack/fuel-plugin-calico",
             "vendor": "Project Calico",
             "name": "Calico plugin for Fuel",
