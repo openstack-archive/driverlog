@@ -2231,6 +2231,20 @@
                 "failure_pattern": "fuel-plugin.calico.build \\S+ : FAILURE"
             }
         },
+        {
+            "project_id": "openstack/fuel",
+            "repo": "openstack/fuel-plugin-detach-rabbitmq",
+            "vendor": "Mirantis",
+            "name": "Detach RabbitMQ for Fuel",
+            "description": "This plugin allows to install RabbitMQ on dedicated nodes",
+            "maintainers": [
+                {
+                    "name": "Matthew Mosesohn",
+                    "email": "mmosesohn@mirantis.com",
+                    "launchpad_id": "raytrac3r"
+                }
+            ]
+        },
           {
             "project_id": "openstack/fuel",
             "repo": "openstack/fuel-plugin-purestorage-cinder",
