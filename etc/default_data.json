@@ -2817,6 +2817,33 @@
             ]
         },
         {
+            "project_id": "openstack/manila",
+            "vendor": "Tegile Systems",
+            "name": "Tegile Manila Driver",
+            "description": "Tegile driver for Manila provides access to NFS and CIFS shares in Tegile IntelliFlash arrays. The driver supports Manila driver mode (driver_handles_share_servers = False).",
+            "maintainers": [
+                {
+                    "name": "Abhilash Divakaran",
+                    "email": "abhilashd@tegile.com",
+                    "launchpad_id": "abhilashd"
+                },
+                {
+                    "name": "Tegile OpenStack Team",
+                    "email": "openstack@tegile.com",
+                    "launchpad_id": "tegile-openstack-team"
+                }
+            ],
+            "wiki": "https://wiki.openstack.org/wiki/Tegile",
+            "releases": [
+                "Mitaka"
+            ],
+            "ci": {
+                "id": "tegile",
+                "success_pattern": "Build succeeded",
+                "failure_pattern": "Build failed"
+            }
+        },
+        {
             "project_id": "openstack/neutron",
             "vendor": "A10 Networks",
             "name": "A10 Networks LBaaS Driver",
