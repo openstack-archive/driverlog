@@ -130,8 +130,9 @@ def update_drivers(drivers, releases):
                 ci_result['ci_tested'] = True
                 drivers[key]['releases'][os_version] = ci_result
             else:
-                LOG.warn('CI result is not found for driver: %s in branch: %s',
-                         driver['name'], branch)
+                LOG.warning(
+                    'CI result is not found for driver: %s in branch: %s',
+                    driver['name'], branch)
 
     rcs_inst.close()
 

@@ -74,14 +74,14 @@ def read_uri(uri):
         fd.close()
         return raw
     except Exception as e:
-        LOG.warn('Error while reading uri: %s' % e)
+        LOG.warning('Error while reading uri: %s' % e)
 
 
 def read_json_from_uri(uri):
     try:
         return json.loads(read_uri(uri))
     except Exception as e:
-        LOG.warn('Error parsing json: %s' % e)
+        LOG.warning('Error parsing json: %s' % e)
 
 
 def make_range(start, stop, step):
