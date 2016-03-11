@@ -400,7 +400,8 @@
                 "Icehouse",
                 "Juno",
                 "Kilo",
-                "Liberty"
+                "Liberty",
+                "Mitaka"
             ],
             "ci": {
                 "id": "dell-storage-ci",
@@ -411,7 +412,7 @@
         {
             "project_id": "openstack/cinder",
             "vendor": "Dell",
-            "name": "Dell Storage Center iSCSI/FC volume driver",
+            "name": "Dell Storage Center iSCSI volume driver",
             "description": "The Dell Storage Center volume driver interacts with configured Storage Center arrays and supports various operations, such as volume creation and deletion, volume attachment and detachment, snapshot creation and deletion, and clone creation.",
             "maintainers": [
                 {
@@ -424,12 +425,38 @@
             "wiki": "http://docs.openstack.org/kilo/config-reference/content/dell-storagecenter-driver.html",
             "releases": [
                 "Kilo",
-                "Liberty"
+                "Liberty",
+                "Mitaka"
             ],
             "ci": {
                 "id": "dell-storage-ci",
                 "success_pattern": "dell-sc-iscsi-dsvm-volume \\S+ : SUCCESS",
                 "failure_pattern": "dell-sc-iscsi-dsvm-volume \\S+ : FAILURE"
+            }
+        },
+        {
+            "project_id": "openstack/cinder",
+            "vendor": "Dell",
+            "name": "Dell Storage Center FC volume driver",
+            "description": "The Dell Storage Center volume driver interacts with configured Storage Center arrays and supports various operations, such as volume creation and deletion, volume attachment and detachment, snapshot creation and deletion, and clone creation.",
+            "maintainers": [
+                {
+                    "name": "Sean McGinnis",
+                    "email": "sean_mcginnis@dell.com",
+                    "irc": "smcginnis",
+                    "launchpad_id": "sean-mcginnis"
+                }
+            ],
+            "wiki": "http://docs.openstack.org/kilo/config-reference/content/dell-storagecenter-driver.html",
+            "releases": [
+                "Kilo",
+                "Liberty",
+                "Mitaka"
+            ],
+            "ci": {
+                "id": "dell-storage-ci",
+                "success_pattern": "dell-sc-fc-dsvm-volume \\S+ : SUCCESS",
+                "failure_pattern": "dell-sc-fc-dsvm-volume \\S+ : FAILURE"
             }
         },
         {
