@@ -335,6 +335,28 @@
         },
         {
             "project_id": "openstack/cinder",
+            "vendor": "Coho Data",
+            "name": "Coho Data driver",
+            "description": "The Coho DataStream Scale-Out Storage allows your Block Storage service to scale seamlessly. The architecture consists of commodity storage servers with SDN ToR switches. Leveraging an SDN OpenFlow controller  allows you to scale storage horizontally, while avoiding storage and network bottlenecks by intelligent load-balancing and parallelized workloads.",
+            "maintainers": [
+                {
+                    "name": "Bardia Keyoumarsi",
+                    "email": "bardia.keyoumarsi@cohodata.com",
+                    "launchpad_id": "bardia-keyoumarsi"
+                }
+            ],
+            "wiki": "http://docs.openstack.org/draft/config-reference/block-storage/drivers/coho-data-driver.html",
+            "releases": [
+                "Mitaka"
+            ],
+            "ci": {
+                "id": "coho-openstack-ci",
+                "success_pattern": "Build Successful",
+                "failure_pattern": "Build Failed"
+            }
+        },
+        {
+            "project_id": "openstack/cinder",
             "vendor": "Coraid",
             "name": "Coraid AoE driver",
             "description": "The driver allows to configure the OpenStack Block Storage service for use with Coraid storage appliances. Coraid storage appliances use the low-latency ATA-over-Ethernet (ATA) protocol to provide high-bandwidth data transfer between hosts and data on the network.",
