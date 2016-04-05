@@ -351,8 +351,8 @@
             ],
             "ci": {
                 "id": "coho-openstack-ci",
-                "success_pattern": "Build Successful",
-                "failure_pattern": "Build Failed"
+                "success_pattern": "SUCCESS",
+                "failure_pattern": "FAILURE"
             }
         },
         {
