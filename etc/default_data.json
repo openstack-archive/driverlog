@@ -708,7 +708,7 @@
                     "launchpad_id": "hayashi-yusuke"
                 }
             ],
-            "wiki": "http://docs.openstack.org/trunk/config-reference/content/fujitsu-smis-driver.html",
+            "wiki": "http://docs.openstack.org/mitaka/config-reference/block-storage/drivers/fujitsu-eternus-dx-driver.html",
             "releases": [
                 "Juno"
             ],
@@ -730,7 +730,7 @@
                     "launchpad_id": "hayashi-yusuke"
                 }
             ],
-            "wiki": "http://docs.openstack.org/trunk/config-reference/content/fujitsu-smis-driver.html",
+            "wiki": "http://docs.openstack.org/mitaka/config-reference/block-storage/drivers/fujitsu-eternus-dx-driver.html",
             "releases": [
                 "Juno"
             ],
