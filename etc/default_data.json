@@ -713,7 +713,7 @@
                 "Juno"
             ],
             "ci": {
-                "id": "Fujitsu_ETERNUS_FC_CI",
+                "id": "Fujitsu_ETERNUS_CI",
                 "success_pattern": "Build succeeded",
                 "failure_pattern": "Build failed"
             }
