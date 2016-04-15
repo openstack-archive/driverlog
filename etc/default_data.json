@@ -82,8 +82,7 @@
         {
             "id": "Juno",
             "wiki": "https://wiki.openstack.org/wiki/ReleaseNotes/Juno",
-            "start": "2014-Apr-17",
-            "active": true
+            "start": "2014-Apr-17"
         },
         {
             "id": "Kilo",
@@ -99,8 +98,14 @@
         },
         {
             "id": "Mitaka",
-            "wiki": "https://wiki.openstack.org/wiki/Releases",
+            "wiki": "http://releases.openstack.org/mitaka/",
             "start": "2015-Oct-15",
+            "active": true
+        },
+        {
+            "id": "Newton",
+            "wiki": "http://releases.openstack.org/newton/",
+            "start": "2016-Apr-05",
             "active": true
         }
     ],
