@@ -3050,7 +3050,7 @@
             "project_id": "openstack/neutron",
             "vendor": "Brocade",
             "name": "Brocade Neutron plugin",
-            "description": "Brocade Neutron Plugin for VDX/VCS provides a means to interface OpenstackÃ¢ÂÂs Networking to orchestrate BrocadeÃ¢ÂÂs physical switches.",
+            "description": "Brocade Neutron Plugin for VDX/VCS provides a means to interface Openstack's Networking to orchestrate Brocade's physical switches.",
             "maintainers": [
                 {
                     "name": "Shiv Haris",
@@ -3377,7 +3377,7 @@
             "project_id": "openstack/neutron",
             "vendor": "Extreme Networks",
             "name": "Extreme Networks Plugin",
-            "description": "The Extreme Networks OpenStack plugin runs on Extreme XOS 15.3 and later releases. This plug-in is supported on all EXOS based platforms and includes the latest OpenStack API capabilities. The Extreme Networks OpenStack 2.0 plugin enables Ã¢ÂÂNetworking-as-a-ServiceÃ¢ÂÂ for both Physical and Virtual Extreme Networks.",
+            "description": "The Extreme Networks OpenStack plugin runs on Extreme XOS 15.3 and later releases. This plug-in is supported on all EXOS based platforms and includes the latest OpenStack API capabilities. The Extreme Networks OpenStack 2.0 plugin enables \"Networking-as-a-Service\" for both Physical and Virtual Extreme Networks.",
             "wiki": "http://extrcdn.extremenetworks.com/wp-content/uploads/2014/02/SDN_OpenStack_Install_Guide_Final1.pdf"
         },
         {
