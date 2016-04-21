@@ -2042,6 +2042,26 @@
             ],
             "wiki": "https://github.com/openstack/fuel-plugin-nsxv"
 	},
+	{
+            "project_id": "openstack/fuel",
+            "repo": "openstack/fuel-plugin-vmware-dvs",
+            "vendor": "Mirantis",
+            "name": "VMware DVS plugin for Fuel",
+            "description": "This plugin enables deployment of Mirantis OpenStack with VMware vCenter. It allows to use Neutron for management VMware vSphere Distributed Virtual Switch with OpenStack that utilize vSphere computing (ESXi) clusters.",
+            "maintainers": [
+                {
+                    "name": "Igor Gajsin",
+                    "email": "igajsin@mirantis.com",
+                    "launchpad_id": "igajsin"
+                }
+            ],
+            "releases": [
+                "Kilo",
+                "Liberty",
+                "Mitaka"
+            ],
+            "wiki": "https://github.com/openstack/fuel-plugin-vmware-dvs"
+	},
         {
             "project_id": "openstack/fuel",
             "repo": "openstack/fuel-plugin-influxdb-grafana",
@@ -3600,6 +3620,30 @@
                 "success_pattern": "Build succeed",
                 "failure_pattern": "Build failed"
             }
+        },
+        {
+            "project_id": "openstack/neutron",
+            "vendor": "Mirantis",
+            "name": "VMware DVS Neutron ML2 Driver",
+            "description": "VMware DVS Neutron ML2 plugin driver enables integration of OpenStack with VMware vCenter. It allows to use Neutron for management VMware vSphere Distributed Virtual Switch.",
+            "maintainers": [
+                {
+                    "name": "Igor Gajsin",
+                    "email": "igajsin@mirantis.com",
+                    "launchpad_id": "igajsin"
+                },
+                {
+                    "name": "Vyacheslav Tabolin",
+                    "email": "vtabolin@mirantis.com",
+                    "launchpad_id": "slavchick"
+                }
+            ],
+            "wiki": "https://github.com/Mirantis/vmware-dvs",
+            "releases": [
+                "Kilo",
+                "Liberty",
+                "Mitaka"
+            ]
         },
         {
             "project_id": "openstack/neutron",
