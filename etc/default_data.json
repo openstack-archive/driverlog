@@ -2042,6 +2042,26 @@
             ],
             "wiki": "https://github.com/openstack/fuel-plugin-nsxv"
 	},
+	{
+            "project_id": "openstack/fuel",
+            "repo": "openstack/fuel-plugin-vmware-dvs",
+            "vendor": "Mirantis",
+            "name": "VMware DVS plugin for Fuel",
+            "description": "This plugin enables deployment of Mirantis OpenStack with VMware vCenter. It allows to use Neutron for management VMware vSphere Distributed Virtual Switch with OpenStack that utilize vSphere computing (ESXi) clusters.",
+            "maintainers": [
+                {
+                    "name": "Igor Gajsin",
+                    "email": "igajsin@mirantis.com",
+                    "launchpad_id": "igajsin"
+                }
+            ],
+            "releases": [
+                "Kilo",
+                "Liberty",
+                "Mitaka"
+            ],
+            "wiki": "https://github.com/openstack/fuel-plugin-vmware-dvs"
+	},
         {
             "project_id": "openstack/fuel",
             "repo": "openstack/fuel-plugin-influxdb-grafana",
