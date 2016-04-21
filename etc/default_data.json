@@ -2384,6 +2384,22 @@
             ],
             "wiki": "https://github.com/openstack/fuel-plugin-openbook"
         },
+        {  
+            "project_id": "openstack/fuel",
+            "repo": "openstack/fuel-plugin-nuage",
+            "vendor": "Nuage Networks",
+            "name": "Fuel plugin for Nuage SDN",
+            "description": "Provides the functionality to Integrate Nuage SDN with Mirantis OpenStack",
+            "maintainers": [
+                {
+                    "name": "Rohan Parulekar",
+                    "email": "rohan.s.parulekar@nuagenetworks.net",
+                    "launchpad_id": "rparulek"
+                }
+            ],
+            "releases": ["Kilo"],
+            "wiki": "https://github.com/openstack/fuel-plugin-nuage"
+        },
         {
             "project_id": "openstack/ironic",
             "vendor": "AMD/SeaMicro",
