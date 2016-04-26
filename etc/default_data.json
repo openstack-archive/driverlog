@@ -1815,7 +1815,12 @@
                     "launchpad_id": "john-hua"
                 }
             ],
-            "wiki": "https://github.com/openstack/fuel-plugin-xenserver"
+            "wiki": "https://github.com/openstack/fuel-plugin-xenserver",
+            "releases": [
+                "Juno",
+                "Kilo",
+                "Liberty"
+            ]
         },
         {
             "project_id": "openstack/fuel",
@@ -1836,7 +1841,8 @@
                 }
             ],
             "releases": [
-                "Juno"
+                "Juno",
+                "Kilo"
             ],
             "wiki": "https://github.com/openstack/fuel-plugin-scaleio-cinder"
         },
@@ -1859,7 +1865,8 @@
                 }
             ],
             "releases": [
-                "Juno"
+                "Juno",
+                "Kilo"
             ],
             "wiki": "https://github.com/openstack/fuel-plugin-scaleio"
         },
@@ -1881,7 +1888,13 @@
                 "id": "mellanox",
                 "success_pattern": "SUCCESS",
                 "failure_pattern": "FAILURE"
-            }
+            },
+            "releases": [
+                "Juno",
+                "Kilo",
+                "Liberty"
+            
+        ]
         },
         {
             "project_id": "openstack/fuel",
@@ -1925,7 +1938,12 @@
                 "id": "plugins.ci",
                 "success_pattern": "fuel-plugin.eskibana.build \\S+ : SUCCESS",
                 "failure_pattern": "fuel-plugin.eskibana.build \\S+ : FAILURE"
-            }
+            },
+            "releases": [
+                "Juno",
+                "Kilo",
+                "Liberty"
+        ]   
         },
         {
             "project_id": "openstack/fuel",
@@ -1950,7 +1968,11 @@
                     "launchpad_id": "swann-w"
                 }
             ],
-            "wiki": "https://github.com/openstack/fuel-plugin-zabbix-monitoring-emc"
+            "wiki": "https://github.com/openstack/fuel-plugin-zabbix-monitoring-emc",
+            "releases": [
+                "Juno",
+                "Kilo"
+        ]
         },
         {
             "project_id": "openstack/fuel",
@@ -1975,7 +1997,11 @@
                     "launchpad_id": "swann-w"
                 }
             ],
-            "wiki": "https://github.com/openstack/fuel-plugin-zabbix-monitoring-extreme-networks"
+            "wiki": "https://github.com/openstack/fuel-plugin-zabbix-monitoring-extreme-networks",
+            "releases": [
+                "Juno",
+                "Kilo"
+        ]
         },
         {
             "project_id": "openstack/fuel",
@@ -2020,7 +2046,11 @@
                 "id": "fuel-tpi-ci",
                 "success_pattern": "fuel-plugin.fwaas.build \\S+ : SUCCESS",
                 "failure_pattern": "fuel-plugin.fwaas.build \\S+ : FAILURE"
-            }
+            },
+            "releases": [
+                "Juno",
+                "Kilo"
+        ]
         },
 	{
             "project_id": "openstack/fuel",
@@ -2090,7 +2120,12 @@
                 "id": "plugins.ci",
                 "success_pattern": "fuel-plugin.influxdb.build \\S+ : SUCCESS",
                 "failure_pattern": "fuel-plugin.influxdb.build \\S+ : FAILURE"
-            }
+            },
+            "releases": [
+                "Juno",
+                "Kilo",
+                "Liberty"
+        ]
         },
         {
             "project_id": "openstack/fuel",
@@ -2110,7 +2145,11 @@
                 "id": "plugins.ci",
                 "success_pattern": "fuel-plugin.contrail.build \\S+ : SUCCESS",
                 "failure_pattern": "fuel-plugin.contrail.build \\S+ : FAILURE"
-            }
+            },
+            "releases": [
+                "Juno",
+                "Kilo"
+        ]
         },
         {
             "project_id": "openstack/fuel",
@@ -2135,8 +2174,8 @@
             "description": "NetApp – This Fuel Plugin enables use of NetApp’s NFS driver as a Cinder back-end with Clustered Data ONTAP-based NetApp FAS storage systems (CDOT), 7-Mode systems, and performance-optimized SANtricity-based NetApp E Series storage systems.",
             "maintainers": [
                 {
-                    "name": "Aleksandr Vorobiov",
-                    "email": "avorobiov@mirantis.com",
+                    "name": "Andrey Volochay",
+                    "email": "avolochay@mirantis.com",
                     "launchpad_id": "avorobiov"
                 }
             ],
@@ -2180,7 +2219,12 @@
                     "launchpad_id": "swann-w"
                 }
             ],
-            "wiki": "https://github.com/openstack/fuel-plugin-zabbix-snmptrapd"
+            "wiki": "https://github.com/openstack/fuel-plugin-zabbix-snmptrapd",
+            "releases": [
+                "Juno",
+                "Kilo",
+                "Liberty"
+        ],
         },
         {
             "project_id": "openstack/fuel",
@@ -2210,7 +2254,12 @@
                 "id": "plugins.ci",
                 "success_pattern": "fuel-plugin.lma.build \\S+ : SUCCESS",
                 "failure_pattern": "fuel-plugin.lma.build \\S+ : FAILURE"
-            }
+            },
+            "releases": [
+                "Juno",
+                "Kilo",
+                "Liberty"
+        ]
         },
         {
             "project_id": "openstack/fuel",
@@ -2235,7 +2284,11 @@
                 "id": "fuel-tpi-ci",
                 "success_pattern": "fuel-plugin.vpnaas.build \\S+ : SUCCESS",
                 "failure_pattern": "fuel-plugin.vpnaas.build \\S+ : FAILURE"
-            }
+            },
+            "releases": [
+                "Juno",
+                "Kilo"
+        ]
         },
         {
             "project_id": "openstack/fuel",
@@ -2265,7 +2318,12 @@
                 "id": "plugins.ci",
                 "success_pattern": "fuel-plugin.zabbix.build \\S+ : SUCCESS",
                 "failure_pattern": "fuel-plugin.zabbix.build \\S+ : FAILURE"
-            }
+            },
+            "releases": [
+                "Juno",
+                "Kilo",
+                "Liberty"
+        ]
         },
         {
             "project_id": "openstack/fuel",
@@ -2280,7 +2338,11 @@
                     "launchpad_id": "nprivalova"
                 }
             ],
-            "wiki": "https://github.com/openstack/fuel-plugin-ceilometer-redis"
+            "wiki": "https://github.com/openstack/fuel-plugin-ceilometer-redis",
+            "releases": [
+                "Kilo",
+                "Liberty"
+        ]
         },
         {
             "project_id": "openstack/fuel",
@@ -2294,7 +2356,10 @@
                     "email": "mmosesohn@mirantis.com",
                     "launchpad_id": "raytrac3r"
                 }
-            ]
+            ],
+            "releases": [
+                "Liberty"
+        ],
         },
       {
             "project_id": "openstack/fuel",
@@ -2325,7 +2390,9 @@
                     "launchpad_id": "javeria-ak"
                 }
             ],
-            "wiki": "https://github.com/openstack/fuel-plugin-plumgrid"
+            "wiki": "https://github.com/openstack/fuel-plugin-plumgrid",
+            "releases": ["Kilo"]
+
         },
         {
             "project_id": "openstack/fuel",
@@ -2341,7 +2408,8 @@
                 }
             ],
             "releases": [
-                "Juno"
+                "Juno",
+                "Kilo"
             ],
             "wiki": "https://github.com/openstack/fuel-plugin-calico",
             "ci": {
@@ -2363,7 +2431,12 @@
                     "launchpad_id": "simon-dodsley"
                 }
             ],
-            "wiki": "https://github.com/openstack/fuel-plugin-purestorage-cinder"
+            "wiki": "https://github.com/openstack/fuel-plugin-purestorage-cinder",
+            "releases": [
+                "Kilo",
+                "Liberty",
+                "Mitaka"
+            ],
         },
         {
             "project_id": "openstack/fuel",
@@ -2383,7 +2456,11 @@
                     "launchpad_id": "john-griffith"
                 }
             ],
-            "wiki": "https://github.com/openstack/fuel-plugin-solidfire-cinder"
+            "wiki": "https://github.com/openstack/fuel-plugin-solidfire-cinder",
+            "releases": [
+                "Kilo",
+                "Liberty"
+            ]
         },
         {
             "project_id": "openstack/fuel",
@@ -2398,7 +2475,10 @@
                     "launchpad_id": "fluhmann"
                 }
             ],
-            "wiki": "https://github.com/openstack/fuel-plugin-openbook"
+            "wiki": "https://github.com/openstack/fuel-plugin-openbook",
+            "releases": [,
+                "Kilo"
+            ]
         },
         {
             "project_id": "openstack/ironic",
