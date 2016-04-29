@@ -2481,6 +2481,24 @@
             ]
         },
         {
+            "project_id": "openstack/fuel",
+            "repo": "tesora/fuel-plugin-tesora-dbaas",
+            "vendor": "Tesora Inc",
+            "name": "Tesora DBaaS Platform plugin for Fuel",
+            "description": "Tesora Database as a Service (DBaaS) platform is an enterprise-hardened version of OpenStack Trove, the native database service for OpenStack.",
+            "maintainers": [
+                {
+                    "name": "Brian Hunter",
+                    "email": "bhunter@tesora.com",
+                    "launchpad_id": "bhunter"
+                }
+            ],
+            "wiki": "https://github.com/tesora/fuel-plugin-tesora-dbaas/",
+            "releases": [
+                "Kilo"
+            ]
+        },
+        {
             "project_id": "openstack/ironic",
             "vendor": "AMD/SeaMicro",
             "name": "pxe_seamicro",
