@@ -1,0 +1,8 @@
+Code-Review+2: Irina <ipovolotskaya@mirantis.com>
+Workflow+1: Irina <ipovolotskaya@mirantis.com>
+Verified+2: Jenkins
+Submitted-by: Jenkins
+Submitted-at: Mon, 02 May 2016 15:06:15 +0000
+Reviewed-on: https://review.openstack.org/311241
+Project: openstack/driverlog
+Branch: refs/heads/master
