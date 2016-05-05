@@ -2595,20 +2595,108 @@
         },
         {
             "project_id": "openstack/ironic",
-            "vendor": "HP",
+            "vendor": "HPE",
             "name": "iscsi_ilo",
-            "description": "The iscsi_ilo driver from HP utilizes HP's integrated lights-out management facilities, in conjunction with an iSCSI-based deploy mechanism. It does not use PXE.",
+            "description": "The iscsi_ilo driver from HPE utilizes HPE's integrated lights-out management facilities, in conjunction with an iSCSI-based deploy mechanism. It does not use PXE.",
             "maintainers": [
                 {
-                    "name": "Ramakrishnan G",
-                    "email": "rameshg87@gmail.com",
-                    "launchpad_id": "rameshg87"
+                    "name": "Shivanand Tendulker",
+                    "email": "stendulker@gmail.com",
+                    "launchpad_id": "stendulker"
+                },
+                {
+                    "name": "Nisha Agarwal",
+                    "email": "agarwalnisha1980@gmail.com",
+                    "launchpad_id": "nisha"
+                },
+                {
+                    "name": "Debayan Ray",
+                    "email": "debayan.ray@gmail.com",
+                    "launchpad_id": "deray"
                 }
             ],
             "releases": [
-                "Juno"
+                "Juno",
+                "Kilo",
+                "Liberty",
+                "Mitaka"
             ],
-            "wiki": "http://docs.openstack.org/developer/ironic/_modules/ironic/drivers/ilo.html"
+            "wiki": "http://docs.openstack.org/developer/ironic/_modules/ironic/drivers/ilo.html",
+            "ci": {
+                "id": "proliantci",
+                "success_pattern": "Build Successful",
+                "failure_pattern": "Build Failed"
+            }
+        },
+        {
+            "project_id": "openstack/ironic",
+            "vendor": "HPE",
+            "name": "pxe_ilo",
+            "description": "The pxe_ilo driver from HPE utilizes HPE's integrated lights-out management facilities, in conjunction with PXE/iSCSI for deployment (just like normal PXE driver) but support automatic setting of requested boot mode from nova. This driver doesn't require iLO Advanced license.",
+            "maintainers": [
+                {
+                    "name": "Shivanand Tendulker",
+                    "email": "stendulker@gmail.com",
+                    "launchpad_id": "stendulker"
+                },
+                {
+                    "name": "Nisha Agarwal",
+                    "email": "agarwalnisha1980@gmail.com",
+                    "launchpad_id": "nisha"
+                },
+                {
+                    "name": "Debayan Ray",
+                    "email": "debayan.ray@gmail.com",
+                    "launchpad_id": "deray"
+                }
+            ],
+            "releases": [
+                "Juno",
+                "Kilo",
+                "Liberty",
+                "Mitaka"
+            ],
+            "wiki": "http://docs.openstack.org/developer/ironic/_modules/ironic/drivers/ilo.html",
+            "ci": {
+                "id": "proliantci",
+                "success_pattern": "Build Successful",
+                "failure_pattern": "Build Failed"
+            }
+        },
+        {
+            "project_id": "openstack/ironic",
+            "vendor": "HPE",
+            "name": "agent_ilo",
+            "description": "The agent_ilo driver from HPE utilizes HPE's integrated lights-out management facilities. It uses virtual media to boot up the Ironic Python Agent (IPA) on the baremetal node instead of using PXE.",
+            "maintainers": [
+                {
+                    "name": "Shivanand Tendulker",
+                    "email": "stendulker@gmail.com",
+                    "launchpad_id": "stendulker"
+                },
+                {
+                    "name": "Nisha Agarwal",
+                    "email": "agarwalnisha1980@gmail.com",
+                    "launchpad_id": "nisha"
+                },
+                {
+                    "name": "Debayan Ray",
+                    "email": "debayan.ray@gmail.com",
+                    "launchpad_id": "deray"
+                }
+            ],
+            "releases": [
+                "Juno",
+                "Kilo",
+                "Liberty",
+                "Mitaka"
+            ],
+            "wiki": "http://docs.openstack.org/developer/ironic/_modules/ironic/drivers/ilo.html",
+            "ci": {
+                "id": "proliantci",
+                "success_pattern": "Build Successful",
+                "failure_pattern": "Build Failed"
+            }
         },
         {
             "project_id": "openstack/ironic",
