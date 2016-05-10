@@ -2771,6 +2771,41 @@
         {
             "project_id": "openstack/ironic",
             "vendor": "IBM",
+            "name": "agent_ipmitool_ppc64",
+            "description": "agent_ipmitool_ppc64 is agent ipmitool support for the IBM Power ppc64 platform.",
+            "maintainers": [
+                {
+                    "name": "Mike Turek",
+                    "email": "mjturek@linux.vnet.ibm.com",
+                    "launchpad_id": "mjturek",
+                    "irc": "mjturek"
+                },
+                {
+                    "name": "Mark Hamzy",
+                    "email": "hamzy@us.ibm.com",
+                    "launchpad_id": "mark-hamzy",
+                    "irc": "hamzy"
+                },
+                {
+                    "name": "Kurt Taylor",
+                    "email": "kurt.r.taylor@gmail.com",
+                    "launchpad_id": "krtaylor",
+                    "irc": "krtaylor"
+                }
+            ],
+            "releases": [
+                "Mitaka"
+            ],
+            "wiki": "https://wiki.openstack.org/wiki/PowerKVM",
+            "ci": {
+                "id": "powerkvm",
+                "success_pattern": "SUCCESS",
+                "failure_pattern": "FAILURE"
+            }
+        },
+        {
+            "project_id": "openstack/ironic",
+            "vendor": "IBM",
             "name": "pxe_ipminative",
             "description": "pxe_ipminative is like the pxe_ipmitool driver, but substitutes IBM's 'pyghmi' library, a native python IPMI utility, for the generic ipmitool package.",
             "maintainers": [
@@ -2790,6 +2825,42 @@
                 "id": "ibm-xcat-ci",
                 "success_pattern": "Build Successful",
                 "failure_pattern": "Build Failed"
+            }
+        },
+        {
+            "project_id": "openstack/ironic",
+            "vendor": "IBM",
+            "name": "pxe_ipmitool_ppc64",
+            "description": "pxe_ipmitool_ppc64 is ipmitool support for the IBM Power ppc64 platform.",
+            "maintainers": [
+                {
+                    "name": "Mike Turek",
+                    "email": "mjturek@linux.vnet.ibm.com",
+                    "launchpad_id": "mjturek",
+                    "irc": "mjturek"
+                },
+                {
+                    "name": "Mark Hamzy",
+                    "email": "hamzy@us.ibm.com",
+                    "launchpad_id": "mark-hamzy",
+                    "irc": "hamzy"
+                },
+                {
+                    "name": "Kurt Taylor",
+                    "email": "kurt.r.taylor@gmail.com",
+                    "launchpad_id": "krtaylor",
+                    "irc": "krtaylor"
+                }
+            ],
+            "releases": [
+                "Liberty",
+                "Mitaka"
+            ],
+            "wiki": "https://wiki.openstack.org/wiki/PowerKVM",
+            "ci": {
+                "id": "powerkvm",
+                "success_pattern": "SUCCESS",
+                "failure_pattern": "FAILURE"
             }
         },
         {
@@ -4291,6 +4362,45 @@
                 "id": "hyper-v-ci",
                 "success_pattern": "Build succeeded",
                 "failure_pattern": "Build failed"
+            }
+        },
+        {
+            "project_id": "openstack/nova",
+            "vendor": "IBM",
+            "name": "kvm_ppc64",
+            "description": "KVM for the IBM Power ppc64 platform. Supported features are listed in the nova hypervisor support matrix.",
+            "maintainers": [
+                {
+                    "name": "Rafael Folco",
+                    "email": "rfolco@linux.vnet.ibm.com",
+                    "launchpad_id": "rfolco",
+                    "irc": "rfolco"
+                },
+                {
+                    "name": "Mikhail S Medvedev",
+                    "email": "mihailmed@gmail.com",
+                    "launchpad_id": "msmedved",
+                    "irc": "mmedvede"
+                },
+                {
+                    "name": "Kurt Taylor",
+                    "email": "kurt.r.taylor@gmail.com",
+                    "launchpad_id": "krtaylor",
+                    "irc": "krtaylor"
+                }
+            ],
+            "releases": [
+                "Icehouse",
+                "Juno",
+                "Kilo",
+                "Liberty",
+                "Mitaka"
+            ],
+            "wiki": "https://wiki.openstack.org/wiki/PowerKVM",
+            "ci": {
+                "id": "powerkvm",
+                "success_pattern": "SUCCESS",
+                "failure_pattern": "FAILURE"
             }
         },
         {
