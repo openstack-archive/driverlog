@@ -2794,6 +2794,77 @@
         },
         {
             "project_id": "openstack/ironic",
+            "vendor": "IBM",
+            "name": "pxe_ipmitool_ppc64",
+            "description": "pxe_ipmitool_ppc64 is ipmitool support for the IBM Power ppc64 platform.",
+            "maintainers": [
+                {
+                    "name": "Mike Turek",
+                    "email": "mjturek@linux.vnet.ibm.com",
+                    "launchpad_id": "mjturek",
+                    "irc": "mjturek"
+                },
+                {
+                    "name": "Mark Hamzy",
+                    "email": "hamzy@us.ibm.com",
+                    "launchpad_id": "mark-hamzy",
+                    "irc": "hamzy"
+                },
+                {
+                    "name": "Kurt Taylor",
+                    "email": "kurt.r.taylor@gmail.com",
+                    "launchpad_id": "krtaylor",
+                    "irc": "krtaylor"
+                }
+            ],
+            "releases": [
+                "Liberty",
+                "Mitaka"
+            ],
+            "wiki": "https://wiki.openstack.org/wiki/PowerKVM",
+            "ci": {
+                "id": "powerkvm",
+                "success_pattern": "SUCCESS",
+                "failure_pattern": "FAILURE"
+            }
+        },
+        {
+            "project_id": "openstack/ironic",
+            "vendor": "IBM",
+            "name": "agent_ipmitool_ppc64",
+            "description": "agent_ipmitool_ppc64 is agent ipmitool support for the IBM Power ppc64 platform.",
+            "maintainers": [
+                {
+                    "name": "Mike Turek",
+                    "email": "mjturek@linux.vnet.ibm.com",
+                    "launchpad_id": "mjturek",
+                    "irc": "mjturek"
+                },
+                {
+                    "name": "Mark Hamzy",
+                    "email": "hamzy@us.ibm.com",
+                    "launchpad_id": "mark-hamzy",
+                    "irc": "hamzy"
+                },
+                {
+                    "name": "Kurt Taylor",
+                    "email": "kurt.r.taylor@gmail.com",
+                    "launchpad_id": "krtaylor",
+                    "irc": "krtaylor"
+                }
+            ],
+            "releases": [
+                "Mitaka"
+            ],
+            "wiki": "https://wiki.openstack.org/wiki/PowerKVM",
+            "ci": {
+                "id": "powerkvm",
+                "success_pattern": "SUCCESS",
+                "failure_pattern": "FAILURE"
+            }
+        },
+        {
+            "project_id": "openstack/ironic",
             "vendor": "OpenStack Community",
             "name": "agent_ssh",
             "description": "agent_ssh is a testing driver, which combines the ironic-python-agent deploy mechanism with SSH-based power control to enable upstream CI.",
@@ -4530,6 +4601,45 @@
                     "launchpad_id": "smurugesan"
                 }
             ]
+        },
+        {
+            "project_id": "openstack/nova",
+            "vendor": "IBM",
+            "name": "kvm_ppc64",
+            "description": "KVM for the IBM Power ppc64 platform.",
+            "maintainers": [
+                {
+                    "name": "Rafael Folco",
+                    "email": "rfolco@linux.vnet.ibm.com",
+                    "launchpad_id": "rfolco",
+                    "irc": "rfolco"
+                },
+                {
+                    "name": "Mikhail (Misha) Medvedev",
+                    "email": "mihailmed@us.ibm.com",
+                    "launchpad_id": "msmedved",
+                    "irc": "mmedvede"
+                },
+                {
+                    "name": "Kurt Taylor",
+                    "email": "kurt.r.taylor@gmail.com",
+                    "launchpad_id": "krtaylor",
+                    "irc": "krtaylor"
+                }
+            ],
+            "releases": [
+                "Icehouse",
+                "Juno",
+                "Kilo",
+                "Liberty",
+                "Mitaka"
+            ],
+            "wiki": "https://wiki.openstack.org/wiki/PowerKVM",
+            "ci": {
+                "id": "powerkvm",
+                "success_pattern": "SUCCESS",
+                "failure_pattern": "FAILURE"
+            }
         },
         {
             "project_id": "openstack/sahara",
