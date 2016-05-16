@@ -1835,9 +1835,9 @@
                     "launchpad_id": "alexandrelevine"
                 },
                 {
-                    "name": "Fedor Tersin",
-                    "email": "fedor.tersin@emc.com",
-                    "launchpad_id": "ftersin"
+                    "name": "Alexey Morlang",
+                    "email": "alexey.morlang@emc.com",
+                    "launchpad_id": "alexey-mr"
                 }
             ],
             "releases": [
@@ -1859,9 +1859,9 @@
                     "launchpad_id": "alexandrelevine"
                 },
                 {
-                    "name": "Fedor Tersin",
-                    "email": "fedor.tersin@emc.com",
-                    "launchpad_id": "ftersin"
+                    "name": "Alexey Morlang",
+                    "email": "alexey.morlang@emc.com",
+                    "launchpad_id": "alexey-mr"
                 }
             ],
             "releases": [
@@ -1966,12 +1966,18 @@
                     "name": "Swann Croiset",
                     "email": "scroiset@mirantis.com",
                     "launchpad_id": "swann-w"
+                },
+                {
+                    "name": "Olivier Bourdon",
+                    "email":"obourdon@mirantis.com",
+                    "launchpad_id": "olivierbourdon38"
                 }
             ],
             "wiki": "https://github.com/openstack/fuel-plugin-zabbix-monitoring-emc",
             "releases": [
                 "Juno",
-                "Kilo"
+                "Kilo",
+                "Liberty"
         ]
         },
         {
@@ -1995,12 +2001,18 @@
                     "name": "Swann Croiset",
                     "email": "scroiset@mirantis.com",
                     "launchpad_id": "swann-w"
+                },
+                {
+                    "name": "Olivier Bourdon",
+                    "email":"obourdon@mirantis.com",
+                    "launchpad_id": "olivierbourdon38"
                 }
             ],
             "wiki": "https://github.com/openstack/fuel-plugin-zabbix-monitoring-extreme-networks",
             "releases": [
                 "Juno",
-                "Kilo"
+                "Kilo",
+                "Liberty"
         ]
         },
         {
@@ -2011,9 +2023,9 @@
             "description": "EMC VNX plugin for Fuel extends Mirantis OpenStack functionality by adding support for EMC VNX arrays in Cinder using iSCSI protocol. It replaces Cinder LVM driver which is the default volume backend that uses local volumes managed by LVM. Enabling EMC VNX plugin in Mirantis OpenStack means that all Cinder services are run on Controller nodes.",
             "maintainers": [
                     {
-                    "name": "Andrian Noga",
-                    "email": "anoga@mirantis.com",
-                    "launchpad_id": "anoga"
+                    "name": "Illia Polliul",
+                    "email": "ipolliul@mirantis.com",
+                    "launchpad_id": "ipolliul"
                 }
             ],
             "wiki": "https://github.com/openstack/fuel-plugin-external-emc",
@@ -2070,7 +2082,8 @@
                     "launchpad_id": "izinovik"
                 }
             ],
-            "wiki": "https://github.com/openstack/fuel-plugin-nsxv"
+            "wiki": "https://github.com/openstack/fuel-plugin-nsxv",
+            "releases": "Kilo", "Liberty"
 	},
 	{
             "project_id": "openstack/fuel",
@@ -2179,7 +2192,8 @@
                     "launchpad_id": "avorobiov"
                 }
             ],
-            "wiki": "https://github.com/openstack/fuel-plugin-cinder-netapp"
+            "wiki": "https://github.com/openstack/fuel-plugin-cinder-netapp",
+            "releases": ["Kilo", "Liberty"]
         },
         {
             "project_id": "openstack/fuel",
