@@ -2996,6 +2996,54 @@
             }
         },
         {
+            "project_id": "openstack/ironic",
+            "vendor": "OpenStack Community",
+            "name": "pxe_iscsi_cimc",
+            "description": "pxe_iscsi_cimc is an Ironic pxe boot + iscsi deployment driver for C series UCS running in standalone mode",
+            "maintainers": [
+                {
+                    "name": "Sam Betts",
+                    "email": "sam@code-smash.net",
+                    "launchpad_id": "sambetts",
+                    "irc": "sambetts"
+                }
+            ],
+            "releases": [
+                "Liberty",
+                "Mitaka"
+            ],
+            "wiki": "http://docs.openstack.org/developer/ironic/drivers/cimc.html",
+            "ci": {
+                "id": "cisco_ironic_ci",
+                "success_pattern": "Build Successful",
+                "failure_pattern": "Build Failed"
+            }
+        },
+        {
+            "project_id": "openstack/ironic",
+            "vendor": "OpenStack Community",
+            "name": "pxe_ucs",
+            "description": "pxe_ucs is an Ironic pxe boot + iscsi deployment driver for UCS B and C under UCSM",
+            "maintainers": [
+                {
+                    "name": "Sam Betts",
+                    "email": "sam@code-smash.net",
+                    "launchpad_id": "sambetts",
+                    "irc": "sambetts"
+                }
+            ],
+            "releases": [
+                "Liberty",
+                "Mitaka"
+            ],
+            "wiki": "http://docs.openstack.org/developer/ironic/drivers/ucs.html",
+            "ci": {
+                "id": "cisco_ironic_ci",
+                "success_pattern": "Build Successful",
+                "failure_pattern": "Build Failed"
+            }
+        },
+        {
             "project_id": "openstack/manila",
             "vendor": "Cloudbase",
             "name": "Windows SMB Driver, ",
