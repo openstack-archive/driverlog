@@ -1088,12 +1088,13 @@
                     "launchpad_id": "295988511-t"
                 }
             ],
-            "wiki": "http://docs.openstack.org/liberty/config-reference/content/huawei-storage-driver.html",
+            "wiki": "http://docs.openstack.org/mitaka/config-reference/block-storage/drivers/huawei-storage-driver.html",
             "releases": [
                 "Havana",
                 "Juno",
                 "Kilo",
-                "Liberty"
+                "Liberty",
+                "Mitaka"
             ],
             "ci": {
                 "id": "huawei-volume-ci",
@@ -3196,7 +3197,7 @@
             "project_id": "openstack/manila",
             "vendor": "Huawei",
             "name": "Huawei Manila Driver",
-            "description": "Huawei Manlia driver is a plug-in based on the Shared File Systems service. The Huawei Manila driver can be used to provide functions such as the share and snapshot for virtual machines, or instances, in OpenStack. Huawei Manila driver enables the OceanStor V3 series V300R002 storage system to provide only network filesystems for OpenStack.",
+            "description": "Huawei Manlia driver is a plug-in based on the Shared File Systems service. The Huawei Manila driver can be used to provide functions such as the share and snapshot for virtual machines, or instances, in OpenStack. Huawei Manila driver enables the OceanStor V3 series V300R002 or higher storage systems to provide only network filesystems for OpenStack.",
             "maintainers": [
                 {
                     "name": "Hu Yang",
@@ -3204,10 +3205,11 @@
                     "launchpad_id": "huyang1"
                 }
             ],
-            "wiki": "http://docs.openstack.org/liberty/config-reference/content/huawei-driver.html",
+            "wiki": "http://docs.openstack.org/mitaka/config-reference/shared-file-systems/drivers/huawei-nas-driver.html",
             "releases": [
                 "Kilo",
-                "Liberty"
+                "Liberty",
+                "Mitaka"
             ],
             "ci": {
                 "id": "huawei-manila-ci",
