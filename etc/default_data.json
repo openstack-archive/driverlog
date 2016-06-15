@@ -2543,6 +2543,52 @@
         },
         {
             "project_id": "openstack/ironic",
+            "vendor": "Cisco",
+            "name": "pxe_iscsi_cimc",
+            "description": "pxe_iscsi_cimc is an Ironic pxe boot + iscsi_cimc driver",
+            "maintainers": [
+                {
+                    "name": "Sam Betts",
+                    "email": "sambetts@cisco.com",
+                    "launchpad_id": "sambetts",
+                    "irc": "sambetts"
+                }
+            ],
+            "releases": [
+                "Juno"
+            ],
+            "wiki": "https://wiki.openstack.org/wiki/ThirdPartySystems/Cisco_Ironic_CI",
+            "ci": {
+                "id": "cisco_ironic_ci",
+                "success_pattern": "Build Successful",
+                "failure_pattern": "Build Failed"
+            }
+        },
+        {
+            "project_id": "openstack/ironic",
+            "vendor": "Cisco",
+            "name": "pxe_ucs",
+            "description": "pxe_ucs is an Ironic pxe boot + ucs driver",
+            "maintainers": [
+                {
+                    "name": "Sam Betts",
+                    "email": "sambetts@cisco.com",
+                    "launchpad_id": "sambetts",
+                    "irc": "sambetts"
+                }
+            ],
+            "releases": [
+                "Juno"
+            ],
+            "wiki": "https://wiki.openstack.org/wiki/ThirdPartySystems/Cisco_Ironic_CI",
+            "ci": {
+                "id": "cisco_ironic_ci",
+                "success_pattern": "Build Successful",
+                "failure_pattern": "Build Failed"
+            }
+        },
+        {
+            "project_id": "openstack/ironic",
             "vendor": "Cray",
             "name": "pxe_snmp",
             "description": "This driver uses SNMP instead of IPMI for power management of power distribution units.",
@@ -2557,6 +2603,26 @@
                 "Juno"
             ],
             "wiki": "http://docs.openstack.org/developer/ironic/api/ironic.drivers.pxe.html"
+        },
+        {
+            "project_id": "openstack/ironic",
+            "vendor": "Dell",
+            "name": "pxe_drac",
+            "description": "This driver is for the Dell Remote Access Card and uses pxe to deploy.",
+            "maintainers": [
+                {
+                    "name": "Chris Dearborn",
+                    "email": "Christopher_Dearborn@Dell.com",
+                    "launchpad_id": "cdearborn"
+                }
+            ],
+            "releases": [
+                "Juno",
+                "Kilo",
+                "Liberty",
+                "Mitaka"
+            ],
+            "wiki": "https://wiki.openstack.org/wiki/ThirdPartySystems/Dell_Ironic_CI"
         },
         {
             "project_id": "openstack/ironic",
@@ -2837,6 +2903,41 @@
         {
             "project_id": "openstack/ironic",
             "vendor": "IBM",
+            "name": "pxe_ipmitool_ppc64",
+            "description": "pxe_ipmitool_ppc64 is pxe ipmitool support for the IBM Power ppc64 platform.",
+            "maintainers": [
+                {
+                    "name": "Mike Turek",
+                    "email": "mjturek@linux.vnet.ibm.com",
+                    "launchpad_id": "mjturek",
+                    "irc": "mjturek"
+                },
+                {
+                    "name": "Mark Hamzy",
+                    "email": "hamzy@us.ibm.com",
+                    "launchpad_id": "mark-hamzy",
+                    "irc": "hamzy"
+                },
+                {
+                    "name": "Kurt Taylor",
+                    "email": "kurt.r.taylor@gmail.com",
+                    "launchpad_id": "krtaylor",
+                    "irc": "krtaylor"
+                }
+            ],
+            "releases": [
+                "Mitaka"
+            ],
+            "wiki": "https://wiki.openstack.org/wiki/PowerKVM",
+            "ci": {
+                "id": "powerkvm",
+                "success_pattern": "SUCCESS",
+                "failure_pattern": "FAILURE"
+            }
+        },
+        {
+            "project_id": "openstack/ironic",
+            "vendor": "IBM",
             "name": "pxe_ipminative",
             "description": "pxe_ipminative is like the pxe_ipmitool driver, but substitutes IBM's 'pyghmi' library, a native python IPMI utility, for the generic ipmitool package.",
             "maintainers": [
@@ -2861,8 +2962,8 @@
         {
             "project_id": "openstack/ironic",
             "vendor": "IBM",
-            "name": "pxe_ipmitool_ppc64",
-            "description": "pxe_ipmitool_ppc64 is ipmitool support for the IBM Power ppc64 platform.",
+            "name": "agent_ipmitool_ppc64",
+            "description": "agent_ipmitool_ppc64 is ipmitool support for the IBM Power ppc64 platform.",
             "maintainers": [
                 {
                     "name": "Mike Turek",
@@ -2975,6 +3076,25 @@
         {
             "project_id": "openstack/ironic",
             "vendor": "OpenStack Community",
+            "name": "pxe_msftocs",
+            "description": "pxe_msftocs is a testing driver.",
+            "maintainers": [
+                {
+                    "name": "?",
+                    "email": "?",
+                    "launchpad_id": "?",
+                    "irc": "?"
+                }
+            ],
+            "releases": [
+                "Icehouse",
+                "Juno"
+            ],
+            "wiki": "?"
+        },
+        {
+            "project_id": "openstack/ironic",
+            "vendor": "OpenStack Community",
             "name": "pxe_ssh",
             "description": "pxe_ssh is a testing driver, which combines the PXE deploy mechanism with SSH-based power control to enable upstream CI.",
             "maintainers": [
@@ -3040,6 +3160,52 @@
             "wiki": "http://docs.openstack.org/developer/ironic/drivers/ucs.html",
             "ci": {
                 "id": "cisco_ironic_ci",
+                "success_pattern": "Build Successful",
+                "failure_pattern": "Build Failed"
+            }
+        },
+        {
+            "project_id": "openstack/ironic",
+            "vendor": "OpenStack Community",
+            "name": "pxe_virtualbox",
+            "description": "pxe_virtualbox is an Ironic pxe boot + virtualbox driver for VirtualBox virtual machines",
+            "maintainers": [
+                {
+                    "name": "?",
+                    "email": "?",
+                    "launchpad_id": "?",
+                    "irc": "?"
+                }
+            ],
+            "releases": [
+                "Juno"
+            ],
+            "wiki": "?",
+            "ci": {
+                "id": "?",
+                "success_pattern": "Build Successful",
+                "failure_pattern": "Build Failed"
+            }
+        },
+        {
+            "project_id": "openstack/ironic",
+            "vendor": "OpenStack Community",
+            "name": "pxe_wakeonlan",
+            "description": "pxe_wakeonlan is an Ironic pxe boot + wakeonlan driver",
+            "maintainers": [
+                {
+                    "name": "?",
+                    "email": "?",
+                    "launchpad_id": "?",
+                    "irc": "?"
+                }
+            ],
+            "releases": [
+                "Juno"
+            ],
+            "wiki": "?",
+            "ci": {
+                "id": "?",
                 "success_pattern": "Build Successful",
                 "failure_pattern": "Build Failed"
             }
