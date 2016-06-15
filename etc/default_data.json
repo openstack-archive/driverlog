@@ -3803,6 +3803,30 @@
         },
         {
             "project_id": "openstack/neutron",
+            "vendor": "Huawei",
+            "name": "Huawei Agile Controller Neutron Plugin",
+            "description": "Huawei Agile Controller extends neutron's functionalities and enables the orchestration of network-wide resources in support of application services.",
+            "maintainers": [
+                {
+                    "name": "Libu Jacob Varghese",
+                    "irc": "l_jacob",
+                    "email": "libuparayil@gmail.com",
+                    "launchpad_id": "libu"
+                },
+                {
+                    "name": "dongfeng",
+                    "irc": "albert_dongfeng",
+                    "email": "albert.dongfeng@huawei.com",
+                    "launchpad_id": "albert-dongfeng"
+                }
+            ],
+            "wiki": "https://github.com/openstack/networking-huawei/blob/master/doc/source/drivers/ac/readme.rst",
+            "releases": [
+                "Kilo"
+            ]
+        },
+        {
+            "project_id": "openstack/neutron",
             "vendor": "IBM",
             "name": "IBM SDN-VE Plugin",
             "description": "This plugin implements Neutron v2 APIs by using IBM-SDNVE controller.",
