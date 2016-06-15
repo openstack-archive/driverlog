@@ -2531,32 +2531,23 @@
         },
         {
             "project_id": "openstack/ironic",
-            "vendor": "AMD/SeaMicro",
-            "name": "pxe_seamicro",
-            "description": "This driver interfaces with SeaMicro's high density computing devices.",
-            "maintainers": [],
-            "releases": [
-                "Icehouse",
-                "Juno"
-            ],
-            "wiki": "http://www.seamicro.com/sites/default/files/SeaMicro-Openstack-Blueprint.pdf"
-        },
-        {
-            "project_id": "openstack/ironic",
-            "vendor": "Cray",
-            "name": "pxe_snmp",
-            "description": "This driver uses SNMP instead of IPMI for power management of power distribution units.",
+            "vendor": "Dell",
+            "name": "pxe_drac",
+            "description": "This driver is for the Dell Remote Access Controller and uses pxe to deploy.",
             "maintainers": [
                 {
-                    "name": "Stig Telfer",
-                    "email": "stelfer@cray.com",
-                    "launchpad_id": "stigtelfer"
+                    "name": "Chris Dearborn",
+                    "email": "christopher_dearborn@Dell.com",
+                    "launchpad_id": "cdearborn"
                 }
             ],
+            "wiki": "https://wiki.openstack.org/wiki/ThirdPartySystems/Dell_Ironic_CI",
             "releases": [
-                "Juno"
-            ],
-            "wiki": "http://docs.openstack.org/developer/ironic/api/ironic.drivers.pxe.html"
+                "Juno",
+                "Kilo",
+                "Liberty",
+                "Mitaka"
+            ]
         },
         {
             "project_id": "openstack/ironic",
@@ -2646,13 +2637,13 @@
                     "launchpad_id": "deray"
                 }
             ],
+            "wiki": "http://docs.openstack.org/developer/ironic/_modules/ironic/drivers/ilo.html",
             "releases": [
                 "Juno",
                 "Kilo",
                 "Liberty",
                 "Mitaka"
             ],
-            "wiki": "http://docs.openstack.org/developer/ironic/_modules/ironic/drivers/ilo.html",
             "ci": {
                 "id": "proliantci",
                 "success_pattern": "Build Successful",
@@ -2681,13 +2672,13 @@
                     "launchpad_id": "deray"
                 }
             ],
+            "wiki": "http://docs.openstack.org/developer/ironic/_modules/ironic/drivers/ilo.html",
             "releases": [
                 "Juno",
                 "Kilo",
                 "Liberty",
                 "Mitaka"
             ],
-            "wiki": "http://docs.openstack.org/developer/ironic/_modules/ironic/drivers/ilo.html",
             "ci": {
                 "id": "proliantci",
                 "success_pattern": "Build Successful",
@@ -2716,13 +2707,13 @@
                     "launchpad_id": "deray"
                 }
             ],
+            "wiki": "http://docs.openstack.org/developer/ironic/_modules/ironic/drivers/ilo.html",
             "releases": [
                 "Juno",
                 "Kilo",
                 "Liberty",
                 "Mitaka"
             ],
-            "wiki": "http://docs.openstack.org/developer/ironic/_modules/ironic/drivers/ilo.html",
             "ci": {
                 "id": "proliantci",
                 "success_pattern": "Build Successful",
@@ -2754,10 +2745,10 @@
                     "irc": "liliars"
                 }
             ],
+            "wiki": "http://docs.openstack.org/developer/ironic/drivers/oneview.html",
             "releases": [
                 "Mitaka"
             ],
-            "wiki": "http://docs.openstack.org/developer/ironic/drivers/oneview.html",
             "ci": {
                 "id": "ufcg-oneview-ci",
                 "success_pattern": "Build Successful",
@@ -2789,49 +2780,14 @@
                     "irc": "liliars"
                 }
             ],
+            "wiki": "http://docs.openstack.org/developer/ironic/drivers/oneview.html",
             "releases": [
                 "Mitaka"
             ],
-            "wiki": "http://docs.openstack.org/developer/ironic/drivers/oneview.html",
             "ci": {
                 "id": "ufcg-oneview-ci",
                 "success_pattern": "Build Successful",
                 "failure_pattern": "Build Failed"
-            }
-        },
-        {
-            "project_id": "openstack/ironic",
-            "vendor": "IBM",
-            "name": "agent_ipmitool_ppc64",
-            "description": "agent_ipmitool_ppc64 is agent ipmitool support for the IBM Power ppc64 platform.",
-            "maintainers": [
-                {
-                    "name": "Mike Turek",
-                    "email": "mjturek@linux.vnet.ibm.com",
-                    "launchpad_id": "mjturek",
-                    "irc": "mjturek"
-                },
-                {
-                    "name": "Mark Hamzy",
-                    "email": "hamzy@us.ibm.com",
-                    "launchpad_id": "mark-hamzy",
-                    "irc": "hamzy"
-                },
-                {
-                    "name": "Kurt Taylor",
-                    "email": "kurt.r.taylor@gmail.com",
-                    "launchpad_id": "krtaylor",
-                    "irc": "krtaylor"
-                }
-            ],
-            "releases": [
-                "Mitaka"
-            ],
-            "wiki": "https://wiki.openstack.org/wiki/PowerKVM",
-            "ci": {
-                "id": "powerkvm",
-                "success_pattern": "SUCCESS",
-                "failure_pattern": "FAILURE"
             }
         },
         {
@@ -2847,51 +2803,15 @@
                     "irc": "linggao"
                 }
             ],
+            "wiki": "https://wiki.openstack.org/wiki/Ironic/Drivers",
             "releases": [
                 "Icehouse",
                 "Juno"
             ],
-            "wiki": "https://wiki.openstack.org/wiki/Ironic/Drivers",
             "ci": {
                 "id": "ibm-xcat-ci",
                 "success_pattern": "Build Successful",
                 "failure_pattern": "Build Failed"
-            }
-        },
-        {
-            "project_id": "openstack/ironic",
-            "vendor": "IBM",
-            "name": "pxe_ipmitool_ppc64",
-            "description": "pxe_ipmitool_ppc64 is ipmitool support for the IBM Power ppc64 platform.",
-            "maintainers": [
-                {
-                    "name": "Mike Turek",
-                    "email": "mjturek@linux.vnet.ibm.com",
-                    "launchpad_id": "mjturek",
-                    "irc": "mjturek"
-                },
-                {
-                    "name": "Mark Hamzy",
-                    "email": "hamzy@us.ibm.com",
-                    "launchpad_id": "mark-hamzy",
-                    "irc": "hamzy"
-                },
-                {
-                    "name": "Kurt Taylor",
-                    "email": "kurt.r.taylor@gmail.com",
-                    "launchpad_id": "krtaylor",
-                    "irc": "krtaylor"
-                }
-            ],
-            "releases": [
-                "Liberty",
-                "Mitaka"
-            ],
-            "wiki": "https://wiki.openstack.org/wiki/PowerKVM",
-            "ci": {
-                "id": "powerkvm",
-                "success_pattern": "SUCCESS",
-                "failure_pattern": "FAILURE"
             }
         },
         {
@@ -2907,10 +2827,10 @@
                     "irc": "jroll"
                 }
             ],
+            "wiki": "http://docs.openstack.org/developer/ironic/api/ironic.drivers.agent.html?highlight=agent%20ssh#ironic.drivers.agent.AgentAndSSHDriver",
             "releases": [
                 "Juno"
             ],
-            "wiki": "http://docs.openstack.org/developer/ironic/api/ironic.drivers.agent.html?highlight=agent%20ssh#ironic.drivers.agent.AgentAndSSHDriver",
             "ci": {
                 "id": "jenkins_ci",
                 "success_pattern": "Build Successful",
@@ -2921,7 +2841,7 @@
             "project_id": "openstack/ironic",
             "vendor": "OpenStack Community",
             "name": "agent_ipmitool",
-            "description": "agent_ipmitool uses the ironic-python-agent project for advanced provisioning functionality not available with the PXE driver.",
+            "description": "agent_ipmitool uses the ironic-python-agent project for advanced provisioning functionality not available with the PXE driver. This driver is tested on the x86 and Power (ppc64) architectures.",
             "maintainers": [
                 {
                     "name": "Jim Rollenhagen",
@@ -2930,34 +2850,21 @@
                     "irc": "jroll"
                 }
             ],
+            "wiki": "http://docs.openstack.org/developer/ironic/api/ironic.drivers.agent.html",
             "releases": [
                 "Juno"
             ],
-            "wiki": "http://docs.openstack.org/developer/ironic/api/ironic.drivers.agent.html"
-        },
-        {
-            "project_id": "openstack/ironic",
-            "vendor": "OpenStack Community",
-            "name": "pxe_iboot",
-            "description": "This driver uses iBoot instead of IPMI for power management.",
-            "maintainers": [
-                {
-                    "name": "Dan Prince",
-                    "irc": "dprince",
-                    "email": "dprince@redhat.com",
-                    "launchpad_id": "dan-prince"
-                }
-            ],
-            "releases": [
-                "Juno"
-            ],
-            "wiki": "http://docs.openstack.org/developer/ironic/api/ironic.drivers.pxe.html"
+            "ci": {
+                "id": "jenkins_ci",
+                "success_pattern": "Build Successful",
+                "failure_pattern": "Build Failed"
+            }
         },
         {
             "project_id": "openstack/ironic",
             "vendor": "OpenStack Community",
             "name": "pxe_ipmitool",
-            "description": "pxe_ipmitool is the recommended default driver for Ironic in Icehouse and Juno.",
+            "description": "pxe_ipmitool is the recommended default driver for Ironic in Icehouse and Juno. This driver is tested on the x86 and Power (ppc64) architectures.",
             "maintainers": [
                 {
                     "name": "Devananda van der Veen",
@@ -2966,11 +2873,16 @@
                     "irc": "devananda"
                 }
             ],
+            "wiki": "http://docs.openstack.org/developer/ironic/api/ironic.drivers.pxe.html",
             "releases": [
                 "Icehouse",
                 "Juno"
             ],
-            "wiki": "http://docs.openstack.org/developer/ironic/api/ironic.drivers.pxe.html"
+            "ci": {
+                "id": "jenkins_ci",
+                "success_pattern": "Build Successful",
+                "failure_pattern": "Build Failed"
+            }
         },
         {
             "project_id": "openstack/ironic",
@@ -2985,11 +2897,11 @@
                     "irc": "devananda"
                 }
             ],
+            "wiki": "http://docs.openstack.org/developer/ironic/api/ironic.drivers.pxe.html",
             "releases": [
                 "Icehouse",
                 "Juno"
             ],
-            "wiki": "http://docs.openstack.org/developer/ironic/api/ironic.drivers.pxe.html",
             "ci": {
                 "id": "jenkins_ci",
                 "success_pattern": "Build Successful",
@@ -3009,11 +2921,11 @@
                     "irc": "sambetts"
                 }
             ],
+            "wiki": "http://docs.openstack.org/developer/ironic/drivers/cimc.html",
             "releases": [
                 "Liberty",
                 "Mitaka"
             ],
-            "wiki": "http://docs.openstack.org/developer/ironic/drivers/cimc.html",
             "ci": {
                 "id": "cisco_ironic_ci",
                 "success_pattern": "Build Successful",
@@ -3033,11 +2945,11 @@
                     "irc": "sambetts"
                 }
             ],
+            "wiki": "http://docs.openstack.org/developer/ironic/drivers/ucs.html",
             "releases": [
                 "Liberty",
                 "Mitaka"
             ],
-            "wiki": "http://docs.openstack.org/developer/ironic/drivers/ucs.html",
             "ci": {
                 "id": "cisco_ironic_ci",
                 "success_pattern": "Build Successful",
