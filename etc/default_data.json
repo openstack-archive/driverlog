@@ -1648,7 +1648,8 @@
                 "Icehouse",
                 "Juno",
                 "Kilo",
-                "Liberty"
+                "Liberty",
+                "Mitaka"
             ],
             "ci": {
                 "id": "SolidFire-dsvm-full",
