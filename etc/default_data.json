@@ -4292,7 +4292,9 @@
                 "Icehouse",
                 "Juno",
                 "Kilo",
-                "Liberty"
+                "Liberty",
+                "Mitaka",
+                "Newton"
             ],
             "ci": {
                 "id": "plumgrid-ci",
