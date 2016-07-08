@@ -2385,16 +2385,17 @@
             "description": "This plugin allows to install RabbitMQ on dedicated nodes",
             "maintainers": [
                 {
-                    "name": "Matthew Mosesohn",
-                    "email": "mmosesohn@mirantis.com",
-                    "launchpad_id": "raytrac3r"
+                    "name": "Dmitry Mescheryakov",
+                    "email": "dmescheryakov@mirantis.com",
+                    "launchpad_id": "dmitrymex"
                 }
             ],
             "releases": [
-                "Liberty"
+                "Liberty",
+                "Mitaka"
         ]
-      },
-      {
+        },
+        {
             "project_id": "openstack/fuel",
             "repo": "openstack/fuel-plugin-nuage",
             "vendor": "Nuage Networks",
