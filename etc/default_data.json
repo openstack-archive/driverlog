@@ -2497,6 +2497,22 @@
             ]
         },
         {
+     "project_id": "openstack/fuel",
+            "repo": "openstack/fuel-plugin-swiftstack", 
+            "vendor": "Swiftstack",
+            "name": "Swiftstack plugin for Fuel",
+            "description": "SwiftStack plugin for Fuel provides the functionality to integrate SwiftStack Swift cluster as object storage backend option.",
+            "maintainers": [
+                {
+                    "name": "Charles Hsu",
+                    "email": "charles0126@gmail.com",
+                    "launchpad_id": "charles0126"
+                }
+            ],
+            "wiki": "https://github.com/openstack/fuel-plugin-swiftstack",
+            "releases": ["Kilo", "Liberty"]
+        },
+        {
             "project_id": "openstack/fuel",
             "repo": "openstack/fuel-plugin-openbook", 
             "vendor": "Talligent Inc",
