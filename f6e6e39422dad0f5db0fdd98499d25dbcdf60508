@@ -1,0 +1,9 @@
+Code-Review+1: Maciej Relewicz <mrelewicz@mirantis.com>
+Code-Review+2: Irina <ipovolotskaya@mirantis.com>
+Workflow+1: Irina <ipovolotskaya@mirantis.com>
+Verified+2: Jenkins
+Submitted-by: Jenkins
+Submitted-at: Fri, 26 Aug 2016 18:30:42 +0000
+Reviewed-on: https://review.openstack.org/361081
+Project: openstack/driverlog
+Branch: refs/heads/master
