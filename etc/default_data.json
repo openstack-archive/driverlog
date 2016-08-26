@@ -1895,7 +1895,6 @@
                 "Juno",
                 "Kilo",
                 "Liberty"
-            
         ]
         },
       {
@@ -1961,7 +1960,7 @@
                 "Juno",
                 "Kilo",
                 "Liberty"
-        ]   
+        ]
         },
         {
             "project_id": "openstack/fuel",
@@ -2082,7 +2081,74 @@
                 "Kilo"
         ]
         },
-	{
+               {
+            "project_id": "openstack/fuel",
+            "vendor": "Mirantis",
+            "repo": "openstack/fuel-plugin-murano-networking-sfc",
+            "name": "Murano Networking SFC plugin for Fuel",
+            "description": "This plugin extends Mirantis OpenStack functionality by adding to Murano Networking SFC support.",
+            "maintainers": [
+                {
+                    "name": "Damian Szeluga",
+                    "email": "dszeluga@mirantis.com",
+                    "launchpad_id": "dszeluga"
+                },
+                {
+                    "name": "Maciej Relewicz",
+                    "email": "mrelewicz@mirantis.com",
+                    "launchpad_id": "rlu"
+                },
+                {
+                    "name": "Alexander Saprykin",
+                    "email": "asaprykin@mirantis.com",
+                    "launchpad_id": "cutwater"
+                },
+                {
+                    "name": "Krzysztof Szukielojc",
+                    "email": "kszukielojc@mirantis.com",
+                    "launchpad_id": "kszukielojc"
+                },
+                {
+                    "name": "Sergey Slipushenko",
+                    "email": "sslipushenko@mirantis.com",
+                    "launchpad_id": "sslypushenko"
+                },
+                {
+                    "name": "Bartosz Kupidura",
+                    "email": "bkupidura@mirantis.com",
+                    "launchpad_id": "zynzel"
+                }
+            ],
+            "wiki": "https://github.com/openstack/fuel-plugin-murano-networking-sfc/tree/1.0",
+            "releases": ["Mitaka"]
+        },
+        {
+            "project_id": "openstack/fuel",
+            "repo": "openstack/fuel-plugin-networking-sfc",
+            "vendor": "Mirantis",
+            "name": "Networking SFC plugin for Fuel",
+            "description": "This plugin extends Mirantis OpenStack functionality by adding Networking SFC support.",
+            "maintainers": [
+                {
+                    "name": "Damian Szeluga",
+                    "email": "dszeluga@mirantis.com",
+                    "launchpad_id": "dszeluga"
+                },
+                {
+                    "name": "Maciej Relewicz",
+                    "email": "mrelewicz@mirantis.com",
+                    "launchpad_id": "rlu"
+                },
+                {
+                    "name": "Bartosz Kupidura",
+                    "email": "bkupidura@mirantis.com",
+                    "launchpad_id": "zynzel"
+                }
+            ],
+            "wiki": "https://github.com/openstack/fuel-plugin-networking-sfc/tree/1.0",
+            "releases": ["Mitaka"]
+        },
+  	{
             "project_id": "openstack/fuel",
             "repo": "openstack/fuel-plugin-nsxv",
             "vendor": "Mirantis",
@@ -2498,7 +2564,7 @@
         },
         {
      "project_id": "openstack/fuel",
-            "repo": "openstack/fuel-plugin-swiftstack", 
+            "repo": "openstack/fuel-plugin-swiftstack",
             "vendor": "Swiftstack",
             "name": "Swiftstack plugin for Fuel",
             "description": "SwiftStack plugin for Fuel provides the functionality to integrate SwiftStack Swift cluster as object storage backend option.",
@@ -2514,7 +2580,7 @@
         },
         {
             "project_id": "openstack/fuel",
-            "repo": "openstack/fuel-plugin-openbook", 
+            "repo": "openstack/fuel-plugin-openbook",
             "vendor": "Talligent Inc",
             "name": "Openbook plugin for Fuel",
             "description": "Deploys Openbook for billing/invoicing, chargeback/showback, and customer lifecycle management for OpenStack.",
