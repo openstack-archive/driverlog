@@ -2209,10 +2209,15 @@
                     "name": "Andrey Volochay",
                     "email": "avolochay@mirantis.com",
                     "launchpad_id": "avorobiov"
+                },
+                {
+                    "name": "Roman Sokolkov",
+                    "email": "rsokolkov@mirantis.com",
+                    "launchpad_id": "rsokolkov"
                 }
             ],
             "wiki": "https://github.com/openstack/fuel-plugin-cinder-netapp",
-            "releases": ["Kilo", "Liberty"]
+            "releases": ["Kilo", "Liberty", "Mitaka"]
         },
         {
             "project_id": "openstack/fuel",
