@@ -25,7 +25,7 @@ from oslo_log import log as logging
 import six
 from six.moves.urllib import parse
 from six.moves.urllib import request
-
+from six.moves import xrange
 
 LOG = logging.getLogger(__name__)
 
