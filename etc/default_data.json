@@ -1874,6 +1874,26 @@
         },
         {
             "project_id": "openstack/fuel",
+            "repo": "carone1/fuel-xtremio",
+            "vendor": "EMC",
+            "name": "XtremIO plugin for Fuel",
+            "description": "EMC XtremIO plugin for Fuel extends Mirantis OpenStack functionality by adding support for EMC XtremIO arrays in Cinder using iSCSI protocol",
+            "maintainers": [
+                 {
+                    "name": "Eric Caron",
+                    "email": "eric.caron@emc.com",
+                    "launchpad_id": "carone1"
+                }
+            ],
+            "releases": [
+                "Kilo",
+                "Liberty",
+                "Mitaka"
+            ],
+            "wiki": "https://github.com/carone1/fuel_xtremio"
+        },
+        {
+            "project_id": "openstack/fuel",
             "repo": "openstack/fuel-plugin-mellanox",
             "vendor": "Mellanox",
             "name": "ConnectX-3 Pro Network Adapter Support plugin for Fuel",
