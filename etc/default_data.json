@@ -2286,6 +2286,29 @@
         },
         {
             "project_id": "openstack/fuel",
+            "repo": "openstack/fuel-plugin-cinder-kaminario",
+            "vendor": "Kaminario/Biarca",
+            "name": "Cinder Kaminario Plugin for Fuel",
+            "description": "Fuel plugin that enables to configure multiple Cinder backend support for Kaminario K2 All-Flash Array.",
+            "maintainers": [
+                {
+                    "name": "Pradip Rawat",
+                    "email": "Pradip.Rawat.CTR@kaminario.com",
+                    "launchpad_id": "pradipkumarr"
+                },
+                {
+                    "name": "Chaithanya Kopparthi",
+                    "email": "chaithanyak@biarca.com",
+                    "launchpad_id": "chaithanyak"
+                }
+            ],
+            "wiki": "https://github.com/openstack/fuel-plugin-cinder-kaminario",
+            "releases": [
+                "Mitaka"
+            ]
+        },
+        {
+            "project_id": "openstack/fuel",
             "repo": "openstack/fuel-plugin-cinder-netapp",
             "vendor": "Mirantis",
             "name": "NetApp plugin for Fuel",
