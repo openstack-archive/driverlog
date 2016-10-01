@@ -1250,6 +1250,26 @@
         },
         {
             "project_id": "openstack/cinder",
+            "vendor": "Kaminario",
+            "name": "Kaminario K2 All-Flash iSCSI/FC",
+            "description": "The Kaminario iSCSI/FC Cinder volume drivers interacts with configured K2 All-Flash arrays(iSCSI/FC) and supports various operations, such as volume creation and deletion, volume attachment and detachment, snapshot creation and deletion, and clone creation.",
+            "maintainers": [
+                {
+                    "name": "Nikesh Mahalka",
+                    "email": "nikesh.mahalka.ctr@kaminario.com",
+                    "irc": "nikeshm",
+                    "launchpad_id": "nike-niec"
+                }
+            ],
+            "wiki": "http://docs.openstack.org/newton/config-reference/block-storage/drivers/kaminario-driver.html",
+            "ci": {
+                "id": "kaminario",
+                "success_pattern": "Build succeeded",
+                "failure_pattern": "Build failed"
+            }
+        },
+        {
+            "project_id": "openstack/cinder",
             "vendor": "Lenovo",
             "name": "Lenovo Storage iSCSI/FC",
             "description": "",
