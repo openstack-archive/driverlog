@@ -2691,6 +2691,35 @@
         },
         {
             "project_id": "openstack/fuel",
+            "repo": "openstack/fuel-plugin-qlogic-sriov-vxlan",
+            "vendor": “QLogic”,
+	    "name": “QLogic® FastLinQ™ Ethernet SR-IOV Fuel plugin",
+            “description": “QLogic Fuel plugin installs and configures SR-IOV functionality on FastLinQ Ethernet Adapters",
+            "maintainers": [
+                {
+                    "name": “Rick Hicksted”,
+                    "email": “rick.hicksted@qlogic.com”,
+                    "launchpad_id": “rhicksted”
+                },
+                {
+                    "name": “Jigar Shah“,
+                    "email": “jigar.shah@qlogic.com",
+                    "launchpad_id": “jigar”
+                },
+                {
+                    "name": “Shalaka Kulkarni“,
+                    "email": “shalaka.kulkarni@qlogic.com",
+                    "launchpad_id": “shalakak”
+                }
+            ],
+            "wiki": "https://github.com/openstack/fuel-plugin-qlogic-sriov-vxlan",
+            "releases": [
+                "Kilo",
+                "Liberty"
+            ]
+        },
+        {
+            "project_id": "openstack/fuel",
             "repo": "openstack/fuel-plugin-solidfire-cinder",
             "vendor": "SolidFire Inc",
             "name": "SolidFire plugin for Fuel",
