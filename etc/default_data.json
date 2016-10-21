@@ -2584,14 +2584,20 @@
             "maintainers": [
                 {
                     "name": "Nadya Shakhat",
-                    "email": "nshakhat@mirantis.com",
+                    "email": "nprivalova@mirantis.com",
                     "launchpad_id": "nprivalova"
                 }
             ],
             "wiki": "https://github.com/openstack/fuel-plugin-ceilometer-redis",
+            "ci": {
+                "id": "plugins.ci",
+                "success_pattern": "fuel-plugin.redis.build \\S+ : SUCCESS",
+                "failure_pattern": "fuel-plugin.redis.build \\S+ : FAILURE"
+            },
             "releases": [
                 "Kilo",
-                "Liberty"
+                "Liberty",
+                "Mitaka"
         ]
         },
         {
@@ -2614,6 +2620,27 @@
         },
         {
             "project_id": "openstack/fuel",
+            "repo": "openstack/fuel-plugin-kafka",
+            "vendor": "Mirantis",
+            "name": "Kafka Fuel plugin",
+            "description": "This plugin allows to install Kafka on dedicated nodes",
+            "maintainers": [
+                {
+                    "name": "Nadya Shakhat",
+                    "email": "nprivalova@mirantis.com",
+                    "launchpad_id": "nprivalova"
+                }
+            ],
+            "releases": ["Mitaka"],
+            "wiki": "https://github.com/openstack/fuel-plugin-kafka",
+            "ci": {
+                "id": "plugins.ci",
+                "success_pattern": "fuel-plugin.kafka.build \\S+ : SUCCESS",
+                "failure_pattern": "fuel-plugin.kafka.build \\S+ : FAILURE"
+            },
+        },
+        {
+            "project_id": "openstack/fuel",
             "repo": "openstack/fuel-plugin-nuage",
             "vendor": "Nuage Networks",
             "name": "Fuel plugin for Nuage SDN",
@@ -2627,6 +2654,29 @@
             ],
             "releases": ["Kilo"],
             "wiki": "https://github.com/openstack/fuel-plugin-nuage"
+        },
+        {
+            "project_id": "openstack/fuel",
+            "repo": "openstack/fuel-plugin-openstack-telemetry",
+            "vendor": "Mirantis",
+            "name": "OpenStack Telemetry plugin",
+            "description": "This plugin uses Ceilometer's agents for data polling, hindsight/heka for data processing and InfluxDB/ES for data storage",
+            "maintainers": [
+                {
+                    "name": "Nadya Shakhat",
+                    "email": "nprivalova@mirantis.com",
+                    "launchpad_id": "nprivalova"
+                }
+            ],
+            "wiki": "https://github.com/openstack/fuel-plugin-openstack-telemetry",
+            "ci": {
+                "id": "plugins.ci",
+                "success_pattern": "fuel-plugin.telemetry.build \\S+ : SUCCESS",
+                "failure_pattern": "fuel-plugin.telemetry.build \\S+ : FAILURE"
+            },
+            "releases": [
+                "Mitaka"
+        ]
         },
         {
             "project_id": "openstack/fuel",
