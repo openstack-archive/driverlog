@@ -1,0 +1,8 @@
+Code-Review+2: Evgeniya Shumakher <eshumakher@mirantis.com>
+Workflow+1: Ilya Shakhat <ishakhat@mirantis.com>
+Verified+2: Jenkins
+Submitted-by: Jenkins
+Submitted-at: Fri, 21 Oct 2016 11:56:45 +0000
+Reviewed-on: https://review.openstack.org/389471
+Project: openstack/driverlog
+Branch: refs/heads/master
