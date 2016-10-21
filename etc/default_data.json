@@ -2429,6 +2429,26 @@
         },
         {
             "project_id": "openstack/fuel",
+            "repo": "openstack/fuel-plugin-6wind-virtual-accelerator",
+            "vendor": "6WIND",
+            "name": "6WIND Virtual Accelerator plugin for Fuel",
+            "description": "6WIND Virtual Accelerator Fuel Plugin extends Mirantis Openstack to run 6WIND Virtual Accelerator on compute nodes for high-performance networking",
+            "maintainers": [
+                {
+                    "name": "Francesco Santoro",
+                    "email": "francesco.santoro@6wind.com",
+                    "launchpad_id": "francesco.santoro"
+                }
+	    ],
+            "wiki": "https://github.com/openstack/fuel-plugin-6wind-virtual-accelerator",
+            "releases": [
+                "Kilo",
+                "Liberty",
+                "Mitaka"
+            ]
+        },
+        {
+            "project_id": "openstack/fuel",
             "repo": "openstack/fuel-plugin-calico",
             "vendor": "Project Calico",
             "name": "Calico plugin for Fuel",
