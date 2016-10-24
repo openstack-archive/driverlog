@@ -455,19 +455,21 @@
             "project_id": "openstack/cinder",
             "vendor": "Datera",
             "name": "Datera iSCSI Volume driver",
-            "description": "Datera Volume driver can allow OpenStack services communicate with Datera storage for both vHost and ISCSI.",
+            "description": "Datera Volume driver can allow OpenStack services communicate with Datera EDF storage for both vHost and ISCSI.",
             "maintainers": [
                 {
-                    "name": "Mike Perez",
-                    "email": "thingee@gmail.com",
-                    "launchpad_id": "thingee"
+                    "name": "Matt Smith",
+                    "email": "mss@datera.io",
+                    "launchpad_id": "alastor"
                 }
             ],
             "wiki": "http://docs.openstack.org/developer/cinder/api/cinder.volume.drivers.datera.html?highlight=datera#module-cinder.volume.drivers.datera",
             "releases": [
                 "Juno",
                 "Kilo",
-                "Liberty"
+                "Liberty",
+                "Mitaka",
+                "Newton"
             ],
             "ci": {
                 "id": "datera-ci",
