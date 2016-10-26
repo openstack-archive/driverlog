@@ -2133,6 +2133,30 @@
         },
         {
             "project_id": "openstack/fuel",
+            "repo": "openstack/fuel-plugin-ldap",
+            "vendor": "Mirantis",
+            "name": "Ldap plugin for Fuel",
+            "description": "This plugin extends Mirantis OpenStack functionality by adding LDAP support. It allows to use an existing LDAP server as authentication backend for Keystone. Plugin supports configuration of Ldap proxy on Openstack controller, also it supports setting Keystone to use Ldap over TLS.",
+            "maintainers": [
+                {
+                    "name": "Mykyta Karpin",
+                    "email": "mkarpin@mirantis.com",
+                    "launchpad_id": "mkarpin"
+                },
+            ],
+            "wiki": "https://github.com/openstack/fuel-plugin-ldap",
+            "ci": {
+                "id": "plugin.ci",
+                "success_pattern": "9.x.fuel-plugin.ldap.build \\S+ : SUCCESS",
+                "failure_pattern": "9.x.fuel-plugin.ldap.build \\S+ : FAILURE"
+            },
+            "releases": [
+                "Liberty",
+                "Mitaka"
+            ]
+        },
+        {
+            "project_id": "openstack/fuel",
             "repo": "openstack/fuel-plugin-zabbix-monitoring-emc",
             "vendor": "Mirantis",
             "name": "EMC hardware monitoring to Zabbix plugin",
