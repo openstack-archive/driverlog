@@ -2439,7 +2439,8 @@
             "releases": [
                 "Juno",
                 "Kilo",
-                "Liberty"
+                "Liberty",
+                "Mitaka",
         ]
         },
         {
