@@ -2792,7 +2792,7 @@
             "vendor": "QLogic",
             "name": "QLogic FastLinQ Ethernet SR-IOV Fuel plugin",
             "description": "QLogic Fuel Plugin installs and configures SR-IOV functionality on FastLinQ Ethernet Adapters",
-            "maintainers": 
+            "maintainers":
                [{
                     "name": "Rick Hicksted",
                     "email": "rick.hicksted@qlogic.com",
@@ -2813,7 +2813,7 @@
                 "Kilo",
                 "Liberty"
             ]
-        }, 
+        },
         {
             "project_id": "openstack/fuel",
             "repo": "openstack/fuel-plugin-solidfire-cinder",
@@ -5147,6 +5147,24 @@
                 "success_pattern": "gate-sahara.*-cdh.* \\S+ : SUCCESS",
                 "failure_pattern": "gate-sahara.*-cdh.* \\S+ : FAILURE"
             }
+        },
+	{
+            "project_id": "openstack/fuel",
+	    "repo": "openstack/fuel-plugin-manila"
+            "vendor": "Mirantis",
+            "name": "Manila plugin for Fuel",
+            "description": "That plugin provides usage the Manila (File Share as a Service) capabilities whithin an Mirantis OpenStack environment.",
+            "maintainers": [
+                {
+                    "name": "Igor Gajsin",
+                    "email": "igajsin@mirantis.com",
+                    "launchpad_id": "igajisn"
+                }
+            ],
+            "wiki": "https://github.com/openstack/fuel-plugin-manila",
+            "releases": [
+                "Mitaka",
+            ]
         }
     ]
 }
