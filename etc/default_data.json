@@ -2228,7 +2228,7 @@
         {
             "project_id": "openstack/fuel",
             "repo": "openstack/fuel-plugin-external-emc",
-            "vendor": "Mirantis",
+            "vendor": “EMC”,
             "name": "EMC VNX plugin for Fuel",
             "description": "EMC VNX plugin for Fuel extends Mirantis OpenStack functionality by adding support for EMC VNX arrays in Cinder using iSCSI protocol. It replaces Cinder LVM driver which is the default volume backend that uses local volumes managed by LVM. Enabling EMC VNX plugin in Mirantis OpenStack means that all Cinder services are run on Controller nodes.",
             "maintainers": [
@@ -2344,7 +2344,7 @@
   	{
             "project_id": "openstack/fuel",
             "repo": "openstack/fuel-plugin-nsxv",
-            "vendor": "Mirantis",
+            "vendor": “VMware”,
             "name": "VMware NSX plugin for Fuel",
             "description": "VMware NSX plugin for Fuel allows deployment of Mirantis OpenStack with VMware NSX software defined networking platform.  It allows to use Neutron with OpenStack that utilize vSphere computing (ESXi) clusters.",
             "maintainers": [
@@ -2365,7 +2365,7 @@
 	{
             "project_id": "openstack/fuel",
             "repo": "openstack/fuel-plugin-vmware-dvs",
-            "vendor": "Mirantis",
+            "vendor": “VMware”,
             "name": "VMware DVS plugin for Fuel",
             "description": "This plugin enables deployment of Mirantis OpenStack with VMware vCenter. It allows to use Neutron for management VMware vSphere Distributed Virtual Switch with OpenStack that utilize vSphere computing (ESXi) clusters.",
             "maintainers": [
@@ -2420,7 +2420,7 @@
         {
             "project_id": "openstack/fuel",
             "repo": "openstack/fuel-plugin-contrail",
-            "vendor": "Mirantis",
+            "vendor": “Juniper”,
             "name": "Juniper Contrail Networking plugin for Fuel",
             "description": "This plugin enables configuration and deployment of the Juniper Contrail Networking SDN. This plugin can also be used with OpenContrail.",
             "maintainers": [
@@ -2461,7 +2461,7 @@
         {
             "project_id": "openstack/fuel",
             "repo": "openstack/fuel-plugin-cinder-netapp",
-            "vendor": "Mirantis",
+            "vendor": “NetApp”,
             "name": "NetApp plugin for Fuel",
             "description": "NetApp – This Fuel Plugin enables use of NetApp’s NFS driver as a Cinder back-end with Clustered Data ONTAP-based NetApp FAS storage systems (CDOT), 7-Mode systems, and performance-optimized SANtricity-based NetApp E Series storage systems.",
             "maintainers": [
