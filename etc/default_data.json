@@ -918,7 +918,7 @@
                 "Liberty"
             ],
             "ci": {
-                "id": "hp-storage-ci",
+                "id": "hp-storage-blr-ci",
                 "success_pattern": "3par-fc-driver-master-client.* \\S+ : SUCCESS",
                 "failure_pattern": "3par-fc-driver-master-client.* \\S+ : FAILURE"
             }
@@ -950,7 +950,7 @@
                 "Liberty"
             ],
             "ci": {
-                "id": "hp-storage-ci",
+                "id": "hp-storage-blr-ci",
                 "success_pattern": "3par-iscsi-driver-master-client.* \\S+ : SUCCESS",
                 "failure_pattern": "3par-iscsi-driver-master-client.* \\S+ : FAILURE"
             }
@@ -985,7 +985,7 @@
                 "Liberty"
             ],
             "ci": {
-                "id": "hp-storage-ci",
+                "id": "hp-storage-blr-ci",
                 "success_pattern": "lefthand-iscsi-driver-master-client.* \\S+ : SUCCESS",
                 "failure_pattern": "lefthand-iscsi-driver-master-client.* \\S+ : FAILURE"
             }
@@ -1034,7 +1034,7 @@
                 "Newton"
             ],
             "ci": {
-                "id": "hp-storage-ci",
+                "id": "hp-storage-blr-ci",
                 "success_pattern": "3par-fc-driver-master-client.* \\S+ : SUCCESS",
                 "failure_pattern": "3par-fc-driver-master-client.* \\S+ : FAILURE"
             }
@@ -1062,7 +1062,7 @@
                 "Newton"
             ],
             "ci": {
-                "id": "hp-storage-ci",
+                "id": "hp-storage-blr-ci",
                 "success_pattern": "3par-iscsi-driver-master-client.* \\S+ : SUCCESS",
                 "failure_pattern": "3par-iscsi-driver-master-client.* \\S+ : FAILURE"
             }
@@ -1091,7 +1091,7 @@
                 "Newton"
             ],
             "ci": {
-                "id": "hp-storage-ci",
+                "id": "hp-storage-blr-ci",
                 "success_pattern": "lefthand-iscsi-driver-master-client.* \\S+ : SUCCESS",
                 "failure_pattern": "lefthand-iscsi-driver-master-client.* \\S+ : FAILURE"
             }
@@ -3462,7 +3462,7 @@
                 "Liberty"
             ],
             "ci": {
-                "id": "hp-storage-ci",
+                "id": "hp-storage-blr-ci",
                 "success_pattern": "Build succeeded",
                 "failure_pattern": "Build failed"
             }
@@ -3490,7 +3490,7 @@
                 "Newton"
             ],
             "ci": {
-                "id": "hp-storage-ci",
+                "id": "hp-storage-blr-ci",
                 "success_pattern": "Build succeeded",
                 "failure_pattern": "Build failed"
             }
