@@ -2117,7 +2117,7 @@
             "repo": "openstack/fuel-plugin-midonet",
             "vendor": "Midokura",
             "name": "Midonet plugin for Fuel",
-            "description": "Fuel MidoNet plugin is capable of deploying MidoNet v2015.06.",
+            "description": "Fuel MidoNet plugin is capable of deploying MidoNet",
             "maintainers": [
                 {
                     "name": "Samir Ibradžić",
@@ -2126,7 +2126,7 @@
                 }
             ],
             "wiki": "https://github.com/openstack/fuel-plugin-midonet",
-            "releases": ["Juno","Kilo", "Liberty"]
+            "releases": ["Juno","Kilo", "Liberty", "Mitaka"]
         },
         {
             "project_id": "openstack/fuel",
