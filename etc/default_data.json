@@ -2865,7 +2865,8 @@
             ],
             "wiki": "https://github.com/tesora/fuel-plugin-tesora-dbaas/",
             "releases": [
-                "Liberty"
+                "Liberty",
+                "Mitaka"
             ]
         },
   	{
