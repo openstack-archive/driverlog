@@ -1,0 +1,9 @@
+Code-Review+1: Oleksandr  Balenko <obalenko@mirantis.com>
+Code-Review+2: Ilya Shakhat <ishakhat@mirantis.com>
+Workflow+1: Ilya Shakhat <ishakhat@mirantis.com>
+Verified+2: Jenkins
+Submitted-by: Jenkins
+Submitted-at: Thu, 17 Nov 2016 09:01:33 +0000
+Reviewed-on: https://review.openstack.org/398378
+Project: openstack/driverlog
+Branch: refs/heads/master
