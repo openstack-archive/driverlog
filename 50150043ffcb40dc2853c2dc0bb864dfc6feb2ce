@@ -1,0 +1,9 @@
+Code-Review+1: Isaac Duodu <iduodu@tesora.com>
+Code-Review+2: Evgeniya Shumakher <eshumakher@mirantis.com>
+Workflow+1: Evgeniya Shumakher <eshumakher@mirantis.com>
+Verified+2: Jenkins
+Submitted-by: Jenkins
+Submitted-at: Thu, 17 Nov 2016 19:56:10 +0000
+Reviewed-on: https://review.openstack.org/399200
+Project: openstack/driverlog
+Branch: refs/heads/master
