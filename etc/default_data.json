@@ -2671,12 +2671,12 @@
             "repo": "openstack/fuel-plugin-cinder-netapp",
             "vendor": "NetApp",
             "name": "NetApp plugin for Fuel",
-            "description": "NetApp – This Fuel Plugin enables use of NetApp’s NFS driver as a Cinder back-end with Clustered Data ONTAP-based NetApp FAS storage systems (CDOT), 7-Mode systems, and performance-optimized SANtricity-based NetApp E Series storage systems.",
+            "description": "The NetApp Fuel Plugin enables use of NetApp’s drivers as a Cinder back-end with Clustered Data ONTAP-based NetApp FAS storage systems (CDOT), performance-optimized SANtricity-based NetApp E Series storage systems, and SolidFire clusters using iSCSI protocol.",
             "maintainers": [
                 {
                     "name": "Andrey Volochay",
                     "email": "avolochay@mirantis.com",
-                    "launchpad_id": "avorobiov"
+                    "launchpad_id": "wallavv"
                 },
                 {
                     "name": "Roman Sokolkov",
