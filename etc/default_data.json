@@ -2910,6 +2910,26 @@
             ],
             "wiki": "https://github.com/openstack/fuel-plugin-vmware-dvs"
 	},
+	{
+            "project_id": "openstack/fuel",
+            "repo": "openstack/fuel-plugin-unity",
+            "vendor": "DELLEMC",
+            "name": "Unity Cinder plugin for Fuel",
+            "description": "Unity fuel plugin enables deployment of Fuel with DellEMC Unity storage array. It allows Unity storage array to be managed as Cinder backends via iSCSI and FibreChannel protocol",
+            "maintainers": [
+                {
+                    "name": "Peter Wang",
+                    "email": "peter.wang13@emc.com",
+                    "launchpad_id": "peter.wang"
+                }
+            ],
+            "releases": [
+                "Kilo",
+                "Liberty",
+                "Mitaka"
+            ],
+            "wiki": "https://github.com/openstack/fuel-plugin-unity"
+	},
         {
             "project_id": "openstack/ironic",
             "vendor": "Dell",
