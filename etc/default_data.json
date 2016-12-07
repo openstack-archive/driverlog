@@ -1980,6 +1980,24 @@
         },
         {
             "project_id": "openstack/fuel",
+            "repo": "openstack/fuel-plugin-dynatrace",
+            "vendor": "Dynatrace LLC",
+            "name": "Dynatrace plugin for Fuel",
+            "description": "This plugin provides enterprise monitoring for OpenStack and the applications that run on top",
+            "maintainers": [
+                {
+                    "name": "Dirk Wallerstorfer",
+                    "email": "dirk.wallerstorfer@dynatrace.com",
+                    "launchpad_id": "dirk-wallerstorfer"
+                }
+            ],
+           "releases": [
+                "Mitaka"
+           ],
+           "wiki": "https://github.com/openstack/fuel-plugin-dynatrace"
+        },
+        {
+            "project_id": "openstack/fuel",
             "repo": "openstack/fuel-plugin-scaleio-cinder",
             "vendor": "EMC",
             "name": "ScaleIO Cinder plugin for Fuel",
