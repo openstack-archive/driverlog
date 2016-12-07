@@ -1927,7 +1927,6 @@
                 "Mitaka"
             ]
         },
-
         {
             "project_id": "openstack/fuel",
             "repo": "openstack/fuel-plugin-xenserver",
@@ -1977,6 +1976,22 @@
                 "success_pattern": "fuel-plugin-unity \\S+ : SUCCESS",
                 "failure_pattern": "fuel-plugin-unity \\S+ : FAILURE"
             }
+        },
+        { 
+           "project_id": "openstack/fuel",
+           "repo": "openstack/fuel-plugin-dynatrace", 
+           "vendor": "Dynatrace LLC",
+           "name": "Dynatrace plugin for Fuel",
+           "description": "This plugin provides enterprise monitoring for OpenStack and the applications that run on top",
+           "maintainers": [
+               {
+                   "name": "Dirk Wallerstorfer",
+                   "email": "dirk.wallerstorfer@dynatrace.com",
+                   "launchpad_id": "dirk-wallerstorfer"
+               }
+           ],
+           "releases": ["Miraka"],
+           "wiki": "https://github.com/openstack/fuel-plugin-dynatrace"
         },
         {
             "project_id": "openstack/fuel",
