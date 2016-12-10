@@ -382,9 +382,10 @@
                     "launchpad_id": "xing-yang"
                 }
             ],
-            "wiki": "http://docs.openstack.org/newton/config-reference/block-storage/drivers/coprhd-driver.html",
+            "wiki": "https://docs.openstack.org/ocata/config-reference/block-storage/drivers/coprhd-driver.html",
             "releases": [
-                "Newton"
+                "Newton",
+                "Ocata",
             ],
             "ci": {
                 "id": "emc-corphd-ci",
@@ -404,9 +405,10 @@
                     "launchpad_id": "xing-yang"
                 }
             ],
-            "wiki": "http://docs.openstack.org/newton/config-reference/block-storage/drivers/coprhd-driver.html",
+            "wiki": "https://docs.openstack.org/ocata/config-reference/block-storage/drivers/coprhd-driver.html",
             "releases": [
-                "Newton"
+                "Newton",
+                "Ocata",
             ],
             "ci": {
                 "id": "emc-corphd-ci",
@@ -426,9 +428,10 @@
                     "launchpad_id": "xing-yang"
                 }
             ],
-            "wiki": "http://docs.openstack.org/newton/config-reference/block-storage/drivers/coprhd-driver.html",
+            "wiki": "https://docs.openstack.org/ocata/config-reference/block-storage/drivers/coprhd-driver.html",
             "releases": [
-                "Newton"
+                "Newton",
+                "Ocata",
             ],
             "ci": {
                 "id": "emc-corphd-ci",
@@ -500,7 +503,7 @@
                     "launchpad_id": "rajinir"
                 }
             ],
-            "wiki": "http://docs.openstack.org/newton/config-reference/block-storage/drivers/dell-equallogic-driver.html",
+            "wiki": "https://docs.openstack.org/ocata/config-reference/block-storage/drivers/dell-equallogic-driver.html",
             "releases": [
                 "Havana",
                 "Icehouse",
@@ -508,7 +511,8 @@
                 "Kilo",
                 "Liberty",
                 "Mitaka",
-                "Newton"
+                "Newton",
+                "Ocata",
             ],
             "ci": {
                 "id": "dell-storage-ci",
@@ -528,43 +532,17 @@
                     "launchpad_id": "xing-yang"
                 }
             ],
-            "wiki": "http://docs.openstack.org/newton/config-reference/block-storage/drivers/emc-scaleio-driver.html",
+            "wiki": "https://docs.openstack.org/ocata/config-reference/block-storage/drivers/emc-scaleio-driver.html",
             "releases": [
                 "Liberty",
                 "Mitaka",
-                "Newton"
+                "Newton",
+                "Ocata",
             ],
             "ci": {
                 "id": "emc-scaleio-ci",
                 "success_pattern": "EMC_SCALEIO \\S+ : SUCCESS",
                 "failure_pattern": "EMC_SCALEIO \\S+ : FAILURE"
-            }
-        },
-        {
-            "project_id": "openstack/cinder",
-            "vendor": "Dell EMC",
-            "name": "Dell EMC VMAX FC driver",
-            "description": "The Dell EMC VMAX FC driver runs volume operations by communicating with the back-end VMAX storage, using the EMC SMI-S Provider.",
-            "maintainers": [
-                {
-                    "name": "Xing Yang",
-                    "email": "xing.yang@emc.com",
-                    "launchpad_id": "xing-yang"
-                }
-            ],
-            "wiki": "http://docs.openstack.org/newton/config-reference/block-storage/drivers/emc-vmax-driver.html",
-            "releases": [
-                "Icehouse",
-                "Juno",
-                "Kilo",
-                "Liberty",
-                "Mitaka",
-                "Newton"
-            ],
-            "ci": {
-                "id": "emc-vmax-ci",
-                "success_pattern": "EMC_VMAX_FC \\S+ : SUCCESS",
-                "failure_pattern": "EMC_VMAX_FC \\S+ : FAILURE"
             }
         },
         {
@@ -580,12 +558,13 @@
                     "launchpad_id": "sean-mcginnis"
                 }
             ],
-            "wiki": "http://docs.openstack.org/newton/config-reference/block-storage/drivers/dell-storagecenter-driver.html",
+            "wiki": "https://docs.openstack.org/ocata/config-reference/block-storage/drivers/dell-storagecenter-driver.html",
             "releases": [
                 "Kilo",
                 "Liberty",
                 "Mitaka",
-                "Newton"
+                "Newton",
+                "Ocata",
             ],
             "ci": {
                 "id": "dell-storage-ci",
@@ -606,17 +585,90 @@
                     "launchpad_id": "sean-mcginnis"
                 }
             ],
-            "wiki": "http://docs.openstack.org/newton/config-reference/block-storage/drivers/dell-storagecenter-driver.html",
+            "wiki": "https://docs.openstack.org/ocata/config-reference/block-storage/drivers/dell-storagecenter-driver.html",
             "releases": [
                 "Kilo",
                 "Liberty",
                 "Mitaka",
-                "Newton"
+                "Newton",
+                "Ocata",
             ],
             "ci": {
                 "id": "dell-storage-ci",
                 "success_pattern": "dell-sc-fc-dsvm-volume \\S+ : SUCCESS",
                 "failure_pattern": "dell-sc-fc-dsvm-volume \\S+ : FAILURE"
+            }
+        },
+        {
+            "project_id": "openstack/cinder",
+            "vendor": "Dell EMC",
+            "name": "Dell EMC Unity FC driver",
+            "description": "The Dell EMC Unity FC driver runs volume operations by communicating with the back-end Unity storage.",
+            "maintainers": [
+                {
+                    "name": "Xing Yang",
+                    "email": "xing.yang@emc.com",
+                    "launchpad_id": "xing-yang"
+                }
+            ],
+            "wiki": "https://docs.openstack.org/ocata/config-reference/block-storage/drivers/dell-emc-unity-driver.html",
+            "releases": [
+                "Ocata",
+            ],
+            "ci": {
+                "id": "emc-unity-ci",
+                "success_pattern": "EMC_UNITY_FC \\S+ : SUCCESS",
+                "failure_pattern": "EMC_UNITY_FC \\S+ : FAILURE"
+            }
+        },
+        {
+            "project_id": "openstack/cinder",
+            "vendor": "Dell EMC",
+            "name": "Dell EMC Unity iSCSI driver",
+            "description": "The Dell EMC Unity iSCSI driver runs volume operations by communicating with the back-end Unity storage.",
+            "maintainers": [
+                {
+                    "name": "Xing Yang",
+                    "email": "xing.yang@emc.com",
+                    "launchpad_id": "xing-yang"
+                }
+            ],
+            "wiki": "https://docs.openstack.org/ocata/config-reference/block-storage/drivers/dell-emc-unity-driver.html",
+            "releases": [
+                "Ocata",
+            ],
+            "ci": {
+                "id": "emc-unity-ci",
+                "success_pattern": "EMC_UNITY_FC \\S+ : SUCCESS",
+                "failure_pattern": "EMC_UNITY_FC \\S+ : FAILURE"
+            }
+        },
+        {
+            "project_id": "openstack/cinder",
+            "vendor": "Dell EMC",
+            "name": "Dell EMC VMAX FC driver",
+            "description": "The Dell EMC VMAX FC driver runs volume operations by communicating with the back-end VMAX storage, using the EMC SMI-S Provider.",
+            "maintainers": [
+                {
+                    "name": "Xing Yang",
+                    "email": "xing.yang@emc.com",
+                    "launchpad_id": "xing-yang"
+                }
+            ],
+            "wiki": "https://docs.openstack.org/ocata/config-reference/block-storage/drivers/emc-vmax-driver.html",
+            "releases": [
+                "Icehouse",
+                "Juno",
+                "Kilo",
+                "Liberty",
+                "Mitaka",
+                "Newton",
+                "Ocata",
+            ],
+            "ci": {
+                "id": "emc-vmax-ci",
+                "success_pattern": "EMC_VMAX_FC \\S+ : SUCCESS",
+                "failure_pattern": "EMC_VMAX_FC \\S+ : FAILURE"
             }
         },
         {
@@ -631,7 +683,7 @@
                     "launchpad_id": "xing-yang"
                 }
             ],
-            "wiki": "http://docs.openstack.org/newton/config-reference/block-storage/drivers/emc-vmax-driver.html",
+            "wiki": "https://docs.openstack.org/ocata/config-reference/block-storage/drivers/emc-vmax-driver.html",
             "releases": [
                 "Grizzly",
                 "Havana",
@@ -640,7 +692,8 @@
                 "Kilo",
                 "Liberty",
                 "Mitaka",
-                "Newton"
+                "Newton",
+                "Ocata",
             ],
             "ci": {
                 "id": "emc-vmax-ci",
@@ -660,13 +713,14 @@
                     "launchpad_id": "xing-yang"
                 }
             ],
-            "wiki": "http://docs.openstack.org/newton/config-reference/block-storage/drivers/emc-vnx-driver.html",
+            "wiki": "https://docs.openstack.org/ocata/config-reference/block-storage/drivers/emc-vnx-driver.html",
             "releases": [
                 "Juno",
                 "Kilo",
                 "Liberty",
                 "Mitaka",
-                "Newton"
+                "Newton",
+                "Ocata",
             ],
             "ci": {
                 "id": "emc-vnx-ci",
@@ -686,14 +740,15 @@
                     "launchpad_id": "xing-yang"
                 }
             ],
-            "wiki": "http://docs.openstack.org/newton/config-reference/block-storage/drivers/emc-vnx-driver.html",
+            "wiki": "https://docs.openstack.org/ocata/config-reference/block-storage/drivers/emc-vnx-driver.html",
             "releases": [
                 "Icehouse",
                 "Juno",
                 "Kilo",
                 "Liberty",
                 "Mitaka",
-                "Newton"
+                "Newton",
+                "Ocata",
             ],
             "ci": {
                 "id": "emc-vnx-ci",
@@ -713,13 +768,14 @@
                     "launchpad_id": "xing-yang"
                 }
             ],
-            "wiki": "http://docs.openstack.org/newton/config-reference/block-storage/drivers/emc-xtremio-driver.html",
+            "wiki": "https://docs.openstack.org/ocata/config-reference/block-storage/drivers/emc-xtremio-driver.html",
             "releases": [
                 "Juno",
                 "Kilo",
                 "Liberty",
                 "Mitaka",
-                "Newton"
+                "Newton",
+                "Ocata",
             ],
             "ci": {
                 "id": "emc-xio-ci",
@@ -739,13 +795,14 @@
                     "launchpad_id": "xing-yang"
                 }
             ],
-            "wiki": "http://docs.openstack.org/newton/config-reference/block-storage/drivers/emc-xtremio-driver.html",
+            "wiki": "https://docs.openstack.org/ocata/config-reference/block-storage/drivers/emc-xtremio-driver.html",
             "releases": [
                 "Juno",
                 "Kilo",
                 "Liberty",
                 "Mitaka",
-                "Newton"
+                "Newton",
+                "Ocata",
             ],
             "ci": {
                 "id": "emc-xio-ci",
