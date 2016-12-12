@@ -2880,7 +2880,7 @@
             "repo": "tesora/fuel-plugin-tesora-dbaas",
             "vendor": "Tesora Inc",
             "name": "Tesora DBaaS Platform plugin for Fuel",
-            "description": "Tesora Database as a Service (DBaaS) platform is an enterprise-hardened version of OpenStack Trove, the native database service for OpenStack. This plugin is available at https://www.mirantis.com/partners/tesora/ , and also by contacting Tesora Support via email, phone, or irc. See http://www.tesora.com/support for more info.",
+            "description": "Tesora Database as a Service (DBaaS) platform is an enterprise-hardened version of OpenStack Trove, the native database service for OpenStack. This plugin is available at http://resources.tesora.com/tesora-dbaas-platform-fuel-plugin",
             "maintainers": [
                 {
                     "name": "Brian Hunter",
