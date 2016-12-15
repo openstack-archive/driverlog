@@ -1973,7 +1973,7 @@
             ],
             "wiki": "https://github.com/openstack/fuel-plugin-unity",
             "ci": {
-                "id": "emc-unity-ci",
+                "id": "emc.unity.ci",
                 "success_pattern": "fuel-plugin-unity \\S+ : SUCCESS",
                 "failure_pattern": "fuel-plugin-unity \\S+ : FAILURE"
             }
