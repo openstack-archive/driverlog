@@ -1350,6 +1350,9 @@
                 }
             ],
             "wiki": "http://docs.openstack.org/newton/config-reference/block-storage/drivers/kaminario-driver.html",
+            "releases": [
+                "Newton"
+            ],
             "ci": {
                 "id": "kaminario",
                 "success_pattern": "Build succeeded",
@@ -2109,6 +2112,9 @@
                     "email": "chaithanyak@biarca.com",
                     "launchpad_id": "chaithanyak"
                 }
+            ],
+            "releases": [
+                "Mitaka",
             ],
             "wiki": "https://github.com/openstack/fuel-plugin-cinder-kaminario"
         },
