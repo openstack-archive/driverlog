@@ -1643,9 +1643,9 @@
         },
         {
             "project_id": "openstack/cinder",
-            "vendor": "Pure iSCSI/FC Storage",
-            "name": "Volume driver for Pure Storage FlashArray storage system",
-            "description": "Pure Storage builds all-flash storage arrays. The active/active controller architecture is based on the Purity Operating Environment and providing an adaptive metadata fabric that is scalable, granular to 512B, and protected. Pure systems are based on durable, resilient MLC flash and providing consistent high performance. Pure Storage FlashArrays leverage deduplication and compression technologies to reduce data written thereby lowering costs and increasing density. FlashArrays are designed for non-disruptive operations and can be upgraded or expanded without disruption or performance degradation.",
+            "vendor": "Pure Storage",
+            "name": "Volume driver for Pure Storage FlashArray iSCSI/FC storage system",
+            "description": "Pure Storage builds all-flash storage arrays. The active/active controller architecture is based on the Purity Operating Environment and providing an adaptive metadata fabric that is scalable, granular to 512B, and protected. Pure Storage systems are based on durable, resilient MLC flash and providing consistent high performance. Pure Storage FlashArrays leverage deduplication and compression technologies to reduce data written thereby lowering costs and increasing density. FlashArrays are designed for non-disruptive operations and can be upgraded or expanded without disruption or performance degradation.",
             "maintainers": [
                 {
                     "name": "Pure Storage Openstack Dev Team",
@@ -2822,7 +2822,7 @@
             "repo": "openstack/fuel-plugin-purestorage-cinder",
             "vendor": "Pure Storage",
             "name": "Pure Storage plugin for Fuel",
-            "description": "Pure Storage plugin for Fuel adds support for Pure Storage FlashArray block storage array. The Pure Storage FlashArray is an iSCSI capable block storage device used as a Cinder backend.",
+            "description": "Pure Storage plugin for Fuel adds support for Pure Storage FlashArray block storage array. The Pure Storage FlashArray is an iSCSI capable block storage device used as a Cinder backend. Get the RPM kits for supported releases from https://github.com/PureStorage-Connect/purestorage-fuel-plugins",
             "maintainers": [
                 {
                     "name": "Simon Dodsley",
