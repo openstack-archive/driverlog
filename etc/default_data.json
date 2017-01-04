@@ -2116,7 +2116,7 @@
         {
             "project_id": "openstack/fuel",
             "repo": "openstack/fuel-plugin-cinder-kaminario",
-            "vendor": "Kaminario/Biarca",
+            "vendor": "Kaminario",
             "name": "Cinder Kaminario Plugin for Fuel",
             "description": "Fuel plugin that enables to configure multiple Cinder backend support for Kaminario K2 All-Flash Array.",
             "maintainers": [
