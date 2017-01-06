@@ -2817,7 +2817,7 @@
                 "failure_pattern": "fuel-plugin.calico.build \\S+ : FAILURE"
             }
         },
-          {
+        {
             "project_id": "openstack/fuel",
             "repo": "openstack/fuel-plugin-purestorage-cinder",
             "vendor": "Pure Storage",
@@ -2835,7 +2835,12 @@
                 "Kilo",
                 "Liberty",
                 "Mitaka"
-            ]
+            ],
+            "ci": {
+                "id": "purestorage-cinder-ci",
+                "success_pattern": "Build succeeded",
+                "failure_pattern": "Build failed"
+           }
         },
         {
             "project_id": "openstack/fuel",
