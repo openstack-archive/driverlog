@@ -2835,7 +2835,11 @@
                 "Kilo",
                 "Liberty",
                 "Mitaka"
-            ]
+            ],
+            "ci": {
+                "id": "purestorage-cinder-ci",
+                "success_pattern": "Build succeeded",
+                "failure_pattern": "Build failed"
         },
         {
             "project_id": "openstack/fuel",
