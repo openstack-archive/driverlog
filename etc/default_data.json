@@ -3501,9 +3501,14 @@
             "description": "The HP 3PAR Shared File Systems (Manila) driver provisions shares with HP 3PAR StoreServ Storage with the HP 3PAR File Persona Software Suite. The driver communicates over HTTP, HTTPS, and SSH connections.",
             "maintainers": [
                 {
-                    "name": "Mark Sturdevant",
-                    "email": "mark.sturdevant@hpe.com",
-                    "launchpad_id": "mark-sturdevant"
+                    "name": "Ravi Chandran Nudurumati",
+                    "email": "ravichandrann@hpe.com",
+                    "launchpad_id": "ravichandrann"
+                },
+                {
+                    "name": "Hariprasad S Venkatasubramanian",
+                    "email": "hari.venkat@hpe.com",
+                    "launchpad_id": "hari.venkat"
                 }
             ],
             "wiki": "http://docs.openstack.org/liberty/config-reference/content/hp-3par-driver.html",
