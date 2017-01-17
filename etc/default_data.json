@@ -1936,7 +1936,7 @@
             "repo": "openstack/fuel-plugin-xenserver",
             "vendor": "Citrix",
             "name": "Xenserver plugin for Fuel",
-            "description": "XenServer Fuel Plugin will help to deploy Mirantis OpenStack over XenServer hosts and make sure they work as xenapi rather than qemu.",
+            "description": "XenServer Fuel Plugin will help to deploy Mirantis OpenStack on XenServer hosts to enable using XenServer as the compute hypervisor, rather than qemu.",
             "maintainers": [
                 {
                     "name": "Bob Ball",
@@ -1953,7 +1953,8 @@
             "releases": [
                 "Juno",
                 "Kilo",
-                "Liberty"
+                "Liberty",
+                "Mitaka"
             ]
         },
         {
