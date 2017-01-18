@@ -792,9 +792,9 @@
             "description": "This driver supports ETERNUS DX S3 series and runs volume operations by communicating with the backend Fujitsu storage. It uses a CIM client in Python called PyWBEM to perform CIM operations over HTTP.",
             "maintainers": [
                 {
-                    "name": "Yusuke Hayashi",
-                    "email": "hayashi-yusuke@jp.fujitsu.com",
-                    "launchpad_id": "hayashi-yusuke"
+                    "name": "Kan Kato",
+                    "email": "kato.kan@jp.fujitsu.com",
+                    "launchpad_id": "kato-kan"
                 }
             ],
             "wiki": "http://docs.openstack.org/mitaka/config-reference/block-storage/drivers/fujitsu-eternus-dx-driver.html",
@@ -814,9 +814,9 @@
             "description": "This driver supports ETERNUS DX S3 series and runs volume operations by communicating with the backend Fujitsu storage. It uses a CIM client in Python called PyWBEM to perform CIM operations over HTTP.",
             "maintainers": [
                 {
-                    "name": "Yusuke Hayashi",
-                    "email": "hayashi-yusuke@jp.fujitsu.com",
-                    "launchpad_id": "hayashi-yusuke"
+                    "name": "Kan Kato",
+                    "email": "kato.kan@jp.fujitsu.com",
+                    "launchpad_id": "kato-kan"
                 }
             ],
             "wiki": "http://docs.openstack.org/mitaka/config-reference/block-storage/drivers/fujitsu-eternus-dx-driver.html",
