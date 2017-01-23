@@ -484,9 +484,10 @@
             "description": "The Dell EqualLogic volume driver interacts with configured EqualLogic arrays and supports various operations, such as volume creation and deletion, volume attachment and detachment, snapshot creation and deletion, and clone creation.",
             "maintainers": [
                 {
-                    "name": "Arkady Kanevsky",
-                    "email": "arkady_kanevsky@dell.com",
-                    "launchpad_id": "arkady-kanevsky"
+                    "name": "Rajini Ram",
+                    "email": "rajini_ram@dell.com",
+                    "irc": "rajinir",
+                    "launchpad_id": "rajinir"
                 }
             ],
             "wiki": "http://docs.openstack.org/newton/config-reference/block-storage/drivers/dell-equallogic-driver.html",
@@ -2982,8 +2983,14 @@
                 "Juno",
                 "Kilo",
                 "Liberty",
-                "Mitaka"
-            ]
+                "Mitaka",
+                "Newton"
+            ],
+           "ci": {
+                "id": "openstack-ironic-ci",
+                "success_pattern": "dell-hw-tempest-dsvm-ironic-pxe_drac \\S+ : SUCCESS",
+                "failure_pattern": "dell-hw-tempest-dsvm-ironic-pxe_drac \\S+ : FAILURE"
+            }
         },
         {
             "project_id": "openstack/ironic",
