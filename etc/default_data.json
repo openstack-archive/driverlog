@@ -242,10 +242,12 @@
                 "Icehouse",
                 "Juno",
                 "Kilo",
-                "Liberty"
+                "Liberty",
+                "Mitaka",
+                "Newton"
             ],
             "ci": {
-                "id": "microsoft-iscsi-ci",
+                "id": "microsoft-cinder-ci",
                 "success_pattern": "SUCCESS",
                 "failure_pattern": "FAILURE"
             }
@@ -275,10 +277,12 @@
             "wiki": "http://docs.openstack.org/juno/config-reference/content/windows-volume-driver.html",
             "releases": [
                 "Kilo",
-                "Liberty"
+                "Liberty",
+                "Mitaka",
+                "Newton"
             ],
             "ci": {
-                "id": "microsoft-iscsi-ci",
+                "id": "microsoft-cinder-ci",
                 "success_pattern": "SUCCESS",
                 "failure_pattern": "FAILURE"
             }
@@ -308,10 +312,12 @@
             "wiki": "http://docs.openstack.org/juno/config-reference/content/windows-volume-driver.html",
             "releases": [
                 "Kilo",
-                "Liberty"
+                "Liberty",
+                "Mitaka",
+                "Newton"
             ],
             "ci": {
-                "id": "microsoft-iscsi-ci",
+                "id": "microsoft-cinder-ci",
                 "success_pattern": "SUCCESS",
                 "failure_pattern": "FAILURE"
             }
@@ -3436,7 +3442,9 @@
             ],
             "wiki": "https://github.com/openstack/manila/blob/master/doc/source/devref/share_back_ends_feature_support_mapping.rst",
             "releases": [
-                "Liberty"
+                "Liberty",
+                "Mitaka",
+                "Newton"
             ],
             "ci": {
                 "id": "microsoft_manila_ci",
@@ -4071,7 +4079,7 @@
             ],
             "wiki": "http://www.cloudbase.it/neutron-hyper-v-plugin",
             "ci": {
-                "id": "hyper-v-ci",
+                "id": "microsoft_neutron_ci",
                 "success_pattern": "Build succeeded",
                 "failure_pattern": "Build failed"
             },
@@ -4081,7 +4089,9 @@
                 "Icehouse",
                 "Juno",
                 "Kilo",
-                "Liberty"
+                "Liberty",
+                "Mitaka",
+                "Newton"
             ]
         },
         {
@@ -4842,10 +4852,12 @@
                 "Icehouse",
                 "Juno",
                 "Kilo",
-                "Liberty"
+                "Liberty",
+                "Mitaka",
+                "Newton"
             ],
             "ci": {
-                "id": "hyper-v-ci",
+                "id": "microsoft_nova_ci",
                 "success_pattern": "Build succeeded",
                 "failure_pattern": "Build failed"
             }
