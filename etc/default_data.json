@@ -5,6 +5,10 @@
             "name": "Cinder (Block Storage)"
         },
         {
+            "id": "openstack/designate",
+            "name": "Designate"
+        },
+        {
             "id": "openstack/fuel",
             "name": "Fuel"
         },
@@ -1915,6 +1919,186 @@
                 "Havana",
                 "Icehouse",
                 "Juno"
+            ]
+        },
+        {
+            "project_id": "openstack/designate",
+            "vendor": "ISC",
+            "name": "bind9",
+            "description": "Bind 9 DNS Server",
+            "maintainers": [
+                {
+                    "name": "OpenStack Designate Development Team",
+                    "email": "openstack-dev@list.openstack.org",
+                    "launchpad_id": "designate"
+                }
+            ],
+            "wiki": "http://docs.openstack.org/developer/designate/backends/bind9.html",
+            "releases": [
+                "Grizzly",
+                "Havana",
+                "Icehouse",
+                "Juno",
+                "Kilo",
+                "Liberty",
+                "Mitaka",
+                "Newton"
+
+            ],
+            "ci": {
+                "id": "jenkins",
+                "success_pattern": "gate-tempest-dsvm-designate-bind9-ubuntu-xenial \\S+ : SUCCESS",
+                "failure_pattern": "gate-tempest-dsvm-designate-bind9-ubuntu-xenial \\S+ : FAILURE"
+            }
+        },
+        {
+            "project_id": "openstack/designate",
+            "vendor": "PowerDNS",
+            "name": "pdns4",
+            "description": "Power DNS 4 DNS Server",
+            "maintainers": [
+                {
+                    "name": "OpenStack Designate Development Team",
+                    "email": "openstack-dev@list.openstack.org",
+                    "launchpad_id": "designate"
+                }
+            ],
+            "wiki": "http://docs.openstack.org/developer/designate/backends/pdns4.html",
+            "releases": [
+                "Newton"
+
+            ],
+            "ci": {
+                "id": "jenkins",
+                "success_pattern": "gate-tempest-dsvm-designate-pdns4-ubuntu-xenial \\S+ : SUCCESS",
+                "failure_pattern": "gate-tempest-dsvm-designate-pdns4-ubuntu-xenial \\S+ : FAILURE"
+            }
+        },
+        {
+            "project_id": "openstack/designate",
+            "vendor": "PowerDNS",
+            "name": "pdns4",
+            "description": "Power DNS 3 DNS Server",
+            "maintainers": [
+                {
+                    "name": "OpenStack Designate Development Team",
+                    "email": "openstack-dev@list.openstack.org",
+                    "launchpad_id": "designate"
+                }
+            ],
+            "wiki": "http://docs.openstack.org/developer/designate/backends/powerdns.html",
+            "releases": [
+                "Grizzly",
+                "Havana",
+                "Icehouse",
+                "Juno",
+                "Kilo",
+                "Liberty",
+                "Mitaka",
+                "Newton"
+
+            ]
+        },
+        {
+            "project_id": "openstack/designate",
+            "vendor": "Microsoft",
+            "name": "msdns",
+            "description": "Microsoft DNS Server",
+            "maintainers": [
+                {
+                    "name": "OpenStack Designate Development Team",
+                    "email": "openstack-dev@list.openstack.org",
+                    "launchpad_id": "designate"
+                }
+            ],
+            "wiki": "http://docs.openstack.org/developer/designate/backends/msdns_agent.html",
+            "releases": [
+                "Mitaka",
+                "Newton"
+
+            ]
+        },
+        {
+            "project_id": "openstack/designate",
+            "vendor": "PowerDNS",
+            "name": "Infoblox",
+            "description": "Infoblox DNS Server",
+            "maintainers": [
+                {
+                    "name": "Infoblox OpenStack Team ",
+                    "email": "openstack-maintainer@infoblox.com",
+                }
+            ],
+            "wiki": "http://docs.openstack.org/developer/designate/backends/infoblox.html",
+            "releases": [
+                "Liberty",
+                "Mitaka",
+                "Newton"
+
+            ]
+        },
+        {
+            "project_id": "openstack/designate",
+            "vendor": "OpenStack Designate",
+            "name": "designate",
+            "description": "Designate to Designate Federated Driver",
+            "maintainers": [
+                {
+                    "name": "OpenStack Designate Development Team",
+                    "email": "openstack-dev@list.openstack.org",
+                    "launchpad_id": "designate"
+                }
+            ],
+            "wiki": "http://docs.openstack.org/developer/designate/backends.html",
+            "releases": [
+                "Liberty",
+                "Mitaka",
+                "Newton"
+
+            ]
+        },
+        {
+            "project_id": "openstack/designate",
+            "vendor": "Akamai",
+            "name": "akamai",
+            "description": "Akamai eDNS Service Driver",
+            "maintainers": [
+                {
+                    "name": "OpenStack Designate Development Team",
+                    "email": "openstack-dev@list.openstack.org",
+                    "launchpad_id": "designate"
+                }
+            ],
+            "wiki": "http://docs.openstack.org/developer/designate/backends.html",
+            "releases": [
+                "Havana",
+                "Icehouse",
+                "Juno",
+                "Kilo",
+                "Liberty",
+                "Mitaka",
+                "Newton"
+
+            ]
+        },
+        {
+            "project_id": "openstack/designate",
+            "vendor": "DynDNS",
+            "name": "dynect",
+            "description": "Akamai eDNS Service Driver",
+            "maintainers": [
+                {
+                    "name": "OpenStack Designate Development Team",
+                    "email": "openstack-dev@list.openstack.org",
+                    "launchpad_id": "designate"
+                }
+            ],
+            "wiki": "http://docs.openstack.org/developer/designate/backends.html",
+            "releases": [
+                "Liberty",
+                "Mitaka",
+                "Newton"
+
             ]
         },
         {
