@@ -485,9 +485,9 @@
         },
         {
             "project_id": "openstack/cinder",
-            "vendor": "Dell",
-            "name": "Dell PS Series iSCSI volume driver",
-            "description": "The Dell PS Series volume driver interacts with configured PS Series (EqualLogic) storage arrays and supports various operations, such as volume creation and deletion, volume attachment and detachment, snapshot creation and deletion, and clone creation.",
+            "vendor": "Dell EMC",
+            "name": "Dell EMC PS Series iSCSI volume driver",
+            "description": "The Dell EMC PS Series volume driver interacts with configured PS Series (EqualLogic) storage arrays and supports various operations, such as volume creation and deletion, volume attachment and detachment, snapshot creation and deletion, and clone creation.",
             "maintainers": [
                 {
                     "name": "Rajini Ram",
@@ -514,13 +514,64 @@
         },
         {
             "project_id": "openstack/cinder",
-            "vendor": "Dell",
-            "name": "Dell Storage Center iSCSI volume driver",
-            "description": "The Dell Storage Center volume driver interacts with configured Storage Center arrays and supports various operations, such as volume creation and deletion, volume attachment and detachment, snapshot creation and deletion, and clone creation.",
+            "vendor": "Dell EMC",
+            "name": "Dell EMC ScaleIO",
+            "description": "The Dell EMC ScaleIO driver supports ScaleIO Data Client connected volumes by using ScaleIO REST API.",
+            "maintainers": [
+                {
+                    "name": "Xing Yang",
+                    "email": "xing.yang@emc.com",
+                    "launchpad_id": "xing-yang"
+                }
+            ],
+            "wiki": "http://docs.openstack.org/newton/config-reference/block-storage/drivers/emc-scaleio-driver.html",
+            "releases": [
+                "Liberty",
+                "Mitaka",
+                "Newton"
+            ],
+            "ci": {
+                "id": "emc-scaleio-ci",
+                "success_pattern": "EMC_SCALEIO \\S+ : SUCCESS",
+                "failure_pattern": "EMC_SCALEIO \\S+ : FAILURE"
+            }
+        },
+        {
+            "project_id": "openstack/cinder",
+            "vendor": "Dell EMC",
+            "name": "Dell EMC VMAX FC driver",
+            "description": "The Dell EMC VMAX FC driver runs volume operations by communicating with the back-end VMAX storage, using the EMC SMI-S Provider.",
+            "maintainers": [
+                {
+                    "name": "Xing Yang",
+                    "email": "xing.yang@emc.com",
+                    "launchpad_id": "xing-yang"
+                }
+            ],
+            "wiki": "http://docs.openstack.org/newton/config-reference/block-storage/drivers/emc-vmax-driver.html",
+            "releases": [
+                "Icehouse",
+                "Juno",
+                "Kilo",
+                "Liberty",
+                "Mitaka",
+                "Newton"
+            ],
+            "ci": {
+                "id": "emc-vmax-ci",
+                "success_pattern": "EMC_VMAX_FC \\S+ : SUCCESS",
+                "failure_pattern": "EMC_VMAX_FC \\S+ : FAILURE"
+            }
+        },
+		        {
+            "project_id": "openstack/cinder",
+            "vendor": "Dell EMC",
+            "name": "Dell EMC Storage Center iSCSI volume driver",
+            "description": "The Dell EMC Storage Center volume driver interacts with configured Storage Center arrays and supports various operations, such as volume creation and deletion, volume attachment and detachment, snapshot creation and deletion, and clone creation.",
             "maintainers": [
                 {
                     "name": "Sean McGinnis",
-                    "email": "sean_mcginnis@dell.com",
+                    "email": "sean.mcginnis@dell.com",
                     "irc": "smcginnis",
                     "launchpad_id": "sean-mcginnis"
                 }
@@ -540,13 +591,13 @@
         },
         {
             "project_id": "openstack/cinder",
-            "vendor": "Dell",
-            "name": "Dell Storage Center FC volume driver",
-            "description": "The Dell Storage Center volume driver interacts with configured Storage Center arrays and supports various operations, such as volume creation and deletion, volume attachment and detachment, snapshot creation and deletion, and clone creation.",
+            "vendor": "Dell EMC",
+            "name": "Dell EMC Storage Center FC volume driver",
+            "description": "The Dell EMC Storage Center volume driver interacts with configured Storage Center arrays and supports various operations, such as volume creation and deletion, volume attachment and detachment, snapshot creation and deletion, and clone creation.",
             "maintainers": [
                 {
                     "name": "Sean McGinnis",
-                    "email": "sean_mcginnis@dell.com",
+                    "email": "sean.mcginnis@dell.com",
                     "irc": "smcginnis",
                     "launchpad_id": "sean-mcginnis"
                 }
@@ -565,6 +616,140 @@
             }
         },
         {
+            "project_id": "openstack/cinder",
+            "vendor": "Dell EMC",
+            "name": "Dell EMC VMAX iSCSI driver",
+            "description": "The Dell EMC VMAX iSCSI driver runs volume operations by communicating with the back-end VMAX storage, using the EMC SMI-S Provider.",
+            "maintainers": [
+                {
+                    "name": "Xing Yang",
+                    "email": "xing.yang@emc.com",
+                    "launchpad_id": "xing-yang"
+                }
+            ],
+            "wiki": "http://docs.openstack.org/newton/config-reference/block-storage/drivers/emc-vmax-driver.html",
+            "releases": [
+                "Grizzly",
+                "Havana",
+                "Icehouse",
+                "Juno",
+                "Kilo",
+                "Liberty",
+                "Mitaka",
+                "Newton"
+            ],
+            "ci": {
+                "id": "emc-vmax-ci",
+                "success_pattern": "EMC_VMAX_ISCSI \\S+ : SUCCESS",
+                "failure_pattern": "EMC_VMAX_ISCSI \\S+ : FAILURE"
+            }
+        },
+        {
+            "project_id": "openstack/cinder",
+            "vendor": "Dell EMC",
+            "name": "Dell EMC VNX FC driver",
+            "description": "The Dell EMC VNX FC direct driver runs volume operations by communicating with the back-end VNX storage, using NaviSecCLI.",
+            "maintainers": [
+                {
+                    "name": "Xing Yang",
+                    "email": "xing.yang@emc.com",
+                    "launchpad_id": "xing-yang"
+                }
+            ],
+            "wiki": "http://docs.openstack.org/newton/config-reference/block-storage/drivers/emc-vnx-driver.html",
+            "releases": [
+                "Juno",
+                "Kilo",
+                "Liberty",
+                "Mitaka",
+                "Newton"
+            ],
+            "ci": {
+                "id": "emc-vnx-ci",
+                "success_pattern": "EMC_VNX_FC \\S+ : SUCCESS",
+                "failure_pattern": "EMC_VNX_FC \\S+ : FAILURE"
+            }
+        },
+        {
+            "project_id": "openstack/cinder",
+            "vendor": "Dell EMC",
+            "name": "Dell EMC VNX iSCSI driver",
+            "description": "The Dell EMC VNX iSCSI direct driver runs volume operations by communicating with the back-end VNX storage, using NaviSecCLI.",
+            "maintainers": [
+                {
+                    "name": "Xing Yang",
+                    "email": "xing.yang@emc.com",
+                    "launchpad_id": "xing-yang"
+                }
+            ],
+            "wiki": "http://docs.openstack.org/newton/config-reference/block-storage/drivers/emc-vnx-driver.html",
+            "releases": [
+                "Icehouse",
+                "Juno",
+                "Kilo",
+                "Liberty",
+                "Mitaka",
+                "Newton"
+            ],
+            "ci": {
+                "id": "emc-vnx-ci",
+                "success_pattern": "EMC_VNX_ISCSI \\S+ : SUCCESS",
+                "failure_pattern": "EMC_VNX_ISCSI \\S+ : FAILURE"
+            }
+        },
+        {
+            "project_id": "openstack/cinder",
+            "vendor": "Dell EMC",
+            "name": "Dell EMC XtremIO FC driver",
+            "description": "The XtremIO FC driver enables OpenStack clouds to access the XtremIO storage. The XtremIO Cinder driver directs the creation and deletion of volumes on the XtremIO storage and attaches or detaches volumes to/from OpenStack instances or virtual machines (VMs).",
+            "maintainers": [
+                {
+                    "name": "Xing Yang",
+                    "email": "xing.yang@emc.com",
+                    "launchpad_id": "xing-yang"
+                }
+            ],
+            "wiki": "http://docs.openstack.org/newton/config-reference/block-storage/drivers/emc-xtremio-driver.html",
+            "releases": [
+                "Juno",
+                "Kilo",
+                "Liberty",
+                "Mitaka",
+                "Newton"
+            ],
+            "ci": {
+                "id": "emc-xio-ci",
+                "success_pattern": "EMC_XIO_FC \\S+ : SUCCESS",
+                "failure_pattern": "EMC_XIO_FC \\S+ : FAILURE"
+            }
+        },
+        {
+            "project_id": "openstack/cinder",
+            "vendor": "Dell EMC",
+            "name": "Dell EMC XtremIO iSCSI driver",
+            "description": "The XtremIO iSCSI driver enables OpenStack clouds to access the XtremIO storage. The XtremIO Cinder driver directs the creation and deletion of volumes on the XtremIO storage and attaches or detaches volumes to/from OpenStack instances or virtual machines (VMs).",
+            "maintainers": [
+                {
+                    "name": "Xing Yang",
+                    "email": "xing.yang@emc.com",
+                    "launchpad_id": "xing-yang"
+                }
+            ],
+            "wiki": "http://docs.openstack.org/newton/config-reference/block-storage/drivers/emc-xtremio-driver.html",
+            "releases": [
+                "Juno",
+                "Kilo",
+                "Liberty",
+                "Mitaka",
+                "Newton"
+            ],
+            "ci": {
+                "id": "emc-xio-ci",
+                "success_pattern": "EMC_XIO_ISCSI \\S+ : SUCCESS",
+                "failure_pattern": "EMC_XIO_ISCSI \\S+ : FAILURE"
+            }
+        },
+	{
             "project_id": "openstack/cinder",
             "vendor": "Dot Hill",
             "name": "Dot Hill iSCSI/FC volume driver",
@@ -609,191 +794,6 @@
         },
         {
             "project_id": "openstack/cinder",
-            "vendor": "EMC",
-            "name": "EMC ScaleIO",
-            "description": "The EMC ScaleIO driver supports ScaleIO Data Client connected volumes by using ScaleIO REST API.",
-            "maintainers": [
-                {
-                    "name": "Xing Yang",
-                    "email": "xing.yang@emc.com",
-                    "launchpad_id": "xing-yang"
-                }
-            ],
-            "wiki": "http://docs.openstack.org/newton/config-reference/block-storage/drivers/emc-scaleio-driver.html",
-            "releases": [
-                "Liberty",
-                "Mitaka",
-                "Newton"
-            ],
-            "ci": {
-                "id": "emc-scaleio-ci",
-                "success_pattern": "EMC_SCALEIO \\S+ : SUCCESS",
-                "failure_pattern": "EMC_SCALEIO \\S+ : FAILURE"
-            }
-        },
-        {
-            "project_id": "openstack/cinder",
-            "vendor": "EMC",
-            "name": "EMC VMAX FC driver",
-            "description": "The EMC VMAX FC driver runs volume operations by communicating with the back-end VMAX storage, using the EMC SMI-S Provider.",
-            "maintainers": [
-                {
-                    "name": "Xing Yang",
-                    "email": "xing.yang@emc.com",
-                    "launchpad_id": "xing-yang"
-                }
-            ],
-            "wiki": "http://docs.openstack.org/newton/config-reference/block-storage/drivers/emc-vmax-driver.html",
-            "releases": [
-                "Icehouse",
-                "Juno",
-                "Kilo",
-                "Liberty",
-                "Mitaka",
-                "Newton"
-            ],
-            "ci": {
-                "id": "emc-vmax-ci",
-                "success_pattern": "EMC_VMAX_FC \\S+ : SUCCESS",
-                "failure_pattern": "EMC_VMAX_FC \\S+ : FAILURE"
-            }
-        },
-        {
-            "project_id": "openstack/cinder",
-            "vendor": "EMC",
-            "name": "EMC VMAX iSCSI driver",
-            "description": "The EMC VMAX iSCSI driver runs volume operations by communicating with the back-end VMAX storage, using the EMC SMI-S Provider.",
-            "maintainers": [
-                {
-                    "name": "Xing Yang",
-                    "email": "xing.yang@emc.com",
-                    "launchpad_id": "xing-yang"
-                }
-            ],
-            "wiki": "http://docs.openstack.org/newton/config-reference/block-storage/drivers/emc-vmax-driver.html",
-            "releases": [
-                "Grizzly",
-                "Havana",
-                "Icehouse",
-                "Juno",
-                "Kilo",
-                "Liberty",
-                "Mitaka",
-                "Newton"
-            ],
-            "ci": {
-                "id": "emc-vmax-ci",
-                "success_pattern": "EMC_VMAX_ISCSI \\S+ : SUCCESS",
-                "failure_pattern": "EMC_VMAX_ISCSI \\S+ : FAILURE"
-            }
-        },
-        {
-            "project_id": "openstack/cinder",
-            "vendor": "EMC",
-            "name": "EMC VNX FC driver",
-            "description": "The EMC VNX FC direct driver runs volume operations by communicating with the back-end VNX storage, using NaviSecCLI.",
-            "maintainers": [
-                {
-                    "name": "Xing Yang",
-                    "email": "xing.yang@emc.com",
-                    "launchpad_id": "xing-yang"
-                }
-            ],
-            "wiki": "http://docs.openstack.org/newton/config-reference/block-storage/drivers/emc-vnx-driver.html",
-            "releases": [
-                "Juno",
-                "Kilo",
-                "Liberty",
-                "Mitaka",
-                "Newton"
-            ],
-            "ci": {
-                "id": "emc-vnx-ci",
-                "success_pattern": "EMC_VNX_FC \\S+ : SUCCESS",
-                "failure_pattern": "EMC_VNX_FC \\S+ : FAILURE"
-            }
-        },
-        {
-            "project_id": "openstack/cinder",
-            "vendor": "EMC",
-            "name": "EMC VNX iSCSI driver",
-            "description": "The EMC VNX iSCSI direct driver runs volume operations by communicating with the back-end VNX storage, using NaviSecCLI.",
-            "maintainers": [
-                {
-                    "name": "Xing Yang",
-                    "email": "xing.yang@emc.com",
-                    "launchpad_id": "xing-yang"
-                }
-            ],
-            "wiki": "http://docs.openstack.org/newton/config-reference/block-storage/drivers/emc-vnx-driver.html",
-            "releases": [
-                "Icehouse",
-                "Juno",
-                "Kilo",
-                "Liberty",
-                "Mitaka",
-                "Newton"
-            ],
-            "ci": {
-                "id": "emc-vnx-ci",
-                "success_pattern": "EMC_VNX_ISCSI \\S+ : SUCCESS",
-                "failure_pattern": "EMC_VNX_ISCSI \\S+ : FAILURE"
-            }
-        },
-        {
-            "project_id": "openstack/cinder",
-            "vendor": "EMC",
-            "name": "EMC XtremIO FC driver",
-            "description": "The XtremIO FC driver enables OpenStack clouds to access the XtremIO storage. The XtremIO Cinder driver directs the creation and deletion of volumes on the XtremIO storage and attaches or detaches volumes to/from OpenStack instances or virtual machines (VMs).",
-            "maintainers": [
-                {
-                    "name": "Xing Yang",
-                    "email": "xing.yang@emc.com",
-                    "launchpad_id": "xing-yang"
-                }
-            ],
-            "wiki": "http://docs.openstack.org/newton/config-reference/block-storage/drivers/emc-xtremio-driver.html",
-            "releases": [
-                "Juno",
-                "Kilo",
-                "Liberty",
-                "Mitaka",
-                "Newton"
-            ],
-            "ci": {
-                "id": "emc-xio-ci",
-                "success_pattern": "EMC_XIO_FC \\S+ : SUCCESS",
-                "failure_pattern": "EMC_XIO_FC \\S+ : FAILURE"
-            }
-        },
-        {
-            "project_id": "openstack/cinder",
-            "vendor": "EMC",
-            "name": "EMC XtremIO iSCSI driver",
-            "description": "The XtremIO iSCSI driver enables OpenStack clouds to access the XtremIO storage. The XtremIO Cinder driver directs the creation and deletion of volumes on the XtremIO storage and attaches or detaches volumes to/from OpenStack instances or virtual machines (VMs).",
-            "maintainers": [
-                {
-                    "name": "Xing Yang",
-                    "email": "xing.yang@emc.com",
-                    "launchpad_id": "xing-yang"
-                }
-            ],
-            "wiki": "http://docs.openstack.org/newton/config-reference/block-storage/drivers/emc-xtremio-driver.html",
-            "releases": [
-                "Juno",
-                "Kilo",
-                "Liberty",
-                "Mitaka",
-                "Newton"
-            ],
-            "ci": {
-                "id": "emc-xio-ci",
-                "success_pattern": "EMC_XIO_ISCSI \\S+ : SUCCESS",
-                "failure_pattern": "EMC_XIO_ISCSI \\S+ : FAILURE"
-            }
-        },
-        {
-            "project_id": "openstack/cinder",
             "vendor": "Fujitsu",
             "name": "Fujitsu Eternus DX FC Volume driver",
             "description": "This driver supports ETERNUS DX S3 series and runs volume operations by communicating with the backend Fujitsu storage. It uses a CIM client in Python called PyWBEM to perform CIM operations over HTTP.",
@@ -813,7 +813,7 @@
                 "success_pattern": "Build succeeded",
                 "failure_pattern": "Build failed"
             }
-        },
+        },		
         {
             "project_id": "openstack/cinder",
             "vendor": "Fujitsu",
@@ -1969,7 +1969,7 @@
             "repo": "openstack/fuel-plugin-unity",
             "vendor": "Dell EMC",
             "name": "Unity Cinder plugin for Fuel",
-            "description": "Unity fuel plugin enables deployment of Fuel with DellEMC Unity storage array. It allows Unity storage array to be managed as Cinder backends via iSCSI and FibreChannel protocol",
+            "description": "Unity fuel plugin enables deployment of Fuel with Dell EMC Unity storage array. It allows Unity storage array to be managed as Cinder backends via iSCSI and FibreChannel protocol",
             "maintainers": [
                 {
                     "name": "Peter Wang",
@@ -1991,27 +1991,9 @@
         },
         {
             "project_id": "openstack/fuel",
-            "repo": "openstack/fuel-plugin-dynatrace",
-            "vendor": "Dynatrace LLC",
-            "name": "Dynatrace plugin for Fuel",
-            "description": "This plugin provides enterprise monitoring for OpenStack and the applications that run on top",
-            "maintainers": [
-                {
-                    "name": "Dirk Wallerstorfer",
-                    "email": "dirk.wallerstorfer@dynatrace.com",
-                    "launchpad_id": "dirk-wallerstorfer"
-                }
-            ],
-           "releases": [
-                "Mitaka"
-           ],
-           "wiki": "https://github.com/openstack/fuel-plugin-dynatrace"
-        },
-        {
-            "project_id": "openstack/fuel",
             "repo": "openstack/fuel-plugin-scaleio-cinder",
-            "vendor": "EMC",
-            "name": "ScaleIO Cinder plugin for Fuel",
+            "vendor": "Dell EMC",
+            "name": "Dell EMC ScaleIO Cinder plugin for Fuel",
             "description": "The ScaleIO plugin for Fuel extends Mirantis OpenStack functionality by configuring a external EMC ScaleIO cluster as the default volume backend for the OpenStack environment.",
             "maintainers": [
                 {
@@ -2034,8 +2016,8 @@
         {
             "project_id": "openstack/fuel",
             "repo": "openstack/fuel-plugin-scaleio",
-            "vendor": "EMC",
-            "name": "ScaleIO plugin for Fuel",
+            "vendor": "Dell EMC",
+            "name": "Dell EMC ScaleIO plugin for Fuel",
             "description": "The ScaleIO plugin for Fuel extends Mirantis OpenStack functionality by deploying a EMC ScaleIO cluster and configuring it as the default volume backend for the OpenStack environment.",
             "maintainers": [
                  {
@@ -2058,9 +2040,9 @@
         {
             "project_id": "openstack/fuel",
             "repo": "openstack/fuel-plugin-external-emc",
-            "vendor": "EMC",
-            "name": "EMC VNX plugin for Fuel",
-            "description": "EMC VNX plugin for Fuel extends Mirantis OpenStack functionality by adding support for EMC VNX arrays in Cinder using iSCSI protocol. It replaces Cinder LVM driver which is the default volume backend that uses local volumes managed by LVM. Enabling EMC VNX plugin in Mirantis OpenStack means that all Cinder services are run on Controller nodes.",
+            "vendor": "Dell EMC",
+            "name": "Dell EMC VNX plugin for Fuel",
+            "description": "Dell EMC VNX plugin for Fuel extends Mirantis OpenStack functionality by adding support for EMC VNX arrays in Cinder using iSCSI protocol. It replaces Cinder LVM driver which is the default volume backend that uses local volumes managed by LVM. Enabling EMC VNX plugin in Mirantis OpenStack means that all Cinder services are run on Controller nodes.",
             "maintainers": [
                     {
                     "name": "Illia Polliul",
@@ -2078,9 +2060,9 @@
         {
             "project_id": "openstack/fuel",
             "repo": "carone1/fuel-xtremio",
-            "vendor": "EMC",
+            "vendor": "Dell EMC",
             "name": "XtremIO plugin for Fuel",
-            "description": "The EMC XtremIO plugin for Fuel adds support for EMC XtremIO arrays in Cinder using iSCSI protocol",
+            "description": "The Dell EMC XtremIO plugin for Fuel adds support for Dell EMC XtremIO arrays in Cinder using iSCSI protocol", 
             "maintainers": [
                  {
                     "name": "Eric Caron",
@@ -2094,6 +2076,24 @@
                 "Mitaka"
             ],
             "wiki": "https://github.com/carone1/fuel_xtremio"
+        },
+        {
+            "project_id": "openstack/fuel",
+            "repo": "openstack/fuel-plugin-dynatrace",
+            "vendor": "Dynatrace LLC",
+            "name": "Dynatrace plugin for Fuel",
+            "description": "This plugin provides enterprise monitoring for OpenStack and the applications that run on top",
+            "maintainers": [
+                {
+                    "name": "Dirk Wallerstorfer",
+                    "email": "dirk.wallerstorfer@dynatrace.com",
+                    "launchpad_id": "dirk-wallerstorfer"
+                }
+            ],
+           "releases": [
+                "Mitaka"
+           ],
+           "wiki": "https://github.com/openstack/fuel-plugin-dynatrace"
         },
         {
             "project_id": "openstack/fuel",
@@ -2974,9 +2974,9 @@
 	},
         {
             "project_id": "openstack/ironic",
-            "vendor": "Dell",
-            "name": "Dell DRAC Driver",
-            "description": "This driver is for the Dell Remote Access Controller and uses pxe to deploy.",
+            "vendor": "Dell EMC",
+            "name": "Dell EMC DRAC Driver",
+            "description": "This driver is for the Dell EMC Remote Access Controller and uses pxe to deploy.",
             "maintainers": [
                 {
                     "name": "Chris Dearborn",
@@ -3454,8 +3454,8 @@
         },
         {
             "project_id": "openstack/manila",
-            "vendor": "EMC",
-            "name": "EMC Isilon Manila Driver",
+            "vendor": "Dell EMC",
+            "name": "Dell EMC Isilon Manila Driver",
             "description": "The Isilon Manila driver is a plugin for the EMC Manila driver framework which allows Manila to interface with an Isilon backend to provide a shared filesystems. The driver supports Manila driver mode (driver_handles_share_servers = False).",
             "maintainers": [
                 {
@@ -3480,7 +3480,7 @@
         },
         {
             "project_id": "openstack/manila",
-            "vendor": "EMC",
+            "vendor": "Dell EMC",
             "name": "EMC Unity Manila Driver",
             "description": "The Unity Manila driver is a plugin for the EMC Manila driver framework which allows Manila to interface with a Unity backend to provide shared filesystems. The driver supports Manila driver mode (driver_handles_share_servers = True).",
             "maintainers": [
@@ -3503,8 +3503,8 @@
         },
         {
             "project_id": "openstack/manila",
-            "vendor": "EMC",
-            "name": "EMC VNX Manila Driver",
+            "vendor": "Dell EMC",
+            "name": "Dell EMC VNX Manila Driver",
             "description": "The VNX Manila driver is a plugin for the EMC Manila driver framework which allows Manila to interface with a VNX backend to provide shared filesystems. The driver supports Manila driver mode (driver_handles_share_servers = True).",
             "maintainers": [
                 {
