@@ -3289,7 +3289,8 @@
                 "Juno",
                 "Kilo",
                 "Liberty",
-                "Mitaka"
+                "Mitaka",
+                "Newton"
             ],
             "ci": {
                 "id": "proliantci",
@@ -3324,7 +3325,8 @@
                 "Juno",
                 "Kilo",
                 "Liberty",
-                "Mitaka"
+                "Mitaka",
+                "Newton"
             ],
             "ci": {
                 "id": "proliantci",
@@ -3359,7 +3361,8 @@
                 "Juno",
                 "Kilo",
                 "Liberty",
-                "Mitaka"
+                "Mitaka",
+                "Newton"
             ],
             "ci": {
                 "id": "proliantci",
