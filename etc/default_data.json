@@ -1904,22 +1904,29 @@
             "project_id": "openstack/cinder",
             "vendor": "Zadara Storage",
             "name": "Zadara VPSA Cloud Block Storage",
-            "description": "There is a volume back-end for Zadara.",
+            "description": "Zadara Storage VPSA iSCSI/iSER driver",
             "maintainers": [
                 {
-                    "name": "Vladimir Popovski",
-                    "email": "vladimir@zadarastorage.com",
-                    "launchpad_id": "vladimir.p"
+                    "name": "Shlomi Avihou",
+                    "email": "shlomi@zadarastorage.com",
+                    "irc": "savihou"
+                    "launchpad_id": "shlomi-s"
                 }
             ],
-            "wiki": "http://docs.openstack.org/juno/config-reference/content/zadara-volume-driver.html",
+            "wiki": "https://docs.openstack.org/newton/config-reference/block-storage/drivers/zadara-volume-driver.html",
             "releases": [
                 "Folsom",
                 "Grizzly",
                 "Havana",
                 "Icehouse",
-                "Juno"
-            ]
+                "Juno",
+                "Newton"
+            ],
+            "ci": {
+                "id": "zadara"
+                "success_pattern": "dsvm-tempest-zadara-driver \\S+ : SUCCESS",
+                "failure_pattern": "dsvm-tempest-zadara-driver \\S+ : FAILURE"
+            }
         },
         {
             "project_id": "openstack/designate",
