@@ -3133,7 +3133,7 @@
             "wiki": "https://github.com/openstack/fuel-plugin-qlogic-sriov-vxlan",
             "releases": [
                 "Kilo",
-                "Liberty"
+                "Liberty",
                 "Mitaka"
             ]
         },
