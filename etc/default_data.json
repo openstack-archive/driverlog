@@ -1752,7 +1752,7 @@
                     "name": "Silvan Kaiser",
                     "irc": "kaisers",
                     "email": "silvan@quobyte.com",
-                    "launchpad_id": "kaisers"
+                    "launchpad_id": "2-silvan"
                 }
             ],
             "wiki": "https://wiki.openstack.org/wiki/Quobyte",
@@ -1763,7 +1763,10 @@
             },
             "releases": [
                 "Kilo",
-                "Liberty"
+                "Liberty",
+                "Mitaka",
+                "Newton",
+                "Ocata"
             ]
         },
         {
@@ -3942,7 +3945,7 @@
         },
         {
             "project_id": "openstack/manila",
-            "vendor": "Quobyte",
+            "vendor": "Quobyte Inc.",
             "name": "Quobyte Manila Driver",
             "description": "The Quobyte Manila driver provides access to shared storage residing on a Quobyte volume.",
             "maintainers": [
@@ -3950,12 +3953,21 @@
                     "name": "Silvan Kaiser",
                     "irc": "kaisers",
                     "email": "silvan@quobyte.com",
-                    "launchpad_id": "kaisers"
+                    "launchpad_id": "2-silvan"
                 }
             ],
             "wiki": "https://wiki.openstack.org/wiki/Manila/Quobyte",
+            "ci": {
+                "id": "quobyteci",
+                "success_pattern": "SUCCESS",
+                "failure_pattern": "FAILURE"
+            },
             "releases": [
-                "Kilo"
+                "Kilo",
+                "Liberty",
+                "Mitaka",
+                "Newton",
+                "Ocata"
             ]
         },
         {
@@ -5373,6 +5385,33 @@
                 "success_pattern": "Build succeeded",
                 "failure_pattern": "Build failed"
             }
+        },
+        {
+            "project_id": "openstack/nova",
+            "vendor": "Quobyte Inc.",
+            "name": "Quobyte volume driver",
+            "description": "Volume driver for Quobyte software defined storage system. Quobyte storage runs on plain Linux servers and allows reconfiguration at runtime without storage service interruption. Storage behaviour is fully configurable via policies which also control automation and hardware independent configuration.",
+            "maintainers": [
+                {
+                    "name": "Silvan Kaiser",
+                    "irc": "kaisers",
+                    "email": "silvan@quobyte.com",
+                    "launchpad_id": "2-silvan"
+                }
+            ],
+            "wiki": "https://wiki.openstack.org/wiki/Nova/Quobyte",
+            "ci": {
+                "id": "quobyteci",
+                "success_pattern": "SUCCESS",
+                "failure_pattern": "FAILURE"
+            },
+            "releases": [
+                "Kilo",
+                "Liberty",
+                "Mitaka",
+                "Newton",
+                "Ocata"
+            ]
         },
         {
             "project_id": "openstack/nova",
