@@ -558,10 +558,10 @@
             "description": "The Dell EMC SC Series ISCSI volume driver interacts with configured SC arrays and supports various operations, such as volume creation and deletion, volume attachment and detachment, snapshot creation and deletion, and clone creation.",
             "maintainers": [
                 {
-                    "name": "Sean McGinnis",
-                    "email": "sean.mcginnis@dell.com",
-                    "irc": "smcginnis",
-                    "launchpad_id": "sean-mcginnis"
+                    "name": "Tom Swanson",
+                    "email": "tom.swanson@dell.com",
+                    "irc": "Swanson",
+                    "launchpad_id": "tomswanson"
                 }
             ],
             "wiki": "https://docs.openstack.org/ocata/config-reference/block-storage/drivers/dell-storagecenter-driver.html",
@@ -585,10 +585,10 @@
             "description": "The Dell EMC SC Series FC volume driver interacts with configured SC Series arrays and supports various operations, such as volume creation and deletion, volume attachment and detachment, snapshot creation and deletion, and clone creation.",
             "maintainers": [
                 {
-                    "name": "Sean McGinnis",
-                    "email": "sean.mcginnis@dell.com",
-                    "irc": "smcginnis",
-                    "launchpad_id": "sean-mcginnis"
+                    "name": "Tom Swanson",
+                    "email": "tom.swanson@dell.com",
+                    "irc": "Swanson",
+                    "launchpad_id": "tomswanson"
                 }
             ],
             "wiki": "https://docs.openstack.org/ocata/config-reference/block-storage/drivers/dell-storagecenter-driver.html",
