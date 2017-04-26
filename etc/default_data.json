@@ -1290,27 +1290,34 @@
             "project_id": "openstack/cinder",
             "vendor": "IBM",
             "name": "IBM GPFS volume driver",
-            "description": "The GPFS driver enables the use of GPFS to provide efficient and scalable storage for Cinder volumes.  With the GPFS driver, instances do not actually access a storage device at the block level.  Instead, volume backing files are created in a GPFS file system and mapped to instances, which emulate a block device.  The GPFS storage is accessed from compute nodes using either a GPFS or NFS client.",
+            "description": "The GPFS driver enables the use of Spectrum Scale a.k.a GPFS to provide efficient and scalable storage for Cinder volumes.  With the GPFS driver, instances do not actually access a storage device at the block level.  Instead, volume backing files are created in a Spectrum Scale file system and mapped to instances, which emulate a block device.  The storage is accessed from compute nodes using either a GPFS or NFS client.",
             "maintainers": [
                 {
-                    "name": "Sasikanth Eda",
-                    "email": "sasikanth.eda@in.ibm.com",
-                    "launchpad_id": "sasikanth"
+                    "name": "Gaurang Tapase",
+                    "email": "gaurang.tapase@in.ibm.com",
+                    "launchpad_id": "gaurangt"
+                },
+                {
+                    "name": "Digvijay Ukirde",
+                    "email": "digvijay.ukirde@in.ibm.com",
+                    "launchpad_id": "digvijay2016"
                 }
             ],
-            "wiki": "http://docs.openstack.org/liberty/config-reference/content/GPFS-driver.html",
+            "wiki": "https://docs.openstack.org/ocata/config-reference/block-storage/drivers/ibm-gpfs-volume-driver.html",
             "releases": [
                 "Havana",
                 "Icehouse",
                 "Juno",
                 "Kilo",
                 "Liberty",
-                "Mitaka"
+                "Mitaka",
+                "Newton",
+                "Ocata"
             ],
             "ci": {
-                "id": "ibm-gpfs-ci",
-                "success_pattern": "Build Successful",
-                "failure_pattern": "Build Failed"
+                "id": "ibmmanilaci",
+                "success_pattern": "SUCCESS",
+                "failure_pattern": "FAILURE"
             }
         },
         {
@@ -3918,6 +3925,37 @@
                 "id": "huawei-manila-ci",
                 "success_pattern": "Build succeeded",
                 "failure_pattern": "Build failed"
+            }
+        },
+        {
+            "project_id": "openstack/manila",
+            "vendor": "IBM",
+            "name": "IBM GPFS Manila driver",
+            "description": "IBM GPFS driver for Manila provides access to NFS shares on Spectrum Scale storage system. The driver supports Manila driver mode (driver_handles_share_servers = False).",
+            "maintainers": [
+                {
+                    "name": "Gaurang Tapase",
+                    "email": "gaurang.tapase@in.ibm.com",
+                    "launchpad_id": "gaurangt"
+                },
+                {
+                    "name": "Digvijay Ukirde",
+                    "email": "digvijay.ukirde@in.ibm.com",
+                    "launchpad_id": "digvijay2016"
+                }
+            ],
+            "wiki": "https://docs.openstack.org/ocata/config-reference/shared-file-systems/drivers/ibm-gpfs-driver.html",
+            "releases": [
+                "Kilo",
+                "Liberty",
+                "Mitaka",
+                "Newton",
+                "Ocata"
+            ],
+            "ci": {
+                "id": "ibmmanilaci",
+                "success_pattern": "SUCCESS",
+                "failure_pattern": "FAILED"
             }
         },
         {
