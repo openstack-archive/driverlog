@@ -4555,6 +4555,26 @@
         },
         {
             "project_id": "openstack/neutron",
+            "vendor": "H3C",
+            "name": "H3C VCF Controller Neutron Plugin",
+            "description": "The H3C VCF Controller Neutron Plugin enables integration of OpenStack Neutron with H3C VCF Controller.",
+            "maintainers": [
+                {
+                    "name": "Huang Cheng",
+                    "irc": "pedh",
+                    "email": "huang.cheng@h3c.com",
+                    "launchpad_id": "hcpedh"
+                }
+            ],
+            "wiki": "https://wiki.openstack.org/wiki/Neutron/H3C-Neutron",
+            "releases": [
+                "Kilo",
+                "Liberty",
+                "Mitaka"
+            ]
+        },
+        {
+            "project_id": "openstack/neutron",
             "vendor": "Huawei",
             "name": "Huawei Agile Controller Neutron Plugin",
             "description": "Huawei Agile Controller extends neutron's functionalities and enables the orchestration of network-wide resources in support of application services.",
