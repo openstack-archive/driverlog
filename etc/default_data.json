@@ -254,10 +254,11 @@
                 "Kilo",
                 "Liberty",
                 "Mitaka",
-                "Newton"
+                "Newton",
+                "Ocata"
             ],
             "ci": {
-                "id": "microsoft_cinder_ci",
+                "id": "cinder_smb3_ci",
                 "success_pattern": "Test_iSCSI \\S+ : SUCCESS",
                 "failure_pattern": "Test_iSCSI \\S+ : FAILURE"
             }
@@ -289,10 +290,11 @@
                 "Kilo",
                 "Liberty",
                 "Mitaka",
-                "Newton"
+                "Newton",
+                "Ocata"
             ],
             "ci": {
-                "id": "microsoft_cinder_ci",
+                "id": "cinder_smb3_ci",
                 "success_pattern": "Test_SMB3_Windows \\S+ :SUCCESS",
                 "failure_pattern": "Test_SMB3_Windows \\S+ :FAILURE"
             }
@@ -324,13 +326,9 @@
                 "Kilo",
                 "Liberty",
                 "Mitaka",
-                "Newton"
-            ],
-            "ci": {
-                "id": "microsoft_cinder_ci",
-                "success_pattern": "Test_SMB3_Linux \\S+ :SUCCESS",
-                "failure_pattern": "Test_SMB3_Linux \\S+ :FAILURE"
-            }
+                "Newton",
+                "Ocata"
+            ]
         },
         {
             "project_id": "openstack/cinder",
@@ -3715,10 +3713,11 @@
             "releases": [
                 "Liberty",
                 "Mitaka",
-                "Newton"
+                "Newton",
+                "Ocata"
             ],
             "ci": {
-                "id": "microsoft_manila_ci",
+                "id": "manila_smb3_ci",
                 "success_pattern": "Build succeeded",
                 "failure_pattern": "Build failed"
             }
@@ -4416,7 +4415,7 @@
             ],
             "wiki": "http://www.cloudbase.it/neutron-hyper-v-plugin",
             "ci": {
-                "id": "microsoft_neutron_ci",
+                "id": "neutron_hyperv_ci",
                 "success_pattern": "Build succeeded",
                 "failure_pattern": "Build failed"
             },
@@ -4428,7 +4427,8 @@
                 "Kilo",
                 "Liberty",
                 "Mitaka",
-                "Newton"
+                "Newton",
+                "Ocata"
             ]
         },
         {
@@ -5211,10 +5211,11 @@
                 "Kilo",
                 "Liberty",
                 "Mitaka",
-                "Newton"
+                "Newton",
+                "Ocata"
             ],
             "ci": {
-                "id": "microsoft_nova_ci",
+                "id": "nova_hyperv_ci",
                 "success_pattern": "Build succeeded",
                 "failure_pattern": "Build failed"
             }
