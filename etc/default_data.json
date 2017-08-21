@@ -1100,11 +1100,12 @@
                     "launchpad_id": "hari.venkat"
                 }
             ],
-            "wiki": "http://docs.openstack.org/ocata/config-reference/block-storage/drivers/hpe-3par-driver.html",
+            "wiki": "http://docs.openstack.org/pike/config-reference/block-storage/drivers/hpe-3par-driver.html",
             "releases": [
                 "Mitaka",
                 "Newton",
-                "Ocata"
+                "Ocata",
+                "Pike"
             ],
             "ci": {
                 "id": "hp-storage-blr-ci",
@@ -1129,11 +1130,12 @@
                     "launchpad_id": "hari.venkat"
                 }
             ],
-            "wiki": "http://docs.openstack.org/ocata/config-reference/block-storage/drivers/hpe-3par-driver.html",
+            "wiki": "http://docs.openstack.org/pike/config-reference/block-storage/drivers/hpe-3par-driver.html",
             "releases": [
                 "Mitaka",
                 "Newton",
-                "Ocata"
+                "Ocata",
+                "Pike"
             ],
             "ci": {
                 "id": "hp-storage-blr-ci",
@@ -1159,11 +1161,12 @@
                     "launchpad_id": "hari.venkat"
                 }
             ],
-            "wiki": "http://docs.openstack.org/ocata/config-reference/block-storage/drivers/hpe-lefthand-driver.html",
+            "wiki": "http://docs.openstack.org/pike/config-reference/block-storage/drivers/hpe-lefthand-driver.html",
             "releases": [
                 "Mitaka",
                 "Newton",
-                "Ocata"
+                "Ocata",
+                "Pike"
             ],
             "ci": {
                 "id": "hp-storage-blr-ci",
