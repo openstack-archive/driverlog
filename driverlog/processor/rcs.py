@@ -18,7 +18,6 @@ import re
 
 from oslo_log import log as logging
 import paramiko
-import six
 
 
 LOG = logging.getLogger(__name__)
@@ -90,7 +89,7 @@ class Gerrit(Rcs):
 
     def _get_cmd(self, limit=PAGE_LIMIT, **kwargs):
         params = ' '.join([(k + ':\'' + v + '\'')
-                           for k, v in six.iteritems(kwargs)])
+                           for k, v in (kwargs).items()])
 
         cmd = ('gerrit query --format JSON '
                '%(params)s limit:%(limit)s '

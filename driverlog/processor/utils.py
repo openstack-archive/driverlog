@@ -22,7 +22,6 @@ import time
 
 import iso8601
 from oslo_log import log as logging
-import six
 from six.moves.urllib import parse
 from six.moves.urllib import request
 
@@ -147,7 +146,7 @@ def make_age_string(seconds):
 
 def merge_records(original, new):
     need_update = False
-    for key, value in six.iteritems(new):
+    for key, value in (new).items():
         if original.get(key) != value:
             need_update = True
             original[key] = value
@@ -179,7 +178,7 @@ def copy_dict(source, include=None, exclude=None):
     else:
         include = include or source.keys()
         exclude = exclude or []
-        return dict([(k, v) for k, v in six.iteritems(source)
+        return dict([(k, v) for k, v in (source).items()
                      if k in include and k not in exclude])
 
 
