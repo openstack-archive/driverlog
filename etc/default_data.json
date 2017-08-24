@@ -1120,11 +1120,12 @@
                     "launchpad_id": "hari.venkat"
                 }
             ],
-            "wiki": "http://docs.openstack.org/ocata/config-reference/block-storage/drivers/hpe-3par-driver.html",
+            "wiki": "https://docs.openstack.org/cinder/pike/configuration/block-storage/drivers/hpe-3par-driver.html",
             "releases": [
                 "Mitaka",
                 "Newton",
-                "Ocata"
+                "Ocata",
+                "Pike"
             ],
             "ci": {
                 "id": "hp-storage-blr-ci",
@@ -1149,11 +1150,12 @@
                     "launchpad_id": "hari.venkat"
                 }
             ],
-            "wiki": "http://docs.openstack.org/ocata/config-reference/block-storage/drivers/hpe-3par-driver.html",
+            "wiki": "https://docs.openstack.org/cinder/pike/configuration/block-storage/drivers/hpe-3par-driver.html",
             "releases": [
                 "Mitaka",
                 "Newton",
-                "Ocata"
+                "Ocata",
+                "Pike"
             ],
             "ci": {
                 "id": "hp-storage-blr-ci",
@@ -1179,11 +1181,12 @@
                     "launchpad_id": "hari.venkat"
                 }
             ],
-            "wiki": "http://docs.openstack.org/ocata/config-reference/block-storage/drivers/hpe-lefthand-driver.html",
+            "wiki": "https://docs.openstack.org/cinder/pike/configuration/block-storage/drivers/hpe-lefthand-driver.html",
             "releases": [
                 "Mitaka",
                 "Newton",
-                "Ocata"
+                "Ocata",
+                "Pike"
             ],
             "ci": {
                 "id": "hp-storage-blr-ci",
@@ -3862,10 +3865,12 @@
                     "launchpad_id": "hari.venkat"
                 }
             ],
-            "wiki": "http://docs.openstack.org/newton/config-reference/shared-file-systems/drivers/hpe-3par-share-driver.html",
+            "wiki": "https://docs.openstack.org/manila/pike/configuration/shared-file-systems/drivers/hpe-3par-share-driver.html",
             "releases": [
                 "Mitaka",
-                "Newton"
+                "Newton",
+                "Ocata",
+                "Pike"
             ],
             "ci": {
                 "id": "hp-storage-blr-ci",
