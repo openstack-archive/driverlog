@@ -264,7 +264,7 @@
                 "Ocata"
             ],
             "ci": {
-                "id": "cinder_smb3_ci",
+                "id": "cinder-smb3-ci",
                 "success_pattern": "Test_iSCSI \\S+ : SUCCESS",
                 "failure_pattern": "Test_iSCSI \\S+ : FAILURE"
             }
@@ -300,7 +300,7 @@
                 "Ocata"
             ],
             "ci": {
-                "id": "cinder_smb3_ci",
+                "id": "cinder-smb3-ci",
                 "success_pattern": "Test_SMB3_Windows \\S+ :SUCCESS",
                 "failure_pattern": "Test_SMB3_Windows \\S+ :FAILURE"
             }
@@ -3735,7 +3735,7 @@
                 "Ocata"
             ],
             "ci": {
-                "id": "manila_smb3_ci",
+                "id": "manila-smb3-ci",
                 "success_pattern": "Build succeeded",
                 "failure_pattern": "Build failed"
             }
@@ -4406,7 +4406,7 @@
             ],
             "wiki": "http://www.cloudbase.it/neutron-hyper-v-plugin",
             "ci": {
-                "id": "neutron_hyperv_ci",
+                "id": "neutron-hyperv-ci",
                 "success_pattern": "Build succeeded",
                 "failure_pattern": "Build failed"
             },
@@ -5208,7 +5208,7 @@
                 "Ocata"
             ],
             "ci": {
-                "id": "nova_hyperv_ci",
+                "id": "nova-hyperv-ci",
                 "success_pattern": "Build succeeded",
                 "failure_pattern": "Build failed"
             }
