@@ -518,7 +518,7 @@
                     "launchpad_id": "rajinir"
                 }
             ],
-            "wiki": "https://docs.openstack.org/ocata/config-reference/block-storage/drivers/dell-equallogic-driver.html",
+            "wiki": "https://docs.openstack.org/cinder/pike/configuration/block-storage/drivers/dell-equallogic-driver.html",
             "releases": [
                 "Havana",
                 "Icehouse",
@@ -527,7 +527,8 @@
                 "Liberty",
                 "Mitaka",
                 "Newton",
-                "Ocata"
+                "Ocata",
+                "Pike"
             ],
             "ci": {
                 "id": "dell-storage-ci",
@@ -574,13 +575,14 @@
                     "launchpad_id": "tomswanson"
                 }
             ],
-            "wiki": "https://docs.openstack.org/ocata/config-reference/block-storage/drivers/dell-storagecenter-driver.html",
+            "wiki": "https://docs.openstack.org/cinder/pike/configuration/block-storage/drivers/dell-storagecenter-driver.html",
             "releases": [
                 "Kilo",
                 "Liberty",
                 "Mitaka",
                 "Newton",
-                "Ocata"
+                "Ocata",
+                "Pike"
             ],
             "ci": {
                 "id": "dell-storage-ci",
@@ -601,13 +603,14 @@
                     "launchpad_id": "tomswanson"
                 }
             ],
-            "wiki": "https://docs.openstack.org/ocata/config-reference/block-storage/drivers/dell-storagecenter-driver.html",
+            "wiki": "https://docs.openstack.org/cinder/pike/configuration/block-storage/drivers/dell-storagecenter-driver.html",
             "releases": [
                 "Kilo",
                 "Liberty",
                 "Mitaka",
                 "Newton",
-                "Ocata"
+                "Ocata",
+                "Pike"
             ],
             "ci": {
                 "id": "dell-storage-ci",
@@ -3283,13 +3286,15 @@
                     "launchpad_id": "rajinir"
                 }
             ],
-            "wiki": "http://docs.openstack.org/developer/ironic/deploy/drivers.html#drac-driver",
+            "wiki": "http://docs.openstack.org/ironic/latest/admin/drivers.html#drac-driver",
             "releases": [
                 "Juno",
                 "Kilo",
                 "Liberty",
                 "Mitaka",
-                "Newton"
+                "Newton",
+                "Ocata",
+                "Pike"
             ],
            "ci": {
                 "id": "openstack-ironic-ci",
