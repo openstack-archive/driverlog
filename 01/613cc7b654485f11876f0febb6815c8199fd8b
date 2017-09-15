@@ -1,0 +1,9 @@
+Code-Review+1: Octavian Ciuhandu <ociuhandu@cloudbasesolutions.com>
+Code-Review+2: Ilya Shakhat <shakhat@gmail.com>
+Workflow+1: Ilya Shakhat <shakhat@gmail.com>
+Verified+2: Jenkins
+Submitted-by: Jenkins
+Submitted-at: Fri, 15 Sep 2017 08:13:57 +0000
+Reviewed-on: https://review.openstack.org/504109
+Project: openstack/driverlog
+Branch: refs/heads/master
