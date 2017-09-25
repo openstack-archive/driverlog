@@ -512,7 +512,7 @@
             "description": "The Dell EMC PS Series volume driver interacts with configured PS Series (EqualLogic) storage arrays and supports various operations, such as volume creation and deletion, volume attachment and detachment, snapshot creation and deletion, and clone creation.",
             "maintainers": [
                 {
-                    "name": "Rajini Ram",
+                    "name": "Rajini Karthik",
                     "email": "rajini.karthik@dell.com",
                     "irc": "rajinir",
                     "launchpad_id": "rajinir"
@@ -531,9 +531,9 @@
                 "Pike"
             ],
             "ci": {
-                "id": "dell-storage-ci",
-                "success_pattern": "dell-eql-dsvm-volume \\S+ : SUCCESS",
-                "failure_pattern": "dell-eql-dsvm-volume \\S+ : FAILURE"
+                "id": "dell.emc.ps.series.ci",
+                "success_pattern": "Dell_PS_iSCSI \\S+ : SUCCESS",
+                "failure_pattern": "Dell_PS_iSCSI \\S+ : FAILURE"
             }
         },
         {
@@ -585,9 +585,9 @@
                 "Pike"
             ],
             "ci": {
-                "id": "dell-storage-ci",
-                "success_pattern": "dell-sc-iscsi-dsvm-volume \\S+ : SUCCESS",
-                "failure_pattern": "dell-sc-iscsi-dsvm-volume \\S+ : FAILURE"
+                "id": "dell.emc.sc.series.ci",
+                "success_pattern": "Dell_SC_iSCSI \\S+ : SUCCESS",
+                "failure_pattern": "Dell_SC_iSCSI \\S+ : FAILURE"
             }
         },
         {
@@ -613,9 +613,9 @@
                 "Pike"
             ],
             "ci": {
-                "id": "dell-storage-ci",
-                "success_pattern": "dell-sc-fc-dsvm-volume \\S+ : SUCCESS",
-                "failure_pattern": "dell-sc-fc-dsvm-volume \\S+ : FAILURE"
+                "id": "dell.emc.sc.series.ci",
+                "success_pattern": "Dell_SC_FC \\S+ : SUCCESS",
+                "failure_pattern": "Dell_SC_FC \\S+ : FAILURE"
             }
         },
         {
@@ -3283,7 +3283,7 @@
                     "launchpad_id": "rpioso"
                 },
                 {
-                    "name": "Rajini Ram",
+                    "name": "Rajini Karthik",
                     "email": "rajini.karthik@dell.com",
                     "irc": "rajinir",
                     "launchpad_id": "rajinir"
@@ -3301,8 +3301,8 @@
             ],
            "ci": {
                 "id": "openstack-ironic-ci",
-                "success_pattern": "dell-hw-tempest-dsvm-ironic-pxe_drac \\S+ : SUCCESS",
-                "failure_pattern": "dell-hw-tempest-dsvm-ironic-pxe_drac \\S+ : FAILURE"
+                "success_pattern": "dell-hw14G-tempest-dsvm-ironic-pxe_drac \\S+ : SUCCESS",
+                "failure_pattern": "dell-hw14G-tempest-dsvm-ironic-pxe_drac \\S+ : FAILURE"
             }
         },
         {
