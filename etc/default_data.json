@@ -2354,7 +2354,7 @@
             "repo": "carone1/fuel-xtremio",
             "vendor": "Dell EMC",
             "name": "XtremIO plugin for Fuel",
-            "description": "The Dell EMC XtremIO plugin for Fuel adds support for Dell EMC XtremIO arrays in Cinder using iSCSI protocol", 
+            "description": "The Dell EMC XtremIO plugin for Fuel adds support for Dell EMC XtremIO arrays in Cinder using iSCSI protocol",
             "maintainers": [
                  {
                     "name": "Eric Caron",
@@ -5263,6 +5263,47 @@
                 "id": "powerkvm",
                 "success_pattern": "SUCCESS",
                 "failure_pattern": "FAILURE"
+            }
+        },
+        {
+            "project_id": "openstack/nova",
+            "vendor": "IBM",
+            "name": "PowerVM",
+            "description": "The PowerVM compute driver provides native integration of OpenStack on PowerVM systems. This enables support of Linux, AIX and IBM i for PowerVM systems. ",
+            "maintainers": [
+                {
+                    "name": "Drew Thorstensen",
+                    "email": "thorst@us.ibm.com",
+                    "irc": "thorst",
+                    "launchpad_id": "thorst"
+                },
+                {
+                    "name": "Eric Berglund",
+                    "email": "esberglu@us.ibm.com",
+                    "irc": "esberglu",
+                    "launchpad_id": "esberglu"
+                },
+                {
+                    "name": "Eric Fried",
+                    "email": "efried@us.ibm.com",
+                    "irc": "efried",
+                    "launchpad_id": "efried"
+                },
+                {
+                    "name": "Matthew Edmonds",
+                    "email": "edmondsw@us.ibm.com",
+                    "irc": "edmondsw",
+                    "launchpad_id": "edmondsw"
+                }
+            ],
+            "wiki": "https://wiki.openstack.org/wiki/PowerVM",
+            "releases": [
+                "Pike"
+            ],
+            "ci": {
+                "id": "powervmci",
+                "success_pattern": "Build failed.",
+                "failure_pattern": "Build succeeded."
             }
         },
         {
