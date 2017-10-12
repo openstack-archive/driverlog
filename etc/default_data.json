@@ -1527,16 +1527,16 @@
             "project_id": "openstack/cinder",
             "vendor": "NetApp",
             "name": "NetApp Unified Driver",
-            "description": "The NetApp Unified Driver for Cinder provides integration for multiple storage controller families and protocols. A storage family corresponds to storage systems built on different NetApp technologies such as clustered Data ONTAP, 7-Mode, and NetApp E-Series and EF-Series systems. The storage protocol refers to the protocol used to initiate data storage and access operations to those storage systems.  Clustered Data ONTAP systems can be used with Cinder via Parallelized NFS (pNFS), NFS, iSCSI, and Fibre Channel storage protocols. 7-mode systems can be used with NFS, iSCSI, and Fibre Channel. E-Series and EF-Series systems are accessible via iSCSI and Fibre Channel.",
+            "description": "The NetApp Unified Driver for Cinder provides integration for multiple storage controller families and protocols. A storage family corresponds to storage systems built on different NetApp technologies such as clustered Data ONTAP, 7-Mode, and NetApp E-Series and EF-Series systems. The storage protocol refers to the protocol used to initiate data storage and access operations to those storage systems.  Clustered Data ONTAP systems can be used with Cinder via Parallelized NFS (pNFS), NFS, iSCSI, and Fibre Channel storage protocols. 7-mode systems can be used with NFS, iSCSI, and Fibre Channel. E-Series and EF-Series systems are accessible via iSCSI and Fibre Channel. Support for 7-mode systems ended with the Pike release.",
             "maintainers": [
                 {
-                    "name": "Clinton Knight",
-                    "irc": "cknight",
-                    "email": "cknight@netapp.com",
-                    "launchpad_id": "clintonk"
+                    "name": "NetApp OpenStack Development Team",
+                    "irc": "#openstack-netapp",
+                    "email": "ng-openstack-dev@netapp.com",
+                    "launchpad_id": "netapp"
                 }
             ],
-            "wiki": "http://docs.openstack.org/kilo/config-reference/content/netapp-volume-driver.html",
+            "wiki": "http://netapp.io/openstack/",
             "releases": [
                 "Essex",
                 "Folsom",
@@ -1545,10 +1545,14 @@
                 "Icehouse",
                 "Juno",
                 "Kilo",
-                "Liberty"
+                "Liberty",
+                "Mitaka",
+                "Newton",
+                "Ocata",
+                "Pike"
             ],
             "ci": {
-                "id": "netapp-ci",
+                "id": "NetApp-ci",
                 "success_pattern": "Build succeeded",
                 "failure_pattern": "Build failed"
             }
@@ -3967,18 +3971,23 @@
             "description": "The NetApp Unified Driver for Manila manages NFS and CIFS file shares on NetApp Clustered Data ONTAP storage controllers.  The driver supports both Manila driver modes (driver_handles_share_servers = True/False).",
             "maintainers": [
                 {
-                    "name": "Clinton Knight",
-                    "irc": "cknight",
-                    "email": "cknight@netapp.com",
-                    "launchpad_id": "clintonk"
+                    "name": "NetApp OpenStack Development Team",
+                    "irc": "#openstack-netapp",
+                    "email": "ng-openstack-dev@netapp.com",
+                    "launchpad_id": "netapp"
                 }
             ],
-            "wiki": "http://netapp.github.io/openstack-deploy-ops-guide/",
+            "wiki": "http://netapp.io/openstack/",
             "releases": [
-                "Kilo"
+                "Kilo",
+                "Liberty",
+                "Mitaka",
+                "Newton",
+                "Ocata",
+                "Pike"
             ],
             "ci": {
-                "id": "netapp-ci",
+                "id": "NetApp-ci",
                 "success_pattern": "Build succeeded",
                 "failure_pattern": "Build failed"
             }
