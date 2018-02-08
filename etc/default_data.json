@@ -1492,14 +1492,19 @@
             "description": "",
             "maintainers": [
                 {
-                    "name": "Philipp Marek",
-                    "email": "philipp.marek@linbit.com",
-                    "launchpad_id": "philipp-marek"
+                    "name": "Hayley Swimelar",
+                    "email": "hayley@linbit.com",
+                    "launchpad_id": "hayley-swimelar"
+                    "irc": "Swimingly"
                 }
             ],
             "wiki": "",
             "releases": [
-                "Liberty"
+                "Liberty",
+                "Mitaka",
+                "Newton",
+                "Ocata",
+                "Pike"
             ]
         },
         {
