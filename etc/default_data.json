@@ -5327,10 +5327,9 @@
             "description": "Compute driver for Ironic (Bare Metal Provisioning) program, enabling Nova to provision physical machines. Built during Icehouse within the Ironic tree, it was moved to Nova's tree during Juno.",
             "maintainers": [
                 {
-                    "name": "Devananda van der Veen",
-                    "email": "devananda.vdv@gmail.com",
-                    "launchpad_id": "devananda",
-                    "irc": "devananda"
+                    "name": "Ironic team",
+                    "email": "openstack-dev@lists.openstack.org",
+                    "irc": "#openstack-ironic"
                 }
             ],
             "ci": {
@@ -5353,9 +5352,9 @@
             "description": "KVM is configured as the default hypervisor for Compute.",
             "maintainers": [
                 {
-                    "name": "Michael Still",
-                    "email": "mikal@stillhq.com",
-                    "launchpad_id": "milakstill"
+                    "name": "Nova team",
+                    "email": "openstack-dev@lists.openstack.org",
+                    "irc": "#openstack-nova"
                 }
             ],
             "ci": {
@@ -5386,9 +5385,9 @@
             "description": "LXC (Linux containers) is a virtualization technology that works at the operating system level. LXC (as currently implemented using libvirt in the Compute service) is not a secure virtualization technology for multi-tenant environments.",
             "maintainers": [
                 {
-                    "name": "Michael Still",
-                    "email": "mikal@stillhq.com",
-                    "launchpad_id": "milakstill"
+                    "name": "Nova team",
+                    "email": "openstack-dev@lists.openstack.org",
+                    "irc": "#openstack-nova"
                 }
             ],
             "releases": [
@@ -5414,9 +5413,9 @@
             "description": "From the perspective of the Compute service, the QEMU hypervisor is very similar to the KVM hypervisor. The main difference is that QEMU does not support native virtualization.",
             "maintainers": [
                 {
-                    "name": "Michael Still",
-                    "email": "mikal@stillhq.com",
-                    "launchpad_id": "milakstill"
+                    "name": "Nova team",
+                    "email": "openstack-dev@lists.openstack.org",
+                    "irc": "#openstack-nova"
                 }
             ],
             "wiki": "http://docs.openstack.org/juno/config-reference/content/qemu.html",
@@ -5447,9 +5446,10 @@
             "description": "XenAPI compute driver connects to XenServer hypervisors via XenAPI. Used to power Rackspace Cloud Servers (Public Cloud).",
             "maintainers": [
                 {
-                    "name": "Michael Still",
-                    "email": "mikal@stillhq.com",
-                    "launchpad_id": "milakstill"
+                    "name": "Bob Ball",
+                    "email": "openstack@citrix.com",
+                    "launchpad_id": "bob-ball",
+                    "irc": "BobBall"
                 }
             ],
             "wiki": "http://docs.openstack.org/juno/config-reference/content/introduction-to-xen.html",
@@ -5480,9 +5480,8 @@
             "description": "Support for the Xen hypervisor when used with libvirt.",
             "maintainers": [
                 {
-                    "name": "Michael Still",
-                    "email": "mikal@stillhq.com",
-                    "launchpad_id": "milakstill"
+                    "name": "Anthony Perard",
+                    "launchpad_id": "anthony-perard"
                 }
             ],
             "wiki": "http://docs.openstack.org/havana/config-reference/content/introduction-to-xen.html",
