@@ -2,6 +2,12 @@
 DriverLog | vendor drivers for OpenStack
 ========================================
 
+The information in this repository may be out of date. A longer term solution
+is being developed by the community to have this information sourced from the
+projects themselves to encourage more updates by making it easily accessible.
+
+http://git.openstack.org/cgit/openstack/sphinx-feature-classification
+
 Project Info
 ------------
 
