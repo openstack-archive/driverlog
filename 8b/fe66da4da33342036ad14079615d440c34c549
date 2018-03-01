@@ -1,0 +1,8 @@
+Code-Review+2: John Griffith <john.griffith8@gmail.com>
+Workflow+1: Ilya Shakhat <shakhat@gmail.com>
+Verified+2: Zuul
+Submitted-by: Zuul
+Submitted-at: Thu, 01 Mar 2018 08:55:40 +0000
+Reviewed-on: https://review.openstack.org/548669
+Project: openstack/driverlog
+Branch: refs/heads/master
