@@ -1960,7 +1960,12 @@
                 "Icehouse",
                 "Juno",
                 "Kilo",
-                "Liberty"
+                "Liberty",
+                "Mitaka",
+                "Newton",
+                "Ocata",
+                "Pike",
+                "Queens"
             ],
             "ci": {
                 "id": "vmwareminesweeper",
@@ -5150,24 +5155,43 @@
         {
             "project_id": "openstack/neutron",
             "vendor": "VMware",
-            "name": "VMware NSX Network Virtualization Platform Plugin",
-            "description": "The NSX plug-in is designed to manage VMware NSX platform, formerly known as Nicira NVP.",
+            "name": "VMware NSX Plugin",
+            "description": "The NSX plug-in is designed to manage the VMware NSX platform.",
             "maintainers": [
                 {
-                    "name": "Aaron Rosen",
-                    "irc": "arosen",
-                    "email": "aaronorosen@gmail.com",
-                    "launchpad_id": "arosen"
+                    "name": "Gary Kotton",
+                    "irc": "garyk",
+                    "email": "gkotton@vmware.com",
+                    "launchpad_id": "garyk"
+                },
+                {
+                    "name": "Adit Sarfaty",
+                    "irc": "asarfaty",
+                    "email": "asarfaty@vmware.com",
+                    "launchpad_id": "asarfaty"
+                },
+                {
+                    "name": "Kobi Samoray",
+                    "irc": "ksamoray",
+                    "email": "ksamoray@vmware.com",
+                    "launchpad_id": "ksamoray"
                 }
             ],
-            "wiki": "http://docs.openstack.org/admin-guide-cloud/content/nsx_plugin.html",
+            "wiki": "https://wiki.openstack.org/wiki/Neutron/VMware_NSX_plugins",
             "releases": [
                 "Essex",
                 "Folsom",
                 "Grizzly",
                 "Havana",
                 "Icehouse",
-                "Juno"
+                "Juno",
+                "Kilo",
+                "Liberty",
+                "Mitaka",
+                "Newton",
+                "Ocata",
+                "Pike",
+                "Queens"
             ],
             "ci": {
                 "id": "vmwareminesweeper",
@@ -5549,7 +5573,12 @@
                 "Icehouse",
                 "Juno",
                 "Kilo",
-                "Liberty"
+                "Liberty",
+                "Mitaka",
+                "Newton",
+                "Ocata",
+                "Pike",
+                "Queens"
             ],
             "maintainers": [
                 {
@@ -5569,18 +5598,6 @@
                     "email": "rgerganov@vmware.com",
                     "irc": "rgerganov",
                     "launchpad_id": "rgerganov"
-                },
-                {
-                    "name": "Eric Brown",
-                    "email": "browne@vmware.com",
-                    "irc": "browne",
-                    "launchpad_id": "ericwb"
-                },
-                {
-                    "name": "Sabari Murugesan",
-                    "email": "smurugesan@vmware.com",
-                    "irc": "sabari",
-                    "launchpad_id": "smurugesan"
                 }
             ]
         },
