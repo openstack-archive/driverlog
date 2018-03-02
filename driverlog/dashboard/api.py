@@ -27,14 +27,22 @@ def get_drivers_internal(**params):
     drivers = vault.get_vault()['drivers_map']
     filtered_drivers = []
 
+    # when release_id is not set return only drivers from active releases
+    if 'release_id' not in params:
+        all_releases = vault.get_vault()['releases_map']
+        active_releases = ','.join(sorted(
+            r['id'].lower() for r in all_releases.values() if r.get('active')))
+        params['release_id'] = active_releases
+
     for driver in drivers.values():
         include = True
         for param, value in params.iteritems():
             value = value.lower()
             if param == 'release_id' and value:
+                query_releases = set(value.split(','))
                 found = False
                 for release in driver['releases_info']:
-                    if release['release_id'] == value:
+                    if release['release_id'] in query_releases:
                         found = True
                         break
 
