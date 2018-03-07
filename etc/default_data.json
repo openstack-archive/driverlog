@@ -531,7 +531,8 @@
                 "Mitaka",
                 "Newton",
                 "Ocata",
-                "Pike"
+                "Pike",
+                "Queens"
             ],
             "ci": {
                 "id": "dell.emc.ps.series.ci",
@@ -557,7 +558,8 @@
                 "Mitaka",
                 "Newton",
                 "Ocata",
-                "Pike"
+                "Pike",
+                "Queens"
             ],
             "ci": {
                 "id": "emc-scaleio-ci",
@@ -585,7 +587,8 @@
                 "Mitaka",
                 "Newton",
                 "Ocata",
-                "Pike"
+                "Pike",
+                "Queens"
             ],
             "ci": {
                 "id": "dell.emc.sc.series.ci",
@@ -613,7 +616,8 @@
                 "Mitaka",
                 "Newton",
                 "Ocata",
-                "Pike"
+                "Pike",
+                "Queens"
             ],
             "ci": {
                 "id": "dell.emc.sc.series.ci",
@@ -636,7 +640,8 @@
             "wiki": "https://docs.openstack.org/cinder/pike/configuration/block-storage/drivers/dell-emc-unity-driver.html",
             "releases": [
                 "Ocata",
-                "Pike"
+                "Pike",
+                "Queens"
             ],
             "ci": {
                 "id": "emc-unity-ci",
@@ -659,7 +664,8 @@
             "wiki": "https://docs.openstack.org/cinder/pike/configuration/block-storage/drivers/dell-emc-unity-driver.html",
             "releases": [
                 "Ocata",
-                "Pike"
+                "Pike",
+                "Queens"
             ],
             "ci": {
                 "id": "emc-unity-ci",
@@ -688,7 +694,8 @@
                 "Mitaka",
                 "Newton",
                 "Ocata",
-                "Pike"
+                "Pike",
+                "Queens"
             ],
             "ci": {
                 "id": "emc-vmax-ci",
@@ -719,7 +726,8 @@
                 "Mitaka",
                 "Newton",
                 "Ocata",
-                "Pike"
+                "Pike",
+                "Queens"
             ],
             "ci": {
                 "id": "emc-vmax-ci",
@@ -747,7 +755,8 @@
                 "Mitaka",
                 "Newton",
                 "Ocata",
-                "Pike"
+                "Pike",
+                "Queens"
             ],
             "ci": {
                 "id": "emc-vnx-ci",
@@ -776,7 +785,8 @@
                 "Mitaka",
                 "Newton",
                 "Ocata",
-                "Pike"
+                "Pike",
+                "Queens"
             ],
             "ci": {
                 "id": "emc-vnx-ci",
@@ -804,7 +814,8 @@
                 "Mitaka",
                 "Newton",
                 "Ocata",
-                "Pike"
+                "Pike",
+                "Queens"
             ],
             "ci": {
                 "id": "emc-xio-ci",
@@ -832,7 +843,8 @@
                 "Mitaka",
                 "Newton",
                 "Ocata",
-                "Pike"
+                "Pike",
+                "Queens"
             ],
             "ci": {
                 "id": "emc-xio-ci",
@@ -3314,7 +3326,8 @@
                 "Mitaka",
                 "Newton",
                 "Ocata",
-                "Pike"
+                "Pike",
+                "Queens"
             ],
            "ci": {
                 "id": "openstack-ironic-ci",
@@ -3783,7 +3796,8 @@
             "releases": [
                 "Newton",
                 "Ocata",
-                "Pike"
+                "Pike",
+                "Queens"
             ],
             "ci": {
                 "id": "emc-unity-ci",
@@ -3806,7 +3820,8 @@
             "wiki": "https://github.com/openstack/manila/blob/stable/pike/doc/source/configuration/shared-file-systems/drivers/dell-emc-vmax-driver.rst",
             "releases": [
                 "Ocata",
-                "Pike"
+                "Pike",
+                "Queens"
             ],
             "ci": {
                 "id": "emc-vmax-ci",
@@ -3834,7 +3849,8 @@
                 "Mitaka",
                 "Newton",
                 "Ocata",
-                "Pike"
+                "Pike",
+                "Queens"
             ],
             "ci": {
                 "id": "emc-vnx-ci",
