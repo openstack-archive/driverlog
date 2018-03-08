@@ -521,7 +521,7 @@
                     "launchpad_id": "rajinir"
                 }
             ],
-            "wiki": "https://docs.openstack.org/cinder/pike/configuration/block-storage/drivers/dell-equallogic-driver.html",
+            "wiki": "https://docs.openstack.org/cinder/queens/configuration/block-storage/drivers/dell-equallogic-driver.html",
             "releases": [
                 "Havana",
                 "Icehouse",
@@ -552,7 +552,7 @@
                     "launchpad_id": "eric-aceshome"
                 }
             ],
-            "wiki": "https://docs.openstack.org/cinder/pike/configuration/block-storage/drivers/dell-emc-scaleio-driver.html",
+            "wiki": "https://docs.openstack.org/cinder/queens/configuration/block-storage/drivers/dell-emc-scaleio-driver.html",
             "releases": [
                 "Liberty",
                 "Mitaka",
@@ -580,7 +580,7 @@
                     "launchpad_id": "tomswanson"
                 }
             ],
-            "wiki": "https://docs.openstack.org/cinder/pike/configuration/block-storage/drivers/dell-storagecenter-driver.html",
+            "wiki": "https://docs.openstack.org/cinder/queens/configuration/block-storage/drivers/dell-storagecenter-driver.html",
             "releases": [
                 "Kilo",
                 "Liberty",
@@ -609,7 +609,7 @@
                     "launchpad_id": "tomswanson"
                 }
             ],
-            "wiki": "https://docs.openstack.org/cinder/pike/configuration/block-storage/drivers/dell-storagecenter-driver.html",
+            "wiki": "https://docs.openstack.org/cinder/queens/configuration/block-storage/drivers/dell-storagecenter-driver.html",
             "releases": [
                 "Kilo",
                 "Liberty",
@@ -637,7 +637,7 @@
                     "launchpad_id": "emc-vnx-openstack"
                 }
             ],
-            "wiki": "https://docs.openstack.org/cinder/pike/configuration/block-storage/drivers/dell-emc-unity-driver.html",
+            "wiki": "https://docs.openstack.org/cinder/queens/configuration/block-storage/drivers/dell-emc-unity-driver.html",
             "releases": [
                 "Ocata",
                 "Pike",
@@ -661,7 +661,7 @@
                     "launchpad_id": "emc-vnx-openstack"
                 }
             ],
-            "wiki": "https://docs.openstack.org/cinder/pike/configuration/block-storage/drivers/dell-emc-unity-driver.html",
+            "wiki": "https://docs.openstack.org/cinder/queens/configuration/block-storage/drivers/dell-emc-unity-driver.html",
             "releases": [
                 "Ocata",
                 "Pike",
@@ -685,7 +685,7 @@
                     "launchpad_id": "walshh2"
                 }
             ],
-            "wiki": "https://docs.openstack.org/cinder/pike/configuration/block-storage/drivers/emc-vmax-driver.html",
+            "wiki": "https://docs.openstack.org/cinder/queens/configuration/block-storage/drivers/emc-vmax-driver.html",
             "releases": [
                 "Icehouse",
                 "Juno",
@@ -715,7 +715,7 @@
                     "launchpad_id": "walshh2"
                 }
             ],
-            "wiki": "https://docs.openstack.org/cinder/pike/configuration/block-storage/drivers/emc-vmax-driver.html",
+            "wiki": "https://docs.openstack.org/cinder/queens/configuration/block-storage/drivers/emc-vmax-driver.html",
             "releases": [
                 "Grizzly",
                 "Havana",
@@ -747,7 +747,7 @@
                     "launchpad_id": "emc-vnx-openstack"
                 }
             ],
-            "wiki": "https://docs.openstack.org/cinder/pike/configuration/block-storage/drivers/emc-vnx-driver.html",
+            "wiki": "https://docs.openstack.org/cinder/queens/configuration/block-storage/drivers/emc-vnx-driver.html",
             "releases": [
                 "Juno",
                 "Kilo",
@@ -776,7 +776,7 @@
                     "launchpad_id": "emc-vnx-openstack"
                 }
             ],
-            "wiki": "https://docs.openstack.org/cinder/pike/configuration/block-storage/drivers/emc-vnx-driver.html",
+            "wiki": "https://docs.openstack.org/cinder/queens/configuration/block-storage/drivers/emc-vnx-driver.html",
             "releases": [
                 "Icehouse",
                 "Juno",
@@ -806,7 +806,7 @@
                     "launchpad_id": "shay-halsband"
                 }
             ],
-            "wiki": "https://docs.openstack.org/cinder/pike/configuration/block-storage/drivers/emc-xtremio-driver.html",
+            "wiki": "https://docs.openstack.org/cinder/queens/configuration/block-storage/drivers/emc-xtremio-driver.html",
             "releases": [
                 "Juno",
                 "Kilo",
@@ -835,7 +835,7 @@
                     "launchpad_id": "shay-halsband"
                 }
             ],
-            "wiki": "https://docs.openstack.org/cinder/pike/configuration/block-storage/drivers/emc-xtremio-driver.html",
+            "wiki": "https://docs.openstack.org/cinder/queens/configuration/block-storage/drivers/emc-xtremio-driver.html",
             "releases": [
                 "Juno",
                 "Kilo",
@@ -3318,7 +3318,7 @@
                     "launchpad_id": "rajinir"
                 }
             ],
-            "wiki": "http://docs.openstack.org/ironic/latest/admin/drivers.html#drac-driver",
+            "wiki": "https://docs.openstack.org/ironic/latest/admin/drivers/idrac.html",
             "releases": [
                 "Juno",
                 "Kilo",
@@ -3792,7 +3792,7 @@
                     "launchpad_id": "emc-vnx-openstack"
                 }
             ],
-            "wiki": "https://github.com/openstack/manila/blob/stable/pike/doc/source/configuration/shared-file-systems/drivers/emc-vnx-driver.rst",
+            "wiki": "https://github.com/openstack/manila/blob/stable/queens/doc/source/configuration/shared-file-systems/drivers/emc-vnx-driver.rst",
             "releases": [
                 "Newton",
                 "Ocata",
@@ -3817,7 +3817,7 @@
                     "launchpad_id": "walshh2"
                 }
             ],
-            "wiki": "https://github.com/openstack/manila/blob/stable/pike/doc/source/configuration/shared-file-systems/drivers/dell-emc-vmax-driver.rst",
+            "wiki": "https://github.com/openstack/manila/blob/stable/queens/doc/source/configuration/shared-file-systems/drivers/dell-emc-vmax-driver.rst",
             "releases": [
                 "Ocata",
                 "Pike",
@@ -3841,7 +3841,7 @@
                     "launchpad_id": "emc-vnx-openstack"
                 }
             ],
-            "wiki": "https://github.com/openstack/manila/blob/stable/pike/doc/source/configuration/shared-file-systems/drivers/emc-vnx-driver.rst",
+            "wiki": "https://github.com/openstack/manila/blob/stable/queens/doc/source/configuration/shared-file-systems/drivers/emc-vnx-driver.rst",
             "releases": [
                 "Juno",
                 "Kilo",
