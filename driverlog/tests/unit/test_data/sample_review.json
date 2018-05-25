@@ -33,7 +33,7 @@
                 "name": "Jenkins",
                 "username": "jenkins"
             },
-            "message": "Patch Set 1:\n\nStarting check jobs.\nhttp://status.openstack.org/zuul/"
+            "message": "Patch Set 1:\n\nStarting check jobs.\nhttps://zuul.openstack.org"
         },
         {
             "timestamp": 1399410554,
@@ -208,7 +208,7 @@
                 "name": "Jenkins",
                 "username": "jenkins"
             },
-            "message": "Patch Set 2:\n\nStarting check jobs.\nhttp://status.openstack.org/zuul/"
+            "message": "Patch Set 2:\n\nStarting check jobs.\nhttps://zuul.openstack.org"
         },
         {
             "timestamp": 1399475455,
@@ -331,7 +331,7 @@
                 "name": "Jenkins",
                 "username": "jenkins"
             },
-            "message": "Patch Set 2: -Verified\n\nStarting check jobs.\nhttp://status.openstack.org/zuul/"
+            "message": "Patch Set 2: -Verified\n\nStarting check jobs.\nhttps://zuul.openstack.org"
         },
         {
             "timestamp": 1399597348,
@@ -347,7 +347,7 @@
                 "name": "Jenkins",
                 "username": "jenkins"
             },
-            "message": "Patch Set 2: -Verified\n\nStarting gate jobs.\nhttp://status.openstack.org/zuul/"
+            "message": "Patch Set 2: -Verified\n\nStarting gate jobs.\nhttps://zuul.openstack.org"
         },
         {
             "timestamp": 1399602161,
