@@ -4639,7 +4639,10 @@
             "releases": [
                 "Kilo",
                 "Liberty",
-                "Mitaka"
+                "Mitaka",
+                "Newton",
+                "Ocata",
+                "Pike"
             ]
         },
         {
