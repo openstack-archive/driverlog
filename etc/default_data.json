@@ -547,9 +547,9 @@
             "description": "The Dell EMC ScaleIO driver supports ScaleIO Data Client connected volumes by using ScaleIO REST API.",
             "maintainers": [
                 {
-                    "name": "Eric Young",
-                    "email": "eric.young@emc.com",
-                    "launchpad_id": "eric-aceshome"
+                    "name": "Matan Sabag",
+                    "email": "matan.sabag@emc.com",
+                    "launchpad_id": "matan-sabag"
                 }
             ],
             "wiki": "https://docs.openstack.org/cinder/queens/configuration/block-storage/drivers/dell-emc-scaleio-driver.html",
