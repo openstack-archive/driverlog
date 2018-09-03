@@ -125,8 +125,13 @@
             "wiki": "http://releases.openstack.org/queens/",
             "start": "2018-Feb-28",
             "active": true
+        },
+       {
+            "id": "Rocky",
+            "wiki": "http://releases.openstack.org/rocky/",
+            "start": "2018-Aug-29",
+            "active": true
         }
-
     ],
     "drivers": [
         {
@@ -521,7 +526,7 @@
                     "launchpad_id": "rajinir"
                 }
             ],
-            "wiki": "https://docs.openstack.org/cinder/queens/configuration/block-storage/drivers/dell-equallogic-driver.html",
+            "wiki": "https://docs.openstack.org/cinder/rocky/configuration/block-storage/drivers/dell-equallogic-driver.html",
             "releases": [
                 "Havana",
                 "Icehouse",
@@ -532,7 +537,8 @@
                 "Newton",
                 "Ocata",
                 "Pike",
-                "Queens"
+                "Queens",
+                "Rocky"
             ],
             "ci": {
                 "id": "dell.emc.ps.series.ci",
@@ -570,17 +576,37 @@
         {
             "project_id": "openstack/cinder",
             "vendor": "Dell EMC",
+            "name": "Dell EMC VxFlexOS",
+            "description": "The Dell EMC VxFlex OS driver (formerly named as Dell EMC ScaleIO) supports ScaleIO Data Client connected volumes by using ScaleIO REST API.",
+            "maintainers": [
+                {
+                    "name": "Matan Sabag",
+                    "email": "matan.sabag@emc.com",
+                    "launchpad_id": "matan-sabag"
+                }
+            ],
+            "wiki": "https://docs.openstack.org/cinder/rocky/configuration/block-storage/drivers/dell-emc-vxflex-driver.html",
+            "releases": [
+                "Rocky"
+            ],
+            "ci": {
+                "id": "emc-scaleio-ci",
+                "success_pattern": "EMC_SCALEIO \\S+ : SUCCESS",
+                "failure_pattern": "EMC_SCALEIO \\S+ : FAILURE"
+            }
+        },
+        {
+            "project_id": "openstack/cinder",
+            "vendor": "Dell EMC",
             "name": "Dell EMC SC Series iSCSI volume driver",
             "description": "The Dell EMC SC Series ISCSI volume driver interacts with configured SC arrays and supports various operations, such as volume creation and deletion, volume attachment and detachment, snapshot creation and deletion, and clone creation.",
             "maintainers": [
                 {
-                    "name": "Tom Swanson",
-                    "email": "tom.swanson@dell.com",
-                    "irc": "Swanson",
-                    "launchpad_id": "tomswanson"
+                    "name": "John Breen",
+                    "email": "john_j_breen@dell.com"
                 }
             ],
-            "wiki": "https://docs.openstack.org/cinder/queens/configuration/block-storage/drivers/dell-storagecenter-driver.html",
+            "wiki": "https://docs.openstack.org/cinder/rocky/configuration/block-storage/drivers/dell-storagecenter-driver.html",
             "releases": [
                 "Kilo",
                 "Liberty",
@@ -588,7 +614,8 @@
                 "Newton",
                 "Ocata",
                 "Pike",
-                "Queens"
+                "Queens",
+                "Rocky"
             ],
             "ci": {
                 "id": "dell.emc.sc.series.ci",
@@ -603,13 +630,11 @@
             "description": "The Dell EMC SC Series FC volume driver interacts with configured SC Series arrays and supports various operations, such as volume creation and deletion, volume attachment and detachment, snapshot creation and deletion, and clone creation.",
             "maintainers": [
                 {
-                    "name": "Tom Swanson",
-                    "email": "tom.swanson@dell.com",
-                    "irc": "Swanson",
-                    "launchpad_id": "tomswanson"
+                    "name": "John Breen",
+                    "email": "john_j_breen@dell.com"
                 }
             ],
-            "wiki": "https://docs.openstack.org/cinder/queens/configuration/block-storage/drivers/dell-storagecenter-driver.html",
+            "wiki": "https://docs.openstack.org/cinder/rocky/configuration/block-storage/drivers/dell-storagecenter-driver.html",
             "releases": [
                 "Kilo",
                 "Liberty",
@@ -617,7 +642,8 @@
                 "Newton",
                 "Ocata",
                 "Pike",
-                "Queens"
+                "Queens",
+                "Rocky"
             ],
             "ci": {
                 "id": "dell.emc.sc.series.ci",
@@ -637,11 +663,12 @@
                     "launchpad_id": "emc-vnx-openstack"
                 }
             ],
-            "wiki": "https://docs.openstack.org/cinder/queens/configuration/block-storage/drivers/dell-emc-unity-driver.html",
+            "wiki": "https://docs.openstack.org/cinder/rocky/configuration/block-storage/drivers/dell-emc-unity-driver.html",
             "releases": [
                 "Ocata",
                 "Pike",
-                "Queens"
+                "Queens",
+                "Rocky"
             ],
             "ci": {
                 "id": "emc-unity-ci",
@@ -661,11 +688,12 @@
                     "launchpad_id": "emc-vnx-openstack"
                 }
             ],
-            "wiki": "https://docs.openstack.org/cinder/queens/configuration/block-storage/drivers/dell-emc-unity-driver.html",
+            "wiki": "https://docs.openstack.org/cinder/rocky/configuration/block-storage/drivers/dell-emc-unity-driver.html",
             "releases": [
                 "Ocata",
                 "Pike",
-                "Queens"
+                "Queens",
+                "Rocky"
             ],
             "ci": {
                 "id": "emc-unity-ci",
@@ -677,7 +705,7 @@
             "project_id": "openstack/cinder",
             "vendor": "Dell EMC",
             "name": "Dell EMC VMAX FC driver",
-            "description": "The Dell EMC VMAX FC driver runs volume operations by communicating with the back-end VMAX storage, using the EMC SMI-S Provider.",
+            "description": "The Dell EMC VMAX FC driver runs volume operations by communicating with the back-end VMAX storage, using the Unisphere REST API.",
             "maintainers": [
                 {
                     "name": "Helen Walsh",
@@ -685,7 +713,7 @@
                     "launchpad_id": "walshh2"
                 }
             ],
-            "wiki": "https://docs.openstack.org/cinder/queens/configuration/block-storage/drivers/emc-vmax-driver.html",
+            "wiki": "https://docs.openstack.org/cinder/rocky/configuration/block-storage/drivers/dell-emc-vmax-driver.html",
             "releases": [
                 "Icehouse",
                 "Juno",
@@ -695,7 +723,8 @@
                 "Newton",
                 "Ocata",
                 "Pike",
-                "Queens"
+                "Queens",
+                "Rocky"
             ],
             "ci": {
                 "id": "emc-vmax-ci",
@@ -707,7 +736,7 @@
             "project_id": "openstack/cinder",
             "vendor": "Dell EMC",
             "name": "Dell EMC VMAX iSCSI driver",
-            "description": "The Dell EMC VMAX iSCSI driver runs volume operations by communicating with the back-end VMAX storage, using the EMC SMI-S Provider.",
+            "description": "The Dell EMC VMAX iSCSI driver runs volume operations by communicating with the back-end VMAX storage, using the Unisphere REST API.",
             "maintainers": [
                 {
                     "name": "Helen Walsh",
@@ -715,7 +744,7 @@
                     "launchpad_id": "walshh2"
                 }
             ],
-            "wiki": "https://docs.openstack.org/cinder/queens/configuration/block-storage/drivers/emc-vmax-driver.html",
+            "wiki": "https://docs.openstack.org/cinder/rocky/configuration/block-storage/drivers/dell-emc-vmax-driver.html",
             "releases": [
                 "Grizzly",
                 "Havana",
@@ -727,7 +756,8 @@
                 "Newton",
                 "Ocata",
                 "Pike",
-                "Queens"
+                "Queens",
+                "Rocky"
             ],
             "ci": {
                 "id": "emc-vmax-ci",
@@ -747,7 +777,7 @@
                     "launchpad_id": "emc-vnx-openstack"
                 }
             ],
-            "wiki": "https://docs.openstack.org/cinder/queens/configuration/block-storage/drivers/emc-vnx-driver.html",
+            "wiki": "https://docs.openstack.org/cinder/rocky/configuration/block-storage/drivers/dell-emc-vnx-driver.html",
             "releases": [
                 "Juno",
                 "Kilo",
@@ -756,7 +786,8 @@
                 "Newton",
                 "Ocata",
                 "Pike",
-                "Queens"
+                "Queens",
+                "Rocky"
             ],
             "ci": {
                 "id": "emc-vnx-ci",
@@ -776,7 +807,7 @@
                     "launchpad_id": "emc-vnx-openstack"
                 }
             ],
-            "wiki": "https://docs.openstack.org/cinder/queens/configuration/block-storage/drivers/emc-vnx-driver.html",
+            "wiki": "https://docs.openstack.org/cinder/rocky/configuration/block-storage/drivers/dell-emc-vnx-driver.html",
             "releases": [
                 "Icehouse",
                 "Juno",
@@ -786,7 +817,8 @@
                 "Newton",
                 "Ocata",
                 "Pike",
-                "Queens"
+                "Queens",
+                "Rocky"
             ],
             "ci": {
                 "id": "emc-vnx-ci",
@@ -806,7 +838,7 @@
                     "launchpad_id": "shay-halsband"
                 }
             ],
-            "wiki": "https://docs.openstack.org/cinder/queens/configuration/block-storage/drivers/emc-xtremio-driver.html",
+            "wiki": "https://docs.openstack.org/cinder/rocky/configuration/block-storage/drivers/emc-xtremio-driver.html",
             "releases": [
                 "Juno",
                 "Kilo",
@@ -815,7 +847,8 @@
                 "Newton",
                 "Ocata",
                 "Pike",
-                "Queens"
+                "Queens",
+                "Rocky"
             ],
             "ci": {
                 "id": "emc-xio-ci",
@@ -835,7 +868,7 @@
                     "launchpad_id": "shay-halsband"
                 }
             ],
-            "wiki": "https://docs.openstack.org/cinder/queens/configuration/block-storage/drivers/emc-xtremio-driver.html",
+            "wiki": "https://docs.openstack.org/cinder/rocky/configuration/block-storage/drivers/emc-xtremio-driver.html",
             "releases": [
                 "Juno",
                 "Kilo",
@@ -844,7 +877,8 @@
                 "Newton",
                 "Ocata",
                 "Pike",
-                "Queens"
+                "Queens",
+                "Rocky"
             ],
             "ci": {
                 "id": "emc-xio-ci",
@@ -3330,7 +3364,8 @@
                 "Newton",
                 "Ocata",
                 "Pike",
-                "Queens"
+                "Queens",
+                "Rocky"
             ],
            "ci": {
                 "id": "openstack-ironic-ci",
@@ -3795,12 +3830,13 @@
                     "launchpad_id": "emc-vnx-openstack"
                 }
             ],
-            "wiki": "https://github.com/openstack/manila/blob/stable/queens/doc/source/configuration/shared-file-systems/drivers/emc-vnx-driver.rst",
+            "wiki": "https://docs.openstack.org/manila/rocky/configuration/shared-file-systems/drivers/dell-emc-unity-driver.html",
             "releases": [
                 "Newton",
                 "Ocata",
                 "Pike",
-                "Queens"
+                "Queens",
+                "Rocky"
             ],
             "ci": {
                 "id": "emc-unity-ci",
@@ -3820,11 +3856,12 @@
                     "launchpad_id": "walshh2"
                 }
             ],
-            "wiki": "https://github.com/openstack/manila/blob/stable/queens/doc/source/configuration/shared-file-systems/drivers/dell-emc-vmax-driver.rst",
+            "wiki": "https://docs.openstack.org/manila/rocky/configuration/shared-file-systems/drivers/dell-emc-vmax-driver.html",
             "releases": [
                 "Ocata",
                 "Pike",
-                "Queens"
+                "Queens",
+                "Rocky"
             ],
             "ci": {
                 "id": "emc-vmax-ci",
@@ -3844,7 +3881,7 @@
                     "launchpad_id": "emc-vnx-openstack"
                 }
             ],
-            "wiki": "https://github.com/openstack/manila/blob/stable/queens/doc/source/configuration/shared-file-systems/drivers/emc-vnx-driver.rst",
+            "wiki": "https://docs.openstack.org/manila/rocky/configuration/shared-file-systems/drivers/dell-emc-vnx-driver.html",
             "releases": [
                 "Juno",
                 "Kilo",
@@ -3853,7 +3890,8 @@
                 "Newton",
                 "Ocata",
                 "Pike",
-                "Queens"
+                "Queens",
+                "Rocky"
             ],
             "ci": {
                 "id": "emc-vnx-ci",
