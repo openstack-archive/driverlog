@@ -1,0 +1,10 @@
+Code-Review+1: arkady kanevsky <arkady_kanevsky@dell.com>
+Code-Review+1: Helen Walsh <helen.walsh@emc.com>
+Code-Review+2: Ilya Shakhat <shakhat@gmail.com>
+Workflow+1: Ilya Shakhat <shakhat@gmail.com>
+Verified+2: Zuul
+Submitted-by: Zuul
+Submitted-at: Thu, 13 Sep 2018 20:03:28 +0000
+Reviewed-on: https://review.openstack.org/600878
+Project: openstack/driverlog
+Branch: refs/heads/master
